@@ -41,4 +41,5 @@ configure :build do
 
   # Minify Javascript on build
   # activate :minify_javascript
+  ignore 'font-awesome/less/*'
 end
