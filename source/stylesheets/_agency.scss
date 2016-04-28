@@ -184,7 +184,7 @@ h6 {
 header {
   @include background-cover;
   background-attachment: scroll;
-  background-image: url('../images/header-bg.jpg');
+  background-color: $gray-darkest;
   background-position: center center;
   background-repeat: none;
   color: $white;
