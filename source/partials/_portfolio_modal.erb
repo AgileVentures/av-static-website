@@ -1,0 +1,31 @@
+<div class="portfolio-modal modal fade" id="<%= p[:modal] %>" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-content">
+            <div class="close-modal" data-dismiss="modal">
+                <div class="lr">
+                    <div class="rl">
+                    </div>
+                </div>
+            </div>
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-8 col-lg-offset-2">
+                        <div class="modal-body">
+                            <!-- Project Details Go Here -->
+                            <h2><%= p[:title] %></h2>
+                            <p class="item-intro text-muted"><%= p[:tagline] %></p>
+                            <img class="img-responsive img-centered" src="<%= p[:image] %>" alt="">
+                            <p><%= p[:description] %></p>
+                            <p>
+                                <strong>Want a system like this?</strong>&nbsp;Check out the open source code base behind it <a href="<%= p[:project_url] %>"><%= p[:project_name] %></a>.</p>
+                            <ul class="list-inline">
+                                <li>Date: <%= p[:date] %></li>
+                                <li>Client: <%= p[:client] %></li>
+                                <li>Category: <%= p[:category] %></li>
+                            </ul>
+                            <button type="button" class="btn btn-primary" data-dismiss="modal"><i class="fa fa-times"></i> Close Project</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
