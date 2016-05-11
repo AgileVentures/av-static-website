@@ -16,13 +16,13 @@ body {
   color: $brand-primary;
 }
 
+.large {
+  font-size: 16px;
+}
+
 p {
   font-size: 14px;
   line-height: 1.75;
-
-  .large {
-    font-size: 16px;
-  }
 }
 
 
@@ -817,4 +817,9 @@ img::-moz-selection {
 
 body {
   webkit-tap-highlight-color: $brand-primary;
+}
+
+mc-response {
+  padding-bottom: 10px;
+  color: white;
 }
