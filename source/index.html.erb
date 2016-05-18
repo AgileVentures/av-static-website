@@ -1,5 +1,5 @@
 <body id="page-top" class="index">
-    <%= partial("partials/nav",locals: {url_prefix: ""})%>
+    <%= partial('partials/nav', locals: {url_prefix: ''} )%>
     <!-- Header -->
     <header>
         <div class="container">
@@ -251,33 +251,7 @@
       </div>
     </section>
 
-    <footer>
-        <div class="container">
-            <div class="row">
-                <div class="col-md-4">
-                    <span class="copyright">Copyright &copy; AgileVentures 2016</span>
-                </div>
-                <div class="col-md-4">
-                    <ul class="list-inline social-buttons">
-                        <li><a href="https://twitter.com/AgileVentures"><i class="fa fa-twitter"></i></a>
-                        </li>
-                        <li><a href="https://www.facebook.com/agileventures"><i class="fa fa-facebook"></i></a>
-                        </li>
-                        <li><a href="https://www.linkedin.com/company/agileventiures"><i class="fa fa-linkedin"></i></a>
-                        </li>
-                    </ul>
-                </div>
-                <div class="col-md-4">
-                    <ul class="list-inline quicklinks">
-                        <li><a href="/privacy">Privacy Policy</a>
-                        </li>
-                        <li><a href="/terms">Terms of Use</a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </footer>
+    <%= partial('partials/footer') %>
 
     <!-- Portfolio Modals -->
     <!-- Use the modals below to showcase details about your portfolio projects! -->
