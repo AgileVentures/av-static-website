@@ -16,34 +16,35 @@
 
 - title: Met Plus
   tagline: Job Board
-  image: images/portfolio/hcn.png
+  image: images/portfolio/metplus.png
   preview_image: images/portfolio/metplus-preview.jpg
   description: >
-    The mission is to support members of the public searching for support groups 
-    for things like helping care for an elderly or sick relative; and also to 
-    help charities and non-profits find each other and network.
-  date: Jan 2013 - present
-  client: Voluntary Action Harrow
-  category: Directory Services
-  project_name: LocalSupport
-  project_url: http://github.com/AgileVentures/LocalSupport
-  example_url: https://www.harrowcn.org.uk
+    A web platform where the Job Seekers and the Companies can find each other. 
+    The platform will try to match all the skills of the Job Seekers and the skills 
+    needed by the Companies creating a pool of possible Jobs or Candidates.
+  date: Sep 2014 - present
+  client: "Michigan Employment & Training Plus"
+  category: MatchMaking
+  project_name: MetPlus
+  project_url: http://github.com/AgileVentures/MetPlus_PETS
+  example_url: http://github.com/AgileVentures/MetPlus_PETS
   modal: portfolioModal2
 
 - title: OSRA
   tagline: Office Admin Support
-  image: images/portfolio/hcn.png
+  image: images/portfolio/osra.png
   preview_image: images/portfolio/osra-preview.png
   description: >
-    The mission is to support members of the public searching for support groups 
-    for things like helping care for an elderly or sick relative; and also to 
-    help charities and non-profits find each other and network.
-  date: Jan 2013 - present
-  client: Voluntary Action Harrow
-  category: Directory Services
-  project_name: LocalSupport
-  project_url: http://github.com/AgileVentures/LocalSupport
-  example_url: https://www.harrowcn.org.uk
+    OSRA is a non-profit organization registered in UK, aiming to sponsor 
+    orphans in Syria & ensure basic life & education requirements for Syrian 
+    children. This project is a support system for administration of the information 
+    needed to fulfill the organization's goals.
+  date: Aug 2013 - present
+  client: OSRA
+  category: Administrative Support
+  project_name: OSRA
+  project_url: http://github.com/AgileVentures/OSRA
+  example_url: http://github.com/AgileVentures/OSRA
   modal: portfolioModal3
 
 - title: Project Unify
@@ -51,15 +52,14 @@
   image: images/portfolio/hcn.png
   preview_image: images/portfolio/golden.png
   description: >
-    The mission is to support members of the public searching for support groups 
-    for things like helping care for an elderly or sick relative; and also to 
-    help charities and non-profits find each other and network.
-  date: Jan 2013 - present
-  client: Voluntary Action Harrow
-  category: Directory Services
-  project_name: LocalSupport
-  project_url: http://github.com/AgileVentures/LocalSupport
-  example_url: https://www.harrowcn.org.uk
+    An application that helps refugees in Europe get in touch and start interacting 
+    depending on interests, geographic location, age, and more.
+  date: Jan 2016 - present
+  client: RefugeeTech
+  category: MobileSocialMedia
+  project_name: ProjectUnify
+  project_url: http://github.com/AgileVentures/ProjectUnify
+  example_url: http://github.com/AgileVentures/ProjectUnify
   modal: portfolioModal4
 
 - title: Lookup
@@ -67,15 +67,14 @@
   image: images/portfolio/hcn.png
   preview_image: images/portfolio/escape.png
   description: >
-    The mission is to support members of the public searching for support groups 
-    for things like helping care for an elderly or sick relative; and also to 
-    help charities and non-profits find each other and network.
+    Mobile and Desktop solution for working out the solar capacity of buildings 
+    to support community solar projects
   date: Jan 2013 - present
-  client: Voluntary Action Harrow
-  category: Directory Services
+  client: LookUp
+  category: Mobile
   project_name: LocalSupport
-  project_url: http://github.com/AgileVentures/LocalSupport
-  example_url: https://www.harrowcn.org.uk
+  project_url: http://github.com/AgileVentures/LookUp
+  example_url: http://github.com/AgileVentures/LookUp
   modal: portfolioModal5
 
 - title: Snow Angels
@@ -83,14 +82,15 @@
   image: images/portfolio/hcn.png
   preview_image: images/portfolio/dreams.png
   description: >
-    The mission is to support members of the public searching for support groups 
-    for things like helping care for an elderly or sick relative; and also to 
-    help charities and non-profits find each other and network.
-  date: Jan 2013 - present
-  client: Voluntary Action Harrow
-  category: Directory Services
-  project_name: LocalSupport
-  project_url: http://github.com/AgileVentures/LocalSupport
-  example_url: https://www.harrowcn.org.uk
+    Automate the process for Horsell Snow Angels as much as possible. Specifically
+    the admin's role of managing the SMS communication between volunteers and clients to 
+    help elderly people during poor weather conditions with tasks that they would 
+    usually be able to do alone, eg walking their dog.
+  date: Jan 2015 - present
+  client: Horsell Snow Angels
+  category: Mobile Administration
+  project_name: SnowAngels
+  project_url: http://github.com/AgileVentures/SnowAngels
+  example_url: http://github.com/AgileVentures/SnowAngels
   modal: portfolioModal6
 
