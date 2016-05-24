@@ -100,6 +100,7 @@ h6 {
     &.active {
       color: darken($brand-primary, 10%);
     }
+    padding: 12px;
   }
 
   .navbar-collapse {
@@ -164,7 +165,6 @@ h6 {
       -moz-transition: all .3s;
       -webkit-transition: all .3s;
       transition: all .3s;
-      padding: 10px;
     }
 
     .navbar-nav>.active>a {
