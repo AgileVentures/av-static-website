@@ -49,8 +49,8 @@
 
 - title: Project Unify
   tagline: Mobile Social Network
-  image: images/portfolio/unify.jpg
-  preview_image: images/portfolio/unify.jpg
+  image: images/portfolio/unify.png
+  preview_image: images/portfolio/unify-preview.jpg
   description: >
     An application that helps refugees in Europe get in touch and start interacting 
     depending on interests, geographic location, age, and more.
@@ -64,23 +64,23 @@
 
 - title: Lookup
   tagline: Mobile Crowd Sourcing
-  image: images/portfolio/hcn.png
-  preview_image: images/portfolio/escape.png
+  image: images/portfolio/lookup.png
+  preview_image: images/portfolio/lookup-preview-b.png
   description: >
     Mobile and Desktop solution for working out the solar capacity of buildings 
     to support community solar projects
   date: Jan 2013 - present
   client: LookUp
   category: Mobile
-  project_name: LocalSupport
+  project_name: Lookup
   project_url: http://github.com/AgileVentures/LookUp
   example_url: http://github.com/AgileVentures/LookUp
   modal: portfolioModal5
 
 - title: Snow Angels
   tagline: Mobile Based Volunteering
-  image: images/portfolio/hcn.png
-  preview_image: images/portfolio/dreams.png
+  image: images/portfolio/snow-angels.png
+  preview_image: images/portfolio/snow-angels-preview.png
   description: >
     Automate the process for Horsell Snow Angels as much as possible. Specifically
     the admin's role of managing the SMS communication between volunteers and clients to 
