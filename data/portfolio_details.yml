@@ -1,11 +1,12 @@
 - title: Harrow Community Network
-  tagline: Local Directory Service
+  tagline: Volunteer Management System
   image: images/portfolio/hcn.png
   preview_image: images/portfolio/hcn-preview.png
   description: >
-    The mission is to support members of the public searching for support groups 
-    for things like helping care for an elderly or sick relative; and also to 
-    help charities and non-profits find each other and network.
+    Created in partnership between AgileVentures and Voluntary Action Harrow, our 
+    solution supports their vision of a strong, unified not-for-profit sector in Harrow.  
+    Our digital platform enables local organisations and individuals to register and search 
+    for volunteer opportunities, and includes an API to Do-it listings.
   date: Jan 2013 - present
   client: Voluntary Action Harrow
   category: Directory Services
@@ -19,9 +20,9 @@
   image: images/portfolio/metplus.png
   preview_image: images/portfolio/metplus-preview.jpg
   description: >
-    A web platform where the Job Seekers and the Companies can find each other. 
-    The platform will try to match all the skills of the Job Seekers and the skills 
-    needed by the Companies creating a pool of possible Jobs or Candidates.
+    A web platform where the Job Seekers and the Companies can find each other. The platform 
+    matches the skills of the Job Seekers and the skills needed by the Companies to create a 
+    pool of possible Jobs or Candidates.
   date: Sep 2014 - present
   client: "Michigan Employment & Training Plus"
   category: MatchMaking
@@ -35,10 +36,9 @@
   image: images/portfolio/osra.png
   preview_image: images/portfolio/osra-preview.png
   description: >
-    OSRA is a non-profit organization registered in UK, aiming to sponsor 
-    orphans in Syria & ensure basic life & education requirements for Syrian 
-    children. This project is a support system for administration of the information 
-    needed to fulfill the organization's goals.
+    OSRA is a non-profit organization registered in UK, that sponsors orphans in Syria & ensure 
+    basic life & education requirements for Syrian children. This project is a support system for 
+    administration of the information needed to fulfill the organization's goals.
   date: Aug 2013 - present
   client: OSRA
   category: Administrative Support
@@ -49,8 +49,8 @@
 
 - title: Project Unify
   tagline: Mobile Social Network
-  image: images/portfolio/hcn.png
-  preview_image: images/portfolio/golden.png
+  image: images/portfolio/unify.png
+  preview_image: images/portfolio/unify-preview.jpg
   description: >
     An application that helps refugees in Europe get in touch and start interacting 
     depending on interests, geographic location, age, and more.
@@ -64,23 +64,23 @@
 
 - title: Lookup
   tagline: Mobile Crowd Sourcing
-  image: images/portfolio/hcn.png
-  preview_image: images/portfolio/escape.png
+  image: images/portfolio/lookup.png
+  preview_image: images/portfolio/lookup-preview-b.png
   description: >
     Mobile and Desktop solution for working out the solar capacity of buildings 
     to support community solar projects
   date: Jan 2013 - present
   client: LookUp
   category: Mobile
-  project_name: LocalSupport
+  project_name: Lookup
   project_url: http://github.com/AgileVentures/LookUp
   example_url: http://github.com/AgileVentures/LookUp
   modal: portfolioModal5
 
 - title: Snow Angels
   tagline: Mobile Based Volunteering
-  image: images/portfolio/hcn.png
-  preview_image: images/portfolio/dreams.png
+  image: images/portfolio/snow-angels.png
+  preview_image: images/portfolio/snow-angels-preview.png
   description: >
     Automate the process for Horsell Snow Angels as much as possible. Specifically
     the admin's role of managing the SMS communication between volunteers and clients to 
