@@ -690,7 +690,14 @@ footer {
   .list {
     padding-left: 20%;
     text-align: left;
-    font-size: 1.75em;
+    font-size: 1.5em;
+    margin-bottom: 50px;
+  }
+
+  .contact-list {
+    padding-left: 20%;
+    text-align: left;
+    font-size: 1.5em;
     margin-bottom: 50px;
   }
 
@@ -703,8 +710,9 @@ footer {
     display: block;
   }
 
-  .service {
+  .font-override {
     font-family: "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    line-height: 110%;
   }
 }
 
