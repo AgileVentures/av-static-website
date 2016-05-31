@@ -264,6 +264,12 @@ section {
     @extend h3.section-subheading;
     color: #E0E0E0;
   }
+
+  h3.tag-line{
+    margin-left: 5%;
+    margin-right: 5%;
+    margin-top: 75px;
+  }
 }
 
 @media(min-width:768px) {

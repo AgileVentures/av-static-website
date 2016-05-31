@@ -58,8 +58,8 @@
   client: RefugeeTech
   category: MobileSocialMedia
   project_name: ProjectUnify
-  project_url: http://github.com/AgileVentures/ProjectUnify
-  example_url: http://github.com/AgileVentures/ProjectUnify
+  project_url: http://github.com/AgileVentures/project_unify
+  example_url: http://github.com/AgileVentures/project_unify
   modal: portfolioModal4
 
 - title: Lookup
@@ -90,7 +90,7 @@
   client: Horsell Snow Angels
   category: Mobile Administration
   project_name: SnowAngels
-  project_url: http://github.com/AgileVentures/SnowAngels
-  example_url: http://github.com/AgileVentures/SnowAngels
+  project_url: http://github.com/AgileVentures/snow-angels
+  example_url: http://github.com/AgileVentures/snow-angels
   modal: portfolioModal6
 
