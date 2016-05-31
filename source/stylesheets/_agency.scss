@@ -33,7 +33,15 @@ a:active,
 a.active {
   outline: none;
 }
-
+a.inverse{
+  color: white;
+}
+a.inverse:hover,
+a.inverse:focus,
+a.inverse:active
+a.active.inverse{
+  color: darken(white, 10%);
+}
 a {
   color: $brand-primary;
 }
