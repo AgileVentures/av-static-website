@@ -257,6 +257,12 @@ section {
     font-weight: 400;
     margin-bottom: 75px;
     text-transform: none;
+    line-height: 130%;
+  }
+
+  h3.section-subheading-dark-background {
+    @extend h3.section-subheading;
+    color: #E0E0E0;
   }
 }
 
