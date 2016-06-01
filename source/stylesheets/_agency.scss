@@ -731,8 +731,12 @@ footer {
   }
 
   .font-override {
+    font-size: .9em;
     font-family: "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif;
     line-height: 110%;
+  }
+  a.no-special-color{
+    color: inherit;
   }
 }
 
