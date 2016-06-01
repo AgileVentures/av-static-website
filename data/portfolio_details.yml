@@ -1,4 +1,4 @@
-- title: Harrow Community Network
+- title: Harrow Community Net
   tagline: Volunteer Management System
   image: images/portfolio/hcn.png
   preview_image: images/portfolio/hcn-preview.png
@@ -15,8 +15,8 @@
   example_url: https://www.harrowcn.org.uk
   modal: portfolioModal1
 
-- title: Michigan Employment Tracking
-  tagline: Job Seekers and Employer Matching
+- title: Michigan Job Tracker
+  tagline: "Job Seekers & Employer Matching"
   image: images/portfolio/metplus.png
   preview_image: images/portfolio/metplus-preview.jpg
   description: >
