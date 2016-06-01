@@ -15,8 +15,8 @@
   example_url: https://www.harrowcn.org.uk
   modal: portfolioModal1
 
-- title: Met Plus
-  tagline: Job Board
+- title: "Michigan Employment & Training Plus"
+  tagline: Web platform for Job Seekers and Employers
   image: images/portfolio/metplus.png
   preview_image: images/portfolio/metplus-preview.jpg
   description: >
@@ -31,8 +31,8 @@
   example_url: http://github.com/AgileVentures/MetPlus_PETS
   modal: portfolioModal2
 
-- title: OSRA
-  tagline: Office Admin Support
+- title: "OSRA Orphan Sponsorship & Relief Association"
+  tagline: Linking Orphans to Sponsors
   image: images/portfolio/osra.png
   preview_image: images/portfolio/osra-preview.png
   description: >
@@ -78,7 +78,7 @@
   modal: portfolioModal5
 
 - title: Snow Angels
-  tagline: Mobile Based Volunteering
+  tagline: Mobile Based Volunteer Management
   image: images/portfolio/snow-angels.png
   preview_image: images/portfolio/snow-angels-preview.png
   description: >
