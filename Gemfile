@@ -16,3 +16,10 @@ gem 'middleman-compass', '>= 4.0.0'
 gem 'middleman-gh-pages'
 gem 'less'
 gem 'therubyracer'
+
+gem 'middleman-blog'
+
+gem 'redcarpet', '~> 3.3', '>= 3.3.3'
+ 
+# For feed.xml.builder
+gem 'builder', '~> 3.0'
