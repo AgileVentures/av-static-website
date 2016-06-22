@@ -278,6 +278,13 @@ section {
     margin-right: 5%;
     margin-top: 75px;
   }
+
+  div.sales-contact{
+    @extend h3.tag-line;
+    @extend h3;
+    text-transform: none;
+    font-size: 24px;
+  }
 }
 
 @media(min-width:768px) {
@@ -856,12 +863,12 @@ ul.social-buttons {
 // Highlight Color Customization
 
 ::-moz-selection {
-  background: $brand-primary;
+  background: grey;
   text-shadow: none;
 }
 
 ::selection {
-  background: $brand-primary;
+  background: grey;
   text-shadow: none;
 }
 
