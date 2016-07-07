@@ -295,6 +295,11 @@ section {
 
 // Blog Section
 
+@media(min-width: 768px){
+  #blog{
+    padding: 150px 0px 0px 25px;
+  }
+}
 #blog {
   .title,
   .author,
