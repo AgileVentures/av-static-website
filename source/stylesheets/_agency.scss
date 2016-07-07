@@ -278,6 +278,13 @@ section {
     margin-right: 5%;
     margin-top: 75px;
   }
+
+  div.nonprofits-contact{
+    @extend h3.tag-line;
+    @extend h3;
+    text-transform: none;
+    font-size: 24px;
+  }
 }
 
 @media(min-width:768px) {
@@ -621,7 +628,7 @@ aside.clients {
 
 // Contact Section
 
-section#contact {
+section#subscribe {
   background-color: $gray-darkest;
   background-image: url('../images/map-image.png');
   background-position: center;
@@ -680,6 +687,10 @@ section#contact {
   .text-danger {
     color: $brand-danger;
   }
+}
+
+section#contact{
+  padding: 75px 0px 0px 0px;
 }
 
 // Footer
@@ -856,12 +867,12 @@ ul.social-buttons {
 // Highlight Color Customization
 
 ::-moz-selection {
-  background: $brand-primary;
+  background: grey;
   text-shadow: none;
 }
 
 ::selection {
-  background: $brand-primary;
+  background: grey;
   text-shadow: none;
 }
 
