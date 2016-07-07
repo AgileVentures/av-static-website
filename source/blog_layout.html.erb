@@ -1,0 +1,21 @@
+<% wrap_layout :layout do %>
+
+<%= partial('partials/nav', locals: {url_prefix: '/'} )%>
+<section id="blog">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-2">
+      </div>
+      <div class="col-lg-8 text-left">
+        <h2 class='title'><%= link_to current_article.title, current_article %></h2>
+        <h5 class='date'><%= current_article.date.strftime('%e %b %Y') %></h5>
+    <%= yield %>
+        <h2 class='author'>by <%= current_page.data.author %></h2>
+      </div>  
+      <div class="col-lg-2">
+      </div>
+    </div>  
+  </div>  
+</section>  
+<%= partial('partials/footer') %>
+<% end %>

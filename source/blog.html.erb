@@ -3,33 +3,40 @@ pageable: true
 per_page: 10
 ---
 
-<%= partial('partials/nav', locals: {url_prefix: ''} )%>
+<%= partial('partials/nav', locals: {url_prefix: '/'} )%>
 
 <section id="blog">
+  <div class="container">
+      <div class="row">
+        <div class="col-lg-2">
+        </div>
+        <div class="col-lg-8">
 
+        <% if paginate && num_pages > 1 %>
+          <p>Page <%= page_number %> of <%= num_pages %></p>
 
+          <% if prev_page %>
+            <p><%= link_to 'Previous page', prev_page %></p>
+          <% end %>
+        <% end %>
 
-<% if paginate && num_pages > 1 %>
-  <p>Page <%= page_number %> of <%= num_pages %></p>
+        <% page_articles.each_with_index do |article, i| %>
+          <h2><%= link_to article.title, article %></h2>
+          <h3><%= article.date.strftime('%b %e') %></h3>
+          <%= article.summary(250) %>
+        <% end %>
 
-  <% if prev_page %>
-    <p><%= link_to 'Previous page', prev_page %></p>
-  <% end %>
-<% end %>
+        <% if paginate %>
+          <% if next_page %>
+            <p><%= link_to 'Next page', next_page %></p>
+          <% end %>
+        <% end %>
 
-<% page_articles.each_with_index do |article, i| %>
-  <h2><%= link_to article.title, article %> <span><%= article.date.strftime('%b %e') %></span></h2>
-  <!-- use article.summary(250) if you have Nokogiri available to show just
-       the first 250 characters -->
-  <%= article.body %>
-<% end %>
-
-<% if paginate %>
-  <% if next_page %>
-    <p><%= link_to 'Next page', next_page %></p>
-  <% end %>
-<% end %>
-
+      </div>  
+      <div class="col-lg-2">
+      </div>
+    </div>  
+  </div>
 </section>
 
 <%= partial('partials/footer') %>

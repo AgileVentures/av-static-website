@@ -44,6 +44,8 @@ activate :blog do |blog|
   blog.tag_template = "tag.html"
   blog.calendar_template = "calendar.html"
 
+  blog.layout = "blog_layout"
+
   # Enable pagination
   # blog.paginate = true
   # blog.per_page = 10
