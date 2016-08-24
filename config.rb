@@ -31,7 +31,7 @@ activate :blog do |blog|
 
   # blog.permalink = "{year}/{month}/{day}/{title}.html"
   # Matcher for blog source files
-  # blog.sources = "{year}-{month}-{day}-{title}.html"
+  blog.sources = "blog_articles/{year}-{month}-{day}-{title}.html"
   # blog.taglink = "tags/{tag}.html"
   # blog.layout = "layout"
   # blog.summary_separator = /(READMORE)/
@@ -73,3 +73,7 @@ configure :build do
   # activate :minify_javascript
   ignore 'font-awesome/less/*'
 end
+
+activate :syntax
+set :markdown_engine, :redcarpet
+set :markdown, :fenced_code_blocks => true, :smartypants => true
