@@ -116,7 +116,7 @@ def fix_code(e)
     eval "def #{$1}; 'robot method' ; end "
   elsif e.class == ArgumentError
     /wrong number of arguments \(given (.*), expected \d\)/ =~ e.message
-    num_args = $1.to_i # could use class or arg to auto-infer an approprate name?
+    num_args = $1.to_i # use class or arg to auto-infer an approprate name?
     arg_string = (0..num_args-1).map {|i| "arg#{i}"}.join(',') 
     /\(eval\)\:1\:in \`(.*)\'/ =~ e.backtrace.first
     method_name = $1
