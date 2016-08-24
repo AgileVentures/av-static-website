@@ -18,6 +18,7 @@ gem 'less'
 gem 'therubyracer'
 
 gem 'middleman-blog'
+gem 'middleman-syntax'
 
 gem 'redcarpet', '~> 3.3', '>= 3.3.3'
  

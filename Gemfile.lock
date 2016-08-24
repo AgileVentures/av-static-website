@@ -106,6 +106,9 @@ GEM
       em-websocket (~> 0.5.1)
       middleman-core (>= 3.3)
       rack-livereload (~> 0.3.15)
+    middleman-syntax (3.0.0)
+      middleman-core (>= 3.2)
+      rouge (~> 2.0)
     mime-types (3.0)
       mime-types-data (~> 3.2015)
     mime-types-data (3.2016.0221)
@@ -132,6 +135,7 @@ GEM
       ffi (>= 0.5.0)
     redcarpet (3.3.4)
     ref (1.0.5)
+    rouge (2.0.5)
     sass (3.4.22)
     servolux (0.12.0)
     therubyracer (0.12.2)
@@ -158,10 +162,11 @@ DEPENDENCIES
   middleman-compass (>= 4.0.0)
   middleman-gh-pages
   middleman-livereload
+  middleman-syntax
   redcarpet (~> 3.3, >= 3.3.3)
   therubyracer
   tzinfo-data
   wdm (~> 0.1.0)
 
 BUNDLED WITH
-   1.11.2
+   1.12.5
