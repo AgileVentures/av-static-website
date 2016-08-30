@@ -21,4 +21,4 @@ Anyway, the key thing here is get the simplest thing done and deployed in order 
 
 CodeClimate pushed back on the complexity of our user controller's index method complexity, I refactored and followed [Raoul's](https://github.com/diraulo) suggestion to remove the commented quick filter code/tests.  Raoul pushed out the code to production this weekend and now you can see our users' page with simple pagination loading in under two seconds.  Thanks Raoul!  Just what the doctor ordered.  Check it out and see what your AgileVentures' ranking is:
 
-[http://ww.agileventures.org/users](http://ww.agileventures.org/users)
+[http://www.agileventures.org/users](http://www.agileventures.org/users)
