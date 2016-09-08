@@ -1,7 +1,7 @@
 ---
 title: Eliminate, Automate, Delegate
 date: 2016-09-06
-tags: elimiate automate delegate ruby kindle publishing textbook process 
+tags: eliminate automate delegate ruby kindle publishing textbook process 
 author: Sam Joseph
 ---
 
