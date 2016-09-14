@@ -742,17 +742,18 @@ footer {
     font-size: 1.25em;
   }
 
+  .list, .contact-list {
+    text-align: left;
+    font-size: 1.2em;
+  }
+
   .list {
     padding-left: 20%;
-    text-align: left;
-    font-size: 1.5em;
     margin-bottom: 30px;
   }
 
   .contact-list {
-    padding-left: 20%;
-    text-align: left;
-    font-size: 1.5em;
+    padding-left: 5%;
     margin-bottom: 50px;
   }
 
@@ -769,6 +770,10 @@ footer {
     font-size: .9em;
     font-family: "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif;
     line-height: 110%;
+  }
+  
+  .pl-32 {
+    padding-left: 32px;
   }
 
 }
