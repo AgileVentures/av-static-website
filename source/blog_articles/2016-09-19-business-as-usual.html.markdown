@@ -1,6 +1,6 @@
 ---
 title: Business as Usual
-date: 2016-09-16
+date: 2016-09-19
 tags: commitment volunteering feedback meetups questions revenue product fees
 author: Sam Joseph
 ---
