@@ -1,6 +1,6 @@
 ---
 title: Can't We Go Any Faster?
-date: 2016-09-21
+date: 2016-09-22
 tags: pairing tickets refactoring delegation incentives hangout SQL noSQL
 author: Sam Joseph
 ---
