@@ -9,7 +9,7 @@ Friday I tried to improve on Thursday.  I proposed to Michael that we try to rot
 
 I think I was slowly [letting go of a banana]() which is sometimes very challenging when you are a simple monkey like me; but I was coming to the conclusion I should put down that coconut, get some distance from it, and coming back to it in a few days might yield some better approaches.  Or at least the realisation that the path I thought was the good one, really was a good one; or that something more important might come up in the meantime :-)
 
-So we switched to the Premium members, and again I noticed we didn't have tickets for several things that we'd been thinking about.  Specifically [refactoring Stripe components out of the user table](https://github.com/AgileVentures/WebsiteOne/issues/1299) and [automating Premium benefits](https://github.com/AgileVentures/WebsiteOne/issues/1300).  I wanted to take a leaf out of Avdi Grimm's "Confident Ruby" book and impose a solid narrative on the next piece of work we would do.  We'd been tripped up badly the day before with legacy factories, tests and models, so I thought we needed a bit of relatively smooth sailing to boost our spirits.
+So we switched to the Premium members, and again I noticed we didn't have tickets for several things that we'd been thinking about.  Specifically, [refactoring Stripe components out of the user table](https://github.com/AgileVentures/WebsiteOne/issues/1299) and [automating Premium benefits](https://github.com/AgileVentures/WebsiteOne/issues/1300).  I wanted to take a leaf out of Avdi Grimm's "Confident Ruby" book and impose a solid narrative on the next piece of work we would do.  We'd been tripped up badly the day before with legacy factories, tests and models, so I thought we needed a bit of relatively smooth sailing to boost our spirits.
 
 Smooth sailing can never be guaranteed of course.  You never know when a bug in a new version of a library is going to lead you up the garden path (VCR!), although if you can release your grip on the bananas then you might be pulled too far off track.  Still, Avdi makes a point about a "MacGyver Method" where you end up just using the tools that are lying around rather than telling the story you want to tell.  That happened to us with the legacy components in the Karma system where we burned a lot of time deciphering those components, rather than telling the story we wanted to about Karma.
 
@@ -55,9 +55,9 @@ It wasn't necessarily the best place to start, but we were looking at the DB sch
   end
 ```
 
-Part of our recent focus had been on how we could reduce bloat on this table.  Adding the `stripe_customer` field had made us feel a little queasy.   However actually moving payment info or Karma wasn't going to reduce bloat; which would require pulling out an Address or SignIn class.  However it wasn't clear that either of those latter two would yield any short-term business value.  It's a bit like a game of Jenga.  There are some parts of the structure that if you pull at will cause a lot of blocks to come crashing down.  At least pulling out the payment and premium elements to other models would allow those parts of the system to evolve without further increasing the technical debt associated with the User table.,
+Part of our recent focus had been on how we could reduce bloat on this table.  Adding the `stripe_customer` field had made us feel a little queasy.   However, actually moving payment info or Karma wasn't going to reduce bloat; which would require pulling out an Address or SignIn class.  Yet it wasn't clear that either of those latter two would yield any short-term business value.  It's a bit like a game of Jenga.  There are some parts of the structure that if you pull at will cause a lot of blocks to come crashing down.  At least pulling out the payment and premium elements to other models would allow those parts of the system to evolve without further increasing the technical debt associated with the User table.,
 
-Maybe we should have been using whiteboard software or pencil and paper, but I found myself writing the following with a few changes coming here and there:
+Maybe we should have been using whiteboard software, or pencil and paper, but I found myself writing the following with a few changes coming here and there:
 
 ```rb
   subscriptions
@@ -77,7 +77,7 @@ Maybe we should have been using whiteboard software or pencil and paper, but I f
   
 ```
 
-See the video to follow how this evolved from one model to three models and then back to too.  However I did feel uncomfortable that we were being too specific at this level, so I pulled that snippet into a text document and re-framed it in terms of Ruby objects:
+See the video to follow how this evolved from one model to three models and then back to two.  However, I did feel uncomfortable that we were being too specific at this level, so I pulled that snippet into a text document and re-framed it in terms of Ruby objects:
 
 ```rb
 class Subscription > AR:Base
@@ -107,7 +107,7 @@ Maybe we should have been writing domain model narrative as preference.  Clearly
   - when subscribing your stripe customer id should be updated
   - exposing change credit card functionality in individual page settings 
 
-Expiring subscriptions should be put off to future work.  Related features could be put to the side given that we were happy that the domain model was compatible.  So then we used RSpec to test drive inour domain model elements.  I'll just show Subscription because the principle is the same for both.  I was also quite pleased that we did actually manage to stay behind the tests in terms of only adding application code or migrations that made tests pass.  Here's the Subscription Spec:
+Expiring subscriptions should be put off to future work.  Related features could be put to the side given that we were happy that the domain model was compatible.  So then we used RSpec to test drive in our domain model elements.  I'll just show Subscription because the principle is the same for both.  I was also quite pleased that we did actually manage to stay behind the tests in terms of only adding application code or migrations that made tests pass.  Here's the Subscription Spec:
 
 ```rb
 shared_examples 'a subscription' do
