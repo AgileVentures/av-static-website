@@ -55,7 +55,7 @@ It wasn't necessarily the best place to start, but we were looking at the DB sch
   end
 ```
 
-Part of our recent focus had been on how we could reduce bloat on this table.  Adding the `stripe_customer` field had made us feel a little queasy.   However actually moving payment info or Karma wasn't going to reduce bloat.  A real impact would require pulling out an Address or SignIn class.  However it wasn't clear that either of those latter two would yield any short-term business value.  It's a bit like a game of Jenga.  There are some parts of the structure that if you pull at will cause a lot of blocks to come crashing down.  At least pulling out the payment and premium elements to other models would allow those parts of the system to evolve without further increasing the technical debt associated with the User table.,
+Part of our recent focus had been on how we could reduce bloat on this table.  Adding the `stripe_customer` field had made us feel a little queasy.   However actually moving payment info or Karma wasn't going to reduce bloat.  A real impact would require pulling out an Address or SignIn class.  Yet it wasn't clear that either of those latter two would yield any short-term business value.  It's a bit like a game of Jenga.  There are some parts of the structure that if you pull at will cause a lot of blocks to come crashing down.  At least pulling out the payment and premium elements to other models would allow those parts of the system to evolve without further increasing the technical debt associated with the User table.
 
 Maybe we should have been using whiteboard software or pencil and paper, but I found myself writing the following with a few changes coming here and there:
 
@@ -77,7 +77,7 @@ Maybe we should have been using whiteboard software or pencil and paper, but I f
   
 ```
 
-See the video to follow how this evolved from one model to three models and then back to too.  However I did feel uncomfortable that we were being too specific at this level of ruby database instructions, so I pulled that snippet into a text document and re-framed it in terms of Ruby objects:
+See the video to follow how this evolved from one model to three models and then back to two.  However I did feel uncomfortable that we were being too specific at this level of ruby database instructions, so I pulled that snippet into a text document and re-framed it in terms of Ruby objects:
 
 ```rb
 class Subscription > AR:Base
