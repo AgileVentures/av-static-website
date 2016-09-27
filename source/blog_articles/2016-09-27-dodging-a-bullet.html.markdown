@@ -1,3 +1,11 @@
+---
+title: Dodging a Bullet
+date: 2016-09-27
+tags: pairing tickets refactoring domain model cucumber steps scenarios heuristics stripe git rspec
+author: Sam Joseph
+---
+
+
 So Monday was the day to see if our new domain model components would ease the process of delivering a new feature. As warm up I made a quick refactoring requested by Raoul on our Karma calculation changes.  There was the possibility of re-using some cucumber steps.  We'd submitted the following:
 
 ```rb
