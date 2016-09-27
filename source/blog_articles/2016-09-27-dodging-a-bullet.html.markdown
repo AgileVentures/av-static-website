@@ -114,7 +114,7 @@ class User < ActiveRecord::Base
 end
 ```
 
-and finally a little addition to the charges controller so that when users sign up premium, that we store their customer id in the user table:
+and finally a little addition to the charges controller, so that when users sign up for premium, that we store their customer id in the user table:
 
 ```rb
 
@@ -145,13 +145,13 @@ and finally a little addition to the charges controller so that when users sign 
   end
 ```
 
-The upshot of which, was that using only the existing aspects of the system, we would now store the stripe customer id of the premium member in the user table, and the premium users would see their status on their profile page, and non-premium users would see the upgrade button.  It was all working without the aid of the new domain entities.  As I mentioned above, Michael and I had other concerns, but with my eye on the clock I suggested we get this in as a pull request, and then use the new domain entities to support work on a subsequent [ticket of allowing premium users to upgrade to premium plus](https://github.com/AgileVentures/WebsiteOne/issues/1303).
+The upshot of which was that using only the existing aspects of the system we would now store the stripe customer id of the premium member in the user table, and the premium users would see their status on their profile page, and non-premium users would see the upgrade button.  It was all working without the aid of the new domain entities.  As I mentioned above, Michael and I had other concerns, but with my eye on the clock I suggested we get this in as a pull request, and then use the new domain entities to support work on a subsequent [ticket of allowing premium users to upgrade to premium plus](https://github.com/AgileVentures/WebsiteOne/issues/1303).
 
 I had other concerns dripping out of me, such as whether we should be testing Stripe differently, whether we should be making our scenarios more declarative.  I guess part of the challenge with our increasing list of heuristics for good coding and good project management is that it can feel like you are being pulled in multiple directions at once, and you can be forgiven for a kind of paranoia about which really is the most important issue to work on first.
 
 Submitting the PR for just the above code involved pulling out the commits for the new domain model entities.  One thing that was easy to prioritise for me was to put only the smallest set of necessary elements in the pull request.  I didn't want Raoul's code review to get distracted by having a set of un-used domain entities in the incoming code.  Michael found a [cool technique for cherry picking a set of commits](http://stackoverflow.com/a/1994491/316729) and we got in a PR with just the code above, and moved the domain entities onto a new branch associated with the ticket for creating the premium plus upgrade button.  Will we fall foul of premature refactoring?  Did we just dodge a bullet?
 
-It's pretty to clear to me that the current stripe_customer field on user can't support information about different membership plans.  Hopefully our InsideOut work will bear fruit in the next session!
+It's pretty clear to me that the current stripe_customer field on user can't support information about different membership plans.  Hopefully our InsideOut work will bear fruit in the next session!
 
 
 Related Videos:
