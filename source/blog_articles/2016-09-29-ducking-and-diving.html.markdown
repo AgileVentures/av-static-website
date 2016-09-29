@@ -5,7 +5,7 @@ tags: tickets demeter violation migrations try dot ampersand ruby rails feature 
 author: Sam Joseph
 ---
 
-So having partially recovered from the cold I was able to pair program again.  Interleaving work on the Karma calculation and the premium memberships, we now had an outstanding PR for premium upgrade buttons, so we ducked back to the Karma work of the previous week where we had got tangled up in all sorts of trouble with legacy tests, factories and objects.  The ardour of frustration had cooled.  I was now not in such a hurry to "solve" the problem.  We'd broken up the follow up refactorings into two tickets; one to get the karma total out of the user table, and the other to transfer all the rest of the intermediate calculations into the Karma model itself.
+So having partially recovered from the cold I was able to pair program again today.  Interleaving work on the Karma calculation and the premium memberships, we now had an outstanding PR for premium upgrade buttons, so we ducked back to the Karma work of the previous week where we had got tangled up in all sorts of trouble with legacy tests, factories and objects.  The ardour of frustration had cooled.  I was not now in such a hurry to "solve" the problem.  I think that really helped.  We'd broken up the follow on refactorings into two tickets; one to get the karma total out of the user table, and the other to transfer all the rest of the intermediate calculations into the Karma model itself.
 
 We started on removing karma from the user table.  The approach here was just to create the migration and see what errors we flushed out:
 
@@ -76,9 +76,9 @@ User.page(params[:page]).per(15)
     .order('karmas.total DESC')
 ```
 
-to cope with the fact that we were now ordering the main user view based on a field in another table.  That done, all the specs were passing, and we ran the cukes to see if any of the features were broken. Before we did that I had half a mind to start deleting the view specs that were failing, and even the controller specs.  I've lost any motivation to write view and controller specs that effectively unit test parts of the view and controller in isolation.  It feels like the features and integration tests will check those, and that "unit" tests of controllers and views encourage logic to appear in those areas when all logic should be being pushed into models, services, gems and remote services where possible.  That's what we've done with some success in our work on ProjectScope.
+to cope with the fact that we were now ordering the main user view based on a field in another table.  That done, all the specs were passing, and we ran the cukes to see if any of the features were broken. Before we did that I had half a mind to start deleting the view specs that were failing, and even the controller specs.  I've lost any motivation to write view and controller specs that effectively unit test parts of the view and controller in isolation.  It feels like the features and integration tests will check that logic, and that "unit" tests of controllers and views encourage logic to appear in those areas when all complex stuff should be being pushed into models, services, gems and remote services where possible.  That's what we've done with some success in our work on ProjectScope.
 
-However, the fixes for the specs had been relatively simple, and the fear of deleting something that might have use in the future (dangerous paranoia?) kept me from hacking and slashing.  The idea of more extensive unit tests of controllers and views is that they can find you problems faster than the slow running acceptance tests.  Ironically our acceptance tests don't take much longer to run than our specs, and for all this to work you need to trust that your specs are testing the right things.  In fact we did get a failure in the cukes, which was related to the way we were setting up our default user objects - there was no Karma object associated with them by default, so calling `user.karma.total` was failing with no method `total` on nil object.  Our Demeter violation was biting us.
+However, the fixes for the specs had been relatively simple, and the fear of deleting something that might have use in the future (dangerous paranoia?) kept me from hacking and slashing.  The idea of more extensive unit tests of controllers and views is that they can find you problems faster than the slow running acceptance tests.  Ironically our acceptance tests don't take much longer to run than our specs, and anyway for all this to work you need to trust that your specs are testing the right things.  In fact we did get a failure in the cukes, which was related to the way we were setting up our default user objects - there was no Karma object associated with them by default, so calling `user.karma.total` was failing with no method `total` on nil object.  Our Demeter violation was biting us.
 
 Now we could have been less confident and fixed this with `user.karma.try(:total)` or even the new ampersand dot syntax `user.karma&.total`, but given that we were already uncomfortable with the Demeter violation, we went another, perhaps more confident, route.  We TDD'd a new method on the User object:
 
@@ -113,9 +113,14 @@ Much more confident, and now everything was green.  For a long time I've been ta
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/tg3YjMqWNj0" frameborder="0" allowfullscreen></iframe>
 
-and I'm starting to see nil as evil.  Well at least something to address by avoiding passing it around rather than using `try` or ampersand-dot which screws with our readability.  Anyhow we'd managed to follow a drive-by methodology, doing the minimum work necessary to get our pull request out.  We'd fixed the Demeter violation for "getting" karma where it was breaking our feature tests, but we left the Demeter violation for "setting" karma in the KarmaCalculation service, which we were planning to refactor in the next ticket.
+and I'm starting to see nil as evil.  Well at least something to address by avoiding passing it around rather than using `try` or ampersand-dot which screws with our readability.  Anyhow we'd managed to follow a drive-by methodology, doing the minimum work necessary to get our pull request out.  We'd fixed the Demeter violation for "getting" Karma where it was breaking our feature tests, but we left the Demeter violation for "setting" Karma in the KarmaCalculation service, which we were planning to refactor in the next ticket.
 
-We'd finished early so we got in some quick PRs to upgrade to Ruby 2.3.1, remove some old vagrant scripts and started on a new ticket for improving hangout telemetry.  A reasonable afternoon's work.  We'd ducked and dived and at the end of it I felt we'd taken a reasonable middle road down the profusion of coding and project heuristics that infest my mind.  Let's see what tomorrow brings :-)
+We'd finished early so we got in some quick PRs to upgrade to Ruby 2.3.1, remove some old Vagrant scripts and started on a new ticket for improving hangout telemetry.  A reasonable afternoon's work.  We'd ducked and dived and at the end of it I felt we'd taken a reasonable middle road down the profusion of coding and project heuristics that infest my mind.  Let's see what tomorrow brings :-)
+
+Related Videos:
+
+* [Pairing Video](https://www.youtube.com/watch?v=fPGJ5lon92M)
+* ["Kent Beck" scrum](https://www.youtube.com/watch?v=r6pWaOVKyRM)
  
 
 
