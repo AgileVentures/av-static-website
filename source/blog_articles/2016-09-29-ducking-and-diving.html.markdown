@@ -5,7 +5,7 @@ tags: tickets demeter violation migrations try dot ampersand ruby rails feature 
 author: Sam Joseph
 ---
 
-So having partially recovered from the cold I was able to pair program again.  Interleaving work on the Karma calculation and the premium memberships, we now had an outstanding PR for premium upgrade buttons so we ducked back to the Karma work of the previous week were we had got tangled up in all sorts of trouble with legacy tests, factories and objects.  The ardour of frustration had cooled.  I was now not in such a hurry to "solve" the problem.  We'd broken up the follow up refactorings into two tickets; one to get the karma total out of the user table, and the other to transfer all the rest of the intermediate calculations into the Karma model itself.
+So having partially recovered from the cold I was able to pair program again.  Interleaving work on the Karma calculation and the premium memberships, we now had an outstanding PR for premium upgrade buttons, so we ducked back to the Karma work of the previous week where we had got tangled up in all sorts of trouble with legacy tests, factories and objects.  The ardour of frustration had cooled.  I was now not in such a hurry to "solve" the problem.  We'd broken up the follow up refactorings into two tickets; one to get the karma total out of the user table, and the other to transfer all the rest of the intermediate calculations into the Karma model itself.
 
 We started on removing karma from the user table.  The approach here was just to create the migration and see what errors we flushed out:
 
@@ -46,7 +46,7 @@ which were all variations on the expected error message of:
 column users.karma_points does not exist
 ```
 
-We started by fixing up the Karma controller so that it switched it's references from `user.karma_points` to `user.karma.karma`.  That latter looked silly so we switched it to `user.karma.total` with another migration:
+We started by fixing up the Karma controller so that it switched its references from `user.karma_points` to `user.karma.karma`.  That latter looked silly so we switched it to `user.karma.total` with another migration:
 
 ```rb
 class RenameKarmaKarmaToTotal < ActiveRecord::Migration
@@ -56,7 +56,7 @@ class RenameKarmaKarmaToTotal < ActiveRecord::Migration
 end
 ```
 
-Reaching through from one object into another like `user.karma.total` is a Demeter violation.   We shouldn't know or assume too much about the objects we are collaborating with, but we knew our next ticket was going to refactor away the KarmaCalculation service so we didn't want to get pulled in to fixing that immediately.  After getting the KarmaCalculation specs to pass we had a few views to update to use `user.karma.total` instead of `user.karma_points` and they were soon passing.  The user controller needed a slightly more complex change from:
+Reaching through from one object into another like `user.karma.total` is a Demeter violation.   We shouldn't know or assume too much about the objects we are collaborating with, but we knew our next ticket was going to refactor away the KarmaCalculation service, so we didn't want to get pulled in to fixing that immediately.  After getting the KarmaCalculation specs to pass we had a few views to update to use `user.karma.total` instead of `user.karma_points` and they were soon passing.  The user controller needed a slightly more complex change from:
 
 ```rb
 User.page(params[:page]).per(15)
@@ -76,11 +76,11 @@ User.page(params[:page]).per(15)
     .order('karmas.total DESC')
 ```
 
-to cope with the fact that we were now ordering the main user view based on a field in another table.  That done all the specs were passing, and we ran the cukes to see if any of the features were broken. Before we did that I had half a mind to start deleting the view specs that were failing, and even the controller specs.  I've lost any motivation to write view and controller specs that effectively unit test parts of the view and controller in isolation.  It feels like the features and integration tests will check those, and that "unit" tests of controllers and views encourage logic to appear in those areas when all logic should be being pushed into models, services, gems and remote services where possible.  That's what we've done with some success in our work on ProjectScope.
+to cope with the fact that we were now ordering the main user view based on a field in another table.  That done, all the specs were passing, and we ran the cukes to see if any of the features were broken. Before we did that I had half a mind to start deleting the view specs that were failing, and even the controller specs.  I've lost any motivation to write view and controller specs that effectively unit test parts of the view and controller in isolation.  It feels like the features and integration tests will check those, and that "unit" tests of controllers and views encourage logic to appear in those areas when all logic should be being pushed into models, services, gems and remote services where possible.  That's what we've done with some success in our work on ProjectScope.
 
-However the fixes for the specs had been relatively simple, and the fear of deleting something that might have use in the future (dangerous paranoia?) kept me from hacking and slashing.  The idea of more extensive unit tests of controllers and views is that they can find you problems faster than the slow running acceptance tests.  Ironically our acceptance tests don't take much longer to run than our specs, and for all this to work you need to trust that your specs are testing the right things.  In fact we did get a failure in the cukes, which was related to the way we were setting up our default user objects - there was no Karma object associated with them by default so calling `user.karma.total` was failing with no method `total` on nil object.  Our Demeter violation was biting us.
+However, the fixes for the specs had been relatively simple, and the fear of deleting something that might have use in the future (dangerous paranoia?) kept me from hacking and slashing.  The idea of more extensive unit tests of controllers and views is that they can find you problems faster than the slow running acceptance tests.  Ironically our acceptance tests don't take much longer to run than our specs, and for all this to work you need to trust that your specs are testing the right things.  In fact we did get a failure in the cukes, which was related to the way we were setting up our default user objects - there was no Karma object associated with them by default, so calling `user.karma.total` was failing with no method `total` on nil object.  Our Demeter violation was biting us.
 
-Now we could have been less confident and fixed this with `user.karma.try(:total)` or even the new ampersand dot syntax `user.karma&.total`, but given that we were already uncomfortable with the Demeter violation we went another, perhaps more confident route.  We TDD'd a new method on the User object:
+Now we could have been less confident and fixed this with `user.karma.try(:total)` or even the new ampersand dot syntax `user.karma&.total`, but given that we were already uncomfortable with the Demeter violation, we went another, perhaps more confident, route.  We TDD'd a new method on the User object:
 
 ```rb
 describe '#karma_total' do
@@ -109,13 +109,13 @@ def karma_total
 end
 ```
 
-Much more confident, and now everything was green.  For a long time I've been talking about how much I like ObjectiveC's set up where calling a method on nil just results in nil.  The ampersand dot in Ruby promises that much, but now I've been infected by Avdi's "confidence" meme.  I also just watched this talk by Peter Bhat Harkins, which was almost going to be called "kill nil":
+Much more confident, and now everything was green.  For a long time I've been talking about how much I like Objective-C's set up where calling a method on nil just results in nil.  The ampersand dot in Ruby promises that much, but now I've been infected by Avdi's "confidence" meme.  I also just watched this talk by Peter Bhat Harkins, which was almost going to be called "kill nil":
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/tg3YjMqWNj0" frameborder="0" allowfullscreen></iframe>
 
-and I'm starting to see nil as evil.  Well at least something to address by avoiding passing it around rather than using `try` or ampersand-dot which screws with our readability.  Anyhow we'd managed to follow a drive-by methodology, doing the minimum work necessary to get our pull request out.  We'd fixed the Demeter violation for "getting" karma where it was breaking our feature tests, but we left the Demeter violation for "setting" karma in the KarmaCalculation service which we were planning to refactor in the next ticket.
+and I'm starting to see nil as evil.  Well at least something to address by avoiding passing it around rather than using `try` or ampersand-dot which screws with our readability.  Anyhow we'd managed to follow a drive-by methodology, doing the minimum work necessary to get our pull request out.  We'd fixed the Demeter violation for "getting" karma where it was breaking our feature tests, but we left the Demeter violation for "setting" karma in the KarmaCalculation service, which we were planning to refactor in the next ticket.
 
-We'd finished early so we got in some quick PRs to upgrade to Ruby 2.3.1, remove some old vagrant scripts and started on a new ticket for improving hangout telemetry.  A reasonable afternoons work.  We'd ducked and dived and at the end of it I felt we'd taken a reasonable middle road down the profusion of coding and project heuristics that infest my mind.  Let's see what tomorrow brings :-)
+We'd finished early so we got in some quick PRs to upgrade to Ruby 2.3.1, remove some old vagrant scripts and started on a new ticket for improving hangout telemetry.  A reasonable afternoon's work.  We'd ducked and dived and at the end of it I felt we'd taken a reasonable middle road down the profusion of coding and project heuristics that infest my mind.  Let's see what tomorrow brings :-)
  
 
 
