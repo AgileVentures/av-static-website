@@ -111,7 +111,7 @@ end
 
 Much more confident, and now everything was green.  For a long time I've been talking about how much I like Objective-C's set up where calling a method on nil just results in nil.  The ampersand dot in Ruby promises that much, but now I've been infected by Avdi's "confidence" meme.  I also just watched this talk by Peter Bhat Harkins, which was almost going to be called "kill nil":
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/tg3YjMqWNj0" frameborder="0" allowfullscreen></iframe>
+<iframe style="display: block; margin: auto;" align="center" width="560" height="315" src="https://www.youtube.com/embed/tg3YjMqWNj0" frameborder="0" allowfullscreen></iframe>
 
 and I'm starting to see nil as evil.  Well at least something to address by avoiding passing it around rather than using `try` or ampersand-dot which screws with our readability.  Anyhow we'd managed to follow a drive-by methodology, doing the minimum work necessary to get our pull request out.  We'd fixed the Demeter violation for "getting" Karma where it was breaking our feature tests, but we left the Demeter violation for "setting" Karma in the KarmaCalculation service, which we were planning to refactor in the next ticket.
 
