@@ -22,22 +22,22 @@ I was torn about this sort of hacky approach, versus the other ticket which woul
 So we proceeded with the migration and flushed out the following 16 failures in the specs:
 
 ```
-rspec ./spec/views/users/index.html.erb_spec.rb:48 # users/index.html.erb renders User name link with href
-rspec ./spec/views/users/index.html.erb_spec.rb:41 # users/index.html.erb should display a list of users
-rspec ./spec/views/users/index.html.erb_spec.rb:91 # users/index.html.erb display user status there should be 4 green dots
-rspec ./spec/views/users/index.html.erb_spec.rb:85 # users/index.html.erb display user status display green dot for online users
-rspec ./spec/views/users/index.html.erb_spec.rb:97 # users/index.html.erb display user status do not display green dot for offline users
-rspec ./spec/views/users/index.html.erb_spec.rb:103 # users/index.html.erb display user status displays the user's status with a speech bubble
-rspec ./spec/views/users/index.html.erb_spec.rb:18 # users/index.html.erb advanced filtering should display an advanced filter form
-rspec ./spec/views/users/index.html.erb_spec.rb:32 # users/index.html.erb advanced filtering timezone select is populated with titles
-rspec ./spec/views/users/index.html.erb_spec.rb:25 # users/index.html.erb advanced filtering projects select is populated with project titles
-rspec ./spec/views/users/index.html.erb_spec.rb:62 # users/index.html.erb renders the users count in the sentence above shows different sentence if invalid users count
-rspec ./spec/views/users/index.html.erb_spec.rb:56 # users/index.html.erb renders the users count in the sentence above has valid users count
-rspec ./spec/controllers/users_controller_spec.rb:10 # UsersController#index should assign the results of the search to @users
-rspec ./spec/services/karma_calculator_spec.rb:10 # KarmaCalculator for new members should assign 0 karma points to members who have not yet been created
-rspec ./spec/services/karma_calculator_spec.rb:23 # KarmaCalculator for existing members for old members should assign karma points to members
-rspec ./spec/services/karma_calculator_spec.rb:34 # KarmaCalculator for existing members for members attending hangouts gives points for hangout participation
-rspec ./spec/views/layouts/application.html.erb_spec.rb:73 # layouts/application.html.erb should return 200 for all link visits
+users/index.html.erb renders User name link with href
+users/index.html.erb should display a list of users
+users/index.html.erb display user status there should be 4 green dots
+users/index.html.erb display user status display green dot for online users
+users/index.html.erb display user status do not display green dot for offline users
+users/index.html.erb display user status displays the user's status with a speech bubble
+users/index.html.erb advanced filtering should display an advanced filter form
+users/index.html.erb advanced filtering timezone select is populated with titles
+users/index.html.erb advanced filtering projects select is populated with project titles
+users/index.html.erb renders the users count in the sentence above shows different sentence if invalid users count
+users/index.html.erb renders the users count in the sentence above has valid users count
+UsersController#index should assign the results of the search to @users
+KarmaCalculator for new members should assign 0 karma points to members who have not yet been created
+KarmaCalculator for existing members for old members should assign karma points to members
+KarmaCalculator for existing members for members attending hangouts gives points for hangout participation
+layouts/application.html.erb should return 200 for all link visits
 ```
 
 which were all variations on the expected error message of:
