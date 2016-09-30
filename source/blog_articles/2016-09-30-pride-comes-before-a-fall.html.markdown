@@ -1,6 +1,6 @@
 ---
 title: Pride Comes Before a Fall
-date: 2016-09-29
+date: 2016-09-30
 tags: production staging develop local nil demeter violation acceptance unit tests factories cucumer steps airbrake heroku migrations rollback
 author: Sam Joseph
 ---
