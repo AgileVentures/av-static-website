@@ -13,7 +13,7 @@ I knew that the real data for the users' karma was not lost, since we calculate 
 
 [https://github.com/AgileVentures/WebsiteOne/issues/1313](https://github.com/AgileVentures/WebsiteOne/issues/1313)
 
-![](https://www.dropbox.com/s/2i4ner1w4gka2r6/Screenshot%202016-09-30%2009.07.00.png?dl=1)
+![](https://www.dropbox.com/s/46beetb1yld5vef/Screenshot%202016-09-30%2020.56.19.png?dl=1)
 
 We were getting `undefined method `total=' for nil:NilClass` in a run of the KarmaCalculator:
 
