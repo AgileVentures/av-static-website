@@ -130,7 +130,7 @@ So I've come round to thinking should I just TDD something in node that will ope
 
 Related Code:
 
-* [https://github.com/tansaku/planning_poker_bot](https://github.com/tansaku/planning_poker_bot)
+* [https://github.com/tansaku/planning\_poker\_bot](https://github.com/tansaku/planning_poker_bot)
 
 
 
