@@ -322,10 +322,14 @@ section {
 .privacy, .terms {
   h2 {
     text-align: center;
+    padding: 1.5em 0em 0.7em 0em;
   }
-}
-section#privacy, section#terms{
-  padding-bottom: 0px;
+  p {
+    text-align: justify;
+  }
+  section {
+    padding-bottom: 0px;
+  }
 }
 
 // Services Section
