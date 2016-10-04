@@ -319,10 +319,13 @@ section {
 
 // Privacy Section
 
-.privacy {
+.privacy, .terms {
   h2 {
     text-align: center;
   }
+}
+section#privacy, section#terms{
+  padding-bottom: 0px;
 }
 
 // Services Section
