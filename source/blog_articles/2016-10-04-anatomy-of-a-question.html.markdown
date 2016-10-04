@@ -12,7 +12,6 @@ I’ve always encouraged students and colleagues to post on StackOverflow and I 
 In the past I’ve also encouraged students who were contacting me directly via instant message to post their questions in group channels or on StackOverflow.  Very often students would be extremely reticent about doing this. Here are two examples of students who ultimately posted on SO following my suggestions:
 
 * [http://stackoverflow.com/questions/28678092/how-to-change-recursive-method-into-non-recursive-one-in-js](http://stackoverflow.com/questions/28678092/how-to-change-recursive-method-into-non-recursive-one-in-js)
-
 * [http://stackoverflow.com/questions/30920118/cucumber-test-which-syntax-to-choose-to-test-a-radio-button-selection](http://stackoverflow.com/questions/30920118/cucumber-test-which-syntax-to-choose-to-test-a-radio-button-selection)
 
 In one case my upvote cancelled out a -1 from someone else who didn’t like the question, and if you look carefully you can see me teasing out additional information from students in the comments section, and as it happens, I ultimately answered both of these students' questions on StackOverflow itself.  However, my sense is the majority of students would really rather not post on StackOverflow, or any public forum if at all possible.  As I’ve mentioned before, many students contact me one to one via emails or instant message.  It seems that this is something they generally prefer, to ask their questions in private.
