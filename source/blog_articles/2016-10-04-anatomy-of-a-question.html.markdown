@@ -31,4 +31,4 @@ I don’t want to suffer in silence.  If I’m stuck on something for longer tha
 
 * [https://www.quora.com/Is-there-an-open-source-alternative-to-StackOverflow-I-can-use-for-internal-Q-A](https://www.quora.com/Is-there-an-open-source-alternative-to-StackOverflow-I-can-use-for-internal-Q-A)
 
-End of the day I think it's the interactive dynamic between developers asking each other questions in the context of a pull request, in the slack channel, that's key; learning in context.  AgileVentures is a safe space to submit PRs and get supportative feedback - at least that's my vision and ultimately our special sauce :-)
+End of the day I think it's the interactive dynamic between developers asking each other questions in the context of a pull request, in the slack channel, that's key; learning in context.  AgileVentures is a safe space to submit PRs and get supportive feedback - at least that's my vision and ultimately our special sauce :-)
