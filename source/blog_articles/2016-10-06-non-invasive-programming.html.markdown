@@ -7,9 +7,9 @@ author: Sam Joseph
 
 
 
-So I was back in shape for a bit of pair programming again and Michael and I continued what we'd been working on last week, which was allowing [Premium members to upgrade to PremiumPlus](https://github.com/AgileVentures/WebsiteOne/issues/1303).  It took us a 15 minutes or so to get up to speed, closing out a few experimental PRs, checking that the airbrake errors weren't anything serious etc.  I had been assuming we'd have to focus on other things, so I was pleased when we could continue with a task related to premium.  I was speculating that the small spike in new sign ups we had might have been related to rolling out the "Upgrade to Premium" button on all the individual user profile pages.
+So I was back in shape for a bit of pair programming again and Michael and I continued what we'd been working on last week, which was allowing [Premium members to upgrade to PremiumPlus](https://github.com/AgileVentures/WebsiteOne/issues/1303).  It took us 15 minutes or so to get up to speed, closing out a few experimental PRs, checking that the airbrake errors weren't anything serious etc.  I had been assuming we'd have to focus on other things, so I was pleased when we could continue with a task related to premium.  I was speculating that the small spike in new sign ups we had might have been related to rolling out the "Upgrade to Premium" button on all the individual user profile pages.
 
-I was half tempted to start ferreting through our Google Analytics data and checking with the new premium members about this, but put a pin in that and tried to make progress on the outstanding task.  DriveBy heuristic, finish what you started, and find the shortest path to completion.  Hmm, maybe it should be called "WhistleStop", or "non-invasive", anyhow ... it was an interesting operation because what we were hoping to pull in the new domain objects we'd created the week before (Subscription and PaymentSource).  We had a failing acceptance test that was expecting a premium users profile page to now show an "upgrade to Premium Plus" button: 
+I was half tempted to start ferreting through our Google Analytics data and checking with the new premium members about this, but put a pin in that and tried to make progress on the outstanding task.  DriveBy heuristic, finish what you started, and find the shortest path to completion.  Hmm, maybe it should be called "WhistleStop", or "non-invasive", anyhow ... it was an interesting operation because what we were hoping was to pull in the new domain objects we'd created the week before (Subscription and PaymentSource).  We had a failing acceptance test that was expecting a premium user's profile page to now show an "upgrade to Premium Plus" button: 
 
 ```gherkin
   Scenario: User upgrades to premium plus from premium
@@ -49,7 +49,7 @@ Not that we wanted logic in our views.  In the previous session we had already e
 <% end %>
 ```
 
-I had specifically avoided DRYing that out with the similar button with the view we had in the main Premium payment page as I wanted us to stay tightly focused on one thing and I knew that our business logic was in flux.  Looking at the logic we had both Michael and I were thinking about making something like:
+I had specifically avoided DRYing that out with the similar button with the view we had in the main Premium payment page as I wanted us to stay tightly focused on one thing and I knew that our business logic was in flux.  Looking at the logic we had, both Michael and I were thinking about making something like:
 
 
 ```html
@@ -58,7 +58,7 @@ I had specifically avoided DRYing that out with the similar button with the view
 <% end
 ```
 
-and how we wanted to be extracting the business logic e.g. the current upgrade path of "Basic" to "Premium" to "PremiumPlus".  Michael was pushing me to stop talking about it and just get it done, as we all know I have a tendency to run off at the mouth.  I did the super simple step of creating an additional premium upgrade partial and tweaked the logic thinking we'd still get a failure:
+and how we wanted to be extracting the business logic e.g. the current upgrade path of "Basic" to "Premium" to "PremiumPlus".  Michael was pushing me to stop talking about it and just get it done, as we all know I have a tendency to run off at the mouth.  I did the super simple step of creating an additional premium upgrade partial and tweaked the logic, thinking we'd still get a failure:
 
 ```html
 <% if current_user.membership_type == 'Premium' %>
@@ -68,7 +68,7 @@ and how we wanted to be extracting the business logic e.g. the current upgrade p
 <% end %>
 ```
 
-with a new partial `_premium_plus_upgrade.html.erb` that was a copy of the one above, but with script elements tweaked for Premium Plus.  I was reflecting about how that business logic would need to be DRYed out, but not doing that now; putting that one side to see how this failed.  I'm not sure quite what I was thinking, but surprisingly the step actually passed, or at least got us on a few more cucumber steps.  We laughed about the importance of proceeding in simple steps.  If we'd got sidetracked extracting business abstractions we'd have had some missing components in our understanding, or at least in my understanding.  Not that we don't want to extract the business logic eventually, but we don't want to do it prematurely.  The funny thing then was that we realised that actually we didn't want another credit card payment button for the Premium user who was upgrading to Premium Plus.  We already had their credit card details; we could craft our own button and endpoint to do the subscription upgrade as described by Stripe in an example in their docs:
+with a new partial `_premium_plus_upgrade.html.erb` that was a copy of the one above, but with script elements tweaked for Premium Plus.  I was reflecting about how that business logic would need to be DRYed out, but not doing that now; putting that one aside to see how this failed.  I'm not sure quite what I was thinking, but surprisingly the step actually passed, or at least got us on a few more cucumber steps.  We laughed about the importance of proceeding in simple steps.  If we'd got sidetracked extracting business abstractions we'd have had some missing components in our understanding, or at least in my understanding.  Not that we don't want to extract the business logic eventually, but we don't want to do it prematurely.  The funny thing then was that we realised that actually we didn't want another credit card payment button for the Premium user who was upgrading to Premium Plus.  We already had their credit card details. We could craft our own button and endpoint to do the subscription upgrade as described by Stripe in an example in their docs:
 
 ```rb
 subscription = Stripe::Subscription.retrieve("sub_3R3PlB2YlJe84a")
@@ -84,7 +84,7 @@ So suddenly we were back-peddling.  I could feel the "I want to keep coding" urg
 <% end %>
 ```
 
-We'd decided to create a new action on the charges controller.  What was really interesting here was reflecting on our piecemeal work on the charges controller we realised that we'd got our RESTfulness was totally out of whack.  We'd originally put our subscription sign up in a "charges" controller from one Stripe example that was all about making single one off charges.  What we had would be more accurately called a "Subscription" controller.  Let's look at all the code that's accumulated there:
+We'd decided to create a new action on the charges controller.  What was really interesting here, reflecting on our piecemeal work on the charges controller, we realised that we'd got our RESTfulness totally out of whack.  We'd originally put our subscription sign-up in a "charges" controller from one Stripe example that was all about making single one off charges.  What we had would be more accurately called a "Subscription" controller.  Let's look at all the code that's accumulated there:
 
 ```rb
 class ChargesController < ApplicationController
@@ -129,7 +129,7 @@ class ChargesController < ApplicationController
   end
 ```
 
-So it looks like a CRUD controller, and you might expect it to be CRUDing charges, but actually it's creating customers, subscriptions and updating customer credit card details, urgh, embarrassing!  It's not immediately clear if what we need are separate controllers for Subscriptions, Customers and Cards; or a StripeController that takes care of all of them.  We'll need to reflect carefully on this.  At the risk of adding insult to injury we went for just adding a non-RESTful action called `upgrade`.  Trying to be "non-invasive" we just wanted to get this one feature completed adding a new route to `routes.rb`:
+So it looks like a CRUD controller, and you might expect it to be CRUDing charges, but actually it's creating customers, subscriptions and updating customer credit card details; urgh, embarrassing!  It's not immediately clear if what we need are separate controllers for Subscriptions, Customers and Cards; or a StripeController that takes care of all of them.  We'll need to reflect carefully on this.  At the risk of adding insult to injury we went for just adding a non-RESTful action called `upgrade`.  Trying to be "non-invasive" we just wanted to get this one feature completed adding a new route to `routes.rb`:
 
 ```rb
 match '/charges/upgrade' => 'charges#upgrade', :via => [:put]
@@ -146,7 +146,7 @@ and a new action:
   end
 ```
 
-It took us a while to get to that logic in the upgrade action. It was failing and we had to drop into the debugger where the error message from the Stripe API told us to do something different from their docs; weird.  And total Demeter violation territory. `customer.subscriptions.retrieve(customer.subscriptions.first.id)` in particular looking very brittle.  Surely there would be something like customer.subscriptions.first that we could use instead?  We'd circle back - this was working and I had an eye on whether we couldn't get this feature green without using any of our new domain objects.  Was that crazy?  I was thinking that it would give us a safe space to reflect, and improve our understanding of the Stripe API.  With the upgrade code in place the only thing we needed was for the user object to be able to correctly report its membership type.  It currently did this:
+It took us a while to get to that logic in the upgrade action. It was failing and we had to drop into the debugger where the error message from the Stripe API told us to do something different from their docs; weird.  And total Demeter violation territory. `customer.subscriptions.retrieve(customer.subscriptions.first.id)` in particular was looking very brittle.  Surely there would be something like customer.subscriptions.first that we could use instead?  We'd circle back - this was working and I had an eye on whether we couldn't get this feature green without using any of our new domain objects.  Was that crazy?  I was thinking that it would give us a safe space to reflect, and improve our understanding of the Stripe API.  With the upgrade code in place the only thing we needed was for the user object to be able to correctly report its membership type.  It currently did this:
 
 
 ```rb
@@ -167,7 +167,7 @@ We updated it like so:
   end
 ```
 
-which should have worked, but even using the debugger to check it step by step it wouldn't.  We were getting things like this:
+which should have worked, but even using the debugger to check it step by step, it wouldn't.  We were getting things like this:
 
 ```
 > plan
@@ -176,7 +176,7 @@ which should have worked, but even using the debugger to check it step by step i
 false
 ``` 
 
-Something very strange was going on.  We were on shaky ground here, pushing at model logic with an acceptance test, for something that we were probably going to throw out anyway.  We threw our that code and I pulled in the new domain objects and got the `membership_type` method under an integration test:
+Something very strange was going on.  We were on shaky ground here, pushing at model logic with an acceptance test, for something that we were probably going to throw out anyway.  We threw out that code and I pulled in the new domain objects and got the `membership_type` method under an integration test:
 
 ```rb
     describe '#membership_type' do
