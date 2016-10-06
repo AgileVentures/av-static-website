@@ -214,6 +214,7 @@ but we were running out of time, and we had to finish pairing without getting th
 2. Model specs full of a mixture of unit and integration tests
 3. FactoryGirl object creation having side-effects on how single table inheritance classes were reporting their class
 4. VCR/Billy file mess from recording all the Stripe interactions
+5. lack of confidence in code using `current_user`
 
 But which are the ones that we can address "non-invasively" to stay focused on getting this single feature green?  So much going on here.  Just how many refactoring tickets will we generate? All to be revealed in the next pair programming session!
 
