@@ -1,6 +1,6 @@
 ---
 title: Non Invasive Programming
-date: 2016-10-05
+date: 2016-10-06
 tags: rspec cucumber stripe factory girl acceptance integration unit test
 author: Sam Joseph
 ---
