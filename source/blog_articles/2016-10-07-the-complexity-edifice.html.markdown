@@ -11,7 +11,7 @@ I assumed getting to safe green shores with this PremiumPlus upgrade button migh
 2. Model specs full of a mixture of unit and integration tests
 3. FactoryGirl object creation having side-effects on how single table inheritance classes were reporting their class
 4. VCR/Billy file mess from recording all the Stripe interactions
-5. lack of confidence in code using `current_user`
+5. Lack of confidence in code using `current_user`
 
 Some [solo googling](http://stackoverflow.com/a/20101117/316729) had showed me that there should be some simple fixes for mixing FactoryGirl and STI; although I was still nervous about the fairylight connections between all these different factories that required special tweaking to behave like objects in production.  I knew we had a potential fix for the insecure [current_user](https://github.com/plataformatec/devise/issues/4317#issuecomment-251667866), and a possible alternate for [mocking Stripe](https://github.com/rebelidealist/stripe-ruby-mock), but all of these were arguably distractions while we were still trying to get the tests green.
 
@@ -146,9 +146,9 @@ The VCR cache no longer leaked, the tests passed and it was now a simple fix to 
 
 It was satisfying to go green, but there are some things here that I don't think I can push off to refactoring tickets:
 
-1) we need some sad paths for upgrade failure 
-2) we've got to look carefully at Demeter violations in the way we use the Stripe API and our own domain objects
-3) patching develop with the VCR config fix
+1) We need some sad paths for upgrade failure 
+2) We've got to look carefully at Demeter violations in the way we use the Stripe API and our own domain objects
+3) Patching develop with the VCR config fix
 
 In the scrum I was talking about Donald Norman's Design of Everyday Things, in which he laments how people blame themselves for not understanding poorly designed things.  Git, Stripe, Rails, Acceptance testing.  There's some real complexity there.  I'm not saying they are poorly designed, but the edifice of concepts that someone needs to understand to work with our acceptance tests ... maybe the problem is not the tools, but the way we are building on top of them?
 
