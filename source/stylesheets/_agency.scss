@@ -317,6 +317,21 @@ section {
   }
 }
 
+// Privacy Section
+
+.privacy, .terms {
+  h2 {
+    text-align: center;
+    padding: 1.5em 0em 0.7em 0em;
+  }
+  p {
+    text-align: justify;
+  }
+  section {
+    padding-bottom: 0px;
+  }
+}
+
 // Services Section
 
 .service-heading {
