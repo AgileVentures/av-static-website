@@ -1,5 +1,5 @@
 ---
-title: MultiDimensional Learning Economics
+title: Three Day Week
 date: 2016-10-11
 tags: XML hub simplify eliminate automate delegate heroku pr travis deploy
 author: Sam Joseph
