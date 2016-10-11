@@ -5,7 +5,7 @@ tags: eliminate automate delegate ruby kindle publishing textbook process
 author: Sam Joseph
 ---
 
-Ruby Rogues is a stream of interesting ideas.  One I heard recently was a mention of the importance of "Eliminate, Automate, Delegate".  Everything you're doing, check does it need to be done? Could it be done automatically, or could you get someone else to do it?  The idea is to not waste time on things that could be done more efficiently, and spend as much time on those things that only you can do, which presumably is the stuff that you're really good at, is enjoyable, delivers value etc.  I'm not sure who first came up with this idea, but there are a few blogs with variations on the theme:
+[Ruby Rogues](https://devchat.tv/ruby-rogues) is a stream of interesting ideas.  One I heard recently was a mention of the importance of "Eliminate, Automate, Delegate".  Everything you're doing, check does it need to be done? Could it be done automatically, or could you get someone else to do it?  The idea is to not waste time on things that could be done more efficiently, and spend as much time on those things that only you can do, which presumably is the stuff that you're really good at, is enjoyable, delivers value etc.  I'm not sure who first came up with this idea, but there are a few blogs with variations on the theme:
 
 * [Rory Vaden on EAD](http://roryvaden.com/blog/eliminate-automate-and-delegate/)
 * [Marc Winn on ESAD](http://theviewinside.me/eliminate-simplify-automate-delegate-the-four-steps-to-freedom/)
