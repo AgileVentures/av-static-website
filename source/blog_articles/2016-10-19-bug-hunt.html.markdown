@@ -85,7 +85,7 @@ Some of the project followers seemed to be nil.  These follower relations were t
 Follow.select{|f| User.find_by_id(f.follower_id).nil?}.each{ |f| f.delete }
 ```
 
-Allowing me to get to the websiteone project page on staging and see that I got the same authentication error.  I'd tidied up staging in a way that would make testing hangouts easier in the future, but had only managed to confirm that the plugin authentication error was more generally and thus more likely to be something on Google's side that we might not be able to fix.  I could also wax lyrical about data integrity constraints, or gracefully failing code relating to the above.  Maybe in another blog post ... if we stay with the hangout narrative, next I got googling and found some helpful links:
+Allowing me to get to the websiteone project page on staging and see that I got the same authentication error.  I'd tidied up staging in a way that would make testing hangouts easier in the future, but had only managed to confirm that the plugin authentication error was more generally and thus more likely to be something on Google's side that we might not be able to fix.  I could also wax lyrical about data integrity constraints, or gracefully failing code relating to the above.  Bottom line, interface, just display something, anything - I have no interest in 500 errors. Maybe I'll explore that further in another blog post ... if we stay with the hangout narrative, next I got googling and found some helpful links:
 
 * http://stackoverflow.com/questions/16850350/got-origin-mismatch-error-in-google-share-api
 * https://developers.google.com/+/sign-in-faq#were_seeing_error_origin_mismatch_during_sign-in_testing_what_might_be_the_issue
