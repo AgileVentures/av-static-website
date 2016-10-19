@@ -87,10 +87,9 @@ Follow.select{|f| User.find_by_id(f.follower_id).nil?}.each{ |f| f.delete }
 
 I could now see an individual project page on staging and the start a hangout button.  I got the same authentication error.  I'd tidied up staging in a way that would make testing hangouts easier in the future, but had only managed to confirm that the plugin authentication error was ocurring for at least two versions fo the plugin and thus more likely to be something on Google's side that we might not be able to fix.  I almost started to compose a blog about data integrity constraints and gracefully code failure.  Bottom line, interface, just display something, anything! I have no interest in 500 errors. I dragged myself back to the hangout narrative and got googling. I found some helpful links:
 
-* http://stackoverflow.com/questions/16850350/got-origin-mismatch-error-in-google-share-api
-* https://developers.google.com/+/sign-in-faq#were_seeing_error_origin_mismatch_during_sign-in_testing_what_might_be_the_issue
-* https://www.google.co.uk/search?q=google+hangout+plugin+%22Error%3A+origin_mismatch%22
-  * https://productforums.google.com/forum/#!topic/hangouts/Y6YdjONMu6Q
+* [http://stackoverflow.com/questions/16850350/got-origin-mismatch-error-in-google-share-api](http://stackoverflow.com/questions/16850350/got-origin-mismatch-error-in-google-share-api)
+* [https://developers.google.com/+/sign-in-faq#were\_seeing\_error\_origin\_mismatch\_during\_sign-in\_testing\_what\_might\_be\_the\_issue](https://developers.google.com/+/sign-in-faq#were_seeing_error_origin_mismatch_during_sign-in_testing_what_might_be_the_issue)
+* [https://productforums.google.com/forum/#!topic/hangouts/Y6YdjONMu6Q](https://productforums.google.com/forum/#!topic/hangouts/Y6YdjONMu6Q)
 
 I spent the next 30 minutes tweaking things through the google api console.  It looked like our "Authorized JavaScript origins" for OAuth were all up to date.  I even managed to make G+ login work on the develop server, making it seem like there was no wholesale authentication fail on Google's side.  The last link in the list above (a locked discussion ironically) talked about a potentially brittle fix to the authentication problem.  I tried it on staging, but no joy.  It seemed like the googlecontent URL it suggested adding to the JavaScript origins was variable. A frustrating morning, but I thought to myself perhaps we can use this as a spur to produce a better solution.  Maybe we can get YouTube Live events to start directly from Slack ...
 
