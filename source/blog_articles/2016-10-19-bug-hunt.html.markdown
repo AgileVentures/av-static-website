@@ -5,7 +5,7 @@ tags: bug google hangout plugin oauth staging develop javascript authorised orig
 author: Sam Joseph
 ---
 
-For about 12 hours now our Google Hangouts plugin has been failing.  I discovered it yesterday when I tried to start the "Kent Beck" scrum.  I opened an [issue on our HangoutConnection repo](https://github.com/AgileVentures/HangoutConnection/issues/34).  The Hangout plugin was asking for authorisation, which it normally only does on first install:
+For about 12 hours now our Google Hangouts plugin have been failing.  I discovered it yesterday when I tried to start the "Kent Beck" scrum.  I opened an [issue on our HangoutConnection repo](https://github.com/AgileVentures/HangoutConnection/issues/34).  The Hangout plugin was asking for authorisation, which it normally only does on first install:
 
 ![asking for permission](https://www.dropbox.com/s/p9671p484k2vtdd/Screenshot%202016-10-19%2009.17.56.png?dl=1)
 
