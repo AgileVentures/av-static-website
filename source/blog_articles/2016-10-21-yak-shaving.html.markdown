@@ -1,7 +1,7 @@
 ---
 title: Yak Shaving
 date: 2016-10-21
-tags: devops heroku pull-requests automation database permissions accounts admin
+tags: devops heroku pull-requests automation database permissions accounts admin pipeline
 author: Sam Joseph
 ---
 
@@ -25,7 +25,9 @@ Anyway, the LocalSupport ticket (and an old Heroku ticket) included some ideas f
 
 > The ideal fix is to track down why the app is connecting to the database during build and try to prevent that. If that's not an option, we also have a buildpack that you can use to wait for your database to come up: https://github.com/heroku/heroku-buildpack-addon-wait.
 
-I didn't get to trying the build pack suggestion, instead going through a series of changes to app.json; an analysis of the stack trace associated with the above database fail, which seemed to possibly implicate [airbrake](https://github.com/airbrake/airbrake/issues/620) but probably not.  Ultimately I did not get it working, but did succeed in spamming Raoul and myself with failed slack invites that get generated as part of the `rake db:setup`.  I posted support requests to Heroku, which as of this morning have not been picked up and as of this morning I tried removing the `rake db:setup` completely, which allowed the app to report "successful" deployment, but when I looked there was just nothing there.
+I didn't get to trying the build pack suggestion, instead going through a series of changes to app.json; moving the develop server into a heroku pipelin (see image below);an analysis of the stack trace associated with the above database fail, which seemed to possibly implicate [airbrake](https://github.com/airbrake/airbrake/issues/620) but probably not.  Ultimately I did not get it working, but did succeed in spamming Raoul and myself with failed slack invites that get generated as part of the `rake db:setup`.  I posted support requests to Heroku, which as of this morning have not been picked up and as of this morning I tried removing the `rake db:setup` completely, which allowed the app to report "successful" deployment, but when I looked there was just nothing there.
+
+![heroku pipeline](https://www.dropbox.com/s/x6bmiswu6j89q8s/Screenshot%202016-10-21%2011.27.48.png?dl=1)
 
 Despite being admin Raoul reported that he couldn't even see the develop server in the Heroku GUI, and had removed his account over night.  I re-added him, put the `rake db:setup` back in, adjusted the config to allow us to set slack invites to be disabled on develop, and tried another push.  I feel like I could burn a lot of time on this today.  The next sequence of things to try with this nasty delayed feedback loop are:
 
