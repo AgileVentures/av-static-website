@@ -6,7 +6,7 @@ author: Sam Joseph
 ---
 
 
-So after Yak shaving with Heroku automated PR deploys, we finally got it working.  Raoul joined us in the "Martin Fowler" scrum and through a process of both disabling the PR deploys AND deleting the GitHub webhooks that Heroku had installed the permissions issue was resolved.  The deploys themselves were now marked on GitHub as coming from me, and suddenly all the other strange database issues evaporated.  I did also get a reply from Heroku:
+So after [Yak shaving](http://nonprofits.agileventures.org/2016/10/21/yak-shaving/) with Heroku automated PR deploys, we finally got it working.  Raoul joined us in the "Martin Fowler" scrum and through a process of both disabling the PR deploys, AND deleting the GitHub webhooks that Heroku had installed, the permissions issue was resolved.  The deploys themselves were now marked on GitHub as coming from me, and suddenly all the other strange database issues evaporated.  I did also get a reply from Heroku:
 
 
 > The use of ruby-2.3.0 appears to be because you're bundling it into the vendor/ directory:
@@ -50,7 +50,7 @@ which all sounded like good advice, but this was all for errors that were no lon
 
 and I got back the following:
 
-> Regarding the vendor/bundle/ruby question I think there's may have been some issue with the build cache on this occasion that was holding the 2.3.0 over from a previous deploy. If you have any trouble in future you could you try running the following commands:
+> Regarding the vendor/bundle/ruby question I think there may have been some issue with the build cache on this occasion that was holding the 2.3.0 over from a previous deploy. If you have any trouble in future you could you try running the following commands:
 
 ```
 $ heroku plugins:install https://github.com/heroku/heroku-repo.git
@@ -64,7 +64,7 @@ $ git push heroku master
 So that's that, except that all these automated PR apps are costing us money, and I'm not sure they are being deployed automatically.  The LocalSupport auto-deploy appears to be stuck due to an app limit of 100, and I'm starting to suspect that's because the local support develop server is on my personal account.  If I move it to one of our group accounts we'll start incurring more charges, so I found a little script to [delete heroku apps in batch](https://gist.github.com/naaman/1384970), which I modified slightly to work with a hand picked list:
 
 ```
-while read app; do heroku apps:destroy --app $app --confirm $app; done <delete_heroku_list 
+while read app; do heroku apps:destroy --app $app --confirm $app; done < delete_heroku_list 
 
 Destroying ⬢ afternoon-stream-8326 (including all add-ons)... done
 Destroying ⬢ agile-chamber-2464 (including all add-ons)... done
@@ -75,7 +75,7 @@ Destroying ⬢ ancient-dusk-4608 (including all add-ons)... done
 
 ```
 
-I could have burnt time doing a regex for the format of <word>-<word>-<four-digits> to find and delete all my apps without custom names, but that would have burnt time for something I'm unlikely to need to do again, and it took a minute to get the file `delete_heroku_list` to have the names of all the crufty old apps I haven't used in years.
+I could have burnt time doing a regex for the format of `<word>-<word>-<four-digits>` to find and delete all my apps without custom names, but that would have burnt time for something I'm unlikely to need to do again, and it took a minute to get the file `delete_heroku_list` to have the names of all the crufty old apps I haven't used in years.
 
 So my hereby dashboard is looking a lot cleaner.  I've got my two main project pipelines in my "favourites", and my Heroku navigation is a lot more manageable:
 
