@@ -197,6 +197,10 @@ end
 
 I don't like this, and I don't like how we've ended up overloading the charges controller.  The former is the Stripe API that perhaps we're using incorrectly, but I don't know that I can justify putting an adapter on this right now.  The charges controller needs a bigger refactoring, but I'm making the judgement call that these two things go into refactoring tickets.  In the ideal world I'd also love more sad path tests in places, but again, this PR has been open long, we need the data migration in and from a charity/business perspective we're likely to bring in more revenue by actually releasing the individual sign up pages for the new intermediate plans, and they'll have to be a fair amount of work going on on top of this code to handle the new sequence of upgrades that are possible, so like Sandi Metz suggests, I'm hedging my bets about avoiding too much refactoring in an area where the code is in flux.
 
+At least the Heroku automated deploy is working, so I can easily do a manual test.  I'm not thrilled about the placeholder button we have but again that can be another ticket:
+
+![upgrade to premium plus button](https://www.dropbox.com/s/2aom85mgn7pv16p/Screenshot%202016-10-25%2010.50.14.png?dl=1)
+
 Of course now Google Hangouts on Air have switched to YouTube live and our automated distribution of hangouts is failing - we've got a manual override but it has a bug I blogged about last week which will drag me away from pushing out these other plans ... gah!  It's all about the prioritization ... At least I quite enjoyed writing all the above code :-)
 
 Related Videos:
