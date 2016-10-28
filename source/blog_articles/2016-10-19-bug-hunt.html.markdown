@@ -1,0 +1,104 @@
+---
+title: Bug Hunt
+date: 2016-10-19
+tags: bug google hangout plugin oauth staging develop javascript authorised origin
+author: Sam Joseph
+---
+
+For about 12 hours now our Google Hangouts plugin have been failing.  I discovered it yesterday when I tried to start the "Kent Beck" scrum.  I opened an [issue on our HangoutConnection repo](https://github.com/AgileVentures/HangoutConnection/issues/34).  The Hangout plugin was asking for authorisation, which it normally only does on first install:
+
+![asking for permission](https://www.dropbox.com/s/p9671p484k2vtdd/Screenshot%202016-10-19%2009.17.56.png?dl=1)
+
+clicking "continue" brings up this error screen:
+
+![oauth2 fail](https://www.dropbox.com/s/hmifa1v3lmiwbns/Screenshot%202016-10-19%2009.18.59.png?dl=1)
+
+Yesterday I was desperately flailing to work around this.  The same problem was occurring in multiple browsers.  When the hangout plugin fails we get no notification on Slack.  Naturally we can post the hangout URL directly into slack manually which is a pain, but the bigger issue is that if the hangout plugin fails, then the main AV website isn't updated about the existence of the hangout, so we don't track its usage. More importantly than that, links to the live hangouts are not set on the website.  This means that people browsing the website and seeing "Scrum live" cannot access the correct scrum.  We have a manual override functionality to allow a scrum master to set the hangout link for an event, but it isn't working.
+
+I opened [another issue](https://github.com/AgileVentures/WebsiteOne/issues/1340) for that, and gnashed my teeth over no one joining the scrum.  Three people had RSVP'd to the meetup event; not that that means much - clicking the meetup RSVP button is quick and easy, and for online meet ups I'd say we're generally lucky to get 1 in 4 of RSVPs making it into the hangout.  Even when the system is working totally smoothly, many people will be put off by steps like having to install the Google talk plugin, or the notice that "people you do not know will be able to watch you" that comes up for our google hangouts on air, etc.  I did manually post the link into the meetup chat, but anyone going to the main site via the link that we have in the meetup location would have not been able to join my hangout.
+
+I was in a bad mood, I blew up at my kids for the ongoing mess in the hallway with their shoes scattered around.  It was not a great evening.  I didn't sleep well and woke early.  Since I was awake I decided to go on a bug hunt.  The evening before I had been perplexed that we didn't seem to have a test for the manual hangout link update feature.  Part of my frustration was the difficulty I had had convincing different developers over the years that this was an important feature.  They didn't understand why it was needed, attempted to take it out.  Why do we need it when we have the hangout plugin?  Because 1 time in a 50 the hangout plugin fails.  Maybe that 1 in 50 case isn't worth the effort, but we seem to be forever on the cusp of the hangout plugin failing permanently.  It stopped working for two days in the summer and then came back on.  Google is migrating from "Hangouts on Air" to "YouTube Live".  If we lose hangout plugin functionality we'll need manual updates to keep a lot of our existing site functionality relevant.
+
+Anyway, so I had searched for a test by grepping the term "Edit hangout link" (which is the menu item you click) in the spec and feature directories.  No hits.  Did we not have a test for this?  Wasn't this a sideshow?  Shouldn't I be debugging the hangout plugin itself?  I was not optimistic about finding a fix for the hangout plugin issue and so I thought at least I can put a test in for this feature that I really want to work.  A deeper investigation showed me that there was a test, and I hadn't been able to grep it because it was using a JavaScript trick to click on the menu item:
+
+```gherkin
+  @javascript
+  Scenario: Edit Hangout URL
+    Given I am on the show page for event "Scrum"
+    And I open the Edit URL controls
+    And I fill in "hangout_url" with "http://test.com"
+    And I click on the Save button
+    Then I should see link "Join now" with "http://test.com"
+```
+
+```rb
+When(/^I open the Edit URL controls/) do
+  page.execute_script(  %q{$('li[role="edit_hoa_link"] > a').trigger('click')}  )
+end
+```
+
+Okay, so great, we had a test, but the functionality was failing on production.  My thoughts of an early morning TDDing evaporated and I moved to test the system on the develop server.  The develop server had been slept by Heroku due to me using up all the available hours on my personal account.  Gah.  I pushed the develop server over to my NeuroGrid company account where it would start consuming $7 a month.  Not ideal, but I needed to stay focused on this bug.  Although ironically I was distracted from it by the thought that while I waited for the develop server to come up I could see if the hangout plugin was failing on the staging server.  The staging server is set up to use the develop hangout plugin, which we had been checking the day before to see if Joao's PR for title updating would work.  The develop hangout plugin was now slightly different, but it was worth a try to see if the same authentication failure would come up.  I was stymied by some errors regarding loading projects on staging.  We had sidestepped them in the manual test session with Michael and Sasha the day before, but I was solo-ing now and I was like, let's get to the bottom of these.
+
+The projects index page was failing with:
+
+```
+No route matches {:action=>"show", :controller=>"users", :id=>nil} missing required keys: [:id]
+/app/vendor/bundle/ruby/2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/routing/route_set.rb:234:in `optimized_helper'
+/app/vendor/bundle/ruby/2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/routing/route_set.rb:220:in `call'
+/app/vendor/bundle/ruby/2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/routing/route_set.rb:345:in `block (2 levels) in define_url_helper'
+/app/app/views/projects/_listing.html.erb:52:in `_app_views_projects__listing_html_erb___4267003586796215631_69973986642740'
+```
+
+which corresponded to this code:
+
+```html
+<div><%= "Created #{time_ago_in_words(project.created_at)} ago" %> by <%= link_to project.user.display_name, user_path(project.user) %></div>
+```
+
+It seemed like some projects in staging had nil users.  Usually staging has a clone of production data, but we're paying for a bigger db on production and we'd truncated some tables on staging.  I briefly considered pulling over a fresh copy of the production database, but thinking that would incur charges, I went for clearing up the data instead.  Logging into Rails console on staging I used the following to remove all projects that had users with nil ids:
+
+```rb
+Project.all.each { |p| p.delete if p.user.id.nil? }
+```
+
+I could now see the projects index page again on staging.  But there was another error for looking at an individual project page:
+
+```
+  Parameters: {"id"=>"websiteone"}
+undefined method `display_profile' for nil:NilClass
+/app/app/models/project.rb:42:in `select'
+/app/app/models/project.rb:42:in `members'
+/app/app/controllers/projects_controller.rb:18:in `show'
+```
+
+corresponding to this code:
+
+```rb
+def members
+  followers.select(&:display_profile)
+end
+```
+
+Some of the project followers seemed to be nil.  These follower relations were through the acts_as_followable gem.  I read the documentation for the gem, checked the schema and worked how to delete all the nil followers:
+
+```rb
+Follow.select{|f| User.find_by_id(f.follower_id).nil?}.each{ |f| f.delete }
+```
+
+I could now see an individual project page on staging and the start a hangout button.  I got the same authentication error.  I'd tidied up staging in a way that would make testing hangouts easier in the future, but had only managed to confirm that the plugin authentication error was ocurring for at least two versions fo the plugin and thus more likely to be something on Google's side that we might not be able to fix.  I almost started to compose a blog about data integrity constraints and gracefully code failure.  Bottom line, interface, just display something, anything! I have no interest in 500 errors. I dragged myself back to the hangout narrative and got googling. I found some helpful links:
+
+* [http://stackoverflow.com/questions/16850350/got-origin-mismatch-error-in-google-share-api](http://stackoverflow.com/questions/16850350/got-origin-mismatch-error-in-google-share-api)
+* [https://developers.google.com/+/sign-in-faq#were\_seeing\_error\_origin\_mismatch\_during\_sign-in\_testing\_what\_might\_be\_the\_issue](https://developers.google.com/+/sign-in-faq#were_seeing_error_origin_mismatch_during_sign-in_testing_what_might_be_the_issue)
+* [https://productforums.google.com/forum/#!topic/hangouts/Y6YdjONMu6Q](https://productforums.google.com/forum/#!topic/hangouts/Y6YdjONMu6Q)
+
+I spent the next 30 minutes tweaking things through the google api console.  It looked like our "Authorized JavaScript origins" for OAuth were all up to date.  I even managed to make G+ login work on the develop server, making it seem like there was no wholesale authentication fail on Google's side.  The last link in the list above (a locked discussion ironically) talked about a potentially brittle fix to the authentication problem.  I tried it on staging, but no joy.  It seemed like the googlecontent URL it suggested adding to the JavaScript origins was variable. A frustrating morning, but I thought to myself perhaps we can use this as a spur to produce a better solution.  Maybe we can get YouTube Live events to start directly from Slack ...
+
+However in a further fit of irony, just as I was writing the first paragraph of this blog post, I noticed that the googleusercontent URL in the issue that I opened was the same as the one in the hangout I had just brought up to create screenshots for the blog.  I tried adding it to the "Authorized JavaScript origins" for the production hangout plugin and lo and behold it all worked.  Gah!  I think I had been putting the production googleusercontent URL into the develop plugin.  I tried to test that theory on staging.  Staging was working to and it already had the correct googleusercontent URL in the develop hangout config on the google console API.  I guess maybe it just took extra time to propagate.  Aaaaaaaaaaaa ....
+
+To tie up lose ends I finally did the check of the manual hangout link editing on the develop server, and it worked for an event that didn't have an existing hangout URL.  I guess there must be some corner case on production where we have an event that's been run and finished and left with an old hangout url and manually trying to override that fails.  So the path is clear - the google hangout plugin will soldier on for a few more days? weeks? months?  In the meantime I should try and create a test that actually replicates the circumstances in which the manual update of hangout urls fails on production.
+
+Not that I'm not thinking about whether we couldn't build our own screenshare app with WebRTC, or switch to Zoom or GotoMeeting, or find some other collaboration framework that didn't lead to massive debugging sessions every three months, as seems to generally under the shadow of a possible Google sunset ...
+
+
+
+ 
