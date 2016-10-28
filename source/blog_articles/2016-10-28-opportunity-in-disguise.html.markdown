@@ -5,7 +5,7 @@ tags: node express mongodb hangouts youtube live api brainstorm solutions proble
 author: Sam Joseph
 ---
 
-The new plan payment end points are winding their way to production, and I stepped back to the AsyncVoter code, which was now green, following a mob session with Michael, Raphael and Alex yesterday.  I wasn't there so apologies if I left anyone out.  I know Joao, Junior and Chaiwa are following things closely.  The clear difference for me between a Node/Express app and a Ruby/Sinatra app is that I can pretty much fix any problem very fast in the latter.  I've done Node/Express here and there over the years, but nothing like the volume I have in Ruby.  Raphael also talked about things being slow going in their session, but they'd got everything green.  I think ultimately it had come down to making sure the correct database setup was going on in the `server.js` file:
+The new plan payment end points are winding their way to production, and I stepped back to the AsyncVoter code (which was now green) following a mob session with Michael, Raphael and Alex yesterday.  I wasn't there so apologies if I left anyone out.  I know Joao, Junior and Chaiwa are following things closely.  The clear difference for me between a Node/Express app and a Ruby/Sinatra app is that I can pretty much fix any problem very fast in the latter.  I've done Node/Express here and there over the years, but nothing like the volume I have in Ruby.  Raphael also talked about things being slow going in their session, but they'd got everything green.  I think ultimately it had come down to making sure the correct database setup was going on in the `server.js` file:
 
 ```js
 var mongoose = require('mongoose');
@@ -22,7 +22,7 @@ db.once('open', function () {
 
 [https://github.com/AgileVentures/AsyncVoter/blob/master/bin/server.js](https://github.com/AgileVentures/AsyncVoter/blob/2f42dee39c727cd5b6e849ac955a818bc0faa6ae/bin/server.js)
 
-This is the kind of thing that would benefit from some [athletic](http://philipmjohnson.org/essays/athletic-software-engineering.html) coding repetitions (reps).  I used to do those a lot with the students at Makers Academy, following from Philip Johnson's Athletic Software Engineering concept, where you repeat the same exercise over and over, building in muscle memory and getting your time down.  So for example I've repped generating a Sinatra app many many times, and a PORO domain model with RSpec hundreds of times.  We can also refer to these things as coding kata.  Often kata are just in the plain programming domain, but I think there's a lot to be said for kata that involve repeatedly building a Sinatra or Express app from scratch.  You encounter all the setup errors outside the context of trying to get something else done, which makes them less stressful.
+This is the kind of thing where I would benefit from some [athletic](http://philipmjohnson.org/essays/athletic-software-engineering.html) coding repetitions (reps).  I used to do those a lot with the students at Makers Academy, following from Philip Johnson's Athletic Software Engineering concept, where you repeat the same exercise over and over, building in muscle memory and getting your task completion time down.  So for example I've repped generating a Sinatra app many many times, and a PORO domain model with RSpec hundreds of times.  We can also refer to these things as coding kata.  Often kata are just in the plain programming domain, but I think there's a lot to be said for "infrastructure" kata that involve repeatedly building a Sinatra or Express app from scratch.  You encounter all the setup errors outside the context of trying to get something else done, which makes them less stressful.
 
 Anyway, it has been a year or so since I was repping on node/express so it was great the others had sorted the database issues in a mob session while I was kicking out the premium plan payment endpoints for our Rails app in a solo session.  In the review session I pulled the code onto my machine and everything pretty much worked except a Rails app I still had running on port 3000 blocked the tests, leading to a new [issue](https://github.com/AgileVentures/AsyncVoter/issues/15) for the project.  So we got the PR patched up and our first feature completed for AsyncVoter.  While we were waiting for the CI to pass we got a couple of general discussion points out of the way.
 
@@ -59,7 +59,7 @@ Maybe we will have to end up compromising on one or all of these in order to con
 
 * manual work for scrum masters (posting links to slack etc.)
 * no telemetry from hangouts (within Google button API our plugin no longer communicates to server)
-* descriptions of how to start pairing sessions no longer work - MOOC folks and many projects folks confused - unable to connect
+* descriptions of how to start pairing sessions now incorrect - MOOC folks and many projects folks confused - unable to connect
 
 We came up with the following short term solutions:
 
@@ -70,14 +70,13 @@ We came up with the following short term solutions:
 
 and also had a few out of the box ideas:
 
-* focus on asynchronous stuff?  scrums in text chat in slack? or something
+* focus on asynchronous stuff? e.g. scrums in text chat in slack? or something
 * revenue stream from ads on youtube
 * can we use the live event interface to start a hangout with selenium or something?
 
 It felt good to be able to review all the issues in a group.  The sensible thing seemed to be to focus on the first three items in the short term solutions above.  Good support for manual URL addition would not tie us to Hangouts, which of course might completely disappear.  If only they were open source!  The key fundamental is really to be able to share a URL to the video conference through the various media that people are connected with.   I'll try and get to the manual URL hangout fixes today, and then next week we can keep evaluating all the alternatives.  It might also be time to focus on allowing people to start hangouts from Slack where the activity is watchable, repeatable and copyable.  It offers a much more lightweight learning mechanism than a web interface.  Real time text chat really has the huge advantage over the web that you can immediately ask folks how they did anything, whether that's starting or voting in an Asynchronous vote, how they started a hangout etc ...  
 
 What's been so great to see this week is the AgileVentures members working hard to get round the problems, helping each other, brainstorming solutions.  Maybe this truly is an opportunity in disguise ... Okay, time to code! 
-
 
 Related Videos:
 
