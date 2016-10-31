@@ -25,7 +25,7 @@ Almost immediately there are tides that try to make the AsyncVoter project more 
 
 Of course I have to go spend the morning with my accountant, but after that ...!
 
-Related Videos:
+### Related Videos
 
 * ["Martin Fowler" Scrum](https://www.youtube.com/watch?v=oCcWrBHqPfk)
 * [AsyncVoter Mob session](https://www.youtube.com/watch?v=iUPcDHE7HUM)

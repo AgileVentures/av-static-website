@@ -83,7 +83,7 @@ So my hereby dashboard is looking a lot cleaner.  I've got my two main project p
 
 Although that doesn't immediately seem to have enabled automated PR deploys on LocalSupport - which still reports the 100 app limit exceeded.  I guess that will take time to flush through the system, or indeed I might need to try this new `purge_cache` technique that's mentioned above, but those are Yak's to be shaved.  I only just started on the data migration script for the premium plus upgrade feature, which needs to be finished, and there's a hell of a lot of other critical admin tasks to get to today.  At least this ties up some of the loose ends from last week, when I was worried the Yak shaving would continue indefinitely.  At least I've got to a reasonably satisfying task switching point ...
 
-Related Videos:
+### Related Videos
 
 * ["Martin Fowler" scrum](https://youtu.be/_hAm_6T8r18)
 * ["Kent Beck" scrum](https://www.youtube.com/watch?v=feu722TBjo4)

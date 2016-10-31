@@ -205,7 +205,7 @@ At least the Heroku automated deploy is working, so I can easily do a manual tes
 
 Of course now Google Hangouts on Air have switched to YouTube live and our automated distribution of hangouts is failing - we've got a manual override but it has a bug I blogged about last week which will drag me away from pushing out these other plans ... gah!  It's all about the prioritization ... At least I quite enjoyed writing all the above code :-)
 
-Related Videos:
+### Related Videos
 
 * ["Kent Beck" scrum](https://www.youtube.com/watch?v=Qt1QmFyBdpY)
 

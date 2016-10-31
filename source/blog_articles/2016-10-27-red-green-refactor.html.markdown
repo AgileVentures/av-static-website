@@ -117,7 +117,7 @@ Note that there's an exceptional case in the above to handle some Rails Inflecto
 
 Even if we don't, I've highlighted a core insight for myself about an old truth.  Red, Green and THEN refactor :-) Looking back over the years there's so much trouble that's come from refactoring too early.  Maybe leave the refactoring till the acceptance test is green, not every time a unit test passes.  Let the code expand first, and then contract when it's green and try not to build in too much genericism.  Or at least I'm saying that because the PR build is green - we'll see what happens when we deploy ...
 
-Related Videos:
+### Related Videos
 
 * ["Kent Beck" Scrum](https://www.youtube.com/watch?v=1QPgTuAkzUE)
 * ["Martin Fowler" Scrum](https://www.youtube.com/watch?v=I8njkwFwTRc)

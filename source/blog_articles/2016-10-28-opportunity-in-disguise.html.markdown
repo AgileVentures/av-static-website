@@ -78,7 +78,7 @@ It felt good to be able to review all the issues in a group.  The sensible thing
 
 What's been so great to see this week is the AgileVentures members working hard to get round the problems, helping each other, brainstorming solutions.  Maybe this truly is an opportunity in disguise ... Okay, time to code! 
 
-Related Videos:
+### Related Videos 
 
 * ["Martin Fowler" Scrum](https://www.youtube.com/watch?v=DyLL5_QxLkU)
 * [AsyncVoter Review](https://www.youtube.com/watch?v=Zmt8FjqMTLE)

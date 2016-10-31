@@ -36,6 +36,6 @@ Despite being admin, Raoul reported that he couldn't even see the develop server
 
 Conversely I could say that this is all yak-shaving, and yak-shaving with a time delay as to when the yak is shaved is a real pain.  If I really wanted to get back on track to deploying the feature what I could be doing is just deploying a Heroku instance from scratch and starting work on prodding at the feature, and getting my head back around the data migration we need so that I can write some manual instructions, or get a script together.  We will see.  Having blogged I guess I will now work through all the email and Slack messages that are backing up, and look through/add-to my priority list to work out what's the most profitable way to spend the next few hours.  Yaks!
 
-Related Videos:
+### Related Videos
 
 * ["Kent Beck" scrum](https://www.youtube.com/watch?v=ZZa-80c9qos)

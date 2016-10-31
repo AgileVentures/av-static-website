@@ -131,7 +131,8 @@ The set up also seemed to work at least partially for some less experienced Scru
 
 It often feels like Hangouts is an engineeering black hole.  Perhaps now it's time to switch focus onto adding PayPal payment support, and allowing people to sponsor each other's Premium memberships on AgileVentures.  I have the feeling we could start receiving payments from at least two people if those two features were in place, so perhaps that's the best focus?  In the meantime I could get some emails off to all the Hangout alternatives with a list of our needed features, e.g. recordability, URL to conference etc. ... On to the next Crunch Time!
 
-Related Videos
+
+### Related Videos
 
 * ["Kent Beck" Scrum](https://www.youtube.com/watch?v=nJVeelkuoGw)
 

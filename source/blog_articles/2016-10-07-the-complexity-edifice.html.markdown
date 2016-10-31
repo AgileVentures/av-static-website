@@ -155,8 +155,8 @@ In the scrum I was talking about Donald Norman's Design of Everyday Things, in w
 Stripe says that they're okay with our tests hitting their test API at reasonable levels.  Other developers I respect have said that acceptance testing Stripe is too hard, and so just leave that out; testing everything around it.  Do I have a bad habit of pushing some things to the limit when others would sensibly give up and so get myself into trouble?  There's so much here.  Is it even vaguely comprehensible in blog form?  I think it will be at least another week before I'm comfortable releasing this feature, but in the meantime I'll keep blogging!
 
 
-Related Videos 
-
+Related Videos
+-------------- 
 
 * [Pairing Video](https://www.youtube.com/watch?v=nQEC5HjwTnI)
 * ["Kent Beck" Scrum](https://www.youtube.com/watch?v=HCIaCdN6GW4)
