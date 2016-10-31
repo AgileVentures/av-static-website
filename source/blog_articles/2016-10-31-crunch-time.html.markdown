@@ -108,7 +108,7 @@ And made the following changes in the EventInstance class:
 
 ```
 
-The spec's passed, although not the cukes.  Notice I'd stubbed the EventInstance (hangout) in the spec to allow calling `within_current_event_duration?` on EventInstance objects.  I wanted to be able to ask that of an EventInstance instance, and I should be able to get that supported with another spec to drive the creation of a delegation:
+The spec's passed, although not the cukes.  Notice I'd stubbed the EventInstance (hangout) in the spec to allow calling `within_current_event_duration?` on EventInstance objects. One usually doesn't stub methods in the object under test, but here I was planning to delegate that call straight out to a collaborator. I wanted to be able to ask that of an EventInstance instance, and I could drive addig that with another spec for a delegation:
 
 
 ```rb
@@ -117,6 +117,7 @@ describe EventInstance, type: :model do
   it { should delegate_method(:within_current_event_duration?).to(:event) }
 ```
 
+and the code to make that spec green was:
 
 ```rb
 class EventInstance < ActiveRecord::Base
@@ -124,30 +125,13 @@ class EventInstance < ActiveRecord::Base
   delegate :within_current_event_duration?, to: :event
 ```
 
-I'd like to say that with that I got he Cukes green, but there was an additional change in the view (to set the url_set_directly flag) and then a good hour of getting lost in the time elements of Event, the IceCube scheduling gem, and ultimately I think it was all down to slight incorrectness in the way I was setting the dates in the Cucumber steps.   Ultimately it was all passing, and I got a [PR](https://github.com/AgileVentures/WebsiteOne/pull/1370) in which Raoul deployed and we tested in staging.  It seemed to keep the event live, but Slack notifications were not going through.  That took the addition of several more parameters to the view, and another [PR](https://github.com/AgileVentures/WebsiteOne/pull/1372) which ultimately worked.  I'd definitely gone over budget with the time on this, I was not comfortable with some of the compromises I had made on the Cucumber steps, but I had something working that would allow João to run the Pacific Rim scrum in such a way that with a single manual step he'd be able to notify everyone on Slack and the links on the AV site would stay live for 15 minutes to let people into the Scrum.
+It would be really tidy to say that then the cukes went green, but there was an additional change in the view (to set the url_set_directly flag) and then a good hour of getting lost in the time elements of Event, the IceCube scheduling gem etc. etc.Ultimately I think it was all down to slight incorrectness in the way I was setting the dates in the Cucumber steps.   Those sorted out everything was passing, and I got a [PR](https://github.com/AgileVentures/WebsiteOne/pull/1370) in, which Raoul deployed and we tested in staging.  It seemed to keep the event live, but Slack notifications were not going through.  That took the addition of several more parameters to the view, and another [PR](https://github.com/AgileVentures/WebsiteOne/pull/1372) which ultimately worked.  I'd definitely gone over budget with the time on this, I was not comfortable with some of the compromises I had made on the Cucumber steps, but I had something working that would allow João to run the Pacific Rim scrum in such a way that with a single manual step he'd be able to notify everyone on Slack, and the links on the AV site would stay live for 15 minutes to let people into the Scrum.
 
-The set up also seemed to work at least partially for some less experienced Scrum masters over the weekend, but more support and scaffolding is clearly needed.  I also think that `url_set_directly` needs to be date rather than a flag, since I expect some repeating events may now say live incorrectly ... although maybe events all should say live for the duration - we would just need some kind of popup message in the hangout for people entering to let them know that no one else is there yet and that's okay, and people could still meetup.  Of course Hangout's can't be re-broadcast ... is it worth pursuing a Hangout plugin to handle the new setup or will work invested there have to be thrown out when/if Google completely sunsets Hangouts?
+The set up also seemed to work at least partially for some less experienced Scrum masters over the weekend, but more support and scaffolding is clearly needed.  I also think that `url_set_directly` needs to be a date rather than a flag, since I expect some repeating events may now say "live" incorrectly ... although maybe events all should say live for their duration? We would just need some kind of popup message in the hangout for people entering to let them know that no one else is there yet and that's okay, and people could still meetup.  Of course Hangout's can't be re-broadcast ... is it worth pursuing a Hangout plugin to handle the new setup or will work invested there have to be thrown out when/if Google completely sunsets Hangouts?
 
-Perhaps now this week it's time to focus on adding PayPal payment support, and allowing people to sponsor each other's Premium memberships on AgileVentures.  I have payments I could start receiving from at least two people if those two features were in place, so perhaps that's the best focus?  In the meantime I could get some emails off to all the Hangout alternatives with a list of our needed features, e.g. recordability, URL to conference etc. ... On to the next Crunch Time!
+It often feels like Hangouts is an engineeering black hole.  Perhaps now it's time to switch focus onto adding PayPal payment support, and allowing people to sponsor each other's Premium memberships on AgileVentures.  I have the feeling we could start receiving payments from at least two people if those two features were in place, so perhaps that's the best focus?  In the meantime I could get some emails off to all the Hangout alternatives with a list of our needed features, e.g. recordability, URL to conference etc. ... On to the next Crunch Time!
 
 Related Videos
 
 * ["Kent Beck" Scrum](https://www.youtube.com/watch?v=nJVeelkuoGw)
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
