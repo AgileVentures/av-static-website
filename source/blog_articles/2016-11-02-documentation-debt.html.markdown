@@ -15,7 +15,7 @@ Maybe these materials should all be going into documents in our main site, like 
 
 When users are saying things like "I don't know how to get a project started", I can't be spending time routing around creating static pages and working with a WYSIWYG system that requires me to click buttons and open windows to add hyperlinks.  I want all link-like things automatically linked, and markdown links to allow me to throw in references without breaking stride.  I can so easily create new files through the GitHub UI:
 
-![animation of creating new file on GitHub repo](https://www.dropbox.com/s/uvyg4by7vmm2wtt/Screencast-2016.11.02-09.17.gif?dl=1)
+![animation of creating new file on GitHub repo](https://www.dropbox.com/s/c9nywqbxw638mw9/Screencast-2016.11.02-22.17.gif?dl=1)
 
 For me GitHub just feels natural whilst most everything else feels cumbersome.  Of course every piece of documentation we create leads to documentation maintenance debt.  We've made many things editable to everyone on AgileVentures, but very few realise they can edit, and the big advantage of GitHub is that even if people don't realise they can sometimes edit directly, at least there's a higher chance they'll understand they could contribute changes through a pull request.
 
