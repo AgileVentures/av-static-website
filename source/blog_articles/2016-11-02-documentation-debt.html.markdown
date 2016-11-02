@@ -1,0 +1,37 @@
+---
+title: Documentation Debt
+date: 2016-11-02
+tags: Github Animated gifs markdown mercury edit permissions scaling includes activerecord n+1
+author: Sam Joseph
+---
+
+Following on from the previous day I got a [CONTRIBUTING.md](https://github.com/AgileVentures/AsyncVoter/blob/master/CONTRIBUTING.md) together for the AsyncVoter project.  I'd jumped into a AsyncVoter pairing session immediately after the Martin Fowler scrum.  Progress was being made with Cucumber, but in contrast to the day before, there was talk of spending more time working out the right way to work with CucumberJS.  I recommended that if we just had something working then put adjusting it into a refactoring ticket and get a green PR in, but that also it was up to the project members to make their own decision.  I think they ultimately took my advice and we have a [PR](https://github.com/AgileVentures/AsyncVoter/pull/40) ready to merge.
+
+It's a strange ongoing balance between refactoring things so that they're right, and ensuring that PRs get merged quickly and don't serve as a block for other developers trying to build on your work.  My rule of thumb is keep the PRs super small and make refactoring tickets.  Of course those refactoring tickets need to be addressed quickly, ideally getting votes taken on them ASAP.  Poor design decisions can get locked in when a lot of people build on them, but in a project with a high churn of developers and unpredictable availability long running PRs can lead to a lot of work being thrown away.  I don't think there's any magic solution.
+
+I went ahead and tried to codify some of this in [CONTRIBUTING.md](https://github.com/AgileVentures/AsyncVoter/blob/master/CONTRIBUTING.md).  I think it's an improvement over some other CONTRIBUTING.mds I've written, but I think we need some images to break it up.  On the same note I started adding some documentation to the [AgileVentures/AgileVentures](https://github.com/AgileVentures/AgileVentures) repo.  I'd had a quick guide to AsyncVoting, which I threw in there.  We'd previously only been using this repo as a place to have issues that were AV wide.  The repo wasn't really intended for code.  John had thrown in some [scenarios for new developers](https://github.com/AgileVentures/AgileVentures/blob/master/features/new_developer.feature) which connects to the key document I wanted to put in there, which was a [starting new projects document](https://github.com/AgileVentures/AgileVentures/blob/master/STARTING_A_NEW_PROJECT.md).  I managed to get one video which breaks up the flow a little ...
+
+Maybe these materials should all be going into documents in our main site, like our [Getting Started document](http://www.agileventures.org/getting-started).  I just edited that to link to the start your own project page.  The problem I have with the editable static pages throughout our site is that they don't support markdown.  I'm just totally addicted to markdown; I write everything in it.  I love how it looks on GitHub.  I love that on GitHub that we can updates via pull requests from anyone with a GitHub account and we can use GitHub's powerful teams and permissions system to manage direct access where needed.  Anyway, so much more work needed - updating our UX and all our instruction documents to reflect how the Google Hangout API has changed.
+
+When users are saying things like "I don't know how to get a project started", I can't be spending time routing around creating static pages and working with a Wysiwyg system that requires me to click buttons and open windows to add hyperlinks.  I want all link like things automatically linked, and markdown links to allow me to throw in references without breaking stride.  I can so easily create new files through the GitHub UI:
+
+![animation of creating new file on GitHub repo](https://www.dropbox.com/s/uvyg4by7vmm2wtt/Screencast-2016.11.02-09.17.gif?dl=1)
+
+... it's a start.  Of course every piece of documentation we create leads to documentation maintenance debt.  We've made many things editable to everyone on AgileVentures, but very few realise they can edit, and the big advantage of GitHub is even if people don't realise they can sometimes edit directly, at least there's a higher chance they'll understand they could contribute changes through a pull request.
+
+In the afternoon Michael and I dived into some performance issues on WebSiteOne.  I really wanted to keep working on the PayPal functionality and the sponsor other members feature that might bring in more cash flow, but the events page giving 500 errors was really not good.  We started analysing the page loads.  It seemed that on production a good eight seconds was spent rendering the view.  It seemed like we had an N+1 query where every little event element made an additional database query to ask what the latest hangout was for an event and checking if it was live.  We spent a while trying to modify the underlying query with `includes` to pull in all the hangout info in the first query rather than one at a time.  We didn't have much success.  The base query was complicated by working with the IceCube gem pulling in repeating events.  It might have worked if we'd created a scope, but rather than diving deep on that, I realised there really was no need to check for the liveness of an event that wasn't taking place on the current day, so we just modified the view to check if the event was today, and saved ourselves a ton of database queries into the bargain.  It also removed an associated error that when an event was live, all the future events in the sequence also showed as live.  I dashed off a quick [pull request](https://github.com/AgileVentures/WebsiteOne/pull/1378) and we'll see if it has a positive impact on production.  We definitely got a speed up locally.
+
+It was time to jump into a busy "Kent Beck" scrum with 8 folks reporting on where they were up to.  I really felt like I was spinning plates as I was recording an episode of Ruby Rogues right off the back of the scrum.  I was probably talking on x3, but we managed to dash off a vote on a [LocalSupport](https://www.pivotaltracker.com/story/show/122459341) story, particularly since we had two MOOC students in the scrum wanting to complete their Open Source assignment.  I was on time to talk to the Ruby Rogues about the AgileVentures mission and it was a major buzz, and then buzz crash 90 minutes later as I tried to bring myself down for an evening with the family.  A busy day!  I spent another hour later on reviewing pull requests.  Still not sure if I'm focusing on the right things.  The Premium framework is designed to have me focus on PRs from those who are sponsoring AV.  I still feel like I'm drowning in requests sometimes :-) How will we scale this?  Can I get it sustainable before I get distracted by the need to take additional paid work?  Stay tuned to this blog to find out :-)
+
+
+
+Related Videos:
+
+* ["Martin Fowler" scrum](https://www.youtube.com/watch?v=CpHdhYFok80)
+* [Pairing on AsyncVoter](https://www.youtube.com/watch?v=RkgMoF8CmD8)
+* [Pairing on WebSiteOne](https://www.youtube.com/watch?v=d3YA0nG3-BY)
+* ["Kent Beck" scrum](https://www.youtube.com/watch?v=f5BReS4QDZE)
+
+Related Links:
+
+* [Quickly make animated gifs](https://gist.github.com/dergachev/4627207)
