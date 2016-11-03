@@ -23,13 +23,13 @@ In the afternoon Michael and I dived into some performance issues on WebSiteOne.
 
 It was time to jump into a busy "Kent Beck" scrum with 8 folks reporting on where they were up to.  I really felt like I was spinning plates as I was recording an episode of Ruby Rogues right off the back of the scrum.  I was probably talking on x3, but we managed to dash off a vote on a [LocalSupport](https://www.pivotaltracker.com/story/show/122459341) story, particularly since we had two MOOC students in the scrum wanting to complete their Open Source assignment.  I was on time to talk to the Ruby Rogues about the AgileVentures mission and it was a major buzz, and then buzz crash 90 minutes later as I tried to bring myself down for an evening with the family.  A busy day!  I spent another hour later on reviewing pull requests.  Still not sure if I'm focusing on the right things.  The Premium framework is designed to have me focus on PRs from those who are sponsoring AV.  I still feel like I'm drowning in requests sometimes :-) How will we scale this?  Can I get it sustainable before I get distracted by the need to take additional paid work?  Stay tuned to this blog to find out :-)
 
-Related Videos:
+###Related Videos
 
 * ["Martin Fowler" scrum](https://www.youtube.com/watch?v=CpHdhYFok80)
 * [Pairing on AsyncVoter](https://www.youtube.com/watch?v=RkgMoF8CmD8)
 * [Pairing on WebSiteOne](https://www.youtube.com/watch?v=d3YA0nG3-BY)
 * ["Kent Beck" scrum](https://www.youtube.com/watch?v=f5BReS4QDZE)
 
-Related Links:
+###Related Links:
 
 * [Quickly make animated gifs](https://gist.github.com/dergachev/4627207)
