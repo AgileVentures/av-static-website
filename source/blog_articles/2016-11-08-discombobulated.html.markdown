@@ -1,6 +1,6 @@
 ---
 title: Discombobulated (by Google)
-date: 2016-11-07
+date: 2016-11-08
 tags: youtube live hangouts HOA planning agile stripe paypal payment charity domain driven design DDD
 author: Sam Joseph
 ---
