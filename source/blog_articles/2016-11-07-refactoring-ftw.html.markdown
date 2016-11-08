@@ -5,8 +5,6 @@ tags: pullrequests controller view private test DRY dependencies notificiations 
 author: Sam Joseph
 ---
 
-
-
 Friday was full of pull request reviews.  I'm currently trying to keep tabs on pull requests coming in on the following projects:
 
 * [AsyncVoter](https://github.com/AgileVentures/AsyncVoter/pulls)
@@ -23,7 +21,7 @@ At least now I'm getting a handle on a codebase that isn't too highly in flux, b
 
 What I didn't get onto was the refactoring of the "Sponsor a Premium User" functionality that we finally had green tests for.  With the time change my Friday meetings ended earlier than usual, and so I got a quick end of week refactoring session in as I was gagging to complete the feature to the point it could be deployed.  The big ugly view from earlier of the week got boiled down to:
 
-```rb
+```html
 <% if @sponsored_user %>
     <h2 id='payment_complete'>Thanks, you have sponsored <%= @user.display_name %> as a <%= @plan %> Member!</h2>
     <% if @plan.free_trial? %>
