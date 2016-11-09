@@ -1,6 +1,6 @@
 ---
 title: Resilient Code Bases
-date: 2016-11-08
+date: 2016-11-09
 tags: pull requests node cucumber features feedback refactoring architecture rearchitecting domain driven design DDD
 author: Sam Joseph
 ---
