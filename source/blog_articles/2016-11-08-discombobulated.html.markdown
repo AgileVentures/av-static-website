@@ -39,17 +39,17 @@ We reviewed our vision of how the site should ideally operate:
 
 We listed out some short term options for improvement:
 
-* [ ] more documentation on current state of system 
-* [ ] build instructions on starting hangout on air into existing interface
-* [ ] allow manual setting of youtube link 
+* more documentation on current state of system 
+* build instructions on starting hangout on air into existing interface
+* allow manual setting of youtube link 
 
 and some longer term options
 
-* [ ] reviewing alternatives videoconferencing software
-  - [ ] GotoMeeting
-  - [ ] Zoom
-  - [ ] [Open Source](https://elearningindustry.com/top-6-open-source-web-conferencing-software-tools-elearning-professionals)
-* [ ] publishing a new hangout app (give us notifications and telemetry)
+* reviewing alternatives videoconferencing software
+  * GotoMeeting
+  * Zoom
+  * [Open Source](https://elearningindustry.com/top-6-open-source-web-conferencing-software-tools-elearning-professionals)
+* publishing a new hangout app (give us notifications and telemetry)
 
 It would be great if Google hangouts was open source ... anyway, even yesterday I didn't want to leap into working on something.  I also wanted to review the issues related to payment and premium plans.  CraftAcademy Sweden is still keen to work with invoices rather than credit cards, so we how had some Premium members who weren't represented in the site correctly.  I tested on my local server that I could update them from the console like to:
 
