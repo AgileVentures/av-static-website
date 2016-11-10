@@ -37,7 +37,7 @@ Different guidelines were as usual wrestling in my head.  My concerns were as fo
 
 * was locking to size=0 to represent currently voted stories going to bite us when we decided we needed size=0 stories in the future?
 * Wasn't it bad to have functionality not covered by tests, and particularly functionality unrelated to the feature the PR was addressing?
-* Should we be adjusting the story model to have a state that could be active, do reflect the domain language that João was keen to use?
+* Should we be adjusting the story model to have a state that could be active, to reflect the domain language that João was keen to use?
 * Shouldn't we be going with my simplifying assumption that there is only ever a single story to vote on (for the time being)?
 * Shouldn't we be sanitising inputs coming over the wire? although this is search rather than edit so ...
 
@@ -55,7 +55,7 @@ schema.statics.findBy = function(filter, callback) {
 }
 ```
 
-My two biggest concerns remaining were that now the `findBy` method was named incorrectly and that we had quite a lot of mockup setup replication in the mocha test suite for the story model.  I created refactoring tickets for these two and got the PR merged in.  From a days distance I think it was a reasonable compromise.  Let's see how we feel in a week and a month and a year!
+My two biggest concerns remaining were that now the `findBy` method was named incorrectly and that we had quite a lot of mockup setup replication in the mocha test suite for the story model.  I created refactoring tickets for these two and got the PR merged in.  From a day's distance I think it was a reasonable compromise.  Let's see how we feel in a week and a month and a year!
 
 This also allowed me to try pushing a new feature to the drie server.  This failed with a 502 and super fast feedback from the drie team allowed us to identify that as a node versioning issue which we can hopefully fix today.  It also highlighted the need for a staging server as I had broken production in the process.  Although that's no disaster here as we only have a single test deploy that no one's using yet so it's not really `production`.
 
