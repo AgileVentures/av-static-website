@@ -11,7 +11,7 @@ The async_voter slack channel was active and I was conflicted about posting comm
 
 In the meantime João had pushed changes and we had a slimmed down pull request.  I still wasn't entirely sure about the mapping we had set up from `GET /stories?state=active` to search for `size=0` stories.  João was very keen on the state=active flag and seemed to be mollifying me by saying that `GET /stories?size=0` would also work.  I investigated and found that it didn't quite and that `GET /stories?state=voting` or indeed any other state would return all the size 0 stories.
 
-I pointed that out to João not sure if he was in a position to fix it up.  I started adjusting the code locally and made my own [pull request](https://github.com/AgileVentures/AsyncVoter/pull/57).  In parallel João made further updates.  Perhaps we should have been waiting, but he was commuting.  Maybe I should have just gone to lunch, but I was pleasantly surprised to make some good progress on my own branch.  In particular discovering a [method to specify running a single test in a mocha suite](http://jaketrent.com/post/run-single-mocha-test/), where you insert a `.only` into the test you want to focus on:
+I pointed that out to João not sure if he was in a position to fix it up.  I started adjusting the code locally and made my own [pull request](https://github.com/AgileVentures/AsyncVoter/pull/57).  In parallel João made further updates.  Perhaps we should have been pairing, but he was commuting.  Maybe I should have just gone to lunch, but I was pleasantly surprised to make some good progress on my own branch.  In particular discovering a [method to specify running a single test in a mocha suite](http://jaketrent.com/post/run-single-mocha-test/), where you insert a `.only` into the test you want to focus on:
 
 ```js
 it("found one active", function (done) { ... });
@@ -43,7 +43,7 @@ Different guidelines were as usual wrestling in my head.  My concerns were as fo
 
 I wanted to do the right thing for the project, and also not offend João who had been putting in lots of great work.  All credit to him and the others who've got the Cucumber and Mocha set up all working so smoothly, along with a clean core of app code.  
 
-I resolved to go with João's PR but I make some tweaks.  I stuck with João's preferred `state=active` but pulled out the generic filtering code because it didn't work, and wasn't covered by the tests.  So the core logic in the model class is:
+I resolved to go with João's PR but I made some tweaks.  I stuck with João's preferred `state=active` but pulled out the generic filtering code because it didn't work, and wasn't covered by the tests.  So the core logic in the model class is:
 
 ```js
 schema.statics.findBy = function(filter, callback) {
