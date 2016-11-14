@@ -72,7 +72,7 @@ And(/^I manually set a hangout link for event "([^"]*)"$/) do |name|
   @hangout_url = 'https://hangouts.google.com/hangouts/_/ytl/HEuWPSol0vcSmwrkLzR4Wy4mkrNxNUxVmqHMmCIjEZ8=?hl=en_US&authuser=0'
   visit event_path(Event.find_by_name(name))
   page.execute_script(  %q{$('li[role="edit_hoa_link"] > a').trigger('click')}  )
-  fill_in 'hangout_url', :with => @hangout_url
+  fill_in 'hangout_url', with: @hangout_url
   page.find(:css, %q{input[id="hoa_link_save"]}).trigger('click')
 end
 
@@ -152,6 +152,7 @@ end
 
 Perhaps that's no different to:
 
+```
 Then(/^"([^"]*)" shows live for that hangout link for the event duration$/) do |event_name|
   @event = Event.find_by_name(event_name)
   time = Time.parse(@jump_date) + event.duration.minutes - 1.minute
