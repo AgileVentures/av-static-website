@@ -5,7 +5,6 @@ tags: memory profiling gems heuristics coding acceptance unit testing
 author: Sam Joseph
 ---
 
-
 Monday involved continuing on two "clear the decks" tickets that Michael and I had started on the previous Thursday and Friday. The heuristics in my mind thus included:
 
 * clear the decks before starting on something else big
@@ -22,13 +21,13 @@ and that's forming a nice-ish set, even if some of them aren't that pithy :-) Lo
 * keep methods/classes short
 * try to name methods/classes for understandability and maintainability
 * start DRYing once it's clear there is a pattern
-* use Dependency Injection to avoid locking what objects collaborate with
+* use Dependency Injection to avoid locking in what objects are collaborating with
 
-Many more could be added to the list, but the above are the set that are more to the forefront of my mind at the moment.  There's a cross-talk between the two levels though, because seeing a place where you could use dependency injection, or introduce an adapter can extend the amount of time on task.  If you're practising "drive-by" coding, then that's a key place to ask if that refactoring needs to be done now, or if it's something to create a ticket for.
+Many more could be added to the list, but the above are the set that are more to the forefront of my mind at the moment.  There's a cross-talk between the two levels though, because seeing a place where you could use dependency injection, or introduce an adapter can extend the amount of time on task.  If you're practising "drive-by" coding, then that's a key place to ask if that refactoring needs to be done now, or if it's something to create a refactoring ticket for.
 
-You might say, you must immediately do any refactoring you think of, and if you put it in a ticket it'll never get done.  However there's a counter-example from the LocalSupport project, where we had a nasty case statement, I created a refactoring ticket, and worked on it with someone later, and we eventually completely removed the case statement and replaced it with a gem using the strategy pattern; so that's at least a proof that it's possible in principle :-)
+You might say, "you must immediately do any refactoring you think of!", and "if you put it in a ticket it'll never get done!".  However there's a counter-example from the LocalSupport project, where we had a nasty case statement, I created a refactoring ticket, and worked on it with someone later, and eventually we completely removed the case statement and replaced it with a gem using the strategy pattern; so that's a proof that refactoring tickets do sometimes get done :-)
 
-The thing about refactoring is that there's always a little more you could do, but fundamentally we don't know what the future holds.  As needs change maybe that refactoring will have to be undone, or that code thrown out.  That isn't to disregard general code smells, but it is all relative.  Either way you have the interplay of the different heuristics.  Say you notice you could use some dependency injection, and/or some adapters, which do you work on first?  Or put both in a ticket?
+The thing about refactoring is that there's always a little more you could do, but fundamentally we don't know what the future holds.  As needs change maybe that refactoring will have to be undone, or that code thrown out.  That isn't to disregard general code smells, but it's all relative.  Either way you have the interplay of the different heuristics.  Say you notice you could use some dependency injection, and/or some adapters, which do you work on first?  Or put both in a ticket?
 
 For the set of heuristics at the higher level there's less conflict for me at the moment.  Focusing on completing one task in a drive-by fashion is all about not getting too distracted, and if the distraction is important, get that distraction into a ticket that you can review later for relative importance and complexity.  Huge ideas about a different direction?  Sure, but let's clear the decks by finishing what we started, especially those things we identified as going in the ready/backlog column in the current sprint.
 
@@ -57,7 +56,7 @@ The other task we're bashing away at in parallel is setting up an admin mailer t
 Drive with tests?  Sure, but let me spike to understand the problem.  More importantly, please let me drive with an acceptance test.  An architecture that doesn't let me easily add an acceptance test always makes me a little uncomfortable.   More heuristics at the coding level.  My intuition is that it's the higher level heuristics that should over-rule the lower level ones.  So on with clearing the decks.  We'll see how that goes ....
 
 
-Related Videos
+###Related Videos:
 
 * [Pairing on AV main site](https://www.youtube.com/watch?v=Qveh4RtiWN4)
 * ["Kent Beck" scrum](https://www.youtube.com/watch?v=UBo8d0Yebyw)
