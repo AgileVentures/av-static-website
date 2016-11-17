@@ -5,9 +5,9 @@ tags: planning team meeting voting distributed asynchronous driveby whistlestop 
 author: Sam Joseph
 ---
 
-After the "Martin Fowler" scrum I caught up with Raphael to talk about the dynamic of the AsyncVoter project.  Raphael had been suggesting a team meeting.  Team meetings can be great.  I think if a team wants to move forward fast it's great to get everyone in a room, and ideally match that with a shared working space that everyone can come to.  However that usually takes a lot of money to set up.  Actually having the team all distributed around the world might have advantages in terms of pulling in more influences and perspectives.  Of course you don't need a shared space for a team meeting.  We've run them regularly on different projects at different times.  The ability to have them is a function of team members availability.  Sometimes teams will form or dissipate based on whether there is sufficient overlap in their schedules. 
+After the "Martin Fowler" scrum I caught up with Raphael to talk about the dynamic of the AsyncVoter project.  Raphael had been suggesting a team meeting.  Team meetings can be great.  I think if a team wants to move forward fast it's great to get everyone in a room, and ideally match that with a shared working space that everyone can come to.  However that usually takes a lot of money to set up.  Actually having the team all distributed around the world might have advantages in terms of pulling in more influences and perspectives.  Of course you don't need a shared space for a team meeting.  We've run them regularly on different projects at different times.  The ability to have them is a function of team members' availability.  Sometimes teams will form or dissipate based on whether there is sufficient overlap in their schedules. 
 
-Part of the idea behind AsyncVoter project is to reduce the need for team meetings.  Not that a team shouldn't get together if they want to, but in WSO at least I'd got the sense that people weren't enjoying the meetings, which usually involved voting on tickets in the backlog.  In LocalSupport people were just not on at the same time, or couldn't use hangouts.  I wondered if part of the issue was understanding what to do next.  In a session with Raphael off the back of the "Martin Fowler" scrum I wrote up the following:
+Part of the idea behind the AsyncVoter project is to reduce the need for team meetings.  Not that a team shouldn't get together if they want to, but in WSO at least I'd got the sense that people weren't enjoying the meetings, which usually involved voting on tickets in the backlog.  In LocalSupport people were just not on at the same time, or couldn't use hangouts.  I wondered if part of the issue was understanding what to do next.  In a session with Raphael off the back of the "Martin Fowler" scrum I wrote up the following:
 
 ```
 Using Waffle and GitHub to work out what to do next
@@ -17,7 +17,7 @@ Using Waffle and GitHub to work out what to do next
 
 1) are there any tickets "in progress" on [waffle](https://waffle.io/AgileVentures/AsyncVoter)? If you'd like to help reach out to the assigned team member to see if you can help
 
-1) is there a estimated ticket in the ready column on waffle that I am interested in working on?
+1) is there an estimated ticket in the ready column on waffle that I am interested in working on?
 1a) yes --> then start work on it, pairing or not
 
 1b) no --> find a ticket from the backlog (on waffle) that I'm interested in and start a vote (in a scrum, or async)
@@ -25,7 +25,7 @@ Using Waffle and GitHub to work out what to do next
 2) throughout process rather than adding new features, new elements or major refactoring to the existing ticket, freely make new tickets to go on to the backlog (on waffle)
 ```
 
-Hopefully that was some help.  It's seems transparent in my mind as a way of doing distributed Agile work, but there's no reason why others should have that pattern in their minds.  Would be great to have one of those animated videos showing the flow.
+Hopefully that was some help.  It seems transparent in my mind as a way of doing distributed Agile work, but there's no reason why others should have that pattern in their minds.  Would be great to have one of those animated videos showing the flow.
 
 Michael and I started off following the above pattern for WSO after lunch.  We went through the open pull requests, "in progress" tickets, the "ready" column and the "estimated" column.  We have an additional column in WSO called estimated for those tickets we have voted on but yet to prioritise:
 
@@ -35,7 +35,7 @@ As usual, I agonised about all the different things we seemed to need to get don
 
 Raoul had joined us in the scrum, which gave us a chance to talk about the need for team meetings on WSO and whether the AsyncVoting was replacing the team meetings effectively.  Michael reflected that there were a few people who attended those meetings who weren't around now.  Neither Michael nor Raoul seemed passionate about re-instating regular long meetings voting on tickets, and I reflected that what I really wanted was the AsyncVoter bot to kick in and keep us regularly voting on tickets.  We've built a little RESTful core, and I'm worried that we have to hook up fast to something that actually benefits the community.  Got to get a slack bot shell working even if it's only semi-automated.
 
-After the scrum I drove on a ticket addressing missing video links on the main WSO.  That was fairly straightforward, and although there's still lots of technical debt to pay down on both WSO and AgileBot, we managed to get a feature out and a bug fix in place while not making the code any worse.  In fact I think we improved the test config for AgileBot and reduced the numbers of line of code in both.   In the ideal world we'd have a bigger team of folks helping us knock off these additional refactoring tickets we keep generating.  In slack Mikael was making some great suggestions about AgileVentures letting people know what they could do to help given the amount of time they have to spare, e.g. 
+After the scrum I drove on a ticket addressing missing video links on the main WSO.  That was fairly straightforward, and although there's still lots of technical debt to pay down on both WSO and AgileBot, we managed to get a feature out and a bug fix in place while not making the code any worse.  In fact I think we improved the test config for AgileBot and reduced the numbers of line of code in both.   In the ideal world we'd have a bigger team of folks helping us knock off these additional refactoring tickets we keep generating.  In slack Mikael was making some great suggestions about AgileVentures letting people know what they could do to help, given the amount of time they have to spare, e.g. 
 
 * <15 minutes to spare?  Review a pull request, vote on a ticket, or even start a new vote
 * <30 minutes to spare? join a scrum and say hi, give us an update on what you're doing, read a project's documentation; observe a pairing session
