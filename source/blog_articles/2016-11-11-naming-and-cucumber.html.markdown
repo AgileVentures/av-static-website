@@ -41,7 +41,7 @@ By itself this didn't fix the problem, so I also adjusted the `recent_hangouts` 
   end
 ```
 
-The cukes went green and I had to fix up a few specs for the EventInstanceHelper and the Event class.  I was't sure if the fully unique id was actually necessary, but when I saw the specs for EventInstanceHelper that were saying a unique id should be returned, I felt I really wanted to stick with the change.  Arguably it could be the subject of a completely separate pull request, driven by a different cucumber scenario.  I've been being harsh with the AsyncVoter folks to keep out any functionality not related to the feature being worked on.  It's easy to give myself slack when I'm wo on the other side of the barrier; but in my defence this is a bug fix, and I'm trying to make sure we aren't losing valuable data about user activity.  I did try to get the feature to wrap this with limited success.  In the process I did do major refactoring of the cukes, which relates to a [PR from John on LocalSupport](https://github.com/AgileVentures/LocalSupport/pull/391) where he's using a lot of nested steps, which I'm not such a big fan of.
+The cukes went green and I had to fix up a few specs for the EventInstanceHelper and the Event class.  I wasn't sure if the fully unique id was actually necessary, but when I saw the specs for EventInstanceHelper that were saying a unique id should be returned, I felt I really wanted to stick with the change.  Arguably it could be the subject of a completely separate pull request, driven by a different cucumber scenario.  I've been being harsh with the AsyncVoter folks to keep out any functionality not related to the feature being worked on.  It's easy to give myself slack when I'm on the other side of the barrier; but in my defence this is a bug fix, and I'm trying to make sure we aren't losing valuable data about user activity.  I did try to get the feature to wrap this with limited success.  In the process I did do major refactoring of the cukes, which relates to a [PR from John on LocalSupport](https://github.com/AgileVentures/LocalSupport/pull/391) where he's using a lot of nested steps, which I'm not such a big fan of.
 
 On WSO the editing a hangout url on a repeating event cuke scenario had gotten really long:
 
@@ -66,7 +66,7 @@ On WSO the editing a hangout url on a repeating event cuke scenario had gotten r
     Then I should not see "This event is now live!"
 ```
 
-The previous day with Michael I'd inserted comments about what each section was doing.  I resolved to turn those into steps.  The quick and dirty path would be to take each set of steps and turn them into nested steps.  But the approach I prefer is to make new steps that are collections of ruby statements to avoid multiple levels of redirection.  The steps I generated yesterday were:
+The previous day with Michael I'd inserted comments about what each section was doing.  I resolved to turn those into steps.  The quick and dirty path would be to take each set of steps and turn them into nested steps, but the approach I prefer is to make new steps that are collections of ruby statements to avoid multiple levels of redirection.  The steps I generated yesterday were:
 
 ```rb
 And(/^I manually set a hangout link for event "([^"]*)"$/) do |name|
@@ -106,21 +106,21 @@ which allowed that long convoluted scenario above to be boiled down to the follo
     And "Repeat Scrum" is not live the following day
 ```
 
-Maybe I'm crazy, not re-using the steps, but my goal is to make it transparent for me in the future, and other developers, to get from the English description straight to the description at the Ruby/RSpec/Capybara level.  What I find again and again in WSO and LS where the steps are deeply nested is that I get tripped up because the English descriptions can be slightly misleading.  This is actually a facet of a more general problem for coding, in that wherever an abstraction (e.g. cuke step, or method name, or API interface) fails to accurately reflect what's going on under the hood, you can easily be misled.  Of course it all comes back to humans.  What's transparently clear for one person might not be for another.  But take a look at this background step from the same Cuke file:
+Maybe I'm crazy, not re-using the steps, but my goal is to make it transparent for me in the future (and other developers), to get from the English description straight to the description at the Ruby/RSpec/Capybara level.  What I find again and again in WSO and LS, where the steps are deeply nested, is that I get tripped up because the English descriptions can be slightly misleading.  This is actually a facet of a more general problem for coding, in that wherever an abstraction (e.g. cuke step, or method name, or API interface) fails to accurately reflect what's going on under the hood, you can easily be misled.  Of course it all comes back to humans.  What's transparently clear for one person might not be for another.  But take a look at this background step from the same Cuke file:
 
 ```gherkin
 And the following event instances exist:
  ... <table of data>
 ```
 
-We'd created this to replace the original setup step that referred to hangouts (for which there was no corresponding domain model). The original setup step had also scarily used RSpec factories that were shared with the specs and did a fair amount of data massaging in the process.  Having made the change we realised that to keep things working we would also need a chunk of complex participant data.  It was trivial to adjust our new background step to add that data, but now that was hidden from someone working at the level of the feature file so we adjusted our step name as follows:
+We'd created this to replace the original setup step that referred to hangouts (for which there was no corresponding domain model). The original setup step had also scarily used RSpec factories that were shared with the specs and did a fair amount of data massaging in the process.  Having made the change we realised that to keep things working we would also need a chunk of complex participant data.  It was trivial to adjust our new background step to add that data, but now that was hidden from someone working at the level of the feature file, so we adjusted our step name as follows:
 
 ```gherkin
 And the following event instances (with default participants) exist:
  ... <table of data>
 ```
 
-Too much perhaps?  But the intention is to give someone else who wants to use that step (or method) a heads up about what's going on under the hood.  The ruby contents of the cuke steps above are a bit long and need some DRYing out, but I think I'd rather have them DRYed out into other ruby methods, that are well named.  There's perhaps almost too much room for nuance with the English descriptions of pure Cucumber steps.  So for example the following:
+Too much perhaps?  But the intention is to give someone else who wants to use that step (or method) a heads up about what's going on under the hood.  The ruby contents of the cuke steps above are a bit long and need some DRYing out, but I think I'd rather have them DRYed out into other ruby methods that are well named.  There's perhaps almost too much room for nuance with the English descriptions of pure Cucumber steps.  So for example the following:
 
 ```rb
 Then(/^"([^"]*)" shows live for that hangout link for the event duration$/) do |event_name|
@@ -170,7 +170,7 @@ end
 
 which allows that nested step to be re-used in other cucumber scenarios, but the debugging support for nested steps is not as good in my experience.  Maybe this is just bike-shedding (i.e. focusing on trivialities).  The big-picture critical thing seems likely to be a constant general refining to a consistent domain model and methods/steps that are not too long and not too short and do a best effort to have a description that doesn't leave too many surprises under the hood.
 
-I made sure that the refactored cukes did actually break (when the app functionality was removed), which took a combination of adjusting the Event#recent_hangouts method back to use `created_at` AND removing the secure random id from the EventsInstanceHelper, indicating that both were needed to get the desired behaviour at the user level; so I didn't need to feel a total hypocrite for pushing on the AsyncVoter folks to remove all extraneous code :-)  That didn't stop me waking up in the middle of the night thinking, "we don't even need to search for recent_hangouts!" - we just grab the latest one reverse sorted by updated_at and check if it's live, can't we?  That `recent_hangouts` method is used nowhere else in the code base.  The method name makes no sense in terms of what we want really.  What we want to know is whether the most recently updated event instance is still live, isn't it?  More refactoring awaits!
+I made sure that the refactored cukes did actually break (when the app functionality was removed), which took a combination of adjusting the Event#recent_hangouts method back to use `created_at` AND removing the secure random id from the EventsInstanceHelper, indicating that both were needed to get the desired behaviour at the user level; so I didn't need to feel a total hypocrite for pushing on the AsyncVoter folks to remove all extraneous code :-)  That didn't stop me waking up in the middle of the night thinking, "we don't even need to search for recent_hangouts!" - we just grab the latest one, reverse sorted by updated_at, and check if it's live, can't we?  That `recent_hangouts` method is used nowhere else in the code base.  The method name makes no sense in terms of what we want really.  What we want to know is whether the most recently updated event instance is still live, isn't it?  More refactoring awaits!
 
 ###Related Videos
 
