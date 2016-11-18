@@ -44,7 +44,7 @@ Sasha asked the important question of did we really want to be posting all this 
 
 compared to 60% from edX, 8.3% from Google search and 6.6% from the AV site itself.  While social media traffic to our AV site (over the last year) was dominated by Google+, Meetup, StackOverflow, Facebook and LinkedIn.  Twitter came in 8th with only 3.46%.  Now maybe this is because of broken video links, or because the feed is almost entirely automated. Either way, what we were putting out there was inconsistent, and the simplest fix was to only tweet the video link once the broadcast went live, and Sasha and I saw there was an easy check we could make for that through the YT gem.   Sasha had to run off to do a tech test; which made me think it would be awesome if tech companies would take AV participation as a tech test equivalent!
 
-After lunch I merged an [exquisitely small and updated PR on LocalSupport](https://github.com/AgileVentures/LocalSupport/pull/396) from new contributor Kostas and then jumped on an AsyncVoter performance testing issue, running a profile of the AsyncVoter app running on drie and heroku.  
+After lunch I merged an [exquisitely small and updated PR on LocalSupport](https://github.com/AgileVentures/LocalSupport/pull/396) from new contributor Kostas and then jumped on an AsyncVoter performance testing issue, running a profile of the AsyncVoter app running on [drie](http://drie.co) and heroku.  
 
 ```
 → ab -n 50 https://async-voter-production.herokuapp.com/stories
