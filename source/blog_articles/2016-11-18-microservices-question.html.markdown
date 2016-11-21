@@ -10,10 +10,11 @@ Michael was off sick and so I didn't get back to WSO coding.  That's one of the 
 I got the AsyncBot up on [GitHub](https://github.com/AgileVentures/async_slack_bot) and developed the spike a little further so it would announce updates in the channel the vote had been started in:
 
 ```js
-var story = {
-              name:'document the API',
-              url: 'https://waffle.io/AgileVentures/AsyncVoter/cards/582afb10c2d2ce320075f487'
-            };
+var story = 
+  {
+    name:'document the API',
+    url: 'https://waffle.io/ ... '
+  };
 
 controller.hears('start new vote',['direct_message','direct_mention'],function(bot,message) {
   start_channel = message.channel;
