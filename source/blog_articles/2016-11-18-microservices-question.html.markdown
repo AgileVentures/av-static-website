@@ -43,6 +43,8 @@ In principle the slack bot could talk directly to the MongoDB in order to persis
 
 In the background I'm talking to possible new sponsors of AgileVentures and getting ready for our first mob programming sessions on Avdi Grimm's "Confident Ruby" for those who've upgraded their Premium memberships.   I think we need the asynchronous voting to keep the individual projects ticking over, but we need more money coming in from sponsors and premiums if we're going to be able to continue to offering all our services, both free and premium.  There's a new feeling of momentum to the community, but as I was saying the other day, it's not just a question of sitting around and waiting for the growth.  Each bit of growth still has to be fought for at this stage, although perhaps the battle is getting easier - until we start coasting after we achieve that fabled critical mass? :-)
 
+I'm still not sure on the microservices question.  Will breaking things up help us avoid a monolith, and follow the single responsibility principle of having one app for each separate function?  It's worked out well for Amazon, but then they're at a completely different scale.  Right now I feel like I'm maintaining three different monoliths (LocalSupport, WebSiteOne and AutoGraders) and it always feels precarious when adding a new element.  I guess it's ant colonies versus large vertebrates; single celled, versus multi-cellular organisms.  There's pros and cons to each degree of organisational coupling.  As Kent Beck would say, it depends ... :-) 
+
 
 ###Related Video:
 
