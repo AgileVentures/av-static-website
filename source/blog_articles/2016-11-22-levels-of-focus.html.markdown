@@ -5,8 +5,6 @@ tags: eliminate simplify delegate automate mentive drie premium agile ventures o
 author: Sam Joseph
 ---
 
-
-
 It was a busy weekend.  That was partly the kids birthday parties and coaching under eights football, but also because of my last Mentive mentoring session and two Premium Plus pairing sessions.  I usually prefer not to work at the weekend, but I really want to make AgileVentures sustainable and for people who work during the week, it's often convenient to get support from their mentor at the weekend.  The Mentive experience has been interesting to try out GotoMeeting, which is okay, and more powerful than Google Hangouts, but the ability to share a URL with a hangout to anyone, and stream/record live to YouTube, makes me prefer Hangouts.  
 
 As the Mentive chats have become more abstract the Premium Plus pairing sessions have been very code focused. On Sunday I worked with Adrian through a Cross Origin Resource Sharing issue on AsyncVoter so that the new React client could read data off the "[drie push](http://push.drie.co)" hosted app.  We got a spiky [Work in Progress(WIP) PR](https://github.com/AgileVentures/AsyncVoter/pull/77) in and I deployed the branch to the drie staging instance so that Adrian could proceed to work on the [React UI](https://github.com/AgileVentures/asyncvoter-ui).  We'd used the [cors package](https://www.npmjs.com/package/cors) to ensure that we would accept incoming AJAX requests from all sources for the time being.
