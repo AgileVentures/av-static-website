@@ -60,13 +60,13 @@ So anyway, maybe me screwing up the pairing schedule was serendipitous.  I often
 
 So my moral for today is pair with people of all levels, and don't beat yourself up too much when you screw up the schedule, or start on a task you have misgivings about.  Better to enjoy the process and see what emerges :-)
 
-Related Videos:
+###Related Videos:
 
 * [Pairing on AV main site](https://www.youtube.com/watch?v=OihKyI6SEew)
 * ["Kent Beck" scrum](https://www.youtube.com/watch?v=hbO9l328TR0)
 
 
-Related Links:
+###Related Links:
 
 * [https://github.com/rstacruz/npm-pipeline-rails](https://github.com/rstacruz/npm-pipeline-rails)
 * [https://gofore.com/stop-using-bower/](https://gofore.com/stop-using-bower/)
