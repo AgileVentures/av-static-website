@@ -13,7 +13,7 @@ I had a quick break and was then working on a [running median problem](https://w
 
 There hadn't been programming or pairing of note either side of the weekend on Friday or Monday, Friday having been taken up with an Agile Projects workshop and then some brainstorming with Michael and Ashley.  There'd been sporadic async slack bot hacking, and we got most of the way of pushing a version of LocalSupport onto [drie push](http://push.drie.co). Brainstorming finished up the day as Michael and I digested the new PRs and issue comment from Ashley on the generic [AgileVentures](https://github.com/AgileVentures/AgileVentures) repo.  Ashley had created some great diagrams, and was pushing us to be thinking in terms of more specific user models and big vision statements:
 
-![Strategy, Goals and Impacting Users](https://cloud.githubusercontent.com/assets/673794/20459697/54701236-ae7f-11e6-9fe1-0e968a7581e2.png)
+![Strategy, Goals and Impacting Users](https://www.dropbox.com/s/7g7m9j5hgnsplgt/Screenshot%202016-11-23%2018.30.52.png?dl=1)
 
 There'll be enormous value if the big picture vision of AgileVentures can be communicated effectively in a compelling and visually attractive manner.  I find myself torn between all the small admin tasks that are ever increasing, smoothing off the rough edges on aspects of the paid premium user experience, delivering on our commitments to the premium users and conducting bigger planning and vision generation efforts.
 
