@@ -21,7 +21,7 @@ I meet with VAHC at least once every two weeks to show them the latest deploymen
 
 > Welcome changing requirements, even late in development. Agile processes harness change for the customer's competitive advantage.
 
-Every meeting we review the [project board on Pivotal Tracker](https://www.pivotaltracker.com/n/projects/742821), with a particular focus on the features in the backlog.  The backlog is maintained with higher priority items towards the top of the backlog.  As requirements change we follow the clients advice about moving things up and down in the backlog, and even move things back to the icebox if they suddenly become of low relevance.  For example the story on "[being able to override doit vol ops](https://www.pivotaltracker.com/story/show/116028767)" was top of the backlog at one point, but got moved onto the icebox as circumstances changed.
+Every meeting we review the [project board on Pivotal Tracker](https://www.pivotaltracker.com/n/projects/742821), with a particular focus on the features in the backlog.  The backlog is maintained with higher priority items towards the top of the backlog.  As requirements change we follow the client's advice about moving things up and down in the backlog, and even move things back to the icebox if they suddenly become of low relevance.  For example the story on "[being able to override doit vol ops](https://www.pivotaltracker.com/story/show/116028767)" was top of the backlog at one point, but got moved onto the icebox as circumstances changed.
 
 Any new suggestions from the client are immediately added to the icebox and go through a voting process to estimate their technical complexity.  Once they are estimated they can be moved onto the backlog with the client's consent and subject to the client's preferences regarding priority.
 
@@ -51,13 +51,13 @@ I strongly encourage all developers, whether working on a chore, a bug fix or a 
 
 > The best architectures, requirements, and designs emerge from self-organizing teams.
 
-I'm a single point of failure in this project, although two or three others have access to all the necessary to continue merging and deploying if I was removed.  Other AgileVenture's projects have more self-organising structures where PRs can be merged with the agreement of any 2 or 3 devs.  All structures are subject to revision.  Sensibly the LocalSupport project management structure will evolve and change.
+I'm a single point of failure in this project, although two or three others have access to all the necessary to continue merging and deploying if I was removed.  Other AgileVentures projects have more self-organising structures where PRs can be merged with the agreement of any 2 or 3 devs.  All structures are subject to revision.  Sensibly the LocalSupport project management structure will evolve and change.
 
 > At regular intervals, the team reflects on how to become more effective, then tunes and adjusts its behavior accordingly.
 
-Earlier in the project we had weekly retrospectives, but with few dedicated full timers, these have fallen away.  We've switched from many synchronous standups to more asynchronous voting in group text channels on Slack. The Agile principles are written around the idea of a full time co-located team, and we have adapted them to a volunteer part-time distributed team.  Our adaptations certainly need ongoing review and adjustment.  It's not yet clear how best to ensure reflection, tuning and adjustment happens frequently enough.
+Earlier in the project we had weekly retrospectives, but with few dedicated full timers, these have fallen away.  We've switched from many synchronous standups to more asynchronous voting in group text channels on Slack. The Agile principles are written around the idea of a full time co-located team, and we have adapted them to a volunteer part-time distributed team.  Our adaptations certainly need ongoing review and adjustment.  It's not yet clear how best to ensure reflection. Tuning and adjustment happens frequently enough.
 
-Now, getting back to the workshop we dry ran last week; that involved a 90 minute co-located session which a non-technical charity group in which we used the Agile process itself to try to answer the general challenge of better understanding Agile.  I initially presented the Agile Manifesto and talked about related concepts such as scrum, XP and Kanban for a few minutes.  The overall structure, which compressed a two week sprint into 90 minutes was as follows:
+Now, getting back to the workshop we dry ran last week; that involved a 90 minute co-located session with a non-technical charity group in which we used the Agile process itself to try to answer the general challenge of better understanding Agile.  I initially presented the Agile Manifesto and talked about related concepts such as scrum, XP and Kanban for a few minutes.  The overall structure, which compressed a two week sprint into 90 minutes was as follows:
 
 1) Present concept of Agile
 2) Generate stories relating to Agile, and how it can be used in non-profits
