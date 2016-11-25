@@ -1,3 +1,11 @@
+---
+title: Mob Programming
+date: 2016-11-25
+tags: struct hash Ruby power string boolean automation data structure DRY
+author: Sam Joseph
+---
+
+
 We ran our first AV Premium Mob Programming session looking at code from the book "Confident Ruby" by Avdi Grimm.  We created a Cloud9 workspace and gave everyone access to the enviroment.   We had four Premium members join the hangout, and I introduced some of the concepts from "Confident Ruby" before playing with some of the code samples.  All the members in the hangout had read and write access to the Cloud9 workspace, but on this first occasion I did most of the typing.  Most of the members had Avdi's book or had been listening to the Ruby Book Club podcasts that cover it, but it was first time mob programming for all of them, and hopefully we'll get them doing more typing in future sessions.
 
 We focused on Avdi's "Use built-in conversion protocols" *Collecting Input* pattern with chats about the use of Structs in Ruby, monkey patching (duck punching), duck typing and whether the implicit and explicit conversion operators (e.g. `to_int` vs `to_i`) should be more actively documented in the Ruby core classes.  I also touched on the concept of "Power Level" in response to the question of when to use Structs vs using Classes.  In my experience Structs are an often over-looked aspect of Ruby that allow a developer to create a data structure that has less power than a full blown class.  In parallel with the security guideline that you should only ever provide the minimum level of access necessary to get a job done, there's a similar argument to say that you should only ever use the minimally flexible data structure or entity in order to acheive a given task.
