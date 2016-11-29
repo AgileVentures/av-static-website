@@ -1,3 +1,10 @@
+---
+title: Fighting to Make a Difference
+date: 2016-11-28
+tags: charities non-profits local training workshop UX feedback impact sustainability technology intervention Harrow Youth
+author: Sam Joseph
+---
+
 Friday was full of meetings.  I started off heading down to the [Carramea Community Resource Center](https://www.harrowcn.org.uk/organisations/carramea-community-resource) (formerly the Consortium of Anti-Racist Refugee and Minority-Ethnic Associations). Carramea has been operating in South Harrow for over 12 years, and provides affordable office solutions for small charities and voluntary groups; as well as IT and Language classes.  I'd met the head honcho Tony O'Hara at local WoodCraft and other charity events, and that morning Rachel from Voluntary Action Harrow Cooperative was running a training session to show some of the staff how to work with Harrow Community Network (HCN), Do-It and SurveyMonkey.
 
 I was there to observe and took notes as Rachel guided three staff through the mechanisms to update directory information in HCN, and to post volunteer opportunities.  Tony dropped in and out as he covered the reception desk while the training session was underway.  Rachel then went on to show how to post opportunities on Do-It and give pro-tips.  Carramea already had an opportunity up on Do-It (for volunteer receptionists) and it was already showing in our system, having been pulled in automatically from the Do-It database.
