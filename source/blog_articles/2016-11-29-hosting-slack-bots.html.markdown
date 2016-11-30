@@ -1,6 +1,6 @@
 The slackbot had stayed live for most of the weekend on drie push, but Monday morning it was unresponsive, and although we'd completed a vote or two, not all the notifications had come through.  The bot was now unresponsive.  I couldn't get it back online without ssh-ing in and starting it directly.  drie push is not explicitly designed for hosting slack bots, and there wasn't any functionality to put the bot into a background job that would persist after logging out of ssh.  Actually I'd been surprised that the slack bot had worked on drie push at all; I'd pushed it up there as an experiment and seen that it worked partially, but now we needed a more consistent hosting solution.
 
-Now that I'd shown the #websiteone channel the promise of an bot that could run an asynchronous vote there was less appetite for starting manual ones, and not having the stable hosted bot was starting to feel like a blocker.  Slack has a [page dedicated to different bot hosting solutions](https://api.slack.com/docs/hosting). In parallel with chatting on Slack with the team about the options I spent a little while looking at what AWS Lambda had to offer, and then Matt suggested that BeepBoop looked like it had a great free offering.  I signed up for a BeepBoop account and got through most of pulling our repo asyncbot directly into beepboop, but then it was failing due to lack of a DockerFile:
+Now that I'd shown the #websiteone channel the promise of a bot that could run an asynchronous vote, there was less appetite for starting manual ones, and not having the stable hosted bot was starting to feel like a blocker.  Slack has a [page dedicated to different bot hosting solutions](https://api.slack.com/docs/hosting). In parallel with chatting on Slack with the team about the options, I spent a little while looking at what AWS Lambda had to offer, and then Matt suggested that BeepBoop looked like it had a great free offering.  I signed up for a BeepBoop account and got through most of pulling our repo asyncbot directly into beepboop, but then it was failing due to lack of a DockerFile:
 
 ```
 unable to prepare context: Cannot locate Dockerfile: absDockerfile: "/tmp/b54c5a30aa584533b027af837beeef64683410820/repo/Dockerfile"
@@ -18,13 +18,13 @@ HostName ec2-54-999-999-999.us-west-2.compute.amazonaws.com
 User ubuntu
 IdentityFile "~/.ssh/SuperSecretKey.pem"
 ```
-I needed to make is super easy to log into the box:
+I needed to make it super easy to log into the box:
 
 ```
 $ ssh AsyncVoterBot
 ```
 
-where I installed git, nodejs and npm using `apt-get install` (although I burned some time mistakenly installing `node` and then trying to build node from source) before cloning out our async slack bot project setting the slack bot token in the environment and ran the bot in a tmux session. 
+where I installed git, nodejs and npm using `apt-get install` (although I burned some time mistakenly installing `node` and then trying to build node from source) before cloning out our async slack bot project, setting the slack bot token in the environment and running the bot in a tmux session. 
 
 ```
 $ tmux
