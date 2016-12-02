@@ -1,3 +1,10 @@
+---
+title: Task Switching
+date: 2016-11-30
+tags: blogging planning time management automating unit testing mocha chai nodejs botkit botmock
+author: Sam Joseph
+---
+
 Tuesday was a day of much task switching.  It started with putting my office back together after new windows had been put in.  That took a while.  I managed to quickly stamp out a blog on the Agile Project Workshop before the "Martin Fowler" scrum.  My attempts at changing the flow for blog drafts were getting a little out of hand as the process of squashing and merging between the `new_blog_drafts` branch and master seemed to be leaving stray commits that were then making the subsequent new blog draft PRs rather messy.  In frustration I deleted the branch and re-created it this morning.  I think we need to go with Arreche's suggestion of a webhook, and to do that I'll need to move the blog_draft notifications into the new AV Premium Slack instance; or at least some where with spare Slack integration capacity.
 
 In the scrum I was advising one Premium member about the perils of task switching, or more accurately about the perils of spreading oneself too thin over many projects.  Talk about the pot calling the kettle black! :-)  After the scrum I joined Matt for an hour pairing on WebSiteOne and Redeemify, and I managed to restrain myself from immediately diving in to individual problems and talked to Matt about the bigger picture of trying to make progress with all of AgileVentures and WebsiteOne in particular.  We reviewed the open PRs and board and I unblocked Matt on two issues, and then helped him with another on Redeemify where the presence of a legacy Rails 3 `asset` group in the Gemfile was breaking the system on Heroku.
