@@ -15,6 +15,7 @@ Most of Tuesday was taken up with running a workshop on Agile Project Developmen
 > This session will provide an insight into how you can effectively instigate agile project management into your nonprofit. 
 
 > Training content:
+
  - What Agile is and where it came from
  - The Agile Manifesto, principles and practises
  - The value of Agile to your nonprofit
@@ -29,6 +30,7 @@ Most of Tuesday was taken up with running a workshop on Agile Project Developmen
 > Trainer: Agile Ventures
 
 > Cost (Per Person):
+
   - Free - Harrow Voluntary, Community & Social Enterprise Sector
   - £30 - Voluntary, Community & Social Enterprise Sector (Not working or based in Harrow)
   - £40 - Public & Private Sector
