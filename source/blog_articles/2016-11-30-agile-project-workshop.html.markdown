@@ -10,30 +10,30 @@ Most of Tuesday was taken up with running a workshop on Agile Project Developmen
 > A new approach to project management, Agile Project Management, attempts to create a different model.
 "Most nonprofits are interested in process improvements that will better enable them to accomplish their respective missions. However, major change can be intimidating and complicated to implement, especially if the organisation isn’t quite sure what it needs to do differently or lacks the expertise to make it happen across the organisation."
 
-> The agile project management approach aims to address the needs of those working in a project-focused environment who want to be agile.
+> The Agile project management approach aims to address the needs of those working in a project-focused environment who want to be agile.
 
-> This session will provide an insight into how you can effectively instigate agile project management into your nonprofit. 
+> This session will provide an insight into how you can effectively instigate Agile project management into your nonprofit. 
 
 > Training content:
 
-> - What Agile is and where it came from
- - The Agile Manifesto, principles and practises
- - The value of Agile to your nonprofit
- - Implementing Agile in your nonprofit
- - Communication, collaboration and culture
- - Risk management and pitfalls
- - Technologies to help
- - Further resources
+>  - What Agile is and where it came from
+>  - The Agile Manifesto, principles and practises
+>  - The value of Agile to your nonprofit
+>  - Implementing Agile in your nonprofit
+>  - Communication, collaboration and culture
+>  - Risk management and pitfalls
+>  - Technologies to help
+>  - Further resources
 
-> Participants will leave the course having gone through a small scale agile process learning first hand how it can be implemented into your organisation.
+> Participants will leave the course having gone through a small scale Agile process learning first hand how it can be implemented into your organisation.
 
 > Trainer: Agile Ventures
 
 > Cost (Per Person):
 
 > - Free - Harrow Voluntary, Community & Social Enterprise Sector
-  - £30 - Voluntary, Community & Social Enterprise Sector (Not working or based in Harrow)
-  - £40 - Public & Private Sector
+> - £30 - Voluntary, Community & Social Enterprise Sector (Not working or based in Harrow)
+> - £40 - Public & Private Sector
 
 There were eight attendees from different charity groups based in Harrow and some of the adjoining boroughs.  Including Alex and myself that made 10 which worked pretty well I think.  We'd done a [dry run of the event](http://nonprofits.agileventures.org/2016/11/21/agile-workshop/) a couple of weeks back with the VAHC staff in a group of six including myself.  That dry run had followed this pattern:
 
