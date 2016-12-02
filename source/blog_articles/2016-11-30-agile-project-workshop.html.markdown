@@ -16,7 +16,7 @@ Most of Tuesday was taken up with running a workshop on Agile Project Developmen
 
 > Training content:
 
->  - What Agile is and where it came from
+> - What Agile is and where it came from
  - The Agile Manifesto, principles and practises
  - The value of Agile to your nonprofit
  - Implementing Agile in your nonprofit
@@ -31,22 +31,22 @@ Most of Tuesday was taken up with running a workshop on Agile Project Developmen
 
 > Cost (Per Person):
 
->  - Free - Harrow Voluntary, Community & Social Enterprise Sector
+> - Free - Harrow Voluntary, Community & Social Enterprise Sector
   - £30 - Voluntary, Community & Social Enterprise Sector (Not working or based in Harrow)
   - £40 - Public & Private Sector
 
 There were eight attendees from different charity groups based in Harrow and some of the adjoining boroughs.  Including Alex and myself that made 10 which worked pretty well I think.  We'd done a [dry run of the event](http://nonprofits.agileventures.org/2016/11/21/agile-workshop/) a couple of weeks back with the VAHC staff in a group of six including myself.  That dry run had followed this pattern:
 
 * Intro "What is Agile? How this workshop will run" 
-* "kickoff" --> generate a series of stories about what to do in the workshop, e.g. "How do we motivate people?  What's a scrum?" write on cards, arrange on whiteboard 
-* break 
-* "voting" on stories --> identify common stories and vote on their difficulty, work out their priority 
+* "Kickoff" --> generate a series of stories about what to do in the workshop, e.g. "How do we motivate people?  What's a scrum?" write on cards, arrange on whiteboard 
+* BREAK 
+* "Voting" on stories --> identify common stories and vote on their difficulty, work out their priority 
 * Go into small teams each working on a different story 
-* break 
+* BREAK 
 * Small teams each presenting their work on their story 
-* "retrospective" looking back over the process and how it could be improved 
+* "Retrospective" looking back over the process and how it could be improved 
 
-Excluding breaks, being 6 ten minute chunks.  The full workshop followed the same model but each section lasted 25 minutes.  The key things I'd learned from the dry run was 
+Excluding breaks, that was 6 ten minute chunks; running for an hour.  The full workshop followed the same model but each chunk lasted 25 minutes.  The key things I'd learned from the dry run were: 
 
 * I needed to bring a mac VGA connector to use the projector
 * A sprint diagram would be helpful
@@ -55,9 +55,9 @@ Excluding breaks, being 6 ten minute chunks.  The full workshop followed the sam
 * We'd need better pens
 * Using the Agile process to understand the Agile process might be confusing 
 
-I got the simple logistical issues sorted, and started the main workshop by having the eight attendees do pairwise introductions.  I started the workshop as before by explaining the six part structure of the workshop and added the new element of stating the workshop objective "To understand Agile Project Management".  I tried to highlight how ultimately the Agile processs could be applied to any project, but that our project in the three hour workshop was "To understand Agile Project Management" and we would be compressing what might be done in an 2 week sprint into those three hours.  I talked briefly about the background of Agile, and how it derives from the [Agile Software Manifesto](http://agilemanifesto.org/).
+I got the simple logistical issues sorted, and started the main workshop by having the eight attendees do pairwise introductions.  I started the workshop as before by explaining the six part structure of the workshop and added the new element of emphasizing the workshop objective "To understand Agile Project Management".  I tried to highlight how ultimately the Agile processs could be applied to any project, but that our project in the three hour workshop was "To understand Agile Project Management" and we would be compressing what might be done in an 2 week sprint into those three hours.  I talked briefly about the background of Agile, and how it derives from the [Agile Software Manifesto](http://agilemanifesto.org/).
 
-This time around I showed an image to represent a sprint:
+This time around I also showed an image representing a sprint:
 
 ![scrum overiew](http://www.agilenutshell.com/assets/methods/scrum/scrum-overview.png)
 
@@ -69,11 +69,11 @@ and then we got into the process of starting to generate stories.  This time aro
 * How does Agile planning cope with changing timeframes (1 point)
 * What are the Pros & Cons of Agile vs other methodologies (2 points)
 
-which we prioritised and then worked on the first three in three teams of three, with me moving between the teams to give help and support.  The really interesting things to come out of the process was to see the attendees answering their own questions and inferring, from the overall Agile process that we were using, how Agile might work for them.  As usual the voting and voting discussion was a critical learning period as we distinguished what we were voting on (complexity/ambiguity rather than priority or delegation), and I think the attendees were getting insights into how just having that discussion could help surface and resolve conflicts.  While the teams were working I got their tickets up on a makeshift Kanban layout on the wall:
+which we prioritised and then worked on each of the first three in separate three teams of three, with me moving between the teams to give help and support.  The really interesting things to come out of the process was to see the attendees answering their own questions and inferring, from the overall Agile process that we were using, how Agile might work for them.  As usual the voting and voting discussion was a critical learning period as we distinguished what we were voting on (complexity/ambiguity rather than priority or delegation), and I think the attendees were getting insights into how just having that discussion could help surface and resolve conflicts.  While the teams were working I got their tickets up on a makeshift Kanban layout on the wall:
 
-![](https://www.dropbox.com/s/tp01dj0jtxdwvfy/non-proft-kanban.jpg?dl=1)
+![kanban layout on wall of meeting room](https://www.dropbox.com/s/tp01dj0jtxdwvfy/non-proft-kanban.jpg?dl=1)
 
-The teams presented their findings to each other and I saw the time had run away with us.  There was only five minutes left for the retrospective.  This was a shame since as I was at pains to point out that all the other mechanics of scrums, sprints, standups, kanban charts etc. were all optional variables, and the key element that made a process Agile was reflection on how different aspects of the process were working.  We did a quick retro going round the table with each person saying briefly what had been positive and could be improved on about the workshop.  Not ideal since those going first would bias those talking after, but the general theme was that the attendees had found actually working through the Agile process very informative, but that many of them would like more specific examples about usage of the techniques in the non-profit sector.  There was also interest in a more advanced workshop and I mentioned Alex's and my idea about a 2 day workshop, with the 2 days being separated by 2 weeks, and effectively running an inception/kick-off and retrospective for an organisation.  It would certainly be interesting to run something like that although Alex was skeptical about people coming back for the second day 2 weeks later.  I think if people were paying for it that might make all the difference :-)
+The teams presented their findings to each other and I saw the time had run away with us.  There was only five minutes left for the retrospective.  This was a shame since as I was at pains to point out that all the other mechanics of scrums, sprints, standups, Kanban charts etc. were all optional aspects of Agile, and the key element that made a process Agile was reflection on how different aspects of the process were working.  We did a quick retro going round the table with each person saying briefly what had been positive and what could be improved on about the workshop.  Not ideal since those going first would bias those talking after, but the general theme was that the attendees had found actually working through the Agile process very informative; although many of them would like more specific examples about usage of the techniques in the non-profit sector.  There was also interest in a more advanced workshop and I mentioned Alex's and my idea about a 2 day workshop, with the 2 days being separated by 2 weeks, and effectively running an inception/kick-off and retrospective for an organisation.  It would certainly be interesting to run something like that although Alex was skeptical about people coming back for the second day 2 weeks later.  I think if people were paying for it that might make all the difference :-)
 
 Overall a great experience, and I'll be very interested to hear what people say in the privacy of the feedback forms.  I don't know that I'd want to spend every day doing workshops like this, but it was great to be meeting all these hard-working charity/non-profit folks, and what I'd really love to be doing is more implementation of Agile methods in their organisations to see if we could really help them improve their outcomes.  Perhaps this will be a stepping stone to that ...
 
