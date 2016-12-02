@@ -16,7 +16,7 @@ Most of Tuesday was taken up with running a workshop on Agile Project Developmen
 
 > Training content:
 
- - What Agile is and where it came from
+>  - What Agile is and where it came from
  - The Agile Manifesto, principles and practises
  - The value of Agile to your nonprofit
  - Implementing Agile in your nonprofit
@@ -31,7 +31,7 @@ Most of Tuesday was taken up with running a workshop on Agile Project Developmen
 
 > Cost (Per Person):
 
-  - Free - Harrow Voluntary, Community & Social Enterprise Sector
+>  - Free - Harrow Voluntary, Community & Social Enterprise Sector
   - £30 - Voluntary, Community & Social Enterprise Sector (Not working or based in Harrow)
   - £40 - Public & Private Sector
 
