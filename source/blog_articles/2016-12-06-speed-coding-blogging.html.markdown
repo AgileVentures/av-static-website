@@ -1,3 +1,10 @@
+---
+title: Speed Coding and Blogging
+date: 2016-12-06
+tags: CSS stylesheets controller Stripe paypal refactoring Cucumber regression characterisation legacy Twitter YouTube
+author: Sam Joseph
+---
+
 Monday was the usual fight against torpor, but did get an hour's pairing in with Michael on WSO where Michael drove a finish to putting the Paypal payment button on the same page at the Stripe credit card payment.  Before he started on that I got him to pull out the refactoring of the ChargesController to SubscriptionController into a separate pull request.  In the background I had half an eye on the builds of that which were failing due to some regressions on changes to cucumber steps.  We pared down the feature for putting the Paypal element front and center to:
 
 ```gherkin
