@@ -105,7 +105,7 @@ end
 
 I'm sure there's a tighter way to do that, but it breaks up our mammoth User table, and we can now write a separate test for quickly calculating hangout participation offline, and then get on to the bigger refactoring to see details about when people join hangouts, break the user table up further with better support for Premium, and improve the installation documentation.  These are the key things for me in the next few weeks, although they could certainly be derailed if the memory issues turn out to be more serious than we thought.  The question remains, can't we go any faster?  One drag is me spending all this time with my kids.  Maybe I can get them to code for AV too? :-)
 
-Related videos:
+###Related videos:
 
 * [Pairing part 1](https://www.youtube.com/watch?v=PliTRMoNrR8)
 * [Pairing part 2](https://www.youtube.com/watch?v=6zO-FCmJQSk)
