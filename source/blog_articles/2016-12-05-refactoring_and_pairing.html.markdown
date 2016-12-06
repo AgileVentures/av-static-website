@@ -1,7 +1,7 @@
 ---
 title: Refactoring and Pairing
 date: 2016-12-05
-tags: 
+tags: activity controller create credit cucumber custom definitions feature paypal premium refactoring sponsor step subscriptions upgrade communication
 author: Sam Joseph
 ---
 
