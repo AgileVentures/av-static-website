@@ -8,10 +8,10 @@ author: Sam Joseph
 
 Adding the function to give Karma credit for attending hangouts took longer than expected.  Ironically spiking it had been fast, but adding a test for it was time consuming and frustrating.  I'm trying to dissect why that was.  Looking back I can see a few things that caused us to spin our wheels:
 
-1) the EventInstance FactoryGirl was creating a participants structure that was different to our assumptions
-2) the `after_validation` hook on user causes the Karma calculation to take place during FactoryGirl object creation
-3) the EventInstance FactoryGirl was creating an additional user object
-4) the version of FactoryGirl we are on (4.5) does not [reset sequence integers between test runs](https://robots.thoughtbot.com/getting-sequential-a-look-into-a-factory-girl)
+1) the EventInstance FactoryGirl was creating a participants structure that was different to our assumptions  
+2) the `after_validation` hook on user causes the Karma calculation to take place during FactoryGirl object creation  
+3) the EventInstance FactoryGirl was creating an additional user object  
+4) the version of FactoryGirl we are on (4.5) does not [reset sequence integers between test runs](https://robots.thoughtbot.com/getting-sequential-a-look-into-a-factory-girl)  
 
 Let's have a quick look at the original EventInstance FactoryGirl factory:
 
@@ -54,7 +54,7 @@ It makes me think of Avdi's "MacGyver method" where we got wrapped up in using t
 
 I think we might also want to look at our pairing strategy.  I think Michael was getting frustrated at the speed with which I window switched from stack trace to code and back again as we tried to hunt bugs through the legacy test infrastructure.  There's the lag of the hangout screenshare as well, but I think it's more an indication of my keyboard hogging.  We seem to have fallen into a pattern of switching roles about once an hour, and I wonder if that's too infrequent.  There are other issues with me having less available time to code due to family commitments.  I wonder if we might benefit from having an enforced 10 min switch as I've seen in some companies.
 
-There's also what we are doing to the domain model.  I'm still conflicted about the dissonance between the terms "EventInstance" and "Hangout".  EventInstances do represent data from Google Hangouts in our system.  EventInstances is nicely generic - maybe in the future we'll support alternatives to Google Hangouts, but our hangouts are very often associated with events, but not always.  Actually Michael and I mainly pair in spontaneous hangouts that are associated with the project, so EventInstance is a misnomer there.
+There's also what we are doing to the domain model.  I'm still conflicted about the dissonance between the terms "EventInstance" and "Hangout".  EventInstances do represent data from Google Hangouts in our system.  EventInstances is nicely generic - maybe in the future we'll support alternatives to Google Hangouts. However, while our hangouts are very often associated with events, that's not always the case.  Actually Michael and I mainly pair in spontaneous hangouts that are associated with the project, so EventInstance is a misnomer there.
 
 We were feeling good about pulling Karma out of the User table, and given that we have a Karma calculator it certainly seems like we are moving towards evolving a Karma entity in our domain.  It occurs to me that all the logic in the KarmaCalculation service could be moved to the Karma model.  Much as I love recombinable services, given that we now have a need to persist the intermediate calculations from the other Karma Calculator, I'm moving to think that the sensible next step is a real "unit" and not "integration" test of the Karma model so that we can avoid getting bogged down in too much complexity, i.e. dependencies on many other elements of the system.
 
@@ -83,9 +83,13 @@ We were then asking ourselves how to slice and dice to try and stick with our "d
 
 In principle the work of the day could be a PR, and the only additional thing required to release it would be the creation of a separate Karma update task.  We'd be losing the feature that Karma would be updated whenever users saved their profiles, but that seems like something we could easily add back in later, without using these dangerous AR lifecycle hooks.
 
-The real question would be should we get that simpler PR in, and then immediately start more tickets based on it?  The danger there, as we'd seen before, is that particularly with the new "squash and merge" feature on GitHub PRs, building on an unmerged PR would guarantee merge conflicts down the line.  That would seem to point us towards reviewing all the tickets and working on a different corner of the codebase until this got merged.  That feels challenging in that I'm now itching to do that bigger participant refactoring, and try and get some clean confident code.
+The real question is should we get that simpler PR in, and then immediately start more tickets based on it?  The danger there, as we've seen before, is that, particularly with the new "squash and merge" feature on GitHub PRs, building on an unmerged PR would guarantee merge conflicts down the line.  That would seem to point us towards reviewing all the tickets and working on a different corner of the codebase until this got merged.  That feels challenging in that I'm now itching to do that bigger participant refactoring, and try and get some clean confident code.
 
 We'll see - I guess after a day in which a lot of your assumptions are thrown, it makes sense to allow a bit of time for the dust to settle.  Reflect on what worked and what didn't work, and maybe work on something else before coming back to the code face ...
 
+###Related Videos:
+
+* [Pairing on WSO](https://www.youtube.com/watch?v=pXGkwvF_UH8)
+* ["Kent Beck" Scrum](https://www.youtube.com/watch?v=QIn_wN2VE4k)
 
 
