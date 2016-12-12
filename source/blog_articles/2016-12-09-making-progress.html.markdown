@@ -1,8 +1,8 @@
-So I went over on my timer for yesterday's blogging.  I'd tried to cap it at 20 minutes, but I got into a fair bit of detail about the options for testing/mocking the Twitter API before getting on to the meat of the matter I was trying to focus on; Agile DevOps.  I guess there are two kinds of blogs, those with succinct focus on a particular topic and those that are a mixed bag.  The process of profiling my days in blogs recently have probably tipped me more towards the latter, with the blog being a reflection of all the things I did on the previous day.  I'm acutely aware that the length, lack of focus, lack of images and high code content probably make my blogs less readable for many.  I am writing these things partly for others to read, but also partly just to get my thoughts straight, and stop them being lost in an ever dissappearing slack history.
+So I went over on my timer for yesterday's blogging.  I'd tried to cap it at 20 minutes, but I got into a fair bit of detail about the options for testing/mocking the Twitter API before getting on to the meat of the matter I was trying to focus on; Agile DevOps.  I guess there are two kinds of blogs, those with succinct focus on a particular topic and those that are a mixed bag.  The process of profiling my days in blogs recently have probably tipped me more towards the latter, with the blog being a reflection of all the things I did on the previous day.  I'm acutely aware that the length, lack of focus, lack of images and high code content probably make my blogs less readable for many.  I am writing these things partly for others to read, but also partly just to get my thoughts straight, and stop them from being lost in an ever dissappearing slack history.
 
 Maybe writing one really focused blog a week would have more impact in terms of creating content that drew people into AgileVentures, that got across key concepts about Agile Development and Software Engineering.  However I'm also testing myself.  Can I document my process every day for a year.  Are people's diaries not meant for publication?  I committed to doing a year of this and I like to keep my commitments.  Maybe after that year I'll switch to doing one blog a week, but writing every morning and revising the following day, doing at least five revisions where I delete stuff and increase focus. Let's see.
 
-Despite running over on the previous day's blog I got a fair bit of admin work done, although it was clear that the Zapier automation wasn't working as expected.  The attempt to get it to post as non-bot had failed, so I've set it up for a simpler bo bot post today, although it's clear that it can't easily post the link to the precise blog file - the closest it can get to that is the pull request URL.  I'm also not sure how much I'll get charged ... it's just one thing in my list of "automate to create time" that I generated from profiling my days a week or so back:
+Despite running over on the previous day's blog, I got a fair bit of admin work done, although it was clear that the Zapier automation wasn't working as expected.  The attempt to get it to post as non-bot had failed, so I've set it up for a simpler bot post today, although it's clear that it can't easily post the link to the precise blog file - the closest it can get to that is the pull request URL.  I'm also not sure how much I'll get charged ... it's just one thing in my list of "automate to create time" that I generated from profiling my days a week or so back:
 
 * [ ] Automation
   - [ ] try to fix up lower 3rd thing --> no response from github repo post ...
@@ -31,7 +31,7 @@ Before we'd got on to WSO, Michael and I had spent some time bashing out a refac
   end
 ```
 
-this had lead to code like this:
+This had lead to code like this:
 
 ```
   def org_owner?
@@ -43,7 +43,7 @@ this had lead to code like this:
   end
 ```
 
-now I know that maybe we should be using pundit or cancan, but staying focused on the refactoring, the proposed alternate ended up creating overlap between two `before_action`s, which we unravelled with a set of method names that tried to connect up with the reasons for the split:
+Now I know that maybe we should be using pundit or cancan, but staying focused on the refactoring, the proposed alternate ended up creating overlap between two `before_action`s, which we unravelled with a set of method names that tried to connect up with the reasons for the split:
 
 ```rb
   def org_owner?
@@ -75,7 +75,7 @@ At least the next folks in might have a fighting chance of seeing the relation t
 
 Anar who'd been working on this PR dropped in to our planning session and was able to participate in a manual vote on the further paypal integration, and in the background I used the Async slack bot to run three other votes in sequence in LocalSupport, WebsiteOne and AsyncVoter itself.  Gotta get multi-channel parallel voting enabled!  But again that's free tier ... hmm although maybe we should be offering extras like that as part of premium project support plans?
 
-In summary, if there can be a summary for a mixed bag blog like this, it feels like there's progress. The whole concept of premium members paying for priority code reviews on pull requests, is that there's huge learning value from them, and the quicker you get the PR review the more valuable it potentially is.  Also, our mentors time is a limited resource.  Probably the individual features and bug-fixes could be delivered faster if our most experienced mentors just worked on them themselves rather than reviewing submissions.  The hope is that the slow-down on delivery can be compensated for by the Premium payments that allow the while enterprise to sustain, and that the projects move forward and deliver value through the process.  Also that once people are paying/sponsoring/donating to something, that they become more invested in it, and we can ride the win-win cyle up to a scale when everyone is compensated for their time, and they are working on worthwhile projects for the greater good!
+In summary--if there can be a summary for a mixed bag blog like this--it feels like there's progress. The whole concept of premium members paying for priority code reviews on pull requests is that there's huge learning value from them, and the quicker you get the PR review the more valuable it potentially is.  Also, our mentors time is a limited resource.  Probably the individual features and bug-fixes could be delivered faster if our most experienced mentors just worked on them themselves rather than reviewing submissions.  The hope is that the slow-down on delivery can be compensated for by the Premium payments that allow the whole enterprise to sustain, and that the projects move forward and deliver value through the process.  Also that once people are paying/sponsoring/donating to something, that they become more invested in it, and we can ride the win-win cyle up to a scale when everyone is compensated for their time, and they are working on worthwhile projects for the greater good!
 
 ###Related Videos:
 
