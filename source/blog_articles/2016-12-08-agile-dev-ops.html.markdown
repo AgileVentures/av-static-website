@@ -17,10 +17,7 @@ Feature: Tweeting Live Events
   I would like live events to generate twitter notifications
 
   Background:
-    Given following events exist:
-      | name       | description             | category        | start_datetime          | duration | repeats | time_zone | project | repeats_weekly_each_days_of_the_week_mask | repeats_every_n_weeks |
-      | Scrum      | Daily scrum meeting     | Scrum           | 2014/02/03 07:00:00 UTC | 150      | never   | UTC       |         | And an event "Scrum"                      |                       |
-    And an event "Scrum"
+    Given an event exists
 
   Scenario: Event going live causes tweets of hangout link and youtube link to be sent
     When the HangoutConnection has pinged to indicate the event start, appropriate tweets will be sent
@@ -37,9 +34,14 @@ When(/^the HangoutConnection has pinged to indicate the event start, appropriate
 
   participants = {"0"=>{"id"=>"hangout2750757B_ephemeral.id.google.com^a85dcb4670", "hasMicrophone"=>"true", "hasCamera"=>"true", "hasAppEnabled"=>"true", "isBroadcaster"=>"true", "isInBroadcast"=>"true", "displayIndex"=>"0", "person"=>{"id"=>"108533475599002820142", "displayName"=>"Alejandro Babio", "image"=>{"url"=>"https://lh4.googleusercontent.com/-p4ahDFi9my0/AAAAAAAAAAI/AAAAAAAAAAA/n-WK7pTcJa0/s96-c/photo.jpg"}, "na"=>"false"}, "locale"=>"en", "na"=>"false"}}
   header 'ORIGIN', 'a-hangout-opensocial.googleusercontent.com'
-  put "/hangouts/@google_id", {title: @event.name, host_id: '3', event_id: @event.id,
-                               participants: participants, hangout_url: 'http://hangout.test',
-                               hoa_status: 'live', project_id: '1', category: 'Scrum',
+  put "/hangouts/@google_id", {title: @event.name, 
+                               host_id: '3', 
+                               event_id: @event.id,
+                               participants: participants, 
+                               hangout_url: 'http://hangout.test',
+                               hoa_status: 'live', 
+                               project_id: '1', 
+                               category: 'Scrum',
                                yt_video_id: '11'}
 end
 ```

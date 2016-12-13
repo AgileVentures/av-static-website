@@ -30,52 +30,52 @@ This makes me think we really want to get the slack channel settings on the Agil
 Before we'd got on to WSO, Michael and I had spent some time bashing out a refactoring of another PR that was addressing complexity issues flagged by Code Climate on LocalSupport.  We maybe spent too much time wrestling out the code together, but I was pretty pleased with the solution we came up with.  We worked out that the complexity was due to a combination of nested and non-nested routes in the Volunteer Opportunities controller:
 
 ```rb
-  resources :volunteer_ops, :only => [:index, :edit, :show, :update, :destroy] do
-    get 'search', on: :collection
-  end
-  resources :organisations do
-    resources :volunteer_ops, :only => [:new, :create]
-  end
+resources :volunteer_ops, :only => [:index, :edit, :show, :update, :destroy] do
+  get 'search', on: :collection
+end
+resources :organisations do
+  resources :volunteer_ops, :only => [:new, :create]
+end
 ```
 
 This had lead to code like this:
 
-```
-  def org_owner?
-    if params[:organisation_id].present? && current_user_has_organisation?
-      current_user.organisation.friendly_id == params[:organisation_id]
-    elsif current_user_has_organisation?
-      current_user.organisation == VolunteerOp.find(params[:id]).organisation
-    end
+```rb
+def org_owner?
+  if params[:organisation_id].present? && current_user_has_organisation?
+    current_user.organisation.friendly_id == params[:organisation_id]
+  elsif current_user_has_organisation?
+    current_user.organisation == VolunteerOp.find(params[:id]).organisation
   end
+end
 ```
 
 Now I know that maybe we should be using the pundit or cancan gems to manage roles and persmissions, but we staying focused on the refactoring. The proposed alternate had ended up creating overlap between two `before_action`s, which we unravelled with a set of method names that tried to connect up with the reasons for the split:
 
 ```rb
-  def org_owner?
-    current_user.present? && (current_user.can_edit? org_independent_of_route)
-  end
-  
-  def org_independent_of_route
-    organisation_set_for_nested_route? || organisation_for_simple_route
-  end
+def org_owner?
+  current_user.present? && (current_user.can_edit? org_independent_of_route)
+end
 
-  def organisation_set_for_nested_route?
-    @organisation
-  end
+def org_independent_of_route
+  organisation_set_for_nested_route? || organisation_for_simple_route
+end
 
-  def organisation_for_simple_route
-    VolunteerOp.find(params[:id]).organisation
-  end
+def organisation_set_for_nested_route?
+  @organisation
+end
 
-  def organisation_for_nested_route
-    Organisation.friendly.find(params[:organisation_id])
-  end
+def organisation_for_simple_route
+  VolunteerOp.find(params[:id]).organisation
+end
 
-  def set_organisation
-    @organisation = get_organisation_for_nested_route
-  end
+def organisation_for_nested_route
+  Organisation.friendly.find(params[:organisation_id])
+end
+
+def set_organisation
+  @organisation = get_organisation_for_nested_route
+end
 ```
 
 At least the next folks in might have a fighting chance of seeing the relation to the routes up front.  Although maybe they'll tear their hair out in the multiple steps of redirection in the code.  Probably the better thing in the long term will be to unwind the routes.  We could remove the nesting if we insisted that all the other controller methods moved into the nesting (i.e. :edit, :show, :update, :destroy), but that would be a bigger refactoring for another time.
