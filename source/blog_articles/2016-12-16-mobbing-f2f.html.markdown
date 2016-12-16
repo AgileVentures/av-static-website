@@ -1,1 +1,94 @@
-uhh
+Thursday was taken at quite a rush.  Moved the Premium Mob programming session forward half an hour so I could attend my twin boys carol concert.  We got deeper into Avdi Grimm's Confident Ruby, where the patterns were starting to combine to create code like this:
+
+```rb
+module Graphics
+  module Conversions
+    module_function
+
+    def Point(*args)
+      case args.first
+      when Integer then Point.new(*args)
+      when String then Point.new(*args.first.split(':').map(&:to_i))
+      when ->(arg){ arg.respond_to?(:to_point) } then args.first.to_point  
+      when ->(arg){ arg.respond_to?(:to_ary) } then Point.new(*args.first.to_ary)
+      
+      else
+        raise TypeError, "Cannot convert #{args.inspect} to Point"
+      end
+    end
+    
+    Point = Struct.new(:x, :y) do
+      def inspect
+        "#{x}#{y}"
+      end
+      def to_point
+        self 
+      end
+    end
+    
+    Pair = Struct.new(:a, :b) do
+      def to_ary
+        [a,b]
+      end
+    end
+    
+    class Flag
+      def initialize(x,y,flag_color)
+        @x, @y, @flag_color = x, y, flag_color
+      end
+      def to_point
+        Point.new(@x,@y)
+      end
+    end
+  end
+end
+
+include Graphics
+include Graphics::Conversions
+
+puts Point([])
+puts Point("1:2")
+puts Point([1,2])
+puts Point(1,2)
+puts Point(Pair.new(23,32))
+puts Point(Flag.new(42, 24, :red))
+```
+The mobbers seemed pretty happy with the concepts of Idempotency, the splat argument and the lambdas in the case statements.  The big discussion was about the use of Structs vs Classes, and Matt was able to use the shared C9 workspace to good effect to show me the alternatives he was thinking about.  I'm not sure that we're yet truely mobbing, but I think the others are gaining in confidence and we'll get there.  Mobbing completed it was time for a carol service, and I was hardly back from that before it was time for the Kent Beck scrum.  I had managed to review a few LocalSupport pull requests, prioritising input for the Premium members who'd submitted code or questions.
+
+Ed had booked me for a Premium F2F session immediately after the Kent Beck and we dived into user stories and cucumber to drive the creation of a new EventManager project in Rails 5.   Within the hour we got everything set up and had out first feature/scenario failing at the point where it would need ActionCable working in order to pass:
+
+```gherkin
+Feature: Joining the Event
+  As a busy AV member
+  So that I can work out if I want to join an event
+  I'd like to see who is present in the event, updated in real time
+
+  As a new member
+  So that I can join the event on time
+  I would like to have a real time view of whether the hangout is live
+
+  Background:
+    Given an event exists
+
+  Scenario: see event status
+    Given I visit the page for an event
+    Then I should see "event not live"
+    When the event goes live
+    Then I should see "event live"
+```
+
+That was pretty satsifying, and I was riding high on possible nibbles from a few prospective AgileVentures sponsors.  In terms of financial stability we're about half way there.  If I can land another sponsor and double the number of Premium members it will be a very happy 2017 indeed.  My dream is a sustainable framework for open education for all, where we're all learning through the process of trying to make the world a better place.   The mob sessions are private at the moment, but I get permission from the F2F and plus members to make their sessions available in the project channels to help the open source projects we work on, and of course all the resulting code is open.  Will need to throw the right sort of licenses in there.  Is it too crazy a dream that we could all be learning and growing without fear?  All benefiting from each other's courage to share the learning experience and process with each other?  And splitting our objective of personal growth with that of helping others?  Call me a dreamer, but I'm not the only one ... :-)
+
+Anyhow I'm take a two week break from blogging now, like I did over the summer so I can calm down a bit and catch up with admin, coding and polishing and distributing some of the older blogs.  Hope you all have a very cool yule and I'll look forward to seeing you all in the New Year! :-)
+
+###Related Videos
+
+* ["Martin Fowler" scrum](https://www.youtube.com/watch?v=lrw0R8YbxXU)
+* ["Kent Beck" scrum](https://www.youtube.com/watch?v=LkagGRnOorI)
+* F2F pairing on Rails 5?  Navigate to the #event_manager channel on AgileVentures slack to catch the link before we lose the slack history :-)
+
+
+
+
+
+
