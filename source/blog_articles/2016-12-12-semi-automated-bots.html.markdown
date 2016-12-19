@@ -1,6 +1,6 @@
 ---
 title: Semi-Automated Bots, or Augmented Humans?
-date: 2016-12-09
+date: 2016-12-12
 tags: meetings, pull requests, bug fixing, Slack
 author: Sam Joseph
 ---
