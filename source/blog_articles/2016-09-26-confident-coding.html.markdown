@@ -1,11 +1,11 @@
 ---
 title: Confident Coding
 date: 2016-09-26
-tags: pairing tickets refactoring domain model single table inheritance rspec shared_examples STI outside-in inside-out migrations
+tags: pairing, tickets, refactoring, domain model, single table inheritance, rspec, shared_examples, STI, outside-in, inside-out, migrations
 author: Sam Joseph
 ---
 
-Friday I tried to improve on Thursday.  I proposed to Michael that we try to rotate driver/navigator roles more frequently and that we put aside the work on the Karma calculation; instead focusing on the domain model for the Premium members.  Michael had solo'd the creation of a cuke for a new Karma calculation rake task that would complement removing the `after_validation` hook from the User object.  Part of me was desperate to continue battling with the Karma calculation, but I convinced myself it would be better to leave that as a PR, get feedback from Raoul in the meantime, and not continue building on that part of the system until the PR was merged.
+Friday I tried to improve on Thursday's performance.  I proposed to Michael that we try to rotate driver/navigator roles more frequently and that we put aside the work on the Karma calculation; instead focusing on the domain model for the Premium members.  Michael had solo'd the creation of a cuke for a new Karma calculation rake task that would complement removing the `after_validation` hook from the User object.  Part of me was desperate to continue battling with the Karma calculation, but I convinced myself it would be better to leave that as a PR, get feedback from Raoul in the meantime, and not continue building on that part of the system until the PR was merged.
 
 I think I was slowly [letting go of a banana](https://blog.craftacademy.se/let-go-of-the-banana/) which is sometimes very challenging when you are a simple monkey like me; but I was coming to the conclusion I should put down that banana containing coconut and get some distance from it.  That coming back to it in a few days might yield some better approaches.  Or at least the realisation that the path I thought was the good one, really was a good one; or that something more important might come up in the meantime :-)
 
@@ -74,7 +74,6 @@ Maybe we should have been using whiteboard software or pencil and paper, but I f
     t.string  'payment_id' # stripe => stripe id ; craft_academy => ??
     t.datetime 'expires_at'
   end
-  
 ```
 
 See the video to follow how this evolved from one model to three models and then back to two.  However I did feel uncomfortable that we were being too specific at this level of ruby database instructions, so I pulled that snippet into a text document and re-framed it in terms of Ruby objects:
