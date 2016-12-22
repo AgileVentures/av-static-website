@@ -5,8 +5,7 @@ tags: pairing tickets refactoring domain model cucumber steps scenarios heuristi
 author: Sam Joseph
 ---
 
-
-So Monday was the day to see if our new domain model components would ease the process of delivering a new feature. As warm up I did a quick refactoring requested by Raoul on our Karma calculation changes.  There was the possibility of re-using some cucumber steps.  We'd submitted the following:
+So Monday was the day to see if our new domain model components would ease the process of delivering a new feature. As warm up I did a quick refactoring on our Karma calculation changes that Raoul had requested.  There was the possibility of re-using some cucumber steps.  We'd submitted the following:
 
 ```rb
 When(/^I run rake task "([^"]*)"$/) do |task|
@@ -20,7 +19,6 @@ end
 
 and Raoul was suggesting re-using the the first step.  Looking it over I actually modified it to the following:
 
-
 ```rb
 When(/^I run the rake task for calculating karma points$/) do
   $rake["karma_calculator"].execute
@@ -33,7 +31,7 @@ end
 
 Following the idea that the high level cucumber scenarios should be as readable English as possible, preferring `When I run the rake task for calculating karma points` to `When I run the rake task for "karma_calculator"`.  Trivial?  Maybe.  I'm conflicted.  These are related to cucumber stories we have in our dev-ops section which I'm hoping provides some testable documentation of the operational aspect of the application that's used by app admins rather than end users.  I'm also going with not re-using step-definitions within step-definitions.  Two more heuristics there to add to the list.
 
-I mention this warm up partly because I feel like there's clean up for the Cucumber stories we wrote on Monday.  As it happens, Raoul approved that above change and merged the new Karma calculation PR in, making it possible that we could get started on refactoring work there.  But anyhow, here, ultimately, are the Cucumber scenarios that defined our Monday's work:
+I mention this warm up partly because I feel like there's a need to clean up the Cucumber stories we wrote on Monday.  As it happens, Raoul approved the above change and merged the new Karma calculation PR in, making it possible for us to get started on that refactoring work.  However I held off, preferring to go back to the Cucumber scenarios that defined our Monday's work:
 
 ```gherkin
   Scenario: User is on free tier and looking at own page
@@ -60,9 +58,9 @@ I mention this warm up partly because I feel like there's clean up for the Cucum
     And I should not see "Upgrade to Premium"
 ```
 
-We didn't get to these all at once.  We'd put the fruits of our InsideOut work aside (the new domain elements Subscription and PaymentSource) and reverted to OutsideIn.  This was the set of experiences we wanted for the end user, in association with the [ticket](https://github.com/AgileVentures/WebsiteOne/issues/1261) we were working on. We'd actually started with two scenarios, one about upgrade to premium and the other about upgrade to premium plus, and in my mind had been the idea that we would ultimately make both types of upgrade work using our new domain entities.
+We didn't get to these all at once.  We'd put the fruits of our InsideOut work aside (the new domain elements Subscription and PaymentSource) and reverted to OutsideIn.  This was the set of experiences we wanted for the end user, in association with the [ticket](https://github.com/AgileVentures/WebsiteOne/issues/1261) we were working on. We'd actually started with two scenarios, one about upgrade to Premium and the other about upgrade to Premium Plus, and in my mind had been the idea that we would ultimately make both types of upgrade work using our new domain entities.
 
-However that was actually scope creep off the ticket, and in fact there was a chunk of work specific to the ticket (upgrade from basic to premium) that could be implemented in the existing system without any reference to the new domain entities, so we got that done.  It was mainly a change to the view to add a report about the user's current membership status, and an upgrade button:
+However that was actually scope creep off the ticket, and in fact there was a chunk of work specific to the ticket (upgrade from basic to Premium) that could be implemented in the existing system without any reference to the new domain entities, so we got that done.  It was mainly a change to the view to add a report about the user's current membership status, and an upgrade button:
 
 ```html
     <% if current_user && current_user == presenter.user %>
@@ -151,17 +149,15 @@ and finally a little addition to the charges controller, so that when users sign
   end
 ```
 
-The upshot of which was that using only the existing aspects of the system the premium users would see their status on their profile page, and non-premium users would see the upgrade button.  It was all working without the aid of the new domain entities.  As I mentioned above, Michael and I had other concerns with our implementation, but with my eye on the clock I suggested we get this in as a pull request, and then use the new domain entities to support work on a subsequent [ticket of allowing premium users to upgrade to premium plus](https://github.com/AgileVentures/WebsiteOne/issues/1303).
+The upshot of which was that using only the existing aspects of the system the Premium users would see their status on their profile page, and other users would see the upgrade button.  It was all working without the aid of the new domain entities.  As I mentioned above, Michael and I had other concerns with our implementation, but with my eye on the clock I suggested we get this in as a pull request, and then use the new domain entities to support work on a subsequent [ticket of allowing premium users to upgrade to premium plus](https://github.com/AgileVentures/WebsiteOne/issues/1303).
 
-I had other conflicts dripping out of me, such as whether we should be testing Stripe differently (webmock?) and whether we should be making our scenarios more declarative.  I guess part of the challenge with our increasing list of heuristics for good coding and good project management is that it can feel like you are being pulled in multiple directions at once, and you can be forgiven for a kind of paranoia about which really is the most important issue to work on first.
+I had other conflicts dripping out of me, such as whether we should be testing Stripe differently (Webmock?) and whether we should be making our scenarios more declarative.  I guess part of the challenge with our increasing list of heuristics for good coding and good project management is that it can feel like you are being pulled in multiple directions at once, and you can be forgiven for a kind of paranoia about which really is the most important issue to work on first.
 
 Submitting the PR for just the above code involved pulling out the commits for the new domain model entities.  One thing that was easy to prioritise for me was to put only the smallest set of necessary elements in the pull request.  I didn't want Raoul's to get distracted during his code review by having a set of un-used domain entities in the incoming code.  Michael found a [cool technique for cherry picking a set of commits](http://stackoverflow.com/a/1994491/316729) and we got in a PR with just the code above, and moved the domain entities onto a new branch associated with the ticket for creating the premium plus upgrade button.  Will we fall foul of premature refactoring?  Or did we just dodge a bullet?
 
-It's pretty clear to me that the current stripe_customer field on user can't support information about different membership plans.  Hopefully our InsideOut work will bear fruit in the next session!  Would it be too much to hope that we'll have dodged one bullet and be ready to unleash some of our own? :-)
-
+It's pretty clear to me that the current `stripe_customer` field on user can't support information about different membership plans.  Hopefully our InsideOut work will bear fruit in the next session!  Would it be too much to hope that we'll have dodged one bullet and be ready to unleash some of our own? :-)
 
 Related Videos:
-
 
 * [Pairing on the above](https://www.youtube.com/watch?v=UprAXzePQmo)
 * ["Kent Beck" scrum](https://www.youtube.com/watch?v=JPvkCffsHOo)
