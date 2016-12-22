@@ -1,7 +1,7 @@
 ---
 title: Dodging a Bullet
 date: 2016-09-27
-tags: pairing tickets refactoring domain model cucumber steps scenarios heuristics stripe git rspec
+tags: pairing, tickets, refactoring, domain model, cucumber steps, scenarios, heuristics, Stripe, git, rspec
 author: Sam Joseph
 ---
 
