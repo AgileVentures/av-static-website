@@ -1,10 +1,9 @@
 ---
 title: Fallow Day
 date: 2016-09-28
-tags: tickets sinon mocha node express tutorials slack voting planning poker
+tags: tickets, sinon, mocha, node, express, tutorials, slack, voting, planning poker
 author: Sam Joseph
 ---
-
 
 Today was a fallow day.  I'd been knocked back with a fever, sore throat and tummy trouble from the latest virus doing the rounds at my kids "Virus Exchange Camps", ... sorry, I mean schools.  I've no idea if anyone else talks about fallow days, but there's this expression about leaving a field to go fallow.  In crop rotation you plant different crops in each field each year and then don't plant anything every few years to avoid exhausting the soil.  I came up with the expression during my Ph.D. to mark those days when I didn't seem to get anything productive done - usually because I was sick, or more commonly, slightly hung-over.
 
@@ -14,67 +13,47 @@ The value generated from that voting can then be attached to a ticket associated
 
 Scroll forward, there are some projects where it's difficult to get people together at the same time, even in a remote hangout.  Also voting on a load of tasks, one after the other, can be somewhat tedious, so we're now experimenting with asynchronous remote voting, and for the last two weeks I've been playing the part of a hypothetical chatbot for the LocalSupport and WebSiteOne projects where I post something like this in the relevant Slack channel:
 
-```
-@channel new async vote on "make doit mentions in map key be hyperlinks" https://www.pivotaltracker.com/story/show/122461371, discuss here, or in ticket and then DM me your vote of 1 2 or 3
-```
+> @channel new async vote on "make doit mentions in map key be hyperlinks" https://www.pivotaltracker.com/story/show/122461371, discuss here, or in ticket and then DM me your vote of 1 2 or 3
 
 and then I'll get individual DMs from developers like so:
 
-```
-Vote for https://www.pivotaltracker.com/story/show/122461371:   1
-```
+> Vote for https://www.pivotaltracker.com/story/show/122461371:   1
 
 or sometimes with a bit of explanation
 
-```
-https://www.pivotaltracker.com/n/projects/742821/stories/122461371 seems like a 2, because it requires a bit of front-end and a bit of back-end, which means testing on both those fronts too
+> https://www.pivotaltracker.com/n/projects/742821/stories/122461371 seems like a 2, because it requires a bit of front-end and a bit of back-end, which means testing on both those fronts too
 i’m not sure who wants to do this story, but my coworker seems interested in pairing with me on it
-```
 
 or 
 
-```
-I guess the hyperlinks issue  for "do-it" is not your run of the mill "link_to" type. It will involve JS so if that s the case I say 3.
-```
+> I guess the hyperlinks issue for "do-it" is not your run of the mill "link_to" type. It will involve JS so if that s the case I say 3.
 
 and there might be some discussion in the ticket itself, but as I get votes I'll post into the Slack channel like so:
 
-```
-@here we have 2 votes for "make doit mentions in map key be hyperlinks" https://www.pivotaltracker.com/n/projects/742821/stories/122461371
-```
+> @here we have 2 votes for "make doit mentions in map key be hyperlinks" https://www.pivotaltracker.com/n/projects/742821/stories/122461371
 
 I might also prompt the channel if we don't get any updates for a while:
 
-```
-@channel we have two votes on https://www.pivotaltracker.com/story/show/122461371, we need one more vote to move forward - discuss here, or in ticket and then DM me your vote of 1 2 or 3
-```
+> @channel we have two votes on https://www.pivotaltracker.com/story/show/122461371, we need one more vote to move forward - discuss here, or in ticket and then DM me your vote of 1 2 or 3
 
 then once I have a sufficient number of votes (currently 3) I post the results to the channel:
 
-```
-@channel vote on https://www.pivotaltracker.com/n/projects/742821/stories/122461371 "make doit mentions in map key be hyperlinks" complete - @decareano 3, @johnnymo87 2, @marouen 1 - I'm just imagining that this is just a simple `link_to` or am I missing something - @johnnymo87 @decareano any thoughts on why this is more complex than a 1?
-```
+> @channel vote on https://www.pivotaltracker.com/n/projects/742821/stories/122461371 "make doit mentions in map key be hyperlinks" complete - @decareano 3, @johnnymo87 2, @marouen 1 - I'm just imagining that this is just a simple `link_to` or am I missing something - @johnnymo87 @decareano any thoughts on why this is more complex than a 1?
 
 and then we have a discussion in the Slack channel (or it could be in the ticket):
 
-```
-@tansaku, did you read my comment in my vote? I had the same thought as @marouen but in reverse. Anyway, if it's a link_to my vote is 1.
-```
-```
-@decareano thanks for your vote - we now have two votes of 1 for https://www.pivotaltracker.com/story/show/122461371 "make doit mentions in map key be hyperlinks" and a 2 from @johnnymo87 - @johnnymo87 happy to revise to 1 or is there some aspect of this we've missed?
-```
+> @tansaku, did you read my comment in my vote? I had the same thought as @marouen but in reverse. Anyway, if it's a link_to my vote is 1.
 
-```
-oh, i thought that part of the UI was done in js. But I looked it up, and it’s not. I’ll revise to a 1, @tansaku
-```
+> @decareano thanks for your vote - we now have two votes of 1 for https://www.pivotaltracker.com/story/show/122461371 "make doit mentions in map key be hyperlinks" and a 2 from @johnnymo87 - @johnnymo87 happy to revise to 1 or is there some aspect of this we've missed?
+
+> oh, i thought that part of the UI was done in js. But I looked it up, and it’s not. I’ll revise to a 1, @tansaku
+
 
 Then I set the estimate on the ticket and we start again:
 
-```
-okay @here so that story is unanimous as a 1
+> okay @here so that story is unanimous as a 1
 
-@channel we have a new async vote on https://www.pivotaltracker.com/story/show/131062023 "Refactor Build marker service" - please DM me 1 (simple), 2 (medium) or 3 (hard) - discussion in ticket or here as you prefer :slightly_smiling_face:
-```
+> @channel we have a new async vote on https://www.pivotaltracker.com/story/show/131062023 "Refactor Build marker service" - please DM me 1 (simple), 2 (medium) or 3 (hard) - discussion in ticket or here as you prefer :slightly_smiling_face:
 
 So that was kind of a trivial example, but actually that vote did expose some misconceptions about the ticket in question.  I think these async votes are quite good for those projects where the team members can't make the synchronous hangouts.  There is a fair amount of logistical overhead for me running it (which could be automated into a bot) and also since I'm the "bot" it's a bit unfair for me to vote.  If we had this all automated I could vote too, and things could proceed a little faster.  Although of course we have to consider the time it takes to automate, and whether the automating would throw the baby out with the bathwater.
 
@@ -86,7 +65,7 @@ Unfortunately I think Slack still does not support bot DM-ing.  At least you can
 2. Always include the title of the ticket in any post
 3. It's helpful to include instructions for newcomers like: "please DM me 1 (simple), 2 (medium) or 3 (hard) - discussion in ticket or here as you prefer"
 
-And I've validated that the functionality is getting some use.   So with all that in mind I started looking at test driving a Node/Express app.  I'm pretty sure I could write something faster in Ruby/Sinatra, but there's also this idea that we need to diversify the apps we're using in AgileVentures to appeal to a wider range of developers.  Also after our AgileBot experiences, I'm keen to see if stripping away Hubot and CoffeeScript, whether a plain Node/Express app will be more manageable.
+And I've validated that the functionality is getting some use.   So with all that in mind I started looking at test driving a Node/Express app.  I'm pretty sure I could write something faster in Ruby/Sinatra, but there's also this idea that we need to diversify the apps we're using in AgileVentures to appeal to a wider range of developers.  Also after our AgileBot experiences, I'm keen to see if after stripping away Hubot and CoffeeScript a plain Node/Express app will be more manageable.
 
 Now I've TDD'd Node/Express before, but it's been a year or so, and I want to be up with the best practices, so I was having a look around for tutorials and things.  I found:
 
@@ -126,7 +105,7 @@ but we're over our integration limits for our AV slack, and I started to think t
 
 > so we have an AsyncVote, which consists of a ticket with a title and url, and then there are a number of votes, which have a value, and come from an individual and might have an explanation, and when the number of votes reaches a set value (e.g. 3) then the full results are revealed, and the ticket value is set if there is agreement, or we prompt more discussion ....
 
-So I've come round to thinking should I just TDD something in node that will operate on the command line, and then build some different interfaces on top of it?  I'd love to have time to do both a node/express and a ruby/sinatra version to show the complete parallels and/or lack of them between the two ... let's see when I have another fallow day :-)
+So I've come round to thinking should I just TDD something in node that will operate on the command line, and then build some different interfaces on top of it?  I'd love to have time to do both a node/express and a Ruby/Sinatra version to show the complete parallels and/or lack of them between the two ... let's see when I have another fallow day :-)
 
 Related Code:
 
