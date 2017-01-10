@@ -10,6 +10,8 @@ If I'm on top of my game I can manage it all.  Under the weather or taking on to
 
 What I'd really like is a consistent pattern of hibernation in the UK.  Like the countries closer to the equator to us have a siesta in the heat of midday, I think those closer to the poles should have a hibernation period when the days are shortest.  After Xmas/NewYear, I'd like two weeks where I was allowed to just sleep.  Another 10 years.  Get the kids off to university and I might be able to MVP a mid-winter hibernation.  At least the daily blog writing gives me a calm thirty minutes to pull myself together after the school run.  Not sure that publishing these is helping us achieve our AgileVentures goals?  Maybe the  focus on marketing with the new intern will help us work out the best process.  The daily blogging is an experiment I intend to see through till June.  I've just got to make sure that we don't have too many things booked at the weekend and that I find a good way to calm myself before bed so I can get enough sleep!
 
+The big question on my mind is would I be better off taking a nap in order to catch up on my sleep, as opposed to drinking a coffee and working through my Slacks/Emails? Taking a nap in the day (unless post-lunch) feels like slacking (being lazy or under-committed) if I'm not actually ill ... and I've already made the coffee ...
+
 ###Related Videos:
 
 * ["Bob Martin" Scrum](https://www.youtube.com/watch?v=YPtN3dQd6Z4)
