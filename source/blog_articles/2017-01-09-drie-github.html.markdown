@@ -6,7 +6,7 @@ Friday I took a trip down to the drie offices in Hammersmith.  We'd agreed befor
   - check whether moving drie servers to Ireland is getting the performance increase we hoped for
   - migrate more of LocalSupport to drie
   - prepare for the devops conference talk
-  - improve on the document outlining the needs of the different AgileVentures' projects
+  - improve on the document outlining the needs of the different AgileVentures projects
   - get budget details for drie hosting MetPlus
   - detailed technical plan for the following year
   
@@ -24,9 +24,9 @@ Talking through the above with Ben and Tom at drie and the things they wanted to
   - roadmap
 * geek out about the new proxy model (to help understand drie push startup times)
 
-Working through the agenda it became clear that at the moment there wasn't an easy way to track which AgileVentures' members were using drie, as all that drie records of drie-push users is ssh keys.  However this would change with the introduction of a new GitHub integration which was the first thing Ben and Tom showed me.  Rather than building an entire teams management framework to compete with Heroku and others, Tom came up with the idea of using a [GitHub integration](https://github.com/integrations) to leverage the existing GitHub teams framework.  
+Working through the agenda it became clear that at the moment there wasn't an easy way to track which AgileVentures members were using drie, as all that drie records of drie-push users is ssh keys.  However this would change with the introduction of a new GitHub integration which was the first thing Ben and Tom showed me.  Rather than building an entire team's management framework to compete with Heroku and others, Tom came up with the idea of using a [GitHub integration](https://github.com/integrations) to leverage the existing GitHub teams framework.  
 
-AgileVentures already uses a lot of Github integrations such as TravisCI, Semaphore and CodeClimate.  GitHub themselves are [encouraging more and more developers to create integrations](https://github.com/blog/2226-build-an-integration-for-github), and the drie GitHub integration looks very similar in that it can be configured and installed via a GitHub interface, and little ticks and crosses are added to the GitHub interface when operations succeed and fail.  [Heroku Review Apps](https://github.com/integrations/heroku-review-apps) are also a GitHub integration and work in a similar fashion, albeit requiring a complete separate Heroku app set up for them to riff off.  However we've had to turn off Heroku review apps as being too expensive.
+AgileVentures already uses a lot of Github integrations such as TravisCI, Semaphore and CodeClimate.  GitHub themselves are [encouraging more and more developers to create integrations](https://github.com/blog/2226-build-an-integration-for-github), and the drie GitHub integration looks very similar in that it can be configured and installed via a GitHub interface, and little ticks and crosses are added to the GitHub interface when operations succeed and fail.  [Heroku Review Apps](https://github.com/integrations/heroku-review-apps) are also a GitHub integration and work in a similar fashion, albeit requiring a complete separate Heroku app set up for them to riff off.  However, we've had to turn off Heroku review apps as being too expensive.
 
 drie push GitHub integration goes one step beyond Heroku review apps, by making it possible to set up a repository to just deploy on any push to GitHub.  It's like Heroku Review apps without the overhead of having to deal with Heroku or their new pricing model.  Tom was also showing me other tricks on the backend such as versioned config and reverse proxy tricks that will allow their system to scale effectively.
 
