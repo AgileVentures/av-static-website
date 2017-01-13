@@ -40,6 +40,6 @@ Pair-programming may be a controversial topic but my experience of using the met
 
 ###Related Blogs:
 
-* http://nonprofits.agileventures.org/2016/10/20/to-pair-or-not-to-pair/
-* http://nonprofits.agileventures.org/2016/10/25/solo-coding/
-* http://nonprofits.agileventures.org/2016/11/25/mob-programming/
+* [http://nonprofits.agileventures.org/2016/10/20/to-pair-or-not-to-pair/](http://nonprofits.agileventures.org/2016/10/20/to-pair-or-not-to-pair/)
+* [http://nonprofits.agileventures.org/2016/10/25/solo-coding/](http://nonprofits.agileventures.org/2016/10/25/solo-coding/)
+* [http://nonprofits.agileventures.org/2016/11/25/mob-programming/](http://nonprofits.agileventures.org/2016/11/25/mob-programming/)
