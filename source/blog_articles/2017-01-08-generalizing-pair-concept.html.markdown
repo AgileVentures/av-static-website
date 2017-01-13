@@ -9,10 +9,10 @@ Pair programming - as any relatively new programming methodology, such as BDD, T
  
 Controversies about pair programming arise at Agile Ventures, too. Well, even if many members are very experienced pair programming practitioners, many others - including me - are still looking for their pair programming comfort or efficiency zone. We sometimes discuss this topic with Sam - we might bore him with our wavering and he might think "why the hell do they spend time talking rather than coding? :-)". We finally agree on at least four cases where pair programming is a good fit :
 
-  1) When we start to code a functionality : because getting up in the morning is always a challenge  
-  2) When we're stuck : because it's good to have someone that tells you to look at the top when we keep on looking for an exit at the bottom without finding it   
-  3) When we want to complete a task :  because a pair programming buddy will help you to overcome your obsession of perfectionism or your fear to put things to an end, so that deadlines are met  
-  4) When we need to improve our skills : Programming is often like a shared secret. Everybody has got a piece of the whole puzzle.  
+  1. When we start to code a functionality : because getting up in the morning is always a challenge  
+  2. When we're stuck : because it's good to have someone that tells you to look at the top when we keep on looking for an exit at the bottom without finding it   
+  3. When we want to complete a task :  because a pair programming buddy will help you to overcome your obsession of perfectionism or your fear to put things to an end, so that deadlines are met  
+  4. When we need to improve our skills : Programming is often like a shared secret. Everybody has got a piece of the whole puzzle.  
   
 Starting a task, being stuck, achieving things, improving our skills are not specific to progamming. I gradually notice that there are many other professional circumstances where pairing is a valuable way to get things done :
 
