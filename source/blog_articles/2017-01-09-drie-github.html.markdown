@@ -5,7 +5,7 @@ tags: sponsorship, Heroku, Travis, Semaphore, CodeClimate, performance, review a
 author: Sam Joseph
 ---
 
-Friday I took a trip down to the drie offices in Hammersmith.  We'd agreed before the break that we needed to coordinate our collaboration for the new year.  We'd previously agreed a sliding scale of sponsorship support based on outcomes for drie in terms of the number of users adopting drie.  In preparation for the meeting I prepared the following list:
+Friday I took a trip down to the [drie](https://drie.co/) offices in Hammersmith.  We'd agreed before the break that we needed to coordinate our collaboration for the new year.  We'd previously agreed a sliding scale of sponsorship support based on outcomes for drie in terms of the number of users adopting drie.  In preparation for the meeting I prepared the following list:
 
 * What I need
   - ability to track the number of people using drie
