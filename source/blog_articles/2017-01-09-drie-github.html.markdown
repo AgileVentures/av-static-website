@@ -1,3 +1,10 @@
+---
+title: drie GitHub integration
+date: 2017-01-09
+tags: sponsorship, Heroku, Travis, Semaphore, CodeClimate, performance, review apps, risk, de-risking 
+author: Sam Joseph
+---
+
 Friday I took a trip down to the drie offices in Hammersmith.  We'd agreed before the break that we needed to coordinate our collaboration for the new year.  We'd previously agreed a sliding scale of sponsorship support based on outcomes for drie in terms of the number of users adopting drie.  In preparation for the meeting I prepared the following list:
 
 * What I need
