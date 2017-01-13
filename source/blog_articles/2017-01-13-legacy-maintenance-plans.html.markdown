@@ -48,4 +48,5 @@ We'll just keep applying the Agile process of pushing out ideas, getting feedbac
 * ["Kent Beck" Scrum](https://www.youtube.com/watch?v=dEanyrCUjOQ)
 
 p.s. this blog took 38 minutes to write.
+
 p.p.s. managed to clear several things off my desk today
