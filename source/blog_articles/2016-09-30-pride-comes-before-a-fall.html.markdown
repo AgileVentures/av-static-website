@@ -89,6 +89,7 @@ Given /^the following users exist$/ do |table|
     FactoryGirl.create(:user, attributes)
   end
 end
+```
 
 and it seems that our Cucumber steps are using the same factories as our RSpecs, hmmm.  Let's look at that factory:
 
