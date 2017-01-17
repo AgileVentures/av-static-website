@@ -12,6 +12,8 @@ While I've been writing this the NewRelic data on WebSiteOne has started coming 
 
 ![NewRelic data from WSO production](https://www.dropbox.com/s/s5x799dlbdx4l7z/Screenshot%202017-01-17%2010.28.42.png?dl=1)
 
-Making it look like there was at least one frustrated request in the last half an hour at least.  That makes me think fixing our memory issues on WSO might be higher priority.  Looks like some kind of active record lookup was getting stuck ... Going back to HarrowCN, it seems like I can embed a feed of the throughput:
+Making it look like there was at least one frustrated request in the last half an hour at least.  That makes me think fixing our memory issues on WSO might be higher priority.  Looks like some kind of active record lookup was getting stuck ... Going back to HarrowCN, it seems like I can embed a [feed of the throughput](https://rpm.newrelic.com/public/charts/7odyrRrzsqR) in an iframe:
 
-<iframe src="https://rpm.newrelic.com/public/charts/7odyrRrzsqR" width="500" height="300" scrolling="no" frameborder="no"></iframe>
+![HarrowCN throughput](https://www.dropbox.com/s/zzyev88mr4orwbn/Screenshot%202017-01-17%2010.33.07.png?dl=1)
+
+The baseline requests look like some sort of healthcheck is going on, rather than it being representative of human users ... more investigation required.  I wonder if that's a side effect of NewRelic or some other pinging service we've forgotten about?  Anyhow, I want to get deeper into this for both WSO and HarrowCN (and AutoGraders/MetPlus) to flesh out what I can say about the usage of our systems in my talk on Thursday.  Let's see how far I get ...
