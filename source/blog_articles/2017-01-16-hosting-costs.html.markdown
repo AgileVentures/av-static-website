@@ -1,4 +1,4 @@
-There's lots I'd like to talk about.  Premium pairing on new non-profit IT support plans, helping Kenyan students get started with LocalSupport, deploying LocalSupport via the new drie push Github interfacem, mob programming on the Hash#fetch method, but I'm presenting my talk on "DevOps on a Budget" on Thursday, so things have got to be DevOps pricing focused :-)
+There's lots I'd like to talk about.  Premium pairing on new non-profit IT support plans, [helping Kenyan students get started with LocalSupport](https://www.youtube.com/watch?v=P66oJafqqng), [meeting with the LocalSupport client](https://www.youtube.com/watch?v=zrz6ct9wIUs), deploying LocalSupport via the new drie push Github interfacem, mob programming on the Hash#fetch method, but I'm presenting my talk on "DevOps on a Budget" on Thursday, so things have got to be DevOps pricing focused :-)
 
 I'm torn between focusing the presentation on the costings and the actual process of DevOps I'm doing on AV projects that I blogged about last week.  The talk summary is as follows:
 
@@ -8,7 +8,7 @@ I guess the key thing is to get down some of that narrative about how our longes
 
 ![Harrow Community Network users](https://www.dropbox.com/s/zrhi3tit04i44s0/Screenshot%202017-01-16%2009.42.25.png?dl=1)
 
-The site traffic was an order of magnitude heavier in 2015, and I can't really think of an explanation other than some sort of error relating to anayltics of some service pinging the site that shut down.  Throughout 2016 we've had about 300 visitors a month, which seems about right.  I can't imagine why 2015 would have seen such high traffic.  In contrast WebSiteOne has been much more consistent:
+The site traffic was an order of magnitude heavier in 2015, and I can't really think of an explanation other than some sort of error relating to analytics of some service pinging the site that shut down.  Throughout 2016 we've had about 300 visitors a month, which seems about right.  I can't imagine why 2015 would have seen such high traffic.  In contrast WebSiteOne has been much more consistent:
 
 ![AgileVentures site users](https://www.dropbox.com/s/p5inkiun3j1993r/Screenshot%202017-01-16%2009.45.43.png?dl=1)
 
@@ -32,6 +32,13 @@ We're also looking seriously at moving to drie, who have a low cost hosting serv
 
 Having that kind of mapping automatically available from the start of the project is very appealing, but after the experience with NineFold we are cautious about moving to a new service provider.  However drie also has a tighter GitHub integration than Heroku allowing us to add drie as a GitHub integration and deploy directly by pushing to any repo branch.  Heroku can be set up to do this, but their build on PRs functionality creates more instances that we have to pay for.  drie has a different model that sleeps apps more aggressively and so their free tier goes further than that of Heroku.  We're also excited about being able to use GitHub's team interface system rather than Heroku's; since Heroku is also charging extra for the use of the team interface.
 
+###Related Videos:
+
+* ["Martin Fowler" Scrum](https://www.youtube.com/watch?v=NiXjhjaTTCk)
+* [LocalSupport Client Meeting](https://www.youtube.com/watch?v=zrz6ct9wIUs)
+* ["Kent Beck" Scrum](https://www.youtube.com/watch?v=ToV8wt9sr8w)
+* [Saturday "Bob Martin" Scrum](https://www.youtube.com/watch?v=VOnol6QAaeg)
+* [Sunday "Bob Martin" Scrum](https://www.youtube.com/watch?v=P66oJafqqng)
 
 
 p.s. Full disclosure, AgileVentures has received financial grants from Heroku and NineFold in the past, and drie is an ongoing sponsor of the AgileVentures charity. 
