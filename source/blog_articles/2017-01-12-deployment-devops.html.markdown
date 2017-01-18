@@ -1,5 +1,5 @@
 ---
-title: Delpoyment DevOps
+title: Deployment DevOps
 date: 2017-01-12
 tags: presentation, operations, development, continuous integration, pull request, production, staging
 author: Sam Joseph
