@@ -5,7 +5,7 @@ I did however manage to snatch a chunk of time to do WebSiteOne devops.  The bug
 ```
 $ heroku run rake fetch_github_commits -r production
 $ heroku run rake db:create_plans -r production
-$ heroku run rake fetch_github_commits -r production
+$ heroku run rake db:migrate_plans -r production
 ```
 
 I still had to manually test the hangouts/twitter interaction.  It occurs to me that we might be better off with things that are being merged into develop following a faster cycle into staging and production, rather than allowing them to bunch up.  I guess the difficulty is the complexity of setting up individual developers to be able to manually test all the 3rd party hookups.  Perhaps with automated deploy from drie that will change.
