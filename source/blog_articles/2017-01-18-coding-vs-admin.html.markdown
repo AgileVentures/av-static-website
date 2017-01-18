@@ -3,7 +3,7 @@ Pat was commenting that my recent blogs don't have so many technical deep dives 
 I did however manage to snatch a chunk of time to do WebSiteOne devops.  The bug fix to prevent un-recorded YouTube links being tweeted was stuck on staging since we had stubbed the mock incorrectly.  While we waited for that fix some other PRs had piled up and I'd merged in our refactoring the Premium plans to support easier creation of new plans.  I rebased all the latest code from develop into staging, which finally worked smoothly since I'd previously merged the production fixes from last year back down to develop.  All the new functionality worked as expected on staging with me running the set of rake tasks that went along with the various new bits of code:
 
 ```
-$ heroku run rake db:create_plans -r production
+$ heroku run rake fetch_github_commits -r production
 $ heroku run rake db:create_plans -r production
 $ heroku run rake fetch_github_commits -r production
 ```
