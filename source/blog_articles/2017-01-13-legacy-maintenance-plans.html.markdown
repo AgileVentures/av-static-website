@@ -1,11 +1,18 @@
+---
+title: Legacy Maintenance Plans
+date: 2017-01-13
+tags: development, autograders, LocalSupport, WebsiteOne, OSRA, MetPlus, ProjectScope, activity, graphs
+author: Sam Joseph
+---
+
 When does an app become legacy?  I'd say pretty much as soon as you have anything deployed that anyone is using.  In my experience development on projects can stall and restart, but as long as people are deriving value from the application it needs to be maintained.  We hear things like 60% of the effort in a project is during the maintenance phase.  We have various projects in AgileVentures that could make the claim to be legacy codebases that need to be maintained.  Let me list them in the order of their creation:
 
 * [AutoGraders](https://github.com/saasbook/rag)
-* LocalSupport
-* WebSiteOne
-* OSRA
+* [LocalSupport](https://github.com/AgileVentures/LocalSupport)
+* [WebSiteOne](https://github.com/AgileVentures/WebsiteOne)
+* [OSRA](https://github.com/AgileVentures/OSRA)
 * [MetPlus](https://github.com/AgileVentures/MetPlus_PETS)
-* ProjectScope
+* [ProjectScope](https://github.com/AgileVentures/ProjectScope)
 * AsyncVoter
 * SHF
 
@@ -33,7 +40,7 @@ Note that the range of the above graphs is changing as we go through these proje
 
 AutoGraders, LocalSupport and WebSiteOne have been in near constant use since they were created.  They all have ongoing maintanence burdens, as well as the need for ongoing development.  They all have lots of room for improvement, but are arguably serving at least some people's needs.  MetPlus is the odd one out in that even after eighteen months of development the proposed end users are not yet using the system.  The client has insisted he wants the MVP ready before he can put users on it.  The client has been giving regular feedback on the developing system, but it's a slightly odd set up from an Agile development point of view.
 
-We're into interesting territory with all the projects, particularly given the charges they incur in terms of hosting.  AutoGraders is hosted on AWS and UCBerkeley picks up the bills there.  LocalSupport is hosted on Heroku and Voluntary Action Harrow Cooperative pays those bills.  WebSiteOne is also on Heroku and our AgileVentures charity is picking up the increasing bills there.  OSRA and MetPlus are also on Heroku, but the free tier appears to be sufficient for the moment.  Every year, Armando Fox at UCBerkeley has 100's of students generating systems that charities start to use, but the students are not always available later to maintain the applications.  Armando suggested AgileVentures could charge maintanence plans and so I put together a [draft landing page](http://www.agileventures.org/nonprofit-basic-support), which outlines some different levels of support that a non-profit could get for having AgileVentures maintain their application.
+We're into interesting territory with all the projects, particularly given the charges they incur in terms of hosting.  AutoGraders is hosted on AWS and UCBerkeley picks up the bills there.  LocalSupport is hosted on Heroku and Voluntary Action Harrow Cooperative pays those bills.  WebSiteOne is also on Heroku and our AgileVentures charity is picking up the increasing bills there.  OSRA and MetPlus are also on Heroku, but the free tier appears to be sufficient for the moment.  Every year, Armando Fox at UCBerkeley has 100's of students generating systems that charities start to use, but the students are usually not available later to maintain the applications.  Armando suggested AgileVentures could charge maintanence plans and so I put together a [draft landing page](http://www.agileventures.org/nonprofit-basic-support), which outlines some different levels of support that a non-profit could get for having AgileVentures maintain their application.
 
 The costs in there are based on time of AgileVentures folks restarting apps, responding to issues and so forth.  The interesting discussion we're now having with the MetPlus project team as they look to take their system live (and potentially incurring costs) is bundling the costs of hosting (on Heroku, drie, AWS etc.) as part of AV maintenance plans.  We're imagining that non-profit administrators would rather pay a single bill to AgileVentures for maintainenance and hosting rather than several separate bills for different hosting charges.  The big unknown is what sort of traffic MetPlus will incur.  Yesterday we agreed to offer the client everything free for the first three months, with all the systems on free infrastructure, with the indication that hosting/maintanence would cost on the order of $200 a month going forward, as an all-in, where we would do our best to use the most affordable hosting packages and provide the best level of maintanence support.
 
