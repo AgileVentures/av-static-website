@@ -5,13 +5,13 @@ tags: rspec cucumber stripe factory girl acceptance integration unit test
 author: Sam Joseph
 ---
 
-So I was back in shape for a bit of pair programming again and Michael and I continued what we'd been working on last week, which was allowing [Premium members to upgrade to PremiumPlus](https://github.com/AgileVentures/WebsiteOne/issues/1303).  It took us 15 minutes or so to get up to speed, closing out a few experimental PRs, checking that some airbrake errors weren't anything serious etc.  I had been assuming we'd have to focus on other things, so I was pleased when we could continue with a task related to premium.  I was speculating that the small spike in new sign ups we had might have been related to rolling out the "Upgrade to Premium" button on all the individual user profile pages.
+So I was back in shape for a bit of pair programming again and Michael and I continued what we'd been working on last week, which was allowing [Premium members to upgrade to PremiumPlus](https://github.com/AgileVentures/WebsiteOne/issues/1303).  It took us 15 minutes or so to get up to speed, closing out a few experimental PRs, checking that some airbrake errors weren't anything serious etc.  I had been assuming we'd have to focus on other things, so I was pleased when we could continue with a task related to Premium.  I was speculating that the small spike in new sign ups we had might have been related to rolling out the "Upgrade to Premium" button on all the individual user profile pages.
 
-I was half tempted to start ferreting through our Google Analytics data and checking with the new premium members about this, but put a pin in that and tried to make progress on the outstanding task.  DriveBy heuristic, finish what you started, and find the shortest path to completion.  Hmm, maybe it should be called "WhistleStop", or "non-invasive", anyhow ... it was an interesting operation because what we were hoping was to pull in the new domain objects we'd created the week before (Subscription and PaymentSource).  We had a failing acceptance test that was expecting a premium user's profile page to now show an "upgrade to Premium Plus" button: 
+I was half tempted to start ferreting through our Google Analytics data and checking with the new Premium members about this, but I put a pin in that and tried to make progress on the outstanding task.  DriveBy heuristic, finish what you started, and find the shortest path to completion.  Hmm, maybe it should be called "WhistleStop", or "non-invasive", anyhow ... it was an interesting operation because what we were hoping was to pull in the new domain objects we'd created the week before (Subscription and PaymentSource).  We had a failing acceptance test that was expecting a Premium user's profile page to now show an "upgrade to Premium Plus" button: 
 
 ```gherkin
-  Scenario: User upgrades to premium plus from premium
-    Given I am logged in as a premium user with name "John", email "john@john.com", with password "asdf1234"
+  Scenario: User upgrades to Premium plus from Premium
+    Given I am logged in as a Premium user with name "John", email "john@john.com", with password "asdf1234"
     And I am on my profile page
     And I click "Upgrade to Premium Plus"  # failing step
     Then I should see "Premium PLUS Member"
@@ -31,7 +31,7 @@ I was still not completely happy with the level of abstraction in this scenario,
 <% end
 ```
 
-Not that we wanted logic in our views.  In the previous session we had already extracted the premium upgrade button into a partial `_premium_upgrade.html.erb`:
+Not that we wanted logic in our views.  In the previous session we had already extracted the Premium upgrade button into a partial `_premium_upgrade.html.erb`:
 
 ```html
 <%= form_tag charges_path(plan: 'premium') do %>
@@ -82,7 +82,7 @@ So suddenly we were back-peddling.  I could feel the "I want to keep coding" urg
 <% end %>
 ```
 
-We'd decided to create a new action on the charges controller.  What was really interesting here, reflecting on our piecemeal work on the charges controller, is that we realised we'd got our RESTfulness totally out of whack.  We'd originally put our subscription sign-up in a "charges" controller from one Stripe example that was all about making single one off charges.  What we had would be more accurately called a "Subscription" controller.  Let's look at all the code that's accumulated there:
+We'd decided to create a new action on the charges controller.  What was really interesting here, reflecting on our piecemeal work on the charges controller, is that we realised we'd got our RESTfulness totally out of whack.  We'd originally put our subscription sign-up in a "Charges" controller from one Stripe example that was all about making single one off charges.  What we had would be more accurately called a "Subscription" controller.  Let's look at all the code that's accumulated there:
 
 ```rb
 class ChargesController < ApplicationController
@@ -144,8 +144,7 @@ and a new action:
   end
 ```
 
-It took us a while to get to that logic in the upgrade action. It was failing silently and we had to drop into the debugger where the error message from the Stripe API told us to do something different from their docs; weird.  And total Demeter violation territory. `customer.subscriptions.retrieve(customer.subscriptions.first.id)` in particular was looking very brittle.  Surely there would be something like customer.subscriptions.first that we could use instead?  We'd circle back - this was working and I had an eye on whether we couldn't get this feature green without using any of our new domain objects.  Was that crazy?  I was thinking that it would give us a safe green space to reflect, and improve our understanding of the Stripe API.  With the upgrade code in place the only thing we needed was for the user object to be able to correctly report its membership type.  It currently did this:
-
+It took us a while to get to that logic in the upgrade action. It was failing silently and we had to drop into the debugger where the error message from the Stripe API told us to do something different from their docs; weird.  And total Demeter violation territory. In particular `customer.subscriptions.retrieve(customer.subscriptions.first.id)` was looking very brittle.  Surely there would be something like customer.subscriptions.first that we could use instead?  We'd circle back - this was working and I had an eye on whether we couldn't get this feature green without using any of our new domain objects.  Was that crazy?  I was thinking that it would give us a safe green space to reflect, and improve our understanding of the Stripe API.  With the upgrade code in place the only thing we needed was for the user object to be able to correctly report its membership type.  It currently did this:
 
 ```rb
   def membership_type
@@ -206,7 +205,7 @@ I had to play with a lot of factories, and the above spec was passing with the f
   end
 ```
 
-but we were running out of time, and we had to finish pairing without getting the acceptance tests green, because the cuke steps were going to need a whole load of refactoring to be creating premium users in terms of setting up these new domain objects like subscription and payment source.  I had several places of discomfort that I hope we can address in future sessions:
+but we were running out of time, and we had to finish pairing without getting the acceptance tests green, because the cuke steps were going to need a whole load of refactoring to be creating Premium users in terms of setting up these new domain objects like Subscription and PaymentSource.  I had several places of discomfort that I hope we can address in future sessions:
 
 1. Cukes using the same factories as specs
 2. Model specs full of a mixture of unit and integration tests
@@ -216,9 +215,7 @@ but we were running out of time, and we had to finish pairing without getting th
 
 But which are the ones that we can address "non-invasively" to stay focused on getting this single feature green?  So much going on here.  Just how many refactoring tickets will we generate? All to be revealed in the next pair programming session!
 
-
-
-Related Videos:
+###Related Videos:
 
 * [Pair Programming](https://www.youtube.com/watch?v=bKu3e_jLrQw)
 * ["Kent Beck" scrum](https://www.youtube.com/watch?v=8EkSfYVt9D0)
