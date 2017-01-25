@@ -1,4 +1,11 @@
-There's lots I'd like to talk about.  Premium pairing on new non-profit IT support plans, [helping Kenyan students get started with LocalSupport](https://www.youtube.com/watch?v=P66oJafqqng), [meeting with the LocalSupport client](https://www.youtube.com/watch?v=zrz6ct9wIUs), deploying LocalSupport via the new drie push Github interfacem, mob programming on the Hash#fetch method, but I'm presenting my talk on "DevOps on a Budget" on Thursday, so things have got to be DevOps pricing focused :-)
+---
+title: Hosting Costs
+date: 2017-01-16
+tags: GitHub, DevOps, monitoring, Heroku, NineFold, migration
+author: Sam Joseph
+---
+
+There's lots I'd like to talk about.  Premium pairing on new non-profit IT support plans, [helping Kenyan students get started with LocalSupport](https://www.youtube.com/watch?v=P66oJafqqng), [meeting with the LocalSupport client](https://www.youtube.com/watch?v=zrz6ct9wIUs), deploying LocalSupport via the new drie push Github interface, mob programming on the Hash#fetch method, but I'm presenting my talk on "DevOps on a Budget" on Thursday, so things have got to be DevOps pricing focused :-)
 
 I'm torn between focusing the presentation on the costings and the actual process of DevOps I'm doing on AV projects that I blogged about last week.  The talk summary is as follows:
 
@@ -30,7 +37,7 @@ We're also looking seriously at moving to drie, who have a low cost hosting serv
 * staging branch --> http://staging.harrowcn.org.uk
 * develop branch --> http://develop.harrowcn.org.uk
 
-Having that kind of mapping automatically available from the start of the project is very appealing, but after the experience with NineFold we are cautious about moving to a new service provider.  However drie also has a tighter GitHub integration than Heroku allowing us to add drie as a GitHub integration and deploy directly by pushing to any repo branch.  Heroku can be set up to do this, but their build on PRs functionality creates more instances that we have to pay for.  drie has a different model that sleeps apps more aggressively and so their free tier goes further than that of Heroku.  We're also excited about being able to use GitHub's team interface system rather than Heroku's; since Heroku is also charging extra for the use of the team interface.
+Having that kind of mapping automatically available from the start of the project is very appealing, but after the experience with NineFold we are cautious about moving to a new service provider.  However drie also has a tighter GitHub integration than Heroku allowing us to add drie as a GitHub integration and deploy directly by pushing to any repo branch.  Heroku can be set up to do this, but their "build on PRs" functionality creates more instances that we have to pay for.  drie has a different model that sleeps apps more aggressively and so their free tier goes further than that of Heroku.  We're also excited about being able to use GitHub's team interface system rather than Heroku's; since Heroku is also charging extra for the use of the team interface.
 
 ###Related Videos:
 
@@ -39,6 +46,5 @@ Having that kind of mapping automatically available from the start of the projec
 * ["Kent Beck" Scrum](https://www.youtube.com/watch?v=ToV8wt9sr8w)
 * [Saturday "Bob Martin" Scrum](https://www.youtube.com/watch?v=VOnol6QAaeg)
 * [Sunday "Bob Martin" Scrum](https://www.youtube.com/watch?v=P66oJafqqng)
-
 
 p.s. Full disclosure, AgileVentures has received financial grants from Heroku and NineFold in the past, and drie is an ongoing sponsor of the AgileVentures charity. 
