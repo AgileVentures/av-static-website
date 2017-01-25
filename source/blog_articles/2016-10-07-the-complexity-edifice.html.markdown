@@ -5,7 +5,7 @@ tags: rspec cucumber stripe factory girl acceptance integration unit test bisect
 author: Sam Joseph
 ---
 
-I had imagined that getting to safe green shores with our "PremiumPlus upgrade button" might be a little involved.  I was holding out hope that along the way we might still be able to address some of the code smells we were encountering and/or generating.  Here were some of my concerns at the end of the last session:
+I had imagined that getting to safe green shores with our "PremiumPlus upgrade button" feature might be a little involved.  I was holding out hope that along the way we might still be able to address some of the code smells we were encountering and/or generating.  Here were some of my concerns at the end of the last session:
 
 1. Cukes using the same factories as specs
 2. Model specs full of a mixture of unit and integration tests
