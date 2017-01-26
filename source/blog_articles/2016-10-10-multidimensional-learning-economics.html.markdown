@@ -1,5 +1,5 @@
 ---
-title: MultiDimensional Learning Economics
+title: MultiDimensional Economics of Learning
 date: 2016-10-10
 tags: Mentive edX learning profit education class size 121 chat group public studying revising
 author: Sam Joseph
