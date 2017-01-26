@@ -1,6 +1,6 @@
 ---
 title: Server Monitoring
-date: 2017-01-16
+date: 2017-01-17
 tags: GitHub, DevOps, monitoring, Heroku, NineFold, migration
 author: Sam Joseph
 ---
