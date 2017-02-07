@@ -1,0 +1,40 @@
+I was pleased to be back blogging about code yesterday, but Monday didn't see any further focus on code.  I replied to all the incoming Slack queries, but not all the emails, and fitted in a fair few meetings.  It had been a few weeks since we had a LocalSupport client meeting and we managed to sneak one in between the "Martin Fowler" scrum and the marketing meeting.  We were able to get five or six stories, chores and bug fixes accepted, and confirm the pivot from organization lising to volunteering; a thread that was picked up again in the Agile Book Club podcast later that day.
+
+There's a slew of new action items there for me to follow up on, and reminds me I'd love an automated bot to help me do project board review.  We've lost any structure to LocalSupport and WebSiteOne sprints since we've dropped explicit kick-off and retrospective meetings.  Maybe that means we're just failing at Agile, but I feel rock-bottom in terms of motivation for those kinds of meetings given the low level of enthusiasm for them in the past.  Both projects are seeing a resurgence of activity recently so maybe we should bring them back in at some point, but I'm also enamoured with the idea of doing everything in a distributed asynchronous fashion using voting bots and project management bots.  
+
+Overnight we managed a vote in WebSiteOne, and I started getting set up with Arreche's reworked slack integration bot that will hopefully provide a simpler interface and support multiple votes in parallel.   One step at a time, but I can't help speculating about a project bot that would automate, or semi-automate working through the project boards.  I think the boards need to be reviewed once a week and every "in progress" or "current" ticket needs to be checked on.  The heuristic I use is to check if there's been any activity in the last couple of days from the person taking the lead on the ticket.  If they've pushed commits to a PR, added comments to the tickets then it can be left, but if there's been no activity of a while they need to be pinged to check on the status, see if the item can be re-assigned.
+
+Full automation would be hard, but a semi-automated approach that presented each ticket in turn with its "state of decay" would be something to help reduce effort on the part of the project manager.  Even just a repeating alert to make sure the review was performed weekly would be helpful.  Maybe I should have had a quiet half hour to do that after the the client meeting, but I was straight into the marketing meeting as we reviewed our Google AdWords campaign performance, draft newsletter and content marketing strategy. 
+
+I had to leave marketing early to pair with Corey on a sticky point on WebSiteOne, where we'd been going back in forth in a pull request to little apparent progress.  Once again the magic of the realtime hangout got us sorted.  I properly understood the problem that Corey was facing, which was writing an acceptance test for the the pop-up countdown timer.  Corey had been abel to make it work by switching the Capybara driver from poltergeist to webkit, but that had the unfortunate side-effect of breaking a lot of other tests.  I was pretty sure we didn't need to switch the driver to get this to work, or at least pretty much anything else would be less effort than fixing all the other mercury editor related tests.
+
+We used the debugger to see that the event countdown was present in the code being returned by the poltergeist driver:
+
+```html
+<div class="hidden-sm hidden-xs hidden-md" id="next-event" data-event-time="2014-02-03T07:00:00+00:00" data-event-url="/events/scrum" data-event-name="Scrum"><a href="/events/scrum">Scrum</a> is live!</div>
+```
+Getting the clean output was the usual pain that made me think there must be a better way to get formatted HTML output on the irb/byebug prompt.  So much so that I just took a blog break to file an [issue on byebug](https://github.com/deivid-rodriguez/byebug/issues/327) and research the matter.  Corey wondered if the screen width might be an issue and a quick google got us to the solution which was a step to increase the width of the virtual browser so that the popup would be shown:
+
+```rb
+And(/^the window size is wide$/) do
+  Capybara.page.current_window.resize_to(1300,400)
+end
+```
+
+So I guess I lied, there was a tiny chunk of coding focus in the middle of the day. Then it was lunch and "Kent Beck" scrum and drie meeting catch up (they've decided to build the dashboard themselves), and Agile Book Club podcast episode 2, which was great fun.  I bought the three pack of e-books:
+
+* Fifty Quick Ideas to Improve your User Stories
+* Fifty Quick Ideas to Improve your Tests
+* Fifty Quick Ideas to Improve your Retrospectives
+
+Great day really.  Now I just have to make sure that I follow up with the LocalSupport project elements, and get out some code to start tracking the sign ups that are coming in through the Google AdWords campaign.  I'm trying to stay focused on the moment and not worry too much about how every little step adds up to any particular long term goal. Let's see what today brings :-)
+
+###Related Videos:
+
+* ["Martin Fowler" scrum](https://www.youtube.com/watch?v=uzpJp9YlBwU)
+* [LocalSupport Client Meeting](https://www.youtube.com/watch?v=GlZn27yOhGU)
+* [Pairing with Corey](https://www.youtube.com/watch?v=k_x6DByoiNk)
+* [Marketing Meeting](https://www.youtube.com/watch?v=Y43CuqQuWLo)
+* ["Kent Beck" scrum](https://www.youtube.com/watch?v=x5ksyXWhedk)
+
+
