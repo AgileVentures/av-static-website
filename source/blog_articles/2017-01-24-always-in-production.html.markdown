@@ -1,4 +1,11 @@
-My cold is receding.  Does that justify me pushing myself through activities and work over the last three days?  Maybe I'd be better quicker or not feeling quite so exhausted if I'd rested the last three days, but my boys got their football matches, I had a great Premium pairing session with Michael where we scoped out a new data-analysis project in Python, and I managed to get the Google adwords grant accepted, and we're live with our first campaign, which has apparently put our advert into 5400 search results and led to 221 click throughs:
+---
+title: Always in Production
+date: 2017-01-24
+tags: illness, cold, flu, Premium, Python, Adwords, Analytics, meeting, DevOps, traffic, bug hunt, bug fix, hotfix, git, production, staging, development
+author: Sam Joseph
+---
+
+My cold is receding.  Does that justify me pushing myself through activities and work over the last three days?  Maybe I'd be better quicker or not feeling quite so exhausted if I'd rested the last three days, but my boys got their football matches, I had a great Premium pairing session with Michael where we scoped out a new data-analysis project in Python, and I managed to get the Google AdWords grant accepted, and we're live with our first campaign, which has apparently put our advert into 5400 search results and led to 221 click throughs:
 
 ![this mornings adwords stats](https://www.dropbox.com/s/3lbx4vbpqz3kn8x/Screenshot%202017-01-24%2009.51.59.png?dl=1)
 
@@ -63,7 +70,7 @@ I took the slightly risky step of generating a hotfix to push straight into prod
 
 Hacky as hell, but I wanted the site to be displaying sensible defaults overnight.  I got the hotfix on staging, but didn't try to replicate.  The site was still approximately working.  I wanted to know if this hotfix would work to solve our issue on production so I could go and have supper with the family.  The tests were green, so I pushed it out and it fixed everything without apparently introducing any catastrophic side effects.  I pulled the hotfix back into develop so others could work against it and discussed in the ticket how we wanted proper tests wrapping this and perhaps ultimately a whole different approach to the solution.
 
-The site seems to be operating normally today and the developer has submitted a PR with a more comprehensive fix.  Why is it that there still seems to be things that we only encounter in production?  I think the acceptance tests do have some of our back, but we need to thoroughly follow up to wrap every end-user bug in an acceptance test, and keep reviewing the existing tests to purge vacuous ones and keep them up to date with the rest of the codebase, and remove unecessary dependencies.  Even then I have a feeling that there's still always some issues that we'll only ever encounter in production ... :-)
+The site seems to be operating normally today and the developer has submitted a PR with a more comprehensive fix.  Why is it that there still seems to be things that we only encounter in production?  I think the acceptance tests do have some of our back, but we need to thoroughly follow up to wrap every end-user bug in an acceptance test, and keep reviewing the existing tests to purge vacuous ones and keep them up to date with the rest of the codebase, AND remove unecessary dependencies.  Even then I have a feeling that there's still always some issues that we'll only ever encounter in production ... :-)
 
 ###Related Videos:
 
