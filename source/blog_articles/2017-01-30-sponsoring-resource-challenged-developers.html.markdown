@@ -1,5 +1,5 @@
 ---
-title: Sponsoring Resource Challenged Developer
+title: Sponsoring Resource Challenged Developers
 date: 2017-01-30
 tags: sponsorship, LocalSupport, Premium, donation, malaria, onboarding, vagrant, docker, virtual machine, installation
 author: Sam Joseph
