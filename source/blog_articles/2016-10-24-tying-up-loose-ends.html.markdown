@@ -1,12 +1,11 @@
 ---
 title: Tying Up Loose Ends
 date: 2016-10-24
-tags: devops heroku pull-requests automation database permissions accounts admin pipeline
+tags: devops, heroku, pull-requests, automation, database, permissions, accounts, admin, pipeline
 author: Sam Joseph
 ---
 
-
-So after [Yak shaving](http://nonprofits.agileventures.org/2016/10/21/yak-shaving/) with Heroku automated PR deploys, we finally got it working.  Raoul joined us in the "Martin Fowler" scrum and through a process of both disabling the PR deploys, AND deleting the GitHub webhooks that Heroku had installed, the permissions issue was resolved.  The deploys themselves were now marked on GitHub as coming from me, and suddenly all the other strange database issues evaporated.  I did also get a reply from Heroku:
+So after [Yak shaving](http://nonprofits.agileventures.org/2016/10/21/yak-shaving/) around Heroku automated PR deploys, we finally got them working.  Raoul joined us in the "Martin Fowler" scrum and through a process of both disabling the PR deploys, AND deleting the GitHub webhooks that Heroku had installed, the permissions issue was resolved.  The deploys themselves were now marked on GitHub as coming from me, and suddenly all the other strange database issues evaporated.  I did also get a reply from Heroku:
 
 
 > The use of ruby-2.3.0 appears to be because you're bundling it into the vendor/ directory:
@@ -72,16 +71,15 @@ Destroying ⬢ agile-dawn-9072 (including all add-ons)... done
 Destroying ⬢ agile-thicket-6113 (including all add-ons)... done
 Destroying ⬢ ancient-bastion-6361 (including all add-ons)... done
 Destroying ⬢ ancient-dusk-4608 (including all add-ons)... done
-
 ```
 
 I could have burnt time doing a regex for the format of `<word>-<word>-<four-digits>` to find and delete all my apps without custom names, but that would have burnt time for something I'm unlikely to need to do again, and it took a minute to get the file `delete_heroku_list` to have the names of all the crufty old apps I haven't used in years.
 
-So my hereby dashboard is looking a lot cleaner.  I've got my two main project pipelines in my "favourites", and my Heroku navigation is a lot more manageable:
+So my Heroku dashboard is looking a lot cleaner.  I've got my two main project pipelines in my "favourites", and my Heroku navigation is a lot more manageable:
 
 ![](https://www.dropbox.com/s/iaf134csxh7ij1g/Screenshot%202016-10-24%2010.09.56.png?dl=1)
 
-Although that doesn't immediately seem to have enabled automated PR deploys on LocalSupport - which still reports the 100 app limit exceeded.  I guess that will take time to flush through the system, or indeed I might need to try this new `purge_cache` technique that's mentioned above, but those are Yak's to be shaved.  I only just started on the data migration script for the premium plus upgrade feature, which needs to be finished, and there's a hell of a lot of other critical admin tasks to get to today.  At least this ties up some of the loose ends from last week, when I was worried the Yak shaving would continue indefinitely.  At least I've got to a reasonably satisfying task switching point ...
+Although that doesn't immediately seem to have enabled automated PR deploys on LocalSupport - which still reports the 100 app limit exceeded.  I guess that will take time to flush through the system, or indeed I might need to try this new `purge_cache` technique that's mentioned above, but those are Yak's to be shaved on another day.  I only just started on the data migration script for the Premium plus upgrade feature, which needs to be finished, and there's a hell of a lot of other critical admin tasks to get to.  At the minium this ties up some of the loose ends from last week, when I was worried the Yak shaving would continue indefinitely.  And at the very least I've got to a reasonably satisfying task switching point ...
 
 ### Related Videos
 
