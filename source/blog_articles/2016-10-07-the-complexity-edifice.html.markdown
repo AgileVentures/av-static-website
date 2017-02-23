@@ -5,17 +5,17 @@ tags: rspec cucumber stripe factory girl acceptance integration unit test bisect
 author: Sam Joseph
 ---
 
-I assumed getting to safe green shores with this PremiumPlus upgrade button might be a little involved.  I still held out hope that we might be able to address some of the code smells we were encountering and/or generating.  Here were some of my concerns at the end of the last session:
+I had imagined that getting to safe green shores with our "PremiumPlus upgrade button" feature might be a little involved.  I was holding out hope that along the way we might still be able to address some of the code smells we were encountering and/or generating.  Here were some of my concerns at the end of the last session:
 
 1. Cukes using the same factories as specs
 2. Model specs full of a mixture of unit and integration tests
-3. FactoryGirl object creation having side-effects on how single table inheritance classes were reporting their class
+3. FactoryGirl object creation having side-effects on how Single Table Inheritance (STI) classes were reporting their class
 4. VCR/Billy file mess from recording all the Stripe interactions
 5. Lack of confidence in code using `current_user`
 
 Some [solo googling](http://stackoverflow.com/a/20101117/316729) had showed me that there should be some simple fixes for mixing FactoryGirl and STI; although I was still nervous about the fairylight connections between all these different factories that required special tweaking to behave like objects in production.  I knew we had a potential fix for the insecure [current_user](https://github.com/plataformatec/devise/issues/4317#issuecomment-251667866), and a possible alternate for [mocking Stripe](https://github.com/rebelidealist/stripe-ruby-mock), but all of these were arguably distractions while we were still trying to get the tests green.
 
-We'd managed to avoid aggravating the Cuke usage of factories by adjusting the step that created a premium member like so:
+We'd managed to avoid aggravating the Cuke usage of factories by adjusting the step that created a Premium member like so:
 
 ```rb
 Given /^I am logged in as( a premium)? user with (?:name "([^"]*)", )?email "([^"]*)", with password "([^"]*)"$/ do |premium, name, email, password|
@@ -33,11 +33,11 @@ Given /^I am logged in as( a premium)? user with (?:name "([^"]*)", )?email "([^
 end
 ```
 
-Now I still wasn't completely happy with this, but I was feeling a little suspicious of factories and so just creating the Subscription and PaymentSource objects directly felt a little safer.  Of course, the entire acceptance test was slightly compromised by reaching in to the database anyway.  A cleaner test might have gone through the entire sign up process for Premium, before trying a PremiumPlus upgrade.  The trade off here is running time, and the question is can we get the database into a state that corresponds to what would have been the case if a full Premium signup had happened.
+Now I still wasn't completely happy with this, but I was feeling a little suspicious of factories and so it felt safer to directly create the Subscription and PaymentSource objects.  Of course, the entire acceptance test was slightly compromised by reaching into the database anyway.  A cleaner test might have gone through the entire sign up process for Premium, before trying a PremiumPlus upgrade.  The trade off here is running time, and the question is can we get the database into a state that corresponds to what would have been the case if a full Premium signup had happened via the web interface?
 
 Factories in cukes had bitten us hard last week.  In the LocalSupport project we avoided every scenario having to repeat sign in by reaching in to the Capybara session cookies.  Here in WebsiteOne we were stepping directly through the sign in operation, but creating the users with factories.  In LocalSupport we create the users with simple object creation.  I'd been burnt in the early days by Rails fixtures, to which factories were supposedly the solution, although apparently even [fixtures are being rehabilitated](http://chriskottom.com/blog/2014/11/fixing-fixtures/).  The right tool is all dependent on context of course :-)
 
-I think the issue here is partly the general one of descriptions of encapsulated things.  We see it in the naming of methods, the naming of steps; it's all about the extent to which the details of what happen under the hood are inferable from the description.  So for example in the above code the step is something like `Given I am logged in as a premium user with ...`, and this is reasonable, we would expect to have a logged in user who is signed up for Premium.  Then inside the step we have things like `Premium.create(user: @user, started_at: Time.now)` which creates a Premium subscription for a user starting now.  Maybe it would be better as `Subscription::Premium` but still, my fear is that `FactoryGirl.create(:user, first_name: name, email: email, password: password, password_confirmation: password)` is hiding a lot of complexity from me.  It happens to also create a G+ authentication and a Karma object.
+I think the issue here is partly the general one of descriptions of encapsulated things.  We see it in the naming of methods, the naming of steps; it's all about the extent to which the details of what happen under the hood can be inferred from the description.  So for example in the above code the step is something like `Given I am logged in as a premium user with ...`, and this is reasonable, we would expect to have a logged in user who is signed up for Premium.  Then inside the step we have things like `Premium.create(user: @user, started_at: Time.now)` which creates a Premium subscription for a user starting now.  Maybe it would be better as `Subscription::Premium` but still, my fear is that `FactoryGirl.create(:user, first_name: name, email: email, password: password, password_confirmation: password)` is hiding a lot of complexity from me.  It happens to also create a G+ authentication and a Karma object, that we might not be expecting.
 
 I guess the solution there is better names for our factories, rather than throwing out factories themselves.  The creation of the Karma object should just be removed from the factory, but we could call this factory :user_authenticated_with_gplus to make things a little more transparent.  I'm still uncomfortable about features and specs sharing factories, but I'm also not entirely clear if we can separate them.  We're using the `factory_girl_rails` gem and so FactoryGirl appears to be available as a singleton throughout our specs and cucumber steps, hmmm.
 
@@ -51,7 +51,7 @@ So anyway, that's all preamble to the late starting pairing of the day.  The act
       features/premium/upgrade_membership.feature:41:in `Given I am logged in as a premium user with name "John", email "john@john.com", with password "asdf1234"'
 ```
 
-Turns out for Rails(?) to load the STI subscription classes they have to be in their own files.  I created a `premium.rb` file containing just:
+Turns out that in order for Rails(?) to load the STI subscription classes they have to be in their own files.  I created a `premium.rb` file containing just:
 
 ```rb
 class Premium < Subscription
@@ -100,7 +100,7 @@ This code was still awful, but we had green.  What made the day complicated was 
   end
 ```
 
-but we were also getting an acceptance fail on upgrade from Basic to Premium, and it was the stripe iframe popup that was not showing up.  It was working in the normal sign up section, and we tried to drop back to see when it had been working.  Michael was driving at this point, and trying a git bisect.  It was starting to look like it had never worked, but upgrade from Basic to Premium had been deployed to production.  It had gone through CI.  It was working when we ran the full rails server locally.  Here's that popup for reference:
+but we were also getting an acceptance fail on upgrade from Basic to Premium, and it was the Stripe iframe popup that was not showing up.  It was working in the normal sign up section, and we tried to drop back to see when it had been working.  Michael was driving at this point, and trying a git bisect.  It was starting to look like it had never worked, but upgrade from Basic to Premium had been deployed to production.  It had gone through CI.  It was working when we ran the full rails server locally.  Here's that popup for reference:
 
 ![stripe pop up](https://www.dropbox.com/s/h5zv1ge3rhrbgly/Screenshot%202016-10-07%2009.45.13.png?dl=1)
 
@@ -124,7 +124,7 @@ I was looking at the traces in the sandbox.  I had rolled back to our stable dev
 :method: get
 ``` 
 
-Michael pointed to the [stripe logs](https://dashboard.stripe.com/test/logs) which showed that we weren't even hitting the test server.  We didn't fix it before the scrum, but afterwards I did some solo work that appeared to get to the bottom of it.  I could see from the VCR sandbox that we were generating a different distinct_id for Stripe than we had previously.  I was not sure what had changed, but we were getting VCR cache misses with URLs like `https://checkout.stripe.com/v3/MmIlwJCFOGIGxL58rFJw.html?distinct_id=956c69c0-fb75-bf58-cce8-6871b7d0cb73`.
+Michael pointed to the [Stripe logs](https://dashboard.stripe.com/test/logs) which showed that we weren't even hitting the test server.  We didn't fix it before the scrum, but afterwards I did some solo work that appeared to get to the bottom of it.  I could see from the VCR sandbox that we were generating a different distinct_id for Stripe than we had previously.  I was not sure what had changed, but we were getting VCR cache misses with URLs like `https://checkout.stripe.com/v3/MmIlwJCFOGIGxL58rFJw.html?distinct_id=956c69c0-fb75-bf58-cce8-6871b7d0cb73`.
 
 I'm still not completely confident about the fix, but adjusting the VCR config to ignore the `distinct_id` parameter made everything suddenly start working:
 
@@ -150,9 +150,9 @@ It was satisfying to go green, but there are some things here that I don't think
 2) We've got to look carefully at Demeter violations in the way we use the Stripe API and our own domain objects
 3) Patching develop with the VCR config fix
 
-In the scrum I was talking about Donald Norman's Design of Everyday Things, in which he laments how people blame themselves for not understanding poorly designed things.  Git, Stripe, Rails, Acceptance testing.  There's some real complexity there.  I'm not saying they are poorly designed, but the edifice of concepts that someone needs to understand to work with our acceptance tests ... maybe the problem is not the tools, but the way we are building on top of them?
+In the scrum I was talking about Donald Norman's Design of Everyday Things, in which he laments how people blame themselves for not understanding poorly designed things.  Git, Stripe, Rails, Acceptance testing, VCR/PuffingBilly caching.  There's some real complexity when you start mixing those things.  I'm not saying they are poorly designed, but the edifice of concepts that someone needs to understand to work with our acceptance tests ... maybe the problem is not the tools, but the way we are building on top of them?
 
-Stripe says that they're okay with our tests hitting their test API at reasonable levels.  Other developers I respect have said that acceptance testing Stripe is too hard, and so just leave that out; testing everything around it.  Do I have a bad habit of pushing some things to the limit when others would sensibly give up and so get myself into trouble?  There's so much here.  Is it even vaguely comprehensible in blog form?  I think it will be at least another week before I'm comfortable releasing this feature, but in the meantime I'll keep blogging!
+Stripe says that they're okay with our tests hitting their test API at reasonable levels.  Other developers I respect have said that acceptance testing Stripe is too hard, and so one should just leave that out; testing everything around it.  Do I have a bad habit of pushing some things to the limit when others would sensibly give up and so get myself into trouble?  There's so much here.  Is it even vaguely comprehensible in blog form?  I think it will be at least another week before I'm comfortable releasing this feature, but in the meantime I'll keep blogging!
 
 
 Related Videos

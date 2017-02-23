@@ -1,15 +1,15 @@
 ---
 title: Pride Comes Before a Fall
 date: 2016-09-30
-tags: production staging develop local nil demeter violation acceptance unit tests factories cucumer steps airbrake heroku migrations rollback
+tags: production, staging, develop, local, nil, demeter violation, acceptance, unit tests, factories, cucubmer steps, airbrake, heroku, migrations, rollback
 author: Sam Joseph
 ---
 
 They say pride comes before a fall.  Looking back at yesterday's blog I was feeling pretty pleased about how we'd split things up as regards the development of the new Karma feature.  That was getting deployed in the background yesterday whilst Michael and I paired on completing the improve hangout telemetry ticket we had started.  That turned out to be relatively straightforward, although I worry about how much data we might end up storing.  That's an interesting set up that I've blogged about before and will come back to again, but is a side show to yesterday's main event, which is that in the middle of that work, we experienced a serious problem on production.
 
-The first we heard was that AV CoFounder Thomas was getting a 500 error on his profile page on the main AgileVentures site.  He was surprised to say the least.  We were confused too; all the acceptance tests were passing.  Raoul had just deployed a chunk of changes to production (including upgrade to Ruby 2.3.1) and I'd kicked off a run of the new karma update rake task.  Michael was seeing failures from the rake task, and noticing that everyone now had zero karma on the main users page.  As Michael was asserting that we had a problem with the rake task, and that the database was screwed up, I took several breaths to keep calm.  Michael's assertions were true, but we had a bigger problem - the 500 errors on the individual user pages.  
+The first we heard was that AV CoFounder Thomas was getting a 500 error on his profile page on the main AgileVentures site.  He was surprised to say the least.  We were confused too; all the acceptance tests were passing.  Raoul had just deployed a chunk of changes to production (including upgrade to Ruby 2.3.1) and I'd kicked off a run of the new Karma update rake task.  Michael was seeing failures from the rake task, and noticing that everyone now had zero Karma on the main users page.  As Michael was asserting that we had a problem with the rake task, and that the database was screwed up, I took several breaths to keep calm.  Michael's assertions were true, but we had a bigger problem - the 500 errors on the individual user pages.  
 
-I knew that the real data for the users' karma was not lost, since we calculate that from other aspects of the site.  The Karma values are re-summarised each day - they could easily be re-calculated and the ordering on the main users page fixed.  That was a relatively minor issue compared to whatever was causing all the individual user profile pages to fail.   Airbrake was telling us about the problem with the failing rake task, but telling us nothing about the 500 error on the user profile pages.  Airbrake posted to our #websiteone-notify channel and created a GitHub issue:
+I knew that the real data for the users' Karma was not lost, since we calculate that from other aspects of the site.  The Karma values are re-summarised each day - they could easily be re-calculated and the ordering on the main users page fixed.  That was a relatively minor issue compared to whatever was causing all the individual user profile pages to fail.   Airbrake was telling us about the problem with the failing rake task, but telling us nothing about the 500 error on the user profile pages.  Airbrake posted to our #websiteone-notify channel and created a GitHub issue:
 
 [https://github.com/AgileVentures/WebsiteOne/issues/1313](https://github.com/AgileVentures/WebsiteOne/issues/1313)
 
@@ -26,7 +26,7 @@ We were getting `undefined method `total=' for nil:NilClass` in a run of the Kar
   end
 ```
 
-Our Demeter Violation and a nil object, two things I had been blogging about that morning, had bitten us.  I rolled the production code back to the previous deploy.  My priority was getting the user profile pages working again.  Working out how to fix the Karma calculation could wait.  I was excited to be capturing all of this on the hangout video.   We could have got distracted trying to fix the karma calculation here, and all the while anyone coming to the site trying to look at an individual profile page would get a 500 error.  We had to rectify that before anything else.
+Our Demeter Violation and a nil object, two things I had been blogging about that morning, had bitten us.  I rolled the production code back to the previous deploy.  My priority was getting the user profile pages working again.  Working out how to fix the Karma calculation could wait.  I was excited to be capturing all of this on the hangout video.   We could have got distracted trying to fix the Karma calculation here, and all the while anyone coming to the site trying to look at an individual profile page would get a 500 error.  We had to rectify that before anything else.
 
 I was frustrated that Airbrake was not reporting the 500 error - but that was nothing compared to when I completed the rollback to the previous working version and realised that that didn't fix the site.  There had been migrations, so even though the code was back in the working state, the database was changed.  There was no longer a `karma_points` field on the user table, and I couldn't roll back the database without the migrations that were in the latest version of master.
 
@@ -43,7 +43,7 @@ Started GET "/users/tattsy" for 122.175.241.121 at 2016-09-29 15:05:48 +0000
 2016-09-29T15:05:48.314863+00:00 app[web.1]: /app/app/views/users/profile/_detail.html.erb:65:in `_app_views_users_profile__detail_html_erb__30276934721546551_69862305882580'
 ```
 
-`hangouts_attended_with_more_than_one_participant` was being called on a nil.  We'd set up that method on the user class to delegate to the single Karma object associated with the User.  The implication whas that Karma object was nil.  The issue was the same as the problem with the karma update that rake task was encountering.  In this case a fix for one would likely be a fix for the other, but in my mind it was critical to confirm that.  If the 500 error on the profile pages had been caused by something else we would have been fixing the wrong thing in terms of bringing the site back to functionality as fast as possible.
+`hangouts_attended_with_more_than_one_participant` was being called on a nil.  We'd set up that method on the user class to delegate to the single Karma object associated with the User.  The implication whas that Karma object was nil.  The issue was the same as the problem with the Karma update that rake task was encountering.  In this case a fix for one would likely be a fix for the other, but in my mind it was critical to confirm that.  If the 500 error on the profile pages had been caused by something else we would have been fixing the wrong thing in terms of bringing the site back to functionality as fast as possible.
 
 Now of course if I had taken the site straight back to fully operational status by rolling back the migrations before the code we could have been looking at both issues at our leisure.  However the site was still exhibiting failures in key places and we understood the problem and had a chance to just fix it and complete the production deploy.  We jumped into the production console and ran a procedure to create default Karma objects for all the users:
 
@@ -89,6 +89,7 @@ Given /^the following users exist$/ do |table|
     FactoryGirl.create(:user, attributes)
   end
 end
+```
 
 and it seems that our Cucumber steps are using the same factories as our RSpecs, hmmm.  Let's look at that factory:
 
@@ -118,9 +119,9 @@ FactoryGirl.define do
 end
 ```
 
-Aha, it seems that our acceptance tests are not as end to end as we might like.  A default Karma is being created.  Michael and I added that `karma { Karma.new }` line for the RSpecs, not realising that we'd be impacting the Cucumber acceptance tests.  In LocalSupport we'd always avoided factory girl in Cucumber.  Of course one can equally counter that we should have been investigating the steps more thoroughly to anticipate this connection.  
+Aha, it seems that our acceptance tests are not as end to end as we might like.  A default Karma is being created.  Michael and I added that `karma { Karma.new }` line for the RSpecs, not realising that we'd be impacting the Cucumber acceptance tests.  In LocalSupport we'd always avoided FactoryGirl in Cucumber.  Of course one can equally counter that we should have been investigating the steps more thoroughly to anticipate this connection.  
 
-Anyway, so hopefully it's clear why all the acceptance tests passed, and we can wail and gnash our teeth about the use of factories in the acceptances test, but we could have encountered this error well before production if we'd looked at the individual profile pages, or run the rake update karma task, on our local machines, develop, or staging.  That that didn't happen is an oversight, but also a reflection of our trust in the acceptance tests.
+Anyway, so hopefully it's clear why all the acceptance tests passed, and we can wail and gnash our teeth about the use of factories in the acceptances test, but we could have encountered this error well before production if we'd looked at the individual profile pages, or run the rake update Karma task, on our local machines, develop, or staging.  That that didn't happen is an oversight, but also a reflection of our trust in the acceptance tests.
 
 Another thing that might have helped would have been completing the full refactoring of the Karma first, although who knows, we might just have pushed out a bigger code change and had more trouble getting to the bottom of things when the proverbial hit the fan.  Postmortems aside we had the remaining problem that a newly created user would not have a Karma object.  We got off a quick PR with the following RSpec that wrapped the issue:
 
@@ -148,7 +149,7 @@ and the associated fix in the User class:
   after_save :build_karma, if: -> { karma.nil? }
 ```
 
-Raoul deployed that quickly, but I noticed that we were still getting some errors from the karma update rake task which looked like they were related to ill-formed participant data.  That wasn't catastrophic, but the karma update rake task would need upgrading to allow it to avoid getting derailed by those errors; at least until we completed the full upgrade of the hangout telemetry making separate models for participants and so forth.  Although that looks like we might face a tricky migration of the legacy data.
+Raoul deployed that quickly, but I noticed that we were still getting some errors from the Karma update rake task which looked like they were related to ill-formed participant data.  That wasn't catastrophic, but the Karma update rake task would need upgrading to allow it to avoid getting derailed by those errors; at least until we completed the full upgrade of the hangout telemetry making separate models for participants and so forth.  Although that looks like we might face a tricky migration of the legacy data.
 
 Ironically we had been working on the profile pages during the week and they had been working fine, but we'd been jumping back and forth between different branches.  The addition of the premium upgrade button had worked fine, but that had been isolated from any Karma changes until it got merged to develop.  It makes me wonder if we shouldn't prefer some kind of continuous deployment structure where we deploy to production more frequently rather than grouping things in bunches.  Or should we see yesterday's problem as an indictment of the "drive-by" coding style, where we try to make the smallest fixes possible, and avoid building on top of things until they are merged to develop?
 
