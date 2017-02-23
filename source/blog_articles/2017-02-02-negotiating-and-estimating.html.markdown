@@ -1,3 +1,10 @@
+---
+title: Negotiating and Estimating
+date: 2017-02-02
+tags: rails, DHH, open source, privacy, public, transparency, trust, learning, discussion, opinion
+author: Sam Joseph
+---
+
 Thomas asked a great question to DHH during our chat with him on Tuesday.  The question was:
 
 > What are the biggest challenges of running a large scale open source project over time?
