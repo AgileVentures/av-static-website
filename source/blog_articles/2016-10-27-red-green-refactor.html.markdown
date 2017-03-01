@@ -78,7 +78,7 @@ I updated the various view templates and ran the feature test. It was failing on
 
 There were certainly opportunities for refactoring, but I ignored them and pushed on to get the acceptance green.  I was a little disturbed that my creation of a new class `PremiumMob` was not throwing an error.  I turned aside to create specs for that:
 
-```
+```rb
 describe PremiumMob, type: :model do
   let(:type) { 'PremiumMob' }
   it_behaves_like 'a subscription'
