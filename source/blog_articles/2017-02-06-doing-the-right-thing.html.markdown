@@ -66,7 +66,7 @@ Feature: Escalating Call to Action
     Then I should be on the "premium mob sign up" page
 ```
 
-Ironically the tests took twice as long to write as the code, mainly due to a Capybara issue with the step that checks we've arrive on the correct page, which had to be evolved from this:
+Ironically the tests took twice as long to write as the code, mainly due to a Capybara issue with the step that checks that we've arrived on the correct page, which had to be evolved from this:
 
 ```rb
 Then /^I should be on the "([^"]*)" page$/ do |page|
@@ -86,13 +86,13 @@ def current_fullpath
 end
 ```
 
-after consulting various stackoverflow posts on the subject.  The issue here was that in the (older?) version of Capybara that we are using, the current_path returns the path without the URL params e.g. `plan=premiummob`, which we need due to the current design of the subscription controller.  Of course even just writing this down I come back to thoughts from a couple of months back about refactoring the URLs to nest so we could have `/plan/premiummob/subscriptions/new`.  Gosh, there's just endless extra refactoring we could be doing before being able to conduct experiments on the business logic itself :-)
+after consulting various stackoverflow posts on the subject.  The issue here was that in the (older?) version of Capybara that we are using, the current_path returns the path without the URL params e.g. `plan=premiummob`, which we need, due to the current design of the subscription controller.  Of course even just writing this down I come back to thoughts from a couple of months back about refactoring the URLs to nest so we could have `/plan/premiummob/subscriptions/new`.  Gosh, there's just endless extra refactoring we could be doing before being able to conduct experiments on the business logic itself :-)
 
 So, anyway, that was all working and I pushed it out in the background of Friday, and as far as I can tell it's been running over the weekend.  I was in perhaps a hasty rush to put this up.  A last gasp of me being focused on promoting the Premium plans.  There's been no sudden flurry of Premium or Premium Mob sign ups over the weekend :-) It seems like the increase in basic signups is holding steady in a way I wouldn't expect unless the MOOC was active, although that might just be my imagination.  In the same deploy I got the adwords Premium plan conversion live, so if anyone else does convert we can in principle track where they are coming from, but it follows that we should really get the basic sign up adword conversion tracking up, and get better stats on the influx of new users, if we're interested in working out how much impact these site changes and AdWord campaigns are really having.
 
 Then again my latest resurgence of Buddhist/Mindful thought is suggesting that strenuous effort in any direction is likely to be counter-productive.  That's supposed to be particularly true for enlightenment.  I love Steve Hagen's metaphor of an archery target.  With enlightenment apparently the closer you get to the center, the further away you actually are.  Somehow you are closest to dead center when you are totally on the periphery.  A pattern I do perceive is how my streneous attempts to resist things will bring them on more strongly or my attempt to grasp them will push them further from me.  It sort of feels like I am caught in a very strange counter-intuitive mental puzzle.
 
-Desparately struggling to try and increase the number of Premium members in AgileVentures is probably going to make it harder to achieve that end goal.  I think it's time to be a lot more relaxed about all this.  I don't think that hurrying is going to get me anywhere pleasant.  It's probably just going to make the current moment hurried and unpleasant.  Everything just is.
+Desperately struggling to try and increase the number of Premium members in AgileVentures is probably going to make it harder to achieve that end goal.  I think it's time to be a lot more relaxed about all this.  I don't think that hurrying is going to get me anywhere pleasant.  It's probably just going to make the current moment hurried and unpleasant.  Everything just is.
 
 Related Videos:
 
