@@ -1,7 +1,7 @@
 ---
 title: Pivoting or Not
 date: 2017-02-09
-tags: income, mentors, payment, AirPair, CodeMentor, HackHands, venture capitalization, 
+tags: income, mentors, payment, AirPair, CodeMentor, HackHands, venture capitalization 
 author: Sam Joseph
 ---
 
