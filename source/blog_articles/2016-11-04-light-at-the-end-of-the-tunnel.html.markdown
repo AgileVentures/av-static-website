@@ -1,7 +1,7 @@
 ---
 title: Light at the End of the Stripe Tunnel
 date: 2016-11-04
-tags: Stripe VCR PuffingBilly cache http network payment test cucumber batch CraftAcademy StripeRubyMock
+tags: Stripe, VCR, PuffingBilly, cache, http, network, payment, test, cucumber, batch, CraftAcademy, StripeRubyMock
 author: Sam Joseph
 ---
 
@@ -35,14 +35,14 @@ end
 
 Both WebSiteOne and LocalSupport have been plagued, and continue to suffer to some extent, from intermittent JavaScript acceptance test failures.  There's a [good blog post](https://bibwild.wordpress.com/2016/02/18/struggling-towards-reliable-capybara-javascript-testing/) on why this is a tricky problem.  My own take earlier in the year was that it made sense to nail down all sources of variation.  Tests that make network connections are depending on the network and 3rd party services.  Sandboxing those network connections (recording them and playing them back in test mode) using the VCR and PuffingBilly gems reduces the variability of the test, and makes it more deterministic.  Earlier this year, as part of trying to reduce the overall variability in the WebSiteOne acceptance test, Michael and I had completely re-implemented the Cucumber config and hooks for WebSiteOne.
 
-To my chagrin this had still not completely removed the occasional intermittent acceptance failure, and the generation of additional cache files on test failure or on other occasions of test variation that was confusing for all developers, complicated to manage, and made some PRs unreadable due to the overload of files.  In several smaller projects I'd preferred sandboxing over stubbing with WebMock, which has its own issues of maintaining lots of individual hand-written network calls.  Anyhow, in order to remove the sandboxing I had to get another Capybara JavaScript driver set up.  I ran through a series of alternatives:
+To my chagrin this had still not completely removed the occasional intermittent acceptance failure.  What it definitely did was generate additional cache files on test failure or on other occasions of test variation that was confusing for all developers, complicated to manage, and made some PRs unreadable due to the overload of files.  In several smaller projects sandboxing had made sense over stubbing with WebMock, which has its own issues of maintaining lots of individual hand-written network calls.  Anyhow, in order to remove the sandboxing I had to get another Capybara JavaScript driver set up.  I ran through a series of alternatives:
 
 * Default (Selenium) - opened firefox (v47) browser displayed nothing
 * Poltergeist - not working on my OSX - absolutely bizarre DB errors, with users appearing and disappearing
 * Poltergeist with PhantomJS - Stripe tests passed, but redirects to success page did not work - underlying permissions fail?
 * Poltergeist with PhantomJS and PuffingBilly - going back to this got green, but still failing in batch
 
-That was a frustrating hour.  I knew that with extra work I could probably get the Selenium testing working, but that headed browser approach wasn't going to work on our CI.  The pure Poltergeist errors with data appearing and disappearing from the DB were bizarre and a big red flag.  Poltergeist with PhantomJS looked promising.  We were avoiding sandboxing, but there was likely some permissions error at some level.  I could probably find that, although I was also encountering some ambiguity about which driver was being used - how other hooks were integrating with the existing Capybara Javascript hook:
+That was a frustrating hour.  I knew that with extra work I could probably get the Selenium testing working, but I didn't think that headed browser approach wasn't going to work on our CI.  The pure Poltergeist errors with data appearing and disappearing from the DB were bizarre and a big red flag.  Poltergeist with PhantomJS looked promising.  We were avoiding sandboxing, but there was likely some permissions error at some level.  I could probably fix that, although I was also encountering some ambiguity about which driver was being used - how other hooks were integrating with the existing Capybara Javascript hook:
 
 ```rb
 Before('@poltergeist_no_billy') do
@@ -73,7 +73,7 @@ After '@stripe_javascript' do
 end
 ```
 
-I was not without concern for some of the other changes.  App code in the ChargesContller had to be adjusted to accommodate testing with StripeRubyMock:
+I was not without concern for some of the other changes.  App code in the ChargesController had to be adjusted to accommodate testing with StripeRubyMock:
 
 ```rb
 def stripe_token(params)
@@ -85,7 +85,7 @@ def generate_test_token
 end
 ```
 
-The charges controller would now ignore the incoming stripe token from the javascript redirect, and use a StripeRubyMock generated token in test mode.  It was pretty innocuous but a different code path would run in test, compared to development and production.  This was going against another general coding guideline.  Not the end of the world, but a warning flag.  Still this was starting to seem like the most hopeful route back to a green Cucumber suite.  I also came away with a modified poltergeist driver based on the CraftAcademy code:
+The ChargesController would now ignore the incoming Stripe token from the javascript redirect, and use a StripeRubyMock generated token in test mode.  It was pretty innocuous but a different code path would run in test, compared to development and production.  This was going against another general coding guideline.  Not the end of the world, but a warning flag.  Still this was starting to seem like the most hopeful route back to a green Cucumber suite.  I also came away with a modified Poltergeist driver based on the CraftAcademy code:
 
 ```rb
 Capybara.register_driver :poltergeist do |app|
@@ -94,6 +94,7 @@ Capybara.register_driver :poltergeist do |app|
                                     phantomjs_options: ['--ssl-protocol=tlsv1.2', '--ignore-ssl-errors=yes'])
 end
 ```
+
 Another key difference was that I now had to explicitly create our Premium plans using the StripeRubyMock as part of the setup for the cuke scenarios:
 
 ```gherkin
@@ -131,7 +132,7 @@ Given /^I am logged in as( a premium)? user with (?:name "([^"]*)", )?email "([^
   end
 ```
 
-A card token from the Stripe test server would no longer work and the fix was using the stripe test helper to generate a card token.  This test code was super ugly, and I was still really bothered by the factories being shared between cukes and specs.  Anyhow, I also had to modify the app code for updating cards, because we were now generating a different kind of error.  I added a `NoMethodError` to the update card error handling:
+A card token from the Stripe test server would no longer work and the fix was using the Stripe test helper to generate a card token.  This test code was super ugly, and I was still really bothered by the factories being shared between cukes and specs.  Anyhow, I also had to modify the app code for updating cards, because we were now generating a different kind of error.  I added a `NoMethodError` to the update card error handling:
 
 ```
   def update
@@ -146,9 +147,9 @@ A card token from the Stripe test server would no longer work and the fix was us
   end
 ```
 
-and we were finally all green! Although I did still get an intermittent fail on the very last build on CI at the end, so this isn't over JavaScript Acceptance tests (shakes fist)!  In summary though the full test suite was green for me locally, and after a re-build on semaphore the build passed.  StripeRubyMock was working for us, and I don't have much appetite for burning more time on the complete sandboxing alternative.  What's frustrating is how much time that goes into this that could be going into refactoring the code for maintainability or improving the user interface experience.  However with the test suite green, we can potentially refactor with confidence (until the next time!).
+and we were finally all green! Although I did still get an intermittent fail on the very last build on CI at the end, so this isn't over JavaScript Acceptance tests (shakes fist)!  In summary though the full test suite was green for me locally, and after a re-build on Semaphore the build passed.  StripeRubyMock was working for us, and I don't have much appetite for burning more time on the complete sandboxing alternative.  What's frustrating is how much time that goes into this that could be going into refactoring the code for maintainability or improving the user interface experience.  However with the test suite green, we can potentially refactor with confidence (until the next time!).
 
-My concerns about RubyStripeMock is will it be maintained and stay up to date with the Stripe API itself?  To get things to pass I had to change app code that now hasn't been tested in production.  Thomas has updated [his blog post](https://medium.com/craft-academy/keeping-it-simple-3e7d9b186015#.4rc29xv6j) to talk about using RubyStripeMock completely network independently.  Since Stripe told me they are happy with a few hits from tests, and that removing network dependency has not fixed our intermittent failures I'm less concerned about that, than just having code paths that operate in production but don't run in test.  I changed `customer.cards` to `customer.sources` in the app code to get the RubyStripeMock acceptance tests to work.  I will need to use the StripeRubyMock ability to switch to live tests against the Stripe servers to test that still works:
+My concerns about RubyStripeMock is will it be maintained and stay up to date with the Stripe API itself?  To get things to pass I had to change app code that now hasn't been tested in production.  Thomas has updated [his blog post](https://medium.com/craft-academy/keeping-it-simple-3e7d9b186015#.4rc29xv6j) to talk about using RubyStripeMock completely network independently.  Since Stripe told me they are happy with a few hits from tests, and that removing network dependency has not fixed our intermittent failures I'm less concerned about that, than this setup where we have code paths that operate in production but don't run in test.  I changed `customer.cards` to `customer.sources` in the app code to get the RubyStripeMock acceptance tests to work.  I will need to use the StripeRubyMock ability to switch to live tests against the Stripe servers to test that still works:
 
 ```rb
 RSpec.configure do |c|
@@ -159,7 +160,7 @@ RSpec.configure do |c|
 end
 ``` 
 
-The advantage of a full VCR/PuffingBilly sandbox, is that you are stubbing at the network level.  Your app is effectively running in the exact same environment as it would with a live network connection.  You can dump the sandbox at any time to re-create an accurate network sandbox.  However it becomes challenging with a complex service like Stripe that's trying to be secure and is using a high degree of indeterminacy in terms of the network connections it makes.  The sandbox cache files have to be checked into git to ensure everyone gets a benefit from the sandbox, so test failures or complex system like Stripe can lead to challenging git churn.  Not checking in those files would be an alternative - CI would still hit live network servers, and on second and subsequent runs developer machines would avoid re-hitting the live network, but then network fails could be encoded into caches.  I starting to think sandbox caches are another challenging source of variability when used with services like Stripe.
+The advantage of a full VCR/PuffingBilly sandbox, is that you are stubbing at the network level.  Your app is effectively running in the exact same environment as it would with a live network connection.  You can dump the sandbox at any time to re-create an accurate network sandbox.  However it becomes challenging with a complex service like Stripe that's trying to be secure and is using a high degree of indeterminacy in terms of the network connections it makes.  The sandbox cache files have to be checked into git to ensure everyone gets a benefit from the sandbox, so test failures or complex systems like Stripe can lead to challenging git churn.  Not checking in those files would be an alternative - CI would still hit live network servers, and on second and subsequent runs developer machines would avoid re-hitting the live network, but then network fails could be encoded into caches.  I starting to think sandbox caches are another challenging source of variability when used with services like Stripe.
 
 In a final analysis it's all about trading off these different heuristics:
 
@@ -172,9 +173,7 @@ In a final analysis it's all about trading off these different heuristics:
 
 and various others.  None of these heuristics always trumps all the others.  As Kent Beck says, "it depends ...".  I say, keep looking for the light at the end of the tunnel :-) 
 
-
 ###Related Videos
-
 
 * [Solo on WebSiteOne part 1](https://www.youtube.com/watch?v=fDUd9N5iDTA)
 * ["Kent Beck" scrum](https://www.youtube.com/watch?v=hz_i4DagxkY)
