@@ -1,6 +1,7 @@
 ---
 title: I Surrender
-date: Slack, Email, addiction, Aldous Huxley, Zen, tech tests, inside-out, sustainability, CodeMentor, HackHands, FutureLearn. listening, outcome, flow, moment
+date: 2017-02-20
+tags: Slack, Email, addiction, Aldous Huxley, Zen, tech tests, inside-out, sustainability, CodeMentor, HackHands, FutureLearn. listening, outcome, flow, moment
 author: Sam Joseph
 ---
 
