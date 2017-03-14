@@ -1,7 +1,7 @@
 ---
 title: Refactoring FTW!
 date: 2016-11-07
-tags: pullrequests controller view private test DRY dependencies notificiations functional
+tags: pull requests, controller, view, private, test, DRY, dependencies, notificiations, functional
 author: Sam Joseph
 ---
 
@@ -13,9 +13,9 @@ Friday was full of pull request reviews.  I'm currently trying to keep tabs on p
 * [Redeemify](https://github.com/StrawberryCanyon/redeemify/pulls)
 * [WebSiteOne](https://github.com/AgileVentures/WebsiteOne/pulls)
 
-I've started adding extra notifications to the main slack project channels about pull requests opening and closing.  We have separate automated notification channels, but I think pull requests should be highlighted.  When a pull request opens everyone involved in the project should have a look if they can, and make a comment, or just a thumbs up.  Then when a pull request gets merged in that's a time for everyone to thank the submitter of the pull request for completing that work, and then it's great to thank them again when the code is deployed to production.
+I've started adding extra notifications to the main Slack project channels about pull requests opening and closing.  We have separate automated notification channels, but I think pull requests should be highlighted.  When a pull request opens everyone involved in the project should have a look if they can, and make a comment, or just a thumbs up.  Then when a pull request gets merged in that's a time for everyone to thank the submitter of the pull request for completing that work, and then it's great to thank them again when the code is deployed to production.
 
-AsyncVoter has gotten really active and there's been a lot to review in our nodejs project recently, particularly in terms of locking down how the REST api will work.  LocalSupport goes in fits and starts.  ProjectScope has a group of Berkeley students working on it, and there are weekly flurries of activity.  Redeemify has a couple of folks pushing away, and WebSiteOne only has a few people working on it.  WebSiteOne used to have a lot more developers, but I pushed to ring-fence it for only premium members, since I was worried about maintaining it in the face of too many people working on it at the same time, particularly if those people had variable levels of commitment.
+AsyncVoter has gotten really active and there's been a lot to review in our nodejs project recently, particularly in terms of locking down how the REST api will work.  LocalSupport goes in fits and starts.  ProjectScope has a group of Berkeley students working on it, and there are weekly flurries of activity.  Redeemify has a couple of folks pushing away, and WebSiteOne only has a few people working on it.  WebSiteOne used to have a lot more developers, but I pushed to ring-fence it for only Premium members, since I was worried about maintaining it in the face of too many people working on it at the same time, particularly if those people had variable levels of commitment.
 
 At least now I'm getting a handle on a codebase that isn't too highly in flux, but there's a lot of stuff that needs doing.  Sasha has been knocking off small tickets pretty regularly the last couple of weeks, which is awesome.  In recent months most of the larger PRs have come from myself and Michael with some notable contributions from Raoul.  There was time for some pairing Friday afternoon, and I invited Ben, my friend from our new sponsor drie.  It ended up being just Ben and myself and we ended up spending a devops sessions looking at drie deploys, and how their different products might match different AgileVentures projects.
 
@@ -36,6 +36,7 @@ What I didn't get onto was the refactoring of the "Sponsor a Premium User" funct
     <p>An AgileVentures mentor will be in touch shortly to help you receive all of your membership benefits.</p>
 <% end %>
 ```
+
 although still too much logic for my tastes.  The main if-else block there could be replaced by a call to two different templates, although having them side by side in one file highlights the two alternatives.  I could have pushed and boiled down further, but this part of the codebase is definitely in flux, so there are diminishing returns from pushing too hard on a refactoring binge.  A lot, but not all, of the replication in this view was gone.   I keep saying that it's critical to remember that every time you DRY something out, you also introduce a dependency.  If we start to need highly divergent language for different plans, then some of this DRYing out will need to be undone.
 
 After a duel with code climate warnings on method complexity, the charges controller that works with the above view looked like this:
@@ -106,7 +107,7 @@ I didn't write tests for the Plan class.  I briefly had it in the lib directly, 
 
 Again, all this functionality is in flux.  We've got a restricted set of people working on the codebase.  In a project with a larger team I'd have to button down here and make this a serious object with tests, or even explicitly make it private.  I'll need to do one or the other when we work on this again (and start better integrating PayPal and plan upgrades).  I'm thinking of giving it a week, and perhaps devoting this week to more fixes on the Google Hangout API fiasco.  Not sure.  Either way Raoul got this all deployed over the weekend and we have Sasha's changes up which include the banner from our new sponsor drie, and the ability for members to sponsor each other for Premium - great work Raoul!
 
-Right then, once more unto the breach dear friends!
+Right then, once more unto the coding breach dear friends! Refactoring for the win!
 
 
 
