@@ -11,7 +11,7 @@ We spent a good hour analysing our options to cope with the changes in the Googl
 
 Clicking this button now pops up a separate window with instructions on how to create a HOA through the YouTube interface.  BREAKING NEWS.  I just went to WebSiteOne project page to create a screenshot of the pop up for this blog and pressed the button.  Now, instead of opening a popup with the contents of this page:
 
-https://support.google.com/youtube/answer/7083786?hl=en-GB
+[https://support.google.com/youtube/answer/7083786?hl=en-GB](https://support.google.com/youtube/answer/7083786?hl=en-GB)
 
 Which actually has a good straightforward description of how to create a HOA from the YouTube interface:
 
