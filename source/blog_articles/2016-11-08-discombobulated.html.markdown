@@ -1,7 +1,7 @@
 ---
 title: Discombobulated (by Google)
 date: 2016-11-08
-tags: youtube live hangouts HOA planning agile stripe paypal payment charity domain driven design DDD
+tags: youtube live, hangouts, HOA, planning, agile, stripe, paypal, payment, charity, domain driven design, DDD
 author: Sam Joseph
 ---
 
@@ -9,7 +9,7 @@ We spent a good hour analysing our options to cope with the changes in the Googl
 
 ![HOA button](https://www.dropbox.com/s/5esltpqdq8y2abt/Screenshot%202016-11-08%2009.23.04.png?dl=1)
 
-Clicking this button now pops up a separate window with instructions on how to create a HOA through the YouTube interface.  BREAKING NEWS.  I just went to WebSiteOne project page to create a screenshot of the pop up for this blog and pressed the button.  Instead of opening a popup with the contents of this page:
+Clicking this button now pops up a separate window with instructions on how to create a HOA through the YouTube interface.  BREAKING NEWS.  I just went to WebSiteOne project page to create a screenshot of the pop up for this blog and pressed the button.  Now, instead of opening a popup with the contents of this page:
 
 https://support.google.com/youtube/answer/7083786?hl=en-GB
 
@@ -17,9 +17,9 @@ Which actually has a good straightforward description of how to create a HOA fro
 
 ![create YT live event instructions](https://www.dropbox.com/s/gudo78qqtfk04bp/Screenshot%202016-11-08%2009.31.13.png?dl=1) 
 
-However an HOA popped up, our plugin worked and pinged Slack through the AV website/agile-bot hookup.  To say I was discombobulated is to put it mildly :-)  I went straight to my [StackOverflow post](http://stackoverflow.com/questions/40233393/start-a-hangout-on-air-button-for-youtube-livestreaming-api) on the subject to see if there had been an update from the Google engineers, but nothing there.  So, had the activity on the SO post or our discussion in the YouTube product forums prompted the Google engineers to make a change?  Or was this just another accidental change that will allow HOA buttons to work for a while, but will disappear again at some point in the future?
+A hangout on air popped up, our plugin worked and pinged Slack through the AV website/agile-bot hookup.  To say I was discombobulated is to put it mildly :-)  I went straight to my [StackOverflow post](http://stackoverflow.com/questions/40233393/start-a-hangout-on-air-button-for-youtube-livestreaming-api) on the subject to see if there had been an update from the Google engineers, but nothing there.  So, had the activity on the SO post or our discussion in the YouTube product forums prompted the Google engineers to make a change?  Or was this just another accidental change that will allow HOA buttons to work for a while, but will disappear again at some point in the future?
 
-I guess Google moves in mysterious ways ... what we identified yesterday was that the hangout on air button not working was very confusing for many users.  The manual update of hangout URL was a work around that helped the more experienced AV members to notify the slack community about the hangout going live, but was unlikely to be used by new users.  I admitted that until recently I had been thinking we might want to move away from trying to support synchronous meetings, but the AV community has got really active recently, with well attended scrums, and Michael and I were agreeing that synchronous meetings were very good for coordinating some issues.
+I guess Google moves in mysterious ways ... what we identified yesterday was that the non-functional hangout on air button was very confusing for many users.  The manual update of hangout URL was a work around that helped the more experienced AV members to notify the Slack community about the hangout going live, but this method was unlikely to be used by new users.  I admitted that until recently I had been thinking we might want to move away from trying to support synchronous meetings, but the AV community has gotten really active recently, with well attended scrums, and Michael and I were agreeing that synchronous meetings were very good for coordinating some issues.
 
 In our first session Michael and I had listed out some of the key problems with the HOA button change:
 
@@ -27,7 +27,7 @@ In our first session Michael and I had listed out some of the key problems with 
  - lower likelihood of notifications (and pair partners)
  - no telemetry (data from who's in the hangout when)
  - no sharing of video link
- - if no fixed event - no notification pathway --> pair now on each project page is basically non-functional
+ - if no fixed event - no notification pathway --> "pair now" button on each project page is basically non-functional
  - event live as function of planned duration rather than actual activity
 
 We reviewed our vision of how the site should ideally operate:
@@ -40,7 +40,7 @@ We reviewed our vision of how the site should ideally operate:
 We listed out some short term options for improvement:
 
 * more documentation on current state of system 
-* build instructions on starting hangout on air into existing interface
+* build instructions on starting "hangout on air" into existing interface
 * allow manual setting of youtube link 
 
 and some longer term options
@@ -49,15 +49,15 @@ and some longer term options
   * GotoMeeting
   * Zoom
   * [Open Source](https://elearningindustry.com/top-6-open-source-web-conferencing-software-tools-elearning-professionals)
-* publishing a new hangout app (give us notifications and telemetry)
+* publishing a new hangout app (to give us notifications and telemetry)
 
-It would be great if Google hangouts was open source ... anyway, even yesterday I didn't want to leap into working on something.  I also wanted to review the issues related to payment and premium plans.  CraftAcademy Sweden is still keen to work with invoices rather than credit cards, so we now had some Premium members who weren't represented in the site correctly.  I tested on my local server that I could update them from the console like to:
+It would be great if Google hangouts was open source ... anyway, even yesterday I didn't want to leap into working on something.  I also wanted to review the issues related to payment and Premium plans.  CraftAcademy Sweden is still keen to work with invoices rather than credit cards, so we now had some Premium members who weren't represented in the site correctly.  I tested on my local server that I could update them from the console like so:
 
 ```rb
 UpgradeUserToPremium.with(user, Time.now, '', PaymentSource::CraftAcademy)
 ```
 
-It worked locally and I ran the same through the production Rails console.  An example of me playing fast and loose perhaps?  Would a more principled approach be to deploy a rake task, build an admin interface or even an API endpoint? CraftAcademy just graduated three students and it was trivial for me to do through the Rails console, and make the system display the students' Premium status correctly.  I thought it was important to get this set, since otherwise they would have the "Sponsor for Premium" button.  Not that anyone was likely to start throwing money at them, but good to have the database in the correct state.  As the number of CA graduates increases, we'll want to automate this, but right now we're cautiously expanding the domain model.  Michael and I identified a set of other issues:
+It worked locally and I ran the same through the production Rails console.  An example of me playing fast and loose perhaps?  Would a more principled approach be to deploy a rake task, build an admin interface or even an API endpoint? CraftAcademy just graduated three students and it was trivial for me to update their details through the Rails console, and make the system display the students' Premium status correctly.  I thought it was important to get this set, since otherwise they would have the "Sponsor for Premium" button.  Not that anyone was likely to start throwing money at them, but good to have the database in the correct state.  As the number of CA graduates increases, we'll want to automate this, but right now we're cautiously expanding the domain model.  Michael and I identified a set of other issues:
 
 * Expiration date for CA sponsorship (notifications when 1 year support ends)
 * CA sponsorship via Stripe
@@ -65,7 +65,7 @@ It worked locally and I ran the same through the production Rails console.  An e
 * Keeping track of how many pairing hours premium F2F and Plus members have left
 * Supporting batch payments
 
-I was pleased to have made the admin changes to the DB.  The Google Hangout API issue underlines the importance of working in small steps.  We're feeling our way with CraftAcademy collaboration.  The number of CraftAcademy graduates getting Premium membership bundled with their bootcamp experience could explode, or could stay at steady state, or even drop off.   It would be inexpedient to invest enormous engineering effort on functionality and extending the domain model until it's clear which way that goes.  In the meantime we need to keep knocking off small improvements.  CraftAcademy SouthAfrica were saying they'd really like to make batch payments in credit card.  Another feature.  We just had our first successful Paypal payment (7 day free trial for first paypal premium member ending).  Naturally we shouldn't just implement every feature that every user asks for.  We've got to prioritise those that overlap and give us more bang for the buck.
+I was pleased to have made the admin changes to the DB.  The Google Hangout API issue underlines the importance of working in small steps.  We're feeling our way with the CraftAcademy collaboration.  The number of CraftAcademy graduates getting Premium membership bundled with their bootcamp experience could explode, or could stay at steady state, or even drop off.   It would be inexpedient to invest enormous engineering effort on functionality and extending the domain model until it's clear which way that goes.  In the meantime we need to keep knocking off small improvements.  CraftAcademy South Africa were saying they'd really like to make batch payments in credit card.  Another feature.  We just had our first successful PayPal payment (7 day free trial for first PayPal Premium member ending).  Naturally we shouldn't just implement every feature that every user asks for.  We've got to prioritise those that overlap and give us more bang for the buck.
 
 I asked Michael what he'd like to work on and he said the "manual setting of YouTube links".  We had another AV member join the hangout and tell us that was important for her project.  It made particular sense as it was a feature that would make our events more agnostic in terms of the video recording link.  We did a quick scrum and Michael drove on that feature.  Michael threw up a new feature, and we hammered at the EventInstances controller to see if we could provide a mechanism to manually update the video link for an EventInstance.  Things got a bit sticky.  I was torn a little between refactoring the Cucumber steps and getting things done.  I encouraged Michael as driver to take the route he thought best.  He left the background EventInstance generation steps alone, but tried some simpler versions for the individual scenario steps.  That didn't go smoothly and we saw why the original test writers had gone for executing triggers rather than pure Capybara clicks when things were getting stuck on overlapping CSS elements.
 
