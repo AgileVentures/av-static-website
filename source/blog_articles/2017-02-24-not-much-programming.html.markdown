@@ -5,7 +5,7 @@ tags: admin, business development, pair programming, mobile, events, payment, in
 author: Sam Joseph
 ---
 
-![typing at keyboard](https://cdn.pixabay.com/photo/2015/04/20/13/17/work-731198_1280.jpg)
+![typing at keyboard](/images/coding.jpg)
 
 As I review and publish blogs from several months ago to medium, it's clear I'm doing a lot less programming than I was.  I've been doing more charity admin and, I guess, "business development".  I've stopped pair programming regularly with Michael at least partly so that I can easily switch tasks through the day, but it is meaning that I won't do a big chunk of coding unless I really clear space for it.  I am still reviewing a lot of code, looking at a lot of pull-requests, tech-tests, deploying code (devops?), running mob sessions and other bits and pieces.  I think the main things we've managed to achieve over the last year with the AgileVentures site is that it now looks better on mobile, the event creation process is more streamlined, and we have the Premium payment frameworks in place.
 
