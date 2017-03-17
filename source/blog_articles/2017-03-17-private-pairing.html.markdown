@@ -49,6 +49,7 @@ I think the interface has just got to be smooth.  Like playing a video game - ju
 We'll get there, although knowing reality someone else will do it first.  FreeCodeCamp is part way there, but they're JavaScript only and the pairing is adhoc (I think) - the online bootcamps have it for a select rich few - if you're inspired come help us make it a reality.  I think it should be open for everyone in the world to participate, just like an online computer game.  Maybe we need a design sprint?
 
 Related Videos:
+--------------
 
 * [Elixir Pairing with Ryder](https://youtu.be/kYQP9sRgXRY)
  
