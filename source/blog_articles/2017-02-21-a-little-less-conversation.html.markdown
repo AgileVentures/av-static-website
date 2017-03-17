@@ -13,7 +13,7 @@ A great idea, but a lot of up-front work for someone, so I suggested how about w
 
 I won't go into the details, as interested parties can get that from the recording of the marketing meeting and the podcast etc., but I do keep coming back to advice I got from Ruben at Makers Academy that it's far better to ask people questions than to make assertions.  For some reason I find it so hard to do that.  My M.O. is so ingrained that when someone makes an assertion that doesn't fit my mental model, my knee-jerk reaction is the make a counter-assertion.  I enjoy the mental interplay, but so many other people don't seem to.  Of course asking too many questions can also be a block.  Let's see, I'm going to try to either shut up or just ask single questions for the rest of the week, if I can!  A little less conversation, a little more action maybe :-)
 
-Related Videos:
+#### Related Videos:
 
 * ["Martin Fowler" scrum](https://www.youtube.com/watch?v=5vx3BstpDuo)
 * [Marketing Meeting](http://youtu.be/7jCej7JVpkM)
