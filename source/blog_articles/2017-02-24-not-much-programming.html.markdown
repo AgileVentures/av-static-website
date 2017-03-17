@@ -15,7 +15,7 @@ For all my effort reaching out to potential sponsors online I've generated nothi
 
 Of course, I'm also trying to write a book and start a podcast as long term "lead generation", but I feel like it might be time for a coding binge ...
 
-###Related Videos:
+### Related Videos:
 
 * ["Martin Fowler" scrum](https://www.youtube.com/watch?v=fV1JYPRXCiw)
 * ["Kent Beck" scrum](https://www.youtube.com/watch?v=x14sVgrKeoc)
