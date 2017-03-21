@@ -1,17 +1,19 @@
 ---
 title: Mixing and Matching Guidelines
 date: 2016-11-10
-tags: pull requests node cucumber features feedback refactoring architecture rearchitecting domain driven design DDD rails mocha
+tags: pull requests, node, cucumber, features, feedback, refactoring, architecture, rearchitecting, domain driven design, DDD, rails, mocha
 author: Sam Joseph
 ---
 
+![mixing and matching food](/images/mix_and_match.jpg)
+
 It was another mix of the AsyncVoter and WebSiteOne projects today.  Overnight Arreche had come up with a [slimmed down version](https://github.com/AgileVentures/AsyncVoter/compare/master...arreche:7_cast_vote_feature_mvp) of Raphael's [pull request](https://github.com/AgileVentures/AsyncVoter/pull/50) on vote casting, so I focused on João's [pull request](https://github.com/AgileVentures/AsyncVoter/pull/45) for listing currently voting stories.   I really wanted to get something merged in as we'd had these two pull requests open for five days or so, and I also wanted to practice deploying a new feature onto the drie servers.
 
-The async_voter slack channel was active and I was conflicted about posting comments in Github and in slack.  João showed up and said he had some time for programming and what should he change.  I suggested he take out the sorting functionality that wasn't covered by the acceptance test and he got right to it.  My original plan was that there might have been some AsyncVoter folks in the "Martin Fowler" scrum, but they weren't and I ended up helping out some Premiums fix up issues on the LocalSupport and WebSiteOne projects.
+The async_voter slack channel was active and I was conflicted about posting comments in Github and in Slack.  João showed up and said he had some time for programming and what should he change.  I suggested he take out the sorting functionality that wasn't covered by the acceptance test and he got right to it.  My original plan was that there might have been some AsyncVoter folks in the "Martin Fowler" scrum, but they weren't and I ended up helping out some Premiums fix up issues on the LocalSupport and WebSiteOne projects.
 
 In the meantime João had pushed changes and we had a slimmed down pull request.  I still wasn't entirely sure about the mapping we had set up from `GET /stories?state=active` to search for `size=0` stories.  João was very keen on the state=active flag and seemed to be mollifying me by saying that `GET /stories?size=0` would also work.  I investigated and found that it didn't quite and that `GET /stories?state=voting` or indeed any other state would return all the size 0 stories.
 
-I pointed that out to João not sure if he was in a position to fix it up.  I started adjusting the code locally and made my own [pull request](https://github.com/AgileVentures/AsyncVoter/pull/57).  In parallel João made further updates.  Perhaps we should have been pairing, but he was commuting.  Maybe I should have just gone to lunch, but I was pleasantly surprised to make some good progress on my own branch.  In particular discovering a [method to specify running a single test in a mocha suite](http://jaketrent.com/post/run-single-mocha-test/), where you insert a `.only` into the test you want to focus on:
+I pointed that out to João even though I was not sure if he was in a position to fix it up.  I started adjusting the code locally and made my own [pull request](https://github.com/AgileVentures/AsyncVoter/pull/57).  In parallel João made further updates.  Perhaps we should have been pairing, but he was commuting.  Maybe I should have just gone to lunch, but I was pleasantly surprised to make some good progress on my own branch.  In particular discovering a [method to specify running a single test in a mocha suite](http://jaketrent.com/post/run-single-mocha-test/), where you insert a `.only` into the test you want to focus on:
 
 ```js
 it("found one active", function (done) { ... });
@@ -35,7 +37,7 @@ Of course I then had the quandary of whether to go with my PR or with João's ne
 
 Different guidelines were as usual wrestling in my head.  My concerns were as follows:
 
-* was locking to size=0 to represent currently voted stories going to bite us when we decided we needed size=0 stories in the future?
+* Was locking to size=0 to represent currently voted stories going to bite us when we decided we needed size=0 stories in the future?
 * Wasn't it bad to have functionality not covered by tests, and particularly functionality unrelated to the feature the PR was addressing?
 * Should we be adjusting the story model to have a state that could be active, to reflect the domain language that João was keen to use?
 * Shouldn't we be going with my simplifying assumption that there is only ever a single story to vote on (for the time being)?
