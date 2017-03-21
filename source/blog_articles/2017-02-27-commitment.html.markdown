@@ -5,6 +5,8 @@ tags: kick-off meeting, user story, tickets, scrum, sprint, agile
 author: Sam Joseph
 ---
 
+![commitment sign](/images/commitment.jpg)
+
 Urgh, another mild cold :-( but a productive few days.  We had our new style WebSiteOne kick-off meeting on Friday following Michael's suggestion that we re-start the meetings, but that we each bring up to three tickets that we care about; rather than just working through whichever tickets are in the backlog.  This approach came out of discussions around the AgileBookClub podcast, with an emphasis on focusing on the "business" value associated with each ticket.  I chose the following tickets:
 
 * [Add tooltips for "upgrade to mob" to explain and/or add info buttons](https://github.com/AgileVentures/WebsiteOne/issues/1530)
