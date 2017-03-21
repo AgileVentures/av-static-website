@@ -4,7 +4,7 @@ date: 2017-02-24
 tags: learning, learning curve, pedagogy, motivation, apprenticeship, abstraction, learning materials, cognitive barriers, deep learning, reinforcement learning, supervised learning, unsupervised learning, engagement
 author: Mikaël Dautrey
 ---
-![ship](ship.jpg)
+![ship](/images/ship.jpg)
 
 Life is full of apprenticeship, eating, walking, talking, dealing with our social environment, reading, writing, counting, programming. We have learnt, discovered or invented anything we do. Pedagogy is everywhere and everybody is a teacher.
 
