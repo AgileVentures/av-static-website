@@ -62,3 +62,5 @@ was that some other weird timeout - unrelated?  CI was passing for Stella and Ce
 * ["Kent Beck" scrum and LocalSupport kick off](https://www.youtube.com/edit?o=U&video_id=D62ZcBOnNsc)
 
 p.s. for cucumber and rspec I'd really like to adjust the output on CI so that it was progress dots for the passing tests, and full stack traces for the failure - I should investigate or open an [issue](https://github.com/cucumber/cucumber-ruby/issues/new)
+
+p.p.s. opened [one](https://github.com/cucumber/cucumber-ruby/issues/1094)
