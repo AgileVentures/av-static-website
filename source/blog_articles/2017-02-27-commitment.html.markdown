@@ -1,12 +1,19 @@
+---
+title: Commitment
+date: 2017-02-27
+tags: kick-off meeting, user story, tickets, scrum, sprint, agile
+author: Sam Joseph
+---
+
 Urgh, another mild cold :-( but a productive few days.  We had our new style WebSiteOne kick-off meeting on Friday following Michael's suggestion that we re-start the meetings, but that we each bring up to three tickets that we care about; rather than just working through whichever tickets are in the backlog.  This approach came out of discussions around the AgileBookClub podcast, with an emphasis on focusing on the "business" value associated with each ticket.  I chose the following tickets:
 
-* [add tooltips for "upgrade to mob" to explain and/or add info buttons](https://github.com/AgileVentures/WebsiteOne/issues/1530)
-* [adjust initial messaging](https://github.com/AgileVentures/WebsiteOne/issues/1555)
-* [adjusting how "next scrum" is displayed to new users](https://github.com/AgileVentures/WebsiteOne/issues/1554)
+* [Add tooltips for "upgrade to mob" to explain and/or add info buttons](https://github.com/AgileVentures/WebsiteOne/issues/1530)
+* [Adjust initial messaging](https://github.com/AgileVentures/WebsiteOne/issues/1555)
+* [Adjusting how "next scrum" is displayed to new users](https://github.com/AgileVentures/WebsiteOne/issues/1554)
 
 while Michael chose the following:
 
-* [change call to action button verbiage](https://github.com/AgileVentures/WebsiteOne/issues/1560)
+* [Change call to action button verbiage](https://github.com/AgileVentures/WebsiteOne/issues/1560)
 * [Alternatives to google hangouts for pairing and scrums](https://github.com/AgileVentures/WebsiteOne/issues/1487)
 * [Convert Sign up links into big, orange buttons](https://github.com/AgileVentures/WebsiteOne/issues/1523)
 
