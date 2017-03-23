@@ -1,7 +1,7 @@
 ---
 title: Distracted
 date: 2017-03-02
-tags: feedback, tech test, interview
+tags: ERB, Slack, Email, Phone, Views, Rails, Refactoring
 author: Sam Joseph
 ---
 
