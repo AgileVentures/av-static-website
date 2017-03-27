@@ -1,11 +1,13 @@
 ---
 title: Multiple Pull Request Learning
 date: 2016-11-15
-tags: performance REST features cucumbers focus twitter social media analysis technical debt
+tags: performance, REST, features, cucumber, focus ,twitter, social media, analysis, technical debt
 author: Sam Joseph
 ---
 
-I didn't get much solo or pair time coding today. It was a day of helping Premium member's with bug fixes and reviewing pull requests.  The "Martin Fowler" scrum was crowded and brought up various requests for help, support and review.  I started by creating a hangout to look at Sasha's WSO pull request to check whether YouTube videos were valid before tweeting them.  Sasha was concerned whether he'd sandboxed correctly, and I explained the `@vcr` tag we had that meant individual VCR cassettes weren't necessary.  More interestingly we were seeing that the tweets going out were slightly out of sync with their messages.  Sasha was investigating the issue of invalid YouTube links going into the tweets:
+![learning](/images/learn.jpg)
+
+I didn't get much solo or pair time coding today. It was a day of helping Premium members with bug fixes and reviewing pull requests.  The "Martin Fowler" scrum was crowded and brought up various requests for help, support and review.  I started by creating a hangout to look at Sasha's WSO pull request to check whether YouTube videos were valid before tweeting them.  Sasha was concerned whether he'd sandboxed correctly, and I explained the `@vcr` tag we had that meant individual VCR cassettes weren't necessary.  More interestingly we were seeing that the tweets going out were slightly out of sync with their messages.  Sasha was investigating the issue of invalid YouTube links going into the tweets:
 
 ![AV tweets](https://www.dropbox.com/s/845stvx878zuumo/Screenshot%202016-11-15%2009.23.27.png?dl=1)
 
@@ -36,7 +38,7 @@ Feature: Tweeting Live Events
     Then an appropriate tweet has been sent # e.g. see recording
 ```
 
-Sasha asked the important question of did we really want to be posting all this stuff to Twitter.  I guess the motivation is that by posting hangouts, live streams and videos to Twitter then we increase the chances that people will watch out videos and join our hangouts.  Looking at my YouTube traffic report for the last year I see that 5.3% of watch time on my video account comes from Twitter:
+Sasha asked the important question of did we really want to be posting all this stuff to Twitter?  I guess the motivation is that by posting hangouts, live streams and videos to Twitter then we increase the chances that people will watch out videos and join our hangouts.  Looking at my YouTube traffic report for the last year I see that 5.3% of watch time on my video account comes from Twitter:
 
 ![pie chart](https://www.dropbox.com/s/z66n3h4046zp3oi/Screenshot%202016-11-15%2009.32.54.png?dl=1)
 
@@ -96,12 +98,11 @@ Percentage of the requests served within a certain time (ms)
  100%   3186 (longest request)
 ```
 
-This was a very rough test and not really fair on drie since we'd just used both the apps, so Heroku was awake and didn't suffer a start up cost.  But drie currently sleeps their "push" apps every 30 seconds, which explains the variance and means we would suffer the slow start up costs much more frequently.  I was able to take that data to discuss with the drie folks in our regular catch up meeting.  No sooner was that done that I was on a bug hunt with new Premium member Rose, identifying issues with seed files and cucumber tests.  After we got the BURideShare cukes green, I took a quick pass through an [updated Redeemify pull request](https://github.com/strawberrycanyon/redeemify/pull/43) which had been updated really nicely.  
+This was a very rough test and not really fair on drie since we'd just used both the apps, so Heroku was awake and didn't suffer a start up cost.  But drie currently sleeps their "push" apps every 30 seconds, which explains the variance and means we would suffer the slow start up costs much more frequently.  I was able to take that data to discuss with the drie folks in our regular catch up meeting.  No sooner was that done that I was on a bug hunt with new Premium member Rose, identifying issues with seed files and Cucumber tests.  After we got the BURideShare cukes green, I took a quick pass through an [updated Redeemify pull request](https://github.com/strawberrycanyon/redeemify/pull/43) which had been updated really nicely.  
 
 I was trying to get a handle also on the new SHF-project, reviewing the new [CONTRIBUTING.md](https://github.com/AgileVentures/shf-project/blob/develop/CONTRIBUTING.md) from Ashley and then joining a hangout with Ashley and Susanna who were discussing a [pull request](https://github.com/AgileVentures/shf-project/pull/22).  Susanna was keen to get it pulled in after having followed one set of advice from one mentor, but Ashley was concerned that things were getting too complex, and I was inclined to agree with her.  I offered what advice I could and then had to go to supper.  Bottom line is that it's okay to accrue technical debt from things like using non-RESTful controller methods, but it's good to be aware that you're doing that and that you'll pay a price later on.  If you've got to move fast right now then guidelines can be ignored, but short term speed has to be balanced against long term progress.
 
 In summary a productive day I think, although I didn't spend much time focused on one thing.  Great to see so many active projects on AgileVentures, and so much learning arising from all the pull requests coming in.  We just need lots more of this and lots of processes in place to ensure my head doesn't spin off trying to keep track of it all :-)
-
 
 ###Related Videos:
 
