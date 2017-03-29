@@ -1,7 +1,7 @@
 ---
 title: Analytics Visualization
 date: 2017-03-07
-tags: 
+tags: adwords, UI, UX, design, agile, copy, survivable experiment, feedback
 author: Sam Joseph
 ---
 
