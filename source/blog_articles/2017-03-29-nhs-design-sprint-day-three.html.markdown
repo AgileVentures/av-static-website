@@ -27,8 +27,8 @@ The diagram focusing on how the commissioner interacts with the materials and in
 
 The rest of the team had to go, so that left Brendan and I, and I pushed us through the remaining activities.  Again it would have been great for more of the team to be involved, but we did our best; generating "How Might We ..." questions on post it notes, arranging them in categories on the wall, and then voting on them and placing them on the maps:
 
-![](https://www.dropbox.com/s/j5yn7r0l78vnovc/hmw_notes_on_wall.JPG?dl=1)
+![](https://www.dropbox.com/s/j5yn7r0l78vnovc/hmw_notes_on_wall_portrait.jpg?dl=1)
 
-![](https://www.dropbox.com/s/htsfa2h1zy7sy9x/hmw_on_maps.jpg?dl=1)
+![](https://www.dropbox.com/s/htsfa2h1zy7sy9x/hmw_on_maps_portrait.jpg?dl=1)
 
 It was slightly artificial and I was realising that ideally we'd have had the input of a lot more experts (G.P.s, Patient Champions, Commissioners etc.) before doing this HMW phase, but we were working within the constraints we had.  Either way it seemed clear we were targetting a system that had to be transparent in terms of usability of finding relevant information and editing it.  It also seemed to me that part of the problem we were solving was just creating a framework for the HLP organisation itself to manage it's information and resources in collaboration with a wider group of stakeholders.  If we could start with something that worked for HLP, we'd be half the way there, so I sat down with Brendan and starting looking at different online wiki solutions with him, recording the process using a quicktime screen recording.
