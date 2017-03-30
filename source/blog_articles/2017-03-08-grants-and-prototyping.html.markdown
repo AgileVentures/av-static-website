@@ -1,11 +1,11 @@
 ---
 title: Grants and Prototyping
 date: 2017-03-08
-tags: adwords, UI, UX, design, agile, copy, survivable experiment, feedback
+tags: UI, UX, design, grants, funding, rejection, feedback, design sprint, invision
 author: Sam Joseph
 ---
 
-![balance](/images/grants.png)
+![balance](/images/grants.jpg)
 
 So my taking one thing off my desk a day is at least keeping my desk in a steady state rather than becoming completely overwhelemed with pieces of paper.  I still haven't thrown out my old filing cabinet, and I got caught by Slack/Email before getting down to this blog ... urgh.  One day at a time on the ever present moment path to enlightement :-)  Anyhow, my generally despondent feelings about applying for grants were not buoyed by us failing to get the Nelson Mandela Children's Hospital Website and Intranet project.  I think I spent about 4 or 5 hours on that last week.  A good learning experience for Pat, Lara and myself, and certainly worth going for, as landing it would have made a huge difference to our community.  Good preparation for subsequent bids, but a bit deflating coming hot on the heels of another bid failure from the previous Thursday.  I've now got a couple of other micro-bids on my plate, but I fear they might be distractions from the one larger project that by itself will probably sort my financial worries.
 
