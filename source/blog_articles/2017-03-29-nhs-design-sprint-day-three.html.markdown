@@ -8,7 +8,7 @@ So I realise that the sequencing on these sprint blogs is kind of off kilter, si
 
 We had a meeting room from 10:30am-2:00pm, and I was just pondering what to do, when we were joined by Charlotte and Jason, two other members of the Healthy London Partnership team.  Serendipitously this seemed to match perfectly with continuing the day one agenda of asking the experts.  It would have been great to have Charlotte, Jason and others involved in the entire Sprint, but since that wasn't possible, getting their input on the Goal, Risks and Maps that Brendan and I had generated the previous day would be critical.  We had time for Jason and Charlotte to introduce themselves and explain their roles in the organisation, when the Decider Shaun joined us and we flowed into showing the full team what we had generated the previous day.
 
-Brendan and I had struggled with a good summary sentence of the overall goal the previous day, but Shaun nailed it immediately with "Empowering patients and Enabling communities to take control".  We seemed to be on the same page as far as the high level goal was concerned.  We talked the group through the risks, which they concurred with, and they added some more including:
+Brendan and I had struggled with a good summary sentence of the overall goal the previous day, but Shaun nailed it immediately with "Empowering people and enabling communities to take control".  We seemed to be on the same page as far as the high level goal was concerned.  We talked the group through the risks, which they concurred with, and they added some more including:
 
 * Experience of system is poor or too cluttered
 * Policy fatigue on the part of the Comissioners
