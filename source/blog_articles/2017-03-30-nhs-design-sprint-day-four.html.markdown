@@ -42,3 +42,24 @@ where we were able to create a wiki, but for some reason our posted comments wou
 The discussions so far had made it clear to me that HLP staff were also key end-users of the imagined solution, so seeing Brendan (an HLP staff member) trying to navigate these wiki environments was very interesting.  We were getting blocked from signing up to some of the solutions as I couldn't receive my email over the NHS wireless, but we were able to try Tettra, which had a really nice clean interface
 
 ![](https://www.dropbox.com/s/88nk1nwpyvdc4lm/Screenshot%202017-03-30%2010.23.22.png?dl=1)
+
+wikidot (couldn't easily add image, we went back to Tettra where is was pretty straightforward)
+
+![](https://www.dropbox.com/s/fe5pw87f6bbf2ca/Screenshot%202017-03-31%2009.16.00.png?dl=1)
+
+PbWorks
+
+![](https://www.dropbox.com/s/74xnvyany1dzhxm/Screenshot%202017-03-31%2009.22.30.png?dl=1)
+
+Nuclino
+
+![](https://www.dropbox.com/s/pbauj6vdnw45jy9/Screenshot%202017-03-31%2009.19.54.png?dl=1)
+
+Confluence
+
+![](https://www.dropbox.com/s/9wzt2ogq6xdqlpl/Screenshot%202017-03-31%2009.19.14.png?dl=1)
+
+
+ExoPlatform we couldn't work out how to make a wiki ...
+
+iMeet I don't think we got past creating a workspace
