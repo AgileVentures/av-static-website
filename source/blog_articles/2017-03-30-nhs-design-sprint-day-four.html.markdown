@@ -1,6 +1,6 @@
 I'm getting a bit punch drunk keeping up with all the different AgileVentures projects and driving the NHS design sprint forward at the same time, as well as doing all the admin and legal stuff to get the NHS contracts all sorted before the end of the financial year, which is tomorrow.  I've just about managed to stay on top of the LocalSupport project, but my check ins on the AsyncVoter and Redeemify projects did little more than serve to remind me of the places we are blocked, or I am blocking things.
 
-On Redeemify we're stuck with CodeClimate not working on our pull requests, and no production environment setup.  On AsyncVoter we need to complete the move from Digital Ocean to Azure hosting.  I think I'm going to have to empower some new project managers will greater devops rights to move those projects forward.  On the NHS project we'd wrapped up Tuesday starting to work through with Brendan on some of the different hosted wiki platforms.  The idea is that this was part of the design sprint day two "lightning demos" where we look at great solutions from a range of companies.  Ideally every member of the sprint team is bringing examples from a wide range of sources and industries.  I can ask Brendan to prepare some going forward, but here's where the lack of members in our sprint team is a real handicap.
+On Redeemify we're stuck with CodeClimate not working on our pull requests, and no production environment setup.  On AsyncVoter we need to complete the move from Digital Ocean to Azure hosting.  I think I'm going to have to empower some new project managers will greater devops rights to move those projects forward.  On the NHS project we'd wrapped up Tuesday starting to work through with Brendan on some of the different hosted wiki platforms.  The idea is that this was part of the design sprint day two "lightning demos" where we look at great solutions from a range of companies.  Ideally every member of the sprint team would be bringing examples from a wide range of sources and industries.  I can ask Brendan to prepare some going forward, but here's where the lack of members in our sprint team is a real handicap.
 
 At least over the remainder of Tuesday and then during Wednesday morning on Skype we managed to review a good 10 or so hosted wiki solutions.  We paused briefly Wednesday morning to get the timeline straight for the project and the next few days.  The original "tender" had included an aggressive timeline, but our selection as vendor had been delayed.  Brendan and I came up with this adjusted timeline based on that delay and the upcoming public holidays:
 
@@ -27,37 +27,37 @@ We looked at eleven different wiki hosting services including:
 
 We worked through the first few with Brendan driving.  Here's us trying to add comments to a wikispaces wiki:
 
-![](https://www.dropbox.com/s/hn9zulbam61b4pp/Screenshot%202017-03-30%2010.19.20.png?dl=1)
+![failing to see added comments on wikispaces wiki](https://www.dropbox.com/s/hn9zulbam61b4pp/Screenshot%202017-03-30%2010.19.20.png?dl=1)
 
 where we were able to create a wiki, but for some reason our posted comments would not show up.   As we moved through the different solutions I started to see a pattern emerging in terms of a kind of activity script.
 
 1. Create a new page
-2. edit the page
+2. Edit the page
 3. Add a heading
 4. Add a list
 5. Add a document
 6. Add (and resize) an image
 7. Add a comment
 
-The discussions so far had made it clear to me that HLP staff were also key end-users of the imagined solution, so seeing Brendan (an HLP staff member) trying to navigate these wiki environments was very interesting.  We were getting blocked from signing up to some of the solutions as I couldn't receive my email over the NHS wireless, but we were able to try Tettra, which had a really nice clean interface
+The discussions so far had made it clear to me that HLP staff were also key end-users of the imagined solution, so seeing Brendan (an HLP staff member) trying to navigate these wiki environments was very interesting.  We were getting blocked from signing up to some of the solutions as I couldn't receive my email over the NHS wireless, but we were able to try Tettra, which had a really nice clean interface, reminiscent of the medium blogging tool.
 
-![](https://www.dropbox.com/s/88nk1nwpyvdc4lm/Screenshot%202017-03-30%2010.23.22.png?dl=1)
+![Tettra's interface, reminiscent of the medium blogging tool](https://www.dropbox.com/s/88nk1nwpyvdc4lm/Screenshot%202017-03-30%2010.23.22.png?dl=1)
 
-wikidot (couldn't easily add image, we went back to Tettra where is was pretty straightforward)
+Then we tried wikidot where we found that the process of adding an image was somewhat laborious:
 
-![](https://www.dropbox.com/s/fe5pw87f6bbf2ca/Screenshot%202017-03-31%2009.16.00.png?dl=1)
+![Trying to add images with wikidot](https://www.dropbox.com/s/fe5pw87f6bbf2ca/Screenshot%202017-03-31%2009.16.00.png?dl=1)
 
-PbWorks
+We went back to Tettra to see how adding an image was there and it was pretty straightforward.  Next we tried PbWorks, where the interface was a little busier than Tettra, but there was good support for re-sizing an image:
 
-![](https://www.dropbox.com/s/74xnvyany1dzhxm/Screenshot%202017-03-31%2009.22.30.png?dl=1)
-
-Nuclino
-
-![](https://www.dropbox.com/s/pbauj6vdnw45jy9/Screenshot%202017-03-31%2009.19.54.png?dl=1)
+![Resized image with PbWorks](https://www.dropbox.com/s/74xnvyany1dzhxm/Screenshot%202017-03-31%2009.22.30.png?dl=1)
 
 Confluence
 
-![](https://www.dropbox.com/s/9wzt2ogq6xdqlpl/Screenshot%202017-03-31%2009.19.14.png?dl=1)
+![Confluence](https://www.dropbox.com/s/pbauj6vdnw45jy9/Screenshot%202017-03-31%2009.19.54.png?dl=1)
+
+Nuclino
+
+![Nuclino](https://www.dropbox.com/s/9wzt2ogq6xdqlpl/Screenshot%202017-03-31%2009.19.14.png?dl=1)
 
 
 ExoPlatform we couldn't work out how to make a wiki ...
