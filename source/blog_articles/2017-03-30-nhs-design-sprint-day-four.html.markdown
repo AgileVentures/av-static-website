@@ -43,7 +43,7 @@ The discussions so far had made it clear to me that HLP staff were also key end-
 
 ![Tettra's interface, reminiscent of the medium blogging tool](https://www.dropbox.com/s/88nk1nwpyvdc4lm/Screenshot%202017-03-30%2010.23.22.png?dl=1)
 
-Then we tried wikidot where we found that the process of adding an image was somewhat laborious:
+The next day we continued with me remote at my home office over Skype with Brendan at NHS headquarters.  We tried wikidot where we found that the process of adding an image was somewhat laborious:
 
 ![Trying to add images with wikidot](https://www.dropbox.com/s/fe5pw87f6bbf2ca/Screenshot%202017-03-31%2009.16.00.png?dl=1)
 
@@ -51,15 +51,16 @@ We went back to Tettra to see how adding an image was there and it was pretty st
 
 ![Resized image with PbWorks](https://www.dropbox.com/s/74xnvyany1dzhxm/Screenshot%202017-03-31%2009.22.30.png?dl=1)
 
-Confluence
+We moved on to Atlassian's wiki confluence, which I was familiar with from my programming background.  I quite liked it, but I sensed that the interface might be a bit busy, given it's usual target audience of tech specialists and programmers.  The problem here was also that I was interacting with the interfaces, and Brendan was just watching over Skype, unlike the day before when I'd been seeing him trying to manage the interfaces himself.  I consoled myself that this was all still really lightning demos.  We were trying to bring some of the possible alternatives into our minds, rather than conducting usability tests per se:
 
-![Confluence](https://www.dropbox.com/s/pbauj6vdnw45jy9/Screenshot%202017-03-31%2009.19.54.png?dl=1)
+![Atlassian's Confluence wiki](https://www.dropbox.com/s/pbauj6vdnw45jy9/Screenshot%202017-03-31%2009.19.54.png?dl=1)
 
-Nuclino
+We also tried Nuclino which had a nice interface following the approach popularised by the Medium blog that Tettra also seemed to follow:
 
-![Nuclino](https://www.dropbox.com/s/9wzt2ogq6xdqlpl/Screenshot%202017-03-31%2009.19.14.png?dl=1)
+![the Nuclino wiki](https://www.dropbox.com/s/9wzt2ogq6xdqlpl/Screenshot%202017-03-31%2009.19.14.png?dl=1)
 
+On the ExoPlatform system we got quite lost in the interface and couldn't work out how to even make an editable wiki.  We tried iMeet and wikia.  On iMeet we didn't get past creating a workspace (I note they've been pinging me every couple of days since with their best shots at drip emails).  And the sign up process in Wiki took a while and ended up getting left in the background. 
 
-ExoPlatform we couldn't work out how to make a wiki ...
+There's more we could be looking at.  It was frustrating that we lost half an hour to trying Skype and Hangouts at the beginning of my remote day.  The NHS firewall appears to block Skype and maybe hangouts.  When I saw Brendan's laptop the next day it seemed like it might just have been wifi connectivity issues that might have been solved by plugging into a hard LAN cable.  The setup at NHS headquarters is interesting.  Open plan offices with flat screen tvs showing the BBC news channel.  Lots of meeting rooms with no computers in.  Staff work at their computers in the open plan office, but then leave their computers to go meet in rooms where they can have discucssions without disturbing their co-workers.  Or make phone calls where they can only talk, but not show.  From my point of view this would be extraordinarily frustrating.  The meetings and discussions taking place in the absence of the digital tools (the laptops) where you can really show each other things or collaborate on specifics.  Some meeting rooms appear to have expensive remote meeting systems in them, which is ironic when they could be using Skype or Hangouts for free.
 
-iMeet I don't think we got past creating a workspace
+That said, I can see that a large government organisation would be inclined to pay for a "it just works" remote meeting system, when Skype and Hangouts require a fair amount of technical know how and support.  Naturally NHS England will be very concerned about the security of all their systems.  It's just a funnily different world than I'm used to where the computer is the primary conduit for both work and conversation.  The team had been interested when I'd shown them Slack the previous day.  I guess we'll see if we can shoehorn some of the benefits of modern digital working into their workplace.
