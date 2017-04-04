@@ -19,7 +19,7 @@ and another from Brendan having reflected overnight that politics with a small "
 
 Next we took the group through the diagrams we had generated the previous day, which was particularly revealing.  As I explained the way that a commissioner who had been convinced to implement SP/SC might put out a tender to get bids from multiple SP service providers, Shaun indicated that maybe that shouldn't be a competitive process.  Maybe it would work better if it was collaborative.  He also pointed out that G.P.s and Patients/Carers could be ambassadors for the programs.  Patients and Carers could be petitioning G.P.s to use social prescribing in their areas, leading to G.P.s to petition Commissioners. And indeed it could be the Service Providers and Community Resource Providers who were collaborating to petition the commissioners, along with the G.P.s.  I added in arrows for these potential interactions:
 
-![](https://www.dropbox.com/s/ikj26czyg78kf2r/updated_map.jpg?dl=1)
+![Social Prescription Implementation Map Updated with more input](https://www.dropbox.com/s/ikj26czyg78kf2r/updated_map.jpg?dl=1)
 
 Interestingly I got even more feedback on different models showing the diagram to Steve of Capable Communities that evening.  He's managed to draw down money from central government to implement a Social Prescribing system in my local area (Harrow) without having to go through the process of convincing the commissioners at the CCG to release funds for the program.  He's now working with the CCG and the local G.P.s, but brought the funds by collaborating with the local authority.  Fascinating how these box and arrow diagrams can draw out the different approaches to the problem.
 
@@ -27,8 +27,8 @@ The diagram focusing on how the commissioner interacts with the materials and in
 
 The rest of the team had to go, so that left Brendan and I, and I pushed us through the remaining activities.  Again it would have been great for more of the team to be involved, but we did our best; generating "How Might We ..." questions on post it notes, arranging them in categories on the wall, and then voting on them and placing them on the maps:
 
-![](https://www.dropbox.com/s/j5yn7r0l78vnovc/hmw_notes_on_wall_portrait.jpg?dl=1)
+![Categorised "How Might We" post-it notes](https://www.dropbox.com/s/j5yn7r0l78vnovc/hmw_notes_on_wall_portrait.jpg?dl=1)
 
-![](https://www.dropbox.com/s/htsfa2h1zy7sy9x/hmw_on_maps_portrait.jpg?dl=1)
+!["How Might We" notes added to implementation map](https://www.dropbox.com/s/htsfa2h1zy7sy9x/hmw_on_maps_portrait.jpg?dl=1)
 
 It was slightly artificial and I was realising that ideally we'd have had the input of a lot more experts (G.P.s, Patient Champions, Commissioners etc.) before doing this "HMW" phase, but we were working within the constraints we had.  Either way it seemed clear we were targetting a system that had to be transparent in terms of usability of finding relevant information and editing it.  It also seemed to me that part of the problem we were solving was just creating a framework for the HLP organisation itself to manage it's information and resources in collaboration with a wider group of stakeholders.  If we could start with something that worked for HLP, we'd be half the way there, so I sat down with Brendan and starting looking at different online wiki solutions with him, recording the process using a quicktime screen recording.  More on those in tomorrow's blog!
