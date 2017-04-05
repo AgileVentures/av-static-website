@@ -1,3 +1,12 @@
+---
+title: Hangouts Filling Up
+date: 2017-03-14
+tags: organisation, planning, administriva, Slack, twitter
+author: Sam Joseph
+---
+
+![sprinting](/images/full.jpg)
+
 Monday saw full hangouts for the "Martin Fowler" and "Kent Beck" scrums.  It was at least partly because SUNY Binghamton students were coming in to vote as part of their class assignment, but also the return of previous regulars such as Tong Wei and Raphael.  Also contributing was the running of the LocalSupport kick off in the latter scrum, which brought in three Kenyan developers.  Great to be having busy hangouts - allowing lots of new folks to see aspects of the Agile scrum process and planning poker with Arreche's great Slack voting app. 
 
 It's great to be able to support the students but it does come with a cost, and it's pretty rare that university students who participate as part of an assignment will come back to contribute further, although perhaps I'm seeing the world without rose-tinted glasses today.  I feel a negative haze on my vision at the moment.  Nasty cough almost gone but dragging into a third week, beating myself up about subbing decisions when coaching the weekend football game, feeling like I should be able to awaken to the moment and drop the illusion on the self.  Scrabbling for grants for tiny amounts of money.  Working really hard but not earning any money.  
