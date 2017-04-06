@@ -1,7 +1,7 @@
 ---
 title: Hangouts Filling Up
 date: 2017-03-14
-tags: organisation, planning, administriva, Slack, twitter
+tags: scrum, UX, hangouts, finances, slack, usability
 author: Sam Joseph
 ---
 

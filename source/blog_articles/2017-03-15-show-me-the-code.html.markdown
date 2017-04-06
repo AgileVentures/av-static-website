@@ -1,3 +1,13 @@
+---
+title: Show me the Code
+date: 2017-03-15
+tags: elixir, udemy, ruby, Stephen Grider, Avdi Grimm, lambdas, instance variables, state manipulation, object oriented, functional
+author: Sam Joseph
+---
+
+![sprinting](/images/code.jpg)
+
+
 Federico made a comment on one of my recent blogs:
 
 > code_in_blog == good
@@ -46,7 +56,7 @@ The interesting thing was that having refactored this far in his "receive polici
 
 > At this point this example is clearly getting a little bit strained. And in general, code like this is probably a smell. There are some programming languages in which it is perfectly normal to pass lots of lambdas into methods, but in Ruby we typically try to Wnd more object-oriented approaches to composing behavior.
 
-Now the connection between the two chunks of code is strained.  In some ways I was just picking up on what looks like a similarity in some of the symbols in the two languages.  Actually here what might seem like a similarity is actually two different things.  Elixir's `case` statement is using `->` to indicate the cases, whereas Ruby is using it to specify anonymous lambdas.  That said, elements of case statements are perhaps best described as anonymous lambdas?  Confused, well, let me transcribe the Elixir code into Ruby:
+Now admittedly the connection I'm making between the Elixir and Ruby code is strained.  In some ways I was just picking up on what looks like a similarity in some of the symbols in the two languages.  Actually here what might seem like a similarity is in fact two different things.  Elixir's `case` statement is using `->` to indicate the cases, whereas Ruby is using it to specify anonymous lambdas.  That said, elements of case statements are perhaps best described as anonymous lambdas?  Confused, well, let me transcribe the Elixir code into Ruby:
 
 
 ```rb
@@ -138,9 +148,9 @@ where we're using pattern matching to extract the hex part of the struct (the `i
 %Identicon.Image{image | grid: grid}
 ```
 
-What really strikes me here (apart from a possible refactoring) that I'll go into in another blog, is that instance variables just seem completely unecessary.  I've known for a while that the functional programmers eschew them, and we have heuristics in OO languages to avoid allowing unecessary state manipulation (e.g. preferring instance variables set up in an initializer rather than via accessors), but the breakthrough for me here is to see that we can still do all the OO domain modelling with structs.  We can even create a set of methods and procedures that are tied to working with those structs, but we can still get everything we usually get done without using any instance variables.  This does seem extraordinarily powerful.  Maybe I'm drinking the Kool-Aid, but I can't now think of a circumstance where we have to use an instance variable.
+What really strikes me here (apart from a possible refactoring) that I'll go into in another blog, is that instance variables just seem completely unecessary.  I've known for a while that the functional programmers eschew them, and we have heuristics in OO languages to avoid allowing unecessary state manipulation (e.g. preferring instance variables set up in an initializer rather than via accessors), but the breakthrough for me here is to see that we can still do all the OO domain modelling with structs.  We can even create a set of methods and procedures that are tied to working with those structs, but we don't seem to lose anything we really need as a result of losing instance variables.  This does seem extraordinarily powerful.  Maybe I'm drinking the Kool-Aid, but I can't now think of a circumstance where we have to use an instance variable.
 
-Also, the fact that in Rails, active record models have this complexity, where they can get out of sync with the database due to their instance state, is tricky and hugely confusing for learning developers.  I suspect that problem completely disappears in Elixir/Phoenix.  Not that Rails isn't great for many reasons, but I'd love someone to show me a real world coding problem that couldn't be addressed without instance variables (assuming no memory constraints).  It also seems to be you could code the Elixir way in Ruby by just refraining from using instance variables.  I start to wonder if parts of our CS educational OO edifice are just completely unnecessary and surplus to requirement, specifically "instance variables".  [Tweet me](https://twitter.com/tansakuu) with counter examples!   Let's get to the bottom of this! :-)
+Also, the fact that in Rails, active record models have this complexity, where they can get out of sync with the database due to their instance state, is tricky and hugely confusing for learning developers.  I suspect that problem completely disappears in Elixir/Phoenix.  Not that Rails isn't great in so many ways, but I'd love someone to show me a real world coding problem that couldn't be addressed without instance variables (assuming no memory constraints).  It also seems to be you could code the Elixir way in Ruby by just refraining from using instance variables.  I start to wonder if parts of our CS educational OO edifice are just completely unnecessary and surplus to requirement, specifically "instance variables".  [Tweet me](https://twitter.com/tansakuu) with counter examples!   Let's get to the bottom of this! :-)
 
 
 
