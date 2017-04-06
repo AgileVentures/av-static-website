@@ -1,8 +1,8 @@
 Federico made a comment on one of my recent blogs:
 
-> code in blog == good
+> code_in_blog == good
 
-I wish I was coding more.  I am getting to do some code in the Premium mobbing sessions.  My productions coding efforts are snatched betweeen meetings with me throwing up spikes to give myself bugs (in my feature branches) to fix and drive myself forward.  I have got quite excited about starting to code in Elixir.  Stephen Grider very kindly made his Udemy course available to Premium Mob members, and it's super high quality.   It's what I would love to see more MOOCs evolving towards.  Stephen has all the code in his [repo on GitHub](https://github.com/StephenGrider/ElixirCode), where we can see code like this from his initial example Elixir app for playing Cards:
+I wish I was coding more.  I am getting to do some code in the Premium mobbing sessions.  My productive coding efforts are snatched between meetings with me throwing up spikes to give myself bugs (in my feature branches) to fix and drive myself forward.  I have got quite excited about starting to code in Elixir.  Stephen Grider very kindly made his Udemy course available to Premium Mob members, and it's super high quality.   It's what I would love to see more MOOCs evolving towards.  Stephen has all the code in his [repo on GitHub](https://github.com/StephenGrider/ElixirCode), where we can see code like this from his initial example Elixir app for playing Cards:
 
 ```ex
   def load(filename) do
@@ -46,7 +46,7 @@ The interesting thing was that having refactored this far in his "receive polici
 
 > At this point this example is clearly getting a little bit strained. And in general, code like this is probably a smell. There are some programming languages in which it is perfectly normal to pass lots of lambdas into methods, but in Ruby we typically try to Wnd more object-oriented approaches to composing behavior.
 
-Now the connection between the two chunks of code is strained.  In some ways I was just picking up on what looks like a similarity in some of the symbols in the two languages.  Actually here what might like seem like a similarity is actually two different things.  Elixir's `case` statement is using `->` to indicate the cases, whereas Ruby is using it to specify anonymous lambdas.  That said, elements of case statements are perhaps best described as anonymous lambdas?  Confused, well, let me transcribe the Elixir code into Ruby:
+Now the connection between the two chunks of code is strained.  In some ways I was just picking up on what looks like a similarity in some of the symbols in the two languages.  Actually here what might seem like a similarity is actually two different things.  Elixir's `case` statement is using `->` to indicate the cases, whereas Ruby is using it to specify anonymous lambdas.  That said, elements of case statements are perhaps best described as anonymous lambdas?  Confused, well, let me transcribe the Elixir code into Ruby:
 
 
 ```rb
@@ -78,7 +78,7 @@ Part of what got me connecting all this up was that Ruby was throwing some of th
 Errno::ENOENT: No such file or directory @ rb_sysopen - .gitignoreasda
 ```
 
-When we were playing with the Elixir code in the mob I was seeing the unused `_reason` variable was being set to :enoent when the file didn't exist, which gave me an idea for refactoring this snippet of Elixir code like so:
+When we were playing with the Elixir code in the mob, I was seeing that the unused `_reason` variable was being set to :enoent when the file didn't exist, which gave me an idea for refactoring this snippet of Elixir code like so:
 
 ```ex
   def load(filename) do
@@ -126,7 +126,7 @@ in almost the inverse fashion that Ruby modules are collections of methods divor
   end
 ```
 
-This Elixir method is designed to work with a particular Elixir struct, specifically the Identicon.Image defined above, but there are no instance variables in Elixir so all data comes in from the method arguments and then gets passed out the return statement.  I know there's lots of strange new syntax here if you're not familiar with Elixir, in which case I strongly recommend Stephen's course, but the thing I want to focus on here is the the process of assignment from the argument struct to a local method variable:
+This Elixir method is designed to work with a particular Elixir struct; specifically the Identicon.Image defined above, but there are no instance variables in Elixir so all data comes in from the method arguments and then gets passed out the return statement.  I know there's lots of strange new syntax here if you're not familiar with Elixir, in which case I strongly recommend Stephen's course, but the thing I want to focus on here is the the process of assignment from the argument struct to a local method variable:
 
 ```ex
 %Identicon.Image{hex: hex} = image
@@ -138,9 +138,9 @@ where we're using pattern matching to extract the hex part of the struct (the `i
 %Identicon.Image{image | grid: grid}
 ```
 
-What really strikes me here (apart from a possible refactoring) that I'll go into in another blog, is that instance variables just seem completely unecessary.  I've known for a while that the functional programmers eschew them, and we have heuristics in OO languages to avoid allowing unecessary state manipulation (e.g. preferring instance variable set up in an initializer rather than via accessors), but the breakthrough for me here is to see that we can still do all the OO domain modelling with structs.  We can even create a set of methods and procedures that are tied to working with those structs, but we can still get everything we usually get done without using an instance variables.  This does seem extraordinarily powerful.  Maybe I'm drinking the coolaid, but I can't now think of a circumstance where we have to use an instance variable.
+What really strikes me here (apart from a possible refactoring) that I'll go into in another blog, is that instance variables just seem completely unecessary.  I've known for a while that the functional programmers eschew them, and we have heuristics in OO languages to avoid allowing unecessary state manipulation (e.g. preferring instance variables set up in an initializer rather than via accessors), but the breakthrough for me here is to see that we can still do all the OO domain modelling with structs.  We can even create a set of methods and procedures that are tied to working with those structs, but we can still get everything we usually get done without using any instance variables.  This does seem extraordinarily powerful.  Maybe I'm drinking the Kool-Aid, but I can't now think of a circumstance where we have to use an instance variable.
 
-Also, the fact that in Rails, active record models have this complexity where they can get out of sync with the database due to their instance state is tricky and hugely confusing for learning developers.  I suspect that problem completely disappears in Elixir/Phoenix.  Not that Rails isnt great for many reasons, but I'd love someone to show me a real world coding problem that couldn't be addressed without instance variables (assuming no memory constraints).  It also seems to be you could code the Elixir way in Ruby by just refraining from using instance variables.  I start to wonder if parts of our CS educational OO edifice are just completely unnecessary and surplus to requirement, specifically "instance variables".  [Tweet me](https://twitter.com/tansakuu) with counter examples!   Let's get to the bottom of this! :-)
+Also, the fact that in Rails, active record models have this complexity, where they can get out of sync with the database due to their instance state, is tricky and hugely confusing for learning developers.  I suspect that problem completely disappears in Elixir/Phoenix.  Not that Rails isn't great for many reasons, but I'd love someone to show me a real world coding problem that couldn't be addressed without instance variables (assuming no memory constraints).  It also seems to be you could code the Elixir way in Ruby by just refraining from using instance variables.  I start to wonder if parts of our CS educational OO edifice are just completely unnecessary and surplus to requirement, specifically "instance variables".  [Tweet me](https://twitter.com/tansakuu) with counter examples!   Let's get to the bottom of this! :-)
 
 
 
