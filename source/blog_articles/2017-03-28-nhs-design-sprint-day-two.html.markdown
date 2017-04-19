@@ -23,16 +23,16 @@ The challenge had already been set, of trying to increase the chances that Socia
 
 I suggested that we try and split folks into experts and testers, and those who were only available electronically would give expert input at the beginning of the week, while those who could come in person could test the prototypes that we would generate by the end of the week.  We had a room with two whiteboards, but there was information we couldn't rub off on one, and the wrong kinds of pens, so ultimately we ended up going with sheets of A3 paper as we tried to knock off as much of day one as possible.
 
-![](https://www.dropbox.com/s/4tkxujc3bd75w25/long_term_goal_image.jpg?dl=1)
+![Long Term Goal](https://www.dropbox.com/s/4tkxujc3bd75w25/long_term_goal_image.jpg?dl=1)
 
 Our long term goal didn't boil down into a wonderfully pithy statement, but Brendan and I seemed to be in speaking the same language about what the project might want to achieve.
 
 We generated two pages of "how might we fail" notes:
 
-![](https://www.dropbox.com/s/iaty72ys9211fe2/how_might_we_fail_one_image.jpg?dl=1)
-![](https://www.dropbox.com/s/wen8yxuct4wq5tw/how_might_we_fail_two_image.jpg?dl=1)
+![How we might fail (1)](https://www.dropbox.com/s/iaty72ys9211fe2/how_might_we_fail_one_image.jpg?dl=1)
+![How we might fail (2)](https://www.dropbox.com/s/wen8yxuct4wq5tw/how_might_we_fail_two_image.jpg?dl=1)
 
-I was doing a lot of writing, and Brendan was throwing out lots of ideas - I was adding mine in too.  We had the cart a little before the horse in the sense that we were already stacked towards thinking about a wiki solution that was proposed in the project tender, but either way I was definitely improving my understanding of the the Clinical Commissioning Groups (CCGs) worked within the NHS in order to allocate resources for healthcare.  
+I was doing a lot of writing, and Brendan was throwing out lots of ideas - I was adding mine in too.  We had the cart a little before the horse in the sense that we were already stacked towards thinking about a wiki solution that was proposed in the project tender, but either way I was definitely improving my understanding of how Clinical Commissioning Groups (CCGs) worked within the NHS in order to allocate resources for healthcare.  
 
 We moved on to map-making, identifying key stakeholders.  The first map had a lot:
 
@@ -45,19 +45,19 @@ We moved on to map-making, identifying key stakeholders.  The first map had a lo
 * Social Prescription Service provider
 * G.P.s (General Practitioners --> U.K. doctors)
 
-![](https://www.dropbox.com/s/dgicpsrce70xfze/map_one_image.jpg?dl=1) 
+![First Stakeholder Map](https://www.dropbox.com/s/dgicpsrce70xfze/map_one_image.jpg?dl=1) 
 
-Which we pruned back on a second version:
+Which we pruned back in a second version:
 
-![](https://www.dropbox.com/s/62v1nl8vjb7ktva/map_two_image.jpg?dl=1)
+![Second Stakeholder Map](https://www.dropbox.com/s/62v1nl8vjb7ktva/map_two_image.jpg?dl=1)
 
-We identified the key component of the point of influencing the commissioners, and dove in deeper on that in another map that focused on just the HLP Researcher and the commissioner as stakeholders, and what it would take to have the commissioner become aware of the material, absorb information from it and then actually take action:
+We identified the key component of the point of influencing the commissioners, and dove in deeper on that in another map that focused on just an HLP researcher and the commissioner as stakeholders, and what it would take to have the commissioner become aware of the material, absorb information from it and then actually take action:
 
-![](https://www.dropbox.com/s/pslia27srgxazwg/map_three_image.jpg?dl=1) 
+![HLP Researcher and Commissioner Map](https://www.dropbox.com/s/pslia27srgxazwg/map_three_image.jpg?dl=1) 
 
 Then we ended up with a fourth diagram assuming that other stakeholders could participate in the creation of the materials, which pulled in another Stakeholder - a moderator:
 
-![](https://www.dropbox.com/s/fjvqqyqb906v5q9/map_four_image.jpg?dl=1) 
+![Extended Commissioner influence Map](https://www.dropbox.com/s/fjvqqyqb906v5q9/map_four_image.jpg?dl=1) 
 
 Brendan and I seemed to be making good progress, at least in terms of me better understanding the complexities of the interactions between the different stakeholders.  Given a stronger sprint structure we would now have our experts on tap to come in and be interviewed, talked through our high level goals, notes on how we might fail and associated maps.  However we were still in the process of booking our experts, and our time in the room had ended, so we called that a day.
 
