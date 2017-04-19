@@ -5,7 +5,7 @@ tags: elixir, udemy, ruby, Stephen Grider, Avdi Grimm, lambdas, instance variabl
 author: Sam Joseph
 ---
 
-![sprinting](/images/code.jpg)
+![code](/images/code.jpg)
 
 
 Federico made a comment on one of my recent blogs:

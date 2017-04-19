@@ -5,7 +5,7 @@ tags: scrum, UX, hangouts, finances, slack, usability
 author: Sam Joseph
 ---
 
-![sprinting](/images/full.jpg)
+![full](/images/full.jpg)
 
 Monday saw full hangouts for the "Martin Fowler" and "Kent Beck" scrums.  It was at least partly because SUNY Binghamton students were coming in to vote as part of their class assignment, but also the return of previous regulars such as Tong Wei and Raphael.  Also contributing was the running of the LocalSupport kick off in the latter scrum, which brought in three Kenyan developers.  Great to be having busy hangouts - allowing lots of new folks to see aspects of the Agile scrum process and planning poker with Arreche's great Slack voting app. 
 

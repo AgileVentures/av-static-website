@@ -5,7 +5,7 @@ tags: podcasts, seniors, open source, bootcamps, juniors, jQuery, JavaScript
 author: Sam Joseph
 ---
 
-![sprinting](/images/frameworks.JPG)
+![frameworks](/images/frameworks.JPG)
 
 I listen to a different podcast every morning.  Last Friday it was ["Greater than Code" with Ra’Shaun Stovall (Snuggs)](http://www.greaterthancode.com/podcast/episode-014-rashaun-stovall-snuggs/).  It was pretty mind expanding with quotes and questions like the following:
 

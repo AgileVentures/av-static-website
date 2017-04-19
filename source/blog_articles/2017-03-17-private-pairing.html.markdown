@@ -5,7 +5,7 @@ tags: pair programming, video, recording, youtube, kata, object oriented, rspec,
 author: Sam Joseph
 ---
 
-![sprinting](/images/private-keep-out.jpg)
+![privacy](/images/private-keep-out.jpg)
 
 Where to start? Intense week.  Just finished a one hour private pairing session on the [tennis kata](http://codingdojo.org/kata/Tennis/) with a Ruby programmer I met on the [RailsLink Slack](http://www.rubyonrails.link/).  They were suggesting Vim/Tmux, but we ended up using Hangouts and GitHub pong.  It was a good session and I wish I'd recorded it.  It was very smooth ping pong back and forth, with some good discussion.  I'd asked my pair about recording, but they'd demurred and I didn't push it.  I beat myself up internally, because I feel like it could have been a really great video for bootcamp grads and new AV members to watch.  Unlike other meandering sessions where we're slogging through a legacy codebase, this was more likely something folks could get their head around--a video we might have been able to promote.  However I think we've got to respect people's preferences.  Not everyone wants their activities vidoed and played back, and perhaps that's part of the crux of the issue at AgileVentures.  Maybe the Google Hangout plugins going offline on April 25th will be a blessing rather than a curse, as starting manually from YouTube live actually gives the Hangout creator control over whether to make the video private, unlisted, or public on YouTube.
 
