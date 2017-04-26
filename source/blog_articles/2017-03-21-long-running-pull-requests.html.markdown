@@ -1,6 +1,6 @@
 ---
 title: Long Running PRs
-date: 2017-03-20
+date: 2017-03-21
 tags: https, ssl, story points, sprints, sprint length, block, binding.pry
 author: Sam Joseph
 ---
