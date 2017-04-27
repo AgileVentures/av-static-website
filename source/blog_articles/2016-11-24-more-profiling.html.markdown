@@ -1,16 +1,18 @@
 ---
 title: More Profiling of My Days
 date: 2016-11-24
-tags: eliminate simplify delegate automate premium agile ventures planning prioritising profiling measuring sponsors upgrades communication
+tags: eliminate, simplify, delegate, automate, premium, agile ventures, planning, prioritising, profiling, measuring, sponsors, upgrades, communication
 author: Sam Joseph
 ---
+
+![debugging](/images/measurement.jpg)
 
 So I did a second day of profiling.  The details are as follows:
 
 ```
-09:15 - 10:15 writing blog draft (plus distribution)
+09:15 - 10:15 Writing blog draft (plus distribution)
 
-10:30 - 11:00 reviewing slack and email - promoting mentors and premiums
+10:30 - 11:00 Reviewing slack and email - promoting mentors and Premiums
 
 11:00 - 11:30 Writing emails to potential sponsors
 
@@ -20,9 +22,9 @@ So I did a second day of profiling.  The details are as follows:
 
 12:30 - 12:45 Negotiating with company on potential paid project
 
-12:45 - 13:00 Getting CraftAcademy and PayPal folks into new premium chat instance - notifying Premium Mobs, F2Fs and Pluses about mob programming session
+12:45 - 13:00 Getting CraftAcademy and PayPal folks into new Premium chat instance - notifying Premium Mobs, F2Fs and Pluses about mob programming session
 
-14:15 - 15:15 Fielding questions from Premiums on Slack (got an upgrade to F2F), co-founder 
+14:15 - 15:15 Fielding questions from Premiums on Slack (got an upgrade to F2F), co-founder chat
 
 15:15 - 15:45 PR Review (AsyncVoter, LocalSupport)
 
@@ -33,7 +35,7 @@ So I did a second day of profiling.  The details are as follows:
 18:15 - 18:45 Reviewing ProjectScope PRs
 ```
 
-Reviewing this again with Eliminate, Simplify, Automate, Delegate (ESAD) an early insight was that I could automate the creation of the list or related videos that I drop into the end of each blog.  A tiny saving, but maybe worth it.  Reviewing other elements in turn: Slack and Email - I feel like I really have to do that each day to stay in touch with sponsors, premiums and mentors.  Promoting a new Premium member and a new Premium Mentor involved some manual work on the database, so I created a [ticket on WSO](https://github.com/AgileVentures/WebsiteOne/issues/1300) to cover the details of what might be automated there.  That looks promising. There's a couple of relatively straightforward coding tasks there, although there is also my desire to refactor the charges controller ... my intuition is that there's a double win for that sort of automation when we do it in a live pairing session.  I think it can help when others see into our codebase, and can serve as a potential learning platform.   Not that thousands of people will ever pour over our videos, but it's a chance for me to pair with other AV members and I think we all get value from that.
+Reviewing this again with Eliminate, Simplify, Automate, Delegate (ESAD) an early insight was that I could automate the creation of the list or related videos that I drop into the end of each blog.  A tiny saving, but maybe worth it.  Reviewing other elements in turn: Slack and Email - I feel like I really have to keep up with them each day to stay in touch with sponsors, Premiums and mentors.  Promoting a new Premium member and a new Premium Mentor involved some manual work on the database, so I created a [ticket on WSO](https://github.com/AgileVentures/WebsiteOne/issues/1300) to cover the details of what might be automated there.  That looks promising. There's a couple of relatively straightforward coding tasks there, although there is also my desire to refactor the charges controller ... my intuition is that there's a double win for that sort of automation when we do it in a live pairing session.  I think it can help when others see into our codebase, and can serve as a potential learning platform.   Not that thousands of people will ever pour over our videos, but it's a chance for me to pair with other AV members and I think we all get value from that.
 
 I'm trying to step up writing of emails to potential sponsors after Charles Max Wood of Ruby Rogues talked on the Freelancers show about how that was the critical task that could have the biggest impact that he often didn't get around to.  Don't think I can drop or delegate that yet.  After the scrum I got in a hangout with Matt to unblock him on WebSiteOne.  I burned some time explaining why I don't like the UX of our status feature on WSO.  Maybe that's wasting time, or maybe that's important communication of my values regarding UX design to other team members?  I feel like at least some value was being derived both for WSO and for Matt as we unblocked him and cleared up ambiguity around the latest ticket he was working on.
 

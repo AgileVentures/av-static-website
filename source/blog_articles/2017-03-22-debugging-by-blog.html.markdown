@@ -5,7 +5,7 @@ tags: continuous integration, VCR, PuffingBilly, gitignore
 author: Sam Joseph
 ---
 
-![security](/images/debugging.png)
+![debugging](/images/debugging.png)
 
 Right, on to part 2 of "debugging by blog", my attempt to force myself to work through code blockers while debugging.  Currently it's LocalSupport, where we've had a weird CI failure that wasn't replicated locally for myself or Zmago on our respective machines.  As I poked at it yesterday while "blog debugging" I found that the cached fixture files for VCR and PuffingBilly had been added to .gitignore.  This meant that the CI was hitting the 3rd party endpoints such as Google, Do-It, ReachSkills etc. as part of our CI test runs.  I can see why those folders would get added to .gitignore.  Whenever there is some change in the outgoing network connections from our code, those files will change.  Developers will see all these changes in their `git status` checks and not think them worth checking in.  They may even fully understand that they are creating a network sandbox around our code, but just not want to deal with the hassle of them.
 
