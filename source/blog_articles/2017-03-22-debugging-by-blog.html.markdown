@@ -1,6 +1,15 @@
+---
+title: Debugging by Blog
+date: 2017-03-22
+tags: continuous integration, VCR, PuffingBilly, gitignore
+author: Sam Joseph
+---
+
+![security](/images/debugging.png)
+
 Right, on to part 2 of "debugging by blog", my attempt to force myself to work through code blockers while debugging.  Currently it's LocalSupport, where we've had a weird CI failure that wasn't replicated locally for myself or Zmago on our respective machines.  As I poked at it yesterday while "blog debugging" I found that the cached fixture files for VCR and PuffingBilly had been added to .gitignore.  This meant that the CI was hitting the 3rd party endpoints such as Google, Do-It, ReachSkills etc. as part of our CI test runs.  I can see why those folders would get added to .gitignore.  Whenever there is some change in the outgoing network connections from our code, those files will change.  Developers will see all these changes in their `git status` checks and not think them worth checking in.  They may even fully understand that they are creating a network sandbox around our code, but just not want to deal with the hassle of them.
 
-The danger of not checking them in is that developing a new feature, the cached network responses will be saved on a local developers machine, and then subsequent code changes may not necessarily produce the same outputs if the system was actively connected to the network.  I suspect this is what has happened with Zmago's pull request.  Now that I removed those folders from the .gitignore file and reset the VCR/PuffingBilly fixture caches I am able to replicate the error locally.  Here is the error:
+The danger of not checking them in is that when developing a new feature, the cached network responses will be saved on a local developers machine, and then subsequent code changes may not necessarily produce the same outputs if the system was actively connected to the network.  I suspect this is what has happened with Zmago's pull request.  Now that I removed those folders from the .gitignore file and reset the VCR/PuffingBilly fixture caches I am able to replicate the error locally.  Here is the error:
 
 ```
 [tansaku@Samuels-MBP:~/Documents/Github/AgileVentures/LocalSupport (133663043_add_reachskills_vol_ops)]$ 
@@ -41,7 +50,7 @@ cucumber features/volunteer_opportunities/reachskills_volunteer_opportunities.fe
 0m4.523s
 ```
 
-The problem here is that this test is relying on some data from a ReachSkills opportunity that is no longer on the ReachSkills site.  Updating the volunteer opportunity that is being checked for allows the test to pass.  Now the critical thing is to check the relevant VCR files in along with the test and it should pass on CI.  Irritatingly failing test runs and runs of tests on other branches can generate a lot of noise in the VCR/PuffingBilly caches, so I use the following strategy to get ready for a commit:
+The problem here is that this test is relying on some data from a ReachSkills opportunity that is no longer on the ReachSkills site.  The test passes if I update the details on the volunteer opportunity that is being checked for in the test.  Now the critical thing is to commit the relevant VCR files into git in along with the test and everything should pass on CI.  Irritatingly, failing test runs and runs of tests on other branches can generate a lot of noise in the VCR/PuffingBilly caches, so I use the following strategy to get ready for a commit:
 
 ```
 [tansaku@Samuels-MBP:~/Documents/Github/AgileVentures/LocalSupport (133663043_add_reachskills_vol_ops)]$ 
@@ -54,7 +63,7 @@ The problem here is that this test is relying on some data from a ReachSkills op
 → git checkout features/vcr_cassettes
 ```
 
-although it gets more complicated if some files have already been added or committed.  Then I run the working tests to generate the VCR and PuffingBilly cache files which show up in git status like so:
+Although it does get more complicated than that if some files have already been added or committed.  Then I run the working tests to generate the VCR and PuffingBilly cache files which show up in git status like so:
 
 ```
 [tansaku@Samuels-MBP:~/Documents/Github/AgileVentures/LocalSupport (133663043_add_reachskills_vol_ops)]$ 
@@ -90,9 +99,9 @@ Untracked files:
 	features/vcr_cassettes/Reachskills_volunteer_opportunities/
 ```
 
-which I can now add, and things should pass reliably on CI.  So my original diagnosis of a JavaScript timing issue was incorrect. VCR/PuffingBilly are powerful tools, but it seems rather easy for developers of all skills levels to impale themselves on them.  I'm not sure what the best way forward is.  It reminds me of Donald Norman's "The Design of Everyday Things" in which he points out how an incorrect mental model of something can make its use terribly problematic.  His example is from a fridge thermostat, but I can see exactly the same pattern here.
+which I can now add, and things should pass reliably on CI.  So my original diagnosis of a JavaScript timing issue was incorrect.  VCR/PuffingBilly are powerful tools, but it seems rather easy for developers of all skills levels to impale themselves on them.  I'm not sure what the best way forward is.  It reminds me of Donald Norman's "The Design of Everyday Things" in which he points out how an incorrect mental model of something can make its use terribly problematic.  His example is from a fridge thermostat, but I can see exactly the same pattern here.
 
-The real difficulty in some ways is the interaction between the caching of network interaction and the git version management.  We've got some similar issues on WebSiteOne.  More blogs to come on this I think.  I also wanted to get onto outstanding questions on other PRs from Marouen and Olena, but that will need to wait till tomorrow as it looks like the MOOC might be cranking up to go live and so I'm needing to get alot of things in gear very quickly.  At least blogging about the debugging process is helping ensure that I actually get some sticky things unblocked, rather than just navel gazing about why everything socio-technical processes are so hard :-)
+The real difficulty in some ways is the interaction between the caching of network interaction and the git version management.  We've got some similar issues on WebSiteOne.  More blogs to come on this I think.  I also wanted to get onto outstanding questions on other PRs from Marouen and Olena, but that will need to wait till tomorrow as it looks like the MOOC might be cranking up to go live and so I'm needing to get alot of things in gear very quickly.  At least blogging about the debugging process is helping ensure that I actually get some sticky things unblocked, rather than just navel gazing about why all socio-technical processes seem so hard :-)
 
 
 
