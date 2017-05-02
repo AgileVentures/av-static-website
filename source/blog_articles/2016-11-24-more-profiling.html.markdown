@@ -5,7 +5,7 @@ tags: eliminate, simplify, delegate, automate, premium, agile ventures, planning
 author: Sam Joseph
 ---
 
-![debugging](/images/measurement.jpg)
+![measurement](/images/measurement.jpg)
 
 So I did a second day of profiling.  The details are as follows:
 

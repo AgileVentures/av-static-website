@@ -1,3 +1,12 @@
+---
+title: Pull Request Feedback by Blog
+date: 2017-03-23
+tags: continuous integration, VCR, PuffingBilly, gitignore
+author: Sam Joseph
+---
+
+![feedback](/images/feedback2.jpg)
+
 So in the blogs over the last two days I managed to get to the bottom of the problems on one LocalSupport pull request from a Premium member (Zmago).  It's clear from that experience that I've got to adjust the develop branch so that VCR/PuffingBilly caches are all up to date and correct, or no other developers are going to get a correct read on what's going on with network connections.  I've also got another pull request on a complex three point feature, that I need to spend some concentrated review time on.
 
 Maybe I should have been opening another PR to fix up precisely that issue but I started by pulling down Marouen's "Post Volunteer Opportunities to DoIt" branch locally and re-running it with the caches in place - I opened a PR on that basis - but it went to my old tansaku fork. I really need to disconnect that.
@@ -44,4 +53,4 @@ I made this scrappy mockup to show Marouen what I mean:
 
 I guess I should get input from the client on this, but my intuition is that this will be simpler in terms of our URLs and the workflow for the end user.  The risk is that I'm pushing for changes that will just exhaust Marouen.  The buck stops with me here of course - I should have ensured we provided a mockup earlier, or made sure to check out the PR earlier.  So many PRs, so little time ...
 
-p.s. we got the nhs-wiki tender!
+p.s. we won the nhs-wiki contract!
