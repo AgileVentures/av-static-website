@@ -13,7 +13,7 @@ That last element might seem trivial.  One might be tempted to say, well Wikiped
 So I've got a series of additional training events to run next week, and in the meantime we've got a soft launch scheduled for tomorrow.  To support that we need to get a good subset of the following sorted:
 
 * backups on our mediawiki instance
-* ensure we have a fixed IP
+* ensure we have a fixed IP -> okay because we are CNAMing to the bitnami name ...
 * get SSL set up on our mediawiki instance
 * consider whether we remove the ConfirmAccount plugin (is Moderation sufficient)
 
