@@ -1,9 +1,11 @@
 ---
 title: NHS Design Sprint Day One
 date: 2017-03-27
-tags: wiki, 
+tags: wiki, google, thoughtbot, social prescribing, self care, healthy london partnership, clinical commissioning groups
 author: Sam Joseph
 ---
+
+![design sprint](/images/design_sprint.png)
 
 So I'm heading in to central London again to work on this new UK National Health Service (NHS) wiki contract.  I'd already taken the train south of the river to meet with "Healthy London Partnership" (HLP) staff at NHS headquarters on Friday.  The AgileVentures charity (with support from AV Trustee Steve of Capable Communities and Mina of Enterprise Wellness) put in a proposal on an NHS "invitation to tender" a couple of weeks ago, and we've been awarded the contract.  The NHS headquarters is an imposing building just outside Elephant & Castle underground station, and the work comes from HLP itself which is is a collaborative enterprise of the 32 [Clinical Commissioning Groups (CCGs)](https://en.wikipedia.org/wiki/Clinical_commissioning_group) in London and NHS England (London region), tasked with improving the health of Londoners.
 
