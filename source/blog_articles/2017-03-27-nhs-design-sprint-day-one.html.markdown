@@ -26,6 +26,7 @@ They are concerned about possible legal issues around who can post to the wiki, 
 * 2 weeks: live with collaborative solution
 * 3 months: can see people are using the system - see that people are contributing - see that it works
 * 6 months: starting to see online community - people are responding to each other
+
 * 12 months: understand the broader impact this is having - and we're seeing more SP and SC in London 
 * 36 months: see positive health and finance impacts
 
