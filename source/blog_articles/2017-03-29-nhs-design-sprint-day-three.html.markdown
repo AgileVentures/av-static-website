@@ -5,6 +5,8 @@ tags: wiki, google, thoughtbot, social prescribing, self care, healthy london pa
 author: Sam Joseph
 ---
 
+![design sprint](/images/design_sprint.png)
+
 So I realise that the sequencing on these sprint blogs is kind of off kilter, since I'm writing the blog on the morning of a given design sprint day, and actually talking about what happened the previous day :-/  Also, the normal five day design sprint schedule is being mashed into the available time, so let's relax and go with the flow :-) Yesterday was Tuesday and I was down at NHS headquarters again.  In the last blog we'd left it with me trying to work out whether to continue the day 1 sprint activities into day 2 in order to complete them, or just drop them and move onto the official day 2 activities.  Remaining from day one were:
 
 * [ ] Ask the experts
