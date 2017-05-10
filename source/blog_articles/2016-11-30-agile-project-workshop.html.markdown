@@ -1,9 +1,11 @@
 ---
 title: Agile Project Management for NonProfits
 date: 2016-11-30
-tags: kanban sprint scrum workshop feedback retrospective dryrun planning
+tags: kanban, sprint, scrum, workshop, feedback, retrospective, dry run, planning
 author: Sam Joseph
 ---
+
+![agile](/images/agile.png)
 
 Most of Tuesday was taken up with running a workshop on Agile Project Development for non-profits at the Volunteer Services Center up the road.  This was for Voluntary Action Harrow Cooperative (VAHC), who are the client for the Harrow Community Network site, which uses the LocalSupport software.  Here was the description of the event:
 
@@ -69,7 +71,7 @@ and then we got into the process of starting to generate stories.  This time aro
 * How does Agile planning cope with changing timeframes (1 point)
 * What are the Pros & Cons of Agile vs other methodologies (2 points)
 
-which we prioritised and then worked on each of the first three in separate three teams of three, with me moving between the teams to give help and support.  The really interesting things to come out of the process was to see the attendees answering their own questions and inferring, from the overall Agile process that we were using, how Agile might work for them.  As usual the voting and voting discussion was a critical learning period as we distinguished what we were voting on (complexity/ambiguity rather than priority or delegation), and I think the attendees were getting insights into how just having that discussion could help surface and resolve conflicts.  While the teams were working I got their tickets up on a makeshift Kanban layout on the wall:
+which we prioritised and then worked on each of the first three in three separate teams of three, with me moving between the teams to give help and support.  The really interesting thing to come out of the process was to see the attendees answering their own questions and inferring, from the overall Agile process that we were using, how Agile might work for them.  As usual the voting and voting discussion was a critical learning period as we distinguished what we were voting on (complexity/ambiguity rather than priority or delegation), and I think the attendees were getting insights into how just having that discussion could help surface and resolve conflicts.  While the teams were working I got their tickets up on a makeshift Kanban layout on the wall:
 
 ![kanban layout on wall of meeting room](https://www.dropbox.com/s/tp01dj0jtxdwvfy/non-proft-kanban.jpg?dl=1)
 

@@ -1,11 +1,11 @@
 ---
 title: Agile Workshop
 date: 2016-11-21
-tags: agile manifesto scrum XP kanban opensource principles pullrequests code review pairing 
+tags: agile manifesto, scrum, XP, kanban, opensource, principles, pull requests, code review, pairing 
 author: Sam Joseph
 ---
 
-Friday was mainly consumed with a dry run of an Agile Project management workshop for non-profits and charities.  I've been working closely with Voluntary Action Harrow Cooperative (VAHC) for the last three years on the [Harrow Community Network project](https://www.harrowcn.org.uk) which itself uses the [AgileVentures LocalSupport](https://github.com/AgileVentures/LocalSupport) software
+Friday was mainly consumed with a dry run of an Agile Project management workshop for non-profits and charities.  I've been working closely with Voluntary Action Harrow Cooperative (VAHC) for the last three years on the [Harrow Community Network project](https://www.harrowcn.org.uk) which itself uses the [AgileVentures LocalSupport](https://github.com/AgileVentures/LocalSupport) software:
 
 ![Harrow Community Network Website](https://www.dropbox.com/s/j1n566aoa7hregq/Screenshot%202016-11-21%2009.36.51.png?dl=1)
 
@@ -27,7 +27,7 @@ Any new suggestions from the client are immediately added to the icebox and go t
 
 > Business people and developers must work together daily throughout the project
 
-This can be challenging with a distributed team of developers all around the world.  We broadcast the client meetings via YouTube, and run it in a google hangout that developers are encouraged to join.  Any developer can participate in a client meeting, and can communicate with the client via email.  However as project manager I tend to funnel questions from developers through to the client, and bring them up in the client meeting.  Given the part-time volunteer nature of our project it is difficult to support daily interaction between client and developers; and since we are all developers our "business people" are arguably the client, although we make no strong distinction between devs and non-devs in our distributed team.  Everyone is learning, everyone is participating.
+This can be challenging with a distributed team of developers all around the world.  We broadcast the client meetings via YouTube, and run it in a Google hangout that developers are encouraged to join.  Any developer can participate in a client meeting, and can communicate with the client via email.  However as project manager I tend to funnel questions from developers through to the client, and bring them up in the client meeting.  Given the part-time volunteer nature of our project it is difficult to support daily interaction between client and developers; and since we are all developers our "business people" are arguably the client, although we make no strong distinction between devs and non-devs in our distributed team.  Everyone is learning, everyone is participating.
 
 > Build projects around motivated individuals. Give them the environment and support they need, and trust them to get the job done.
 
@@ -55,7 +55,7 @@ I'm a single point of failure in this project, although two or three others have
 
 > At regular intervals, the team reflects on how to become more effective, then tunes and adjusts its behavior accordingly.
 
-Earlier in the project we had weekly retrospectives, but with few dedicated full timers, these have fallen away.  We've switched from many synchronous standups to more asynchronous voting in group text channels on Slack. The Agile principles are written around the idea of a full time co-located team, and we have adapted them to a volunteer part-time distributed team.  Our adaptations certainly need ongoing review and adjustment.  It's not yet clear how best to ensure reflection. Tuning and adjustment happens frequently enough.
+Earlier in the project we had weekly retrospectives, but with few dedicated full timers, these have fallen away.  We've switched from many synchronous standups to more asynchronous voting in group text channels on Slack. The Agile principles are written around the idea of a full time co-located team, and we have adapted them to a volunteer part-time distributed team.  Our adaptations certainly need ongoing review and adjustment.  It's not yet clear how best to ensure reflection. Tuning and adjustment happens on an adhoc basis at the moment.
 
 Now, getting back to the workshop we dry ran last week; that involved a 90 minute co-located session with a non-technical charity group in which we used the Agile process itself to try to answer the general challenge of better understanding Agile.  I initially presented the Agile Manifesto and talked about related concepts such as scrum, XP and Kanban for a few minutes.  The overall structure, which compressed a two week sprint into 90 minutes was as follows:
 
