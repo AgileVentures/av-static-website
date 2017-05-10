@@ -15,6 +15,7 @@ So I realise that the sequencing on these sprint blogs is kind of off kilter, si
 * [ ] Vote on notes
 * [ ] Pick target
 
+
 We had a meeting room from 10:30am-2:00pm, and I was just pondering what to do, when we were joined by two other members of the Healthy London Partnership team.  Serendipitously this seemed to match perfectly with continuing the day one agenda of asking the experts.  It would have been great to have all of these folks involved in the entire Sprint, but since that wasn't possible, getting their input on the Goal, Risks and Maps that the change manager and I had generated the previous day would be critical.  We had time for our experts to introduce themselves and explain their roles in the organisation, when the "Decider" joined us and we flowed into showing the full team what we had generated the previous day.
 
 The change manager and I had struggled with a good summary sentence of the overall goal the previous day, but the decider nailed it immediately with "Empowering people and enabling communities to take control".  We seemed to be on the same page as far as the high level goal was concerned.  We talked the group through the risks, which they concurred with, and they added some more, including:
