@@ -34,7 +34,11 @@ We looked at eleven different wiki hosting services including:
 * eXoCloud
 * Confluence Hosted
 
-We worked through the first few with the change manager driving.  We were able to create a wikispaces wiki, but for some reason our posted comments would not show up.   As we moved through the different solutions, I started to see a pattern emerging in terms of a kind of activity script.
+We worked through the first few with the change manager driving.  Here's us trying to add comments to a wikispaces wiki:
+
+![failing to see added comments on wikispaces wiki](https://www.dropbox.com/s/hn9zulbam61b4pp/Screenshot%202017-03-30%2010.19.20.png?dl=1)
+
+where we were able to create a wiki, but for some reason our posted comments would not show up.   As we moved through the different solutions, I started to see a pattern emerging in terms of a kind of activity script.
 
 1. Create a new page
 2. Edit the page
@@ -48,11 +52,7 @@ The discussions so far had made it clear to me that HLP staff were also key end-
 
 ![Tettra's interface, reminiscent of the medium blogging tool](https://www.dropbox.com/s/88nk1nwpyvdc4lm/Screenshot%202017-03-30%2010.23.22.png?dl=1)
 
-The next day we continued with me remote at my home office over Skype with the change manager at NHS headquarters.  We tried wikidot where we found that the process of adding an image was somewhat laborious:
-
-![Trying to add images with wikidot](https://www.dropbox.com/s/fe5pw87f6bbf2ca/Screenshot%202017-03-31%2009.16.00.png?dl=1)
-
-We went back to Tettra to see how adding an image was there and it was pretty straightforward.  Next we tried PbWorks, where the interface was a little busier than Tettra, but there was good support for re-sizing an image:
+The next day we continued with me remote at my home office over Skype with the change manager at NHS headquarters.  We tried wikidot where we found that the process of adding an image was somewhat laborious.  We went back to Tettra to see how adding an image was there and it was pretty straightforward.  Next we tried PbWorks, where the interface was a little busier than Tettra, but there was good support for re-sizing an image:
 
 ![Resized image with PbWorks](https://www.dropbox.com/s/74xnvyany1dzhxm/Screenshot%202017-03-31%2009.22.30.png?dl=1)
 
