@@ -1,7 +1,7 @@
 ---
 title: NHS Design Sprint Day Four
 date: 2017-03-30
-tags: wiki, google, thoughtbot, social prescribing, self care, hosting, code climate
+tags: wiki, google, thoughtbot, social prescribing, self care, hosting, code climate, lightning demos
 author: Sam Joseph
 ---
 
