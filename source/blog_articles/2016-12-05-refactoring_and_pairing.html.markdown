@@ -1,15 +1,17 @@
 ---
 title: Refactoring and Pairing
 date: 2016-12-05
-tags: activity controller create credit cucumber custom definitions feature paypal premium refactoring sponsor step subscriptions upgrade communication
+tags: activity, controller, create, credit, cucumber, custom definitions, feature, paypal, premium, refactoring, sponsor, step, subscriptions, upgrade, communication
 author: Sam Joseph
 ---
+
+![refactoring](/images/refactoring.jpg)
 
 So hot on the heels of our first AV member sponsoring other AV members for Premium support, another Premium member was talking about sponsoring some of their co-workers for Premium membership as Xmas gifts!  Now this particular Premium member prefers to pay through Paypal, which we had set up previously.  The Paypal endpoint in the AgileVentures site is just a custom button from the Paypal toolkit, on a custom method in the charges controller.  We'd just thrown that in, unlinked to the rest of the site, to serve as a quick check that the functionality would work and that the individual requesting Paypal payment would actually use it.  That purpose was served admirably and was used by two Premium members; tracer-bullet success!
 
 Now if we wanted to allow more folks to sign up with Paypal, and indeed sponsor other members via Paypal, we had some integration to do.  Not only that, it was clear that the Premium charges controller needed some serious refactoring.  I had originally created the charges controller on a spike, following the instructions in the Stripe documentation for creating a charge on a user credit card.  I'd immediately hooked things up to ensure that the user would be paying for a subscription to a plan.  We'd wrapped that whole functionality in VCR/PuffingBilly sandbox tests and then evolved that to RubyStripeMock, as well as adding the ability to sponsor others, and change credit card details.  We'd also evolved a domain model that started to capture some of our "business" logic, relating to the different kinds of Subscriptions and PaymentSources that we were supporting.  What we hadn't managed to refactor was the ChargesController itself which was breaking the Rails convention of having controllers manipulate resources of the corresponding name.
 
-Our ChargesController was actually manipulating Subscriptions and CreditCards.  Over the weeks I felt pretty certain we wanted to rename our ChargesController to SubscriptionController, since that was the key resource that most of the controller methods were manipulating.  The CreditCard stuff should ultimately be moved to a different controller and the Paypal endpoint integrated into some RESTful manipulation of Subscription resources.  Michael and I started off driving the change by creating a `subscribe_self_to_premium.feature` file.  The main cucumber feature file was inappropriately named `charge_activity.feature`.  Again this was all part of my initial rush to spike out some charge pathway and demonstrate that revenue could be generated.  Having demonstrated that it was clearly time to clean up the name space.  The new feature file took inspiration from the scenarios in the existing `charge_activity` file and looked like this:
+Our ChargesController was actually manipulating Subscriptions and CreditCards.  Over the weeks I felt pretty certain we wanted to rename our ChargesController to SubscriptionController, since that was the key resource that most of the controller methods were manipulating.  The CreditCard stuff should ultimately be moved to a different controller and the Paypal endpoint integrated into some RESTful manipulation of Subscription resources.  Michael and I started off driving the change by creating a `subscribe_self_to_premium.feature` file.  The main cucumber feature file was inappropriately named `charge_activity.feature`.  Again this was all part of my initial rush to spike out some charge pathway and demonstrate that revenue could be generated.  Having demonstrated that it could; it was now clearly time to clean up the name space.  The new feature file took inspiration from the scenarios in the existing `charge_activity` file and looked like this:
 
 ```gherkin
 Feature: Subscribe Self to Premium
@@ -33,7 +35,7 @@ Feature: Subscribe Self to Premium
     And my member page should show premium details
 ```
 
-These are still a little imperative, but it's generally too challenging to try and fix too many issues at once.  Right here we were trying to get the name space fixed up.  Tweaking Cucumber scenarios to be more declarative could come later.  As it happened, we did already have a paypal feature test:
+These are still a little imperative, but it's generally too challenging to try and fix multiple issues at once.  Right here we were trying to get the name space fixed up.  Tweaking Cucumber scenarios to be more declarative could come later.  As it happened, we did already have a PayPal feature test:
 
 ```gherkin
 Feature: Charge Users Money
@@ -65,7 +67,7 @@ Failing Scenarios:
 cucumber features/premium/charge_activity.feature:60 # Scenario: User decides to change card details
 ```
 
-There was some kind of routing issue.  It was frustrating to be blogged, but also, this is what all these tests are here for.  We'd refactored the core controller of the payment framework, and it seemed we'd broken the credit card details update in the process.  Without the tests we'd have pushed this out to production and not known until a user encountered a problem.  Eventually we tracked the issue down.  It was a pluralization error in one of the views.  Our routes now looked like this:
+There was some kind of routing issue.  It was frustrating to be blocked, but also, this is what all these tests are here for.  We'd refactored the core controller of the payment framework, and it seemed we'd broken the credit card details update in the process.  Without the tests we'd have pushed this out to production and not known until a user encountered a problem.  Eventually we tracked the issue down.  It was a pluralization error in one of the views.  Our routes now looked like this:
 
 ```rb
   match '/subscriptions/paypal' => 'subscriptions#paypal', :via => [:get]
