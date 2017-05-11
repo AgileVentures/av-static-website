@@ -1,9 +1,11 @@
 ---
 title: Semi Automatic Asynchronous Planning Poker Bot
 date: 2016-11-17
-tags: planning team slack node botkit custom integration testing persistence spiking tracer-bullet prototype
+tags: planning, team, slack, node, botkit, custom, integration, testing, persistence, spiking, tracer-bullet, prototype
 author: Sam Joseph
 ---
+
+![semi automated agricultural process](/images/semi-automated.png)
 
 The AsyncVoter project has been humming recently.  A lot of people interested in coding in Node, putting a React front end together and so on.  They say that JavaScript is hot.  We've also had new folks come in and start to understand some of the Agile development approach, self-organise to get a series of basic RESTful endpoints in place.  All great, but I was starting to worry that our little RESTful MVP was not really making enough contact with end users.  I was getting antsy that we needed to start automating some of the tedious and error-prone parts of running asynchronous votes manually in project slack channels.
 
@@ -38,7 +40,6 @@ and then I prompted the bot to display the result:
 Here's the complete code for the bot:
 
 ```js
-
 var Botkit = require('botkit');
 
 var controller = Botkit.slackbot({
