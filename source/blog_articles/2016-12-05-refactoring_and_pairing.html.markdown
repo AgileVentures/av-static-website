@@ -70,24 +70,24 @@ cucumber features/premium/charge_activity.feature:60 # Scenario: User decides to
 There was some kind of routing issue.  It was frustrating to be blocked, but also, this is what all these tests are here for.  We'd refactored the core controller of the payment framework, and it seemed we'd broken the credit card details update in the process.  Without the tests we'd have pushed this out to production and not known until a user encountered a problem.  Eventually we tracked the issue down.  It was a pluralization error in one of the views.  Our routes now looked like this:
 
 ```rb
-  match '/subscriptions/paypal' => 'subscriptions#paypal', :via => [:get]
-  match '/subscriptions/upgrade' => 'subscriptions#upgrade', :via => [:put]
-  resources :subscriptions
+match '/subscriptions/paypal' => 'subscriptions#paypal', :via => [:get]
+match '/subscriptions/upgrade' => 'subscriptions#upgrade', :via => [:put]
+resources :subscriptions
 ```
 
 giving us this set of endpoints:
 
 ```
-           subscriptions_paypal GET         /subscriptions/paypal(.:format)                             subscriptions#paypal
-          subscriptions_upgrade PUT         /subscriptions/upgrade(.:format)                            subscriptions#upgrade
-                  subscriptions GET         /subscriptions(.:format)                                    subscriptions#index
-                                POST        /subscriptions(.:format)                                    subscriptions#create
-               new_subscription GET         /subscriptions/new(.:format)                                subscriptions#new
-              edit_subscription GET         /subscriptions/:id/edit(.:format)                           subscriptions#edit
-                   subscription GET         /subscriptions/:id(.:format)                                subscriptions#show
-                                PATCH       /subscriptions/:id(.:format)                                subscriptions#update
-                                PUT         /subscriptions/:id(.:format)                                subscriptions#update
-                                DELETE      /subscriptions/:id(.:format)                                subscriptions#destroy
+ subscriptions_paypal GET         /subscriptions/paypal(.:format)                             subscriptions#paypal
+subscriptions_upgrade PUT         /subscriptions/upgrade(.:format)                            subscriptions#upgrade
+        subscriptions GET         /subscriptions(.:format)                                    subscriptions#index
+                      POST        /subscriptions(.:format)                                    subscriptions#create
+     new_subscription GET         /subscriptions/new(.:format)                                subscriptions#new
+    edit_subscription GET         /subscriptions/:id/edit(.:format)                           subscriptions#edit
+         subscription GET         /subscriptions/:id(.:format)                                subscriptions#show
+                      PATCH       /subscriptions/:id(.:format)                                subscriptions#update
+                      PUT         /subscriptions/:id(.:format)                                subscriptions#update
+                      DELETE      /subscriptions/:id(.:format)                                subscriptions#destroy
 ```
 
 We had both `subscription_upgrade` and `subscriptions_upgrade`.  It was frustrating to have been stuck on this issue, but it was also an interesting lesson about how the custom `upgrade` endpoint was technical debt that we were having to pay off here.  We'd thrown in that custom endpoint to enable a member to change their credit card in a hurry, but the presence of the custom endpoint had confused us during a refactoring.  If we'd refactored that out earlier to a CardController we probbaly wouldn't have got stuck here.  So overall not a bad object lesson on the value of tests and of refactoring to a clean domain model!
@@ -98,7 +98,7 @@ I guess Michael has sensed my frustration at earlier phases of the WebSiteOne pr
 
 Gosh, what a complex thing to try and get right.  I thought managing a VCR/PuffingBilly cache was hard, but getting that inter-personal teamwork balance right ... well that's the real trick, isn't it? ... :-)
 
-###Related Videos
+### Related Videos
 
 * ["Martin Fowler" Scrum](https://www.youtube.com/watch?v=OfvuX1rNtu0)
 * [Pair Programming on WSO](https://www.youtube.com/watch?v=Q36xbc8pUZ4)
