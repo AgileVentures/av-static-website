@@ -78,16 +78,16 @@ resources :subscriptions
 giving us this set of endpoints:
 
 ```
- subscriptions_paypal GET     /subscriptions/paypal(.:format)   subscriptions#paypal
-subscriptions_upgrade PUT     /subscriptions/upgrade(.:format)  subscriptions#upgrade
-        subscriptions GET     /subscriptions(.:format)          subscriptions#index
-                      POST    /subscriptions(.:format)          subscriptions#create
-     new_subscription GET     /subscriptions/new(.:format)      subscriptions#new
-    edit_subscription GET     /subscriptions/:id/edit(.:format) subscriptions#edit
-         subscription GET     /subscriptions/:id(.:format)      subscriptions#show
-                      PATCH   /subscriptions/:id(.:format)      subscriptions#update
-                      PUT     /subscriptions/:id(.:format)      subscriptions#update
-                      DELETE  /subscriptions/:id(.:format)      subscriptions#destroy
+ subscriptions_paypal GET     /subscriptions/paypal(.:format)   #paypal
+subscriptions_upgrade PUT     /subscriptions/upgrade(.:format)  #upgrade
+        subscriptions GET     /subscriptions(.:format)          #index
+                      POST    /subscriptions(.:format)          #create
+     new_subscription GET     /subscriptions/new(.:format)      #new
+    edit_subscription GET     /subscriptions/:id/edit(.:format) #edit
+         subscription GET     /subscriptions/:id(.:format)      #show
+                      PATCH   /subscriptions/:id(.:format)      #update
+                      PUT     /subscriptions/:id(.:format)      #update
+                      DELETE  /subscriptions/:id(.:format)      #destroy
 ```
 
 We had both `subscription_upgrade` and `subscriptions_upgrade`.  It was frustrating to have been stuck on this issue, but it was also an interesting lesson about how the custom `upgrade` endpoint was technical debt that we were having to pay off here.  We'd thrown in that custom endpoint to enable a member to change their credit card in a hurry, but the presence of the custom endpoint had confused us during a refactoring.  If we'd refactored that out earlier to a CardController we probbaly wouldn't have got stuck here.  So overall not a bad object lesson on the value of tests and of refactoring to a clean domain model!
