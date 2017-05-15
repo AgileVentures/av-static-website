@@ -4,7 +4,7 @@ I was planning to blog more about NHS meetings in the design sprint this morning
 
 Reviewing the NHS blogs has helped me recall all the detail of that previous week, but now I'm struggling to remember what I did yesterday.  I know we managed to have a Redeemify meeting where we worked out we should make a video for Armando demo-ing the current system.  We got Alex, Matt and Michael talking about fixes on WebSiteOne and dropping this priority project idea.  I met with drie to start testing more of their latest system, and I really can't recall what I did before lunch.  I know I spent a chunk of time looking at different Drupal installations (with an eye on the wikis we might use for the NHS project), and managed to speak to the NHS Communications person on the phone, and realised that we really need them in as an expert witness for the design sprint (meeting planned for Thursday).  I re-watched the Martin Fowler scrum from yesterday to try and remind myself and that didn't help - I feel like I lost a chunk of time yesterday morning.  I think it probably went to reviewing all the email and slack messages that were still backed up from my week off, reaching out to mentors to see if they are interested in being sponsored for agile/scrum certifications (answer is yes and no), and tweaking the AV business plan.
 
-Gosh what a flurry of different bits and pieces.  I think it's deep breathing to manage the time anxiety and once more unto the breach,≥ dear friends! :-)
+Gosh what a flurry of different bits and pieces.  I think it's deep breathing to manage the time anxiety and once more unto the breach, dear friends! :-)
 
 ### Related Videos
 
