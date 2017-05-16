@@ -1,4 +1,13 @@
-I took a week off over Easter.  I definitely needed it.  Particularly after the time change and the intensity of the NHS project I had to step away.  I seem to remember working through Easter and school half terms in the past, but it seems counter-productive now.  Quite an effort to get back into the swing of things.  We had a public holiday yesterday (Monday) and I ended up doing a half day on this and that, mainly writing up my phone meeting with a G.P. (UK doctor), planning, putting in a couple of funding requests and writing a draft business plan for the charity.
+---
+title: Rest as Good as a Change
+date: 2017-04-18
+tags: planning, funding, time management, sponsorship, mentorship
+author: Sam Joseph
+---
+
+![rest](/images/rest.jpg)
+
+I took a week off over Easter.  I definitely needed it.  Particularly after the time change and the intensity of the NHS project, I just had to step away.  I seem to remember working through Easter and school half terms in the past, but it seems counter-productive now.  Quite an effort to get back into the swing of things today though.  We had a public holiday yesterday (Monday) and I ended up doing a half day on this and that, mainly writing up my phone meeting with a G.P. (UK doctor), planning, putting in a couple of funding requests and writing a draft business plan for the charity.
 
 My knee has been approved for jogging again, so I'm getting back into my morning run, and have switched round with my wife so she's taking the twins to school in the morning.  If we're going to deliver effectively on the NHS project and ensure we put in enough other funding requests for the long term then I need more work time.  Ironically it didn't generate any more work time this morning as I fell asleep again after the alarm and I'm still sitting down to blog at the usual time.  Hopefully my body clock will be back to normal soon and I can squeeze out a few more work hours.
 
@@ -10,7 +19,7 @@ I really did appreciate having a Monday without any meetings - it gave me time t
   * [ ] apply for others in list
 
 * [ ] generate next kind of solution for NHS
-  - [ ] get as much of their drupal site as we can --> Kim (phone? brendan?)
+  - [ ] get as much of their drupal site as we can --> Communications contact (phone? change manager?)
   - [ ] we need to move towards a new round of testing
   - [ ] finish writing up/distributing notes
   - [ ] legal support --> business plan?
@@ -55,7 +64,7 @@ With Slack and email there are always a 1001 little admin things to do and quest
 
 > Our operation relies on input from donors, corporate sponsorship, premium membership and contracts with non-profits, charities, government and businesses with a commitment to social responsibility. We are currently covering costs, but relying heavily on volunteer input. We currently have three donors, three corporate sponsors and fifty premium members, which is covering all our IT hosting and support costs, but not any staff costs. Our plan is to double the current income through these various methods in the next 6 months in order to start to employ staff to ensure there is consistent and reliable support for all our mentors and mentees. Funding from Equality Rebooted would very much increase the chances of us succeeding in our sustainability goals.
 
-I knocked out the above on the train into London for a day of wiki usability testing at NHS headquarters.  I'm not saying it's of any serious quality, but I can generate text like that to order.  All the plans and ideas for AgileVentures bubble in my mind.  It was disappointing to miss the deadline by 30 minutes, but that energized me to take some of the above prose and use that to make a couple of email submissions to funding bodies I had found in the [Funding Central](http://www.fundingcentral.org.uk/) site.  Doing that allowed me to tick off a couple of items on the weekly todo list, and I pushed forward to create a [draft business plan](https://www.agileventures.org/business-plan) that might help us unlock pro-bono legal support, and maybe serve as a banner to rally the team around.  I also started reaching out to our mentors to see if they were interested in AV sponsoring their training for Agile/Scrum certificates; although the Premium subscriptions seem to have plateaued, they may start to rise again with the new MOOC and change in season, and there's already some upgrades going on, so I suspect that I need to engage the other mentors more directly with the larger body of Premium members, and then focus my resources on supporting the mentors ... maybe?
+I knocked out the above on the train into London for a day of wiki usability testing at NHS headquarters.  I'm not saying it's of any serious quality, but I can generate text like that to order.  All the plans and ideas for AgileVentures bubble in my mind.  It was disappointing to miss the deadline by 30 minutes, but that energized me to take some of the above prose and use that to make a couple of email submissions to funding bodies I had found in the [Funding Central](http://www.fundingcentral.org.uk/) site.  Doing that allowed me to tick off a couple of items on the weekly todo list, and I pushed forward to create a [draft business plan](https://www.agileventures.org/business-plan) that might help us unlock pro-bono legal support, and maybe serve as a banner to rally the team around.  I also started reaching out to our mentors to see if they were interested in AV sponsoring their training for Agile/Scrum certificates. The Premium subscriptions seem to have plateaued, although they may start to rise again with the new MOOC and change in season, and there's already some upgrades going on.  I suspect that I need to engage the other mentors more directly with the larger body of Premium members, and then focus my resources on supporting the mentors ... maybe?
 
 At the moment the business plan has this list of opportunities:
 
