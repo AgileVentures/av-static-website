@@ -57,3 +57,33 @@ Okay, so how did we put this complete NHS HLP wiki instance together?  Let's go 
   was there another setting we missed?  Anyway, should be off in production for performance (I imagine)
 
 7. VisualEditor setup
+   
+     a) follow instructions at https://www.mediawiki.org/wiki/Extension:VisualEditor
+     b) `wget https://extdist.wmflabs.org/dist/extensions/VisualEditor-REL1_28-93528b7.tar.gz` in extensions directory `~/apps/mediawiki/htdocs/extensions`
+     c) add configuration to end of `LocalSettings.php`
+     
+    ## Visual Editor
+
+    wfLoadExtension( 'VisualEditor' );
+
+    // Enable by default for everybody
+    $wgDefaultUserOptions['visualeditor-enable'] = 1;
+
+    // Optional: Set VisualEditor as the default for anonymous users
+    // otherwise they will have to switch to VE
+    // $wgDefaultUserOptions['visualeditor-editor'] = "visualeditor";
+
+    // Don't allow users to disable it
+    $wgHiddenPrefs[] = 'visualeditor-enable';
+
+    // OPTIONAL: Enable VisualEditor's experimental code features
+    #$wgDefaultUserOptions['visualeditor-enable-experimental'] = 1;
+
+
+8. Add the Cite Extension
+
+    ## Cite Extension
+
+    wfLoadExtension( 'Cite' );
+
+
