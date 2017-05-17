@@ -5,7 +5,7 @@ tags: organisation, planning, administriva, Slack, twitter
 author: Sam Joseph
 ---
 
-![sprinting](/images/day.jpg)
+![day](/images/day.jpg)
 
 Day by day I'm getting one item off my desk.  I'm not sure why it's so painful.  Over the last 10 days I've got off new passport applications for myself and my eldest son, sent off tax liability statements for the AgileVentures bank, and put various bank statements and odd pieces of papers in either the bin or my new filing cabinet.  Is it possible to enjoy the process more?  It's a great feeling when one of these administrivia tasks is completed.  A lovely feeling of progress as the surface of my desk slowly re-appears.  Managed to get straight to the blog this morning despite tweeting and slacking a GreaterThanCode episode.  It was almost as if the volume of Slack alerts (25) kept me on the straight and narrow.  Gosh, why is so much of this stuff like pulling teeth! :-)
 
