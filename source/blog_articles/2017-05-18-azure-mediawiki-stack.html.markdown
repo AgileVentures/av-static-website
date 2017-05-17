@@ -16,17 +16,13 @@ Okay, so how did we put this complete NHS HLP wiki instance together?  Let's go 
   d) set `$wgUseInstantCommons   = true;`  to allow images from wikicommons  
   e) disable anonymous edits by adding the following at the end of the file:  
 
-      ```
       ## Access Options
 
       $wgGroupPermissions['*']['edit'] = false;
       $wgGroupPermissions['*']['createpage'] = false;
-
-      ```
       
  f) add email notification settings (requires azure sendmail addon):  
  
-      ``` 
       ## Email notifications
 
       $wgUsersNotifiedOnAllChanges = array('User', 'Tansaku');
@@ -41,24 +37,23 @@ Okay, so how did we put this complete NHS HLP wiki instance together?  Let's go 
       ];
 
       $wgDefaultUserOptions['enotifwatchlistpages'] = true;
-      ```
       
   g) consider enabling logging - we did have it working at one point with the following:  
 
-      ```
+
       ## Logging
 
       $wgDebugLogFile = "/home/bitnami/apps/mediawiki/logs/debug-{$wgDBname}.log";
-      ```
 
-      but log file is not being updated at the moment ...
 
-      ```
+  but log file is not being updated at the moment ...
+
       bitnami@bitnami-mediawiki-8a65:~/apps/mediawiki/logs$ ls -la
       total 12
       drwxrwxr-x 2 bitnami root    4096 May  1 10:09 .
       drwxr-xr-x 7 root    root    4096 Apr 28 12:30 ..
       -rw-rw-r-- 1 bitnami bitnami 2006 May  1 15:41 debug-bitnami_mediawiki.log
-      ```
       
-     was there another setting we missed?  Anyway, should be off in production for performance (I imagine)
+  was there another setting we missed?  Anyway, should be off in production for performance (I imagine)
+
+7. VisualEditor setup
