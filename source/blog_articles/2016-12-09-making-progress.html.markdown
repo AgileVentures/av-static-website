@@ -5,7 +5,7 @@ tags: blog, volunteer opportunities, organisation owner, project channel, code, 
 author: Sam Joseph
 ---
 
-![progress](/images/progress.png)
+![progress](/images/progress.jpg)
 
 So I went over time for yesterday's blogging.  I'd tried to cap it at 20 minutes, but I got into a fair bit of detail about the options for testing/mocking the Twitter API before getting on to the meat of the matter I was trying to focus on; Agile DevOps.  I guess there are two kinds of blogs, those with a succinct focus on a particular topic and those that are a mixed bag.  The process of profiling my days in blogs recently have probably tipped me more towards the latter, with the blog being a reflection of all the things I did on the previous day.  I'm acutely aware that the length, lack of focus, lack of images and high code content probably make my blogs less readable for many.  I am writing these things partly for others to read, but also partly just to get my thoughts straight, and stop them from being lost in an ever dissappearing Slack history.
 
