@@ -51,6 +51,15 @@ and then an "inbound security rule":
 
 ![an "inbound security rule"](https://www.dropbox.com/s/59o0krege5temk9/Screenshot%202017-05-22%2010.28.20.png?dl=1)
 
+but then we still get errors like :
+
+![timeout reached](https://www.dropbox.com/s/l810011weec2vef/Screenshot%202017-05-22%2010.34.32.png?dl=1)
+
+in which case the Parsoid troubleshooting documentation is useful:
+
+https://www.mediawiki.org/wiki/Parsoid/Troubleshooting#Configuration
+
+Although I was stuck here for a while, but I think it comes back to the problem that it doesn't involve adding a security group - at least the way I got it to work last time (which took a while to figure out) was to add an extra endpoint rule to the virtual machine.  Although maybe the security group IS needed.  Blurgh, some experimentation needed here, and this whole process of documenting the setup seems to be taking just as long as figuring out the setup in the first place ...!
 
 
 
