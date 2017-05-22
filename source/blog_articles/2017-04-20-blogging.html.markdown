@@ -1,7 +1,7 @@
 ---
 title: Blogging
 date: 2017-04-20
-tags: morning pages, 
+tags: morning pages, pairing, mobbing
 author: Sam Joseph
 ---
 

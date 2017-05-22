@@ -1,3 +1,12 @@
+---
+title: Breakthough Anxiety
+date: 2017-04-21
+tags: planning, WYSIWYG, autograders, wiki, PBwiki, Xwiki, bluespice, icons, usability, internet explorer, Glyphicons, font-awesome, MCE Editor, mechanise, cookies
+author: Sam Joseph
+---
+
+![breakthrough](/images/breakthrough.jpg)
+
 I just burnt 15 minutes taking out the recycling, replenishing the water bottles on my desk and discussing with my wife about Japanese textbooks for my kids.  Well not burnt :-) Time spent - all needed to be done.  If I'd been slightly more organised I'd have gotten my eldest son to take out the recycling this morning.  The strange thing about being a parent is that getting time when you're not being pestered or interrupted is quite hard.  All my boys are at school now - I get a certain amount of time in the day when I can focus on my computer in my home office where I have two external screens and I can work "efficiently".  The "in the momment" philosophy suggests to me that it's a little silly to consider time as burnt or lost; at the same time I do want to bring in money to feed my kids, and that seems to require focused time getting work done.  That said and despite my best efforts at prioritisiing, I'm still not sure if I'm really focusing properly on what will bring home the bacon.
 
 Having used up a lot of my savings to work on AgileVentures full time for the last year I am definitely in a bit of an anxious state.  I did achieve a couple of breakthroughs yesterday that did help to lighten my mood.  One was to find a WYSIWYG editor that worked on the NHS laptops.  The other was to resurrect the autograders for the AV102 TA training course.  Both are good stories I'd like to blog out.  I also note that I'm well behind on reviewing LocalSupport pull requests and many other things.  I'm torn about whether to use the blogging time to force a focus on catching up with AgileVentures Premium related work (e.g. pull requests) and reporting on the breakthroughs.  Let's focus on the breakthroughs for the purpose of self-documentation and I'll get to the pull requests in the next chunk of my day and blog about them Monday.
@@ -10,7 +19,7 @@ In the above image you can see how the login panel for XWiki looks on my Mac, an
 
 ![BlueSpice text editing toolbar on the NHS laptop](https://www.dropbox.com/s/dpc9vqhyj0yzgl6/Screenshot%202017-04-21%2009.45.05.png?dl=1)
 
-Interestingly all these icons loaded correctly on a virtualized IE 11 on my laptop running over the NHS guest wifi.  The failure of the icons to show up was only happening on the NHS laptops hard linked to their internal network.  What I really should have done was tethered one of their laptops to my wifi hotspot on my phone to further isolate the problem, but I was out of time, and the suggestions from XWiki support, such as clearing the browser cache, were not possible on the sys-admin restricted NHS laptops.  I took lots of screenshots, dumped network interactions and noted that the failures for XWiki were for the Glyphicons, for PBwiki they were font-awesome icons, and for BlueSpice they were MCE Editor icons.  It was a dark moment - in my desparation I tried loading Wikipedia on the NHS laptop, and the icons in their basic editor showed up:
+Interestingly all these icons loaded correctly on a virtualized IE 11 on my laptop running over the NHS guest wifi.  The failure of the icons to show up was only happening on the NHS laptops hard linked to their internal network.  What I really should have done was tethered one of their laptops to my wifi hotspot on my phone to further isolate the problem, but I was out of time, and the suggestions from XWiki support, such as clearing the browser cache, were not possible on the sys-admin restricted NHS laptops.  I took lots of screenshots, dumped network interactions and noted that the failures for XWiki were for the Glyphicons, for PBwiki they were font-awesome icons, and for BlueSpice they were MCE Editor icons.  It was a dark moment - in my desparation I tried loading Wikipedia on the NHS laptop, and the icons in their basic editor showed up!
 
 ![wikipedia basic editor working](https://www.dropbox.com/s/2kwtz5ebey0jmug/Screenshot%202017-04-21%2009.49.52.png?dl=1)
 
@@ -18,9 +27,9 @@ I investigated the source and found that they were using background images rathe
 
 ![wikipedia visual editor](https://www.dropbox.com/s/5ltrfl1c0ha10cy/Screenshot%202017-04-21%2009.52.42.png?dl=1)
 
-Did we have a winner?  At least I had an angle of attack.  If mediawiki actually worked on NHS laptops then it was streets ahead of any other solution we'd tested so far, regardless of any other shortcomings.  Still lots to work out, but light at the end of the tunnel, perhaps?
+Did we have a winner?  At least I had an angle of attack.  If MediaWiki actually worked on NHS laptops then it was streets ahead of any other solution we'd tested so far, regardless of any other shortcomings.  Still lots to work out, but light at the end of the tunnel, perhaps?
 
-So that was one breakthrough.  The trip into London for the NHS meeting and then the laptop research, getting home, investigating options for mediawiki hosting left me having spent no time on my other major blocker which was that the legacy autograders for the AV102 TA training course weren't working.  I'd logged into the grader earlier in the week and got the following message:
+So that was one breakthrough.  The trip into London for the NHS meeting and then the laptop research, getting home, investigating options for MediaWiki hosting left me having spent no time on my other major blocker which was that the legacy autograders for the AV102 TA training course weren't working.  I'd logged into the grader earlier in the week and got the following message:
 
 ```
 The queue name is BerkeleyX-cs169x
@@ -43,9 +52,10 @@ With debugging hooks going down through a couple of gems, I determined that the 
 ```
 @session_cookie = all_cookies.scan(/[\d\w]+\=[\d\w]+/).select{|str| str.start_with?('AWSELB') ||str.start_with?('csrftoken') || str.start_with?('sessionid')}.join('; ')
 ```
-but it worked - suddenly the AV102 homeworks were grading successfully.  Such a mess, and it could have been concealing many other bugs behind the authentication failure, but I gambled and won on this occasion.  I'm not getting paid anything to work on this code or run the AV102 training course.  It would be hugely beneficial for the long term of the autograder project if I was regularly inserting new assignments into the new system, documenting the process and smoothing off the rough edges, but again, no one is paying for that.  Or at least, no one is paying me for that.  I do get a share of the proceeds of the sales of the textbook (since I'm the editor) and part of my responsibility is to keep the graders running on the main course and the SPOC, but the TA training course is my own separate initiative.  Ironically this messy hack in 45 minutes in my free time while my kids do Karate will keep the AV102 TA training course running for a little longer.  I haven't even had time to take the debugger statements out of the develop grader (although a git checkout should sort that).
 
-Two breakthroughs, but I'm still anxious.  Is this hack to keep AV102 running a wonderful piece of pragmatism, or is it the technical debt that breaks the camel's back?  Can I find a good mediawiki hosting provider or will we have to host ourselves?  Lots of deep breaths, nose to the grindstone, enjoy the moment! :-)
+but it worked - suddenly the AV102 homeworks were grading successfully.  Such a mess, and it could have been concealing many other bugs behind the authentication failure, but I gambled and won on this occasion.  I'm not getting paid anything to work on this code or run the AV102 training course.  It would be hugely beneficial for the long term of the autograder project if I was regularly inserting new assignments into the new system, documenting the process and smoothing off the rough edges, but again, no one is paying for that.  Or at least, no one is paying me for that.  I do get a share of the proceeds of the sales of the relaeted textbook (since I'm the editor) and part of my responsibility is to keep the graders running on the main course and the SPOC, but the TA training course is my own separate initiative.  Ironically this messy hack in 45 minutes in my free time while my kids do Karate will keep the AV102 TA training course running for a little longer.  I haven't even had time to take the debugger statements out of the develop grader (although a git checkout should sort that).
+
+Two breakthroughs, but I'm still anxious.  Is this hack to keep AV102 running a wonderful piece of pragmatism, or is it the technical debt that breaks the camel's back?  Can I find a good MediaWiki hosting provider or will we have to host ourselves?  Lots of deep breaths, nose to the grindstone, enjoy the moment! :-)
 
 ### Related Videos
 
