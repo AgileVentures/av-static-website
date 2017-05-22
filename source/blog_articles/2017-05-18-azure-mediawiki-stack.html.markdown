@@ -56,7 +56,13 @@ Okay, so how did we put this complete NHS HLP wiki instance together?  Let's go 
       
   was there another setting we missed?  Anyway, should be off in production for performance (I imagine)
 
-7. VisualEditor setup
+7. Add the Cite Extension
+
+    ## Cite Extension
+
+    wfLoadExtension( 'Cite' );
+
+8. VisualEditor setup
    
      a) follow instructions at https://www.mediawiki.org/wiki/Extension:VisualEditor
      b) `wget https://extdist.wmflabs.org/dist/extensions/VisualEditor-REL1_28-93528b7.tar.gz` in extensions directory `~/apps/mediawiki/htdocs/extensions`
@@ -80,10 +86,25 @@ Okay, so how did we put this complete NHS HLP wiki instance together?  Let's go 
     #$wgDefaultUserOptions['visualeditor-enable-experimental'] = 1;
 
 
-8. Add the Cite Extension
+ d) add the Parsoid service following these instructions: https://www.mediawiki.org/wiki/Parsoid/Setup but note that first we have to install nodejs, which involved pulling in the nodesource:
 
-    ## Cite Extension
+    ```sh
+    $ wget -qO- https://deb.nodesource.com/setup_4.x | sudo bash -
+    $ sudo apt-get install nodejs
+    ```
+     
+and the above worked fine last week, but now I am getting:
 
-    wfLoadExtension( 'Cite' );
+```
+sudo apt-get install parsoid
+Reading package lists... Done
+Building dependency tree       
+Reading state information... Done
+E: Unable to locate package parsoid
+```
+
+and now it just worked again ... okay ... network time outs I guess, but that's crushed my blog flow.  Find out how this continues in part 2 ...
+
+
 
 
