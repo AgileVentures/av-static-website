@@ -61,6 +61,9 @@ https://www.mediawiki.org/wiki/Parsoid/Troubleshooting#Configuration
 
 Although I was stuck here for a while, but I think it comes back to the problem that it doesn't involve adding a security group - at least the way I got it to work last time (which took a while to figure out) was to add an extra endpoint rule to the virtual machine.  Although maybe the security group IS needed.  Blurgh, some experimentation needed here, and this whole process of documenting the setup seems to be taking just as long as figuring out the setup in the first place ...!
 
+![adding an endpoint to the virtual machine on Azure](https://www.dropbox.com/s/ghzx10bnhbq7nbm/Screenshot%202017-05-22%2011.04.09.png?dl=1)
+
+Ah, so it looks like we need BOTH the endpoint AND the security group; although I'm not 100% on that, and I think I'm out of time to really determine that ...
 
 
 
