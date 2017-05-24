@@ -5,6 +5,8 @@ tags: Rails controllers, pull requests, REST, CRUD, technical debt, refactoring
 author: Sam Joseph
 ---
 
+![routes](/images/routes.jpg)
+
 In a day with little time for coding on WebsiteOne I think I made a bit of a breakthrough in terms of removing custom routes on Rails controllers.  Time got sucked away in the usual admin, reviewing pull requests, scrums and having Michael update me on the great work he and Arreche had done getting the Yada Cucumber setup working for AsyncVoter.  Interesting discussion there about whether we should switch tech stack and, if we don't, how we handle the rather raw test and mock architecture.  Also, should I be focusing more on infrastructure for the projects?  I'm still convinced I've got to prioritise getting AgileVentures into the black, and right now that means sorting out our payment frameworks.
 
 The previous day Matt and I had spiked the PayPal redirection to our site after a successful payment, and using that base I was able to fill in the rest of the cucumber steps that Michael and I had sketched out the week previously:
@@ -203,7 +205,7 @@ and then the `update_user_to_premium` method and others could collapse back to s
   end
 ```
 
-Now that was a rough code sketch above - I'll have to work out the kinks, but I can see how it might clean up the controller.  There are other domain entities in play here such as the set of PaymentSources that we already created and the UpgradeUserToPremium service.  It's tempting to jump in and start refactoring away, but I heed Sandi Metz's advice about looking ahead to what other refactorings are coming.  I plan to immediately follow this work with a series of tests to check that all the sad paths work, that we can have PayPal supported sponsorships, and support generic types of plans.  All these are going to put pressure on the controller and the domain model that I don't necessarily understand as well as I like.  I don't want to be caught burning a lot of time prematurely refactoring in one way only to discover that I need to fall back.
+Now that was a rough code sketch above - I'll have to work out the kinks, but I can see how it might clean up the controller.  There are other domain entities in play here such as the set of PaymentSources that we already created and the UpgradeUserToPremium service.  It's tempting to jump in and start refactoring away, but I heed Sandi Metz's advice about looking ahead to what other refactorings are coming.  I plan to immediately follow this work with a series of tests to check that all the sad paths work, that we can have PayPal supported sponsorships, and support generic types of plans.  All these are going to put pressure on the controller and the domain model that I don't necessarily understand as well as I would like.  I don't want to be caught burning a lot of time prematurely refactoring in one way only to discover that I need to fall back.
 
 This is a point of agony where I'm embarressed by the `if/else` statements and I want to clean them up as quickly as possible, but I also want to deliver all the payment features as quickly as possible.  I'm carefully watching the level of technical debt ...  At least the routes got a little cleaner with these changes.  My belief in the the RESTful CRUD manipulation of resources has re-doubled and I'm looking to a future vista where we have a robust domain model with entities like Subscriptions and Plans and PaymentSource matches the needs of our charity enterprise, and our technology is in the service of our process rather than the other way round :-)
 
