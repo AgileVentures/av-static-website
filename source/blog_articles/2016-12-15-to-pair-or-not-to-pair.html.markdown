@@ -5,6 +5,8 @@ tags: email campaign, Mailchimp, automation, Thunderbird, Heroku fork, Slack, pa
 author: Sam Joseph
 ---
 
+![pair or not pair](/images/pair_or_not_pair.jpg)
+
 My objective on Wednesday was to make further progress on the Paypal integration.  Things getting in the way of that included blogging, sending out emails, scrums, coordination sessions, and needing to pick the kids up from school at short notice.  Bit of scrappy day, but now that I'm running Premium Plus pairing sessions on Sundays, I need to be able to help my wife out in a fix during the week.
 
 I did manage to complete my process of sending emails one by one manually to every AgileVentures member.  There were 2920 of them before I was on the Ruby Rogues podcast, and that's more than a free-tier mailchimp account can handle.  I resolved to grit my teeth and email each person individually to tell them about how our new Premium plans are taking us on the road to financial stability and my commitment to blogging about the process.  I did semi-automate the process as I've blogged about before, using a script that takes an email template and lanches a Thunderbird editor, filling in email, subject, first name etc.  I then review the email visually, adding personal notes, potentially even changing it completely depending on my relationship with the individual.
@@ -15,10 +17,10 @@ As the new greeter bot welcomed them into Slack, I did a coordination session wi
 
 So then I was dragged away from the computer to pick up my twin boys.  I managed to get back in time for the Kent Beck scrum, where it was great to see Susanna reporting in on the SHF project.  I told Michael and Matt that I really had to focus on the PayPal integration in the final programming hour of my day, and that I was going to be moving fast and so there wouldn't be much room for participative pair programming.  Matt went off to experiment with the drie free tier and Michael joined me in the hangout.  I managed to write out a list of all the stuff that needed doing (in approximate priority and dependency order), filling Michael in to where Matt and I had got to:
 
-* [ ] add sad path for paypal
-* [ ] sponsor via paypal
+* [ ] add sad path for PayPal
+* [ ] sponsor via PayPal
 * [ ] have generic support for plans
-* [ ] make Paypal work for all plans
+* [ ] make PayPal work for all plans
 * [ ] refactoring our domain model to store plan entities and represent everything properly and consistently
 * [ ] allowing users to upgrade themselves through the WSO interface
 * [ ] displaying all the plan options and upgrades effectively
