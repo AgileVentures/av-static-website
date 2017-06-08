@@ -1,4 +1,3 @@
-
 ---
 title: Bringing It All Together
 date: 2017-04-28
