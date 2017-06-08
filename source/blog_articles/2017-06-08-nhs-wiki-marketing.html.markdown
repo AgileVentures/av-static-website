@@ -81,7 +81,13 @@ Logins are not required to view the site.   Site traffic from Google Analytics i
 
 9. Information of promotion/marketing of the resource
 
-AgileVentures has promoted the site through their monthly newsletter to their member base of over 4000 around the world, and linked the wiki into the Social Prescribing page on Wikipedia, as well as reaching out and inviting all the stakeholders involved in the design sprint to contribute.
+AgileVentures has promoted the site through their monthly newsletter to their member base of over 4000 around the world, and linked the wiki into the Social Prescribing page on Wikipedia, as well as reaching out and inviting all the stakeholders involved in the design sprint to contribute.  We've also developed the following text for promoting the wiki on the HLP website:
+
+> Healthy London Partnerships (HLP) Proactive Care team presents a shared editable website (a "wiki") dedicated to Social Prescribing & Self Care. This wiki is available as an open resource for everyone who is interested in Social Prescribing & Self Care and related subject matters.  The wiki uses the same MediaWiki software that powers Wikipedia, and can be edited by any approved user. In the first instance the wiki is a repository for resources to support NHS commissioners and others to implement and develop social prescribing and self-care in their localities. Social prescribing, sometimes referred to as community referral, is a means of enabling GPs, nurses and other primary care professionals to refer people to a range of local, non-clinical services.  The wiki is hosted by the AgileVentures charity on behalf of the Healthy London Partnership.  AgileVentures ran a design sprint with the Proactive care team and stakeholders from all over London NHS and voluntary sector partners to identify the mediawiki solution as the one most likely to meet stakeholder needs.  Please check out the wiki at https://wiki.healthylondon.org and sign up for a free account in order to start contributing.
+
+
+
+
 
 10. Other data as agreed to assist evaluation (i.e.uptime/downtime)
 
