@@ -1,8 +1,8 @@
 
 ---
 title: Bringing It All Together
-date: 2017-04-27
-tags: Bitnami, Azure, MyWikis, VisualEditor, SSL, training, wiki, Miraheze, moderation
+date: 2017-04-28
+tags: NHS, wiki, LinkedIn, payments, communications, Phoenix, Elixir, domain names
 author: Sam Joseph
 ---
 
