@@ -43,6 +43,6 @@ I had been thinking to do some work between Xmas and New Year, but I found mysel
 
 ###Related Blogs:
 
-* http://nonprofits.agileventures.org/2016/11/15/multiple-pull-request-learning/
-* http://nonprofits.agileventures.org/2016/12/07/meetings-vs-coding/
-* http://nonprofits.agileventures.org/2016/12/08/agile-dev-ops/
+* [http://nonprofits.agileventures.org/2016/11/15/multiple-pull-request-learning/](http://nonprofits.agileventures.org/2016/11/15/multiple-pull-request-learning/)
+* [http://nonprofits.agileventures.org/2016/12/07/meetings-vs-coding/](http://nonprofits.agileventures.org/2016/12/07/meetings-vs-coding/)
+* [http://nonprofits.agileventures.org/2016/12/08/agile-dev-ops/](http://nonprofits.agileventures.org/2016/12/08/agile-dev-ops/)
