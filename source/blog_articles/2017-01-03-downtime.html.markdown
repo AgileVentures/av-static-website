@@ -41,7 +41,7 @@ I left Michael to explain the new setup to Matt and got back to the "Generic Sub
 
 I had been thinking to do some work between Xmas and New Year, but I found myself needing some more serious downtime.  I kept up with email and very occasional Slack in case there were any emergencies, but the kids were off school and it had been a busy year.  I needed some serious downtime where I wasn't pushing myself to get things done every day.  It was pretty damn pleasant, but all good things come to an end. Now I'm just getting myself back into the saddle for another busy year.  New Year's resolutions?  Take more time off before I burn out :-)
 
-###Related Blogs:
+### Related Blogs:
 
 * [http://nonprofits.agileventures.org/2016/11/15/multiple-pull-request-learning/](http://nonprofits.agileventures.org/2016/11/15/multiple-pull-request-learning/)
 * [http://nonprofits.agileventures.org/2016/12/07/meetings-vs-coding/](http://nonprofits.agileventures.org/2016/12/07/meetings-vs-coding/)

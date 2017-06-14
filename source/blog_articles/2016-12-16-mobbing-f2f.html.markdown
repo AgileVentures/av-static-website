@@ -91,7 +91,7 @@ That was pretty satsifying, and I was riding high on possible nibbles from a few
 
 Anyhow, I'm going to take a two week break from blogging now, like I did over the summer so I can calm down a bit and catch up with admin, coding and polishing and distributing some of the older blogs.  Hope you all have a very cool yule and I'll look forward to seeing you all in the New Year! :-)
 
-###Related Videos
+### Related Videos
 
 * ["Martin Fowler" scrum](https://www.youtube.com/watch?v=lrw0R8YbxXU)
 * ["Kent Beck" scrum](https://www.youtube.com/watch?v=LkagGRnOorI)
