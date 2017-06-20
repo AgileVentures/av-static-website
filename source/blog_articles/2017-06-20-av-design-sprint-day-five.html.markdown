@@ -33,7 +33,7 @@ I'd been volunteered as the interviewer, and while Matt ran a separate hangout f
 
 I had quite a long chat with each individual about their background, goals, hopes and dreams; before ultimately segwaying into the introducing the prototype.  Although by the end I was getting tired and not filling the full hour.  The patterns that emerged from these sessions was as follows:
 
-##Negatives 
+#### Negatives 
 
 * Some terminology was confusing, e.g. MOOC
 * AV's purpose somewhat unclear NGO? Learning/mentoring?
@@ -42,11 +42,11 @@ I had quite a long chat with each individual about their background, goals, hope
 * Unclear who owns code - is this open source?
 * Unclear if meetings online or in person
 
-## Neutrals
+#### Neutrals
 
 Testers wanted to know how to share with friends
 
-## Positives
+#### Positives
 
 * Concept and social aspect appreciated
 * Images and roadmap appreciated
@@ -62,7 +62,7 @@ At the end of the community meeting I asked everyone to suggest what they though
 I think either way the design sprint has weened me off large amounts of text and addicted me to small amounts of text with images.  Will be interesting to see if we can get any substantive change in signups - stay tuned to this blog to find out!
 
 
-Related Videos
+### Related Videos
 
 * [Day five video, part 1](https://www.youtube.com/watch?v=vVwO94ae96w)
 * [Day five video, part 2](https://www.youtube.com/watch?v=BM7A-SBiFqk)
