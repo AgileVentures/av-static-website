@@ -1,6 +1,6 @@
 ---
 title: Hard Launch
-date: 2017-05-10
+date: 2017-05-12
 tags: Trello, NHS, HLP, wiki, Slack, screenshots, firewall, project management, pivotal tracker
 author: Sam Joseph
 ---
