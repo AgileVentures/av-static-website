@@ -1,3 +1,12 @@
+---
+title: Debugging MediaWiki
+date: 2017-05-16
+tags: MediaWiki, login, cookies, bugs, Bitnami, Moderation, extension, git, upgrade, VisualEditor, IRC
+author: Sam Joseph
+---
+
+![mediawiki](/images/MediaWiki.svg)
+
 Yesterday I finally got a clear shot at resolving some of our MediaWiki technical issues.  A key one was users getting loggged out after they create new accounts.  I had had some feedback from MediaWiki support that our cookies weren't being set correctly on production.  So I created a new account for mediawiki on our staging box.  It created the following cookies:
 
 ![cookies created for new user account](https://www.dropbox.com/s/f73wmvq1g31uh6o/Screenshot%202017-05-15%2010.56.38.png?dl=1)
@@ -10,20 +19,20 @@ Navigating around I stayed logged out, and then tried logging on, which worked a
 
 ![more cookies after login](https://www.dropbox.com/s/h68yx9n2tz9jpv5/Screenshot%202017-05-15%2011.01.59.png?dl=1)
 
-So the fact that this was happening on our staging box made it seem like this was a bitnami mediawiki issue, or possibly something to do with the extensions we had configured on both.  So far the only extensions configured on the staging site are the moderation extension and the wikieditor.  I could try disabling these two to see if we get the same effect, or I could even try a completely fresh Bitnami MediaWiki deploy ... but faster might be to search the Bitnami forums.  A few searches didn't reveal anything:
+So the fact that this was happening on our staging box made it seem like this was a Bitnami MediaWiki issue, or possibly something to do with the extensions we had configured on both.  So far the only extensions configured on the staging site are the moderation extension and the wikieditor.  I could try disabling these two to see if we get the same effect, or I could even try a completely fresh Bitnami MediaWiki deploy ... but faster might be to search the Bitnami forums.  A few searches didn't reveal anything:
 
-* https://community.bitnami.com/search?q=mediawiki%20logged%20out
-* https://community.bitnami.com/search?q=mediawiki%20create%20account
-* https://community.bitnami.com/search?q=mediawiki%20cookies
-* https://community.bitnami.com/search?q=mediawiki_session
+* [https://community.bitnami.com/search?q=mediawiki%20logged%20out](https://community.bitnami.com/search?q=mediawiki%20logged%20out)
+* [https://community.bitnami.com/search?q=mediawiki%20create%20account](https://community.bitnami.com/search?q=mediawiki%20create%20account)
+* [https://community.bitnami.com/search?q=mediawiki%20cookies](https://community.bitnami.com/search?q=mediawiki%20cookies)
+* [https://community.bitnami.com/search?q=mediawiki_session](https://community.bitnami.com/search?q=mediawiki_session)
 
-I was about to post to the Bitnami forum, when I tried disabling the wikieditor and the moderation extension, and then create account maintained a login.  I re-enabled the wikieditor appearing to confirm that the moderation extension was the culprit.  I did a few extra tests and opened a [ticket on the mediawiki-moderation github repo](https://github.com/edwardspec/mediawiki-moderation/issues/11).
+I was about to post to the Bitnami forum, when I tried disabling the wikieditor and the Moderation extension, and then create account maintained a login.  I re-enabled the wikieditor appearing to confirm that the Moderation extension was the culprit.  I did a few extra tests and opened a [ticket on the mediawiki-moderation github repo](https://github.com/edwardspec/mediawiki-moderation/issues/11).
 
-That kicked off a variety of interactions with the Moderation extension maintainer over the course of the day.  First up they asked me to try out a fix involving disabling a php function called `onLocalUserCreated` in `hooks/ModerationPreload.php`.  That fixed the issue and the maintainer almost immediately released a fix, which I pulled into staging which now worked fine. The master branch of the extension now included that fix, and another fix that was supposed to resolve another key issue we were having; the failure of the moderation notice to display.  The set up we have is the Moderation extension sitting in an extensions directory within mediawiki on the Azure/Bitnami instance, and we got it there via git.  So upgrading it involves just pulling down the latest code from GitHub.  This makes me a little nervous.  I'm more comfortable with upgrading libraries via something like rubygems and having a full test suite to run to check that everything is still working.
+That kicked off a variety of interactions with the Moderation extension maintainer over the course of the day.  First up they asked me to try out a fix involving disabling a php function called `onLocalUserCreated` in `hooks/ModerationPreload.php`.  That fixed the issue and the maintainer almost immediately released a fix, which I pulled into staging which now worked fine. The master branch of the extension now included that fix, and another fix that was supposed to resolve another key issue we were having; the failure of the moderation notice to display.  The set up we have is the Moderation extension sitting in an extensions directory within MediaWiki on the Azure/Bitnami instance, and we got it there via git.  So upgrading it involves just pulling down the latest code from GitHub.  This makes me a little nervous.  I'm more comfortable with upgrading libraries via something like rubygems and having a full test suite to run to check that everything is still working.
 
-Actually this is not so different from what I do with the autograders on AWS, where we update from git; although there at least we have staging and master branches.  I see that we do have some tests associated with both mediawiki and the Moderation extension.  I'd like to have these running, ideally in CI.  At the moment everything is relying on time-consuming manual tests.  Argh! I'd love to have space to re-create a box from scratch, checking what tests we can run on the way and also do a step by step performance review.
+Actually this is not so different from what I do with the autograders on AWS, where we update from git; although there at least we have staging and master branches.  I see that we do have some tests associated with both MediaWiki and the Moderation extension.  I'd like to have these running, ideally in CI.  At the moment everything is relying on time-consuming manual tests.  Argh! I'd love to have space to re-create a box from scratch, checking what tests we can run on the way and also do a step by step performance review.
 
-For the moment I upgraded the Moderation extension via git and things seemed to be fine.  Two important bugs fixed, but then I noticed that although the moderation notice was showing up on staging, it wasn't there on production where we had SSL and the VisualEditor installed.  I added notes to the GitHub issue, and also reviewed all my comments to the VisualEditor team.  Nothing back on the IE, iPad and usability issues there and it had been a week.
+For the moment I upgraded the Moderation extension via git and things seemed to be fine.  Two important bugs fixed, but then I noticed that although the Moderation notice was showing up on staging, it wasn't there on production where we had SSL and the VisualEditor installed.  I added notes to the GitHub issue, and also reviewed all my comments to the VisualEditor team.  Nothing back on the IE, iPad and usability issues there and it had been a week.
 
 * [Asking about iPad](https://www.mediawiki.org/wiki/Topic:Tqcoy1d9m5sbtf1e)
 * [Usability](https://www.mediawiki.org/wiki/Topic:Tql1dw7a2muih6ma)
@@ -49,4 +58,4 @@ but they've had an idea:
 
 > What we currently get from FormData, can be obtained by wrapping around mw.Api.prototype.api(). This should work in IE.
 
-So the maintainer is investigating that, and in the meantime I guess I'll try and complete adding our training materials to the wiki.  I think I also found the [settings](https://www.mediawiki.org/wiki/Extension:VisualEditor#Complete_list_of_configuration_options) to remove some of the annoying VisualEditor popups in.  Back to the grindstone ...
+So the maintainer is investigating that, and in the meantime I guess I'll try and complete adding our training materials to the wiki.  I think I also found the [settings](https://www.mediawiki.org/wiki/Extension:VisualEditor#Complete_list_of_configuration_options) to remove some of the annoying VisualEditor popups in.  Back to the grindstone ... at least I've managed to document some of the process of debugging a MediaWiki bug.
