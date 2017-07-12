@@ -1,4 +1,4 @@
-Yesterday I finally got a clear shot at resolving some of our MediaWiki technical issues.  A key one was users getting loggged out after they create new accounts.  I had had some feedback from MediaWiki support that are cookies weren't being set correctly on production.  So I created a new account for mediawiki on our staging box.  It created the following cookies:
+Yesterday I finally got a clear shot at resolving some of our MediaWiki technical issues.  A key one was users getting loggged out after they create new accounts.  I had had some feedback from MediaWiki support that our cookies weren't being set correctly on production.  So I created a new account for mediawiki on our staging box.  It created the following cookies:
 
 ![cookies created for new user account](https://www.dropbox.com/s/f73wmvq1g31uh6o/Screenshot%202017-05-15%2010.56.38.png?dl=1)
 
@@ -23,7 +23,7 @@ That kicked off a variety of interactions with the Moderation extension maintain
 
 Actually this is not so different from what I do with the autograders on AWS, where we update from git; although there at least we have staging and master branches.  I see that we do have some tests associated with both mediawiki and the Moderation extension.  I'd like to have these running, ideally in CI.  At the moment everything is relying on time-consuming manual tests.  Argh! I'd love to have space to re-create a box from scratch, checking what tests we can run on the way and also do a step by step performance review.
 
-For the moment I upgraded the Moderation extension via git and things seemed to be find.  Two important bugs fixed, but then I noticed that although the moderation notice was showing up on staging, it wasn't there on production where we had SSL and the Visual Editor installed.  I added notes to the GitHub issue, and also reviewed all my comments to the VisualEditor team.  Nothing back on the IE, iPad and usability issues there and it had been a week.
+For the moment I upgraded the Moderation extension via git and things seemed to be fine.  Two important bugs fixed, but then I noticed that although the moderation notice was showing up on staging, it wasn't there on production where we had SSL and the VisualEditor installed.  I added notes to the GitHub issue, and also reviewed all my comments to the VisualEditor team.  Nothing back on the IE, iPad and usability issues there and it had been a week.
 
 * [Asking about iPad](https://www.mediawiki.org/wiki/Topic:Tqcoy1d9m5sbtf1e)
 * [Usability](https://www.mediawiki.org/wiki/Topic:Tql1dw7a2muih6ma)
