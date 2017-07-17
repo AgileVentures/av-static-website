@@ -5,6 +5,7 @@ tags: GitHub, DevOps, monitoring, Heroku, NineFold, migration
 author: Sam Joseph
 ---
 
+![Server Monitoring](/images/server-monitoring.png)
 
 So I'm still forcing myself to think about DevOps in preparation for my talk on Thursday.  Other things being equal I'd be blogging about our new marketing activities and how Google will potentially give us $10,000 a month of AdWords, and how there might be similar, if less generous, offers from other social media sites.  However, it felt great yesterday when I managed to complete a first draft of the slides for the talk.  There's still a little something missing though; the performance requirements for the different systems.  
 
@@ -14,7 +15,7 @@ It seems like NewRelic wasn't actually enabled on WebSiteOne production.  The co
 
 ![NewRelic data from HarrowCN production](https://www.dropbox.com/s/myb72nmofhmm7lg/Screenshot%202017-01-17%2010.22.04.png?dl=1)
 
-Ping requests haven't been working for the last 12 days, and aren't working from the command line either, but the site is up and it looks like pages are being served okay.  I can see a couple of page loads that failed in the last seven days, which is probably acceptable for this low traffic site.  Even if it wasn't, I'm not sure how to go from that failure to a fix.  Superficially it would just mean provisioning more dyno or more memory.  At the moment LocalSupport is on a legacy dyno from Heroku, meaning we aren't getting metrics on memory usage as we are for WebSiteOne.
+Ping requests haven't been working for the last 12 days, and aren't working from the command line either, but the site is up and it looks like pages are being served okay.  I can see a couple of page loads that failed in the last seven days, which is probably acceptable for this low traffic site.  Even if it wasn't, I'm not sure how to go from that failure to a fix.  Superficially it would just mean provisioning more dynos or more memory.  At the moment LocalSupport is on a legacy dyno from Heroku, meaning we aren't getting metrics on memory usage as we are for WebSiteOne.
 
 While I've been writing this, the NewRelic data on WebSiteOne has started coming in:
 
