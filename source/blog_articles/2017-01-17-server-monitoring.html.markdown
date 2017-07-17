@@ -5,7 +5,7 @@ tags: GitHub, DevOps, monitoring, Heroku, NineFold, migration
 author: Sam Joseph
 ---
 
-![Server Monitoring](/images/server-monitoring.png)
+![Server Monitoring](/images/server-monitoring.jpg)
 
 So I'm still forcing myself to think about DevOps in preparation for my talk on Thursday.  Other things being equal I'd be blogging about our new marketing activities and how Google will potentially give us $10,000 a month of AdWords, and how there might be similar, if less generous, offers from other social media sites.  However, it felt great yesterday when I managed to complete a first draft of the slides for the talk.  There's still a little something missing though; the performance requirements for the different systems.  
 
