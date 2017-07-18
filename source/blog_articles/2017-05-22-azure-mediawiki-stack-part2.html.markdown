@@ -1,4 +1,4 @@
-I wasn't able to complete a re-run of the NHS HLP MediaWiki installation due partly to getting distracted by other work, but also because the Parsoid service (needed by the VisualEditor) wouldn't install.  I was following the instructions in https://www.mediawiki.org/wiki/Parsoid/Setup but getting "E: Unable to locate package parsoid".  I thrashed around, got distracted and then at the end of the day the command just worked.  I had a similar experience with letsencrypt on AsyncVoter, where the letsecrypt server was down, so maybe that was the issue with installing Parsoid, that the wikimedia releases site was down.  Anyway, next step is to configure the Parsoid service, which involved editing `/etc/mediawiki/parsoid/config.yaml` and updating the uri, which defaults to `http://localhost/w/api.php`.  After various trial and error I'd learnt from the previous install that we needed to drop the w, like so:  
+I wasn't able to complete a re-run of the NHS HLP MediaWiki installation due partly to getting distracted by other work, but also because the Parsoid service (needed by the VisualEditor) wouldn't install.  I was following the instructions in https://www.mediawiki.org/wiki/Parsoid/Setup but getting "E: Unable to locate package parsoid".  I thrashed around, got distracted and then at the end of the day the command just worked.  I had a similar experience with letsencrypt on AsyncVoter, where the letsencrypt server was down, so maybe that was the issue with installing Parsoid, that the wikimedia releases site was down.  Anyway, next step is to configure the Parsoid service, which involved editing `/etc/mediawiki/parsoid/config.yaml` and updating the uri, which defaults to `http://localhost/w/api.php`.  After various trial and error I'd learnt from the previous install that we needed to drop the w, like so:  
 
 ```
  # Configure Parsoid to point to your MediaWiki instances.
@@ -51,7 +51,7 @@ and then an "inbound security rule":
 
 ![an "inbound security rule"](https://www.dropbox.com/s/59o0krege5temk9/Screenshot%202017-05-22%2010.28.20.png?dl=1)
 
-but then we still get errors like :
+but then we still get errors like:
 
 ![timeout reached](https://www.dropbox.com/s/l810011weec2vef/Screenshot%202017-05-22%2010.34.32.png?dl=1)
 
