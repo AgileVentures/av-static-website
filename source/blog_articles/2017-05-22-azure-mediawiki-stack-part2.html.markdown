@@ -1,3 +1,12 @@
+---
+title: Azure MediaWiki Stack Part 2
+date: 2017-05-22
+tags: MediaWiki
+author: Sam Joseph
+---
+
+![mediawiki](/images/MediaWiki.svg)
+
 I wasn't able to complete a re-run of the NHS HLP MediaWiki installation due partly to getting distracted by other work, but also because the Parsoid service (needed by the VisualEditor) wouldn't install.  I was following the instructions in https://www.mediawiki.org/wiki/Parsoid/Setup but getting "E: Unable to locate package parsoid".  I thrashed around, got distracted and then at the end of the day the command just worked.  I had a similar experience with letsencrypt on AsyncVoter, where the letsencrypt server was down, so maybe that was the issue with installing Parsoid, that the wikimedia releases site was down.  Anyway, next step is to configure the Parsoid service, which involved editing `/etc/mediawiki/parsoid/config.yaml` and updating the uri, which defaults to `http://localhost/w/api.php`.  After various trial and error I'd learnt from the previous install that we needed to drop the w, like so:  
 
 ```

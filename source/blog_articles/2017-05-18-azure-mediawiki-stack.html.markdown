@@ -1,3 +1,13 @@
+---
+title: Azure MediaWiki Stack Part 1
+date: 2017-05-18
+tags: MediaWiki
+author: Sam Joseph
+---
+
+![mediawiki](/images/MediaWiki.svg)
+
+
 Okay, so how did we put this complete NHS HLP wiki instance together?  Let's go through it step by step:
 
 1. Create a Bitnami account, and go to the console for "Azure Launchpad"
