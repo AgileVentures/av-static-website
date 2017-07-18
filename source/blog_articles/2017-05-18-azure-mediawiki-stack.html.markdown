@@ -1,6 +1,6 @@
 Okay, so how did we put this complete NHS HLP wiki instance together?  Let's go through it step by step:
 
-1. Created a Bitnami account, and went to console for "Azure Launchpad"
+1. Create a Bitnami account, and go to the console for "Azure Launchpad"
 2. Choose the Bitnami MediaWiki Stack which provides a one-click install solution for MediaWiki (1.28.2)
 3. Choose Basic A0 type with shared virtual core and 0.75Gb of RAM, and select 'West Europe'
 4. Wait for that to launch
@@ -38,7 +38,7 @@ Okay, so how did we put this complete NHS HLP wiki instance together?  Let's go 
 
       $wgDefaultUserOptions['enotifwatchlistpages'] = true;
       
-  g) consider enabling logging - we did have it working at one point with the following:  
+ g) consider enabling logging - we did have it working at one point with the following:  
 
 
       ## Logging
@@ -54,7 +54,7 @@ Okay, so how did we put this complete NHS HLP wiki instance together?  Let's go 
       drwxr-xr-x 7 root    root    4096 Apr 28 12:30 ..
       -rw-rw-r-- 1 bitnami bitnami 2006 May  1 15:41 debug-bitnami_mediawiki.log
       
-  was there another setting we missed?  Anyway, should be off in production for performance (I imagine)
+  Was there another setting we missed?  Anyway, should be off in production for performance (I imagine)
 
 7. Add the Cite Extension
 
@@ -66,9 +66,9 @@ Okay, so how did we put this complete NHS HLP wiki instance together?  Let's go 
     
 8. VisualEditor setup
    
-     a) follow instructions at https://www.mediawiki.org/wiki/Extension:VisualEditor
-     b) `wget https://extdist.wmflabs.org/dist/extensions/VisualEditor-REL1_28-93528b7.tar.gz` in extensions directory `~/apps/mediawiki/htdocs/extensions`
-     c) add configuration to end of `LocalSettings.php`
+   a) follow instructions at https://www.mediawiki.org/wiki/Extension:VisualEditor 
+   b) `wget https://extdist.wmflabs.org/dist/extensions/VisualEditor-REL1_28-93528b7.tar.gz` in extensions directory `~/apps/mediawiki/htdocs/extensions` 
+   c) add configuration to end of `LocalSettings.php`
     
     ```
     ## Visual Editor
