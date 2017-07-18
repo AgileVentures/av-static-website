@@ -72,7 +72,7 @@ Although I was stuck here for a while, but I think it comes back to the problem 
 
 ![adding an endpoint to the virtual machine on Azure](https://www.dropbox.com/s/ghzx10bnhbq7nbm/Screenshot%202017-05-22%2011.04.09.png?dl=1)
 
-Ah, so it looks like we need BOTH the endpoint AND the security group; although I'm not 100% on that, and I think I'm out of time to really determine that ...
+Ah, so it looks like we need BOTH the endpoint AND the security group; although I'm not 100% on that, and I think I'm out of time to really determine that ... on to [part 3](http://nonprofits.agileventures.org/2017/05/23/azure-mediawiki-stack-part3/)
 
 
 

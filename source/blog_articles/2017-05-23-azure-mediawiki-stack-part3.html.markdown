@@ -7,7 +7,7 @@ author: Sam Joseph
 
 ![mediawiki](/images/MediaWiki.svg)
 
-Ahhh, so the rebuilding the mediawiki stack on azure leaks over three days and I suspect it may be more.  Yesterday I got stuck trying to open a port for the visual editor and I suspect there will be other blocks, but that's why I'm forcing myself through this to have it all documented so it's not a pain when we are really short on time.  I also got distracted playing with inkscape this morning, but that's another story.
+Ahhh, so the rebuilding the MediaWiki stack on Azure leaks over three days and I suspect it may be more.  Yesterday I got stuck trying to open a port for the VisualEditor and I suspect there will be other blocks, but that's why I'm forcing myself through this to have it all documented so it's not a pain when we are really short on time.  I also got distracted playing with inkscape this morning, but that's another story.
 
 I'm not sure that I have time, but I couldn't help checking to see if removing the security rule would prevent the VisualEditor from working, and unless there's some kind of caching going on that I understand, it looks like the security rule really isn't necessary.  I certainly suspected that, since it isn't connected up to anything else in the system.  So in principle I can delete those security rules and that's one less thing to maintain and organise.  Confusing, because we definitely need security rules like that to work with AWS.  Presumably we'd need them for some other kinds of configuration on Azure ...
 
@@ -162,5 +162,5 @@ Which is enough to produce our nice resizable banner.  Okay time to get that SSL
 
 https://community.bitnami.com/t/installing-certbot-for-lets-encrypt-ssl-certificate/46431/2
 
-and I need to follow up with the developer there.  Let's try for that in part 4 and if I'm lucky I'll also get to testing the backup stuff ... and also test importing all the data from the production system into the backup system.
+and I need to follow up with the developer there.  Let's try for that in [part 4](http://nonprofits.agileventures.org/2017/05/24/azure-mediawiki-stack-part4/) and if I'm lucky I'll also get to testing the backup stuff ... and also test importing all the data from the production system into the backup system.
 

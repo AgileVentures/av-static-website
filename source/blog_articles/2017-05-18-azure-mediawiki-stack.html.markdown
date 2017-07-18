@@ -116,7 +116,7 @@ Reading state information... Done
 E: Unable to locate package parsoid
 ```
 
-and now it just worked again ... okay ... network time outs I guess, but that's crushed my blog flow.  Find out how this continues in part 2 ...
+and now it just worked again ... okay ... network time outs I guess, but that's crushed my blog flow.  Find out how this continues in [part 2](http://nonprofits.agileventures.org/2017/05/22/azure-mediawiki-stack-part2/) ...
 
 
 
