@@ -1,6 +1,15 @@
+---
+title: Year of Blogging
+date: 2017-05-26
+tags: MediaWiki
+author: Sam Joseph
+---
+
+![blogging](/images/blog-i-am.jpg)
+
 So I think I'm coming up on a year of blogging.  I don't actually know which was the day that I started blogging daily. I can see one that I posted on [June 20th 2016](http://linklens.blogspot.co.uk/2016/06/moving-beyond-toy-problems.html).  At the beginning I was posting in different locations each day.  But here's another on [June 21st 2016](http://nonprofits.agileventures.org/2016/06/21/agile-approach-to-login-signup-problems/) so although I did blog on [May 17th 2016](http://nonprofits.agileventures.org/2016/05/17/collaborating-in-software-teams/) I didn't get into the daily rhythm until later in June.  I'd almost convinced myself that I started in late May so that I could be wrapping up now, but my obsessive nature means I will probably force myself to go all the way to June 20th.  
 
-It's been an interesting thing to do for a year, but I think a change will be welcome.  While I've demonstrated that I can blog daily and there's been some value for me in organising my thoughts, I don't think I've gained much of a following or inspired many people.  Part of the idea of blogging is to get all my ideas about the future of AgileVentures out of my head and accessible to others.  I've been aided by tireless review from Federico and I think there's definitely some extent to which my blogging has distributed my ideas amongst the AgileVentures members, but at the same time my blogs are largely unpolished streams of consciousness and I've been more focused on cranking them out than I have on making them intelligible.
+It's been an interesting thing to do for a year, but I think a change will also be welcome.  While I've demonstrated that I can blog daily and there's been some value for me in organising my thoughts, I don't think I've gained much of a following or inspired many people.  Part of the idea of blogging is to get all my ideas about the future of AgileVentures out of my head and accessible to others.  I've been aided by tireless review from Federico and I think there's definitely some extent to which my blogging has distributed my ideas amongst the AgileVentures members, but at the same time my blogs are largely unpolished streams of consciousness and I've been more focused on cranking them out than I have on making them intelligible.
 
 I think there's also an extent to which the frenetic activity on my part drowns out other voices in the community.  We'd probably be in a much stronger state as a community if we had four or five different people each blogging weekly.  I sense that my voice is too strong.  I suspect that my too loud voice and my blogging about "Legacy Code" affected my co-founders decision to step back from the community.   I'm going to carry on to June 20th but I'm now itching to replace my daily blog with a daily focus on the AgileVentures website.  My latest hypothesis is that if I spent as much time on the tone of voice and content in the AV site as I did on my blogs we might be a bit further along to achieving financial stability.
 
