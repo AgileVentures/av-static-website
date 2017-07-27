@@ -1,4 +1,4 @@
-Crazy day yesterday - felt pretty under attack.  I'd love to lay it all in text, but I don't think I can indulge myself beyond what I typed up in private notes yesterday and I have a meeting the the NHS folks tomorrow, and I think highest priority is having at least of a draft of a marketing report for them to look at.  I'm worried if I blog about anything else I'll just not get it done as I lost hours yesterday to reacting to what felt like emotionally charged posts on Slack.  So, what is the set of stuff that will go into the NHS Wiki marketing report?  Ironically I go to open Slack to find out as I have recently posted it into the #marketing channel ... here we go (and quickly turn Slack off before getting distracted):
+Crazy day yesterday - felt pretty under attack.  I'd love to lay it all in text, but I don't think I can indulge myself beyond what I typed up in private notes yesterday and I have a meeting with the NHS folks tomorrow, and I think highest priority is having at least part of a draft of a marketing report for them to look at.  I'm worried if I blog about anything else I'll just not get it done as I lost hours yesterday to reacting to what felt like emotionally charged posts on Slack.  So, what is the set of stuff that will go into the NHS Wiki marketing report?  Ironically I go to open Slack to find out as I have recently posted it into the #marketing channel ... here we go (and quickly turn Slack off before getting distracted):
 
 Monthly moderation reports need to be submitted including the following:
 
@@ -22,13 +22,13 @@ So let's work through each of these and pull up some numbers:
 
    71 rejected submissions of which 8 were tests by admin staff and 63 were "spam" (irrelevant) submissions 
 
-2. **Capacity required for moderationa and time spent**
+2. **Capacity required for moderation and time spent**
 
-   In this first month the 63 "spam" submissions were all very clearly irrelevant to the site, i.e. submissions on topics completely unrelated to healthcare.  The moderation was largely handled by the automated system.  Admins spent at most a couple of hours reviewing submissions, rejecting "spam" submissions and marking spammers as such.  Existing stakeholders were quickly marked as moderator approved (requiring no more than a couple of hours over the month), and as such there were no moderated submissions that.
+   In this first month the 63 "spam" submissions were all very clearly irrelevant to the site, i.e. submissions on topics completely unrelated to healthcare.  The moderation was largely handled by the automated system.  Admins spent at most a couple of hours reviewing submissions, rejecting "spam" submissions and marking spammers as such.  Existing stakeholders were quickly marked as moderator approved (requiring no more than a couple of hours over the month), and as such there were no moderated submissions for that.
 
 3. **Any issues with the process and practice of moderation**
 
-   At the moment the ratio of spam to normal submissions is rather high and created the slight risk that a normal submission may be lost in the spam listings.  These automated spam submissions might be handled more effectively with MediaWiki plusing like AbuseFilter, SpamBlacklist or ConfirmEdit, but these need testing to see the impact they might have on the submission process for regular users.
+   At the moment the ratio of spam to normal submissions is rather high and created the slight risk that a normal submission may be lost in the spam listings.  These automated spam submissions might be handled more effectively with MediaWiki policing like AbuseFilter, SpamBlacklist or ConfirmEdit, but these need testing to see the impact they might have on the submission process for regular users.
 
 4. **Other data as agreed to aid evaluation**
 
@@ -36,7 +36,7 @@ So let's work through each of these and pull up some numbers:
 
 5. **The number of user log-ins (unique and repeated)**
 
-   Logins are not required to view the site.   Site traffic from Google Analytics indicates that over the last month there were 293 visits to the site, corresponding to 134 different unique users.  The average sessions duration was 5minutes and 40 second s which involved visiting on average 4.6 pages. 
+   Logins are not required to view the site.   Site traffic from Google Analytics indicates that over the last month there were 293 visits to the site, corresponding to 134 different unique users.  The average session's duration was 5 minutes and 40 seconds, which involved visiting on average 4.6 pages. 
 
 6. **Number of users that logged in who commented or added to the wiki**
 
