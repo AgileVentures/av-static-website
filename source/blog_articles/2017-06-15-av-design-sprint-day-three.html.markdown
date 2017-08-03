@@ -71,7 +71,7 @@ Standout Ideas:
 * Value proposition
 * Multi-select of tech
 
-It was relatively straightforward to allow us to put heat map stickers in the google doc once all the images had been adding to drawings where we could overlay dots.   Here's the full sequence we were following:
+It was relatively straightforward to allow us to put heat map stickers in the google doc once all the images had been added to drawings where we could overlay dots.   Here's the full sequence we were following:
 
 1. Art museum. Tape the solution sketches to the wall in one long row.
 2. Heat map. Have each person review the sketches silently and put one to three small dot stickers beside every part he or she likes. 
@@ -79,7 +79,7 @@ It was relatively straightforward to allow us to put heat map stickers in the go
 4. Straw poll. Each person silently chooses a favorite idea. All at once, each person places one large dot sticker to register his or her (nonbinding) vote.
 5. Supervote. Give the Decider three large dot stickers and write her initials on the sticker. Explain that you’ll prototype and test the solutions the Decider chooses. 
 
-In the above images you can also see some of the straw poll votes.  We were divided pretty evenly between the first and third, that's "Journey to Agile" and "Seeker on the Path".  So there was a decision to make, go with one or the other, or combine them in some fashion.  After some debate we narrowed it down to the following options:
+In the above images you can also see some of the straw poll votes.  We were divided pretty evenly between the first and third. That's "Journey to Agile" and "Seeker on the Path".  So there was a decision to make, go with one or the other, or combine them in some fashion.  After some debate we narrowed it down to the following options:
 
 1. Rumble (building two prototypes and two fake brand names)
 2. Merge where click through on Agile Journey has pathways (multiple steps) (single prototype)
@@ -93,11 +93,11 @@ Federico joined the hangout on a couple of occasions to get input and decisions.
 
 > Ensure that developers understand how they will benefit from AgileVentures (before looking for projects)
 
-Having made the decision we moved on to making a storyboard to help structure the prototype we would build on Thursday.  I've noticed my computer getting slower and slower as these long hangouts run on with multiple large google doc windows open.  I've taken to quitting Slack and having that on another machine (if I need it) and even after a Chrome restart yesterday it was tough going trying to make the storyboard in a google doc.  We got as far as this:
+Having made the decision, we moved on to making a storyboard to help structure the prototype we would build on Thursday.  I've noticed my computer getting slower and slower as these long hangouts run on with multiple large google doc windows open.  I've taken to quitting Slack and having that on another machine (if I need it) and even after a Chrome restart yesterday it was tough going trying to make the storyboard in a google doc.  We got as far as this:
 
 ![](https://www.dropbox.com/s/qoukd7h052vpko0/Screenshot%202017-06-15%2009.41.16.png?dl=1)
 
-before I gave up, rebooted Chrome and started sketching on paper. My memory is that shared editing of the google drawing on day one had been a pretty efficient group operation.   I hadn't rebooted my computer since then and I think we were all mentally flagging.  As the computer starts to lag it becomes increasingly frustrating.  I thought that based on the concept we were working on the storyboard was pretty straightforward.  I uploaded what I had drawn:
+before I gave up, rebooted Chrome and started sketching on paper. My memory is that shared editing of the google drawing on day one had been a pretty efficient group operation.   I hadn't rebooted my computer since then and I think we were all mentally flagging.  As the computer starts to lag it becomes increasingly frustrating.  I thought that, based on the concept we were working on, the storyboard was pretty straightforward.  I uploaded what I had drawn:
 
 ![](https://www.dropbox.com/s/ay5i33jehioui5m/Screenshot%202017-06-15%2009.44.23.png?dl=1)
 
@@ -114,7 +114,7 @@ and wrote up this list of tasks:
 5. Making map
 6. Keynote vs Invision vs Middleman?
 
-Matt was telling us he was getting to the point that he could only do simple tasks.  I thought I might be able to write up some subtopic text, at least if I did it locally in keynote.  We spent twenty minutes or with me going to each person and trying to ask what they would like to work on the list.  Maybe that was the wrong way to go.  It felt like we were moving in treacle.  Michael was talking through what each task involved.  I think there was confusion about whether we could work on things in parallel.  Ultimately Matt left, Lokesh started working on finding themed clipart, which Michael was doing in parallel.  I started on a keynote with subtopics, but got distracted searching for clipart.  The remaining time was spent looking at Shutterstock and other images like this:
+Matt was telling us he was getting to the point that he could only do simple tasks.  I thought I might be able to write up some subtopic text, at least if I did it locally in keynote.  We spent twenty minutes more with me going to each person and trying to ask what they would like to work on the list.  Maybe that was the wrong way to go.  It felt like we were moving in treacle.  Michael was talking through what each task involved.  I think there was confusion about whether we could work on things in parallel.  Ultimately Matt left, Lokesh started working on finding themed clipart, which Michael was doing in parallel.  I started on a keynote with subtopics, but got distracted searching for clipart.  The remaining time was spent looking at Shutterstock and other images like this:
 
 ![](https://www.dropbox.com/s/623cie39vefg6p9/stock-vector-mountain-hiking-infographic-template-design-in-flat-style-386934532.jpg?dl=1)
 
