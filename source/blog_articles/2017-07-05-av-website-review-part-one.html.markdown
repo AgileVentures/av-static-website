@@ -1,4 +1,4 @@
-Right, new dawn.  I could be blogging about all the conversations we had about testing yesterday, but new resolution is to get the AV website sorted out in terms of usability, readability and user flow one day at a time.  Immediately I'm torn between two sections.  There's the "Getting Started" page that people either browse to, or get redirected to after sign in.  After discussions in the AV community meeting on Monday I removed the first two sections of that document:
+Right, new dawn.  I could be blogging about all the conversations we had about testing yesterday, but my new resolution is to get the AV website sorted out in terms of usability, readability and user flow one day at a time.  Immediately I'm torn between two sections.  There's the "Getting Started" page that people either browse to, or get redirected to after sign in.  After discussions in the AV community meeting on Monday I removed the first two sections of that document:
 
 ![](../images/Screenshot%202017-07-05%2009.29.00.png?dl=1)
 
