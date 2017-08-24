@@ -16,4 +16,6 @@ So the first thing I should be checking up on is what effect we had from the cha
 
 Frustratingly I can't easily do comparisons in on the behaviour flow page in Google Analytics.  Conversely in the chrome plugin I can see these side by side, although I seem to be seeing PageView rather than session data. (Sessions = Unique PageViews?) The plugin shows that overall traffic to the page was down, but the bounce rate dropped by over 28% which is a big change ...
 
-Okay, I'll need to go through all this again tomorrow when I'm not jet-lagged ...
+Okay, I'll need to go through all this again tomorrow when I'm not jet-lagged ... apparently bounce rate is not the same as drop off:
+
+http://www.rankraiser.com/rankraiser/difference-between-google-bounce-rate-and-drop-offs/
