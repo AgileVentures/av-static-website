@@ -1,11 +1,13 @@
 ---
 title: Hosting Slack Bots
 date: 2016-11-29
-tags: AWS BeepBoop Lambda autograders tmux docker timeout
+tags: AWS, BeepBoop, Lambda, autograders, tmux, docker, timeout
 author: Sam Joseph
 ---
 
-The slackbot had stayed live for most of the weekend on drie push, but on Monday morning it was unresponsive, and although we'd completed a vote or two, not all the notifications had come through.  The bot would not restart from fresh pushes of code.  I couldn't get it back online without ssh-ing in and starting it directly.  drie push is not explicitly designed for hosting slack bots, and there wasn't any functionality to put the bot into a background job that would persist after logging out of ssh.  Actually I'd been surprised that the slack bot had worked on drie push at all; I'd pushed it up there as an experiment and seen that it worked partially, but now we needed a more consistent hosting solution.
+![bots](/images/bots.png)
+
+The slackbot had stayed live for most of the weekend on drie push, but on Monday morning it was unresponsive, and although we'd completed a vote or two, not all the notifications had come through.  The bot would not restart from fresh pushes of the code.  I couldn't get it back online without ssh-ing in and starting it directly.  drie push is not explicitly designed for hosting slack bots, and there wasn't any functionality to put the bot into a background job that would persist after logging out of ssh.  Actually I'd been surprised that the slack bot had worked on drie push at all; I'd pushed it up there as an experiment and seen that it worked partially, but now we needed a more consistent hosting solution.
 
 Now that I'd shown the #websiteone channel the promise of a bot that could run an asynchronous vote, there was less appetite for starting manual ones, and not having the stable hosted bot was starting to feel like a blocker.  Slack has a [page dedicated to different bot hosting solutions](https://api.slack.com/docs/hosting). In parallel with chatting on Slack with the team about the options, I spent a little while looking at what AWS Lambda had to offer, and then Matt suggested that BeepBoop looked like it had a great free offering.  I signed up for a BeepBoop account and got through most of pulling our repo asyncbot directly into beepboop, but then it was failing due to lack of a DockerFile:
 
@@ -13,7 +15,7 @@ Now that I'd shown the #websiteone channel the promise of a bot that could run a
 unable to prepare context: Cannot locate Dockerfile: absDockerfile: "/tmp/b54c5a30aa584533b027af837beeef64683410820/repo/Dockerfile"
 ```
 
-There was probably a simple solution, but I couldn't be sure.  I felt like I could have this bot up and running on AWS pretty quickly and I wouldn't be beholden to some other service that was going to start squeezing me on price like Heroku has been doing recently.  The only reason I hadn't immediately spun up an AWS instance was that whenever I tried to go to the AWS console in Chrome it was auto-switching to the saasbook team account, and I didn't want to create some instance that Armando would start paying for.  I went to Safari (I know there are chrome profiles) and created a new AgileVentures AWS account and created a free-tier eligible tiny Ubuntu instance and had that up in a matter of minutes.  In the meantime Arreche was telling me he could get the planning poker script up in hubot pretty fast, but I really wanted to see how far I could get with AWS.
+There was probably a simple solution, but I couldn't be sure.  I felt like I could have this bot up and running on AWS pretty quickly and I wouldn't be beholden to some other service that was going to start squeezing me on price like Heroku has been doing recently.  The only reason I hadn't immediately spun up an AWS instance was that whenever I tried to go to the AWS console in Chrome it was auto-switching to the saasbook team account, and I didn't want to create some instance that Armando would start paying for.  I went to Safari (I know you can have chrome profiles, but ...) and created a new AgileVentures AWS account and created a free-tier eligible tiny Ubuntu instance and had that up in a matter of minutes.  In the meantime Arreche was telling me he could get the planning poker script up in hubot pretty fast, but I really wanted to see how far I could get with AWS.
 
 I set up the ssh config:
 
@@ -31,7 +33,7 @@ I needed to make it super easy to log into the box:
 $ ssh AsyncVoterBot
 ```
 
-where I installed git, nodejs and npm using `apt-get install` (although I burned some time mistakenly installing `node` and then trying to build node from source) before cloning our async slack bot project, setting the slack bot token in the environment and running the bot in a tmux session. 
+where I installed git, nodejs and npm using `apt-get install` (although I burned some time mistakenly installing `node` and then trying to build node from source) before cloning our async slack bot project, setting the Slack bot token in the environment and running the bot in a tmux session. 
 
 ```
 $ tmux

@@ -5,6 +5,8 @@ tags: meetings, pull requests, bug fixing, Slack
 author: Sam Joseph
 ---
 
+![bot](/images/bot.jpeg)
+
 Friday included a lot of meetings, pull request review, and bug fixing.  I didn't get much fresh coding down, which was somewhat frustrating, but I did have a bit of a breakthrough on the greeter bot side, with this code:
 
 ```js

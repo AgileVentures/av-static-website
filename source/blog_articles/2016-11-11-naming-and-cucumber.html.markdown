@@ -1,9 +1,11 @@
 ---
 title: Naming and Cucumber
 date: 2016-11-11
-tags: pull requests rails cucumber features refactoring architecture rearchitecting domain driven design DDD steps nested
+tags: pull requests, rails, cucumber, features, refactoring, architecture, re-architecting, domain driven design, DDD, steps, nested
 author: Sam Joseph
 ---
+
+![Cucumbers](/images/cucumber.jpg)
 
 In a series of disjointed solo sessions I managed to fix the bug whereby manual hangout edits were making subsequent events live.  Michael and I had wrapped this bug in a cucumber scenario the day previously.  The manual hangout edit interface looks like this:
 
@@ -41,7 +43,7 @@ By itself this didn't fix the problem, so I also adjusted the `recent_hangouts` 
   end
 ```
 
-The cukes went green and I had to fix up a few specs for the EventInstanceHelper and the Event class.  I wasn't sure if the fully unique id was actually necessary, but when I saw the specs for EventInstanceHelper that were saying a unique id should be returned, I felt I really wanted to stick with the change.  Arguably it could be the subject of a completely separate pull request, driven by a different cucumber scenario.  I've been being harsh with the AsyncVoter folks to keep out any functionality not related to the feature being worked on.  It's easy to give myself slack when I'm on the other side of the barrier; but in my defence this is a bug fix, and I'm trying to make sure we aren't losing valuable data about user activity.  I did try to get the feature to wrap this with limited success.  In the process I did do major refactoring of the cukes, which relates to a [PR from John on LocalSupport](https://github.com/AgileVentures/LocalSupport/pull/391) where he's using a lot of nested steps, which I'm not such a big fan of.
+The cukes went green and I had to fix up a few specs for the EventInstanceHelper and the Event class.  I wasn't sure if the fully unique id was actually necessary, but when I saw the specs for EventInstanceHelper that were saying a unique id should be returned, I felt I really wanted to stick with the change.  Arguably it could be the subject of a completely separate pull request, driven by a different Cucumber scenario.  I've been being harsh with the AsyncVoter folks to keep out any functionality not related to the feature being worked on.  It's easy to give myself slack when I'm on the other side of the barrier; but in my defence this is a bug fix, and I'm trying to make sure we aren't losing valuable data about user activity.  I did try to get the feature to wrap this with limited success.  In the process I did do major refactoring of the cukes, which relates to a [PR from John on LocalSupport](https://github.com/AgileVentures/LocalSupport/pull/391) where he's using a lot of nested steps, which I'm not such a big fan of.
 
 On WSO the editing a hangout url on a repeating event cuke scenario had gotten really long:
 
@@ -120,7 +122,7 @@ And the following event instances (with default participants) exist:
  ... <table of data>
 ```
 
-Too much perhaps?  But the intention is to give someone else who wants to use that step (or method) a heads up about what's going on under the hood.  The ruby contents of the cuke steps above are a bit long and need some DRYing out, but I think I'd rather have them DRYed out into other ruby methods that are well named.  There's perhaps almost too much room for nuance with the English descriptions of pure Cucumber steps.  So for example the following:
+Too much perhaps?  But the intention is to give someone else who wants to use that step (or method) a heads up about what's going on under the hood.  The Ruby contents of the cuke steps above are a bit long and need some DRYing out, but I think I'd rather have them DRYed out into other Ruby methods that are well named.  There's perhaps almost too much room for nuance with the English descriptions of pure Cucumber steps.  So for example the following:
 
 ```rb
 Then(/^"([^"]*)" shows live for that hangout link for the event duration$/) do |event_name|
@@ -170,7 +172,7 @@ end
 
 which allows that nested step to be re-used in other cucumber scenarios, but the debugging support for nested steps is not as good in my experience.  Maybe this is just bike-shedding (i.e. focusing on trivialities).  The big-picture critical thing seems likely to be a constant general refining to a consistent domain model and methods/steps that are not too long and not too short and do a best effort to have a description that doesn't leave too many surprises under the hood.
 
-I made sure that the refactored cukes did actually break (when the app functionality was removed), which took a combination of adjusting the Event#recent_hangouts method back to use `created_at` AND removing the secure random id from the EventsInstanceHelper, indicating that both were needed to get the desired behaviour at the user level; so I didn't need to feel a total hypocrite for pushing on the AsyncVoter folks to remove all extraneous code :-)  That didn't stop me waking up in the middle of the night thinking, "we don't even need to search for recent_hangouts!" - we just grab the latest one, reverse sorted by updated_at, and check if it's live, can't we?  That `recent_hangouts` method is used nowhere else in the code base.  The method name makes no sense in terms of what we want really.  What we want to know is whether the most recently updated event instance is still live, isn't it?  More refactoring awaits!
+I made sure that the refactored cukes did actually break (when the app functionality was removed), which took a combination of adjusting the `Event#recent_hangouts` method back to use `created_at` AND removing the secure random id from the EventsInstanceHelper, indicating that both were needed to get the desired behaviour at the user level; so I didn't need to feel a total hypocrite for pushing on the AsyncVoter folks to remove all extraneous code :-)  That didn't stop me waking up in the middle of the night thinking, "we don't even need to search for `recent_hangouts`!" - we just grab the latest one, reverse sorted by `updated_at`, and check if it's live, can't we?  That `recent_hangouts` method is used nowhere else in the code base.  The method name makes no sense in terms of what we want really.  What we want to know is whether the most recently updated event instance is still live, don't we?  More refactoring awaits!
 
 ###Related Videos
 

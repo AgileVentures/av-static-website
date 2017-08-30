@@ -5,6 +5,8 @@ tags: sponsorship, Heroku, Travis, Semaphore, CodeClimate, performance, review a
 author: Sam Joseph
 ---
 
+![pool family](/images/pool_family.jpg)
+
 Friday I took a trip down to the [drie](https://drie.co/) offices in Hammersmith.  We'd agreed before the break that we needed to coordinate our collaboration for the new year.  We'd previously agreed a sliding scale of sponsorship support based on outcomes for drie in terms of the number of users adopting drie.  In preparation for the meeting I prepared the following list:
 
 * What I need
@@ -17,7 +19,7 @@ Friday I took a trip down to the [drie](https://drie.co/) offices in Hammersmith
   - get budget details for drie hosting MetPlus
   - detailed technical plan for the following year
   
-Talking through the above with Ben and Tom at drie and the things they wanted to get through we came up with the following agenda:
+Talking through the above with Ben and Tom at drie and the things they wanted to get through, we came up with the following agenda:
 
 * drie to show new features for drie-push
   - GitHub Integration
@@ -37,7 +39,7 @@ AgileVentures already uses a lot of Github integrations such as TravisCI, Semaph
 
 drie push GitHub integration goes one step beyond Heroku review apps, by making it possible to set up a repository to just deploy on any push to GitHub.  It's like Heroku Review apps without the overhead of having to deal with Heroku or their new pricing model.  Tom was also showing me other tricks on the backend such as versioned config and reverse proxy tricks that will allow their system to scale effectively.
 
-We went through the new drie pricing models which I need to pass on to the MetPlus project who are talking with their client today, and today I'm torn between trying to spend the whole day on pushing the LocalSupport app further onto drie (still haven't checked the new performance data), reviewing material for my upcoming devops conference talk, and generating this new roadmap for our drie collaboration, which we did at least agree should follow this format:
+We went through the new drie pricing models which I need to pass on to the MetPlus project who are talking with their client today, and now I'm torn between trying to spend the whole day on pushing the LocalSupport app further onto drie (still haven't checked the new performance data), reviewing material for my upcoming devops conference talk, and generating this new roadmap for our drie collaboration, which we did at least agree should follow this format:
 
 ```
 Dates #free-users #paid-users
@@ -45,7 +47,7 @@ Dates #free-users #paid-users
 include features ...
 ```
 
-The danger that Ben kept us focused on was whether developing the drie push GitHub integration would suck up time that could be spent polishing the ssh only access to drie push, and slow down our overall timeframe.  It's almost certain that that will happen to some extent, but the problem with the ssh only approach is that the main differentiation from Heroku is on price which will be difficult to compete on in the long term.  Other drie push features such as deployment per branch won't make much of an impact unless the configuration model is sorted out, and to be honest the big win for AgileVentures members will come from ease of use.  Avoiding the need to go to the command line at all, and just make your app deploy directly from GitHub, will remove a major stumbling block. 
+The danger that Ben kept us focused on was whether developing the drie push GitHub integration would suck up time that could be spent polishing the ssh only access to drie push, and slow down our overall timeframe.  It's almost certain that that will happen to some extent, but the problem with the ssh only approach is that the main differentiation from Heroku is on price which will be difficult to compete on in the long term.  Other drie push features such as deployment per branch won't make much of an impact unless the configuration model is sorted out, and to be honest the big win for AgileVentures members will come from ease of use.  Avoiding the need to go to the command line at all and just having your app deploy directly from GitHub would remove a major stumbling block. Onwards to great things! 
 
 Related Videos:
 

@@ -1,15 +1,15 @@
 ---
 title: Solo Coding
 date: 2016-10-25
-tags: rspec stripe london chicago TDD services let allow except receive before migration demeter refactoring
+tags: rspec, stripe, london, chicago, TDD, services, let, allow, except, receive, before, migration, demeter, refactoring
 author: Sam Joseph
 ---
 
-[Yak shaving](http://nonprofits.agileventures.org/2016/10/21/yak-shaving/) aside I managed to make time for some solo coding.  There was work outstanding on a feature to allow users to upgrade from Premium to PremiumPlus.  Michael and I had designed some extra domain features in a previous session, but they hadn't immediately been needed, so we cherry-picked them into this PR.  New domain entities of Subscription and PaymentSource were necessary to distinguish between users being Premium or PremiumPlus without having to contact the remote Stripe API for confirmation (see model dump from railroady gem in the image below).  If someone wants to upgrade the last thing we want to do is have the site freeze because the Stripe API isn't responding.  That said we're still using the Stripe API to communicate the intention to upgrade the plan, but having a coherent way of storing the members' desire to upgrade in our database seems like a good move.
+[Yak shaving](http://nonprofits.agileventures.org/2016/10/21/yak-shaving/) aside I managed to make time for some solo coding.  There was work outstanding on a feature to allow users to upgrade from Premium to PremiumPlus.  Michael and I had designed some extra domain features in a previous session, but they hadn't immediately been needed, so we cherry-picked them into this PR.  New domain entities of Subscription and PaymentSource were necessary to distinguish between users being Premium or PremiumPlus without having to contact the remote Stripe API for confirmation (see the model dump from the railroady gem in the image below).  If someone wants to upgrade the last thing we want to do is have the site freeze because the Stripe API isn't responding.  That said we're still using the Stripe API to communicate the intention to upgrade the plan, but having a coherent way of storing the members' desire to upgrade in our database seems like a good move.
 
 ![new domain entities](https://www.dropbox.com/s/lm03tpkm2xqe9kb/Screenshot%202016-10-25%2020.52.36.png?dl=1)
 
-You might say why didn't you build all this in from the start?  Because we were following the Agile process of only building what we needed for the immediate future.  Now that we've validated that people will sign up for Premium and Premium Plus plans, we're moving on to gamble that some of them might be willing to upgrade.  Actually the feedback I'm getting suggests that the Premium Plus plan is too expensive, so next up we'll be inserting some intermediate plans, but anyway, one feature at a time.  The [PR for this feature](https://github.com/AgileVentures/WebsiteOne/pull/1323) has been open a dangerously long time due to my knee operation and it needing fixing up (both the PR and my knee).  It had taken a fair amount of pulling out my hair to get the feature tests all green.  Standing in the way of the release were the data migration that would take existing members' Stripe IDs from the User model to the Subscription/PaymentSource models.  There was also a fair amount of gnarly code that was suffering from Demeter violations.
+You might say why didn't you build all this in from the start?  Because we were following the Agile process of only building the simplest thing possible for our immediate needs.  Now that we've validated that people will sign up for Premium and Premium Plus plans, we're moving on to gamble that some of them might be willing to upgrade.  Actually the feedback I'm getting suggests that the Premium Plus plan is too expensive, so next up we'll be inserting some intermediate plans, but anyway, one feature at a time.  The [PR for this feature](https://github.com/AgileVentures/WebsiteOne/pull/1323) has been open a dangerously long time due to my knee operation and it needs fixing up (both the PR and my knee).  It had taken a fair amount of pulling out my hair to get the feature tests all green.  Standing in the way of the release were the data migration that would take existing members' Stripe IDs from the User model to the Subscription/PaymentSource models.  There was also a fair amount of gnarly code that was suffering from Demeter violations.
 
 My internal dialogue was as follows:
 
@@ -82,8 +82,7 @@ namespace :db do
 end
 ```
 
-I got this working, but was unhappy that I'd replicated gnarly Demeter violations from the charges controller into the migration task itself.  However I had the migration task green, and now I could refactor with more confidence.  I was tempted for a moment to pull this upgrade logic into the User class itself.  It sort of makes sense to say something like `user.upgrade_to_premium`, but our User model is already overblown with responsibilities, and really this is a process that involves manipulating and setting up several domain entities.  I went for a service, and I test drove it in the London style with the following code:
-
+I got this working, but was unhappy that I'd replicated gnarly Demeter violations from the ChargesController into the migration task itself.  However I had the migration task green, and now I could refactor with more confidence.  I was tempted for a moment to pull this upgrade logic into the User class itself.  It sort of makes sense to say something like `user.upgrade_to_premium`, but our User model is already overblown with responsibilities, and really this is a process that involves manipulating and setting up several domain entities.  I went for a service, and I test drove it in the London style with the following code:
 
 ```rb
 describe UpgradeUserToPremium do
@@ -145,7 +144,7 @@ end
 
 I know that some of my colleagues prefer the Chicago style, and some people might think that the above involves a ridiculous amount of test code for a three line class method.  The RSpec suffers from not being as comprehensible as it might be by people who aren't comfortable with RSpec concepts like `let`, `allow`, `receive` and so forth.  What I can say in its defence (and I am still on the fence) is that there is a coherent shape in my mind here that has some level of intrinsic beauty.  The RSpec unit test of the service is following the heuristic that each `it` statement should test only one thing.   The `let` statements make the set of collaborating entities completely explicit.  The `before` block sets up to stub all the outgoing collaborators of the method, so that each of the four `it` statements does not actually reach any other part of the system, making this a unit and not an integration test.  Then each `it` block tests each of the four key things that happen in the method.  
 
-Here we could argue that the method is doing too much - it does four things and should have a single responsibility (according to the SOLID principles).  I could break out some smaller methods, but I think this is actually the right level of granularity.  We have a concept in the domain that is upgrading a user to premium, and these are the four things that will need to happen to set that up and persist it.  The Demeter violations of the earlier code are gone, and the tests are still green, showing that the migration is working.  Furthermore, we can use the same service in the charges controller which goes from this:
+Here we could argue that the method is doing too much - it does four things and should have a single responsibility (according to the SOLID principles).  I could break out some smaller methods, but I think this is actually the right level of granularity.  We have a concept in the domain that is upgrading a user to Premium, and these are the four things that will need to happen to set that up and persist it.  The Demeter violations of the earlier code are gone, and the tests are still green, showing that the migration is working.  Furthermore, we can use the same service in the ChargesController which goes from this:
 
 ```rb
   def update_user_to_premium(stripe_customer)
@@ -184,7 +183,7 @@ namespace :db do
 end
 ```
 
-So far so good.  We're left with some Demeter violations in the upgrade to premium plus code in the charges controller:
+So far so good.  We're left with some Demeter violations in the upgrade to PremiumPlus code in the ChargesController:
 
 ```rb
 def upgrade
@@ -197,7 +196,7 @@ def upgrade
 end
 ```
 
-I don't like this, and I don't like how we've ended up overloading the charges controller.  The former is the Stripe API that perhaps we're using incorrectly, but I don't know that I can justify putting an adapter on this right now.  The charges controller needs a bigger refactoring, but I'm making the judgement call that these two things go into refactoring tickets.  In the ideal world I'd also love more sad path tests in places, but again, this PR has been open long, we need the data migration in and from a charity/business perspective we're likely to bring in more revenue by actually releasing the individual sign up pages for the new intermediate plans, and they'll have to be a fair amount of work going on on top of this code to handle the new sequence of upgrades that are possible, so like Sandi Metz suggests, I'm hedging my bets about avoiding too much refactoring in an area where the code is in flux.
+I don't like this, and I don't like how we've ended up overloading the ChargesController.  The former is the Stripe API that perhaps we're using incorrectly, but I don't know that I can justify putting an adapter on this right now.  The ChargesController needs a bigger refactoring, but I'm making the judgement that these two things go into refactoring tickets.  In the ideal world I'd also love more sad path tests in places, but again, this PR has been open long, we need the data migration in and from a charity/business perspective we're likely to bring in more revenue by actually releasing the individual sign up pages for the new intermediate plans, and they'll have to be a fair amount of work going on on top of this code to handle the new sequence of upgrades that are possible, so like Sandi Metz suggests, I'm hedging my bets about avoiding too much refactoring in an area where the code is in flux.
 
 At least the Heroku automated deploy is working, so I can easily do a manual test.  I'm not thrilled about the placeholder button we have but again that can be another ticket:
 

@@ -1,11 +1,11 @@
 ---
 title: Documentation Debt
 date: 2016-11-02
-tags: Github Animated gifs markdown mercury edit permissions scaling includes activerecord n+1
+tags: Github, Animated gifs, markdown, mercury, edit permissions, scaling, includes, activerecord, n+1
 author: Sam Joseph
 ---
 
-Following on from the previous day I got a [CONTRIBUTING.md](https://github.com/AgileVentures/AsyncVoter/blob/master/CONTRIBUTING.md) together for the AsyncVoter project.  I'd jumped into an AsyncVoter pairing session immediately after the Martin Fowler scrum.  Progress was being made with Cucumber, but in contrast to the day before, there was talk of spending more time working out the right way to work with CucumberJS.  I recommended that if we just had something working then put adjusting it into a refactoring ticket and get a green PR in, but that also it was up to the project members to make their own decision.  I think they ultimately took my advice and we have a [PR](https://github.com/AgileVentures/AsyncVoter/pull/40) ready to merge.  Note: it took another day to merge, and in the meantime the developers refactored the Cucumber and produced a much cleaner solution.
+Following on from the previous day I got a [CONTRIBUTING.md](https://github.com/AgileVentures/AsyncVoter/blob/master/CONTRIBUTING.md) together for the AsyncVoter project.  I'd jumped into an AsyncVoter pairing session immediately after the Martin Fowler scrum.  Progress was being made with Cucumber, but in contrast to the day before, there was talk of spending more time working out the right way to work with CucumberJS.  I recommended that if we just had something working then we could put adjusting it into a refactoring ticket and get a green PR in, but that also it was up to the project members to make their own decision.  I think they ultimately took my advice and we have a [PR](https://github.com/AgileVentures/AsyncVoter/pull/40) ready to merge.  Note: it took another day to merge, and in the meantime the developers refactored the Cucumber and produced a much cleaner solution.
 
 It's a strange ongoing balance between refactoring things so that they're right, and ensuring that PRs get merged quickly and don't serve as a block for other developers trying to build on your work.  My rule of thumb is keep the PRs super small and make refactoring tickets.  Of course those refactoring tickets need to be addressed quickly, ideally getting votes taken on them ASAP.  Poor design decisions can get locked in when a lot of people build on them, but in a project with a high churn of developers and unpredictable availability, long running PRs can lead to a lot of work being thrown away.  I don't think there's any magic solution.
 

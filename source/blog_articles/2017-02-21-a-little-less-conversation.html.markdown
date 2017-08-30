@@ -1,0 +1,20 @@
+---
+title: A Little Less Conversation
+date: 2017-02-21
+tags: email, slack, todo, agile, marketing, podcast, conversions, meetings, sprint, blocking
+author: Sam Joseph
+---
+
+Yesterday was basically coming back up to speed after a week away from digital communication, gradually transfering the various items from Email and Slack into my TODO list.  I managed to deploy the latest agile-bot config changes to production, do a marketing meeting and record an Agile Book Club podcast.  What was great to see was how active folks had been while I was away, greeting new members in the Slack, running the marketing meetings in my absence.  Lara has got in there and reconfigured the Google AdWords campaign; running experiments on different ads. We now have over 11,000 unique users visiting the site over the last month.  The AdWords signup tracking appears to be working, indicating 31 new member sign-ups after clicking on a Google ad.  Marufa came up with new designs for the pricing pages and Lara's taking the lead on making the first round of tweaks there.
+
+We're also starting to see more traffic to the non-profit static site, although it's not clear what conversions we should be tracking there.  Michael is telling me that we should do a little less talking and focus on getting more things done.  Although I sometimes feel close to paralysis in terms of what to do next, or what to prioritise.  The Agile Book Club podcast is a great excuse for more conversation, which I do enjoy, and in yesterday's episode I think we provided a forum for Michael to express various feelings he has about how AgileVentures projects don't focus on the high level stories enough.  In the post-show chat our discussion honed those feelings into a plan of action.  Michael said that the reason he didn't like the WSO team meetings of a few months back were that we were working through any and all tickets in the board.  That meant that issues raised by anyone could take the floor.  He'd be much more interested in a meeting where someone had reviewed all the tickets in advance of the meeting and then a set of the most important were pre-selected to be the subject of a sprint.
+
+A great idea, but a lot of up-front work for someone, so I suggested how about we have a meeting where we each bring a maximum of three tickets that we care about to plan for a sprint; and with luck we'll do that on Friday.   It's funny, because sometimes it seems that talking is what's needed to help people get their feelings out, and then collaboratively work out a course of action.  As with all things it's a balance.  What was also clear to me was a variation of my maxim of being careful when "blocking" people; which is that feedback can be mis-interpreted as a block, and the more people there are in a meeting, the less likely that feedback will be able to be constructively received.  By blocking I mean anything that contradicts what a person is saying, be it correcting their grammar, querying their choice of phrase, or disagreeing with their point.
+
+I won't go into the details, as interested parties can get that from the recording of the marketing meeting and the podcast etc., but I do keep coming back to advice I got from Ruben at Makers Academy that it's far better to ask people questions than to make assertions.  For some reason I find it so hard to do that.  My M.O. is so ingrained that when someone makes an assertion that doesn't fit my mental model, my knee-jerk reaction is the make a counter-assertion.  I enjoy the mental interplay, but so many other people don't seem to.  Of course asking too many questions can also be a block.  Let's see, I'm going to try to either shut up or just ask single questions for the rest of the week, if I can!  A little less conversation, a little more action maybe :-)
+
+#### Related Videos:
+
+* ["Martin Fowler" scrum](https://www.youtube.com/watch?v=5vx3BstpDuo)
+* [Marketing Meeting](http://youtu.be/7jCej7JVpkM)
+* ["Kent Beck" scrum](https://www.youtube.com/watch?v=jpsIcZ5pTkQ)

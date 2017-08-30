@@ -5,7 +5,9 @@ tags: busy, weekend, marketing intern, performance testing, drie, ScaleYourCode,
 author: Sam Joseph
 ---
 
-I'm tired today.  Busy weekend.  Back to coaching kids football Saturday morning, "Bob Martin" scrum, taking eldest to guitar practice and round the supermarket and making supper.  Relatively calm Saturday evening, but then a frantic Sunday, with my youngests' first football match in a higher division, and then a dash across London to a relative's house before a surprise holiday treat for the boys; a trip to see a live game.  Back late, and didn't get to sleep till late working through the muddy clearup from the morning's football.
+![tired](/images/tired.jpg)
+
+I'm tired today.  Busy weekend.  Back to coaching kids football Saturday morning, "Bob Martin" scrum, taking eldest to guitar practice and round the supermarket and making supper.  Relatively calm Saturday evening, but then a frantic Sunday, with my youngests' first football match in a higher division, and then a dash across London to a relative's house before a surprise holiday treat for the boys; a trip to see a live game.  Back late, and didn't get to sleep till even later working through the muddy clearup from the morning's football.
 
 Monday fairly full on with all the boys back at school, so doing the school run in the morning for the twins, and then a full day.  Some reasonable progress.  New marketing intern welcomed to Slack and introduced to some other team members, new SPOCs made for instructors, performance testing on drie's new EU servers (not as fast as we'd like) and drie catchup meeting, now scheduled for every Monday to push things forward.  Managed to watch an episode of [ScaleYourCode](https://scaleyourcode.com/interviews/interview/13) where Nathan Harvey of Chef showed how to manage deployment to ec2 via the hosted Chef system.  Suddenly I understand what Chef, Puppet, Ansible etc. do and how they're different from Docker and Vagrant.  All great prep for the DevOps conference talk I'm giving next week.
 

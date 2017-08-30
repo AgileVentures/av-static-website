@@ -5,6 +5,8 @@ tags: development, autograders, LocalSupport, WebsiteOne, OSRA, MetPlus, Project
 author: Sam Joseph
 ---
 
+![legacy code](/images/legacy_code.jpg)
+
 When does an app become legacy?  I'd say pretty much as soon as you have anything deployed that anyone is using.  In my experience development on projects can stall and restart, but as long as people are deriving value from the application it needs to be maintained.  We hear things like 60% of the effort in a project is during the maintenance phase.  We have various projects in AgileVentures that could make the claim to be legacy codebases that need to be maintained.  Let me list them in the order of their creation:
 
 * [AutoGraders](https://github.com/saasbook/rag)

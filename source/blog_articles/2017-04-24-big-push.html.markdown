@@ -1,0 +1,42 @@
+---
+title: Big Push
+date: 2017-04-24
+tags: browser tabs, action plan, wikipedia, social prescribing, JavaScript, 
+author: Sam Joseph
+---
+
+![big push](/images/big_push.jpg)
+
+Over the weekend I spent a good couple of hours shutting down all the different browser tabs I had open (about 70) and adding relevant links to my action plan.  I got briefly distracted updating the Wikipedia pages for Social Prescribing, but that felt good to get done, and ultimately I was able to reboot my computer before doing a Premium pairing on EventManager with Marian, where we managed to tinker with the existing pull request. We had to change the styling on the event when it went live.  We managed to use an html data-attribute so that the styling and display of the event live status was always managed by JavaScript ... Would love to pull the code into the blog, but in the meantime check out the [PR](https://github.com/AgileVentures/EventManager/pull/27).
+
+Then it was an early Monday start to get down to NHS head offices to meet up with new and outgoing change managers.  It was the outgoing change manager's last day, so important to catch them to say goodbye and thank them for the work they'd done so far.  On the way in on the train I sketched an agenda for the meeting:
+
+* Asking how things were going
+* Double checking on what success looked like
+* Getting approval for my plan going forward
+* Getting the content from the PDFs into the wiki
+* Clarifying the communication plan
+
+As it happened we jumped in in the middle and I ended up telling them the outcome of my testing with the NHS laptop on Friday, and how I'd landed on MediaWiki as a solution to our problems there.  I also ended up showing them the Bitnami hosted MediaWiki I'd set up and the Social Prescribing page on Wikipedia.  They seemed pleased to see the progress and a Social Prescribing page, and I talked them through how moderation works on Wikipedia.  In mentioning the Wikipedia page on the doctor, Michael Dixon, we discovered that there is an NHS wikiproject group within Wikipedia.  That seems like an important lead - folks that we might be able to reach out to.
+
+We talked about the timeline, the communication strategy options, and setting up editing and moderation training for HLP staff and others to fit in with the idea of a soft launch on May 4th and hard launch on May 12th.  We also had a chance to double check that the Bitnami/Azure hosted MediaWiki worked on the NHS laptops.  I was pretty sure there wouldn't be any problems, but after the icon issue the previous week I wanted to double check.  The icons all loaded.  I note that I didn't actually check a successful edit operation - will follow up with the new change manager to make double sure.
+
+We also sat down with team lead, to check in that everything was solid.  Sounds like the conference they wants to present the system at, on May 18th, is a big deal, with VIPs etc. and they'll want to do a live demo if possible ...
+
+I was glad that I asked the new change manager about how things were going generally as I heard about some of the other HLP activities, including that they were tendering for a social prescribing service to be set up in collaboration with a CCG.  I had assumed that HLP's activities were limited to researching social prescribing, rather than taking an active lead on setting it up, so that was good to know. 
+
+It all left me with a good set of action items:
+
+* getting the legal review of the terms & conditions signed and sealed
+* double check with the new change manager that they can complete a mediawiki edit on their laptop
+* arranging meetings with the remaining stakeholders
+* reviewing all the MediaWiki hosting options
+* ensuring we have the right kind of moderation options
+* creating editing and moderation training
+* get us a URL 
+
+I wrote these up on the train home, where I saw an interesting health care related advertisement:
+
+![UNISON tube advert](https://www.dropbox.com/s/xkam0b5hthm8hu8/unison-advert.JPG?dl=1)
+
+Is everything connected?  I'm steeling myself for the big push to get this all live ...
