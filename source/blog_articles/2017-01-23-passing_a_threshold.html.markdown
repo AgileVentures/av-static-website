@@ -1,7 +1,7 @@
 ---
 title: Passing a Threshold
 date: 2017-01-23
-tags: illness, cold, flu, zinc, ginger, virus, sore throat, DevOps, Slack, rest, health, immune system
+tags: illness, cold, flu, zinc, ginger, virus, sore throat, DevOps, Slack, rest, health, immune system, adwords
 author: Sam Joseph
 ---
 

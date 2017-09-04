@@ -1,4 +1,13 @@
-Crazy day yesterday - felt pretty under attack.  I'd love to lay it all in text, but I don't think I can indulge myself beyond what I typed up in private notes yesterday and I have a meeting with the NHS folks tomorrow, and I think highest priority is having at least part of a draft of a marketing report for them to look at.  I'm worried if I blog about anything else I'll just not get it done as I lost hours yesterday to reacting to what felt like emotionally charged posts on Slack.  So, what is the set of stuff that will go into the NHS Wiki marketing report?  Ironically I go to open Slack to find out as I have recently posted it into the #marketing channel ... here we go (and quickly turn Slack off before getting distracted):
+---
+title: NHS Wiki Marketing
+date: 2017-06-08
+tags: google analytics, report, wiki
+author: Sam Joseph
+---
+
+![marketing](/images/marketing.jpg)
+
+Crazy day yesterday - felt pretty under attack.  I'd love to lay it all in text, but I don't think I can indulge myself beyond what I typed up in private notes yesterday and I have a meeting with the NHS folks tomorrow, and I think highest priority is having at least part of a draft of a marketing report for them to look at.  I'm worried if I blog about anything else I'll just not get the report done, as I lost hours yesterday to reacting to what felt like emotionally charged posts on Slack.  So, what is the set of stuff that will go into the NHS Wiki marketing report?  Ironically I go to open Slack to find out as I have recently posted it into the #marketing channel ... here we go (and quickly turn Slack off before getting distracted):
 
 Monthly moderation reports need to be submitted including the following:
 
@@ -95,7 +104,8 @@ So let's work through each of these and pull up some numbers:
 
    > Healthy London Partnerships (HLP) Proactive Care team presents a shared editable website (a "wiki") dedicated to Social Prescribing & Self Care. This wiki is available as an open resource for everyone who is interested in Social Prescribing & Self Care and related subject matters.  The wiki uses the same MediaWiki software that powers Wikipedia, and can be edited by any approved user. In the first instance the wiki is a repository for resources to support NHS commissioners and others to implement and develop social prescribing and self-care in their localities. Social prescribing, sometimes referred to as community referral, is a means of enabling GPs, nurses and other primary care professionals to refer people to a range of local, non-clinical services.  The wiki is hosted by the AgileVentures charity on behalf of the Healthy London Partnership.  AgileVentures ran a design sprint with the Proactive care team and stakeholders from all over London NHS and voluntary sector partners to identify the mediawiki solution as the one most likely to meet stakeholder needs.  Please check out the wiki at https://wiki.healthylondon.org and sign up for a free account in order to start contributing.
 
-
 10. **Other data as agreed to assist evaluation (i.e.uptime/downtime)**
 
    Azure guarantees a 99% uptime for their Azure service: https://azure.microsoft.com/en-us/support/legal/sla/cloud-services/v1_0/
+
+   There we go, that's a way to stay focused - blog the report that needs to be written ... now to get this off to the NHS ...
