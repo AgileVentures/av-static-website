@@ -1,3 +1,4 @@
+---
 title: Design Sprint Day Minus One
 date: 2017-06-12
 tags: Google Ventures, 
