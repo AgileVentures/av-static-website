@@ -5,7 +5,7 @@ tags: Google Ventures,
 author: Sam Joseph
 ---
 
-![sticky](/images/design_sprint.png)
+![design sprint](/images/design_sprint.png)
 
 I'm just back from a weekend wild camping in North Wales with by brother-in-law (who's training as a mountain leader) and my eldest son.  We had a great wet and windy time climbing mountains and camping in the wild by lakes.  It was great to get away and also to see my eldest son able to keep up with (and on occasion race ahead) of us.  He put up with some nasty weather, but was calm and made good decisions.  We got back late last night and I'm pretty shattered.  I'm going to need a couple of cups of coffee to wake myself up for the AgileVentures design sprint we are running this week.  We've got people from several time zones involved and we've set it to run from noon to 6pm to make it practical for myself in the UK and various east coast US folks to attend.  
 
