@@ -62,4 +62,4 @@ Many thanks in advance
 Best, Sam
 ```
 
-and I guess I will take another pass on this tomorrow, bring it up in the marketing meeting etc.
+and I guess I will take another pass on this tomorrow, bring it up in the marketing meeting etc.  the funny thing is that hotmail failure messages have often been accompanied by delivery of the message as evidenced by sequences of replies and responses that I'm having with the people emailed ...
