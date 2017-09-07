@@ -2,7 +2,7 @@ So I think the main bleed in the AV ecosystem may now be some of the problems we
 
 I guess I can afford to do that for a few mornings in a row and start exploring where I can speed up ..., but back to our email issues.  So we sent out 10 emails with a special offer (from support@agileventures.org) last week and as far as I can tell, every single one ended up in spam.  Annoyingly I have to go to slack to grab some info about it, but there's not too much to distract me there today, phew.  So one person who got the email in their spam filter reported that they saw this message from Google:
 
-![](Screenshot_2017-09-05-16-59-32.png)
+![](images/Screenshot_2017-09-05-16-59-32.png)
 
 The message is "Why is this message in Spam? It is in violation of Google's recommended email sender guidelines.".  This week we had a new Premium Mob member sign up and so far none of the emails from me via sam@agileventures.org appears to have arrived with them.  I also get warnings of authentication failures from hotmail for several emails I've sent over the last 6 months.  We need to get to the bottom of this.  Can I replicate the failure above (from gmail) and get more info on what's failing ...
 
