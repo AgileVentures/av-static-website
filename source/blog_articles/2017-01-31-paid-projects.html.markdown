@@ -46,5 +46,5 @@ Now we need to come up with a budget for getting this done, and getting it done 
 
 ###Related Videos:
 
-* ["Martin Fowler Scrum"](https://www.youtube.com/watch?v=it8sThsoI-8)
+* ["Martin Fowler" Scrum](https://www.youtube.com/watch?v=it8sThsoI-8)
 * ["Kent Beck" Scrum](https://www.youtube.com/watch?v=jcqq-_DNun8)
