@@ -1,10 +1,10 @@
-Squeezing in too much? Me? I'm just on the train coming back from a NorthWest London CCG meeting, where I had been invited to present the HLP Social Prescribing and Self Care wiki.  It was an all morning meeting and I couldn't stay for the second half as I had to get back to my home office for day three of the design sprint.  It could have been useful to stay for the second half of the meeting where they were going to be talking about a digital health app, and given me the chance to network with people after the meeting, but I'm committed to completing this design sprint.
+Squeezing in too much? Me? I'm just on the train coming back from a NorthWest London CCG meeting, where I had been invited to present the HLP Social Prescribing and Self Care wiki.  It was an all morning meeting and I couldn't stay for the second half as I had to get back to my home office for day three of the design sprint.  It could have been useful to stay for the second half of the meeting where they were going to be talking about a digital health app, and giving me the chance to network with people after the meeting, but I'm committed to completing this design sprint.
 
-In a face to face design sprint there'd be no time for me to squeeze in additional meetings (I've scheduled a Trustee meeting for Friday morning as well), but because we are running the meetings noon-6pm so that the East coast participants can join there's in principle time, but whether it's sensible is another question.
+In a face to face design sprint there'd be no time for me to squeeze in additional meetings (I've scheduled a Trustee meeting for Friday morning as well), but because we are running the meetings noon-6pm so that the East coast participants can join, there's in principle time, but whether it's sensible is another question.
 
 Looking back at day 2 we fairly quickly polished off the remaining agenda items that were left out on Monday afternoon due to our plethora of expert interviews.  Tuesday started with further organising of our how might we notes and voting on them.  At the end of that process the board looked like this:
 
-[HMW notes voted on](https://www.dropbox.com/s/0e4c2nc3lw39zah/Screenshot%202017-06-14%2011.04.39.png?dl=1)
+![HMW notes voted on](https://www.dropbox.com/s/0e4c2nc3lw39zah/Screenshot%202017-06-14%2011.04.39.png?dl=1)
 
 After a bit of negotiation we had four notes with at least 2 votes:
 
@@ -15,7 +15,7 @@ After a bit of negotiation we had four notes with at least 2 votes:
 
 We added those to the appropriate places on our map, and as the decider I chose what the focus would be for the remainder of the sprint:
 
-[map with HMW notes added](https://www.dropbox.com/s/lniu3rnvs2vgexw/Screenshot%202017-06-14%2011.07.36.png?dl=1)
+![map with HMW notes added](https://www.dropbox.com/s/lniu3rnvs2vgexw/Screenshot%202017-06-14%2011.07.36.png?dl=1)
 
 I chose "ensure that developers understand how they will benefit from AgileVentures (before looking for projects)" at least partly swayed by what Michael said that if you can't get people in the door then it's difficult to build anything further.  After a quick break we went into a series of demos.  Here's what we each showed:
 
@@ -36,7 +36,7 @@ I chose "ensure that developers understand how they will benefit from AgileVentu
   - Amazon Prime Benefits Sell Page
   - Agile Ventures Signup Page
 
-And we doodled design components while each other presented, which either went on paper on into our shared Google doc.  When we finished presenting to each other we spent some more time trying to write up the components. Here are some:
+And we doodled design components while each other presented, which either went on paper or into our shared Google doc.  When we finished presenting to each other we spent some more time trying to write up the components. Here are some:
 
 ![components](https://www.dropbox.com/s/ifohrjqhs3vso6m/Screenshot%202017-06-14%2011.12.26.png?dl=1)
 ![](https://www.dropbox.com/s/v9j18l28ahvmwwp/Screenshot%202017-06-14%2011.12.45.png?dl=1)
