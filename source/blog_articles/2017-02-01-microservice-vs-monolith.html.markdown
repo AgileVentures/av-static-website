@@ -5,7 +5,7 @@ tags: rails, DHH, DevOps, honesty, profanity, public speaking, facebook
 author: Sam Joseph
 ---
 
-![monoliths](/images/henge.png)
+![monoliths](/images/henge.jpg)
 
 Full on day yesterday with Rails creator David Heinemeier Hansson (DHH) dropping by to chat to AgileVentures and CraftAcademy, as well as other wall to wall meetings and DevOps.  Big shout-out to AgileVentures CoFounder and CraftAcademy boss, Thomas Ochman, for arranging and chairing the session.  It was great to hear from DHH in person and he was on form with his usual colorful language.  Thomas pointed us recently to a [paper that indicated a positive correlation between profanity and honesty](http://journals.sagepub.com/doi/full/10.1177/1948550616681055). DHH said things like:
 
