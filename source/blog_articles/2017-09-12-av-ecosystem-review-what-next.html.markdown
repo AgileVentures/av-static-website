@@ -19,3 +19,5 @@ At least edit that page on the staging server.  I've also saved an HTML copy int
 https://github.com/AgileVentures/WebsiteOne/pull/1816
 
 I'm also thinking that ultimately we may need to make these pages slightly less editable, and more generated.  We'll see.  I think other devs need also to have copies of them locally.  Either way I'll get feedback on the staging server from the Marketing team before pushing live.
+
+p.s. did a [node rep and included standardjs](https://gist.github.com/tansaku/6450f322f7505880872eb287c0ca36b0) 
