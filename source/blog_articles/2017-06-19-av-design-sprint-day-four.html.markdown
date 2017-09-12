@@ -1,6 +1,6 @@
 ---
 title: Design Sprint Day Four
-date: 2017-06-16
+date: 2017-06-19
 tags: Google Ventures, 
 author: Sam Joseph
 ---
