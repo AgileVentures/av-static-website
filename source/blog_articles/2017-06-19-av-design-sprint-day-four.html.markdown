@@ -1,3 +1,12 @@
+---
+title: Design Sprint Day Four
+date: 2017-06-16
+tags: Google Ventures, 
+author: Sam Joseph
+---
+
+![design sprint](/images/design_sprint.png)
+
 So I was about to write up the events of our day four design sprint on Friday morning, when it was suddenly all hands on deck.  Actually I had been anticipating a busy morning.  When we had finished the design sprint regular hours on Thursday we had a partially working prototype and I was the person with illustrator installed that could get the rest of the components working.  In the background Federico had put together an advert and screening questionnaire that he put out on Craigslist in a number of cities in order recruit testers for Friday.  However, late Thursday it was looking like we didn't have anyone from the target demographic in those that were applying to be testers.  As I went to sleep on Thursday Federico and I were agreeing we might need to put the testing off to the following week; however, when I woke up we'd had another 150 applications from posting the ad on the Indeed network and we had a handful of people in the target demographic.  Overnight Michael had made the decision to push ahead with testing to complete the design sprint within the week as intended.  It was a good call, but it was also relying on my completing the prototype in my Friday early hours.  I had said that I'd be able to do that, and I still was, but it meant blogging and other station keeping went out the window, particularly since I'd scheduled an important trustee meeting.  That meeting out of the way, I got down to finishing the prototype.
 
 Having had the full day of testing on Friday and a camp over the weekend I'm struggling to remember how we got to where we did on the end of Thursday.  Fortunately our Google doc for the day reminds me; we started off comparing prototyping tools, specifically:
