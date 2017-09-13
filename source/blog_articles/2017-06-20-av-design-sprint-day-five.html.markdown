@@ -1,3 +1,11 @@
+title: Design Sprint Day Five
+date: 2017-06-20
+tags: Google Ventures, 
+author: Sam Joseph
+---
+
+![design sprint](/images/design_sprint.png)
+
 So Friday morning was fairly frantic.  I'd gone to sleep thinking that the last day testing of the design sprint had been postponed, and woke to find we were "game on" with testers booked into slots and a half-finished prototype that needed completing by noon my time.  Quick AgileVentures trustee meeting out of the way and I was working away in illustrator to finish the rest of the interactive popups.
 
 I was getting the hang of illustrator layers and didn't have too much trouble extracting the rest of the images we had downloaded from ShutterStock and getting things set up.  What was immediately clear was that we couldn't get away with a background image with popups being displayed over the top.  There was a noticeable delay in that background loading so what we had was a sequence of main images like so:
@@ -60,7 +68,6 @@ I think the really solid takeaways were how people seemed to really appreciate t
 At the end of the community meeting I asked everyone to suggest what they thought was the highest priority.  Michael's was that we get a static site up (even just the InVision site) and A/B test the impact on signups via Google AdWords.  The measurement component of this really appealed to me, and so this morning I snapped to it by setting up a GitHub Pages account and having that redirect to the InVision app.  I set up http://why.agileventures.org to point to that and the sign up button now goes to our main site.  The annoying things are the InVision URL showing as well as their loading screen.  In principle we could put image maps directly into our GitHub pages site ... let's see.
 
 I think either way the design sprint has weened me off large amounts of text and addicted me to small amounts of text with images.  Will be interesting to see if we can get any substantive change in signups - stay tuned to this blog to find out!
-
 
 ### Related Videos
 
