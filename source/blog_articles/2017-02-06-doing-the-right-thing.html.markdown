@@ -5,6 +5,8 @@ tags: escalating call to action, marketing, funnels, types of users, erb, spike,
 author: Sam Joseph
 ---
 
+![focusing](/images/right_thing.jpg)
+
 Over Thursday and Friday I pushed out what I'm calling an "escalating call to action" on the main AgileVentures site.  The idea had come up in a discussion with Michael in a scrum earlier in the week in which we'd been talking about what to display when the user was already logged in, because our initial stab at a call to action "Sign up now to start coding" was being shown to all users, independent of their logged in status:
 
 !["Sign up now to start coding" banner button](https://www.dropbox.com/s/yx69fbv0axhe7kc/Screenshot%202017-02-06%2009.37.58.png?dl=1)
@@ -73,7 +75,7 @@ Feature: Escalating Call to Action
     Then I should be on the "premium mob sign up" page
 ```
 
-Ironically the tests took twice as long to write as the code, mainly due to a Capybara issue with the step that checks that we've arrived on the correct page, which had to be evolved from this:
+Ironically the tests took twice as long to write as the code, mainly due to a Capybara issue with the step that checks that we've arrived on the correct page which, after consulting various StackOverflow posts on the subject, had to be evolved from this:
 
 ```rb
 Then /^I should be on the "([^"]*)" page$/ do |page|
@@ -93,7 +95,7 @@ def current_fullpath
 end
 ```
 
-after consulting various StackOverflow posts on the subject.  The issue here was that in the (older?) version of Capybara that we are using, the current_path returns the path without the URL params e.g. `plan=premiummob`, which we need, due to the current design of the subscription controller.  Of course even just writing this down I come back to thoughts from a couple of months back about refactoring the URLs to nest so we could have `/plan/premiummob/subscriptions/new`.  Gosh, there's just endless extra refactoring we could be doing before being able to conduct experiments on the business logic itself :-)
+The issue here was that in the (older?) version of Capybara that we are using, the `current_path` method returns the path without the URL params e.g. `plan=premiummob`, which we need, due to the current design of the subscription controller.  Of course even just writing this down I come back to thoughts from a couple of months back about refactoring the URLs to nest so we could have `/plan/premiummob/subscriptions/new`.  Gosh, there's just endless extra refactoring we could be doing before being able to conduct experiments on the business logic itself :-)
 
 So, anyway, that was all working and I pushed it out in the background of Friday, and as far as I can tell it's been running over the weekend.  I was in perhaps a hasty rush to put this up.  A last gasp of me being focused on promoting the Premium plans.  There's been no sudden flurry of Premium or Premium Mob sign ups over the weekend :-) It seems like the increase in basic signups is holding steady in a way I wouldn't expect unless the MOOC was active, although that might just be my imagination.  In the same deploy I got the adwords Premium plan conversion live, so if anyone else does convert we can in principle track where they are coming from, but it follows that we should really get the basic sign up AdWord conversion tracking up, and get better stats on the influx of new users, if we're interested in working out how much impact these site changes and AdWord campaigns are really having.
 
