@@ -1,3 +1,13 @@
+---
+title: Design Sprint Aftermath
+date: 2017-06-21
+tags: Google Ventures, 
+author: Sam Joseph
+---
+
+![design sprint](/images/design_sprint.png)
+
+
 I had been looking forward to a normal week following the AV design sprint, getting back to having standups and project meetings.  Frustratingly Monday was scattered with problems with hangouts that seemed to be specific to me.  The "Martin Fowler" scrum went okay, but I was unable to participate in the Monday marketing meeting due to my computer slowing to a crawl when I was running hangouts.  There was so much to discuss in the marketing meeting and I was effectively excluded on technology grounds.  Matt, Federico and Michael all tried to help me get to the bottom of it later in the day.  We thought we'd tracked it down to either the LAN cable or thunderbolt monitor as things seemed to improve when I switched to Wifi on my backup laptop.  However, broadband speed tests were showing the same results on both computers.  I managed normal participation in the AV community meeting using my backup laptop on the Wifi. 
 
 I swapped out one LAN cable and it seemed like my main laptop improved in hangouts, but then they got worse and Wifi didn't seem to help.  The following day I phoned Apple and got advice to upgrade to OSX Sierra, which I reluctantly did.  I've been frustrated with Apple upgrades before, particularly since you can't back out of them.  I upgraded to Sierra over lunch yesterday and the computer seems to be working okay, although I haven't tried some of the trickier coding things that involve libraries installed via brew.   The "Kent Beck" scrum was just about manageable, but I was carefully monitoring my CPU's and noticing that things went a bit nuts occasionally with all eight cores maxing out.  I tried to switch to my backup computer with Wifi (that had worked for the AV community meeting) but the hangout wouldn't even finish loading.  I switched off my video on the main computer and watched the CPUs come back under control, and was able to complete the meeting.
