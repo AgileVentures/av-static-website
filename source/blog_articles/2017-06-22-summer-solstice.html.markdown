@@ -1,3 +1,13 @@
+---
+title: Summer Soltice
+date: 2017-06-22
+tags: overheating, Adobe, Sierra, hangout, bootcamp, WebRTC
+author: Sam Joseph
+---
+
+![Summer Soltice](/images/summer_solstice.jpg)
+
+
 We've reached the mid-point of the year.  It's been super hot in London for the last few days, although it seems like it's calming down today.  I've been struggling with runaway CPU processes on my main development laptop, and conversations with Apple are now leading me to suspect the Adobe CreativeCloud/Illustrator install I did last Thursday as part of the design sprint.  I've just uninstalled and re-installed now, on top of the Sierra OS, so if I'm lucky that might resolve the issue.  We'll soon tell in today's hangouts.  
 
 I had to skip yesterday's Kent Beck scrum and AsyncVoter kickoff in order to give a talk to a group of coding bootcamp students in Detroit and head into a sweltering central London for an NHS event.  I'd managed to talk AsyncVoter with Matt and Raphael during the Martin Fowler scrum.  I have this nagging feeling that the inconsistency of event occurrence combined with the usability issues in our event system is a major drag on AgileVentures.  That sparked a big conversation about WebRTC in the #event_manager channel and caused me to sketch some UI images in keynote:
@@ -12,7 +22,7 @@ That I'm not completely thrilled with.  However the design sprint has definitely
 
 Conversely I'm still a little uneasy with the AsyncVoter project.  We'd been talking about Raphael becoming project manager, and then we had a period where his pull requests were hanging around for a long time while we were focused on trying to sort out infrastructure issues.  He appeared to get rather frustrated that he was being "ignored".  We also had some tense interactions about the possibility that he might sign up for Premium membership in order to get priority code reviews.  Ultimately he said he felt insulted to be asked for money to have his code reviewed, which is very useful feedback but was also quite shocking.  It's not dissimilar to the things that freeranger has said about, why should I pay when I'm volunteering my time?
 
-Is the concept of priority code reviews via premium membership ultimately anathema? Raphael was apparently so frustrated and insulted that he said he was leaving the project and AgileVentures.  As it happened we also managed to get over the infrastructure hurdles and merge in his PRs and now he seems to be continuing to work on the project.  Yesterday we discussed the need to get a contributions document in place and to work out a project flow.  Raphael says he wants nothing to do with the money and infrastructure side of things.  That's fair enough, but I do feel somewhat aggrieved by the whole interaction. I'm nervous that there will be frustrated outbursts in future.  I guess the sensible approach going forward will be to avoid responding to them, and not engage in trying to explain how desparately unfair that feels. 
+Is the concept of priority code reviews via Premium membership ultimately anathema? Raphael was apparently so frustrated and insulted that he said he was leaving the project and AgileVentures.  As it happened we also managed to get over the infrastructure hurdles and merge in his PRs and now he seems to be continuing to work on the project.  Yesterday we discussed the need to get a contributions document in place and to work out a project flow.  Raphael says he wants nothing to do with the money and infrastructure side of things.  That's fair enough, but I do feel somewhat aggrieved by the whole interaction. I'm nervous that there will be frustrated outbursts in future.  I guess the sensible approach going forward will be to avoid responding to them, and not engage in trying to explain how desparately unfair that feels. 
 
 I guess people have lots of different ideas of how open source "should" work.  I'm trying to introduce elements that connect open source projects more strongly to clients with needs, and include a mechanism whereby the work of the infrastructure folks and projects managers can be compensated.  I totally understand wanting to focus purely on the code, but if that's the case it seems unreasonable to demand attention from those who are struggling to ensure that hosting costs are met.  Of course people should be able to express how they feel, and I'm really grateful to Raphael for the insight into his thought processes, as alien as they seem to me.
 
