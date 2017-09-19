@@ -80,6 +80,11 @@ which looks like the raw HTML that Cocoon deliver before JavaScript adjusts it. 
     @project.source_repositories.build
   end
 ```
+and leaves me wondering if there is some way to have the different fields be numbered 1, 2, 3 etc. That would make the Cucumber/Capybara testing easier and it looks like there might be an approach that does that here:
+
+https://github.com/nathanvda/cocoon/issues/374
+
+Something for tomorrow ...
 
 
 
