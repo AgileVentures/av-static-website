@@ -1,0 +1,1 @@
+So I'm on the train into london for a meeting with the NHS, but unlike in my last year of blogging it's not time to agonize about how everything's going, but time to focus on finishing up this feature for project multiple repositories.
