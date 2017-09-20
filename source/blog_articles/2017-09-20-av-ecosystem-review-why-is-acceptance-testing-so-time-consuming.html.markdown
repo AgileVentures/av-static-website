@@ -92,3 +92,5 @@ and the upshot of all this and some other hacking is that I now have remote debu
 ![](https://www.dropbox.com/s/n2m1i3skeu12szp/Screenshot%202017-09-20%2010.25.54.png?dl=1)
 
 so I'm guessing I need to move this code to somewhere it might more reliably be run.  It clearly runs in the browser - ah, it looks like the ES6 interpolation I used might not be working ... yes, that was it - okay - this is a great step forward.  being able to see JS errors in capybara tests, yay!
+
+And so now the interactive parts of the test past, and I am onto errors that are all about me making sure that the data has been stored and updated correctly.  Tomorrow's work is clear ...
