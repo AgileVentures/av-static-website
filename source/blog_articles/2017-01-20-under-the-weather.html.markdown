@@ -5,7 +5,9 @@ tags: illness, cold, flu, zinc, ginger, virus, sore throat, DevOps, Slack, rest,
 author: Sam Joseph
 ---
 
-Today I have mixed feelings.  I'm frustrated to be "under the weather"; my throat has swollen up and I feel exhausted.  A cold I guess.  I'm chewing my way through a ton of raw ginger.  I keep chunks in a little plastic pot so that I can pretty much chew it continuously.  Chewing the ginger releases a kind of juice that runs down my throat and takes the sting out of the soreness.  I have half a theory that the Zinc in the ginger also gives the cold virus a hard time, but perhaps that's just my imagination :-)
+![under the weather](/images/under_the_weather.jpg)
+
+Today I have mixed feelings.  I'm frustrated to be "under the weather"; my throat has swollen up and I feel exhausted.  A cold I guess.  I'm chewing my way through a ton of raw ginger.  I keep chunks in a little plastic pot so that I can pretty much chew it continuously.  Chewing the ginger releases a kind of juice that runs down my throat and takes the sting out of the soreness.  I have half a theory that the zinc in the ginger also gives the cold virus a hard time, but perhaps that's just my imagination :-)
 
 I felt the sore throat coming on last night as I sat hacking away at a couple of WebSiteOne pull requests on my laptop while my kids were doing their Karate class.  I'd finished a couple of days of talk prep for the remote DevOps conference, and it was nice to get back to some coding. The DevOps talk was at 9:15pm that evening.  I managed to get the kids to bed, and gave the talk despite starting to lose my voice.  It seemed to go off reasonably well - some good questions and a nice chat with some attendees in Slack afterwards.  Such a relief to have it all done, particularly given that I'm now propped up in bed, chewing more ginger; a scarf wrapped around my neck.  I've managed to postpone the one real world meeting I have today, so in principle I can take it easy and give my body a chance to fight the cold.
 

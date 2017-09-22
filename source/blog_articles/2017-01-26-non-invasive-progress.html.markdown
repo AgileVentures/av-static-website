@@ -5,6 +5,8 @@ tags: illness, cold, flu, blog, publication, legacy, refactoring, solo coding, u
 author: Sam Joseph
 ---
 
+![airplane vortex](/images/airplane_vortex_edit.jpg)
+
 My cold last week meant there's a delay between the first publication of my daily blogs and the reviews I get from the AV community (particularly Federico).  I'm still going though.  My current routine is knock out a blog in the morning, and review a blog from the week before in the evening and push it to our nonprofits site.  Also in the evening I do a second review on a blog from a couple of months previously and re-publish on medium with edits and changes.  One I just pushed out was on a concept I call [NonInvasive Programming](https://medium.com/agileventures/noninvasive-programming-9821bc3c3f45#.gfps0rbmn).  I was calling it "DriveBy" coding for a while, but I decided I didn't like the violent connotations.
 
 Things are coming full circle here, with me working on the same area of the codebase, again in a NonInvasive fashion, and this time with tiny solo efforts in between admin tasks.  By NonInvasive I am probably just channeling Kent Beck's:
