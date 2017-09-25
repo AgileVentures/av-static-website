@@ -5,6 +5,8 @@ tags: ruby developer, job, tech test, pair programming, outside-in, inside-out, 
 author: Sam Joseph
 ---
 
+![second interview](/images/second-interview.jpg)
+
 So yesterday I found myself in a second interview for a "Ruby developer" job at the UK MOOC provider, FutureLearn.  I've been applying for jobs here and there over the last six months as it's nice to keep one's options open.  Having surrendered to the idea that AgileVentures won't provide a sustainable income for me anytime soon, it was nice to get a first interview (over Skype) at FutureLearn and then a tech test, and then a second interview.  I was looking forward to the afternoon which was going to be broken up into a discussion of my tech test, a pair programming session and a meeting with some client and frontend specialists.
 
 The tech test was on writing a game of TicTacToe, which I think I've blogged about before, and I used an outside-in approach as I'd done with the VendingMachine tech test example at Makers Academy.  This approach had not produced code that I was wonderfully proud of, but I was pleased with parts of my hand rolled acceptance tests, and how one could generate new ones from written descriptions of game play that matched the user experience.  I felt I'd done a reasonable job of method naming, and had started on refactoring out some different classes.  Late on Friday evening during my week off I'd done another version of TicTacToe starting from inside-out, and on the train on the way into the meeting I pushed that a little further, as I was thinking I was starting to more clearly grasp how these two different approaches intermixed.
