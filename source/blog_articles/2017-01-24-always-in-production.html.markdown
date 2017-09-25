@@ -5,6 +5,8 @@ tags: illness, cold, flu, Premium, Python, Adwords, Analytics, meeting, DevOps, 
 author: Sam Joseph
 ---
 
+![production](/images/production.jpg)
+
 My cold is receding.  Does that justify me pushing myself through activities and work over the last three days?  Maybe I'd be better quicker or not feeling quite so exhausted if I'd rested the last three days, but my boys got their football matches, I had a great Premium pairing session with Michael where we scoped out a new data-analysis project in Python, and I managed to get the Google AdWords grant accepted, and we're live with our first campaign, which has apparently put our advert into 5400 search results and led to 221 click throughs:
 
 ![this mornings adwords stats](https://www.dropbox.com/s/3lbx4vbpqz3kn8x/Screenshot%202017-01-24%2009.51.59.png?dl=1)
@@ -15,7 +17,7 @@ I can see the spike in the traffic in the Google Analytics dashboard:
 
 Exciting stuff! Yesterday was a lot of meetings, but also a fair amount of DevOps on WebsiteOne.  Seeing this traffic spike makes me wonder whether we'll have to start throwing more resources (i.e. money) at the WebsiteOne servers?  Or can we switch to drie in time? I'd love to get the main site set up with more of a funnel encouraging folks to sign up for a newsletter, membership and premium/sponsorship packages.  One thing at a time.
 
-The main technical [issue](https://github.com/AgileVentures/WebsiteOne/issues/1517) yesterday was that scrums were staying live too long on the homepage and navbar popup.  This was frustrating as the previously live scrum was blocking the next upcoming one.  Not that we have huge evidence that large numbers of people join our scrums through the links in the website, but it's one of those things like the broken youtube links in the AgileVentures tweets that just feels wrong.  I at least am also using the front page and pop-up scrum reminders to navigate to the right place to actually start the scrums.  Particularly if we are just directing more and more folks to our site, we'd like to avoid glaring inaccuracies.
+The main technical [issue](https://github.com/AgileVentures/WebsiteOne/issues/1517) yesterday was that scrums were staying live too long on the homepage and navbar popup.  This was frustrating as the previously live scrum was blocking the next upcoming one.  Not that we have huge evidence that large numbers of people join our scrums through the links in the website, but it's one of those things like the broken youtube links in the AgileVentures tweets that just feels wrong.  At the very least I using the front page and pop-up scrum reminders to navigate to the right place to actually start the scrums.  Particularly if we are just directing more and more folks to our site, we'd like to avoid glaring inaccuracies.
 
 ![scrum countdown popup](https://www.dropbox.com/s/c8sq020s1kc2ww9/Screenshot%202017-01-23%2014.38.51.png?dl=1)
 
@@ -60,7 +62,7 @@ which in turn is relying on this method:
 ```
 The pull request to adjust how long the live events stayed in the upcoming events page had modified the COLLECTION_TIME_PAST constant.  The constant was used in another place, where it affected what would be in the upcoming events page.  It had been modified to influence things there, but had this knock on effect in the other place where it was used.
 
-I didn't have proof, but now a very strong hunch.  It's also a great example of how every time you DRY something out, you are also introducing a dependency.  This was perhaps a variable that might have been better off not becoming a constant?  And we clearly didn't have any acceptance tests covering this situation, since everything had had to be green to get into production. Of course we've had a trouble free couple of years with the popup working and hindsight here is 2020.  This felt like a bleed on the site, and while I'd pinged the developer who worked on the recent pull request, he might not be available to address the issue soon.
+I didn't have proof, but now a very strong hunch.  It's also a great example of how every time you DRY something out, you are also introducing a dependency.  Was this perhaps a variable that might have been better off not becoming a constant?  And we clearly didn't have any acceptance tests covering this situation, since everything had had to be green to get into production.  Of course we've had a trouble free couple of years with the popup working and hindsight here is 2020.  This felt like a bleed on the site, and while I'd pinged the developer who worked on the recent pull request, it was highly possible they would not available to address the issue soon.
 
 I took the slightly risky step of generating a hotfix to push straight into production.  Specifically creating a second constant for the method that the popup and home page were relying on:
 

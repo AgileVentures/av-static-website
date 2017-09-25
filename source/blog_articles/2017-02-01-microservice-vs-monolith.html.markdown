@@ -5,6 +5,8 @@ tags: rails, DHH, DevOps, honesty, profanity, public speaking, facebook
 author: Sam Joseph
 ---
 
+![monoliths](/images/henge.jpg)
+
 Full on day yesterday with Rails creator David Heinemeier Hansson (DHH) dropping by to chat to AgileVentures and CraftAcademy, as well as other wall to wall meetings and DevOps.  Big shout-out to AgileVentures CoFounder and CraftAcademy boss, Thomas Ochman, for arranging and chairing the session.  It was great to hear from DHH in person and he was on form with his usual colorful language.  Thomas pointed us recently to a [paper that indicated a positive correlation between profanity and honesty](http://journals.sagepub.com/doi/full/10.1177/1948550616681055). DHH said things like:
 
 > everyone starts out being a shitty programmer writing shitty code, but the great thing is that you don't have to stop there
@@ -21,7 +23,7 @@ This apparently comes from liars trying to dissociate themselves from the lie an
 
 > only use micro services when no one person can understand the single app - don't use micro services until you are ready to declare that "intellectual bankruptcy"
 
-Which is a great point, but I wondered if that still applies when you have lots of part time, volunteer folks rather than a full time team, where everyone can devote themselves full time to understanding the entire system.  After the meeting, I posed that question to the AV community in Slack.  Long time AV contributer and software magician, Bryan Yap, responded that:
+Which is a great point, but I wondered if that still applies when you have lots of part time, volunteer folks rather than a full time team, where everyone can devote themselves to understanding the entire system.  After the meeting, I posed that question to the AV community in Slack.  Long time AV contributer and software magician, Bryan Yap, responded that:
 
 > every project still has a project lead, I imagine the project lead would know a considerable amount about the app. I think it is more for when the app grows too complicated for any one person to comprehend
  
@@ -38,16 +40,16 @@ To which Bryan responded:
 
 I replied to Bryan that that was good advice, and that single databases are great in the right circumstances and getting that good domain model is key.  In my experience the difficulty is working out that domain model, since it requires a process of exploration.  In addition, if you have a project with a lot of part-time occasional folks who don't necessarily have the time or inclination to understand the domain model, then it maybe makes sense to have a series of smaller services, each with a simpler model that they're more likely to grasp.
 
-I think Bryan's point that there is usually one full-time maintainer who has the whole app in their head, but even if they do, I don't think that's necessarily the best criteria to make the decision to start splitting out some microservices. The key distinction I was trying to draw is that the best approach for a project where you have 6 full-time programmers on staff, may not work quite so well when you have one part-time person and 30 volunteers putting in bits of code here and there.  Sometimes splitting those 30 folks up into 6 teams of 5 each working on a different microservice might actually be simpler.  Of course as Kent Beck says, it depends :-)
+I think Bryan's point that there is usually one full-time maintainer who has the whole app in their head, but even if they do, I don't think that's necessarily the best criteria to make the decision to start splitting out some microservices. The key distinction I was trying to draw is that the best approach for a project where you have 6 full-time programmers on staff, may not work quite so well when you have one part-time person and 30 volunteers putting in bits of code here and there.  Sometimes splitting those 30 folks up into 6 teams of 5 each working on a different microservice might actually be simpler.  Of course, as Kent Beck says, it depends :-)
 
-###Related Videos:
+### Related Videos:
 
 * ["Martin Fowler" Scrum](https://www.youtube.com/watch?v=dtr_Um8J0XU)
 * [Marketing meeting](https://www.youtube.com/watch?v=-dQWAbjr7pc)
 * [Chat with DHH](https://www.youtube.com/watch?v=I0LJTMgEomM)
 * ["Kent Beck" Scrum](https://www.youtube.com/watch?v=RZf-mhm20gk)
 
-###Related Links:
+### Related Links:
 
 * [Frankly, We Do Give a Damn: The Relationship Between Profanity and Honesty](http://journals.sagepub.com/doi/full/10.1177/1948550616681055)
 * [Martin Fowler on MonolithFirst](https://martinfowler.com/bliki/MonolithFirst.html)

@@ -5,6 +5,8 @@ tags: rails, DHH, open source, privacy, public, transparency, trust, learning, d
 author: Sam Joseph
 ---
 
+![estimating](/images/estimating.png)
+
 Thomas asked a great question to DHH during our chat with him on Tuesday.  The question was:
 
 > What are the biggest challenges of running a large scale open source project over time?
