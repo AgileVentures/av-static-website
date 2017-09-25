@@ -2,7 +2,7 @@ Right, new dawn.  I could be blogging about all the conversations we had about t
 
 ![](../images/Screenshot%202017-07-05%2009.29.00.png?dl=1)
 
-These two sections are all things we'd like users to do, i.e. get set up with GitHub and Slack (and other things) but the danger is that the very first thing we are doing is directing folks away from our site.  The likelihood is that they signed up via GitHub and they've received a Slack invite.  It's all very well asking folks to work through a set of administrative tasks when they are a "captive" audience, such as having already paid to take a class, but really we need to get people as quickly as possible to the higher engagement, fun activities, such as looking through the different active projects.  Anyway, I shouldn't belabour the point, but it's interesting to look at the flow through from Google Analytics for this page:
+These two sections are all things we'd like users to do, i.e. get set up with GitHub and Slack (and other things), but the danger is that the very first thing we are doing is directing folks away from our site.  The likelihood is that they signed up via GitHub and they've received a Slack invite.  It's all very well asking folks to work through a set of administrative tasks when they are a "captive" audience, such as having already paid to take a class, but, really, we need to get people as quickly as possible to the higher engagement, fun activities, such as looking through the different active projects.  Anyway, I shouldn't belabour the point, but it's interesting to look at the flow through from Google Analytics for this page:
 
 ![](../images/Screenshot%202017-07-04%2012.01.38.png?dl=1)
 
@@ -10,13 +10,13 @@ What we see there is a lot of drop offs and not many people clicking through on 
 
 ![](../images/Screenshot%202017-07-05%2009.35.10.png?dl=1)
 
-So anyway, I removed the first two sections and we'll see if there is any change.  I think there's still room to reduce the amount of text, improve the layout and add graphics through this document, and so I'm torn about making more significant changes.  Particularly since it will take some weeks before we can really tell if there's a difference.  We hadd 168 visits to the "Getting Started" page in the last month.  In addition I also want to make progress on the Premium page.  Previously Matt and I had worked on things to that when signed in users clicked on "Upgrade to Premium for additional support" on the home page, that instead of going to the payment page (with no information about premium) that it went to the description page for Premium, which made a lot more sense to me.
+So anyway, I removed the first two sections and we'll see if there is any change.  I think there's still room to reduce the amount of text, improve the layout and add graphics through this document, and so I'm torn about making more significant changes.  Particularly since it will take some weeks before we can really tell if there's a difference.  We had 168 visits to the "Getting Started" page in the last month.  In addition I also want to make progress on the Premium page.  Previously Matt and I had worked on things so that when signed in users clicked on "Upgrade to Premium for additional support" on the home page, that instead of going to the payment page (with no information about premium), it went to the description page for Premium, which made a lot more sense to me.
 
 There's functionality in the Google Analytics Chrome plugin to compare a period with the previous month, and I can see that there's been a small increase in people clicking on the "Upgrade to Premium for additional support".  We just redesigned the banner, but that only just went live, so we don't have a clear indication for that increase:
 
 ![](../images/Screenshot%202017-07-05%2009.48.57.png?dl=1)
 
-Looking through at the Premium description page we can now see some changes.  We adjusted the flow on the [18th May](https://github.com/AgileVentures/WebsiteOne/commit/1af6bfe440133e4ade2b08e6fc7b8703825ec2b6), and we can now see that the click through on "Get Started with Premium" has increased from 11% to 15% compared with the same period previously:
+Looking through at the Premium description page we can now see some changes.  We adjusted the flow on the [18th of May](https://github.com/AgileVentures/WebsiteOne/commit/1af6bfe440133e4ade2b08e6fc7b8703825ec2b6), and we can now see that the click through on "Get Started with Premium" has increased from 11% to 15% compared with the same period previously:
 
 ![](../images/Screenshot%202017-07-05%2009.55.37.png?dl=1)
 
@@ -24,7 +24,7 @@ Now the difficulty is that that change could just be due to a trend that we woul
 
 ![](../images/Screenshot%202017-07-05%2009.59.16.png?dl=1)
 
-The Google analytics plugin is silent on the numbers of folks clicking on the subscribe buttons.  Paypal redirects to another site, while Stripe uses JavaScript to popup a credit card form.  I spent a chunk of time trying to see if I could see the flow around that page in the main Google Analytics site, but this was as close as I got:
+The Google analytics plugin is silent on the numbers of folks clicking on the subscribe buttons.  PayPal redirects to another site, while Stripe uses JavaScript to popup a credit card form.  I spent a chunk of time trying to see if I could see the flow around that page in the main Google Analytics site, but this was as close as I got:
 
 ![](../images/Screenshot%202017-07-05%2010.15.30.png?dl=1)
 
@@ -48,4 +48,4 @@ So anyhow, here's another pass at questions for the Premium page:
 
 and I've now gone ahead and updated the Premium page using them and reworded the descriptions to make sense.  I think I could also be adjusting the full details to be popping up like we have in the FAQ, but I think this is enough for today.  The interesting thing will be to see if this has any noticeable impact on the click through rates or the number of people signing up ...
 
-p.s. Side note, since shortening the text in the "code" page and adding a call to action "get started now" button we've seen a good third of the people landing on the page clicking through on the "get started now" button.  Not that that says very much - what would be good to be seeing is month by month stats of footfall and percentage of people on the site actually signing up ...
+p.s. Side note, since shortening the text in the "code" page and adding a call to action "get started now" button, we've seen a good third of the people landing on the page clicking through on the "get started now" button.  Not that that says very much - what would be good to be seeing is month by month stats of footfall and percentage of people on the site actually signing up ...
