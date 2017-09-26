@@ -5,7 +5,7 @@ tags: FutureLearn, interview, teams, clients, blocking
 author: Sam Joseph
 ---
 
-![questions](/images/questions.jpg)
+![questions](/images/questions.png)
 
 
 The final part of the FutureLearn interview was a chat with a client specialist and front end developer, with questions about my experiences in teams and working with clients.  I enjoyed the conversation, and it allowed me to articulate something that I've been thinking over and over again and still have trouble putting into practice.  It's this process of avoiding blocking people, and what to do instead.  I use the term blocking to mean disagreeing, correcting grammar/pronunciation, ignoring suggestions.  A whole range of things.  Now sometimes it's important to block.  I don't think one should never block, but that blocking always come with a cost.  Generally when people are speaking they are trying to get something across, some idea or opinion or what have you.  Maybe some enlightened folks are really not bothered to be blocked, but many of us, if we are making the effort to say something, would probably prefer to be allowed to fully express our thought.
