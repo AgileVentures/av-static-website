@@ -1,3 +1,12 @@
+---
+title: Private Design Sprint Day Five
+date: 2017-07-03
+tags: 
+author: Sam Joseph
+---
+
+![design sprint](/images/design_sprint.png)
+
 It was a frenetic last day but we managed to run usability tests with five different people.  I had to reach out to my personal network to fill all the slots, as well as stretching out of the precise demographic range that we had targeted, but I think we managed to conduct five really meaningful sessions.  The tech setup also worked pretty well with FaceTime and YouTube streams from hangouts, although probably it would have been better to have the observers joining the hangouts - then again that could have just made things that little more complicated.  We started the interviews from 10am, and we definitely needed that 9am-10am period to get settled in.  In the book they suggest starting the interviews from 9am, but for that to work I think one really has to have had a run through session on the Thursday, and in my experience so far the tail end of Thursday is spent frantically working on the demo app itself.
 
 Maybe even greater proficiency with the prototyping tools might address that, but there's so much room for something not to work on the Thursday.  Maybe larger sprint teams are the key.  The sprints I've been involved in have had small teams.  There's also the location issue.  I can see the whole thing really working best when you have a company that has a dedicated physical space that they're comfortable working in and there aren't a load of logistical issues to get sorted.  Starting the interviews at 10am meant that they ran back to back with 30 minute breaks.  Also most of the team needed to leave soon afterwards so we didn't get time for the sort of review that I'd have liked.  There was lots of interesting discussion during the breaks, and the reactions to the demo system were pretty solidly positive.  The decider wasn't so happy with the final design that emerged, but ultimately I think we all agreed that we'd been able to get good positive feedback on some of the key conceptual elements that we were planning for the app.
