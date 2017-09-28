@@ -1,3 +1,10 @@
+---
+title: AV Website Review Part 1
+date: 2017-07-06
+tags: 
+author: Sam Joseph
+---
+
 So I'm deeply tempted to continue with the premium page review.  I think making all the new questions have their explanations in pop-out form would probably be an improvement, but I know that's a sticky hour or so of manipulating HTML.  Very unDRY, something we could, or perhaps should, be doing with a DB backed loop through a template, but setting up (and deploying that) would be another few hours and days.  I'm leaning towards further review of the "Getting Started" page, although we did make a change to that on Monday.
 
 It's too early to tell if those changes have had any impact.  We can look for changes via Google Analytics:
@@ -33,7 +40,7 @@ as well as further cleaning up the text a little.  Reading through the rest of t
 * optionally recordings of PairProgramming sessions and standups are stored on YouTube. The list of videos for a specific project is under project's section on agileventures.org
 * technical information on the project is kept in documents under project's section on agileventures.org
 
-This is all information that we want new members to absorb, but I think it's unlikely that many people will read and absorb.  We probably need to break this up into multiple steps (just like FreeCodeCamp) and have an activity associated with each.  Again it would be lovely to track people's progress through this - I recall FreeCodeCamp has a separate page with an animated gif for each action, so they'll be able to track with Google Analytics how far people are getting through the process.  Given the user themselves a sense of progress through the task would also be great, as would having buttons that made it trivial to post a question to a project maintainer in the relevant slack channel (a bit like LinkedIn does to make it easy to send messages of a particular format).
+This is all information that we want new members to absorb, but I think it's unlikely that many people will read and absorb.  We probably need to break this up into multiple steps (just like FreeCodeCamp) and have an activity associated with each.  Again it would be lovely to track people's progress through this - I recall FreeCodeCamp has a separate page with an animated gif for each action, so they'll be able to track with Google Analytics how far people are getting through the process.  Giving the user themselves a sense of progress through the task would also be great, as would having buttons that made it trivial to post a question to a project maintainer in the relevant slack channel (a bit like LinkedIn does to make it easy to send messages of a particular format).
 
 Of course with all these different ideas there's the question of which are the ones that are really worth pursuing.  I did get set up a few months back with being able to make nice animated gifs.   A nice animated gif of reaching out to a project maintainer and having them respond in a friendly fashion would probably be much more asorbable by lots of people than the current text of:
 
@@ -42,6 +49,6 @@ Of course with all these different ideas there's the question of which are the o
 > "@patrick - hi, I am new to agile ventures and I would like to learn more about this project."
 > "patrick" will then be alerted to your message and respond back.
 
-I guess it's all question of where to expend the effort ...?  Once people have left the getting started page will they come back to follow through the steps?  Perhaps not, unless they are marking off progress.  It makes me want to split the getting-started pages into Step 1 (of 5), Step 2 (of 5), ... Step 5 (of 5) so that there's much less text per individual page, and so that we can see the flow of people from page to page.  Of course a lot of this points to the need for a re-design of the project page, which we've known we've needed for a long time.  There's also the automated greeter bot in Slack, which I need to move to Azure, and make sure others can deploy to and change.  That greeter bot would ideally point people back to the "Getting Started" page, rather than off to GitHub as it does currently ...
+I guess it's all question of where to expend the effort ...?  Once people have left the getting started page will they come back to follow through the steps?  Perhaps not, unless they are marking off progress.  It makes me want to split the getting-started pages into Step 1 (of 5), Step 2 (of 5), ... Step 5 (of 5) so that there's much less text per individual page, and so that we can see the flow of people from page to page.  Of course a lot of this points to the need for a re-design of the project page, which we've thought we've needed for a long time.  There's also the automated greeter bot in Slack, which I need to move to Azure, and make sure others can deploy to and change.  That greeter bot would ideally point people back to the "Getting Started" page, rather than off to GitHub as it does currently ...
 
 Well, I think that's the course I wanted to be on with these blogs.  Careful review of various pages in the site.  Set up an experiment on each, come back and review in a month to see what impact there's been.  There's certainly a good few other pages I can review over the course of the next month, e.g. the home page, the about page, the projects page, the event page, the opportunities page, the past scrums page, all the individual project pages ... the list goes on ...
