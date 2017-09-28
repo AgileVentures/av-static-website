@@ -21,7 +21,7 @@ while Michael chose the following:
 
 and we worked through each, writing new user-stories informed by our recent AgileBookClub podcast discussions.  Here are Michael's tickets and the user stories we added.
 
-### Convert Sign up links into big, orange buttons
+### Convert sign up links into big, orange buttons
 
 ```
 As an AgileVentures Admin
@@ -35,7 +35,7 @@ Whereas currently they are simply hyperlinks
 ```
 As AgileVentures Admin
 So that we can analyze usage patterns and reflect teleconference participation in member profiles
-I would like some mechanism of tracking teleconference participation 
+I would like some mechanism for tracking teleconference participation 
 Instead of the Google Hangouts API which is being removed in April
 
 As AgileVentures Scrum master
@@ -61,7 +61,7 @@ I'd been reading about the importance of these kind of commitments in Agile as p
 
 Over the last year I've been gradually sliding away from any formal sprint cycle on the projects I'm managing, as I get dispirited and demotivated by the difficulties I've faced trying to arrange regular meetings at times that everyone can attend.  I was also getting the sense that folks were not enthusiastic about such meetings, and so it's kind of a breakthrough with Michael to discover that the problem was not necessarily the presence of a meeting, per se, but the structure of that meeting.  Michael's enthusiasm for the new structure is helping me feel more motivated for sprint cycle meetings.  I asked Michael at the end of the meeting on Friday if things had gone as he had hoped, if the discussion had been at the right level and he said yes, and so hopefully we can continue this format next week.
 
-It's funny - I'm just really happy to keep bashing away at tickets - happy with little structure, but I do notice that without a commitment to getting particular things done, all my different admin tasks can trump development work.  Maybe I do need a little more structure and commitment ... although trying to get people to make committments to doing things makes me feel strange.  In some ways I would rather they wouldn't commit and then either or do, or not do.  In the absence of any committment there is no disappointment :-) Then again maybe making small structured committments is a framework and more folks will feel positive in the long run?  We'll see :-)
+It's funny - I'm just really happy to keep bashing away at tickets - happy with little structure, but I do notice that without a commitment to getting particular things done, all my different admin tasks can trump development work.  Maybe I do need a little more structure and commitment ... although trying to get people to make committments to doing things makes me feel strange.  In some ways I would rather they wouldn't commit and then either just do, or not do.  In the absence of any committment there is no disappointment :-) Then again maybe making small structured committments is a framework and more folks will feel positive in the long run?  We'll see :-)
 
 ###Related Videos:
 
