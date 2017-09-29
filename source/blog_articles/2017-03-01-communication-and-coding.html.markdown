@@ -35,5 +35,5 @@ The interesting question now is how to go about leveling up my communication ski
 4) Listen actively  
 5) Maintain eye contact  
 
-from [www.lifehack.org/articles/communication/improve-communication-skills.html](www.lifehack.org/articles/communication/improve-communication-skills.html) which is fairly clear.  Maybe not too hard then :-)  Stay tuned to this blog to hear about the results of my attempt to level up my communication skills ...
+from [www.lifehack.org/articles/communication/improve-communication-skills.html](www.lifehack.org/articles/communication/improve-communication-skills.html) which is fairly clear.  Maybe not too hard then :-)  Stay tuned to this blog to hear about the results of my attempt to become a better communicator ...
 
