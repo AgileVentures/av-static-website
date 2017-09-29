@@ -23,6 +23,7 @@ $(document).on('ready', function () {
     WebsiteOne.Projects.ensure_github_url_numbering()
   });
 })
+```
 
 I had realised that the github url numbering was not being on initial page load, and so I extracted the function that performed it into our application name space and now call it both on page load and when the form is dynamically updated.  Should I have done the refactoring earlier?  I don't think that would have highlighted the issue particularly, and I left off factoring because I wanted to see what direction I'd be pushed in next.
 
