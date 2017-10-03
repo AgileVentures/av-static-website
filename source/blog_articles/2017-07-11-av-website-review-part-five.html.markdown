@@ -1,10 +1,18 @@
+---
+title: AV Website Review Part 5
+date: 2017-07-11
+tags: 
+author: Sam Joseph
+---
+
+
 So what I really meant to do yesterday was to look at the flows going through various pages in the site via Google Analytics.  Here's a view that compares June with May this year:
 
-![behaviour flow around sign up page, may vs jun](https://www.dropbox.com/s/hf47so53v8lnhyw/Screenshot%202017-07-11%2009.23.15.png?dl=1)
+![behaviour flow around sign up page, may vs jun](https://dl.dropbox.com/s/hf47so53v8lnhyw/Screenshot%202017-07-11%2009.23.15.png?dl=1)
 
 It's perhaps even more revealing to compare June this year with June last year:
 
-![behaviour flow around sign up page, jun 16 vs jun 17](https://www.dropbox.com/s/j1yzvlujhm0qttm/Screenshot%202017-07-11%2009.27.31.png?dl=1)
+![behaviour flow around sign up page, jun 16 vs jun 17](https://dl.dropbox.com/s/j1yzvlujhm0qttm/Screenshot%202017-07-11%2009.27.31.png?dl=1)
 
 What we can see clearly here is the big increase from those viewing '/code' and '/learn' (I shortened those and added sign up call to actions at the end of them recently) and the massize increase in those going to '/getting-started' (a few months back we adjusted it so that you go to "getting started" after signing in).
 
@@ -12,7 +20,7 @@ Of the 1200 people landing on the sign_up page in June, we had 380 just stop the
 
 What's perhaps more concerning is the 299 drop offs out of the 793 sessions on the 'getting started' page.  Of course maybe the reality is that we can't change either of these drop off rates significantly.   I've just experiemented with changes to the 'getting started' page and so it seems sensible to leave that for a while.  Although maybe we should be A/B testing rather than comparing longitudinally?  Anyhow, I've got the privacy statement all linked up into the sign up page:
 
-![sign up page with privacy link](https://www.dropbox.com/s/ggj4vgtqytlm5jp/Screenshot%202017-07-11%2009.34.22.png?dl=1)
+![sign up page with privacy link](https://dl.dropbox.com/s/ggj4vgtqytlm5jp/Screenshot%202017-07-11%2009.34.22.png?dl=1)
 
 Overall I think the page looks pretty good.  We previously fixed up the icons and made both signup methods work, so the only garish thing remaining is this email signup disabled.  I found there's a [plugin for devise to add Google's re-captcha](https://github.com/plataformatec/devise/wiki/How-To:-Use-Recaptcha-with-Devise).  Working through it I got stuck with the configuration, but fixed it and put in a PR to the repo with the fix:
 
@@ -20,11 +28,11 @@ https://github.com/ambethia/recaptcha/pull/231
 
 and so was rewarded with seeing the following in my local spike:
 
-![first pass at adding recaptcha](https://www.dropbox.com/s/fxj5vfx9wzj5sb3/Screenshot%202017-07-11%2009.54.23.png?dl=1)
+![first pass at adding recaptcha](https://dl.dropbox.com/s/fxj5vfx9wzj5sb3/Screenshot%202017-07-11%2009.54.23.png?dl=1)
 
 but while I could click on the I'm not a robot, I got "verification failed" after signup:
 
-![verification failed](https://www.dropbox.com/s/bieuh1rayk3l9i7/Screenshot%202017-07-11%2009.55.37.png?dl=1)
+![verification failed](https://dl.dropbox.com/s/bieuh1rayk3l9i7/Screenshot%202017-07-11%2009.55.37.png?dl=1)
 
 All the log was telling me was: 
 
