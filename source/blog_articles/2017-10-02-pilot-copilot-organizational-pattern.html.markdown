@@ -1,6 +1,6 @@
 ---
 title: The pilot+copilot organizational pattern
-date: 2017-09-22
+date: 2017-10-02
 tags: remote, work, organization, programming, UX, ergonomy
 author: Mikaël Dautrey
 ---
