@@ -14,7 +14,7 @@ It's perhaps even more revealing to compare June this year with June last year:
 
 ![behaviour flow around sign up page, jun 16 vs jun 17](https://dl.dropbox.com/s/j1yzvlujhm0qttm/Screenshot%202017-07-11%2009.27.31.png?dl=1)
 
-What we can see clearly here is the big increase from those viewing '/code' and '/learn' (I shortened those and added sign up call to actions at the end of them recently) and the massize increase in those going to '/getting-started' (a few months back we adjusted it so that you go to "getting started" after signing in).
+What we can see clearly here is the big increase from those viewing '/code' and '/learn' (I shortened those and added sign up call to actions at the end of them recently) and the massive increase in those going to '/getting-started' (a few months back we adjusted it so that you go to "getting started" after signing in).
 
 Of the 1200 people landing on the sign_up page in June, we had 380 just stop there and go no further.  I'm wondering if that figure could be improved by the deployment of a privacy policy and re-enabling email signups?  
 
@@ -67,12 +67,12 @@ I added byebug to the check_captcha method I'd added to the registrations contro
   end
 ```
 
-Stepping through the code there made it look like the verification was failing - nothing else wrong.  The `verify_recaptcha` method was returning false ... Not sure what's going wrong there and I have the sinking feeling that adding the captcha as I have may screw up the other signup methods.  We'll see.  First I just need proof positive that we can get it work at all ... It may be that I just can't run it locally like this - I added the `localhost` domain to the domains associated with keys to run locally, but maybe there's more needed to run locally.  I can see that there's a domain name verification setting in the reCaptcha settings:
+Stepping through the code there made it look like the verification was failing - nothing else wrong.  The `verify_recaptcha` method was returning false ... Not sure what's going wrong there and I have the sinking feeling that adding the captcha, as I have, may screw up the other signup methods.  We'll see.  First I just need proof positive that we can get it to work at all ... It may be that I just can't run it locally like this - I added the `localhost` domain to the domains associated with keys to run locally, but maybe there's more needed to run locally.  I can see that there's a domain name verification setting in the reCaptcha settings:
 
 ![recaptcha settings](https://www.dropbox.com/s/53j9mi92omzrls9/Screenshot%202017-07-11%2010.04.42.png?dl=1)
 
-I'm just trying a re-start and another step through ... which seemed to work without any changes.  Hmm, maybe the restart did it ... I also played with the layout to make it all look a little better:
+I'm just trying a restart ... and another step through ... which seemed to work without any changes.  Hmm, maybe the restart did it ... I also played with the layout to make it all look a little better:
 
 ![new layout](https://www.dropbox.com/s/la5kden3qy8zsb1/Screenshot%202017-07-11%2010.12.41.png?dl=1)
 
-which I assume didn't actually change things.  Test again without the byebug ... and that works although I note I get two "signed up successfully messages" - tried to screen shot, but they fade out a little fast, would like to fix that.  Also I get nicely redirected to the "Getting Started" page.  Okay, well that's the spike - sure it breaks lots of things, but might as well push that up as a spike PR so see how it all runs on CI.  Guess we'll need sandboxing ...?  Look at that tomorrow.
+which I assume didn't actually change things.  Test again without the byebug ... and that works, although I note I get two "signed up successfully messages" - tried to screen shot, but they fade out a little fast; would like to fix that.  Also I get nicely redirected to the "Getting Started" page.  Okay, well that's the spike - sure it breaks lots of things, but might as well push that up as a spike PR to see how it all runs on CI.  Guess we'll need sandboxing ...?  Look at that tomorrow.
