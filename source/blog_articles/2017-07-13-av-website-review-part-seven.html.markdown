@@ -1,3 +1,10 @@
+---
+title: AV Website Review Part 7
+date: 2017-07-13
+tags: 
+author: Sam Joseph
+---
+
 So overnight some new folks signed up for the AgileVentures slack.  It seems like the greeter bot on Azure/Dokku has succesfully greeted a handful of new members, so I've turned off the greeter bot on EC2 and shut down the instance, which should save us $5 a month, or so.  Look after the pennies and the pounds will look after themselves they say.  Lots of pennies still to save methinks.  Anyhow, my calculated gamble seems to have worked.  We got one user having a double greeting in the changeover, but they've actually responded positively and, otherwise, normal service has been restored.  So now in principle we can have simpler management of the greeter bot message.  Federico and others can submit PRs to update the message, and even deploy it themselves.  I guess I should just test that with a new message ... so I put in a pull request:
 
 [https://github.com/AgileVentures/greeter_bot/pull/3](https://github.com/AgileVentures/greeter_bot/pull/3)
