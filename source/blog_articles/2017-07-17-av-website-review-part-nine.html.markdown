@@ -22,7 +22,7 @@ So it's tempting when thinking about supporting multiple projects to put a datab
 
 I've got to get the autograders working on EC2 and so many other things.  I can't allow myself more than another 15 minutes on this.  I think I deploy.  Again by force of habit I submit a PR:
 
-[https://github.com/tansaku/project_greeter_bot/pull/7](https://github.com/tansaku/project_greeter_bot/pull/7)
+[https://github.com/tansaku/project\_greeter\_bot/pull/7](https://github.com/tansaku/project_greeter_bot/pull/7)
 
 There's no CI yet, but it allows me to attach the ticket to the issue.  I could deploy that branch directly ...?  That actually provides a great route for getting out of trouble.  Will do that.  While that builds I could quickly make a test for the reCaptcha stuff ...?  I satisfy myself with creating a ticket:
 
