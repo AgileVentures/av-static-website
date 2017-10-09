@@ -1,3 +1,12 @@
+---
+title: AV Website Review Part 8
+date: 2017-07-14
+tags: 
+author: Sam Joseph
+---
+
+![times up](/images/expired.jpg)
+
 So no one joined the LocalSupport channel over the weekend and thus there's no immediate chance to see the new project greeting bot in action.  Other project maintainers have come back to me with mixed responses.  Some enthusiastic, some more cautious.  I also saw there are some [special keys for testing "reCaptcha"](https://developers.google.com/recaptcha/docs/faq), which makes me feel like I should put some more effort into that spike.
 
 I think what I really want though is to update the project greeting bot so that it supports multiple projects, mentions the person by name and even has a pause before it posts.  Force of habit--I just dropped a load of issues in the repo for the bot:
@@ -11,7 +20,7 @@ I think what I really want though is to update the project greeting bot so that 
 
 So it's tempting when thinking about supporting multiple projects to put a database or caching system in there, but a hash in the code will do for now.  And I start to want to put a testing framework in there, but I know I won't be able to easily round-trip the whole thing, so I do a manual test on the low level stuff in node, and on the high level stuff in a second Slack instance.  It all seems to work.  I could deploy.  I've got one free-tier member asking for a simple project to get set up on - it could be this one ...
 
-I've got the autograders to get working on EC2 and so many other things.  I can't allow myself more than another 15 minutes on this.  I think I deploy.  Again by force of habit I submit a PR:
+I've got to get the autograders working on EC2 and so many other things.  I can't allow myself more than another 15 minutes on this.  I think I deploy.  Again by force of habit I submit a PR:
 
 [https://github.com/tansaku/project_greeter_bot/pull/7](https://github.com/tansaku/project_greeter_bot/pull/7)
 
