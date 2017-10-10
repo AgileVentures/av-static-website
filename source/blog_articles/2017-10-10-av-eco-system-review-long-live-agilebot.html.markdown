@@ -1,4 +1,4 @@
-The AgileBot rubyification yesterday was not without a slight speed bump yesterday as I had set the LIVE_ENV parameter incorrectly on production and got a 500 error when I tried to start the Martin Fowler scrum.  However we still managed a scrum, although I was slightly more stressed than usual with my internet also dropping in and out, but we had two full scrums yesterday with a new project proposed in each.  It seems like the welcoming language that I added is working backwards through time to revitalize the scrums - let's see how that goes today :-)
+The AgileBot rubyification yesterday was not without a slight speed bump yesterday as I had set the `LIVE_ENV` parameter incorrectly on production and got a 500 error when I tried to start the Martin Fowler scrum.  However we still managed a scrum, although I was slightly more stressed than usual with my internet also dropping in and out, but we had two full scrums yesterday with a new project proposed in each.  It seems like the welcoming language that I added is working backwards through time to revitalize the scrums - let's see how that goes today :-)
 
 Anyhow, as soon as the scrum was over I was able to fix my slip, and the "Kent" Beck scrum went out just as intended on the correct slack channels, as did the Autograders client meeting and the SHF project meeting, which automatically pinged the relevant channels, yay!  So now that's working I think I can safely shut down the separate node/hubot AgileBot instances and save us $14 a month in Heroku fees.
 
@@ -61,13 +61,11 @@ And that was so easy that I was tempted to do the same with the video links, and
 
 and there we go.  I still really want to remove the unecessary dates from the slack pings, but hopefully I can do that tomorrow and then still have time to do a high level review with Thursday and Friday.  Then perhaps the performance review next week ...?
 
-
-
-
-
-
-
 ## Related Videos
 
 * ["Martin Fowler" Scrum](https://youtu.be/6lpTEsVnK5Y)
 * ["Kent Beck" Scrum](https://youtu.be/vHDRXgGsSiM)
+
+p.s. I threw in a [refactoring ticket](https://github.com/AgileVentures/WebsiteOne/issues/1888) as there's the code could look better, and by the time I got back with my coffee the build passed (thanks cucumber second retry) and I got it merged in to see if we could try it before the next scrum ...
+
+
