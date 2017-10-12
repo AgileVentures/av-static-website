@@ -7,12 +7,11 @@ author: Sam Joseph
 
 ![code](/images/code.jpg)
 
-
 Federico made a comment on one of my recent blogs:
 
 > code_in_blog == good
 
-I wish I was coding more.  I am getting to do some code in the Premium mobbing sessions.  My productive coding efforts are snatched between meetings with me throwing up spikes to give myself bugs (in my feature branches) to fix and drive myself forward.  I have got quite excited about starting to code in Elixir.  Stephen Grider very kindly made his Udemy course available to Premium Mob members, and it's super high quality.   It's what I would love to see more MOOCs evolving towards.  Stephen has all the code in his [repo on GitHub](https://github.com/StephenGrider/ElixirCode), where we can see code like this from his initial example Elixir app for playing Cards:
+I wish I was coding more.  I am getting to do some code in the Premium mobbing sessions.  My productive coding efforts are snatched between meetings with me throwing up spikes to give myself bugs (in my feature branches) to fix and drive myself forward.  I've got quite excited about starting to code in Elixir.  Stephen Grider very kindly made his Udemy course available  for free to Premium Mob members, and it's super high quality.   It's what I would love to see more MOOCs evolving towards.  Stephen has all the code in his [repo on GitHub](https://github.com/StephenGrider/ElixirCode), where we can see code like this from his initial example Elixir app for playing Cards:
 
 ```ex
   def load(filename) do
@@ -44,7 +43,7 @@ def delete_files(files, options={})
 end
 ```
 
-The `delete_files` method about is doing something more complex than the Elixir snippet.  Here we're seeing a method that has some default "policies", that can be called in such a way that new policies are passed in on the fly:
+The `delete_files` method is doing something more complex than the Elixir snippet.  Here we're seeing a method that has some default "policies", that can be called in such a way that new policies are passed in on the fly:
 
 ```rb
 delete_files(files, 
@@ -54,7 +53,7 @@ delete_files(files,
 
 The interesting thing was that having refactored this far in his "receive policies instread of data" pattern Avdi said:
 
-> At this point this example is clearly getting a little bit strained. And in general, code like this is probably a smell. There are some programming languages in which it is perfectly normal to pass lots of lambdas into methods, but in Ruby we typically try to Wnd more object-oriented approaches to composing behavior.
+> At this point this example is clearly getting a little bit strained. And in general, code like this is probably a smell. There are some programming languages in which it is perfectly normal to pass lots of lambdas into methods, but in Ruby we typically try to find more object-oriented approaches to composing behavior.
 
 Now admittedly the connection I'm making between the Elixir and Ruby code is strained.  In some ways I was just picking up on what looks like a similarity in some of the symbols in the two languages.  Actually here what might seem like a similarity is in fact two different things.  Elixir's `case` statement is using `->` to indicate the cases, whereas Ruby is using it to specify anonymous lambdas.  That said, elements of case statements are perhaps best described as anonymous lambdas?  Confused, well, let me transcribe the Elixir code into Ruby:
 
@@ -150,7 +149,7 @@ where we're using pattern matching to extract the hex part of the struct (the `i
 
 What really strikes me here (apart from a possible refactoring) that I'll go into in another blog, is that instance variables just seem completely unecessary.  I've known for a while that the functional programmers eschew them, and we have heuristics in OO languages to avoid allowing unecessary state manipulation (e.g. preferring instance variables set up in an initializer rather than via accessors), but the breakthrough for me here is to see that we can still do all the OO domain modelling with structs.  We can even create a set of methods and procedures that are tied to working with those structs, but we don't seem to lose anything we really need as a result of losing instance variables.  This does seem extraordinarily powerful.  Maybe I'm drinking the Kool-Aid, but I can't now think of a circumstance where we have to use an instance variable.
 
-Also, the fact that in Rails, active record models have this complexity, where they can get out of sync with the database due to their instance state, is tricky and hugely confusing for learning developers.  I suspect that problem completely disappears in Elixir/Phoenix.  Not that Rails isn't great in so many ways, but I'd love someone to show me a real world coding problem that couldn't be addressed without instance variables (assuming no memory constraints).  It also seems to be you could code the Elixir way in Ruby by just refraining from using instance variables.  I start to wonder if parts of our CS educational OO edifice are just completely unnecessary and surplus to requirement, specifically "instance variables".  [Tweet me](https://twitter.com/tansakuu) with counter examples!   Let's get to the bottom of this! :-)
+Also there's the fact that Rails active record models have the additional complexity of getting out of sync with the database due to their instance state, which is tricky and hugely confusing for learning developers.  I suspect that problem completely disappears in Elixir/Phoenix.  Not that Rails isn't great in so many ways, but I'd love someone to show me a real world coding problem that couldn't be addressed without instance variables (assuming no memory constraints).  It also seems to be you could code the Elixir way in Ruby by just refraining from using instance variables.  I start to wonder if parts of our CS educational OO edifice are just completely unnecessary and surplus to requirement, specifically "instance variables".  [Tweet me](https://twitter.com/tansakuu) with counter examples!   Let's get to the bottom of this! :-)
 
 
 
