@@ -17,10 +17,10 @@ I'm conflicted about whether to investigate that further, or try to deploy the n
 
 And so the thing I need, to profile the events controller, is to clone the production data locally again, which I also did after opening some more project greeter bot tickets:
 
-https://github.com/AgileVentures/project_greeter_bot/issues/15
+[https://github.com/AgileVentures/project\_greeter\_bot/issues/15](https://github.com/AgileVentures/project_greeter_bot/issues/15)
 
 I can't immediately see a solution to the slow event page loading, but I've found our old open issue and added notes there:
 
-https://github.com/AgileVentures/WebsiteOne/issues/1503
+[https://github.com/AgileVentures/WebsiteOne/issues/1503](https://github.com/AgileVentures/WebsiteOne/issues/1503)
 
 I've got other fish to fry today, e.g. getting the NHS HLP wiki ssl certs renewed.  Gosh I'd love to be paid at market rates for keeping the AgileVentures ecosystem running ...
