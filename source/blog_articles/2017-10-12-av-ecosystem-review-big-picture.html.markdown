@@ -32,7 +32,7 @@ and most of the rest on the level up your coding skills, and we have an overview
 
 And these four ads are all being served as part of a campaign that has multiple keywords associated with it, but particularly "code", "open source" and "[coding]":
 
-![](https://www.dropbox.com/s/xl4v308cwdqacia/Screenshot%202017-10-12%2010.15.17.png?dl=1)
+![](https://dl.dropbox.com/s/xl4v308cwdqacia/Screenshot%202017-10-12%2010.15.17.png?dl=1)
 
 The new adwords inteface is not making any of this much clearer.  According to Google Analytics a huge proportion of our click throughs are coming from India and we don't know why.  Is that just a reflection of India's large population being interested in Agile coding, or some settings artifact?  In analytics I can't even be sure if the majority of the Indian visitors are actually coming in through ads, or from some other source, and Adwords doesn't seem to let me see the location of where click throughs are coming through, frustrating.
 
