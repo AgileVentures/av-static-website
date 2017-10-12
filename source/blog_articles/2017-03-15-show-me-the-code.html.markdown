@@ -9,7 +9,7 @@ author: Sam Joseph
 
 Federico made a comment on one of my recent blogs:
 
-> code_in_blog == good
+> code\_in\_blog == good
 
 I wish I was coding more.  I am getting to do some code in the Premium mobbing sessions.  My productive coding efforts are snatched between meetings with me throwing up spikes to give myself bugs (in my feature branches) to fix and drive myself forward.  I've got quite excited about starting to code in Elixir.  Stephen Grider very kindly made his Udemy course available  for free to Premium Mob members, and it's super high quality.   It's what I would love to see more MOOCs evolving towards.  Stephen has all the code in his [repo on GitHub](https://github.com/StephenGrider/ElixirCode), where we can see code like this from his initial example Elixir app for playing Cards:
 
