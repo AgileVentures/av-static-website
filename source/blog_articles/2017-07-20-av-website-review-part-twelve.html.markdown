@@ -1,6 +1,13 @@
+---
+title: AV Website Review Part 12
+date: 2017-07-20
+tags: 
+author: Sam Joseph
+---
+
 So I'll be taking a blogging/reviewing break for my Japan trip - perhaps I can get up to date pushing out some old blogs.  Over the last couple of weeks of these "reviews" of the AV website (and associated ecosystem) I've managed to get some changes out to the main site.  I think it's early to be assessing the changes - that should probably be the first thing to do in September when I plan to restart this series under the more accurate title "ecosystem review".  The main changes I've enacted so far are getting a privacy statement linked up and reinstating email sign ups with a Google reCaptcha system to block the spambots signing up.
 
-I also simplified the "Getting Started" page and rewrote parts of the Premium page.  I can see there's lots more work to do there.  The premium plan overview page is still very text heavy, as are the individual Premium pages.  The events page is loading really slowly at the moment.  Six seconds is not good. New Relic shows that the slowness is a split between the index method in the controller and the index.html.erb template itself:
+I also simplified the "Getting Started" page and rewrote parts of the Premium page.  I can see there's lots more work to do there.  The Premium plan overview page is still very text heavy, as are the individual Premium pages.  The events page is loading really slowly at the moment.  Six seconds is not good. New Relic shows that the slowness is a split between the index method in the controller and the index.html.erb template itself:
 
 ![](https://dl.dropbox.com/s/pue0dkn4373lcbb/Screenshot%202017-07-20%2009.37.31.png)
 
