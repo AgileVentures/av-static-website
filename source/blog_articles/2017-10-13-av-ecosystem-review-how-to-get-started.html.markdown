@@ -32,11 +32,11 @@ So at least we can clearly see folks progressing along the funnel there, but wha
 
 So there are lots of things we could be doing here:
 
-a) replacing some text instructions with animations (e.g. how to say hello in Slack)
-b) adding more images throughout
-c) deciding on a clear goal state ("joining" a project, saying hello in Slack)
-d) dynamic interventions such as saving progress, or modifying the contents based on a selected project?
-e) allowing the user to search for project via tech stack
+a) replacing some text instructions with animations (e.g. how to say hello in Slack)  
+b) adding more images throughout  
+c) deciding on a clear goal state ("joining" a project, saying hello in Slack)  
+d) dynamic interventions such as saving progress, or modifying the contents based on a selected project?  
+e) allowing the user to search for project via tech stack  
 
 I also start to think if there's some way we could just drop folks in a fresh C9 instance with the project of their choice and a simple chore to work on?
 
@@ -44,5 +44,5 @@ Or would it be better to focus earlier in the flow on the landing page itself.  
 
 ![](https://dl.dropbox.com/s/78z9ugrvabo8f7h/Screenshot%202017-10-13%2010.44.57.png?dl=1)
 
-I'm sure there are a series of Rails caching operations that we could use to improve these, but tuning the current monolith while trying to work out what's happening with really slow feedback about whether site performance is improving does not fill me with excitement ... well I'll think about it over the weekend.  I guess next week I could spend the morning av ecosystem review blogs setting up a middleman site and seeing how easily I can re-create the current home page in it ...
+I'm sure there are a series of Rails caching operations that we could use to improve these, but tuning the current monolith while trying to work out what's happening with really slow feedback about whether site performance is improving does not fill me with excitement ... well I'll think about it over the weekend.  I guess next week I could spend the morning av ecosystem review blogs setting up a middleman site and seeing how easily I can re-create the current home page in it ... Or is there something I should tweak in getting started first?  Maybe just encouraging folks to click join on projects?
 
