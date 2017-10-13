@@ -27,4 +27,4 @@ Frustratingly I can't easily do comparisons in on the behaviour flow page in Goo
 
 Okay, I'll need to go through all this again tomorrow when I'm not jet-lagged ... apparently bounce rate is not the same as drop off:
 
-http://www.rankraiser.com/rankraiser/difference-between-google-bounce-rate-and-drop-offs/
+[http://www.rankraiser.com/rankraiser/difference-between-google-bounce-rate-and-drop-offs/](http://www.rankraiser.com/rankraiser/difference-between-google-bounce-rate-and-drop-offs/)
