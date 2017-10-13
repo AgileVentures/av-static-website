@@ -5,6 +5,8 @@ tags:
 author: Sam Joseph
 ---
 
+![ecosystem](/images/ecosystem.jpg)
+
 I'm back from my travels and it's time to get back to work, jet-lagged or not.  I was working on my travels but eschewed blogging and hangouts, as is my usual practice.  My plan now back is to keep focusing on the AgileVentures "ecosystem", by which I mean the website, Slack, our Social Media and all parts of how AgileVentures interacts with members.
 
 One thing I did manage to do while away was improve the performance on the events page, so it now loads in under two seconds rather than in more than five.  I think that's an important step forward.  I'm very pleased with the changes wrought from my reviews in July, reinstating the password based signup (using Google's ReCaptcha to fight spam bots), a "getting started" page that is shorter and emphasizes our key projects, and a more pointed Premium members page. 
@@ -17,7 +19,7 @@ There I notice that all my dropbox images are not showing up ... it looks like D
 
 Okay, so that took about five minutes and now I can see my first website review blog with images here:
 
-https://github.com/AgileVentures/av-static-website/blob/av_website_review_part_one_blog/source/blog_articles/2017-07-05-av-website-review-part-one.html.markdown
+[https://github.com/AgileVentures/av-static-website/blob/av\_website\_review\_part\_one\_blog/source/blog\_articles/2017-07-05-av-website-review-part-one.html.markdown](https://github.com/AgileVentures/av-static-website/blob/av_website_review_part_one_blog/source/blog_articles/2017-07-05-av-website-review-part-one.html.markdown)
 
 So the first thing I should be checking up on is what effect we had from the changes I made to the "Getting Started" page.  The drop-off from that page for the period Jul 3rd - Jul 31st 2017 is (222 vs 595) 37.3% of total traffic; compared to Jun 4th -Jul 2nd 2017 is (344 vs 500) 40.8% of total traffic, which is an improvement, but not conclusive.  That change could be due to seasonal or random fluctuations. If I compare with the same period last year (72 vs 156) 31.6% we se a lower dropoff rate, for a much smaller overall number of site visitors ...
 
