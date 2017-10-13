@@ -38,7 +38,7 @@ c) deciding on a clear goal state ("joining" a project, saying hello in Slack)
 d) dynamic interventions such as saving progress, or modifying the contents based on a selected project?  
 e) allowing the user to search for project via tech stack  
 
-I also start to think if there's some way we could just drop folks in a fresh C9 instance with the project of their choice and a simple chore to work on?
+I also start to think if there's some way we could just drop folks in a fresh C9 instance with the project of their choice and a simple chore to work on?  Or would folks be more engaged if a human from their selected project reaches out ...?
 
 Or would it be better to focus earlier in the flow on the landing page itself.  I also think about doing some landing pages in middleman that would be more performant and allow us to test getting the concept of AgileVentures across more strongly.  I'm encountering performance issues using the site.  According to New Relic it's our static pages in Visitors Controller and Documents Controller that are performing the worst:
 
