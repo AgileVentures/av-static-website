@@ -1,6 +1,6 @@
 ---
-title: AV EcoSystem Review Return
-date: 2017-08-24
+title: AV EcoSystem Review Bounce Drop
+date: 2017-08-25
 tags: 
 author: Sam Joseph
 ---
