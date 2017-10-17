@@ -19,8 +19,8 @@ Now no potential Premium member has complained about this, but then again you wo
 
 Also, there's now LetsEcrypt, which promises us the ability to generate SSL certs that can be used in tandem with the SSL endpoints that are now bundled with Heroku's paid plans.  We have to have the AV site servers on Heroku paid plans for resources and also to have them part of Heroku's group plan.  Maybe one day we can migrate to Dokku on Azure as part of a cost saving exercise ... we'll see how that goes with the AsynVoter project first.  In the meantime it seems sensible to get SSL all set up, and last week I managed to get it working on both the develop and staging servers.  I was initially distracted by the [letsencrypt-heroku](https://github.com/substrakt/letsencrypt-heroku) project, but that only works for certain domain hosting solutions.  However a couple of blog posts set me straight:
 
-* https://collectiveidea.com/blog/archives/2016/01/12/lets-encrypt-with-a-rails-app-on-heroku
-* https://medium.com/@franxyzxyz/setting-up-free-https-with-heroku-ssl-and-lets-encrypt-80cf6eac108e#.gx52z5rvt
+* [https://collectiveidea.com/blog/archives/2016/01/12/lets-encrypt-with-a-rails-app-on-heroku](https://collectiveidea.com/blog/archives/2016/01/12/lets-encrypt-with-a-rails-app-on-heroku)
+* [https://medium.com/@franxyzxyz/setting-up-free-https-with-heroku-ssl-and-lets-encrypt-80cf6eac108e#.gx52z5rvt](https://medium.com/@franxyzxyz/setting-up-free-https-with-heroku-ssl-and-lets-encrypt-80cf6eac108e#.gx52z5rvt)
 
 Even if I had to combine elements of both to get us sorted.  The process was to install a program called `certbot`:
 
@@ -57,9 +57,9 @@ and now I could deploy the locally generated keys via the Heroku CLI:
 $ sudo heroku certs:add /etc/letsencrypt/live/develop.agileventures.org/fullchain.pem /etc/letsencrypt/live/develop.agileventures.org/privkey.pem -r develop
 ```
 
-and we had SSL working!  There was more work though, as our Google and GitHub OAuth redirect URLs had to be updated to now refer to the HTTPS versions.  Once that was done, login and signup were working again, although I am slighltly suspicious that we may still encounter some problems.  Michael and I both experienced some issues on staging trying to log in, to get redirected to a sign up page indicating that our email already existed.  I have an intuition that previously generated OAuths may get invalidated and there may be something else we need to do.  I'm not clear how seriously this will affect production ... I can imagine that existing users may require resets.  I think the error message is a Devise one:
+and we had SSL working!  There was more work though, as our Google and GitHub OAuth redirect URLs had to be updated to now refer to the HTTPS versions.  Once that was done, login and signup were working again, although I am slightly suspicious that we may still encounter some problems.  Michael and I both experienced some issues on staging trying to log in, getting redirected to a sign up page indicating that our email already existed.  I have an intuition that previously generated OAuths may get invalidated and there may be something else we need to do.  I'm not clear how seriously this will affect production ... I can imagine that existing users may require resets.  I think the error message is a Devise one:
 
-![](https://www.dropbox.com/s/eb2b4453pjo8mpc/Screenshot%202017-03-20%2010.23.52.png?dl=1)
+![](https://dl.dropbox.com/s/eb2b4453pjo8mpc/Screenshot%202017-03-20%2010.23.52.png?dl=1)
 
 Looking at the code, it's not clear what set of circumstances causes that.  Just reviewing on staging, I see I can log in via GitHub, but if I try to log in using Google with my tansaku email then I get an "email already taken' message (with a redirect to sign up page) and if I try with my NeuroGrid email I get "csrf detected" first time around (nothing in the JS console), but then second time it works.  I guess I could be trying to wrap tests around this, but I doubt my ability to fully replicate the actual production instance and I'm just not sure how many others will experience this.  I held off deploying over the weekend - I guess I should ask more folks to try it out on staging ...
 
