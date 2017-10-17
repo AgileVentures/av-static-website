@@ -1,5 +1,5 @@
 ---
-title: AV EcoSystem Review: Yak Shaving
+title: AV EcoSystem Review Yak Shaving
 date: 2017-08-29
 tags: 
 author: Sam Joseph
