@@ -1,10 +1,10 @@
-Gablurgh ... full day yesterday ... slow start today.  Let's put the reviewing older posts and changes to the side for the moment and put some down some more changes to the "Getting Started" page that we can review again in a month to see the effect.  So right now we have the following steps in "Getting Started":
+Gablurgh ... full day yesterday ... slow start today.  Let's put the reviewing older posts and changes to the side for the moment and put down some more changes to the "Getting Started" page that we can review again in a month to see the effect.  So right now we have the following steps in "Getting Started":
 
 1. Find a project that interests you
 2. Learn how we communicate and coordinate projects
 3. Set up development environment
 4. Have a closer look at chosen projects documentation
-5. Join a standip
+5. Join a standup
 6. Start contributing
 7. (Optional) Start your own project
 
