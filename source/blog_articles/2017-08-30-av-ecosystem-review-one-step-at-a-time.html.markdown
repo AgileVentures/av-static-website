@@ -1,3 +1,12 @@
+---
+title: AV EcoSystem Review One Step at a Time
+date: 2017-08-30
+tags: 
+author: Sam Joseph
+---
+
+![one step duckling](/images/one_step_duckling.jpg)
+
 Gablurgh ... full day yesterday ... slow start today.  Let's put the reviewing older posts and changes to the side for the moment and put down some more changes to the "Getting Started" page that we can review again in a month to see the effect.  So right now we have the following steps in "Getting Started":
 
 1. Find a project that interests you
@@ -25,10 +34,10 @@ f) clear calls to action ...
 
 Still maybe the simplest thing is to create pages like 
 
-* https://www.agileventures.org/getting-started-2
-* https://www.agileventures.org/getting-started-3
-* https://www.agileventures.org/getting-started-4
+* [https://www.agileventures.org/getting-started-2](https://www.agileventures.org/getting-started-2)
+* [https://www.agileventures.org/getting-started-3](https://www.agileventures.org/getting-started-3)
+* [https://www.agileventures.org/getting-started-4](https://www.agileventures.org/getting-started-4)
 
-https://www.agileventures.org/getting-started-1 could be an alternate mockup that I could share with key members for feedback ... okay all done.  I don't think I'll release this live yet - let's see what folks in #av_community_talk say first ...
+[https://www.agileventures.org/getting-started-1](https://www.agileventures.org/getting-started-1) could be an alternate mockup that I could share with key members for feedback ... okay all done.  I don't think I'll release this live yet - let's see what folks in #av_community_talk say first ...
 
-https://www.agileventures.org/getting-started-1
+[https://www.agileventures.org/getting-started-1](https://www.agileventures.org/getting-started-1)
