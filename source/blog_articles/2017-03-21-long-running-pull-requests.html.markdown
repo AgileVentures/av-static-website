@@ -73,3 +73,5 @@ was that some other weird timeout unrelated?  CI was passing for Stella and Cess
 p.s. for Cucumber and RSpec I'd really like to adjust the output on CI so that it was progress dots for the passing tests, and full stack traces for the failure - I should investigate or open an [issue](https://github.com/cucumber/cucumber-ruby/issues/new)
 
 p.p.s. opened [one](https://github.com/cucumber/cucumber-ruby/issues/1094)
+
+p.p.p.s. just reviewing this I see the cucumber folks took notice and created a new formatter to do what I suggested [https://github.com/cucumber/cucumber-js/pull/866](https://github.com/cucumber/cucumber-js/pull/866)
