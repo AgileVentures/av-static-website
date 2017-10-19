@@ -7,7 +7,6 @@ author: Sam Joseph
 
 ![bounce rate](/images/bounce_rate.jpg)
 
-
 Right, time to work out the difference between "bounce rate" and "drop off".  Maybe it's the jetlag or just me getting old, but reading [this article](http://www.rankraiser.com/rankraiser/difference-between-google-bounce-rate-and-drop-offs/) I'm not immediately getting it.  Let's dig in:
 
 Bounce Rate is apparently the percentage of total visitors to a specific page in our site that saw only that page during their visit to our site.  Our getting started bounce rate was ~57% in July, and 80% in June, so that tells us that since we made the change at the beginning of July people have been hanging around a bit longer after visiting this page - at least more of them have been visiting at least one more page in our site.

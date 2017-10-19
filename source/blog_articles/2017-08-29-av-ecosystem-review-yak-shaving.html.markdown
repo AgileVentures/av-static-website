@@ -5,6 +5,8 @@ tags:
 author: Sam Joseph
 ---
 
+![yak](/images/yak.jpg)
+
 Okay, I think I'm coming out of the jet-lag - still not sure things are making sense though, and there's a lot of yak-shaving to get back to the workface.  I wrote two AV ecosystem review pieces on Thursday and Friday last week and I have to refer to them to remember what I worked out.  I was trying to review the changes I made to the "Getting Started" and Premium pages at the end of July.  A lot of that seems to be me poring over Google Analytics stats and being a little unclear about the difference between "bounce rate", "exit rate" and "drop off".  I'm starting to get clarity that the "bounce rate" only refers to "single visit sessions", and is only calculated for visits that start on the page in question.  We saw a fairly substantial improvement in the bounce rate from the previous month and the same period the previous year, implying that more people landing on the "Getting Started" page are sticking around on our site.  The exit rate was also improving.  The exit rate is the percentage for all page views of a page that were the last in the users session.  So in summary: 
 
 * Bounce rate - Of all the sessions that started on a page, how many did not click through to any other page in the site
