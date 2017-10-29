@@ -77,7 +77,7 @@ project_greeter_bot@0.0.0 /Users/tansaku/Documents/GitHub/AgileVentures/project_
   └── type-detect@4.0.3 
 ```
 
-So I searched for a `mocha init` commmand equivalent to `rspec --init` or `bundle init` and there is one, but it seems to generate a client side scaffold with html etc. so not what we need here.  Feels like there's room for a little automation there ... I've opened a [feature suggestion](https://github.com/mochajs/mocha/issues/2989) with Mocha, and in the meantime updated the projects package.json with:
+So I searched for a `mocha init` commmand equivalent to `rspec --init` or `bundle init` and there is one, but it seems to generate a client side scaffold with html etc.--so not what we need here.  Feels like there's room for a little automation there ... I've opened a [feature suggestion](https://github.com/mochajs/mocha/issues/2989) with Mocha, and in the meantime updated the projects package.json with:
 
 ```
   "scripts": {
@@ -137,9 +137,9 @@ var chai = require('chai');
 var expect = chai.expect;
 ```
 
-hmm, have I been throwing in a mix of Python/React syntax there? :-)  Okay, hopefully this pain point will help me remember - would be great to repeat every day for a few to nail it down - now lets' see if I can hook up the test to real code again.
+hmm, have I been throwing in a mix of Python/React syntax there? :-)  Okay, hopefully this pain point will help me remember - would be great to repeat every day for a few to nail it down - now let's see if I can hook up the test to real code again.
 
-Took a bit of a big bite here - moved all the js code into a lib dir, moved all the greetings text/variables to a `greetings.js` file, renamed the test files, made loads of things consts, updated package.json with `"start": "node lib/server.js"` and tried the following at the end of the `greetings.js` file in order for it to be pulled into to both test and `server.js`:
+Took a bit of a big bite here - moved all the js code into a lib dir, moved all the greetings text/variables to a `greetings.js` file, renamed the test files, made loads of things consts, updated package.json with `"start": "node lib/server.js"` and tried the following at the end of the `greetings.js` file in order for it to be pulled into both test and `server.js`:
 
 ```js
 module.export = greetings;
