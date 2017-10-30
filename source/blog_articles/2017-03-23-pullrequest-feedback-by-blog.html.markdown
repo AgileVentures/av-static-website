@@ -11,31 +11,12 @@ So in the blogs over the last two days I managed to get to the bottom of the pro
 
 Maybe I should have been opening another PR to fix up precisely that issue but I started by pulling down Marouen's "Post Volunteer Opportunities to DoIt" branch locally and re-running it with the caches in place - I opened a PR on that basis - but it went to my old tansaku fork. I really need to disconnect that.
 
-Then I got down to reviewing Marouen's PR, file by file, using the "compare with develop branch" feature in RubyMine, which is maybe a funny way to review, but well - start at the beginning.  I made the following notes as I worked through:
-
-* doit_volunteer_ops.js file being loaded on every page
-* doit_volunteer_ops.js hits local `/doit_organisations` end point but does nothing with result?
-* bootstrap datepicker being incorporated
-* DoitOrganisationsController providing us local? endpoint to new service `Doit::GetManagedOrganisations.call`
-* new DoitVolunteerOpsController to handle creation of new op on DoIt
-* VolunteerOpsController has check for whether to display publish button (could be in helper or separate method)
-* long running job PostToDoitJob
-* new model DoitTrace to store DoIt publication status (VolunteerOp has_one) (in db)
-* new model DoitVolunteerOp to store more data about doit op? (not in db - stored temporarily)
-* Doit::PostToDoit service to do posting
-* dropdown_list partial to allow for selection of doit orgs ...
-* doit_orgs index.js.erb - not sure how this fits in
-* new form for creating DoitVolunteerOps
-* volunteer ops show page broken up into more partials
-* sucker punch async job handling added
-* doit_volunteer ops nested in volop URL
-
-Marouen had a good summary in his PR description:
+Then I got down to reviewing Marouen's PR, file by file, using the "compare with develop branch" feature in RubyMine, which is maybe a funny way to review, but I needed to start somewhere. Marouen had a good summary in his PR description:
 
 * add new model for tracing published vol ops to Doit
 * add 2 services to interact with Doit API
 * add form object to manage posting to Doit
-* implement active_job with sucker_punch as backend to avoid extra cost from Heroku
+* implement `active_job` with `sucker_punch` as backend to avoid extra cost from Heroku
 
 but it took me going through the code, making my own notes, to really work out what was going on.  Then I ran the system locally to review how the UI looked:
 
