@@ -6,19 +6,19 @@ What was really simple this week was setting up slack repeating reminders such t
 /remind #localsupport to prepare for weekly meeting @here in 30 minutes at 4:00pm every Thursday 
 ```
 
-The exciting thing with the new fixed URL videoconferencing from Jitsy is that the meeting ping itself can be set as a recurriung reminder:
+The exciting thing with the new fixed URL videoconferencing from Jitsi is that the meeting ping, itself, can be set as a recurriung reminder:
 
 ```
-/remind #localsupport to join the weekly meeting @here in http://meet.jit.sy at 4:30pm every Thursday 
+/remind #localsupport to join the weekly meeting @here in http://meet.jit.si at 4:30pm every Thursday 
 ```
 
-I'm thinking to make my participation in the project meetings a bi-weekly thing so that I can get private project work done on the "off-weeks" so to speak.  My only complaint is that the reminders aren't directly editable. However they are easily listable and deletable.  I also see that they can be controlled by API:
+I'm thinking to make my participation in the project meetings a biweekly thing, so that I can get private project work done on the "off-weeks" so to speak.  My only complaint is that the reminders aren't directly editable. However they are easily listable and deletable.  I also see that they can be controlled by API:
 
 https://api.slack.com/methods/reminders.list
 
-That makes me think we could possible take the agile-bot out of the equation by simply having our main site hit slack directly to set reminders based on events created or updated through the rails interface ...  By having set up the LocalSupport meeting to rely on a permanent jitsy url we take the need for a really experienced scrum master to start the videoconference out of the equation, and in principle anyone can stream the recording - although that is more fiddly in JitSy.  It does seem like JitSy performance might not be as good as hangouts, particularly since they're offering their new low latency setting, but I guess we should experiment with our own JitSy hosting on Azure.
+That makes me think we could possibly take the agile-bot out of the equation by simply having our main site hit slack directly to set reminders based on events created or updated through the rails interface ...  By having set up the LocalSupport meeting to rely on a permanent Jitsi url, we take the need for a really experienced scrum master to start the videoconference out of the equation, and in principle anyone can stream the recording - although that is more fiddly in Jitsi.  It does seem like Jitsi performance might not be as good as Hangouts, particularly since they're offering their new low latency setting, but I guess we should experiment with our own Jitsi hosting on Azure.
 
-So that's all very well for maintaining the run of existing projects, but that's not going to immediately help with getting more folks involved in the greeter bots (or other new projects), or make them greeter bots seem a little more friendly.  Maybe I would be better off labelling them specifically as bots.  For the main project greeter if I don't have the message come from me, then I don't get to see the response that people make to the bot.  In the group channels, it's kind of weird to have an automated message from me when I'm inviting someone in for a vote.  What I really want to move towards is some kind of drip campaign that follows up with people who've joined project channels (and our community) to ask them if they need help and support.  I notice that Slack follows up with multiple emails after the fact when you've been invited to a Slack community, presumably to maximize the chances of getting new users into Slack.
+So that's all very well for maintaining the run of existing projects, but that's not going to immediately help with getting more folks involved in the greeter bots (or other new projects), or make the greeter bots seem a little more friendly.  Maybe I would be better off labelling them specifically as bots.  For the main project greeter, if I don't have the message come from me, then I don't get to see the response that people make to the bot.  In the group channels, it's kind of weird to have an automated message from me when I'm inviting someone in for a vote.  What I really want to move towards is some kind of drip campaign that follows up with people who've joined project channels (and our community) to ask them if they need help and support.  I notice that Slack follows up with multiple emails after the fact when you've been invited to a Slack community, presumably to maximize the chances of getting new users into Slack.
 
 For the main greeter bot I've got four little changes to tick off:
 
