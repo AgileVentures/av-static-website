@@ -7,7 +7,7 @@ author: Sam Joseph
 
 Argh, so I got distracted by Slack and blogging and twitter and even though I sat down at the computer at 9am it's 10am.  At least I got a few important emails and things out of the way (I think), but so after making a slew of changes to the Slack greeter bots, I feel I can't put off adding test frameworks any longer.  There's some bugs going out that I can't catch with simple automated tests (the way messages get formatted in a real slack instance), but I've definitely wasted a little time on some silly bugs that automated tests would have caught.  In the meantime I can see that the new changes to the syntax for the main greeter bot are all in place:
 
-![](https://user-images.githubusercontent.com/30216/30053660-798a6e8c-9221-11e7-927d-ea20f462cc55.png))
+![](https://user-images.githubusercontent.com/30216/30053660-798a6e8c-9221-11e7-927d-ea20f462cc55.png)
 
 and similarly for usernames in the project greeter bot:
 
