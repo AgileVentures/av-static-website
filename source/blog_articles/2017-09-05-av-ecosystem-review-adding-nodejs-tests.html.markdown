@@ -100,7 +100,7 @@ and that works:
 
 I know how to do this - why was I hesitating? :-) But so now there's not much to test in this project yet, at least not without some sophisticated mocking, which I'll leave for later.  Let me at least check some trivial thing about the message being sent with the following code:
 
-```
+```js
 var chai = require('chai');
 var expect = chai.expect;
 
