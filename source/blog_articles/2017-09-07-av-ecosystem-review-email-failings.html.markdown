@@ -1,3 +1,10 @@
+---
+title: AV EcoSystem Review Email Failings
+date: 2017-09-07
+tags: 
+author: Sam Joseph
+---
+
 So I think the main bleed in the AV ecosystem may now be some of the problems we are having with sending emails and them ending up in spam filters.  Hold that thought for a moment and I'll just do my node/mocha/chai [athletic rep for the morning](https://gist.github.com/tansaku/718547c89be1ef216dda4e973ea67075)
 
 I guess I can afford to do that for a few mornings in a row and start exploring where I can speed up ..., but back to our email issues.  So we sent out 10 emails with a special offer (from support@agileventures.org) last week and as far as I can tell, every single one ended up in spam.  Annoyingly I have to go to slack to grab some info about it, but there's not too much to distract me there today, phew.  So one person who got the email in their spam filter reported that they saw this message from Google:
