@@ -28,7 +28,7 @@ We also recommend the following:
 * Publish a DMARC policy.
 ````
 
-Now one thing I did do with these 10 message was adjust the From address to be `support@agileventures.org` which Thunderbird allows me to do, but maybe that triggered Gmail's spam filter.  That said, I've had problems just sending from sam@agileventures.org as well, so can that be the whole story ...
+Now one thing I did do with these 10 message was adjust the From address to be `support@agileventures.org` which Thunderbird allows me to do, but maybe that triggered Gmail's spam filter.  That said, I've had problems just sending from sam@agileventures.org as well, so can that be the whole story? ...
 
 The hotmail failures I have had are like the following:
 
