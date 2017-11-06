@@ -5,7 +5,7 @@ tags:
 author: Sam Joseph
 ---
 
-![fix(../images/fix.png)
+![fix](../images/fix.png)
 
 So, following my blog and email of yesterday I got the following response from Gandi:
 
