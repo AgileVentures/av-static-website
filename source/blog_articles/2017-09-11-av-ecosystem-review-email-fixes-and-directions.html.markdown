@@ -1,3 +1,12 @@
+---
+title: AV EcoSystem Review Email Fixes and Directions
+date: 2017-09-08
+tags: 
+author: Sam Joseph
+---
+
+![directions](../images/directions.png)
+
 So I'm conflicted - what direction next?  On the table are:
 
 1) review the process of people coming in from adwords
@@ -64,7 +73,7 @@ So it's almost time to test the email, but maybe time for a [quick node test rep
 
 ![](../images/Screenshot%202017-09-11%2009.25.55.png)
 
-which I guess is telling me it's working?  I can also send an email from my account that was previously marked as spam ... and that's still coming through normally, so I guess that's sorted?  We'll see what happens with Elastic Email ... I guess that's enough progress for one day.  If I'm super lucky, I'll get back the easy image embed from dropbox/GitHub that'll make reviewing everything else a lot easier ...
+which I guess is telling me it's working?  I can also send an email from my account that was previously marked as spam ... and that's still coming through normally, so I guess that's sorted?  We'll see what happens with Elastic Email ... I guess that's enough progress for one day.  If I'm super lucky, I'll get back the easy image embed functionality from dropbox/GitHub that'll make reviewing everything else a lot easier ...
 
 
 
