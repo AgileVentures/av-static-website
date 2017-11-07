@@ -1,6 +1,6 @@
 ---
 title: AV EcoSystem Review Email Fixes and Directions
-date: 2017-09-08
+date: 2017-09-11
 tags: 
 author: Sam Joseph
 ---
