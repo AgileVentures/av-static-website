@@ -9,11 +9,11 @@ author: Sam Joseph
 
 So I'm conflicted - what direction next?  On the table are:
 
-1) review the process of people coming in from adwords
-2) fix the email SPF setting
-3) more work on greeter bots
-4) search for other areas of ecosystem that are blocked up
-5) preparing that video for dropbox to debug github image embeds
+1) review the process of people coming in from adwords  
+2) fix the email SPF setting  
+3) more work on greeter bots  
+4) search for other areas of ecosystem that are blocked up  
+5) preparing that video for dropbox to debug github image embeds  
 
 I finally managed to see one of our adverts that Lara shared:
 

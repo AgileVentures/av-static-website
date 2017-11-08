@@ -5,13 +5,15 @@ tags:
 author: Sam Joseph
 ---
 
+![whats next](../images/whats_next.jpg)
+
 So I've looked back at my list from yesterday as I tried to work out how to start the week:
 
-1) review the process of people coming in from adwords
-2) fix the email SPF setting
-3) more work on greeter bots
-4) search for other areas of ecosystem that are blocked up
-5) preparing that video for dropbox to debug github image embeds
+1) review the process of people coming in from adwords  
+2) fix the email SPF setting  
+3) more work on greeter bots  
+4) search for other areas of ecosystem that are blocked up  
+5) preparing that video for dropbox to debug github image embeds  
 
 It's looking like we've fixed the email SPF setting (thanks Federico!) and I've submitted the video to dropbox about their links not working in Github and Pivotal markdown, but they've not replied yet (checking the email sidetracked me while I unsubscribed from five things), so no joy on that getting fixed yet.  It might be procrastination, but I think I'll put off reviewing people flowing into the site for a week to see if I can get my easy  "insert-screenshot" functionality back.  I really want to put the new community-wide code of conduct into the website and the greeter bots, but the community is discussing it and so it might be good to leave that a couple of days (but no longer).  Thinking about important areas of the ecosystem, I've got hanging items in terms of WebSiteOne.  I've got a slew of content tickets relating to Premium that have been hanging around for ages, and I said in last Friday's WSO meeting that I'd take on the multiple source repository task.
 
