@@ -20,7 +20,7 @@ Branch 1750_client_type set up to track remote branch 1750_client_type from orig
 Switched to a new branch '1750_client_type'
 ```
 
-I guess part of me leans on I should be leaving this for Matt, however I think I have to put the project and the wider community first here.  Perhaps my comments/suggestions were too pinickity and that put Matt off.  Perhaps I was being remiss in not just merging it earlier - the build was green, but I'm also the devops person who has to pick up the pieces if it goes wrong.  I had Praveen test his own new feature and bug fix on staging before deploying code yesterday - that seems like a good plan, but I can't put pressure on Matt on this one.  
+I guess part of me leans on I should be leaving this for Matt. However, I think I have to put the project and the wider community first here.  Perhaps my comments/suggestions were too pernickety and that put Matt off.  Perhaps I was being remiss in not just merging it earlier - the build was green, but I'm also the devops person who has to pick up the pieces if it goes wrong.  I had Praveen test his own new feature and bug fix on staging before deploying code yesterday - that seems like a good plan, but I can't put pressure on Matt on this one.  
 
 The two things I was asking Matt for were to pull the motivation for this feature into a separate feature file, although I didn't do that in the opportunities link addition.  There was also checking the rest of the system about whether the introduction of a new event type would clash with other areas - doing a search over the codebase I see we do have checks for the two previous types in Twitter notifications, but we've turned those off, so that's no biggy.  There's something in the EventHelper module:
 
@@ -40,7 +40,7 @@ module EventHelper
   end 
 ```
 
-but all these places are looking like they have sensible defaults, so I think due-dilligence is done.  The acceptance test however is only checking that if a client meeting exists that it will shown correctly, it doesn't check that a client meeting can actually be created.  So I think it's time to pull out the feature I was thinking off.  Here's my first pass:
+but all these places are looking like they have sensible defaults, so I think due dilligence is done.  The acceptance test, however, is only checking that if a client meeting exists that it will be shown correctly. It doesn't check that a client meeting can actually be created.  So I think it's time to pull out the feature I was thinking of.  Here's my first pass:
 
 ```gherkin
 @vcr
@@ -208,6 +208,6 @@ Failing Scenarios:
 cucumber features/documents.feature:130 # Scenario: A user can insert an image
 ```
 
-I could add that to the exceptions, but I that approach is dangerous as it's easy to forget which tests are omitted in CI - Jon's approach on LocalSupport to re-run failing tests seems more sensible.  I'd also love to get it so that we only output the full details for failing tests, which would also be hit by Jon's approach.  I'll add that chore to the WSO issues - actually I find I already [have one](https://github.com/AgileVentures/WebsiteOne/issues/1803).
+I could add that to the exceptions, but that approach is dangerous as it's easy to forget which tests are omitted in CI - Jon's approach on LocalSupport to re-run failing tests seems more sensible.  I'd also love to get it so that we only output the full details for failing tests, which would also be hit by Jon's approach.  I'll add that chore to the WSO issues - actually I find I already [have one](https://github.com/AgileVentures/WebsiteOne/issues/1803).
 
 Maybe a vote on that is in order ...
