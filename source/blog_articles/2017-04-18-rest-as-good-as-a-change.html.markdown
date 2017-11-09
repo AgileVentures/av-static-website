@@ -19,7 +19,7 @@ I really did appreciate having a Monday without any meetings - it gave me time t
   * [ ] apply for others in list
 
 * [ ] generate next kind of solution for NHS
-  - [ ] get as much of their drupal site as we can --> Communications contact (phone? change manager?)
+  - [ ] get as much of their Drupal site as we can --> Communications contact (phone? change manager?)
   - [ ] we need to move towards a new round of testing
   - [ ] finish writing up/distributing notes
   - [ ] legal support --> business plan?
