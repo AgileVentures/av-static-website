@@ -43,7 +43,7 @@ To http://github.com/AgileVentures/WebsiteOne
    5c998b01..7309fb7d  staging -> staging
 ```
 
-So I'll souble check on my proposed changes to the Premium page in the marketing meeting today. I've managed a little run down the "in progress" tickets checking in with what others are doing, and given that all the other changes to Premium pages are dependent on feedback on the currently proposed change to the Premium page, I think I can allow myself to take a stab at the "multiple source repositiory" ticket:
+So I'll double check on my proposed changes to the Premium page in the marketing meeting today. I've managed a little run down the "in progress" tickets, checking in with what others are doing, and given that all the other changes to Premium pages are dependent on feedback on the currently proposed change to the Premium page, I think I can allow myself to take a stab at the "multiple source repositiory" ticket:
 
 https://github.com/AgileVentures/WebsiteOne/issues/761
 
@@ -63,15 +63,15 @@ and I moved the project scenarios round, and did a first pass at a scenario to c
     And I fill in "Issue Tracker link" with "http://www.waffle.com/new"
     And I select "Status" to "Active"
     And I click the "Submit" button
-    Then I should be on the "Show" page for project "multiple repo projec"
+    Then I should be on the "Show" page for project "multiple repo project"
     And I should see "Project was successfully created."
     And I should see:
       | Text          |
       | "multiple repo project       |
       | has lots of code |
       | ACTIVE        |
-    And I should see a link to "multiple repo projec" on github
-    And I should see a link to "multiple repo projec" on Pivotal Tracker
+    And I should see a link to "multiple repo project" on github
+    And I should see a link to "multiple repo project" on Pivotal Tracker
 ```
 
 and I found a set of links on dynamically adding extra fields in Rails:
