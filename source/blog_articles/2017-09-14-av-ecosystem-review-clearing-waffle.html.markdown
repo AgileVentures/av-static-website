@@ -1,6 +1,15 @@
+---
+title: AV EcoSystem Review Clearing Waffle
+date: 2017-09-14
+tags: 
+author: Sam Joseph
+---
+
+![waffle](../images/waffle.jpg)
+
 So I woke at 4am this morning and couldn't go back to sleep.  I lay with my thoughts for 90 minutes before I couldn't bear it any longer and put on audio comedy from Christopher Titus.  Painful thoughts about kids football and tangled electron apps.  Now I'm having trouble focusing on the keyboard, but want to enjoy having cleared the "Please Check" column of the WebSiteOne waffle board yesterday:
 
-![](https://www.dropbox.com/s/x9br4bz8lefcz2l/Screenshot%202017-09-14%2009.27.24.png?dl=1)
+![](https://dl.dropbox.com/s/x9br4bz8lefcz2l/Screenshot%202017-09-14%2009.27.24.png?dl=1)
 
 I've just tested the two merged chunks of code on develop and they're working so I'll move them to staging:
 
@@ -45,7 +54,7 @@ To http://github.com/AgileVentures/WebsiteOne
 
 So I'll double check on my proposed changes to the Premium page in the marketing meeting today. I've managed a little run down the "in progress" tickets, checking in with what others are doing, and given that all the other changes to Premium pages are dependent on feedback on the currently proposed change to the Premium page, I think I can allow myself to take a stab at the "multiple source repositiory" ticket:
 
-https://github.com/AgileVentures/WebsiteOne/issues/761
+[https://github.com/AgileVentures/WebsiteOne/issues/761](https://github.com/AgileVentures/WebsiteOne/issues/761)
 
 and I moved the project scenarios round, and did a first pass at a scenario to cover multiple repo submission:
 
@@ -76,10 +85,10 @@ and I moved the project scenarios round, and did a first pass at a scenario to c
 
 and I found a set of links on dynamically adding extra fields in Rails:
 
-* https://stackoverflow.com/questions/42540858/add-more-fields-to-form-dynamically-in-rails
-* http://jyrkis-blogs.blogspot.co.uk/2014/06/adding-fields-on-fly-with-ruby-on-rails.html
-* https://stackoverflow.com/questions/25588101/rails-fields-for-and-javascript-to-dynamically-add-and-remove-fields-in-a-form
-* https://stackoverflow.com/questions/35185689/rails-4-complex-forms-and-nested-attributes
+* [https://stackoverflow.com/questions/42540858/add-more-fields-to-form-dynamically-in-rails](https://stackoverflow.com/questions/42540858/add-more-fields-to-form-dynamically-in-rails)
+* [http://jyrkis-blogs.blogspot.co.uk/2014/06/adding-fields-on-fly-with-ruby-on-rails.html](http://jyrkis-blogs.blogspot.co.uk/2014/06/adding-fields-on-fly-with-ruby-on-rails.html)
+* [https://stackoverflow.com/questions/25588101/rails-fields-for-and-javascript-to-dynamically-add-and-remove-fields-in-a-form](https://stackoverflow.com/questions/25588101/rails-fields-for-and-javascript-to-dynamically-add-and-remove-fields-in-a-form)
+* [https://stackoverflow.com/questions/35185689/rails-4-complex-forms-and-nested-attributes](https://stackoverflow.com/questions/35185689/rails-4-complex-forms-and-nested-attributes)
 
 Test is ugly but will get into that and the implementation tommorrow.  In the meantime staging deployed - features are working there and I'm pushing to production.  Clear up, clear up, clear up ...
 
