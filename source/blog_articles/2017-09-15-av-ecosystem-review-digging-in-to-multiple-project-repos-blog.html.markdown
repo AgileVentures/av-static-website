@@ -1,3 +1,12 @@
+---
+title: AV EcoSystem Review Digging into the Multiple Project Repos
+date: 2017-09-14
+tags: 
+author: Sam Joseph
+---
+
+![digging](../images/digging.jpg)
+
 So, struggling through tears for my father (just listened to a >Code episode on mental health) I'm bringing myself to focus on continuing this user rerequest feature about multiple repos for AV projects.  Let's warm up by making sure all our local code is up to date:
 
 ```
@@ -20,9 +29,9 @@ From http://github.com/AgileVentures/WebsiteOne
 Already up-to-date.
 ```
 
-that process forced me to look at the waffle board, where I'm seeing that I have the changes to the premium page in the "please check" column and that got approved by the marketing folks yesterday, so I have a chance to get that completed ... and it's done.  I'm glad I did save a copy of the html text in source control as I think I blew away all record of it on the staging server yesterday when I cloned production to staging, phew.  So that's deployed and the "please check" column is cleared.
+that process forced me to look at the waffle board, where I'm seeing that I have the changes to the Premium page in the "please check" column and that got approved by the marketing folks yesterday, so I have a chance to get that completed ... and it's done.  I'm glad I did save a copy of the html text in source control as I think I blew away all record of it on the staging server yesterday when I cloned production to staging, phew.  So that's deployed and the "please check" column is cleared.
 
-Now I don't have much time for working on the multiple repo feature, but perhaps I can get some kind of interface spike to allow the addition of extra form fields, and I managed to do just that.  I found the right and bashed around with JavaScript for a bit, and I've not got the next step of the cucumber test passing.
+Now I don't have much time for working on the multiple repo feature, but perhaps I can get some kind of interface spike to allow the addition of extra form fields, and I managed to do just that.  I found the right place and bashed around with JavaScript for a bit, and I've now got the next step of the cucumber test passing.
 
 The code is super messy, but I've used [jQuery `insertafter`](http://api.jquery.com/insertafter/) to give me the new form fields when I click an "Add repo" button:
 
@@ -45,7 +54,6 @@ WebsiteOne.define('Projects', function() {
   }
 });
 
-
 $(document).on('ready page:load', WebsiteOne.Projects.setupAddRepoButton)
 ```
 
@@ -53,8 +61,8 @@ I'm completely unsure about these `WebsiteOne.define('Projects'` things we have 
 
 ![](https://www.dropbox.com/s/yxf3kviciw5n4n2/Screenshot%202017-09-15%2010.14.00.png?dl=1)
 
-Although it feels like I'm handrolling javascript here for a feature that must have been built over and over again.  Aha https://github.com/ncri/nested_form_fields well perhaps I should have a go with that then :-)  Still good to refresh my understanding of this wiring ...
+Although it feels like I'm handrolling javascript here for a feature that must have been built over and over again.  Aha [https://github.com/ncri/nested_form_fields](https://github.com/ncri/nested_form_fields) well perhaps I should have a go with that then :-)  Still good to refresh my understanding of this wiring ...
 
-There's also https://github.com/ryanb/nested_form but that hasn't been updated since 2013 ...
+There's also [https://github.com/ryanb/nested_form](https://github.com/ryanb/nested_form) but that hasn't been updated since 2013 ...
 
 
