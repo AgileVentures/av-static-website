@@ -1,6 +1,15 @@
+---
+title: AV EcoSystem Review Inspecting Gems
+date: 2017-09-18
+tags: 
+author: Sam Joseph
+---
+
+![gems](../images/gems.jpg)
+
 So my AV ecosystem reviews are getting further afield.  Here I am inspecting different gems for the purpose of completing a feature to support multiple project repositories.  What are the goals of this ongoing review? It's to focus my blogging power onto making the AV ecosystem as welcoming and easy to use as possible.  That's the flow of people from external sources to our website, to our Slack instance and to contributing to the projects we have hosted on GitHub.  This feature is a response to a request from a project maintainer, and that's a stakeholder that we might have overlooked, so I'll see what giving them focus can do.
 
-Last Friday after spiking an interface component for dynamic form fields in rails, I found some gems that might provide a more coherent approach.  https://github.com/ncri/nested_form_fields is my current lead candidate.  243 stars suggests it has some popularity and I can see that it was updated as recently as five days ago.  There's also https://github.com/ryanb/nested_form with 1,769 stars, but hasn't been updaed in 4 years.  Another [quick search](https://www.google.co.uk/search?q=gems+rails+nested+form) shows me there's also https://github.com/nathanvda/cocoon with 2,445 stars and was updated as recently as 3 days ago.  Glad I did that search, or I might not have found this other important contender which looks like the field leader at the moment.  Let's try it out - following the README instructions on how to install ...
+Last Friday after spiking an interface component for dynamic form fields in rails, I found some gems that might provide a more coherent approach.  [https://github.com/ncri/nested_form_fields](https://github.com/ncri/nested_form_fields) is my current lead candidate.  243 stars suggests it has some popularity and I can see that it was updated as recently as five days ago.  There's also [https://github.com/ryanb/nested_form](https://github.com/ryanb/nested_form) with 1,769 stars, but hasn't been updated in 4 years.  Another [quick search](https://www.google.co.uk/search?q=gems+rails+nested+form) shows me there's also [https://github.com/nathanvda/cocoon](https://github.com/nathanvda/cocoon) with 2,445 stars and was updated as recently as 3 days ago.  Glad I did that search, or I might not have found this other important contender which looks like the field leader at the moment.  Let's try it out - following the README instructions on how to install ...
 
 Using Cocoon requires the nested models that we haven't set up yet, and then has options for using Rails Formtastic, SimpleForm or Standard Rails forms.  I'm tempted to go for standard Rails forms, since I don't want to take on too much at once.  I'll start with the migration, I guess, to pull the github_url out of the project and into a separate table ...
 
@@ -76,7 +85,7 @@ and the partial:
 
 and after a few misteps back and forth to add the correct references to the model/migration:
 
-```
+```rb
 class CreateSourceRepositories < ActiveRecord::Migration
   def change
     create_table :source_repositories do |t|
@@ -92,11 +101,11 @@ end
 
 I was rewarded with seeing the boiler plate form allowing me to both add and remove source repositories:
 
-![](https://www.dropbox.com/s/vy7u9shkciiljc7/Screenshot%202017-09-18%2009.53.22.png?dl=1)
+![](https://dl.dropbox.com/s/vy7u9shkciiljc7/Screenshot%202017-09-18%2009.53.22.png?dl=1)
 
-Hopefully a bit of cleanup and formatting and this will look nice and have more functionality that I was able to immediately hand-roll.  I could probably have got removing the dynamic fields working in the same time it took me to get proof of concept on this gem, but hopefully our system will be less suprising to new developers who've used this gem on other projects, and we'll potentially get the benefits of upgrades and fixes to the gem.
+Hopefully a bit of cleanup and formatting and this will look nice and have more functionality that I was able to immediately hand-roll.  I could probably have implemented dynamic removal of form fields in the same time it took me to get proof of concept on this gem.  However using this gem will hopefully make our system less suprising to new developers who might have seen this gem on other projects, and we'll potentially get the benefits of upgrades and fixes to the gem itself.
 
-Of course, despite getting the interface working, the repository text that I added was not actually saved as such, but I hadn't got that working in my own hand-rolled version either :-)
+Of course, despite getting the interface working, the repository datat that I inputted was not actually saved to the database as such, but then I hadn't got that part working in my own hand-rolled version either :-)
 
 I can see the data being passed back:
 
@@ -120,7 +129,7 @@ I was about to say that I'd leave fixing that till tommorrow, but I had a quick 
   end
 ```
 
-We need to specify the nested required attributes.  Thanks [Stack Overflow](https://stackoverflow.com/questions/15919761/rails-4-nested-attributes-unpermitted-parameters)!
+We need to specify the nested required attributes.  We are now saving our new repo information to the database thanks to [Stack Overflow](https://stackoverflow.com/questions/15919761/rails-4-nested-attributes-unpermitted-parameters)!
 
 
 
