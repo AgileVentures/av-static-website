@@ -7,9 +7,9 @@ author: Sam Joseph
 
 ![big push](/images/big_push.jpg)
 
-Over the weekend I spent a good couple of hours shutting down all the different browser tabs I had open (about 70) and adding relevant links to my action plan.  I got briefly distracted updating the Wikipedia pages for Social Prescribing, but that felt good to get done, and ultimately I was able to reboot my computer before doing a Premium pairing on EventManager with Marian, where we managed to tinker with the existing pull request. We had to change the styling on the event when it went live.  We managed to use an html data-attribute so that the styling and display of the event live status was always managed by JavaScript ... Would love to pull the code into the blog, but in the meantime check out the [PR](https://github.com/AgileVentures/EventManager/pull/27).
+Over the weekend I spent a good couple of hours shutting down all the different browser tabs I had open (about 70) and adding relevant links to my action plan.  I got briefly distracted updating the Wikipedia pages for Social Prescribing, but that felt good to get done, and ultimately I was able to reboot my computer before doing a Premium pairing on EventManager with Marian, where we managed to tinker with an existing pull request. We had to change the styling on the event when it went live.  We managed to use an html data-attribute so that the styling and display of the event live status was always managed by JavaScript ... Would love to pull the code into the blog, but in the meantime check out the [PR](https://github.com/AgileVentures/EventManager/pull/27).
 
-Then it was an early Monday start to get down to NHS head offices to meet up with new and outgoing change managers.  It was the outgoing change manager's last day, so important to catch them to say goodbye and thank them for the work they'd done so far.  On the way in on the train I sketched an agenda for the meeting:
+Then it was an early Monday start to get down to NHS head offices to meet up with new and outgoing change managers.  It was the outgoing change manager's last day, so I felt it was important to catch them to say goodbye and thank them for the work they'd done so far.  On the way in on the train I sketched an agenda for the meeting:
 
 * Asking how things were going
 * Double checking on what success looked like
@@ -23,7 +23,7 @@ We talked about the timeline, the communication strategy options, and setting up
 
 We also sat down with team lead, to check in that everything was solid.  Sounds like the conference they wants to present the system at, on May 18th, is a big deal, with VIPs etc. and they'll want to do a live demo if possible ...
 
-I was glad that I asked the new change manager about how things were going generally as I heard about some of the other HLP activities, including that they were tendering for a social prescribing service to be set up in collaboration with a CCG.  I had assumed that HLP's activities were limited to researching social prescribing, rather than taking an active lead on setting it up, so that was good to know. 
+I was glad that I asked the new change manager about how things were going generally as I heard about some of the other HLP activities, including that they were tendering for a Social Prescribing service to be set up in collaboration with a CCG.  I had assumed that HLP's activities were limited to researching social prescribing, rather than taking an active lead on setting it up, so that was good to know. 
 
 It all left me with a good set of action items:
 
