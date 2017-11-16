@@ -1,8 +1,17 @@
+---
+title: AV EcoSystem Review Gem Polishing
+date: 2017-09-19
+tags: 
+author: Sam Joseph
+---
+
+![diamond polisher](../images/diamond_polisher.jpg)
+
 So I'm on the train into london for a meeting with the NHS, but unlike in my last year of blogging it's not time to agonize about how everything's going, but time to focus on finishing up this feature for multiple project repositories.  Yesterday I checked that I could get the basic functionality that we need using the [Cocoon gem](https://github.com/nathanvda/cocoon).
 
 Now I need to hook it up to the acceptance tests, consider whether we need unit tests, and work on the styling of the form.  A bit of kicking around with CSS and I got it to look like this:
 
-![](Screenshot 2017-09-19 09.41.43.png)
+![](https://dl.dropbox.com/s/ye8fwrjwksuntil/Screenshot%202017-09-19%2009.41.43.png?dl=0)
 
 Now to get the acceptance test working the first issue I have is that I've removed the field that we used to use for adding GitHub links, so the test fails to find it, and still fails to find it even after I rename the field ...
 
@@ -32,13 +41,13 @@ Feature: Create projects
 
 The actual name of the field is now:
 
-```
+```html
 project[source_repositories_attributes][0][url]
 ```
 
 Strangely despite having capitalized the H in GitHub, the label is rendered in the page as follows:
 
-```
+```html
 <label for="project_source_repositories_attributes_0_GitHub Link">Github link</label>
 ```
 
@@ -56,7 +65,7 @@ that's from:
 
 For some reason it's being downcased? Well I'll just go with the downcase then.  Hmm, I guess I'm restricted as to how I use the label method on the Rails form.  I thought I could just replace `:url` with the text that I wanted, but no go.  I switch back to url and try to fill in the field "Url", but no and also no joy for `project[source_repositories_attributes][0][url]` or `project_source_repositories_attributes_0_url`.
 
-What I can see when I debug and inspect the html that capybara is seeing is that even though I have JavaScript enabled, it does not seem like the dynamic form fields are being created.  Instead I see this:
+What I can see when I debug and inspect the HTML that capybara is seeing is that even though I have JavaScript enabled, it does not seem like the dynamic form fields are being created.  Instead I see this:
 
 ```html
 <div class=\"links form-group\">
@@ -82,10 +91,9 @@ which looks like the raw HTML that Cocoon delivers before JavaScript adjusts it.
 ```
 and leaves me wondering if there is some way to have the different fields be numbered 1, 2, 3 etc. That would make the Cucumber/Capybara testing easier and it looks like there might be an approach that does that here:
 
-https://github.com/nathanvda/cocoon/issues/374
+[https://github.com/nathanvda/cocoon/issues/374](https://github.com/nathanvda/cocoon/issues/374)
 
-Something for tomorrow ...
-
+Perhaps I can use that to fix this tomorrow ...
 
 
 
