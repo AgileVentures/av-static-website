@@ -1,4 +1,4 @@
-So I'm on the train into london for a meeting with the NHS, but unlike in my last year of blogging it's not time to agonize about how everything's going, but time to focus on finishing up this feature for project multiple repositories.  Yesterday I checked that I could get the basic functionality that we need using the [Cocoon gem](https://github.com/nathanvda/cocoon).
+So I'm on the train into london for a meeting with the NHS, but unlike in my last year of blogging it's not time to agonize about how everything's going, but time to focus on finishing up this feature for multiple project repositories.  Yesterday I checked that I could get the basic functionality that we need using the [Cocoon gem](https://github.com/nathanvda/cocoon).
 
 Now I need to hook it up to the acceptance tests, consider whether we need unit tests, and work on the styling of the form.  A bit of kicking around with CSS and I got it to look like this:
 
@@ -72,7 +72,7 @@ What I can see when I debug and inspect the html that capybara is seeing is that
 </div>
 ```
 
-which looks like the raw HTML that Cocoon deliver before JavaScript adjusts it.  I wonder if that's because I'm doing this on the train without internet connection (and that's affecting loading some needed js), but I can see the Cocoon js being loaded in chrome when I test manually ... ah, I think I see the problem.  The project doesn't have a default first repo - we have to click 'Add repos' once first ... or we can build one by default:
+which looks like the raw HTML that Cocoon delivers before JavaScript adjusts it.  I wonder if that's because I'm doing this on the train without internet connection (and that's affecting loading some needed js); but I can see the Cocoon js being loaded in chrome when I test manually ... ah, I think I see the problem.  The project doesn't have a default first repo - we have to click 'Add repos' once first ... or we can build one by default:
 
 ```rb
   def new
