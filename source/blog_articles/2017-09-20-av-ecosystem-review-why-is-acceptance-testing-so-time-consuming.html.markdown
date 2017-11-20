@@ -1,8 +1,17 @@
-I think I'm almost there with acceptance testing this multiple repo feature, but it makes me wonder why acceptance testing always seems to be so time consuming.  I'm just wrapping up a private project where acceptance testing of electron apps was a real pain, and I really question if it was time well spent since the resulting acceptance tests are slow and unreliable.  Perhaps all that time would have been better spent on unit tests and getting a really coherent domain model sorted out.  The acceptance testing framework I'm using for Rails is a bit more stable, although it's all a matter of degree; and already I've spent more time on the acceptance testing than on the feature itself.  In the process I've learnt more precisely about the way the feature works and the nuances of the Cocoon gem.  Anyway, to hopefully wrap that up I'm going to try and get the dynamic repo form fields to be labelled numerically to make the acceptance testing easier, and try and avoid some of the issues brought up in this SO post:
+---
+title: AV EcoSystem Review Why is Acceptance Testing so Time Consuming?
+date: 2017-09-20
+tags: 
+author: Sam Joseph
+---
 
-https://stackoverflow.com/questions/23184690/testing-fields-added-dynamically-by-cocoon-using-rspec-and-capybara
+![acceptance testing](../images/acceptance_testing.jpg)
 
-I modified the code from https://github.com/nathanvda/cocoon/issues/374 like so:
+I think I'm almost there with acceptance testing this multiple repo feature, but it makes me wonder why acceptance testing always seems to be so time consuming.  I'm just wrapping up a private project where acceptance testing of electron apps was a real pain, and I really question if it was time well spent since the resulting acceptance tests are slow and unreliable.  Perhaps all that time would have been better spent on unit tests and getting a really coherent domain model sorted out.  The acceptance testing framework I'm using for Rails is a bit more stable, although it's all a matter of degree; and already I've spent more time on the acceptance testing than on the feature itself for the multiple repo feature.  Although in the process I've learnt more precisely about the way the feature works and the nuances of the Cocoon gem.  Anyway, to attempt to wrap that up I'm going to try and get the dynamic repo form fields to be labelled numerically to make the acceptance testing easier, and try and avoid some of the issues brought up in this SO post:
+
+[https://stackoverflow.com/questions/23184690/testing-fields-added-dynamically-by-cocoon-using-rspec-and-capybara](https://stackoverflow.com/questions/23184690/testing-fields-added-dynamically-by-cocoon-using-rspec-and-capybara)
+
+I modified the code from [https://github.com/nathanvda/cocoon/issues/374](https://github.com/nathanvda/cocoon/issues/374) like so:
 
 ```js
   $(document).on('ready', function(){
@@ -38,7 +47,7 @@ After '@javascript' do
 end
 ```
 
-According to the [Capybara docs](https://github.com/teamcapybara/capybara#using-capybara-with-cucumber) simply tagging with @javascript should be sufficient ... and when I hook on the debugger I can see that Capybara is using the expected poltergeist_billy javascript_driver:
+According to the [Capybara docs](https://github.com/teamcapybara/capybara#using-capybara-with-cucumber) simply tagging with `@javascript` should be sufficient ... and when I hook on the debugger I can see that Capybara is using the expected poltergeist_billy javascript_driver:
 
 ```sh
 [tansaku@Samuels-MBP:~/Documents/Github/AgileVentures/WebsiteOne (761_multiple_source_repository)]$ 
@@ -81,18 +90,17 @@ Return value is: nil
 
 I dug through the documentation and found various things of interest:
 
-*) https://github.com/teamcapybara/capybara#asynchronous-javascript-ajax-and-friends
+* [https://github.com/teamcapybara/capybara#asynchronous-javascript-ajax-and-friends]()
 
-*) http://www.jonathanleighton.com/articles/2012/poltergeist-0-6-0/
+* [http://www.jonathanleighton.com/articles/2012/poltergeist-0-6-0/](http://www.jonathanleighton.com/articles/2012/poltergeist-0-6-0/)
 
-*) https://github.com/teampoltergeist/poltergeist/issues/755
+* [https://github.com/teampoltergeist/poltergeist/issues/755](https://github.com/teampoltergeist/poltergeist/issues/755)
 
-*) https://github.com/thoughtbot/capybara-webkit#configuration
+* [https://github.com/thoughtbot/capybara-webkit#configuration](https://github.com/thoughtbot/capybara-webkit#configuration)
 
-*) https://github.com/teampoltergeist/poltergeist#remote-debugging-experimental
+* [https://github.com/teampoltergeist/poltergeist#remote-debugging-experimental](https://github.com/teampoltergeist/poltergeist#remote-debugging-experimental)
 
-
-and the upshot of all this and some other hacking is that I now have remote debugging setup, which makes it look like javascript is running, in as much as the second field has been generated, but that it hasn't been renamed by the embedded script:
+and the upshot of all this and some other hacking is that I now have remote debugging setup, which makes it look like JavaScript is running, in as much as the second field has been generated, but that it hasn't been renamed by the embedded script:
 
 ![](https://dl.dropbox.com/s/n2m1i3skeu12szp/Screenshot%202017-09-20%2010.25.54.png)
 
