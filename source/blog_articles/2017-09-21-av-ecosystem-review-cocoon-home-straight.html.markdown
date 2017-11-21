@@ -1,6 +1,14 @@
+title: AV EcoSystem Review Cocoon Home Straight
+date: 2017-09-21
+tags: 
+author: Sam Joseph
+---
+
+![home straight](../images/Home_Straight.jpg)
+
 So the answer to my question of yesterday, "Why is Acceptance Testing so hard" is that any coding is hard when you can't get error messages.  The remote debug inspector I set up yesterday allowed me to see that our Capybara/Poltergeist/PhantomJS setup could not handle ES6 string interpolations.  It raises the question about why not, but I want to push on with this feature.
 
-The test is now failing on:
+The test is now failing on this error:
 
 ```
     And I should see a link to "multiple repo project" on github            # features/step_definitions/projects_steps.rb:84
@@ -9,13 +17,13 @@ The test is now failing on:
       features/projects/create_projects.feature:84:in `And I should see a link to "multiple repo project" on github'
 ```
 
-because the github url is being stored in a new location that's not reflected in the project page.  The project page currently shows the GitHub link via this code:
+because the GitHub URL is being stored in a new location that's not reflected in the project page.  The project page currently shows the GitHub link via this code:
 
 ```erb
-<span class="small"><%= link_to "#{@project.github_url.split('/').last} ", @project.github_url %>on GitHub</span></p>
+<span class="small"><%= link_to "#{@project.github_url.split('/').last} ", @project.github_url %>on GitHub</span>
 ```
 
-which explains the error in the test.  Just to see if it works I throw the following in the project model:
+which explains the error in the test.  Just to see if it worked I threw the following into the project model:
 
 ```rb
   def github_url
@@ -23,25 +31,26 @@ which explains the error in the test.  Just to see if it works I throw the follo
   end
 ```
 
-and I am rewarded with a completely passing acceptance test.  However I have various issues to address:
+and I was rewarded with a completely passing acceptance test.  However I have various issues to address:
 
-* [ ] the acceptance test does not check that the second repo has been stored
-* [ ] the acceptance test is not very readable
-* [ ] currently the project page does not display all the repos
-* [ ] the project has various unit tests based on being able to set the github_url
-* [ ] the project model validates the URL
-* [ ] the process for safely migrating the existing data on production
+* the acceptance test does not check that the second repo has been stored
+* the acceptance test is not very readable
+* the project page does not currently display all the repos
+* the project has various unit tests based on being able to set the github_url
+* the project model validates the URL
+* the process for safely migrating the existing data on production
 
-and maybe others I haven't thought of yet, so I'm tempted to run the other project acceptance tests and see what breaks ... other acceptance tests are breaking because the create project form has changed and they can't now find the form fields they expect.  Update a few label strings in the tests and that project code to:
+and maybe others I haven't thought of yet, so I'm tempted to run the other project acceptance tests and see what breaks ... other acceptance tests are breaking because the create project form has changed and they can't now find the form fields they expect.  I updated a few label strings in the tests and that project code to:
 
 ```rb
   def github_url
     source_repositories.first.try(:url)
   end
 ```
-and all the project create acceptance tests are green; so I kick off a run of the rest of the project acceptance tests.  Am I being bad here?  Shouldn't I be clearly setting out my domain model and getting all my unit tests in place first?  My defense is that I'm sidling up on that, trying to use the existing tests from the outside in to give me the bigger picture here.  I very definitely don't plan to just hack the app code until all the acceptance tests pass :-)
 
-I get the project show acceptance tests to pass with the following changed step definition:
+and all the project "create" acceptance tests are green; so I kick off a run of the rest of the project acceptance tests.  Am I being bad here?  Shouldn't I be clearly setting out my domain model and getting all my unit tests in place first?  My defense is that I'm sidling up on that, trying to use the existing tests from the outside in to give me the bigger picture here.  I very definitely don't plan to just hack the app code until all the acceptance tests pass :-)
+
+I get the project "show" acceptance tests to pass with the following changed step definition:
 
 ```rb
 Given(/^the following projects exist:$/) do |table|
@@ -53,7 +62,7 @@ Given(/^the following projects exist:$/) do |table|
       project = default_test_author.projects.new(hash.except('author', 'tags'))
     end
     if hash[:github_url].present?
-      project.source_repositories.build(url: hash[:github_url])
+      project.source_repositories.build(url: hash[:github_url]) # <-- change here
     end
     if hash[:tags]
       project.tag_list.add(hash[:tags], parse: true)
@@ -63,7 +72,7 @@ Given(/^the following projects exist:$/) do |table|
 end
 ```
 
-and the edit project acceptance failures look pretty much like form field names just need to be changed, but actually the step definition needs a further change, specifically:
+and the project "edit" acceptance failures look pretty much like form field names just need to be changed, but actually the step definition needs a further change, specifically:
 
 ```rb
     if hash[:github_url].present?
@@ -123,7 +132,7 @@ rspec ./spec/models/project_spec.rb:36 # Project#save should throw error for inc
 rspec ./spec/models/project_spec.rb:31 # Project#save should not accept invalid github url
 ```
 
-let's take these in turn:
+let's take these in turn.  The first failing spec is
 
 ```
     it 'returns the proper repo name if github url exists' do
@@ -132,7 +141,7 @@ let's take these in turn:
     end
 ```
 
-I'll adjust to:
+which I adjusted  to:
 
 ```
     it 'returns the proper repo name if github url exists' do
@@ -142,7 +151,7 @@ I'll adjust to:
     end
 ```
 
-which passes, and I assume we're not [hitting the database](https://robots.thoughtbot.com/use-factory-girls-build-stubbed-for-a-faster-test).  Using other similar fixes I have all the project specs passing, so I guess I'll run all the other specs to see if there are any other angles I'm missing.  The other thing that occurs to me is that we should have some specs for the new SourceRepository model.  I'm also unsure of the namings.  Should I have called it GitHubUrl or GitHubLink?  Does it matter?  I'd love us to be able to support bitbucket and other source repositories in the future ... anyhow, running the rest of the specs shows me that we've got a few more issues:
+and then passes, and I assume we're not [hitting the database](https://robots.thoughtbot.com/use-factory-girls-build-stubbed-for-a-faster-test).  Using other similar fixes I have all the project specs passing, so I guess I'll run all the other specs to see if there are any other angles I'm missing.  The other thing that occurs to me is that we should have some specs for the new SourceRepository model.  I'm also unsure of the namings.  Should I have called it GitHubUrl or GitHubLink?  Does it matter?  I'd love us to be able to support BitBucket and other source repositories in the future ... anyhow, running the rest of the specs shows me that we've got a few more issues:
 
 ```
 Failures:
@@ -228,7 +237,7 @@ rspec ./spec/views/projects/edit.html.erb_spec.rb:11 # projects/edit.html.erb re
 rspec ./spec/views/projects/edit.html.erb_spec.rb:21 # projects/edit.html.erb renders project form fields
 ```
 
-Code relating to checking commits on Github is failing ..., although those can probably be fixed by creating the Projects with associated source reposiories, and those view spec failures can probably be addressed by deleting the view specs.  Although I did also need to update this scope on the Project model:
+Code relating to checking commits on Github is failing ..., although those can probably be fixed by creating the projects with associated source reposiories, and those view spec failures can probably be addressed by deleting the view specs.  Although I did also need to update this scope on the Project model:
 
 ```rb
   scope :with_github_url, ->{ includes(:source_repositories).where.not(source_repositories: { id: nil }) }
