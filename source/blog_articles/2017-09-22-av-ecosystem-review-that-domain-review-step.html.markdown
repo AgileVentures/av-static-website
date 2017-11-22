@@ -19,7 +19,7 @@ Okay, so I have the multiple repository functionality basically working, but it'
 
 So attacking from the unit test side I notice that we do not mention the `with_github_url` scope anywhere in our tests, which I can rectify with the following:
 
-``rb
+```rb
   context '.with_github_url' do
     it 'returns all projects that have at least one source repository' do
       project = FactoryGirl.create(:project)
