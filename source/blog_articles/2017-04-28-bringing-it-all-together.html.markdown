@@ -7,14 +7,14 @@ author: Sam Joseph
 
 ![wave](/images/wave.jpg)
 
-The last two days have been blog driven NHS wiki flurries in the morning followed by mobbing and AgileVenturing in the afternoon.  In the Elixir mob on Wednesday we made further headway into Phoenix and I really start to question whether we've all been suffering through an instance variable nightmare.  Yesterday I caught up with the marketing team, the Ruby mob (where we got confident with some of our legacy code) and then spent an hour bashing away at AsyncVoter's Azure/Dokku setup with Matt and Raphael.
+The last two days have been blog driven NHS wiki flurries in the morning followed by mobbing and AgileVenturing in the afternoon.  In the Elixir mob on Wednesday we made further headway into Phoenix and I really start to question whether the world of programmers has been suffering through an instance variable nightmare.  Yesterday I caught up with the marketing team, the Ruby mob (where we got confident with some of our legacy code) and then spent an hour bashing away at AsyncVoter's Azure/Dokku setup with Matt and Raphael.
 
-I think there are certain critical things that I need to do upfront this morning, i.e. as part of the blogging process, and some others that need to be done before lunch.  At the end of yesterday I was starting to feel calmer that we were bringing together all the things we needed for the NHS wiki project.  I'd emailed all the remaining stakeholders for additional meetings, the HLP team was getting the training dates set, I'd made an outline of the training materials, and we'd made contact with the Communications team.  Furthermore we'd also worked with the trustees to get the paperwork done for me to be paid this month, so that's a relief.  The key things that need to happen before lunch today are then:
+I think there are certain critical things that I need to do upfront this morning, i.e. as part of the blogging process, and some others that need to be done before lunch.  At the end of yesterday I was starting to feel calmer that we were bringing together all the things we needed for the NHS wiki project.  I'd emailed all the remaining stakeholders for additional meetings, the HLP team was getting the training dates set, I'd made an outline of the training materials, and we'd made contact with the Communications team.  Furthermore we'd also worked with the trustees to get the paperwork done so that I could get paid this month, which is a relief.  The key things that need to happen before lunch today are then:
 
 * Process my payment
 * Reach out to the HLP communication team (as main contact is off sick)
-* Reply to NHS/Voluntary Sector stakeholder emails to confirm meetings for the week after next
-* Reach out to enterprise wellness related to moderation
+* Reply to the NHS/Voluntary Sector stakeholder emails to confirm meetings for the week after next
+* Reach out to enterprise wellness in relation to moderation
 
 So I'm thinking that the first two have to be knocked off quickly. However in even trying to reach out to the HLP communications team I got lost in LinkedIn for 10 minutes reviewing the HLP organistaion there and connecting up to the NHS staff I've already met.  That was helpful, but (reality check) I've got to process this payment for my own personal finances.  It should be simple, but anything done for the first time can encounter issues, so let me just pause the blog to get that done ... done - had to do a text authorisation on my mobile, but couldn't have taken more than a minute in total.  I also see that the NHS payment for the first part of our work came through, so that's a relief to have that all sorted.  I think my heart-rate has slowed slightly :-)
 
