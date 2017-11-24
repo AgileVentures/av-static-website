@@ -1,4 +1,4 @@
-I had no comments on the multiple source repository pull request (apart from my own), so I've merged that to play with on develop.  I want to pop back all the way to up to reviewing the flow of folks through AgileVentures and my experiments with the getting started pages, but I there's a couple of stops on the way.   First is to get the new code of conduct more prominent, and sort out the greeter bots; as well as finishing up the changes to the Premium Mob/F2F pages.
+I had no comments on the multiple source repository pull request (apart from my own), so I've merged that to play with on develop.  I want to pop back all the way to up to reviewing the flow of folks through AgileVentures and my experiments with the getting started pages, but there's a couple of stops on the way.   First is to get the new code of conduct more prominent, and sort out the greeter bots; as well as finishing up the changes to the Premium Mob/F2F pages.
 
 So let's start with the greeter bot, which I think should mention the code of conduct.  First up I'll merge in the simple unit tests I added previously:
 
@@ -168,6 +168,6 @@ npm ERR! Test failed.  See above for more details.
 
 ```
 
-Would be good to be [looking those up off the slack api](https://github.com/AgileVentures/project_greeter_bot/issues/27) maybe?  Anyhow, I deployed that branch to production since the change in the id will only make sense on production, and we'll have to wait for someone to join the new shared channel and see ...
+Would be good to be [looking those up off the slack api](https://github.com/AgileVentures/project_greeter_bot/issues/27), maybe?  Anyhow, I deployed that branch to production, since the change in the id will only make sense on production, and we'll have to wait for someone to join the new shared channel and see ...
 
 Phew, so that's all the hanging bot stuff deployed (if not checked), and reminds me of all the little other tasks I'd like to do with the bots to make them and their projects friendlier, but I think that's for another week - tomorrow I hope to be on to the Premium pages ...
