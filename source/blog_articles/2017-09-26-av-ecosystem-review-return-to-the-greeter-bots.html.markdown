@@ -5,7 +5,7 @@ tags:
 author: Sam Joseph
 ---
 
-![bots](../images/bots2.jpg)
+![bots](../images/bots2.png)
 
 I had no comments on the multiple source repository pull request (apart from my own), so I've merged that to play with on develop.  I want to pop back all the way to up to reviewing the flow of folks through AgileVentures and my experiments with the getting started pages, but there's a couple of stops on the way.   First is to get the new code of conduct more prominent, and sort out the greeter bots; as well as finishing up the changes to the Premium Mob/F2F pages.
 
