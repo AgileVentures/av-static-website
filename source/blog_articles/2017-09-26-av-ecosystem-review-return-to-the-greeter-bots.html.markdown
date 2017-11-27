@@ -1,6 +1,15 @@
+---
+title: AV EcoSystem Review Return to the Greeter Bots
+date: 2017-09-26
+tags: 
+author: Sam Joseph
+---
+
+![bots](../images/bots2.jpg)
+
 I had no comments on the multiple source repository pull request (apart from my own), so I've merged that to play with on develop.  I want to pop back all the way to up to reviewing the flow of folks through AgileVentures and my experiments with the getting started pages, but there's a couple of stops on the way.   First is to get the new code of conduct more prominent, and sort out the greeter bots; as well as finishing up the changes to the Premium Mob/F2F pages.
 
-So let's start with the greeter bot, which I think should mention the code of conduct.  First up I'll merge in the simple unit tests I added previously:
+So let's start with the greeter bot, which should mention the code of conduct, I think.  First up I'll merge in the simple unit tests I added previously:
 
 ```sh
 [tansaku@Samuels-MBP:~/Documents/Github/AgileVentures/greeter_bot (master)]$ 
@@ -9,13 +18,10 @@ So let's start with the greeter bot, which I think should mention the code of co
 > greeter_bot@1.0.0 test /Users/tansaku/Documents/GitHub/AgileVentures/greeter_bot
 > mocha test/**/*.js
 
-
-
   Bot
     ✓ should include linked techtalk channel in greeting
     ✓ should include linked new_members channel in greeting
     ✓ should include linked random channel in greeting
-
 
   3 passing (9ms)
 ```
@@ -36,8 +42,6 @@ which fails:
 
 > greeter_bot@1.0.0 test /Users/tansaku/Documents/GitHub/AgileVentures/greeter_bot
 > mocha test/**/*.js
-
-
 
   Bot
     ✓ should include linked techtalk channel in greeting
@@ -70,14 +74,11 @@ and the tests pass:
 > greeter_bot@1.0.0 test /Users/tansaku/Documents/GitHub/AgileVentures/greeter_bot
 > mocha test/**/*.js
 
-
-
   Bot
     ✓ should include linked techtalk channel in greeting
     ✓ should include linked new_members channel in greeting
     ✓ should include linked random channel in greeting
     ✓ should include link to our code of conduct
-
 
   4 passing (9ms)
 ```
@@ -108,14 +109,11 @@ I'd also love to update the project greeter bot to work with the new shared #wik
 > project_greeter_bot@0.0.0 test /Users/tansaku/Documents/GitHub/AgileVentures/project_greeter_bot
 > mocha test/**/*.js
 
-
-
   Project Greeter bot
     ✓ should have LocalSupport channel greeting
     ✓ should have WebSiteOne channel greeting
     ✓ should have Rundfunk Mitbestimmen channel greeting
     ✓ should have Wiki EDU dashboard channel greeting
-
 
   4 passing (12ms)
 
@@ -130,14 +128,11 @@ tansaku@Samuels-MBP:~/Documents/Github/AgileVentures/project_greeter_bot (25_upd
 > project_greeter_bot@0.0.0 test /Users/tansaku/Documents/GitHub/AgileVentures/project_greeter_bot
 > mocha test/**/*.js
 
-
-
   Project Greeter bot
     ✓ should have LocalSupport channel greeting
     ✓ should have WebSiteOne channel greeting
     ✓ should have Rundfunk Mitbestimmen channel greeting
     1) should have Wiki EDU dashboard channel greeting
-
 
   3 passing (11ms)
   1 failing
@@ -146,16 +141,13 @@ tansaku@Samuels-MBP:~/Documents/Github/AgileVentures/project_greeter_bot (25_upd
      AssertionError: expected { Object (C0KK907B5, C029E8G80, ...) } to have own property 'C36MNPWTD'
       at Context.<anonymous> (test/greetings_spec.js:17:35)
 
-
-
 npm ERR! Test failed.  See above for more details.
+
 [tansaku@Samuels-MBP:~/Documents/Github/AgileVentures/project_greeter_bot (25_update_wiki_edu_channel)]$ 
 → npm test
 
 > project_greeter_bot@0.0.0 test /Users/tansaku/Documents/GitHub/AgileVentures/project_greeter_bot
 > mocha test/**/*.js
-
-
 
   Project Greeter bot
     ✓ should have LocalSupport channel greeting
