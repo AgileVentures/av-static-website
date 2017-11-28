@@ -5,7 +5,7 @@ tags: podcast, Slack, wiki, NHS, MediaWiki, Visual Editor, design sprint
 author: Sam Joseph
 ---
 
-![distractions](/images/one_step.jpg)
+![one step](/images/one_step.jpg)
 
 So I got distracted by Slack and email again this morning.  Wanting to post my last podcast listen into #av_community_talk I ended up replying to freerangers last post.  At least today I think I was calmer, and there wasn't so much to catch up with in all the incoming communication channels.  I'm definitely struggling with anxiety about getting everything done.  I'm less anxious this morning after completing the first round of wiki training with some of the HLP core team yesterday.  The big thing was that the MediaWiki visual editor ultimately loaded on three different NHS laptops and networks, and all the trainees succesfully created edited pages as well as got set up with moderation permissions.
 

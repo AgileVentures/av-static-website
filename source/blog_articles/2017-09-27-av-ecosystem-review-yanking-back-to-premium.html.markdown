@@ -5,7 +5,7 @@ tags:
 author: Sam Joseph
 ---
 
-![yanked](../images/yanked.png)
+![yanked](../images/yanked.jpg)
 
 So in the backdrop yesterday a javascript bug in the multiple repos for projects feature led me to some refactoring that also fixed the bug, which I thought was pretty neat:
 
