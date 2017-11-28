@@ -25,9 +25,9 @@ $(document).on('ready', function () {
 })
 ```
 
-I had realised that the github url numbering was not being on initial page load, and so I extracted the function that performed it into our application name space and now call it both on page load and when the form is dynamically updated.  Should I have done the refactoring earlier?  I don't think that would have highlighted the issue particularly, and I left off factoring because I wanted to see what direction I'd be pushed in next.
+I had realised that the github url numbering was not being performed on initial page load, and so I extracted the function that performed it into our application name space and now call it both on page load and when the form is dynamically updated.  Should I have done the refactoring earlier?  I don't think that would have highlighted the issue particularly, and I left off factoring because I wanted to see what direction I'd be pushed in next.
 
-Anyhow, so the siren song of the Waffle board is calling since I've started a spike to see if we can replace the agile-bot with a chunk of Ruby code, and that has an interesting interaction with a feature that Corey wants to work on.  Still we don't have anything in the "Please check" column, and I must force myself to get to these outstanding Premium content tickets that I've got assigned to me in the "ready" column:
+Anyhow, so the siren song of the Waffle board is calling, since I've started a spike to see if we can replace the agile-bot with a chunk of Ruby code, and that has an interesting interaction with a feature that Corey wants to work on.  Still we don't have anything in the "Please check" column, and I must force myself to get to these outstanding Premium content tickets that I've got assigned to me in the "ready" column:
 
 ![](https://dl.dropboxusercontent.com/s/xqtuv7s55czfr5p/Screenshot%202017-09-27%2009.48.32.png?dl=1)
 
@@ -39,7 +39,7 @@ and I tweaked the language at the top, but I'm not convinced this will have much
 
 ![](https://dl.dropboxusercontent.com/s/z1e41padz22gvao/Screenshot%202017-09-27%2009.56.35.png?dl=1)
 
-I'm thinking that images of people in hangouts in the Premium Mob and F2F pages is will be what makes the difference.  Okay, let's start with the mob page.  I previously took a copy of the Premium page in html into version control, although we are still storing it in the db.  Potentially confusing but good back for when I do things like accidentally blow away the changes I make on staging.  So I'm running out of time, but the key thing to make progress on the ticket is to turn the list of Premium Mob features into a set of whys, which I did in a blog:
+I'm thinking that images of people in hangouts in the Premium Mob and F2F pages will be what makes the difference.  Okay, let's start with the mob page.  I previously took a copy of the Premium page in html into version control, although we are still storing it in the db.  Potentially confusing, but good backup for when I do things like accidentally blow away the changes I make on staging.  So I'm running out of time, but the key thing to make progress on the ticket is to turn the list of Premium Mob features into a set of whys, which I did in a blog:
 
 * Mob programming sessions with an assigned AV Mentor each week
 * Professional Development Planning Support
