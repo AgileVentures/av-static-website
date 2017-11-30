@@ -1,4 +1,11 @@
-Blurgh, so I couldn't sleep last night - too much late night under nines football admin coming up on whatsapp - new comedy album from Patton Oswalt put paid to an overactive brain and eventually I slept.  I took my one day jogging pass.  I try to jog every weekday morning, but I usually let myself off one day if I'm feeling run down.  Got to the computer in reasonable time.  Not feeling very perky.  Could use a coffee - I'm at the end of my second week without.  Got totally distracted by Slack and ending up checking all email, twitter and facebook and fixing a few things up, but actually not too much to distract me, and I'm finally back to the blog face, where I'm thinking I will try to charge the Premium F2F page changes out of the way.
+---
+title: AV EcoSystem Review Sorting Premium F2F Page
+date: 2017-09-28
+tags: 
+author: Sam Joseph
+---
+
+Blurgh, so I couldn't sleep last night - too much late night under nines football admin coming up on whatsapp - new comedy album from Patton Oswalt put paid to an overactive brain and eventually I slept.  I took my one day jogging pass.  I try to jog every weekday morning, but I usually let myself off one day if I'm feeling run down.  Got to the computer in reasonable time.  Not feeling very perky.  Could use a coffee - I'm at the end of my second week without coffee.  Got totally distracted by Slack and ending up checking all email, twitter and facebook and fixing a few things up, but actually not too much to distract me, and I'm finally back to the blog face, where I'm thinking I will try to charge the Premium F2F page changes out of the way.
 
 I start off by pushing the Premium Mob change PR up and getting it into the "Please Check" column:
 
