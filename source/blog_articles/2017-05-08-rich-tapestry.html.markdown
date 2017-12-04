@@ -17,8 +17,8 @@ What I'd really like to do now is spend a full day re-creating the whole install
 
 Okay, so the plan is:
 
-1. Check the backups are working
-2. Focus on the look and feel
-3. Start seeing the stakeholders
+1. Check the backups are working  
+2. Focus on the look and feel  
+3. Start seeing the stakeholders  
 
 Hopefully I can follow up with a full documentation of the install process, which might also make me less of a single point of failure if we have an issue with the configuration.  That said, I would ideally be doing the look and feel update on a staging instance; so maybe I can't get out of replicating the setup?  Of course the faster option is to just try design changes on the existing out of step staging instance we currently have.  Gah!  Life's rich tapestry indeed ... I'm going to make some coffee ...
