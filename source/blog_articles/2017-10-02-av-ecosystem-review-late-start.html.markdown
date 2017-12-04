@@ -1,4 +1,11 @@
-So Monday morning was slow and I got to the computer late, and immediately got distracted by listening to the end of the Tech Done Right podcast, which mentioned the closing of DevBootcamp and IronYard coding bootcamps.  Shake up in the industry.  I want my focus for this week to be sorting out my ruby-fication spike of the AgileBot, but now I'm low on time.  Let's focus on the clear-up from last week where I was updating the Premium Mob and Premium F2F pages on staging.  I have no comments on my PRs or in Slack, so I'm going to assume no one has any issues here.  I update those pages via the Mercury editor in the live site and take a stab at merging the backup copies into the main repo, but there's branch updating and merging to sort first ..., conflicts between my two branches.
+---
+title: AV EcoSystem Review Late Start
+date: 2017-10-02
+tags: 
+author: Sam Joseph
+---
+
+So Monday morning was slow and I got to the computer late, and immediately got distracted by listening to the end of the Tech Done Right podcast, which mentioned the closing of DevBootcamp and IronYard coding bootcamps.  Shake up in the industry.  I want my focus for this week to be sorting out my ruby-fication spike of the AgileBot, but now I'm low on time.  I decided to focus on the clear-up from last week where I was updating the Premium Mob and Premium F2F pages on staging.  I have no comments on my PRs or in Slack, so I'm going to assume no one has any issues here.  I update those pages via the Mercury editor in the live site and take a stab at merging the backup copies into the main repo, but there's branch updating and merging to sort first ..., conflicts between my two branches.
 
 So while they're building, can I make some super-quick progress on the agile-bot rubyfication to get the week started?  I update the branch there, pull up the set of changes.  I think the set of things we need is:
 
