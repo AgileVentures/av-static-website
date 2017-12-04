@@ -9,9 +9,9 @@ So Monday morning was slow and I got to the computer late, and immediately got d
 
 So while they're building, can I make some super-quick progress on the agile-bot rubyfication to get the week started?  I update the branch there, pull up the set of changes.  I think the set of things we need is:
 
-1) new tests of the SlackService  
-2) checking all existing tests pass  
-3) extracting the channel config to depend on deployment instance  
+1. new tests of the SlackService  
+2. checking all existing tests pass  
+3. extracting the channel config to depend on deployment instance  
 
 In the meantime I used my admin privileges to force merge the Premium mob page backup PRs - they don't affect the codebase so waiting for the semaphore build is silly.  That gives us a nice clean "Please Check" column on the waffle board:
 
