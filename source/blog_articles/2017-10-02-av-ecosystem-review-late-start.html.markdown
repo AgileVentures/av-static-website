@@ -1,4 +1,4 @@
-So Monday morning was slow and I got to the computer late, and immediately got distracted by listening to the end of the TechDoneRight podcast which mentioned the closing of DevBootcamp and IronYard coding bootcamps.  Shake up in the industry.  I want my focus for this week to be sorting out my ruby-fication spike of the AgileBot, but now I'm low on time.  Let's focus on the clearup from last week where I was updating the Premium Mob and Premium F2F pages on staging.  I have no comments on my PRs or in Slack, so I'm going to assume no one has any issues here.  I update those pages via the Mercury editor in the live site and take a stab at merging the backup copies into the main repo, but there's branch updating and merging to sort first ..., conflicts between my two branches.
+So Monday morning was slow and I got to the computer late, and immediately got distracted by listening to the end of the Tech Done Right podcast, which mentioned the closing of DevBootcamp and IronYard coding bootcamps.  Shake up in the industry.  I want my focus for this week to be sorting out my ruby-fication spike of the AgileBot, but now I'm low on time.  Let's focus on the clear-up from last week where I was updating the Premium Mob and Premium F2F pages on staging.  I have no comments on my PRs or in Slack, so I'm going to assume no one has any issues here.  I update those pages via the Mercury editor in the live site and take a stab at merging the backup copies into the main repo, but there's branch updating and merging to sort first ..., conflicts between my two branches.
 
 So while they're building, can I make some super-quick progress on the agile-bot rubyfication to get the week started?  I update the branch there, pull up the set of changes.  I think the set of things we need is:
 
@@ -10,7 +10,7 @@ In the meantime I used my admin privileges to force merge the Premium mob page b
 
 ![](https://dl.dropbox.com/s/zpg8yqzayk08t8z/Screenshot%202017-10-02%2010.36.22.png?dl=1)
 
-where we can also see my agile-bot spike in progress.  I really want to do another high level overview, but the AV Community meeting on Friday reinforced my notion that we have to clear up the bot messaging in Slack #general.  At the moment all the pings about meeting starting with Google hangout hash ids in urls etc. looks really messy. 
+where we can also see my agile-bot spike in progress.  I really want to do another high level overview, but the AV Community meeting on Friday reinforced my notion that we have to clear up the bot messaging in Slack #general.  At the moment, all the pings about meeting starting with Google hangout hash ids in urls etc. looks really messy. 
 
 ![](https://dl.dropbox.com/s/5tbperpnc3nqsvu/Screenshot%202017-10-02%2010.42.54.png?dl=1)
 
