@@ -154,7 +154,7 @@ and the tests like so:
   end
 ```
 
-Off the top of my head I'm not sure exactly what all the componets are that the client should receive as argument components, so I'm just putting in blanks and will run it and pull out the exact elements checking that they are what I expect, and then hopefully make the test go green, and I get what I'm expecting:
+Off the top of my head I'm not sure exactly what all the componets are that the client should receive as argument components, so I'm just putting in blanks and will run it and pull out the exact elements, checking that they are what I expect, and then hopefully make the test go green; ... and I get what I'm expecting:
 
 ```
   1) SlackService.post_yt_link sends a post request to the agile-bot with the proper data
@@ -190,7 +190,7 @@ which reminds me that actually we hit the end point twice, but I can also test f
     end
 ```
 
-Although I have to admit there was a few rounds of thrashing to get there :-)  So I happened to start on the `.post_yt_link` method, but so basically I'll now need to do similar for the `.post_hangout_notification` method tests, although I'm feeling a little nervous about using spies, since I'd like to be checking that we don't send any messages we don't expect:
+Although I have to admit, there were a few rounds of thrashing to get there :-)  So I happened to start on the `.post_yt_link` method, but so basically I'll now need to do similar for the `.post_hangout_notification` method tests, although I'm feeling a little nervous about using spies, since I'd like to be checking that we don't send any messages we don't expect:
 
 ```rb
   describe '.post_hangout_notification' do
