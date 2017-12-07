@@ -1,4 +1,13 @@
-Early to bed and early to rise makes a man do a 5K jog to the top of the nearest hill and get to the computer early to start working on tests of the new rubyfied agilebot.  I start by pulling the latest from develop and merging to my local branch.  Let's start by hitting each of the three regression errors I saw yesterday:
+---
+title: AV EcoSystem Rumours of AgileBots Demise
+date: 2017-10-03
+tags: 
+author: Sam Joseph
+---
+
+![demise](../images/demise.jpg)
+
+Early to bed and early to rise makes a man ... do a 5K jog to the top of the nearest hill and get to the computer early to start working on tests of the new rubyfied agilebot.  I start by pulling the latest from develop and merging to my local branch.  Let's start by hitting each of the three regression errors I saw yesterday:
 
 ```sh
   1) SlackService.post_yt_link sends a post request to the agile-bot with the proper data
@@ -123,7 +132,7 @@ but the looming question is what level should these tests stub at.  Options are:
 2) stub at the level of the Slack client
 3) stub at the level of the post request to the Slack API
 
-I could make arguments for each.  It's tempting to go for 3) because the existing test is stubbing there, but I feel that's the job of an acceptance test, which I hope to have too.  Stubbing at the internal method level feels too fine grained.  I'm going to use dependency injection and go for 2), stubbing at the level of the Slack client.  I change the method signature like so:
+I could make arguments for each.  It's tempting to go for 3) because the existing test is stubbing there, but I feel that's the job of an acceptance test, which I hope we already have.  Stubbing at the internal method level feels too fine grained.  I'm going to use dependency injection and go for 2), stubbing at the level of the Slack client.  I change the method signature like so:
 
 ```rb
 def post_yt_link(hangout, client = Slack::Web::Client.new)
@@ -190,7 +199,7 @@ which reminds me that actually we hit the end point twice, but I can also test f
     end
 ```
 
-Although I have to admit, there were a few rounds of thrashing to get there :-)  So I happened to start on the `.post_yt_link` method, but so basically I'll now need to do similar for the `.post_hangout_notification` method tests, although I'm feeling a little nervous about using spies, since I'd like to be checking that we don't send any messages we don't expect:
+Although I have to admit, there were a few rounds of thrashing to get there :-)  So I happened to start on the `.post_yt_link` method, and so basically I'll now need to do similar for the `.post_hangout_notification` method tests, although I'm feeling a little nervous about using spies, since I'd like to be checking that we don't send any messages we don't expect:
 
 ```rb
   describe '.post_hangout_notification' do
