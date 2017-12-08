@@ -109,7 +109,7 @@ Then(/^the event should (still )?be live$/) do |ignore|
 end
 ```
 
-So the state we're carrying over is the @event instance, but that should get recreated for each scenario ... I try removing all the expectation steps from the scenarios, but the issue still occurs.  The failure is specifically on the attempt to pint the event start, and the error is thrown in the slack service when we try to send the slack message ... I take out that line and we pass:
+So the state we're carrying over is the @event instance, but that should get recreated for each scenario ... I try removing all the expectation steps from the scenarios, but the issue still occurs.  The failure is specifically on the attempt to ping the event start, and the error is thrown in the slack service when we try to send the slack message ... I take out that line and we pass:
 
 ```
   def send_slack_message(client, channel, text, user)
@@ -117,7 +117,7 @@ So the state we're carrying over is the @event instance, but that should get rec
   end
 ```
 
-There's no mention of doubles in the SlackRubyClient github issues, but there is mention of some [thread leak issue](https://github.com/slack-ruby/slack-ruby-client/issues/104) that was fixed, but also mentions that the SlackRubyClient has a logger ... I try setting that to nil in our Rails initializer, to no avail, so I go ahead and open an issue on the SlackRubyClient repo:
+There's no mention of doubles in the SlackRubyClient github issues, but there is mention of some [thread leak issue](https://github.com/slack-ruby/slack-ruby-client/issues/104) that was fixed, but also mentions that the SlackRubyClient has a logger ... I try setting that to nil, in our Rails initializer, to no avail, so I go ahead and open an issue on the SlackRubyClient repo:
 
 https://github.com/slack-ruby/slack-ruby-client/issues/174
 
