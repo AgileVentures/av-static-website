@@ -1,4 +1,13 @@
-I've got the RSpec unit(?) tests green for the new version of the WSO Slack Service that takes the AgileBot microservice completely out of the picture.  I start the day by merging the latest from develop, which is a gem bump from dependabot (mixed feelings about automating PRs for gem upgrades).  Then I check that we're still green for the RSpec.  Dangerous to be pulling in other changes when I still have pending RSpecs and failing cukes, but hmmm ... anyway, here are the regression failures from running the cukes on the new slack service:
+---
+title: AV EcoSystem Slack Service Cucumber Regressions
+date: 2017-10-04
+tags: 
+author: Sam Joseph
+---
+
+![regression testing](../images/Gui test.jpg)
+
+I've got the RSpec unit(?) tests green for the new version of the WSO Slack Service that takes the AgileBot microservice completely out of the picture.  I start the day by merging the latest from develop, which is a gem bump from dependabot (I have mixed feelings about these automated PRs for gem upgrades).  Then I check that we're still green for the RSpec.  Dangerous to be pulling in other changes when I still have pending RSpecs and failing cukes, but hmmm ... anyway, here are the regression failures from running the cukes on the new Slack service:
 
 ```sh
 #<Double "Logger"> was originally created in one example but has leaked into another example and can no longer be used. rspec-mocks' doubles are designed to only last for one example, and you need to create a new one in each example you wish to use it for. (RSpec::Mocks::ExpiredTestDoubleError)
@@ -20,7 +29,7 @@ cucumber features/twitter.feature:27 # Scenario: Event going live without valid 
 cucumber features/twitter.feature:32 # Scenario: Event going live with valid livestream causes tweets of hangout link and youtube link to be sent
 ```
 
-Do the Specs are all green, and the cukes that are failing are all hitting this issue of a double leaking from one example to another ..., and they pass individually, and I can't see any mention of "Logger" in the step definitions. Weird.  I trace through the stack trace above and again see no mention of a double :logger being created anywhere ... no mention of any doubles anywhere in the cuke step definitions.  Something from factoryGirl?  No mention of doubles there ... I try running all the live_event.feature cukes together and yes, the error recurrs.  So the first scenario passes:
+So the specs are all green, and the cukes that are failing are all hitting this issue of a double leaking from one example to another ..., and they pass individually, and I can't see any mention of "Logger" in the step definitions. Weird.  I trace through the stack trace above and again see no mention of a `double :logger` being created anywhere ... no mention of any doubles anywhere in the cuke step definitions.  Something from factoryGirl?  No mention of doubles there ... I try running all the `live_event.feature` cukes together and yes, the error recurrs.  So the first scenario passes:
 
 ```
   Background:
@@ -81,7 +90,7 @@ When(/^the HangoutConnection has pinged to indicate the event (start|continuing)
                                hoa_status: 'live', project_id: '1', category: 'Scrum', yt_video_id: '11'}
 end
 ```
-but again, there's no indication of any mocking, stubbing, doubles or loggers.  I google the error message and the only place I see it is in the RSpec docs: https://relishapp.com/rspec/rspec-mocks/docs/basics/scope where we see an example of a double being added to an object and then being referred to in another instance, but this is cucumber and not RSpec, although we're using RSpec commands in the step definitions.  So the place to look is the steps that are using those RSpec commands, e.g. 
+but again, there's no indication of any mocking, stubbing, doubles or loggers.  I google the error message and the only place I see it is in the RSpec docs: [https://relishapp.com/rspec/rspec-mocks/docs/basics/scope](https://relishapp.com/rspec/rspec-mocks/docs/basics/scope) where we see an example of a double being added to an object and then being referred to in another instance, but this is Cucumber and not RSpec, although we're using RSpec commands in the step definitions.  So the place to look is the steps that are using those RSpec commands, e.g. 
 
 ```
     Then the event should be live
@@ -109,7 +118,7 @@ Then(/^the event should (still )?be live$/) do |ignore|
 end
 ```
 
-So the state we're carrying over is the @event instance, but that should get recreated for each scenario ... I try removing all the expectation steps from the scenarios, but the issue still occurs.  The failure is specifically on the attempt to ping the event start, and the error is thrown in the slack service when we try to send the slack message ... I take out that line and we pass:
+So the state we're carrying over is the `@event` instance, but that should get recreated for each scenario ... I try removing all the expectation steps from the scenarios, but the issue still occurs.  The failure is specifically on the attempt to ping the event start, and the error is thrown in the slack service when we try to send the slack message ... I take out that line and we pass:
 
 ```
   def send_slack_message(client, channel, text, user)
@@ -119,9 +128,9 @@ So the state we're carrying over is the @event instance, but that should get rec
 
 There's no mention of doubles in the SlackRubyClient github issues, but there is mention of some [thread leak issue](https://github.com/slack-ruby/slack-ruby-client/issues/104) that was fixed, but also mentions that the SlackRubyClient has a logger ... I try setting that to nil, in our Rails initializer, to no avail, so I go ahead and open an issue on the SlackRubyClient repo:
 
-https://github.com/slack-ruby/slack-ruby-client/issues/174
+[https://github.com/slack-ruby/slack-ruby-client/issues/174](https://github.com/slack-ruby/slack-ruby-client/issues/174)
 
-I seem to have fixed the issue by setting the slack client logger to the Rails.logger
+which I seem to have fixed the issue by setting the slack client logger to the Rails.logger
 
 ```
 Slack::Web::Client.new(logger: Rails.logger)
