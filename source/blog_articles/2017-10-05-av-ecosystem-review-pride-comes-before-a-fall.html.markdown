@@ -6,7 +6,7 @@ author: Sam Joseph
 
 ![pride](../images/pride.jpg)
 
-So they say that pride comes before a fall.  Just after being so pleased with myself for fixing the strange double leakage issue introduced by the new Slack gem (pass in Rails.logger) I got notices that I'd posted some secret tokens to GitHub.  In committing the latest vcr cassettes I had inadvertently included the slack and gitter api tokens.  It's a relatively easy fix with the following code in the VCR config:
+So they say that pride comes before a fall.  Just after being so pleased with myself for fixing the strange double leakage issue introduced by the new Slack gem (pass in Rails.logger), I got notices that I'd posted some secret tokens to GitHub.  In committing the latest vcr cassettes I had inadvertently included the Slack and Gitter api tokens.  It's a relatively easy fix with the following code in the VCR config:
 
 ```rb
   c.filter_sensitive_data('<SLACK_AUTH_TOKEN>') { ENV['SLACK_AUTH_TOKEN'] }
@@ -19,7 +19,7 @@ but I'll have to regenerate the existing tokens ... anyway, we're running out of
 2) deciding whether to add explicit cukes that check that the Slack and Gitter APIs are hit
 3) filling out all the pending unit tests
 
-I think I've got to start with item 1.  On agile-bot Michael and I set up a separate ENV var (`LIVE_ENV`) to specify whether the "production" Slack should be hit ... I had half a mind to check which URL the instance was running against, but probably easier to re-use the `LIVE_ENV` concept.  I take a stab with the ugly:
+I think I've got to start with item 1.  On agile-bot, Michael and I set up a separate ENV var (`LIVE_ENV`) to specify whether the "production" Slack should be hit ... I had half a mind to check which URL the instance was running against, but probably easier to re-use the `LIVE_ENV` concept.  I take a stab with the ugly:
 
 ```rb
   if ENV['LIVE_ENV'] == 'production'
@@ -55,7 +55,7 @@ I think I've got to start with item 1.  On agile-bot Michael and I set up a sepa
   end
 ```
 
-Which maybe should be loaded from a file - I have a funny reticence to load things from files.  I've never been so comfortable with grabbing stuff from files - a legacy from Java where it was such a pain?  In Ruby it's pretty damn trivial.  I guess when I have stuff formatted in one way, stepping through and reformatting for yaml or what have you causes my motivation to collapse.  What we really want in the end is to be looking all these up from the Slack API, so I'm going to leave that for a refactoring, get the rest of the unit tests to pass and try to get this onto staging to see if my claims that we can replace the agile-bot are close to true.
+Which maybe should be loaded from a file - I have a funny reticence to load things from files.  I've never been so comfortable with grabbing stuff from files - a legacy from Java where it was such a pain?  In Ruby it's pretty damn trivial.  I guess when I have stuff formatted in one way, stepping through and reformatting for yaml, or what have you, causes my motivation to collapse.  What we really want in the end is to be looking all these up from the Slack API, so I'm going to leave that for a refactoring, get the rest of the unit tests to pass and try to get this onto staging to see if my claims that we can replace the agile-bot are close to true.
 
 So I stab about a bit and with a fair amount of replication of tests (and some refactoring), I get the output of the RSpec test to this:
 
@@ -82,6 +82,6 @@ SlackService
       sends the correct slack message to the correct channels
 ```
 
-Which I think is a lot better coverage than we have had.  What I'd really like is a local report of coverage for this file for these tests.  There's also a lot of replication in the SlackService file itself, but I think I will leave a major refactor here until I've seen all our existing functionality replicated.  First let's get this PR merged, and onto staging where I can test all the settings against hitting a backup Slack instance, and then ease this into production ...
+Which I think is a lot better coverage than we have had.  What I'd really like is a local report of coverage for this file for these tests.  There's also a lot of replication in the SlackService file itself, but I think I will leave a major refactor here until I've seen all our existing functionality replicated.  First, let's get this PR merged and onto staging, where I can test all the settings against hitting a backup Slack instance, and then ease this into production ...
 
 
