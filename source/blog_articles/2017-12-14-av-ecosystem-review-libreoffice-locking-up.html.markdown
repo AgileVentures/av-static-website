@@ -6,7 +6,7 @@ So I'm back on the mac where things are running a bit more smoothly - maybe deve
 
 Now on to where I got in trouble on the PC.  Copying the subscription payment form to make the GiftAid and StandingOrder forms.  This time around I recreate the table element from scratch and it is pretty smooth:
 
-![](https://dl.dropbox.com/s/xw9a9vc78vl42qe/Screenshot%202017-12-14%2010.30.06.png?dl=0)
+![](https://dl.dropbox.com/s/b9epna64eh9ty85/Screenshot%202017-12-14%2011.25.05.png?dl=0)
 
 Now, on to standing order details:
 
