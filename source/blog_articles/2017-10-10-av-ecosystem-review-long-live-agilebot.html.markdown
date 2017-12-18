@@ -1,10 +1,17 @@
+title: AV EcoSystem Long Live AgileBot
+tags: 
+author: Sam Joseph
+---
+
+![live long and prosper](../images/live_long_and_prosper.png)
+
 The AgileBot rubyification yesterday was not without a slight speed bump yesterday as I had set the `LIVE_ENV` parameter incorrectly on production and got a 500 error when I tried to start the Martin Fowler scrum.  However we still managed a scrum, although I was slightly more stressed than usual with my internet also dropping in and out, but we had two full scrums yesterday with a new project proposed in each.  It seems like the welcoming language that I added is working backwards through time to revitalize the scrums - let's see how that goes today :-)
 
-Anyhow, as soon as the scrum was over I was able to fix my slip, and the "Kent" Beck scrum went out just as intended on the correct slack channels, as did the Autograders client meeting and the SHF project meeting, which automatically pinged the relevant channels, yay!  So now that's working I think I can safely shut down the separate node/hubot AgileBot instances and save us $14 a month in Heroku fees.
+Anyhow, as soon as the scrum was over I was able to fix my slip, and the "Kent" Beck scrum went out just as intended on the correct Slack channels, as did the Autograders client meeting and the SHF project meeting, which automatically pinged the relevant channels, yay!  So now that's working I think I can safely shut down the separate node/hubot AgileBot instances and save us $14 a month in Heroku fees.
 
 ![](https://dl.dropbox.com/s/0f1hjompo116pzr/Screenshot%202017-10-10%2009.53.44.png?dl=1)
 
-That's a good feeling.  Equivalent (monetarily at least) to signing a new Premium member.   In the process I also see that Redeemify production is costing us $7 a month.  I turn that off. Would be great to get more cost savings with the AgileVentures' WebSiteOne monolith that's currently costing us just under $90 a month.  $50 is two dynos on the Heroku standard plan:
+That's a good feeling.  Equivalent (monetarily at least) to signing a new Premium member.   In the process I also saw that Redeemify production is costing us $7 a month.  I turned that off.  Would be great to get more cost savings with the AgileVentures' WebSiteOne monolith that's currently costing us just under $90 a month.  $50 is two dynos on the Heroku standard plan:
 
 ![](https://dl.dropbox.com/s/ornq35b2xudjt05/Screenshot%202017-10-10%2009.57.56.png?dl=1)
 
@@ -20,9 +27,9 @@ I wonder if that implies that we should be optimising the VisitorsController?  W
 
 Anyhow, what I really wanted to do this morning was knock off a couple of quick features that "should" be easy now that we have the agile bot in Ruby.  
 
-1) hyperlink the URLs to videos/hangouts
-2) ensure that videos also get shared to project channels
-3) remove the dates from the automated pings
+1. hyperlink the URLs to videos/hangouts  
+2. ensure that videos also get shared to project channels  
+3. remove the dates from the automated pings  
 
 I start with 1) and start by refactoring the message contents in the test to DRY them out:
 
@@ -47,13 +54,13 @@ let(:message) { '<mock_url|MockEvent>' }
 ```
 see that fail and then make the change in the app code:
 
-```
+```rb
 message = "<#{hangout.hangout_url}|#{hangout.title}>"
 ```
 
-and then see all the tests pass.  Now what I needed to do was see that this had the correct effect in a slack instance, so I stared the rails instance locally, and checked I had the slack auth token pointing to the test slack instance.  Then, once I had properly sourced the bash file and removed the safeties on posting to slack from local I was able to see we were getting the correct message hyperlinking that I wanted (for so long!):
+and then see all the tests pass.  Now what I needed to do was see that this had the correct effect in a Slack instance, so I started the rails instance locally, and checked I had the Slack authorization token pointing to the test Slack instance.  Then, once I had properly sourced the bash file and removed the safeties on posting to Slack from local I was able to see we were getting the correct message hyperlinking that I wanted (for so long!):
 
-![](https://www.dropbox.com/s/a3k1yxm570u6s63/Screenshot%202017-10-10%2010.29.07.png?dl=0)
+![](https://dl.dropbox.com/s/a3k1yxm570u6s63/Screenshot%202017-10-10%2010.29.07.png?dl=0)
 
 And that was so easy that I was tempted to do the same with the video links, and since I was there I also ensured the videos got shared with project channels ... and I got that in a PR:
 
