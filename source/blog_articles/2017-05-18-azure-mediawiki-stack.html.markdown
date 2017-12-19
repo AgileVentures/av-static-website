@@ -67,19 +67,16 @@ Okay, so how did we put this complete NHS HLP wiki instance together?  Let's go 
 
 7. Add the Cite Extension
 
-    ```
-    ## Cite Extension
+  ## Cite Extension
 
-    wfLoadExtension( 'Cite' );
-    ```
+  wfLoadExtension( 'Cite' );
     
 8. VisualEditor setup
    
-   a) follow instructions at [https://www.mediawiki.org/wiki/Extension:VisualEditor](https://www.mediawiki.org/wiki/Extension:VisualEditor)
-   b) `wget https://extdist.wmflabs.org/dist/extensions/VisualEditor-REL1_28-93528b7.tar.gz` in extensions directory `~/apps/mediawiki/htdocs/extensions` 
-   c) add configuration to end of `LocalSettings.php`
+  a) follow instructions at [https://www.mediawiki.org/wiki/Extension:VisualEditor](https://www.mediawiki.org/wiki/Extension:VisualEditor)
+  b) `wget https://extdist.wmflabs.org/dist/extensions/VisualEditor-REL1_28-93528b7.tar.gz` in extensions directory `~/apps/mediawiki/htdocs/extensions` 
+  c) add configuration to end of `LocalSettings.php`
     
-    ```
     ## Visual Editor
 
     wfLoadExtension( 'VisualEditor' );
@@ -96,14 +93,11 @@ Okay, so how did we put this complete NHS HLP wiki instance together?  Let's go 
 
     // OPTIONAL: Enable VisualEditor's experimental code features
     #$wgDefaultUserOptions['visualeditor-enable-experimental'] = 1;
-    ```
 
-    d) add the Parsoid service following these instructions: [https://www.mediawiki.org/wiki/Parsoid/Setup](https://www.mediawiki.org/wiki/Parsoid/Setup) but note that first we have to install nodejs, which involved pulling in the nodesource:
+  d) add the Parsoid service following these instructions: [https://www.mediawiki.org/wiki/Parsoid/Setup](https://www.mediawiki.org/wiki/Parsoid/Setup) but note that first we have to install nodejs, which involved pulling in the nodesource:
 
-    ```sh
     $ wget -qO- https://deb.nodesource.com/setup_4.x | sudo bash -
     $ sudo apt-get install nodejs
-    ```
      
 and the above worked fine last week, but now I am getting:
 
