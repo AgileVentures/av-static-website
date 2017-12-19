@@ -30,7 +30,7 @@ Okay, so how did we put this complete NHS HLP wiki instance together?  Let's go 
       $wgGroupPermissions['*']['edit'] = false;
       $wgGroupPermissions['*']['createpage'] = false;
       
- f) add email notification settings (requires azure sendmail addon):  
+  f) add email notification settings (requires azure sendmail addon):  
  
       ## Email notifications
 
@@ -47,7 +47,7 @@ Okay, so how did we put this complete NHS HLP wiki instance together?  Let's go 
 
       $wgDefaultUserOptions['enotifwatchlistpages'] = true;
       
- g) consider enabling logging - we did have it working at one point with the following:  
+  g) consider enabling logging - we did have it working at one point with the following:  
 
 
       ## Logging
