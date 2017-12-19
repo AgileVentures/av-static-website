@@ -1,4 +1,12 @@
-Well, I am very late to the blogface this morning after doing a 7.5km job and then experimenting with making an eggs benedict for the first time in my life.  To compound it I had two podcasts to post to Twitter and Slack and in an exhausted over-fed state I had little resistance to reviewing all my slack and email messages.  I stopped short of looking at all the twitter notifications.  There's definitely some kind of micro-message addiction going on here.   I can't remember what I was exicted to work on.  Maybe it was clipping the time/dates off the Slack messages.  I'm pretty pleased with how far we've come in dropping the old Agile bot (leading to $21 a month savings), and producing a new Ruby agile-bot as part of our Rails monolith that is now messaging like this:
+---
+title: AV EcoSystem Late to the Blogface
+tags: 
+author: Sam Joseph
+---
+
+![late](../images/late.jpg)
+
+Well, I am very late to the blogface this morning after doing a 7.5km jog and then experimenting with making an eggs benedict for the first time in my life.  To compound it I had two podcasts to post to Twitter and Slack and in an exhausted over-fed state I had little resistance to reviewing all my Slack and email messages.  I stopped short of looking at all the Twitter notifications.  There's definitely some kind of micro-message addiction going on here.   I can't remember what it was I was excited to work on.  Maybe it was clipping the time/dates off the Slack messages.  I'm pretty pleased with how far we've come in dropping the old Agile bot (leading to $21 a month savings), and producing a new Ruby agile-bot as part of our Rails monolith that is now messaging like this:
 
 ![](https://dl.dropbox.com/s/wo71jxlx2knvr6m/Screenshot%202017-10-11%2010.31.38.png?dl=1)
 
@@ -6,7 +14,7 @@ I've added what I hope is a welcoming tone to both the reminder and the event ti
 
 ![](https://dl.dropbox.com/s/998m7v4fzmc747h/Screenshot%202017-10-11%2010.33.29.png?dl=1)
 
-but it makes no sense in the context of the skype chat.  We did have one member a bit confused by the new syntax, since the direct links to the hangouts etc. were no longer visible.  Not ideal - perhaps we need a click to join message?  What I'd really like to work out is where in the code flow the date/timestamp is getting added to the event instance title ... a little search and I think it's being set in the form that starts the event instance in the event show page, which uses a topic helper in the EventHelper:
+but it makes no sense in the context of the Slack chat.  We did have one member a bit confused by the new syntax, since the direct links to the hangouts etc. were no longer visible.  Not ideal - perhaps we need a click to join message?  What I'd really like to work out is where in the code flow the date/timestamp is getting added to the event instance title ... a little search and I think it's being set in the form that starts the event instance in the event show page, which uses a topic helper in the EventHelper:
 
 ```rb
 def topic(event, event_schedule)
@@ -14,7 +22,7 @@ def topic(event, event_schedule)
 end
 ```
 
-Now rather than changing that - perhaps I can set it up so that the post to Slack uses the event name and not the event instance title.  That would mean adding more mocks to the slack service spec - and also highlights the need for acceptance tests that exercise this pathway (and make the high level motivations clear).  If I'd got to the computer at 9am maybe - right now I just want to get a quick fix and move on.  Particularly I want to move on to even higher level review for Thursday and Friday, so can I slip this out?  Or will I get distracted by replacing the ActiveRecord models in the SlackService spec with mock_models ... which I do, but then I think, actually perhaps displaying the UTC time and day is kind of useful in our Slack since people are in different timezones and often referring to UTC can be helpful as a kind of baseline.  Hmmm, maybe I should just go for a quick refactoring ticket to scratch my code itch?
+Now rather than changing that - perhaps I can set it up so that the post to Slack uses the event name and not the event instance title.  That would mean adding more mocks to the slack Service spec - and also highlights the need for acceptance tests that exercise this pathway (and make the high level motivations clear).  If I'd got to the computer at 9am maybe - right now I just want to get a quick fix and move on.  Particularly I want to move on to even higher level review for Thursday and Friday, so can I slip this out?  Or will I get distracted by replacing the ActiveRecord models in the SlackService spec with mock_models ... which I do, but then I think, actually perhaps displaying the UTC time and day is kind of useful in our Slack since people are in different timezones and often referring to UTC can be helpful as a kind of baseline.  Hmmm, maybe I should just go for a quick refactoring ticket to scratch my code itch?
 
 I've also got the dependabot upgrades to work through ... I've merged in the bump to rails 4.2.10.  I'm wondering if I should just splurge in all the rest that are passing ... well, anyway, I got a chunk of the SlackService spec working with mock_models:
 
