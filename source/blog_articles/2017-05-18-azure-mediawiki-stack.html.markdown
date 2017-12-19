@@ -7,7 +7,6 @@ author: Sam Joseph
 
 ![mediawiki](/images/MediaWiki.svg)
 
-
 Okay, so how did we put this complete NHS HLP wiki instance together?  Let's go through it step by step:
 
 1. Create a Bitnami account, and go to the console for "Azure Launchpad"
@@ -15,7 +14,7 @@ Okay, so how did we put this complete NHS HLP wiki instance together?  Let's go 
 3. Choose Basic A0 type with shared virtual core and 0.75Gb of RAM, and select 'West Europe'
 4. Wait for that to launch
 
-![box launching](https://www.dropbox.com/s/q7jtjvxeshg8eql/Screenshot%202017-05-17%2011.13.31.png?dl=1)
+  ![box launching](https://dl.dropbox.com/s/q7jtjvxeshg8eql/Screenshot%202017-05-17%2011.13.31.png?dl=1)
 
 5. ssh into the box using the provided password and start the configuration process
 6. edit `/home/bitnami/apps/mediawiki/htdocs/LocalSettings.php` (I like `nano`)  
@@ -76,7 +75,7 @@ Okay, so how did we put this complete NHS HLP wiki instance together?  Let's go 
     
 8. VisualEditor setup
    
-   a) follow instructions at https://www.mediawiki.org/wiki/Extension:VisualEditor 
+   a) follow instructions at [https://www.mediawiki.org/wiki/Extension:VisualEditor](https://www.mediawiki.org/wiki/Extension:VisualEditor)
    b) `wget https://extdist.wmflabs.org/dist/extensions/VisualEditor-REL1_28-93528b7.tar.gz` in extensions directory `~/apps/mediawiki/htdocs/extensions` 
    c) add configuration to end of `LocalSettings.php`
     
@@ -99,7 +98,7 @@ Okay, so how did we put this complete NHS HLP wiki instance together?  Let's go 
     #$wgDefaultUserOptions['visualeditor-enable-experimental'] = 1;
     ```
 
- d) add the Parsoid service following these instructions: https://www.mediawiki.org/wiki/Parsoid/Setup but note that first we have to install nodejs, which involved pulling in the nodesource:
+    d) add the Parsoid service following these instructions: [https://www.mediawiki.org/wiki/Parsoid/Setup](https://www.mediawiki.org/wiki/Parsoid/Setup) but note that first we have to install nodejs, which involved pulling in the nodesource:
 
     ```sh
     $ wget -qO- https://deb.nodesource.com/setup_4.x | sudo bash -
