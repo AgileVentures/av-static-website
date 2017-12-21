@@ -1,4 +1,12 @@
-So too much food and a late night means I'm late to the blog-face again.  There's also the Slack and email messages that somehow distracted me too ... a:
+---
+title: AV EcoSystem How to Get Started
+tags: 
+author: Sam Joseph
+---
+
+![how do you get started](../images/how_do_you_get_started.jpg)
+
+So, too much food and a late night means I'm late to the blog-face again.  There's also the Slack and email messages that somehow distracted me too ... let's think about some of the sources of folks coming to our site:
 
 1) Google Adwords
 2) Twitter
@@ -6,7 +14,7 @@ So too much food and a late night means I'm late to the blog-face again.  There'
 4) LinkedIn
 5) Medium
 
-Google Adwords is dropping a lot of people on our site, and a fair number of them are signing up and giving us their email address.  Far fewer are getting into slack and getting active.  We're running social media campaigns that are giving us likes on Twitter and Facebook, but according to analytics they're miniscule in terms of getting folks signed up on our site.  About 20 users between them compared to over 10,000 from Google adwords and organic Google search.  I'm posting my own materials on Twitter and Facebook as well, and we're running campaigns to get free mob programming and f2f sessions if folks follow us on twitter and like us on facebook.  From my own experience that's got at least one member signed up to Premium Mob and just upgraded to F2F.  The last few Premium sign ups seem to have come from folks who came in through the MOOC or from one of my podcast appearances.  Our most recent paid project came in through chatlio, but how did that charity find our nonprofits site?
+Google Adwords is dropping a lot of people on our site, and a fair number of them are signing up and giving us their email address.  Far fewer are getting into Slack and getting active.  We're running social media campaigns that are giving us likes on Twitter and Facebook, but according to analytics they're miniscule in terms of getting folks signed up on our site.  About 20 users between them compared to over 10,000 from Google Adwords and organic Google search.  I'm posting my own materials on Twitter and Facebook as well, and we're running campaigns to get free mob programming and F2F sessions if folks follow us on Twitter and like us on facebook.  From my own experience that's got at least one member signed up to Premium Mob who's also just upgraded to F2F.  The last few Premium sign ups seem to have come from folks who came in through the MOOC or from one of my podcast appearances.  Our most recent paid project came in through chatlio, but how did that charity find our nonprofits site?
 
 I think about re-enabling chatlio (or something similar) on just our premium pages on the main site - and putting it back on the nonprofits site.  Maybe complete the charity contract first.  The other idea I have here is what about we put our Premium Mob and F2F campaigns in Google AdWords and advertise them directly?
 
@@ -44,5 +52,5 @@ Or would it be better to focus earlier in the flow on the landing page itself.  
 
 ![](https://dl.dropbox.com/s/78z9ugrvabo8f7h/Screenshot%202017-10-13%2010.44.57.png?dl=1)
 
-I'm sure there are a series of Rails caching operations that we could use to improve these, but tuning the current monolith while trying to work out what's happening with really slow feedback about whether site performance is improving does not fill me with excitement ... well I'll think about it over the weekend.  I guess next week I could spend the morning av ecosystem review blogs setting up a middleman site and seeing how easily I can re-create the current home page in it ... Or is there something I should tweak in getting started first?  Maybe just encouraging folks to click join on projects?
+I'm sure there are a series of Rails caching operations that we could use to improve these, but tuning the current monolith while trying to work out what's happening with really slow feedback about whether site performance is improving does not fill me with excitement ... well I'll think about it over the weekend.  I guess next week I could spend the morning av ecosystem review blogs setting up a middleman site and seeing how easily I can re-create the current home page in it ... Or is there something I should tweak in getting started first?  Maybe just encouraging folks to click join on the project pages?
 
