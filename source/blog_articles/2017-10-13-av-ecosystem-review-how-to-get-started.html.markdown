@@ -8,11 +8,11 @@ author: Sam Joseph
 
 So, too much food and a late night means I'm late to the blog-face again.  There's also the Slack and email messages that somehow distracted me too ... let's think about some of the sources of folks coming to our site:
 
-1) Google Adwords
-2) Twitter
-3) Facebook
-4) LinkedIn
-5) Medium
+1. Google Adwords
+2. Twitter
+3. Facebook
+4. LinkedIn
+5. Medium
 
 Google Adwords is dropping a lot of people on our site, and a fair number of them are signing up and giving us their email address.  Far fewer are getting into Slack and getting active.  We're running social media campaigns that are giving us likes on Twitter and Facebook, but according to analytics they're miniscule in terms of getting folks signed up on our site.  About 20 users between them compared to over 10,000 from Google Adwords and organic Google search.  I'm posting my own materials on Twitter and Facebook as well, and we're running campaigns to get free mob programming and F2F sessions if folks follow us on Twitter and like us on facebook.  From my own experience that's got at least one member signed up to Premium Mob who's also just upgraded to F2F.  The last few Premium sign ups seem to have come from folks who came in through the MOOC or from one of my podcast appearances.  Our most recent paid project came in through chatlio, but how did that charity find our nonprofits site?
 
