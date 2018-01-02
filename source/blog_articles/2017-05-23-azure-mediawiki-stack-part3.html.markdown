@@ -7,11 +7,11 @@ author: Sam Joseph
 
 ![mediawiki](/images/MediaWiki.svg)
 
-Ahhh, so the rebuilding the MediaWiki stack on Azure leaks over three days and I suspect it may be more.  Yesterday I got stuck trying to open a port for the VisualEditor and I suspect there will be other blocks, but that's why I'm forcing myself through this to have it all documented so it's not a pain when we are really short on time.  I also got distracted playing with inkscape this morning, but that's another story.
+Ahhh, so rebuilding the MediaWiki stack on Azure leaks over three days and I suspect it may be more.  Yesterday I got stuck trying to open a port for the VisualEditor and I suspect there will be other blocks, but that's why I'm forcing myself through this to have it all documented so it's not a pain when we are really short on time.  I also got distracted playing with inkscape this morning, but that's another story.
 
-I'm not sure that I have time, but I couldn't help checking to see if removing the security rule would prevent the VisualEditor from working, and unless there's some kind of caching going on that I understand, it looks like the security rule really isn't necessary.  I certainly suspected that, since it isn't connected up to anything else in the system.  So in principle I can delete those security rules and that's one less thing to maintain and organise.  Confusing, because we definitely need security rules like that to work with AWS.  Presumably we'd need them for some other kinds of configuration on Azure ...
+I'm not sure that I have time, but I couldn't help checking to see if removing the security rule in Azure would prevent the VisualEditor from working, and unless there's some kind of caching going on that I understand, it looks like the security rule really isn't necessary.  I certainly suspected that, since it isn't connected up to anything else in the system.  So in principle I can delete those security rules and that's one less thing to maintain and organise.  Confusing, because we definitely need security rules like that to work with AWS.  Presumably we'd need them for some other kinds of configuration on Azure ...
 
-So the next thing to set up is the SSL, which I remember as somewhat complicated AND there's making sure that the Visual Editor continues to work with the SSL on.  There's also the moderation component, the wikieditor, and the banner.  Also I'd like to see if there's some way to run MediaWiki's cucumber tests
+The next thing to set up is the SSL, which I remember as somewhat complicated AND there's making sure that the Visual Editor continues to work with the SSL on.  There's also the moderation component, the wikieditor, and the banner.  Also I'd like to see if there's some way to run MediaWiki's cucumber tests
 
 Although I see from the manual that we musn't run the unit tests on a production wiki: https://www.mediawiki.org/wiki/Manual:PHP_unit_testing/Running_the_unit_tests  Perhaps the browser testing is safer: https://www.mediawiki.org/wiki/Browser_testing but it looks like these might also make a mess of a production system.
 
@@ -63,11 +63,11 @@ $ sudo apt-get install git
 $ git clone https://github.com/edwardspec/mediawiki-moderation
 ```
 
-All the instructions for that are here: https://www.mediawiki.org/wiki/Extension:Moderation#Installation but note that we also need to ensure that the root git directory gets renamed from `mediawiki-moderation` to `Moderation`.  I can see that's all working as expected on IE11 and also that the maintainer of the Moderation extension has pushed my suggested change to the moderation banner into the master branch of the Moderation GitHub repo.
+All the instructions for that are [here](https://www.mediawiki.org/wiki/Extension:Moderation#Installation) but note that we also need to ensure that the root git directory gets renamed from `mediawiki-moderation` to `Moderation`.  I can see that's all working as expected on IE11 and also that the maintainer of the Moderation extension has pushed my suggested change to the moderation banner into the master branch of the Moderation GitHub repo.
 
-There's also the CSS to set up, so that we can have our banner throughtout
+There's also the CSS to set up, so that we can have our banner throughout
 
-```
+```php
 ## Allow Common.css to load on restricted pages 
 
 $wgAllowSiteCSSOnRestrictedPages = true;
@@ -76,7 +76,7 @@ $wgAllowSiteCSSOnRestrictedPages = true;
 
 and then drop the following into the Mediawiki:Common.css page:
 
-```
+```css
 /* CSS placed here will be applied to all skins */
 
 #mw-head{
@@ -158,9 +158,10 @@ If I recall I made some edits to the Vector template to get the HLP banner in th
 ---
 > 
 ```
-Which is enough to produce our nice resizable banner.  Okay time to get that SSL in there.  I had thought this was going to be a real pain on Azure, but actually it's all pretty much Apache configuration.  Maybe I get into that tomorrow, as I suspect there will be some sticking points ... I've posted some notes about how I did it last time:
 
-https://community.bitnami.com/t/installing-certbot-for-lets-encrypt-ssl-certificate/46431/2
+Which is enough to produce our nice resizable banner.  Okay time to get that SSL in there.  I had thought this was going to be a real pain on Azure, but actually it's all pretty much Apache configuration.  Maybe I'll get into that tomorrow, as I suspect there will be some sticking points ... I've posted some notes about how I did it last time:
 
-and I need to follow up with the developer there.  Let's try for that in [part 4](http://nonprofits.agileventures.org/2017/05/24/azure-mediawiki-stack-part4/) and if I'm lucky I'll also get to testing the backup stuff ... and also test importing all the data from the production system into the backup system.
+[https://community.bitnami.com/t/installing-certbot-for-lets-encrypt-ssl-certificate/46431/2](https://community.bitnami.com/t/installing-certbot-for-lets-encrypt-ssl-certificate/46431/2)
+
+and I need to follow up with the developer there.  Let's try for that in [part 4](http://nonprofits.agileventures.org/2017/05/24/azure-mediawiki-stack-part4/) and if I'm lucky I'll also get to testing the backup stuff ... and also test importing all the data from the production system into the backup system ...
 
