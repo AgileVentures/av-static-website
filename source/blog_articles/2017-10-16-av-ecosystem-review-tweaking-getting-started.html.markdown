@@ -16,7 +16,7 @@ I mean, maybe we shouldn't hyperlink off our site here, but people can use the b
 
 ![](https://dl.dropbox.com/s/6tu2ooyrp4ccj4l/Screenshot%202017-10-16%2010.30.47.png?dl=0)
 
-I add optional to the hyperlink to step 7 (since that is optionally starting your own project), and leave it at that.  I recall that Will was saying that the "listen in" phrase in the non-logged in version of the link to the scrum was the key thing that got him involved.  Perhaps we could adjust the phrasing for loggen in users too, to get more in the scrums ...  I create a ticket for that:
+I add optional to the hyperlink to step 7 (since that is optionally starting your own project), and leave it at that.  I recall that Will was saying that the "listen in" phrase in the non-logged in version of the link to the scrum was the key thing that got him involved.  Perhaps we could adjust the phrasing for logged in users too, to get more in the scrums ...  I create a ticket for that:
 
 [https://github.com/AgileVentures/WebsiteOne/issues/1915](https://github.com/AgileVentures/WebsiteOne/issues/1915)
 
