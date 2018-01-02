@@ -1,3 +1,9 @@
+---
+title: AV EcoSystem Tweaking Getting Started
+tags: 
+author: Sam Joseph
+---
+
 Busy weekend and errands this morning mean I'm late to the blogface again, but perhaps that's a good excuse to just focus on tweaking the "Getting Started" page, rather than building a middleman site as a performant home page replacement.  I start with the initial "Getting Started" page where I remove some inactive projects and add some new ones. I see that over the weekend Federico has edited the same page, to add an animation of the flow about how to get started saying hello in Slack, which is great.  There's also a color scheme change.  I go in and make my project edits.
 
 I was going to add a screenshot of the welcome process, but as I look carefully I see Federico is actually copy/pasting from the precise text in the page.  Text I was hoping to remove and replace with an image to make the whole thing less wordy ... hmm, I put back the text I removed and remove the image:
@@ -20,7 +26,7 @@ I add optional to the hyperlink to step 7 (since that is optionally starting you
 
 [https://github.com/AgileVentures/WebsiteOne/issues/1915](https://github.com/AgileVentures/WebsiteOne/issues/1915)
 
-but I have added "All Welcome! Discuss Any Project, Ask Any Question!" to the title of the events.  Maybe I can just tweak that ...  is this enough:
+but I have added "All Welcome! Discuss Any Project, Ask Any Question!" to the title of the events.  Maybe I can just tweak that ... or will this be enough?
 
 ![](https://dl.dropbox.com/s/rnlzuzl9tobqp3c/Screenshot%202017-10-16%2010.47.01.png?dl=0)
 
