@@ -9,15 +9,15 @@ author: Sam Joseph
 
 Well I totally failed to get down to my blogging today, checking Slack and Email first.  And blogging this week has become a series on getting the Azure MediaWiki stack up, which arguably should be a single document ... but then lots of people break complex things over multiple blogs.  It will need a lot of polishing back and forth as my stream of consciousness gets in the way of documenting things.  At least yesterday I managed to feel like I was making progress by getting the banner in there so that the cloned site looks like this:
 
-![cloned site with banner](https://www.dropbox.com/s/cze89vat8f09xs5/Screenshot%202017-05-24%2009.50.00.png?dl=1)
+![cloned site with banner](https://dl.dropbox.com/s/cze89vat8f09xs5/Screenshot%202017-05-24%2009.50.00.png?dl=1)
 
 So the remaining hurdle is just setting up SSL, which as I was saying I'd partially documented in some comments in a post on the bitnami community:
 
-https://community.bitnami.com/t/installing-certbot-for-lets-encrypt-ssl-certificate/46431/2
+[https://community.bitnami.com/t/installing-certbot-for-lets-encrypt-ssl-certificate/46431/2](https://community.bitnami.com/t/installing-certbot-for-lets-encrypt-ssl-certificate/46431/2)
 
 The original post points us to the bitnami documentation on using LetsEncrypt:
 
-https://docs.bitnami.com/aws/components/apache/#how-to-install-the-lets-encrypt-client
+[https://docs.bitnami.com/aws/components/apache/#how-to-install-the-lets-encrypt-client](https://docs.bitnami.com/aws/components/apache/#how-to-install-the-lets-encrypt-client)
 
 Which walks us through installing something called certbot, during which I got/get the following error:
 
@@ -84,7 +84,7 @@ IMPORTANT NOTES:
 
 which then needs to be installed in the Apache webserver according to the docs, but when I try the next step:
 
-```
+```sh
 sudo ln -s /etc/letsencrypt/live/hlp-wiki-develop.agileventures.org/fullchain.pem /opt/bitnami/apache2/conf/server.crt
 sudo ln -s /etc/letsencrypt/live/hlp-wiki-develop.agileventures.org/privkey.pem /opt/bitnami/apache2/conf/server.key
 ```
@@ -97,7 +97,7 @@ ln: failed to create symbolic link ‘/opt/bitnami/apache2/conf/server.key’: F
 
 and so I start to wonder if I'm following different instructions from last time.  I restarted the server
 
-```
+```sh
 sudo /opt/bitnami/ctlscript.sh restart apache
 ```
 
@@ -144,13 +144,13 @@ but the https was not working.  My history from doing this the last time around 
 
 but I can tell I'm not getting the full history as I don't see any reference to letsencrypt and I was definitely running the following at some point:
 
-```
+```sh
 ./letsencrypt-auto --apache --apache-server-root /opt/bitnami/apache2 --apache-challenge-location /opt/bitnami/apache2 --apache-handle-sites FALSE --apache-vhost-root /opt/bitnami/apache2/conf/bitnami -d <domain-name>
 ```
 
 I had a poke around in the Apache config and saw differences that made me wonder if the new Bitnami stack had changed, or if I had just run a different certbot command this time around.  Https wasn't working, but I saw the cert was from example.com, so I backed up the existing cert and key files and got the link command to work:
 
-```
+```sh
 $ sudo mv  /opt/bitnami/apache2/conf/server.crt /opt/bitnami/apache2/conf/server-original.crt
 $ sudo mv  /opt/bitnami/apache2/conf/server.key /opt/bitnami/apache2/conf/server-original.key
 $ sudo ln -s /etc/letsencrypt/live/hlp-wiki-develop.agileventures.org/fullchain.pem /opt/bitnami/apache2/conf/server.crt
