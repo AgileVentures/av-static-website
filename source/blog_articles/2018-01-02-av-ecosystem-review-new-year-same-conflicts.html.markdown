@@ -18,9 +18,9 @@ Here's the list of issues with the alpha version that the client identified:
   - Tab sequence should be – see Member_Form_Tab_Seq.pdf – similar sequences for other forms.  Unnumbered keyable fields do not need to appear in the tab sequence (but could after numbered fields)
 
 * Membership DB
- - We can remove the fields: “Gift_Donor”, “Fax”, “Diet_Rqts”, “Address”, “Crap”, “C_N” – see comments to the DB specification
- - Add the field “Address4”
- - Reformat the content of “Member_No” 
+  - We can remove the fields: “Gift_Donor”, “Fax”, “Diet_Rqts”, “Address”, “Crap”, “C_N” – see comments to the DB specification
+  - Add the field “Address4”
+  - Reformat the content of “Member_No” 
 
 * Subscription Payment Form
   - Don't need "Member Card" field as we don't use membership cards
