@@ -38,7 +38,7 @@ and the site can only be accessed over https, but the problem is now that the Vi
 
 So where I'm confused now is how good a clone I have of the first box, and the best way to upgrade the first box.  I have another layer of indirection with the first box using the wiki.healthylondon.org domain name, but I don't think that should affect things too seriously ... is it possible that I was completely misdiagnosing the VisualEditor failures?  It's possible, because we had that very tricky bug where only pages with outstanding edits held in the moderation queue were blocking the editor, but I thought that was only on IE.
 
-I checked the chrome developer tools network panel and all the requests to the VisualEditor are going across https.  I'll check on IE and then I think its time to get down to work.  I want to:
+I checked the chrome developer tools network panel and all the requests to the VisualEditor are going across https.  I'll check on IE but if it's working there then we've completed the staging setup and now its really time to get down to work.  I want to:
 
 1. clone across the data from the production server
 2. run backups
@@ -46,4 +46,4 @@ I checked the chrome developer tools network panel and all the requests to the V
 4. experiment with the spam filters suggested by the moderation extension maintainer
 5. use this as a base to test out other things like defaulting create page to the VisualEditor, etc.
 
-What I'd really like to do is have a mechanism for "switching" the production server to the newly created box and retiring the old one, so that I can avoid having to upgrade the boxes in place.  It seems like that switching would require DNS changes that take a long time to propagate.  I wonder if Azure has some mechanism for switching between virtual machines ...?  What I'd really like is a broader team to do this all with, but that'd require another level of funding ...
+What I'd really like to do is have a mechanism for "switching" the production server to the newly created box and retiring the old one, so that I can avoid having to upgrade the boxes in place.  It seems like that switching would require DNS changes that take a long time to propagate.  I wonder if Azure has some mechanism for switching between virtual machines ...?  What I'd really like is a bigger team to do this all with, but that'd require another level of funding ...
