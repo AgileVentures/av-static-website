@@ -13,3 +13,17 @@ So I managed to create the adjusted countries table by just allowing the db to c
 ![](https://dl.dropbox.com/s/rkw7tt19t85jtqu/Screenshot%202018-01-08%2009.54.07.png?dl=0)
 
 But now I can't insert any records.  Seems like we lost all the auto-value settings on all the table IDs somewhere last week.  I'd better send this revised version off to the client, before they start testing the buggy one I sent on Friday.
+
+> Hope you had a good weekend and apologies again for the deadline slippage.
+
+> We've just been working on the system and if you do run any more tests I'd encourage you to work against this version (rather than the one sent on Friday):
+
+LINK TO BETA VERSION 2
+
+> This one has the the UK and USA at the top of the countries list, and another insert bug fixed (or rather refixed).
+
+> Given that we'll behind schedule we'll try and give you daily updates this week.  However - please don't feel obliged to test things daily.  We just want to make sure that when you do get a chance to test that you're working against the latest and greatest.
+
+> Again, we plan to have all your items of feedback addressed by Friday.
+
+> Best, Sam
