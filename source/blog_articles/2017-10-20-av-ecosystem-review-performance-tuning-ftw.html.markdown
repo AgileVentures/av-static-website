@@ -1,10 +1,18 @@
+---
+title: AV EcoSystem Performance Tuning
+tags: 
+author: Sam Joseph
+---
+
+![preformance tuning](../images/preformance_tuning.jpg)
+
 Late to the blogface yada, yada, yada.  I'm really enjoying performance tuning.  Let's take another look at what's going on.  I can see from yesterday's test runs that I quickly pushed the AV site into to heavy memory error territory.  I also restarted the server after the tests and what's interesting is to see that we actually start encountering memory errors on the staging server in the absence of performance testing:
 
 ![heroku metrics](https://dl.dropbox.com/s/532rzq46emgci3h/Screenshot%202017-10-20%2010.19.45.png?dl=0)
 
-The staging server is not coming under any particular load, which implies that we've got some sort of memory leak just in the resting state of the server.  Not ideal.  It's also clear that the simple throw money a the problem would be to double the size of the memory, and help Heroku with their bottom line, but it would be far more satisfying to actually solve the problem.  I've had no follow up on my question in the issues of `derailed_benchmarks` about why we get an error running `perf:mem_over_time` on the production app locally.  However the Heroku metrics indicate we do have a memory leak, so perhaps we can skip that and move on the analysis phase.  All the `perf:mem_over_time` operation tells us is that we are using 211MiB on startup, which I can see matches the restart value for memory usage on heroku.  Let's try the "Dissecting a Memory Leak" suggestion: `perf:objects`.  That may just hit the same error, and in fact is does. 
+The staging server is not coming under any particular load, which implies that we've got some sort of memory leak just in the resting state of the server.  Not ideal.  It's also clear that the simple throw money at the problem would be to double the size of the memory, and help Heroku with their bottom line, but it would be far more satisfying to actually solve the problem.  I've had no follow up on my question in the issues of `derailed_benchmarks` about why we get an error running `perf:mem_over_time` on the production app locally.  However the Heroku metrics indicate we do have a memory leak, so perhaps we can skip that and move on the analysis phase.  All the `perf:mem_over_time` operation tells us is that we are using 211MiB on startup, which I can see matches the restart value for memory usage on heroku.  Let's try the "Dissecting a Memory Leak" suggestion: `perf:objects`.  That may just hit the same error, and in fact is does. 
 
-I had two quick ideas for fixes - turning off https locally and checking I can see the app in a browser running locally in production mode.  I did the former and was able to do the latter, and didn't see an improvement.  But then realised I was turning off https in LocalSupport, not WebSiteOne.  I switched that off and we were in business:
+I had two quick ideas for fixes - turning off https locally and checking that I can see the app in a browser running locally in production mode.  I did the former and was able to do the latter, and didn't see an improvement.  But then realised I was turning off https in LocalSupport, not WebSiteOne.  I switched that off and we were in business:
 
 ```
 → AIRBRAKE_PROJECT_ID=6 AIRBRAKE_API_KEY=b681e09 bundle exec derailed exec perf:mem_over_time
@@ -53,7 +61,7 @@ PID: 92587
 ...
 ```
 
-So what we are waiting to see here is if the memory never levels off.  Another waiting activituy.  And actually sometimes the memory level is dropping before gradually creeping up again - hmmm.  And nowhere near the levels we're seeing running this on Heroku.  Of course this test is kind of profiling what's happening locally on the OSX machine, not whatever virtual machine is in use on Heroku.  Here's our puma config:
+So what we are waiting to see here is if the memory never levels off.  Another waiting activity.  And actually sometimes the memory level is dropping before gradually creeping up again - hmmm.  And nowhere near the levels we're seeing running this on Heroku.  Of course this test is profiling what's happening locally on the OSX machine, not whatever virtual machine is in use on Heroku.  Here's our puma config:
 
 ```
 workers Integer(ENV['PUMA_WORKERS'] || 3)
@@ -110,10 +118,10 @@ retained memory by location
 
 and various other stuff that makes it feel like it's the event scheduling time and timezone stuff that's causing the biggest memory headaches.  The Puma worker killer is a stop gap.  I guess the best looking options are:
 
-1. try removing the `nearest_time_zone` gem since it's the 
+1. try removing the `nearest_time_zone` gem since it's the biggest memory hog
 2. dissect the visitors index.html.erb file to work out where it's snagging on memory
 
-I tried removing the timing section and re-running the memory performance over time, but it just jumped up.  I run the perf:objects again and that knocks the index.html.erb file out of the "retained memory by location" list.  I notice that the home page is not using the application layout for some reason.  Time with zone from active_support is still being heavily used.  It seems like ice_cube is being heavily activated, even when I think I've removed the time/scheduling stuff from the home page.  I wonder if that's just its resting state ...?  I run the analysis again removing everything from the home page and yes the icecube stuff disappears.  It looks like we are rendering other sub-elements that are pulling in info on event scheduling hmmm ... so I guess I should analyze the different partials:
+I tried removing the timing section and re-running the memory performance over time, but it just jumped up.  I ran the perf:objects again and that knocked the index.html.erb file out of the "retained memory by location" list.  I notice that the home page is not using the application layout for some reason.  Time with zone from active_support is still being heavily used.  It seems like ice_cube is being heavily activated, even when I think I've removed the time/scheduling stuff from the home page.  I wonder if that's just its resting state ...?  I run the analysis again removing everything from the home page and yes the icecube stuff disappears.  It looks like we are rendering other sub-elements that are pulling in info on event scheduling hmmm ... so I guess I should analyze the different partials:
 
 1) _head.html.erb: javascript and stylesheet include tags - nothing suspicious
 2) _navbar.html.erb: checks if user is signed in, user presentation, checking for next event (avoided on home page?)
