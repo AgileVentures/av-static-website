@@ -1,10 +1,10 @@
 ---
-title: AV EcoSystem Performance Tuning
+title: AV EcoSystem Performance Tuning FTW
 tags: 
 author: Sam Joseph
 ---
 
-![preformance tuning](../images/preformance_tuning.jpg)
+![preformance tuning](../images/performance_tuning.jpg)
 
 Late to the blogface yada, yada, yada.  I'm really enjoying performance tuning.  Let's take another look at what's going on.  I can see from yesterday's test runs that I quickly pushed the AV site into to heavy memory error territory.  I also restarted the server after the tests and what's interesting is to see that we actually start encountering memory errors on the staging server in the absence of performance testing:
 
