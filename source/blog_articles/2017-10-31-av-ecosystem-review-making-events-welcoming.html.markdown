@@ -4,7 +4,7 @@ tags:
 author: Sam Joseph
 ---
 
-![welcoming](../images/welcoming.jpg)
+![welcoming](../images/welcoming.png)
 
 So I have the new code on staging to avoid reposting old YouTube URLs on Slack. So let's start by pushing that out to production:
 

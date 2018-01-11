@@ -5,7 +5,7 @@ tags: podcasts, heros, communication, social media, email, brand, motivation, in
 author: Sam Joseph
 ---
 
-![life is complicated](/images/life_is_complicated.png)
+![life is complicated](/images/life_is_complicated.jpg)
 
 Well no surprise to anyone, but life appears to be rather complex :-) I try to listen to a tech podcast daily to keep up with techworld and I just listened to [Jenn Schiffer on ">Code"](https://www.greaterthancode.com/podcast/episode-020-jenn-schiffer/) which was a fascinating episode.  Of the many and complex thoughts it spurred, here are two:
 
