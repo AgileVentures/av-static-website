@@ -51,6 +51,7 @@ So let's work through each of these and pull up some numbers:
 
     11 users were active in the last 30 days
 
+    ```
     | #Actions   | UserName       |
     | ---------- | -------------- |
     | 62         | JTong          |
@@ -64,6 +65,7 @@ So let's work through each of these and pull up some numbers:
     | 2          | JacquiWheeler  |
     | 2          | Mags           |
     | 1          | Shanooman      |
+    ```
     
     (from https://wiki.healthylondon.org/Special:ActiveUsers)
 
@@ -75,6 +77,7 @@ So let's work through each of these and pull up some numbers:
 
     Top ten accessed pages:
     
+    ```
     | #Revisions | Page name                                                         |
     | ---------- | --------------                                                    |
     | 48         | Social Prescribing and Self Care Wiki                             |
@@ -87,6 +90,7 @@ So let's work through each of these and pull up some numbers:
     | 9          | Making Every Contact Count                                        |
     | 9          | Self Management                                                   |
     | 7          | Monitoring and evaluating social prescribing                      |
+    ```
 
    (from https://wiki.healthylondon.org/Special:MostRevisions)
 
