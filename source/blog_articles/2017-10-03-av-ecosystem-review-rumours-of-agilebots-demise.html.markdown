@@ -1,5 +1,5 @@
 ---
-title: AV EcoSystem Rumours of AgileBots Demise
+title: AV EcoSystem Review Rumours of AgileBots Demise
 date: 2017-10-03
 tags: 
 author: Sam Joseph
