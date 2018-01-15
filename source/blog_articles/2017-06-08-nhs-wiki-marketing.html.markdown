@@ -51,21 +51,86 @@ So let's work through each of these and pull up some numbers:
 
     11 users were active in the last 30 days
 
-    ```
-    | #Actions   | UserName       |
-    | ---------- | -------------- |
-    | 62         | JTong          |
-    | 30         | Suzi.griffiths |
-    | 13         | Peterilves     |
-    | 7          | Prusal         |
-    | 7          | Whifra         |
-    | 5          | Kim Hunt       |
-    | 5          | Dnewton        |
-    | 4          | Mulash         |
-    | 2          | JacquiWheeler  |
-    | 2          | Mags           |
-    | 1          | Shanooman      |
-    ```
+    <table>
+    <tr>
+        <td></td>
+        <td>#Actions</td>
+        <td>UserName</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td></td>
+        <td>----------</td>
+        <td>--------------</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td></td>
+        <td>62</td>
+        <td>JTong</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td></td>
+        <td>30</td>
+        <td>Suzi.griffiths</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td></td>
+        <td>13</td>
+        <td>Peterilves</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td></td>
+        <td>7</td>
+        <td>Prusal</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td></td>
+        <td>7</td>
+        <td>Whifra</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td></td>
+        <td>5</td>
+        <td>Kim Hunt</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td></td>
+        <td>5</td>
+        <td>Dnewton</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td></td>
+        <td>4</td>
+        <td>Mulash</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td></td>
+        <td>2</td>
+        <td>JacquiWheeler</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td></td>
+        <td>2</td>
+        <td>Mags</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td></td>
+        <td>1</td>
+        <td>Shanooman</td>
+        <td></td>
+    </tr>
+    <table>
     
     (from https://wiki.healthylondon.org/Special:ActiveUsers)
 
@@ -76,21 +141,81 @@ So let's work through each of these and pull up some numbers:
     ![top ten visited pages](https://dl.dropbox.com/s/xy8ca86qjt9iq6i/Screenshot%202017-06-08%2018.17.25.png?dl=1)
 
     Top ten accessed pages:
-    
-    ```
-    | #Revisions | Page name                                                         |
-    | ---------- | --------------                                                    |
-    | 48         | Social Prescribing and Self Care Wiki                             |
-    | 25         | Social Prescribing                                                |
-    | 14         | Test Page                                                         |
-    | 14         | Policy and strategy in social prescribing                         |
-    | 14         | Help                                                              |
-    | 11         | Steps towards implementation                                      |
-    | 10         | Social prescribing for children, young people, parents and carers |
-    | 9          | Making Every Contact Count                                        |
-    | 9          | Self Management                                                   |
-    | 7          | Monitoring and evaluating social prescribing                      |
-    ```
+
+    <table>    
+    <tr>
+        <td></td>
+        <td>#Revisions</td>
+        <td>Page name</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td></td>
+        <td>----------</td>
+        <td>--------------</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td></td>
+        <td>48</td>
+        <td>Social Prescribing and Self Care Wiki</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td></td>
+        <td>25</td>
+        <td>Social Prescribing</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td></td>
+        <td>14</td>
+        <td>Test Page</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td></td>
+        <td>14</td>
+        <td>Policy and strategy in social prescribing</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td></td>
+        <td>14</td>
+        <td>Help</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td></td>
+        <td>11</td>
+        <td>Steps towards implementation</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td></td>
+        <td>10</td>
+        <td>Social prescribing for children, young people, parents and carers</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td></td>
+        <td>9</td>
+        <td>Making Every Contact Count</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td></td>
+        <td>9</td>
+        <td>Self Management</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td></td>
+        <td>7</td>
+        <td>Monitoring and evaluating social prescribing</td>
+        <td></td>
+    </tr>
+    </table>
 
    (from https://wiki.healthylondon.org/Special:MostRevisions)
 
