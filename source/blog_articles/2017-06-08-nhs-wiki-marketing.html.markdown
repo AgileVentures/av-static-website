@@ -217,7 +217,7 @@ So let's work through each of these and pull up some numbers:
     </tr>
     </table>
 
-   (from https://wiki.healthylondon.org/Special:MostRevisions)
+    (from https://wiki.healthylondon.org/Special:MostRevisions)
 
 8. **Geographical location and role of user**
 
