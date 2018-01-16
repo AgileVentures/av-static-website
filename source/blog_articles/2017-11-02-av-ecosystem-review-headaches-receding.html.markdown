@@ -1,6 +1,14 @@
-Urgh, minor headache again today, drinking lots of water.  Night before last a Halloween sweeties over-indulged child had caused me broken sleep which explains yesterday.  Ended up drinking coffee again, hmm. Somewhat Slack/Email distracted.  Really odd thing is that the fix that I pushed out for the Youtube link over-updates in Slack is that it seems to have fixed the morning "Martin Fowler" scrum, but not the afternoon "Kent Beck" scrum.  Of all the different possible outcomes I could have expected ... that is so unexpected.
+---
+title: AV EcoSystem Review Headaches Receding
+tags: 
+author: Sam Joseph
+---
 
-I would have imagined that the fix would work, or not work, but not that it would work for one scrum and not the other.  To refresh our memories the fix was that in the recent hangouts methods we were adding the `duration` FixNum and not the actual number of minutes when setting the window that we search for previously running hangouts in:
+![headaches receding](../images/headaches_receding.jpg)
+
+Urgh, minor headache again today, drinking lots of water.  Night before last a Halloween sweeties over-indulged child had caused me broken sleep.  Ended up drinking coffee again, hmm. Somewhat Slack/Email distracted.  Really odd thing is that the fix that I pushed out for the Youtube link over-updates in Slack is that it seems to have fixed the morning "Martin Fowler" scrum, but not the afternoon "Kent Beck" scrum.  Of all the different possible outcomes I could have expected ... this is the least predictable.
+
+I would have imagined that the fix would work, or not work, but not that it would work for one scrum and not the other.  To refresh our memories, the fix was that in the `recent_hangouts` method we were adding the `duration` FixNum rather than the actual number of minutes when setting the window over which we search for previously running hangouts.  We fixed it by using `duration.minutes` to ensure we were using the correct unit:
 
 ```rb
   def recent_hangouts
@@ -10,7 +18,7 @@ I would have imagined that the fix would work, or not work, but not that it woul
   end
 ```
 
-the above code now has `duration.minutes` and everything fits with my mental model, except this working for one scrum and not the other.  I'm drawn to move on to other things, but this niggles me.  Let's import the production data to my local machine - instructions are here:
+My mental model of the bug is complete, except this working for one scrum and not the other.  I'm drawn to move on to other things, but this niggles me.  Let's import the production data to my local machine - instructions are here:
 
 [https://devcenter.heroku.com/articles/heroku-postgres-import-export](https://devcenter.heroku.com/articles/heroku-postgres-import-export)
 
@@ -66,7 +74,7 @@ SecurityError: DOM Exception 18: An attempt was made to break through the securi
   phantomjs://code/main.js:8 in Poltergeist
 ```
 
-In the meantime I think I saw how a simple change to `updated_at` in the database setup for my original bug fix test could expose this wrinkle on the issue ... I working back and forth, but yes, if I set the last `updated_at` value of the previous scrum to after the duration of the event then I see the bug I was getting in production.  So the current bug-wrapping scenario stays as it was, but for good measure I add a comment to the issue in question:
+In the meantime I think I saw how a simple change to `updated_at` in the database setup for my original bug fix test could expose this wrinkle on the issue ... yes, if I set the last `updated_at` value of the previous scrum to after the duration of the event then I see the bug I was getting in production.  So the current bug-wrapping scenario stays as it was, and for good measure I add a comment to the issue in question:
 
 ```gherkin
   # wraps bug described in https://github.com/AgileVentures/WebsiteOne/issues/1809
@@ -83,19 +91,5 @@ and then having checked that the test captures the bug (perhaps ideally the test
 [https://github.com/AgileVentures/WebsiteOne/issues/1939](https://github.com/AgileVentures/WebsiteOne/issues/1939)
 
 As [Cess says "sips coffee, grabs another ticket"](https://medium.com/@cess/agile-ventures-experience-629c0e3028b0) although I'll be grabbing an admin task or two I think ... :-)
-
-In the meantime I think I saw how a simple change to `updated_at` in the database setup for my original bug fix test could expose this wrinkle on the issue ... I working back and forth, but yes, if I set the last `updated_at` value of the previous scrum to after the duration of the event then I see the bug I was getting in production.  So the current bug-wrapping scenario stays as it was, but for good measure I add a comment to the issue in question:
-
-```gherkin
-  # wraps bug described in https://github.com/AgileVentures/WebsiteOne/issues/1809
-  Scenario: Event doesn't ping old youtube URL
-    Given the date is "2014 Feb 5th 6:59am"
-    And that we're spying on the SlackService
-    When I manually set a hangout link for event "Repeat Scrum"
-    Then the Hangout URL is posted in Slack
-    And the Youtube URL is not posted in Slack
-```
-
-and then having checked that the test captures the bug (perhaps ideally the test itself should explicitly set the `updated_at` value?) and then fixed it again I push things up to see how the CI handles them.  I'll add that change as a refactoring ticket and move on I think - running out of time today.  Really want to get this all into production and have it sorted to put my mind at rest ...
 
 
