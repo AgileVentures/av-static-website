@@ -1,4 +1,12 @@
-So I didn't manage to get the `updated_at` -> `created_at` fix deployed in advance of the Kent Beck scrum yesterday, so I still can't say for certain that I have fixed the bug where the old youtube link gets posted on daily events.  I believe everything is deployed now, so we'll have a proper test of that today.  Gosh I really hope there isn't some other concealed bug.  I'd hoped to bash out a fix and quickly move on to other things, but it seems to have take all week.
+---
+title: AV EcoSystem Review Tying Up the Week
+tags: 
+author: Sam Joseph
+---
+
+![tying up](../images/tying_up.jpg)
+
+So I didn't manage to get the `updated_at` -> `created_at` fix deployed in advance of the Kent Beck scrum yesterday, so I still can't say for certain that I have fixed the bug where the old YouTube link gets posted on daily events.  I believe everything is deployed now, so we'll have a proper test of that today.  Gosh I really hope there isn't some other concealed bug.  I'd hoped to bash out a fix and quickly move on to other things, but it seems to have take all week.
 
 That said I have got a "Premium Mob" ad added to the AdWords and although it's not live yet, I showed it in the marketing meeting along with a slew of other ideas that seemed to go down quite well.  Lara's going to configure the keywords and ad groups and get that out, so I can focus on other things.  Thanks Lara!  I haven't encountered any 500 errors trying to load events pages this week, but I also don't see any big improvement in the aggregate stats, weird.  Still that brings me back to the set of things I thought of from reviewing the waffle board earlier in the week:
 
