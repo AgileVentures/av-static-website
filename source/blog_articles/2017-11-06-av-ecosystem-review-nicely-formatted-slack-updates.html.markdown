@@ -1,6 +1,14 @@
+---
+title: AV EcoSystem Review Nicely Formatted Slack Updates
+tags: 
+author: Sam Joseph
+---
+
+![tying up](../images/nicely_formatted_slack_messages.png)
+
 Urgh, stomach bug yesterday so I had to cancel Sunday free trial Premium F2F pairing.  Still weak today, but at least it seems we finally fixed the youtube link extra posting issue once I rolled out the `updated_at` --> `created_at` switch for the `recent_hangouts` method on events.  I think this week might need to focus on performance or maybe on our jitsi server.  Oh yes, and I'd started on trying to fix up our broken "start hangout" button ... I'd left the tests running over the weekend.  The event show view spec is failing.  I decide to delete that - our acceptance tests should check the user interface and we should force logic out of the views to have them tested in unit tests.  With that the specs are passing, and we'll see about the cukes.
 
-In the meantime I'll just bash out this change I've finally settled on for the slack message updates for hangouts and YouTube updates, or I would if I hadn't just kicked off a cuke test run locally - doh, I've pushed the deleted view spec to the branch, so CI will build it.  I'm weak from not eating yesterday - I can feel today will have lots of similar simple mistakes.  Do I do that performance check on staging to see if removing the information about the next upcoming hangout will make a big impact on our performance - that'd require my local system not running cukes too, urgh.  So I just kill the local run.  Get the tiny messaging format fix in for the Slack messages.  Oh wow, now that I have it in ruby/rspec the change is so extraordinarily simple (compared to the CoffeeScript Hubot Microservice we had set up) that I can almost forgive myself for not completing the Hangout button fix that I'd started on Friday.   
+In the meantime I'll just bash out this change I've finally settled on for the Slack message updates for hangouts and YouTube updates, or I would if I hadn't just kicked off a cuke test run locally - doh, I've pushed the deleted view spec to the branch, so CI will build it.  I'm weak from not eating yesterday - I can feel today will have lots of similar simple mistakes.  Do I do that performance check on staging to see if removing the information about the next upcoming hangout will make a big impact on our performance?  That'd require my local system to not be running all the cukes it is right now, urgh.  So I just kill the local run of the cukes and get the tiny messaging format fix in for the Slack messages.  Oh wow, now that I have it in ruby/rspec the change is so extraordinarily simple (compared to the CoffeeScript Hubot Microservice we had set up) that I can almost forgive myself for not completing the Hangout button fix that I'd started on Friday.   
 
 In the meantime the CI gives me the failures for the hangout button removal:
 
