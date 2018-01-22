@@ -1,4 +1,12 @@
-Still under the weather. Wondering if I need some sort of calendar/schedule booker to allow people to grab chunks of my time.  Had been trying to get several sets of people booked for paid mobs and F2F sessions in either email and slack and its all being a bit of mess.  Chuck from Ruby Rogues uses a booking system to organise when he has skype calls with people.  I'm loathe to give up executive control of who I'm talking to when.  
+---
+title: AV EcoSystem Review Calendaring/Scheduling
+tags: 
+author: Sam Joseph
+---
+
+![Calendaring](../images/calendaring.jpg)
+
+Still under the weather. Wondering if I need some sort of calendar/schedule booker to allow people to grab chunks of my time.  Had been trying to get several sets of people booked for paid mobs and F2F sessions in either email and Slack and its all being a bit of mess.  Chuck from Ruby Rogues uses a booking system to organise when he has Skype calls with people.  I'm loathe to give up executive control of who I'm talking to when.  
 
 Anyhow, I'm finally getting the fix for the broken hangout link out on production for websiteone along with the modified messaging format for the slack notifications.  Thank goodness.  I've also got folks from the MOOC reporting not being able to find pair partners, which I think is due to the nastily broken hangout on air button.  Must post something to the forums and in the chat about that ...
 
