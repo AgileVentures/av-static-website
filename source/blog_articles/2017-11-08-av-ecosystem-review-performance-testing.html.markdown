@@ -1,10 +1,18 @@
-The new slack update message notifications for scrum hangouts and youtube links is out and working:
+---
+title: AV EcoSystem Review Performance Testing
+tags: 
+author: Sam Joseph
+---
+
+![performancetesting](../images/performance_testing.jpg)
+
+The new slack update message notifications for scrum hangouts and YouTube links is out and working:
 
 ![](https://dl.dropbox.com/s/fam5pv49ug99lcc/Screenshot%202017-11-08%2010.35.44.png?dl=0)
 
 and at least two users are happy with the change.  So now I really must push on to the peformance issues.  I've merged the new feature flag that allows us to turn off the pre-loading of the next scrum, but I need that on staging to test it against production data ... I've got my load test of the homepage all ready to go on heroku via loader.io.
 
-In the meantime I guess I should check that the new flag is working as expected on https://develop.agileventures.org/, but I go there and the next scrum is still on the home page:
+In the meantime I guess I should check that the new flag is working as expected on [https://develop.agileventures.org/](https://develop.agileventures.org/), but I go there and the next scrum is still on the home page:
 
 ![](https://dl.dropbox.com/s/5bpzaknnj99icn1/Screenshot%202017-11-08%2010.46.43.png?dl=0)
 
