@@ -16,6 +16,7 @@ first image
 ![Journey to Agile first image](https://dl.dropbox.com/s/inga2yiyziy6a4v/Screenshot%202017-06-15%2009.19.33.png?dl=1)
 
 Standout Ideas:
+
 * You are Here 
 * Benefits highlight list
 * Job Seeking Network
@@ -26,6 +27,7 @@ second image
 ![How long does it take](https://dl.dropbox.com/s/8fc33tpapiec120/Screenshot%202017-06-15%2009.21.36.png?dl=1)
 
 Standout Ideas:
+
 * Start the journey (clickable)
 * The AV journey (graph showing faster progress)
 * Premium benefits indicated on graph (graph goes faster)
@@ -37,6 +39,7 @@ First image
 ![](https://dl.dropbox.com/s/nwgr50a8fudg61m/Screenshot%202017-06-15%2009.22.50.png?dl=1)
 
 Standout Ideas:
+
 * Badges/Milestones
 * Profile rating (ambiguous)
 * Project rating
@@ -62,6 +65,7 @@ Standout Ideas:
 ![](https://dl.dropbox.com/s/nsf052ds1usaqg3/Screenshot%202017-06-15%2009.25.57.png?dl=1)
 
 Standout Ideas:
+
 * Video Pitch (maybe put on top)
 * Different Paths (depending on …)
 * Guided Navigation with SubTasks
@@ -73,6 +77,7 @@ Standout Ideas:
 ![](https://dl.dropbox.com/s/hk6o0hjcti7s7k5/Screenshot%202017-06-15%2009.28.14.png?dl=1)
 
 Standout Ideas:
+
 * Diagram (clickable) perhaps cold lacking motivation, needs video(?)
 * Description of value
 * Time per week, updates map focus
