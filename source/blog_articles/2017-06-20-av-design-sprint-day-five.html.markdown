@@ -11,7 +11,7 @@ So Friday morning was fairly frantic.  I'd gone to sleep thinking that the last 
 
 I was getting the hang of illustrator layers and didn't have too much trouble extracting the rest of the images we had downloaded from ShutterStock and getting things set up.  What was immediately clear was that we couldn't get away with a background image with popups being displayed over the top.  There was a noticeable delay in that background loading so what we had was a sequence of main images like so:
 
-![all screens from the prototype](https://www.dropbox.com/s/uglnko00ybpwalu/Screenshot%202017-06-20%2009.25.02.png?dl=1)
+![all screens from the prototype](https://dl.dropbox.com/s/uglnko00ybpwalu/Screenshot%202017-06-20%2009.25.02.png?dl=1)
 
 and used InVision hotspots to link them together so that it appeared that you got a popup when you clicked on the relevant part of the image.  We were ready with time to spare and I was able to review the videos of the GV test sessions and re-read the sections of the design sprint book that outline a five-act interview, which we modified ever so slightly:
 
@@ -66,7 +66,7 @@ I think the really solid takeaways were how people seemed to really appreciate t
 * Adjust the landing page of our site to better reflect the journey concept
 * Start creating a new main site perhaps in new tech
 
-At the end of the community meeting I asked everyone to suggest what they thought was the highest priority.  Michael's was that we get a static site up (even just the InVision site) and A/B test the impact on signups via Google AdWords.  The measurement component of this really appealed to me, and so this morning I snapped to it by setting up a GitHub Pages account and having that redirect to the InVision app.  I set up http://why.agileventures.org to point to that and the sign up button now goes to our main site.  The annoying things are the InVision URL showing as well as their loading screen.  In principle we could put image maps directly into our GitHub pages site ... let's see.
+At the end of the community meeting I asked everyone to suggest what they thought was the highest priority.  Michael's was that we get a static site up (even just the InVision site) and A/B test the impact on signups via Google AdWords.  The measurement component of this really appealed to me, and so this morning I snapped to it by setting up a GitHub Pages account and having that redirect to the InVision app.  I set up [http://why.agileventures.org](http://why.agileventures.org) to point to that and the sign up button now goes to our main site.  The annoying things are the InVision URL showing as well as their loading screen.  In principle we could put image maps directly into our GitHub pages site ... let's see.
 
 I think either way the design sprint has weened me off large amounts of text and addicted me to small amounts of text with images.  Will be interesting to see if we can get any substantive change in signups - stay tuned to this blog to find out!
 
