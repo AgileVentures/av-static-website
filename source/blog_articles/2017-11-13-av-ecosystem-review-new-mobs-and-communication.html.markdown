@@ -1,3 +1,11 @@
+---
+title: AV EcoSystem Review New Mobs and Communication
+author: Sam Joseph
+---
+
+![confusion](../images/mob_communication.jpg)
+
+
 So I'm rushing myself to push out the days schedule on the Slack #general channel as I've scheduled two new mobs to start:
 
 ```
@@ -18,26 +26,26 @@ https://www.agileventures.org/events/phoenix-1-3-guides-daily-mob-free
 Full details at: https://www.agileventures.org/events
 ```
 
-I'm probably overloading myself.  Sunday afternoon I did two pairing sessions (one paid, one free trial) and the AV Community meeting and I'm getting set up for more pairing.  In the community meeting Michael said that mobs are a good source of revenue and that caused me to pause sice I think that while they definitely are a source of revenue, for the amount of time involved in supporting them we're not getting a wonderful return, particularly since we made them weekly and we've made the premium mob fee cover attending any of the currently running mobs ...
+I'm probably overloading myself.  Sunday afternoon I did two pairing sessions (one paid, one free trial) and the AV Community meeting and I'm getting set up for more pairing.  In the community meeting Michael said that mobs are a good source of revenue and that caused me to pause sice I think that while they definitely are a source of revenue, for the amount of time involved in supporting them we're not getting a wonderful return, particularly since we made them weekly and we've made the Premium mob fee cover attending any of the currently running mobs ...
 
 I think both the mobs (and the F2F packages - given that they include all the mobs) are extraordinarily good deals compared to the prices of similar services from other online mentoring services; although I guess it's all a matter of opinion.
 
 Either way I'm getting caught between getting station keeping activities done:
 
 a) manual slack invites
-b) manual days schedule posts to Slack
+b) manual daily schedule posts to Slack
 c) gem upgrades on WSO
 d) checking social media for follows for free trials
 
 and running free trials and then actual mobs and pairing sessions themselves.  I was half expecting to have private paid projects taking up half my time, but that isn't the case at the moment, so I guess it makes sense to ramp up the mobs and pairing to bring in more AV revenue.
 
-I need to run more Simplify, Eliminate, Delegate, Automate passes on what I'm doing.  I'm still holding on to posting the schedules myself because of the difficultly automating them.  Although they did seem to start working on another Slack instance, and wanting to be able to tweak them daily.  Posting them also forces me to think about the schedule.  What I could do quickly this morning is actually try to re-automate the Slack invites.  At least run the task from the heroku production command line.  We've been using an undocumented endpoint for a year somewhat reliably, but it seems to have broken:
+I need to run more Simplify, Eliminate, Delegate, Automate passes on what I'm doing.  I'm still holding on to posting the schedules myself because of the difficultly automating them.  Although they did seem to start working on another Slack instance, ... but I also like being able to tweak them daily.  Posting them also forces me to think about the schedule.  What I could do quickly this morning is actually try to re-automate the Slack invites.  At least run the task from the heroku production command line.  We've been using an undocumented endpoint for a year somewhat reliably, but it seems to have broken:
 
 [https://github.com/slackhq/slack-api-docs/issues/30#issuecomment-341399842](https://github.com/slackhq/slack-api-docs/issues/30#issuecomment-341399842)
 
-I've been invited manually through the Slack UI.  Maybe I can see some sort of error if I test via the rails console.  I've been using the following to get the most recent user emails:
+and so I've been invited manually through the Slack UI.  Maybe I can see some sort of error if I test via the rails console.  I've been using the following to get the most recent user emails:
 
-```
+```rb
 User.last(50).each {|u| puts u.email} ; nil
 ```
 
@@ -70,11 +78,11 @@ class SlackInviteJob
 end
 ```
 
-```
+```rb
 SlackInviteJob.new().perform('guravareddy.jetlee@gmail.com')
 ```
 
-This gives me the following error:
+Which gives me the following error:
 
 ```
 ActiveJob::SerializationError: Unsupported argument type: NameError
@@ -96,7 +104,7 @@ ActiveJob::SerializationError: Unsupported argument type: NameError
 	from /app/vendor/bundle/ruby/2.3.0/gems/activesupport-4.2.10/lib/active_support/tagged_logging.rb:68:in `block in tagged'
 ```
 
-which is not making sense.  What I'd hope is that all the error handling that we've installed would tell us when things like this are going wrong.  No.  Nor does AirBrake seem to tell us about this kind of stuff.  Configuration is all off I guess.
+and that does not make sense to me.  What I'd hope is that all the error handling that we've installed would tell us when things like this are going wrong.  No.  Nor does AirBrake seem to tell us about this kind of stuff.  Configuration is all off I guess.
 
 Ah, okay, there is a piece of our code in the extended error message:
 
@@ -111,7 +119,7 @@ Ah, okay, there is a piece of our code in the extended error message:
 	from /app/app/jobs/slack_invite_job.rb:21:in `perform'
 ```
 
-It looks like somehow our adminMailer is failing ... Can I run the internals directly?  I can and it seems like it worked for me, but interestingly I couldn't get the slack auth token via `Slack::AUTH_TOKEN`.  I had to hard code it.  I also tried it with nil, and seemed to be able to get an error message delivered.   I guess we need error catching on the admin mailing, and I need to defend against nil tokens maybe?
+It looks like somehow our AdminMailer is failing ... Can I run the internals directly?  I can and it seems like it worked for me, but interestingly I couldn't get the slack auth token via `Slack::AUTH_TOKEN`.  I had to hard code it.  I also tried it with nil, and seemed to be able to get an error message delivered.   I guess we need error catching on the admin mailing, and I need to defend against nil tokens maybe?  Perhaps I can fix that all up tomorrow ...
 
 
 
