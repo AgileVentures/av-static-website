@@ -41,7 +41,6 @@ irb(main):034:0> pp subscriptions.select {|s| s.user_id == 885} ; nil
   type: "PremiumPlus",
   started_at: Wed, 15 Jun 2016 23:05:00 UTC +00:00,
   ended_at: Fri, 15 Dec 2017 23:06:55 UTC +00:00,
-  user_id: 885,
   plan_id: 4,
   sponsor_id: nil>,
  #<PremiumMob:0x0055eb8b6ebc80
@@ -49,7 +48,6 @@ irb(main):034:0> pp subscriptions.select {|s| s.user_id == 885} ; nil
   type: "PremiumMob",
   started_at: Fri, 15 Dec 2017 23:06:55 UTC +00:00,
   ended_at: nil,
-  user_id: 885,
   plan_id: 2,
   sponsor_id: nil>]
 ```
