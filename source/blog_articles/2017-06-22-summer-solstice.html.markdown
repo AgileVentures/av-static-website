@@ -1,5 +1,5 @@
 ---
-title: Summer Soltice
+title: Summer Solstice
 date: 2017-06-22
 tags: overheating, Adobe, Sierra, hangout, bootcamp, WebRTC
 author: Sam Joseph
