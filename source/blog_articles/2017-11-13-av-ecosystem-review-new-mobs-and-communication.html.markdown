@@ -5,7 +5,6 @@ author: Sam Joseph
 
 ![confusion](../images/mob_communication.jpg)
 
-
 So I'm rushing myself to push out the days schedule on the Slack #general channel as I've scheduled two new mobs to start:
 
 ```
