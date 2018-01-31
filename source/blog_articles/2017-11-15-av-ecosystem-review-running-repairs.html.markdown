@@ -1,3 +1,10 @@
+---
+title: AV EcoSystem Review Running Repairs
+author: Sam Joseph
+---
+
+![running repairs](../images/running_repairs.jpg)
+
 9:24 am blog face, but no--9:29 am--since I got distracted by Slack and email.  Yesterday I rolled out some code to make the automated Slack sign up more robust.  The code is on production now, and so maybe a test from the heroku command line is the way to go ...
 
 ```sh
@@ -10,7 +17,8 @@ Sent mail to support@agileventures.org (215.3ms)
 [ActiveJob] Enqueued ActionMailer::DeliveryJob (Job ID: ff673d08-8c78-403c-a740-268417c9a4c7) to Inline(mailers) with arguments: "AdminMailer", "failed_to_invite_user_to_slack", "deliver_now", "email@email.com", nil, "\"already_invited\""
 => {"ok"=>false, "error"=>"already_invited"}
 ```
-Now that looks like we might be in business.  The most recently signed up member has already been invited, and I get a sensible error message when running the SlackInviteJob from the command line.  Let's see if the last 50 have all been invited?  Seven haven't.  That's the lowest number over the last ten days that I've been manually inviting.  Those seven could have signed up before the deploy.  The acid test will be tomorrow when we'll see if it's zero, if it's not, there's still something to fix.
+
+Now that looks like we might be in business.  The most recently signed up member has already been invited, and I get a sensible error message when running the SlackInviteJob from the command line.  Let's see if the last 50 have all been invited?  Seven haven't.  That's the lowest number over the last ten days that I've been manually inviting.  Those seven could have signed up before the deploy.  The acid test will be tomorrow when we'll see if it's zero. If it's not, there's still something to fix.
 
 Robert had been making the point that we needed to make it easier for folks to get into Slack and that the page that was the top hit on Google for "Agile Ventures Slack" was an [old one](https://www.agileventures.org/projects/agileventures-community/documents/introduction-to-the-agileventures-slack-channel), so I quickly updated that to ensure it mentioned the new sign up process.
 
@@ -39,7 +47,7 @@ Feature: List Single Events
     
 ```   
 
-Now that passes, but so perhaps there's something about when there are also repeating events in the mix ...?  Maybe I should hook locally on the debugger?  I do that and see that a newly created event is not listed in the upcoming events.  It seems that a newly created single event has it's repeat_ends set to true by default and so it's not captured in the list of future events:
+However that passes out of the box, so perhaps there's something about when there are also repeating events in the mix ...?  Maybe I should hook locally on the debugger?  I do that and see that a newly created event is not listed in the upcoming events.  It seems that a newly created single event has it's repeat_ends set to true by default and so it's not captured in the list of future events:
 
 ```rb
   def self.base_future_events(project)
@@ -66,4 +74,4 @@ My test was passing because it's not creating the event in the same way that the
   end
 ```
 
-Is this a new thing?  Maybe this never worked.  A complete overhaul of the events system is certainly looking in order.  There's so much more clean up here, but let's fix the bleed in production first ...
+Is this a new thing?  Maybe this never worked.  A complete overhaul of the events system is certainly in order.  There's so much more clean up here, but let's fix the bleed in production first ...
