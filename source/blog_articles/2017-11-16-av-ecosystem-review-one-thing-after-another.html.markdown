@@ -57,7 +57,7 @@ The local error is easier to understand:
 
 and it seems that we can't use the variable `ga` in the modified sense in the current google analytics code:
 
-```
+```js
 WebsiteOne.define('GoogleAnalytics', function() {
   window._gaq = [];
   window._gaq.push(['_setAccount', 'UA-47795185-1'])
