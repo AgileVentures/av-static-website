@@ -1,6 +1,13 @@
+---
+title: AV EcoSystem Review One Thing After Another
+author: Sam Joseph
+---
+
+![typewriter](../images/typewriter.jpg)
+
 Some days it's just one thing after another.  As Wednesday was drawing to a close I was feeling pretty pleased to have fixes out for our Slack invites (confirmed as all the recent sign ups had already been invited this morning), and for one-off events not showing up.  I knew we also had some kind of javascript error affecting the calendar popups on the create event page, but it turns out that some kind of failure in our Google Analytics code is systematically breaking JavaScript througout the site.  I managed to fix that last night by turning off the analytics, but that's a short term fix as we need that working.
 
-Am I just fire-fighting crazily here.  I'm thinking about the requests that Federico put in for RSVPs, alerts when members join projects, Fred asking for the jitsy server ...  Anyway this is systematic and we need to report analytics to the trustees.  I was able to replicate the failure on staging - perhaps I can replicate it locally.  I can trigger the error locally by running the server like so:
+Am I just fire-fighting crazily here?  I'm thinking about the requests that Federico put in for RSVPs, alerts when members join projects, Fred asking for the jitsi server ...  Anyway this is systemic and we need to report analytics to the trustees.  I was able to replicate the failure on staging - perhaps I can replicate it locally.  I can trigger the error locally by running the server like so:
 
 ```
 ENABLE_GOOGLE_ANALYTICS=true be rails s
