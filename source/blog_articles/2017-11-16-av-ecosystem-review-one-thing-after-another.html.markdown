@@ -13,7 +13,7 @@ Am I just fire-fighting crazily here?  I'm thinking about the requests that Fede
 ENABLE_GOOGLE_ANALYTICS=true be rails s
 ```
 
-The Jasmine tests work fine even with analytics enabled:
+The Jasmine tests work fine, even with analytics enabled:
 
 ```
 → ENABLE_GOOGLE_ANALYTICS=true bej
@@ -95,6 +95,6 @@ WebsiteOne.define('GoogleAnalytics', function() {
 });
 ```
 
-I think what we have here is a mix of old and new GA tracking code, and the problem that none of it actually gets run until we go intro production where google analytics is switched on.  Looking up both old and new code I can't immediately see a way to reconcile them, so I've commented out the offending code, and so will get that up until we can work out an effective combined approach.
+I think what we have here is a mix of old and new GA tracking code, and the problem that none of it actually gets run until we go into production, where google analytics is switched on.  Looking up both old and new code, I can't immediately see a way to reconcile them, so I've commented out the offending code, and so will get that up until we can work out an effective combined approach.
 
-I think rather than switching GA code on and off globally we should have different account ids for different instances and set that via ENV vars ...
+I think rather than switching GA code on and off globally we should have different account ids for different instances, and set that via ENV vars ...
