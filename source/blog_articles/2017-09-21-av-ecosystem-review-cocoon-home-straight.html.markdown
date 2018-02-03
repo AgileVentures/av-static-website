@@ -7,7 +7,7 @@ author: Sam Joseph
 
 ![home straight](../images/Home_Straight.jpg)
 
-So the answer to my question of yesterday, "Why is Acceptance Testing so hard" is that any coding is hard when you can't get error messages.  The remote debug inspector I set up yesterday allowed me to see that our Capybara/Poltergeist/PhantomJS setup could not handle ES6 string interpolations.  It raises the question about why not, but I want to push on with this feature.
+So the answer to my question of yesterday, "Why is Acceptance Testing so hard?" is that any coding is hard when you can't get error messages.  The remote debug inspector I set up yesterday allowed me to see that our Capybara/Poltergeist/PhantomJS setup could not handle ES6 string interpolations.  It raises the question about why not, but I want to push on with this feature.
 
 The test is now failing on this error:
 
@@ -32,7 +32,7 @@ which explains the error in the test.  Just to see if it worked I threw the foll
   end
 ```
 
-and I was rewarded with a completely passing acceptance test.  However I have various issues to address:
+and I was rewarded with a completely passing acceptance test.  However, I have various issues to address:
 
 * the acceptance test does not check that the second repo has been stored
 * the acceptance test is not very readable
@@ -244,7 +244,7 @@ Code relating to checking commits on Github is failing ..., although those can p
   scope :with_github_url, ->{ includes(:source_repositories).where.not(source_repositories: { id: nil }) }
 ```
 
-and with that I think I may have gotten all the specs green.  There's still a lot to do, but I'm reassured that I'm covering the majority of the angles.  I'll push up this code into the PR and tomorrow I can work on cleaning up the domain model, tightening up the unit tests, and maybe even complete the first phase of this feature?  I note also that we have a load of cruft in the spec output - would love to clear that out, but can I prioritise it?
+And with that I think I may have gotten all the specs green.  There's still a lot to do, but I'm reassured that I'm covering the majority of the angles.  I'll push up this code into the PR and tomorrow I can work on cleaning up the domain model, tightening up the unit tests, and maybe even complete the first phase of this feature?  I note also that we have a load of cruft in the spec output - would love to clear that out, but can I prioritise it?
 
 ```
 Randomized with seed 51520
