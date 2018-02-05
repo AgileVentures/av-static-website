@@ -1,6 +1,13 @@
+---
+title: AV EcoSystem Review Behind on Reports
+author: Sam Joseph
+---
+
+![typewriter](../images/reportt.jpg)
+
 Totally distracted by Slack and Email, but more importantly behind on reports.  I was just a couple of days late on the NHS HLP monthly report, but I'm now a good weekend behind on the AgileVentures monthly report.  These monthly reports are part of the deal with the AgileVentures trustees for my consulting company providing the core AgileVentures support contract.   I have been working through creating the latest one, but the explosion of new mobs and pairing sessions, and procrastination on my part means there's still a chunk to do.  
 
-I'm also massively behind on my usual checkins with Premium members.  We're trying to move the report around so that it's less detailed stats that take me too long to put together and focuses on the progress of the individual premium members.  I'd really like a clear day to review where we are with each individual premium member.  Having created the initial report structure with lots of details I've kind of fallen into a trap of trying to replicate those details every month.  Should I then burn time trying to automate parts of the report.   Drop some of those stats?
+I'm also massively behind on my usual checkins with Premium members.  We're trying to move the report around so that it's less detailed stats that take me too long to put together and focuses on the progress of the individual premium members.  I'd really like a clear day to review where we are with each individual Premium member.  Having created the initial report structure with lots of details I've kind of fallen into a trap of trying to replicate those details every month.  Should I then burn time trying to automate parts of the report.   Drop some of those stats?
 
 I just spent ten minutes getting the stats together for the last month of mobs:
 
@@ -48,4 +55,4 @@ Now I've spent another 10 minutes getting all the data on F2F pairing sessions:
 | 11/16 Thu | Phoenix       | Ben (trial)    |
 | 11/17 Fri | Phoenix       | Ryder          |
 
-and so with the work from last week on meetings stats and web stats, I've finsihed the main stats part of the report, but not the update of individual premium members, or reaching out to all the premiums to check how they are doing.  With my schedule today that'll have to be tomorrow ...
+and so with the work from last week on meetings stats and web stats, I've finished the main stats part of the report, but not the update of individual Premium members, or reaching out to all the Premiums to check how they are doing.  With my schedule today that'll have to be tomorrow ...
