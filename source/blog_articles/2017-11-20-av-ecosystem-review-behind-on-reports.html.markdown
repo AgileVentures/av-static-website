@@ -3,7 +3,7 @@ title: AV EcoSystem Review Behind on Reports
 author: Sam Joseph
 ---
 
-![typewriter](../images/reportt.jpg)
+![report](../images/report.jpg)
 
 Totally distracted by Slack and Email, but more importantly behind on reports.  I was just a couple of days late on the NHS HLP monthly report, but I'm now a good weekend behind on the AgileVentures monthly report.  These monthly reports are part of the deal with the AgileVentures trustees for my consulting company providing the core AgileVentures support contract.   I have been working through creating the latest one, but the explosion of new mobs and pairing sessions, and procrastination on my part means there's still a chunk to do.  
 
