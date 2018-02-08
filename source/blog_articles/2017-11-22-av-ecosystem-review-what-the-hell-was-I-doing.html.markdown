@@ -1,3 +1,11 @@
+---
+title: AV EcoSystem Review What The Hell Was I Doing?
+author: Sam Joseph
+---
+
+![report](../images/report.jpg)
+
+
 Hmm, my intention had been to work on the Azure Jitsi setup this week, but the last two mornings were taken up with finishing the AgileVentures monthly report for the trustees.  I did another quick bit of work on the main AgileVentures website to swap outgoing and incoming sponsor logos for Federico and deploy the new Premium member API for Michael.  Those are both now live, and I'm reflecting on whether to do more things that unblock others.  The first thing that springs to mind is the changes to the home page language that Lara has suggested based on analysis of the Google Adwords data.
 
 Other things going on include closing out all these dependabot gem upgrades; and whether we need to shut them off so we can see what we are doing.  Other hanging pull requests (oldest first) include:
