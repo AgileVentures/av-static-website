@@ -23,6 +23,7 @@ I flicked my eyes over other older and unvoted tickets in the waffle board.  So 
 
 However I did also start looking at alternate home page designs as part of thinking about how we can improve performance and do A/B testing on different landing pages in terms of how they bring folks on board.  And maybe that's the most important part of our funnel?  Anyway, here's some of the keyword searches that have had our Google ad served, and the number of click throughs they've received:
 
+```
 | Keyword                    | Quality Score | Clicks | Impr.  |
 |----------------------------|---------------|--------|--------|
 | code                       | 3             | 8897   | 137126 |
@@ -45,6 +46,7 @@ However I did also start looking at alternate home page designs as part of think
 | app developer              | 3             | 13     | 442    |
 | what is agile development  | 4             | 12     | 136    |
 | code programmer            | 3             | 10     | 142    |
+```
 
 Quality runs from 1 to 10 and our quality scores are low because these keywords are not appearing on our landing pages.  This means that we have to pay Google more of our ad budget for them.  Apparently our Google ad budget will go further if we can increase the instance of these terms on our home page.  In principle, a straightforward fix, and gets me thinking about getting set up for the A/B test of some alternate home pages, based on what we developed for our design sprint back in June.  
 
