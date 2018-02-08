@@ -54,19 +54,19 @@ So I go ahead and create a [ticket](https://github.com/AgileVentures/WebsiteOne/
 
 Anyway, given I have a ticket, that gives me license to create a branch on which to do the work.  Let's review the chunks of text we have on the home page:
 
-*Project Launch Pad*
+**Project Launch Pad**
 
 > AgileVentures is the perfect place to kick-start a project. Our system of openness and lack of hierarchy means anybody can start a project. In fact, many of our current projects were initiated by our own members!
 
-*Crowdsourced Learning*
+**Crowdsourced Learning**
 
 > By crowd-sourcing our projects, we attract developers from diverse backgrounds: students, freelancers, designers, teachers, and many more from all corners of the globe. Our members are driven by their passion to learn code and make a contribution to society.
 
-*Social Coding*
+**Social Coding**
 
 > We have regular daily meetings (scrums) online where our members get together, discuss projects, share knowledge and plan programming sessions. We love pair programming, nobody works alone in this community!
 
-*Open Source*
+**Open Source**
 
 > We love all things Open Source, we are fully transparent in our development process, we record videos of all our meetings through Google+ Hangouts, our code is freely available on the web on GitHub and our project plans are publicly viewable on Pivotal Tracker.
 
@@ -84,19 +84,19 @@ It makes me wonder if what we need are custom landing pages for our different Go
 
 Anyhow, I've taken a stab at adding more of the keywords into our langauge.  Just tweaks really, but also to mention the focus on charity and non-profit.  Let's get this up and see:
 
-*Project Launch Pad*
+**Project Launch Pad**
 
 > Want to start a new charity or non-profit coding project? Our community of open source practitioners can help you get started coding and using agile methodology to deliver value quickly to your end users.  
 
-*Crowdsourced Learning*
+**Crowdsourced Learning**
 
 > By crowd-sourcing our projects, we attract developers from diverse backgrounds: students, freelancers, designers, teachers, and many more from all corners of the globe. Our members are driven by their passion to learn to code and make a contribution to society.
 
-*Social Coding*
+**Social Coding**
 
 > We have regular daily meetings (scrums) online where our members get together, discuss projects, share knowledge and plan programming sessions. We love pair programming, mob programming and shared code review to help everyone learn and improve.
 
-*Open Source*
+**Open Source**
 
 > We love all things Open Source and are fully transparent in our development process. We record videos of all our meetings through Google Hangouts; all our code can be viewed on GitHub and our project plans are publicly viewable on systems like Pivotal Tracker.
 
