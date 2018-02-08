@@ -3,8 +3,7 @@ title: AV EcoSystem Review What The Hell Was I Doing?
 author: Sam Joseph
 ---
 
-![report](../images/report.jpg)
-
+![wfhitbanner](../images/wfhitbanner.jpg)
 
 Hmm, my intention had been to work on the Azure Jitsi setup this week, but the last two mornings were taken up with finishing the AgileVentures monthly report for the trustees.  I did another quick bit of work on the main AgileVentures website to swap outgoing and incoming sponsor logos for Federico and deploy the new Premium member API for Michael.  Those are both now live, and I'm reflecting on whether to do more things that unblock others.  The first thing that springs to mind is the changes to the home page language that Lara has suggested based on analysis of the Google Adwords data.
 
@@ -20,7 +19,7 @@ Other things going on include closing out all these dependabot gem upgrades; and
 * add calendar support - Sigu
 * add sponsor relation - Michael/Marian
 
-I flicked my eyes over other older and unvoted tickets in the waffle board.  So much stuff that could be worked on.  Who knows which are the key set that take us where we want to be, i.e. a clear comprehensible site that allows people to onboard and work productively together on open source charity projects.  Part of me wants to knock off the oldest hanging pull requests by just taking over the work of those who've just dropped away.
+I flicked my eyes over other older and unvoted tickets in the waffle board.  So much stuff that could be worked on.  Who knows which are the key set that take us where we want to be, i.e. a clear comprehensible site that allows people to onboard and work productively together on open source charity projects.  Part of me wants to knock off the oldest hanging pull requests by taking over the work of those who've just dropped away.
 
 However I did also start looking at alternate home page designs as part of thinking about how we can improve performance and do A/B testing on different landing pages in terms of how they bring folks on board.  And maybe that's the most important part of our funnel?  Anyway, here's some of the keyword searches that have had our Google ad served, and the number of click throughs they've received:
 
@@ -69,7 +68,7 @@ Anyway, given I have a ticket, that gives me license to create a branch on which
 
 > We love all things Open Source, we are fully transparent in our development process, we record videos of all our meetings through Google+ Hangouts, our code is freely available on the web on GitHub and our project plans are publicly viewable on Pivotal Tracker.
 
-So there are things I'd love to change here, but the funny thing is that of the different keywords I'm supposed to be adding we do mention some of them several times:
+So there are things I'd love to change here, but the funny thing is that we do already mention several of the different keywords I'm supposed to be adding:
 
 * code: 2
 * github: 2
@@ -99,4 +98,4 @@ Anyhow, I've taken a stab at adding more of the keywords into our langauge.  Jus
 
 > We love all things Open Source and are fully transparent in our development process. We record videos of all our meetings through Google Hangouts; all our code can be viewed on GitHub and our project plans are publicly viewable on systems like Pivotal Tracker.
 
-And I get that up in a pull request.  Gosh, I so don't know what's the key place to push on.  Doing things that people ask for is a reasonable first order heuristic, I guess.  Another is clearing up hanging PRs.  The clear pattern that I see is that when I reach out to people individually, that is what seems to have the highest success rate in terms of bringing in new contracts and subscriptions ... hmmm ...
+And I get that up in a pull request.  Gosh, so I don't know what's the key place to push on.  Doing things that people ask for is a reasonable first order heuristic, I guess.  Another is clearing up hanging PRs.  The clear pattern that I see is that when I reach out to people individually, that is what seems to have the highest success rate in terms of bringing in new contracts and subscriptions ... hmmm ...
