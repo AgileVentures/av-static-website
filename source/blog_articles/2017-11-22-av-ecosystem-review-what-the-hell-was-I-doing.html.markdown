@@ -1,4 +1,4 @@
-Hmm, my intention had been to work on the Azure Jitsi setup this week, but the last two mornings were taken up with finishing the AgileVentures monthly report for the trustees.  I did another quick bit of work on main AgileVentures website to swap outgoing and incoming sponsor logos for Federico and deploy the new Premium member API for Michael.  Those are both now live, and I'm reflecting on whether to do more things that unblock others.  The first thing that springs to mind is the changes to the home page language that Lara has suggested based on analysis of the Google Adwords data.
+Hmm, my intention had been to work on the Azure Jitsi setup this week, but the last two mornings were taken up with finishing the AgileVentures monthly report for the trustees.  I did another quick bit of work on the main AgileVentures website to swap outgoing and incoming sponsor logos for Federico and deploy the new Premium member API for Michael.  Those are both now live, and I'm reflecting on whether to do more things that unblock others.  The first thing that springs to mind is the changes to the home page language that Lara has suggested based on analysis of the Google Adwords data.
 
 Other things going on include closing out all these dependabot gem upgrades; and whether we need to shut them off so we can see what we are doing.  Other hanging pull requests (oldest first) include:
 
@@ -39,11 +39,11 @@ However I did also start looking at alternate home page designs as part of think
 | what is agile development  | 4             | 12     | 136    |
 | code programmer            | 3             | 10     | 142    |
 
-Quality runs from 1 to 10 and our quality scores are low because these keywords are not appearing on our landing pages.  This means that we have to pay Google more of our ad budget for them.  Apparently our Google ad budget will go further if we can increase the instance of these terms on our home page.  In principle a straightforward fix and gets me thinking about getting set up for the A/B test of some alternate home page based on what we developed for our design sprint back in June.  
+Quality runs from 1 to 10 and our quality scores are low because these keywords are not appearing on our landing pages.  This means that we have to pay Google more of our ad budget for them.  Apparently our Google ad budget will go further if we can increase the instance of these terms on our home page.  In principle, a straightforward fix, and gets me thinking about getting set up for the A/B test of some alternate home pages, based on what we developed for our design sprint back in June.  
 
-So I go ahead and create a [ticket](https://github.com/AgileVentures/WebsiteOne/issues/1982), actually using part of the form template that we have (should I adjust those?) and reflect on how I still don't know if any of our Google AdWords activity has actually led to any revenue.  I know we've got a couple of thousand additional users, but I don't know if any of them have helped make this whole enterprise more sustainable ...
+So I go ahead and create a [ticket](https://github.com/AgileVentures/WebsiteOne/issues/1982), actually using part of the form template that we have (should I adjust those?), and reflect on how I still don't know if any of our Google AdWords activity has actually led to any revenue.  I know we've got a couple of thousand additional users, but I don't know if any of them have helped make this whole enterprise more sustainable ...
 
-Anyway, given I have a ticket that gives me license to create a branch on which to do the work.  Let's review the chunks of text we have on the home page:
+Anyway, given I have a ticket, that gives me license to create a branch on which to do the work.  Let's review the chunks of text we have on the home page:
 
 *Project Launch Pad*
 
@@ -91,4 +91,4 @@ Anyhow, I've taken a stab at adding more of the keywords into our langauge.  Jus
 
 > We love all things Open Source and are fully transparent in our development process. We record videos of all our meetings through Google Hangouts; all our code can be viewed on GitHub and our project plans are publicly viewable on systems like Pivotal Tracker.
 
-And I get that up in a pull request.  Gosh, I so don't know what's the key place to push on.  Doing things that people ask for is a reasonable first order heuristic I guess.  Another is clearing up hanging PRs.  The clear pattern that I see is that when I reach out to people individually is that is what seems to have the highest success rate in terms of bringing in new contracts and subscriptions ... hmmm ...
+And I get that up in a pull request.  Gosh, I so don't know what's the key place to push on.  Doing things that people ask for is a reasonable first order heuristic, I guess.  Another is clearing up hanging PRs.  The clear pattern that I see is that when I reach out to people individually, that is what seems to have the highest success rate in terms of bringing in new contracts and subscriptions ... hmmm ...
