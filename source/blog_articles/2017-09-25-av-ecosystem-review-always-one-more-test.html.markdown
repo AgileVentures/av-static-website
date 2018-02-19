@@ -7,7 +7,7 @@ author: Sam Joseph
 
 ![one more test](../images/one_more_test.jpg)
 
-So all of last week's ecosystem review blogs were devoted to this new multiple repository feature.  And I think today too.  I hope today is the last since I really want to get on to clearing up some other content work and getting the new Code of Conduct front and center.  So I've just pulled out the latest develop and used the new `rake vcr_billy_caches:reset` command to clean up the caches.  Bit difficult to remember, and did I update the docs?  The answer is no :-( but done now.  So I think I already have tests of rake commands, the style of which I can copy to test our data migration ... unlike [thoughtbot](https://robots.thoughtbot.com/test-rake-tasks-like-a-boss) I've been going with Cucumber, which might run a little slower, but I can more easily see the data setup, so I stamp out a devops feature like so:
+So all of last week's ecosystem review blogs were devoted to this new multiple repository feature.  And I think today too.  I hope today is the last, since I really want to get on to clearing up some other content work and getting the new Code of Conduct front and center.  So I've just pulled out the latest develop and used the new `rake vcr_billy_caches:reset` command to clean up the caches.  Bit difficult to remember, and did I update the docs?  The answer is no :-( but done now.  So I think I already have tests of rake commands, the style of which I can copy to test our data migration ... unlike [thoughtbot](https://robots.thoughtbot.com/test-rake-tasks-like-a-boss), I've been going with Cucumber, which might run a little slower, but I can more easily see the data setup, so I stamp out a devops feature like so:
 
 ```gherkin
 @vcr @rake
@@ -117,7 +117,7 @@ which got the task running, but I was not seeing the projects I wanted:
       features/devops/migrate_github_urls.feature:18:in `Then I should see projects with following details:'
 ```
 
-(wish I could get the green red and blue in github syntax markup for cuke and rspec output ...) and I see that the step definition appears to be hard coded to be doing something for commit counts:
+(wish I could get the green, red, and blue in Github syntax markup for cuke and rspec output ...) and I see that the step definition appears to be hard coded to be doing something for commit counts:
 
 ```rb
 Then(/^I should see projects with following details:$/) do |table|
