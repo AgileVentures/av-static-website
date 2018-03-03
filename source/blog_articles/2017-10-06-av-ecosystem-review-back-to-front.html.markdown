@@ -20,7 +20,7 @@ What we have on Localsupport is a travis build that includes the following:
 bundle exec rake cucumber:second_try
 ```
 
-let's pull in the latest develop updates and get a branch on WSO set up with that:
+Let's pull in the latest develop updates and get a branch on WSO set up with that:
 
 ```
 [tansaku@Samuels-MBP:~/Documents/Github/AgileVentures/WebsiteOne (develop)]$ 
@@ -53,7 +53,7 @@ first_try:  NEVER_FAIL=true  <%= std_opts %> --format rerun --out rerun.txt feat
 second_try: NEVER_FAIL=false <%= std_opts %> @rerun.txt  --strict --tags ~@wip
 ```
 
-and then we need to see if we adjust the sempahore running options to hit this.  In the process I go into `lib/tasks/ci.rake` and change it so it hits first_try and second_try (and not ci_cucumber) like so:
+and then we need to see if we adjust the semaphore running options to hit this.  In the process I go into `lib/tasks/ci.rake` and change it so it hits first_try and second_try (and not ci_cucumber) like so:
 
 ```rb
 unless Rails.env.production?
