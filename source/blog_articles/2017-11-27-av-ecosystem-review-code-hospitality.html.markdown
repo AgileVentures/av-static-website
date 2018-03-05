@@ -25,7 +25,7 @@ This app powers the AgileVentures main developer site, showing lists of active p
 
 ## History
 
-* Sam Joseph had the idea for an online pairing community where everyone worked together to use the agile development methodology to deliver solutions to IT charitys and non-profits.  Thomas Ochman joined as project manager and led the development of the WebSiteOne codebase with Bryan Yap serving as technical lead.  Initialy Sam was the notional "client", not getting involved in the tech development, and many different volunteers contributed code.  Later Raoul joined as project manager as Thomas and Bryan had less and less time for the project.  Sam switched roles joining Raoul as project manager, and is now the sole project manager as Raoul became unavailable.  
+* Sam Joseph had the idea for an online pairing community where everyone worked together to use the agile development methodology to deliver solutions to IT charities and non-profits.  Thomas Ochman joined as project manager and led the development of the WebSiteOne codebase with Bryan Yap serving as technical lead.  Initialy Sam was the notional "client", not getting involved in the tech development, and many different volunteers contributed code.  Later Raoul joined as project manager as Thomas and Bryan had less and less time for the project.  Sam switched roles joining Raoul as project manager, and is now the sole project manager as Raoul became unavailable.  
 
 ## Approaches
 
