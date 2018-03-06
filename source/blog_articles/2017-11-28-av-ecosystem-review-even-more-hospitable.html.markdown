@@ -1,3 +1,10 @@
+---
+title: AV EcoSystem Review Even More Hospitable
+author: Sam Joseph
+---
+
+![namaste](../images/namaste.jpg)
+
 So, continuing to work from [Nadia's README template](https://gist.github.com/nodunayo/c919477906aab6c1af6065ff8e868d3e): 
 
 # AgileVentures WebSiteOne

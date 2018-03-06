@@ -5,15 +5,15 @@ tags:
 author: Sam Joseph
 ---
 
-So I'm deeply tempted to continue with the premium page review.  I think making all the new questions have their explanations in pop-out form would probably be an improvement, but I know that's a sticky hour or so of manipulating HTML.  Very unDRY, something we could, or perhaps should, be doing with a DB backed loop through a template, but setting up (and deploying that) would be another few hours and days.  I'm leaning towards further review of the "Getting Started" page, although we did make a change to that on Monday.
+So I'm deeply tempted to continue with the Premium page review.  I think making all the new questions have their explanations in pop-out form would probably be an improvement, but I know that's a sticky hour or so of manipulating HTML.  Very unDRY, something we could, or perhaps should, be doing with a DB backed loop through a template, but setting up (and deploying that) would be another few hours and days.  I'm leaning towards further review of the "Getting Started" page, although we did make a change to that on Monday.
 
 It's too early to tell if those changes have had any impact.  We can look for changes via Google Analytics:
 
-![](https://www.dropbox.com/s/yyyf9ykhy0tc68u/Screenshot%202017-07-06%2009.17.13.png?dl=1)
+![](https://dl.dropbox.com/s/yyyf9ykhy0tc68u/Screenshot%202017-07-06%2009.17.13.png?dl=1)
 
 and compare Monday to Wednesday last week, with Monday to Wednesday this week.  The number of clicks through WebSiteOne has gone down, although we can see it went up for some other projects:
 
-![](https://www.dropbox.com/s/39tiao9ajhshqib/Screenshot%202017-07-06%2009.18.11.png?dl=1)
+![](https://dl.dropbox.com/s/39tiao9ajhshqib/Screenshot%202017-07-06%2009.18.11.png?dl=1)
 
 Far too early to discern any trend.  I guess the question is whether to leave that single change (of removing the first two administrative steps) or to keep on "improving" the page.  Same quandry with the Premium page, I guess.  Just reviewing that now, I made some minor changes to the top of the page to remove the seemingly redundant link to "AgileVentures Premium" and an explanation text saying "the benefits are as follows" that seem to make no sense now that we have a list of questions.  Let's at least do a sanity check on what we have in the "Getting Started" page.  So, step 1 currently says:
 
@@ -21,15 +21,15 @@ Far too early to discern any trend.  I guess the question is whether to leave th
 
 > You can always set-up your own project, but we would recommend joining an existing one at first. This way you can meet other members, learn about our culture, principles and tools.
 
-Now the odd thing is that we say browse the list of projects, but we don't link there, and I could impulsively link that up, but would we rather the user focuses on the list of projects shown below?  The key thing we have in this list is the technologies used by the projects, the current maintainers and direct links to the relevant slack channels.  Of course it would be great if the main projects page showed all these things.  I'm thinking that a slimmed down more focused version of the above text would be:
+Now the odd thing is that we say browse the list of projects, but we don't link there, and I could impulsively link that up, but would we rather the user focuses on the list of projects shown below?  The key thing we have in this list is the technologies used by the projects, the current maintainers and direct links to the relevant Slack channels.  Of course it would be great if the main projects page showed all these things.  I'm thinking that a slimmed down more focused version of the above text would be:
 
 > Find a project that interests you from the table below:
 
 Then the table, and then notes on "can't find a project you like, see our complete list" and "want to set up your own project" after the table itself and also we could improve the table formatting somehow ... so I pushed the width out to 100%, increased the font size, bolded the headings and added a couple of other active projects:
 
-![](https://www.dropbox.com/s/66ss4bwklwf5may/Screenshot%202017-07-06%2009.52.21.png?dl=1)
+![](https://dl.dropbox.com/s/66ss4bwklwf5may/Screenshot%202017-07-06%2009.52.21.png?dl=1)
 
-as well as further cleaning up the text a little.  Reading through the rest of the getting started I feel like I'm reading a decsription of how some of the original developers intended the entire site to work.  There are cryptic references to WSO and other things that I think will make little sense.  Even after a few tidy ups what we have in step 2 is:
+as well as further cleaning up the text a little.  Reading through the rest of the getting started I feel like I'm reading a description of how some of the original developers intended the entire site to work.  There are cryptic references to WSO and other things that I think will make little sense.  Even after a few tidy ups what we have in step 2 is:
 
 > Learn how we communicate and coordinate projects:
 * source code is kept in Github repos
