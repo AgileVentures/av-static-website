@@ -1,6 +1,13 @@
+---
+title: AV EcoSystem Review Getting Stuck
+author: Sam Joseph
+---
+
+![getting stuck](../images/getting_stuck.jpg)
+
 I'm getting a bit stuck.  My motivation to clear things off my desk has completely collapsed.  Today I did my social media station keeping before opening the blog.  I'd love to get to the computer at 8am like I sometimes used to and get a real meaty chunk of work by 10am to then have the motivation to hit on non social-media admin.  Gosh, social media is gamified addiction fun, isn't it?
 
-Anyhow, I've cleared all the dependabot low hanging fruit, so I'm rebuilding some older PRs, which might just be falling foul of intermittent fails.  Gosh, that's a time sync - that reminds me about my plan to try and get the medium-editor in place so we can drop mercury.  I'm also slighltly stuck on my revision to the WSO README for fear of getting into arguments about the accuracy of the project history - maybe better to leave that section out?  Maybe I move the new draft README out of my last blog and into a placeholder location ...
+Anyhow, I've cleared all the dependabot low hanging fruit, so I'm rebuilding some older PRs, which might just be falling foul of intermittent fails.  Gosh, that's a time sink - that reminds me about my plan to try and get the medium-editor in place so we can drop mercury.  I'm also slighltly stuck on my revision to the WSO README for fear of getting into arguments about the accuracy of the project history - maybe better to leave that section out?  Maybe I move the new draft README out of my last blog and into a placeholder location ...
 
 [https://github.com/AgileVentures/WebsiteOne/blob/develop/README-draft.md](https://github.com/AgileVentures/WebsiteOne/blob/develop/README-draft.md)
 
