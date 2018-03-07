@@ -1,6 +1,6 @@
-I'm getting a bit stuck.  My motivation to clear things off my desk has completely collapsed.  Today I did my social media station keeping before opening the blog.  I'd love to get to the computer at 8am like I sometimes used to and get a real meaty chunk of work by 10am to then have the motivation to hit on non social-media admin.  Gosh social media is gamified addiction fun isn't it.
+I'm getting a bit stuck.  My motivation to clear things off my desk has completely collapsed.  Today I did my social media station keeping before opening the blog.  I'd love to get to the computer at 8am like I sometimes used to and get a real meaty chunk of work by 10am to then have the motivation to hit on non social-media admin.  Gosh, social media is gamified addiction fun, isn't it?
 
-Anyhow, I've cleared all the dependabot low hanging fruit, so I'm rebuilding some older PRs, which might just be falling foul of intermittent fails.  Gosh that's a time sync - that reminds me about my plan to try and get the medium-editor in place so we can drop mercury.  I'm also slighltly stuck on my revision to the WSO README for fear of getting into arguments about the accuracy of the project history - maybe better to leave that section out?  Maybe I move the new draft README out of my last blog and into a placeholder location ...
+Anyhow, I've cleared all the dependabot low hanging fruit, so I'm rebuilding some older PRs, which might just be falling foul of intermittent fails.  Gosh, that's a time sync - that reminds me about my plan to try and get the medium-editor in place so we can drop mercury.  I'm also slighltly stuck on my revision to the WSO README for fear of getting into arguments about the accuracy of the project history - maybe better to leave that section out?  Maybe I move the new draft README out of my last blog and into a placeholder location ...
 
 [https://github.com/AgileVentures/WebsiteOne/blob/develop/README-draft.md](https://github.com/AgileVentures/WebsiteOne/blob/develop/README-draft.md)
 
@@ -52,7 +52,7 @@ Feature: List Repeating Events
 
 It feels like a waste of resources to break it into two scenarios when it's the same set up and it's effectively reloading the entire system twice to check for something that could be checked in sequence.  Perhaps it would be better to get the intent of the second scenario in the step definition itself.  I adjust like so:
 
-```
+```gherkin
   Scenario: Show correct timezone for repeating event
     Given the date is "2016/05/01 09:15:00 UTC"
     When I am on events index page
@@ -61,7 +61,7 @@ It feels like a waste of resources to break it into two scenarios when it's the 
     And I should not see any HTML tags
 ```
 
-Would love to adjust the background step so it wasnt' quite so wide ... I've got it down to:
+Would love to adjust the background step so it wasn't quite so wide ... I've got it down to:
 
 ```gherkin
 @vcr
@@ -86,13 +86,13 @@ Feature: List Repeating Events
 
 I'd still like to add more explanation to the `local time element should be set to "2016-05-10T07:00:00Z"` step so that it explains that this is the raw element that the javascript library `local_time` uses to display the correct time zone to the user and that we gave up testing the execution of that, since the headless browser can't easily be manipulated to a different time zone.  Still my ideal Scenario text would be more like:
 
-```
+```gherkin
   Scenario: Show correct timezone for repeating event
     Given the date is a weekday in 2016
     When I am on events index page
     Then I should see the event title and description
     And I should not see any HTML tags
-    And the elements needed by the local_time js library that shows times in the users timezone should be  set correctly
+    And the elements needed by the local_time js library that shows times in the users timezone should be set correctly
 ```
 
 where the intention for each line is explicit.  I'll leave that for another time, as I've performed several refactorings already.  At least I now have some aspirational text to put in the new README draft.
