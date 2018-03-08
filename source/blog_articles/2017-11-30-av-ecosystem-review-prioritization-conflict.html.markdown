@@ -1,6 +1,13 @@
-Blargh.  Let's get the latest fix deployed on WebSiteOne.  Recently these blogs are little WebSiteOne admin activities and then the release process gets smeared out over the day.  What would it be like to actually focus on a single project for a day or, gasp, for a whole week?  I've also made the process more complicated by switching off the staging and develop servers when we're not using them, in order to save money.  It's also easy to burn time on these dependabot gem upgrades, although do I sense I'm getting a handle on them now?  Could even turn back on the PR updates in the #websiteone channel?
+---
+title: AV EcoSystem Review Prioritization Conflict
+author: Sam Joseph
+---
 
-I'm suddenly paranoid about the google login failing, should I be on that?  Let's try to clean up first.  We've got pending notices in the jasmine tests and rspec.  I've got [half an idea](https://github.com/AgileVentures/WebsiteOne/pull/1858#issuecomment-348141856) about how to fix the `local_time` gem upgrade that dependabot is recommending, but heuristic: I already pulled in one dependabot today, stay on target.
+![switches](../images/switches.jpg)
+
+Blargh.  Let's get the latest fix deployed on WebSiteOne.  Recently these blogs are little WebSiteOne admin activities and then the release process gets smeared out over the day.  What would it be like to actually focus on a single project for a day or, gasp, for a whole week?  I've also made the process more complicated by switching off the staging and develop servers when we're not using them, in order to save money.  It's also easy to burn time on these dependabot gem upgrades, although do I sense I'm getting a handle on them now?  Could we even turn back on the PR updates in the #websiteone channel?
+
+I'm suddenly paranoid about the Google login failing, should I be on that?  Let's try to clean up first.  We've got pending notices in the Jasmine tests and RSpec.  I've got [half an idea](https://github.com/AgileVentures/WebsiteOne/pull/1858#issuecomment-348141856) about how to fix the `local_time` gem upgrade that dependabot is recommending, but heuristic: I already pulled in one dependabot today; stay on target.
 
 Jasmine has this set of pending statements:
 
@@ -76,7 +83,7 @@ and making it all work involves me breaking out the js debugger and stepping thr
 
 ![](https://dl.dropbox.com/s/zsckxs1juv27wax/Screenshot%202017-11-30%2010.47.52.png?dl=0)
 
-I feel paranoid that this is all yesterday's tech.   I notice the JasmineJQuery library is looking for a new maintainer, and apparently some folks are using https://github.com/tmpvar/jsdom
+I feel paranoid that this is all yesterday's tech.   I notice the JasmineJQuery library is looking for a new maintainer, and apparently some folks are using [https://github.com/tmpvar/jsdom](https://github.com/tmpvar/jsdom)
 
 I could also be refactoring out some of the operations in this test ... I equivocate and go for it:
 
@@ -128,7 +135,7 @@ describe('eventDatePicker', function(){
 });
 ```
 
-It works and I'm rewarded with fully passing jasmine specs, no pending, and I think the intention of the code above is now slighlty better in terms of self-documenting the intention by method names rather than comments.  We still have the issue that the fixture is too large, but that can be updated as and when.  Really the parts of the fixture that are relevant are just a few items being shown and hidden.  Ideally the fixture could be auto-generated, but really my concern here is just clearing the deck for others to work on things.
+It works and I'm rewarded with fully passing Jasmine specs, no pending, and I think the intention of the code above is now slighlty better in terms of self-documenting the intention by method names rather than comments.  We still have the issue that the fixture is too large, but that can be updated as and when.  Really the parts of the fixture that are relevant are just a few items being shown and hidden.  Ideally the fixture could be auto-generated, but really my concern here is just clearing the deck for others to work on things.
 
 I create a ticket for clearing pending items.  Can I also get the RSpec sorted?  The Karma class is this:
 
@@ -159,4 +166,4 @@ end
 
 and then I screw up by pushing to develop instead of creating a branch.  Urgh, I amend the commit name to say it fixes the pending issue, but can't force push that up to develop because it's protected.  Blargh.  I remove the protection, force that up, and then put the protection back on.  Not ideal. Getting there.  Gotta finish up the blog.  Shame to pollute my inner space with this constant pressure to work faster, do more.  Need to meditate on that, but no time :-)
 
-Anyhow, I think what I've got is now a pretty clean output from both Jasmine and RSpec.  Now if we really want to clean up the cucumber output then we've got to move on to removing this Mercury editor.  So I update that [branch](https://github.com/AgileVentures/WebsiteOne/pull/1767) and I guess I work on that tomorrow, pulling examples from what I do into the new README ... also our coverage tracking seems to be broken.  Need to get that fixed up too ... no rest for the wicked ... and do respite from the prioritization conflicts ...
+Anyhow, I think what I've got is now a pretty clean output from both Jasmine and RSpec.  Now if we really want to clean up the cucumber output then we've got to move on to removing this Mercury editor.  So I update that [branch](https://github.com/AgileVentures/WebsiteOne/pull/1767) and I guess I work on that tomorrow, pulling examples from what I do into the new README ... also our coverage tracking seems to be broken.  Need to get that fixed up too ... no rest for the wicked ... and no respite from the prioritization conflicts ...
