@@ -132,14 +132,14 @@ It works and I'm rewarded with fully passing jasmine specs, no pending, and I th
 
 I create a ticket for clearing pending items.  Can I also get the RSpec sorted?  The Karma class is this:
 
-```
+```ruby
 class Karma < ActiveRecord::Base
 end
 ```
 
 and the spec is
 
-```
+```ruby
 require 'spec_helper'
 
 RSpec.describe Karma, type: :model do
@@ -149,7 +149,7 @@ end
 
 I don't know that the Karma model is yet doing anything special that needs testing.  I think this is boiler plate.  I'm going to delete the pending message, since I hate deleting files where I might want to add something later, hmmm.  I go for:
 
-```
+```ruby
 require 'spec_helper'
 
 RSpec.describe Karma, type: :model do
