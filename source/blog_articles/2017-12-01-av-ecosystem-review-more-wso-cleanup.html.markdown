@@ -3,7 +3,7 @@ So running the cuke tests I get this one bit of extraneous output:
 ```
 Encountered Error in get: 404 Resource Not Found: {"code":"route_not_found","kind":"error","error":"The path you requested has no valid endpoint."}
 ```
-and of course huge dumps of vcr and puffing billy cache changes.  I can clean that up with our `rake vcr_billy_caches:reset` commmand but I wonder what other folks do?  Perhaps I should ask the VCR folks?  I think the issue we have is that we need to throw out some of our old caches and reload, dealing with the pain that will cause ... maybe we need some VCR version of dependabot that will throw out old caches for us?
+and of course huge dumps of vcr and puffing billy cache changes.  I can clean that up with our `rake vcr_billy_caches:reset` commmand but I wonder what other folks do.  Perhaps I should ask the VCR folks.  I think the issue we have is that we need to throw out some of our old caches and reload, dealing with the pain that will cause ... maybe we need some VCR version of dependabot that will throw out old caches for us?
 
 I posted the [following to the vcr-ruby mailing list](https://groups.google.com/forum/#!topic/vcr-ruby/8DoA7MUq-38):
 
@@ -18,6 +18,7 @@ I posted the [following to the vcr-ruby mailing list](https://groups.google.com/
 > I wonder if we're using VCR incorrectly, or perhaps not updating our cached network files frequently enough.  I'm a little scared to delete large swathes of recorded files for the extra work that might pop up in terms of ensuring that everything works again, but perhaps I'm being silly.  It's just that it's all volunteer time, so well, anyway.  Here are the two main OS projects I'm running that use VCR:
 
 > https://github.com/AgileVentures/LocalSupport
+
 > https://github.com/AgileVentures/WebSiteOne
 
 > I've added sections to our contributing docs, but I feel like all my text should probably be replaced with images or a video: https://github.com/AgileVentures/LocalSupport/blob/develop/CONTRIBUTING.md#acceptance-testing--caching
@@ -25,6 +26,7 @@ I posted the [following to the vcr-ruby mailing list](https://groups.google.com/
 > I just wondered if others had similar experiences and any suggestions.
 
 > Many thanks in advance
+
 > Best, Sam
 
 I also opened a [GitHub issue](https://github.com/vcr/vcr/issues/672) to also mention the idea of some sort of automated tool to delete old cache files.  
