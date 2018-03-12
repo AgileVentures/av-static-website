@@ -40,7 +40,7 @@ To http://github.com/AgileVentures/WebsiteOne
    724012d8..84eab076  master -> master
 ```
 
-right, that's on the way to master (assuming the CI passes).  I created a ticket for the change to the messaging I want to make:
+Right, that's on the way to master (assuming the CI passes).  I created a ticket for the change to the messaging I want to make:
 
 > The google hangout URLs are really ugly - hoping we can improve the post to slack to something like:
 
@@ -48,8 +48,8 @@ right, that's on the way to master (assuming the CI passes).  I created a ticket
 Martin Fowler Scrum - all welcome - discuss any project! :-) click to join
 ```
 
-> where "click to join" is hyperlinked to the hangout (or jitsy) or whatever
+> where "click to join" is hyperlinked to the hangout (or Jitsi) or whatever
 
 [https://github.com/AgileVentures/WebsiteOne/issues/1880](https://github.com/AgileVentures/WebsiteOne/issues/1880)
 
-I'll start a vote on that in Slack, and turn off the PR notifications (since dependabot is so active) ... and I wonder if we should get every dependabot thing merged first before moving on to this Slack messaging improvement?  Well, it all hinges on how this production deploy goes and whether we have to fix a lot of things up.  Let's see if this is stable and then we'll decide.  I do want to jump several levels back up to review the ecosystem from the top down before the end of this week ...
+I'll start a vote on that in Slack, and turn off the PR notifications (since dependabot is so active) ... and I wonder if we should get every dependabot thing merged first before moving on to this Slack messaging improvement.  Well, it all hinges on how this production deploy goes and whether we have to fix a lot of things up.  Let's see if this is stable and then we'll decide.  I do want to jump several levels back up to review the ecosystem from the top down before the end of this week ...
