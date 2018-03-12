@@ -5,7 +5,6 @@ tags:
 author: Sam Joseph
 ---
 
-
 So what I really meant to do yesterday was to look at the flows going through various pages in the site via Google Analytics.  Here's a view that compares June with May this year:
 
 ![behaviour flow around sign up page, may vs jun](https://dl.dropbox.com/s/hf47so53v8lnhyw/Screenshot%202017-07-11%2009.23.15.png?dl=1)
@@ -24,7 +23,7 @@ What's perhaps more concerning is the 299 drop offs out of the 793 sessions on t
 
 Overall I think the page looks pretty good.  We previously fixed up the icons and made both signup methods work, so the only garish thing remaining is this email signup disabled.  I found there's a [plugin for devise to add Google's re-captcha](https://github.com/plataformatec/devise/wiki/How-To:-Use-Recaptcha-with-Devise).  Working through it I got stuck with the configuration, but fixed it and put in a PR to the repo with the fix:
 
-https://github.com/ambethia/recaptcha/pull/231
+[https://github.com/ambethia/recaptcha/pull/231](https://github.com/ambethia/recaptcha/pull/231)
 
 and so was rewarded with seeing the following in my local spike:
 
@@ -67,7 +66,7 @@ I added byebug to the check_captcha method I'd added to the registrations contro
   end
 ```
 
-Stepping through the code there made it look like the verification was failing - nothing else wrong.  The `verify_recaptcha` method was returning false ... Not sure what's going wrong there and I have the sinking feeling that adding the captcha, as I have, may screw up the other signup methods.  We'll see.  First I just need proof positive that we can get it to work at all ... It may be that I just can't run it locally like this - I added the `localhost` domain to the domains associated with keys to run locally, but maybe there's more needed to run locally.  I can see that there's a domain name verification setting in the reCaptcha settings:
+Stepping through the code there made it look like the verification was failing - nothing else wrong.  The `verify_recaptcha` method was returning false ... not sure what's going wrong there and I have the sinking feeling that adding the captcha, as I have, may screw up the other signup methods.  We'll see.  First I just need proof positive that we can get it to work at all ... It may be that I just can't run it locally like this - I added the `localhost` domain to the domains associated with keys to run locally, but maybe there's more needed to run locally.  I can see that there's a domain name verification setting in the reCaptcha settings:
 
 ![recaptcha settings](https://www.dropbox.com/s/53j9mi92omzrls9/Screenshot%202017-07-11%2010.04.42.png?dl=1)
 

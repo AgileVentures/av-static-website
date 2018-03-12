@@ -3,7 +3,7 @@ title: AV EcoSystem Review Code Hospitality
 author: Sam Joseph
 ---
 
-![broom](../images/hospitality.jpg)
+![hospitality](../images/hospitality.jpg)
 
 Pairing with Marian over the weekend we managed to clear up the last piece of junk in the RSpec log, the deprecation warning about the event_repeats boolean column in the events table.  It turned out that we could fix it simply by adjusting the specs, since it was they that were trying to force strings into the boolean column, not any part of the main app.  We drifted over a few other areas where issues could be investigated or things refactored.  We saw the code that was supposed to email notify us when there are 500 errors (which I never receive) and it looked like we could make the events code simpler, by pulling the string --> boolean transformations into the select options.
 
