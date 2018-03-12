@@ -1,9 +1,16 @@
+---
+title: AV EcoSystem Review More WSO CleanUp
+author: Sam Joseph
+---
+
+![cleanup](../images/cleanup.jpg)
+
 So running the cuke tests I get this one bit of extraneous output:
 
 ```
 Encountered Error in get: 404 Resource Not Found: {"code":"route_not_found","kind":"error","error":"The path you requested has no valid endpoint."}
 ```
-and of course huge dumps of vcr and puffing billy cache changes.  I can clean that up with our `rake vcr_billy_caches:reset` commmand but I wonder what other folks do.  Perhaps I should ask the VCR folks.  I think the issue we have is that we need to throw out some of our old caches and reload, dealing with the pain that will cause ... maybe we need some VCR version of dependabot that will throw out old caches for us?
+and of course huge dumps of VCR and Puffing Billy cache changes.  I can clean that up with our `rake vcr_billy_caches:reset` commmand but I wonder what other projects do.  Perhaps I should ask the VCR folks.  I think the issue we have is that we need to throw out some of our old caches and reload, dealing with the pain that will cause ... maybe we need some VCR version of dependabot that will throw out old caches for us?
 
 I posted the [following to the vcr-ruby mailing list](https://groups.google.com/forum/#!topic/vcr-ruby/8DoA7MUq-38):
 
@@ -31,4 +38,4 @@ I posted the [following to the vcr-ruby mailing list](https://groups.google.com/
 
 I also opened a [GitHub issue](https://github.com/vcr/vcr/issues/672) to also mention the idea of some sort of automated tool to delete old cache files.  
 
-Annoyingly I'm almost out of time this morning, and I wanted to see if I could fix the `local_time` update that dependabot was suggesting, as well as cleaning out the cruft in the Cucumber logs.  I was also thinking that the ultra slow cukes needed to be worked on.  Hmmm, leave `local_time` to next week I guess ... urgh, and I left a hanging PR to update some of the slack channels that get pinged ...
+Annoyingly I'm almost out of time this morning, and I wanted to see if I could fix the `local_time` update that dependabot was suggesting, as well as cleaning out the cruft in the Cucumber logs.  I was also thinking that the ultra slow cukes needed to be worked on.  Hmmm, leave `local_time` to next week I guess ... urgh, and I left a hanging PR to update some of the Slack channels that get pinged ...
