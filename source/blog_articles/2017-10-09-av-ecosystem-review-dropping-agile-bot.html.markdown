@@ -40,7 +40,7 @@ To http://github.com/AgileVentures/WebsiteOne
    724012d8..84eab076  master -> master
 ```
 
-right, that's on the way to master (assuming the CI passes).  I created a ticket for the change to the messaging I want to make:
+Right, that's on the way to master (assuming the CI passes).  I created a ticket for the change to the messaging I want to make:
 
 > The google hangout URLs are really ugly - hoping we can improve the post to slack to something like:
 
@@ -48,7 +48,7 @@ right, that's on the way to master (assuming the CI passes).  I created a ticket
 Martin Fowler Scrum - all welcome - discuss any project! :-) click to join
 ```
 
-> where "click to join" is hyperlinked to the hangout (or jitsy) or whatever
+> where "click to join" is hyperlinked to the hangout (or Jitsi) or whatever
 
 [https://github.com/AgileVentures/WebsiteOne/issues/1880](https://github.com/AgileVentures/WebsiteOne/issues/1880)
 
