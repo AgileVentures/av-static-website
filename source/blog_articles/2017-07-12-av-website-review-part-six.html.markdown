@@ -35,9 +35,9 @@ The difficulty is getting all these four at the same time.  There's also the que
 4. Land on the AV Sign up page (hopefully soon with captcha)
 5. Sign up
 
-Now after the sign up point, the member is redirected to the Getting Started page, which I just think should mention that a Slack invite has been sent.  Perhaps a flash notice to let them know to check their email for the Slack invite?  One that doesn't dissappear too fast.  Maybe the sign up page itself should say that a slack invite will be sent?  I created an issue for that:
+Now after the sign up point, the member is redirected to the Getting Started page, which I just think should mention that a Slack invite has been sent.  Perhaps a flash notice to let them know to check their email for the Slack invite?  One that doesn't dissappear too fast.  Maybe the sign up page itself should say that a Slack invite will be sent?  I created an issue for that:
 
-https://github.com/AgileVentures/WebsiteOne/issues/1724
+[https://github.com/AgileVentures/WebsiteOne/issues/1724](https://github.com/AgileVentures/WebsiteOne/issues/1724])
 
 But is that just re-arranging deck chairs?  So then there's the ongoing flow of how and whether the member works through the "getting started" page.  There's also the experience they have in Slack.  It's frustrating that we can't have an integrated experience where the Slack "chat" and website "documentation" are both available in parallel.  Anyhow, what we do have is this automated greeting when the user joins the Slack instance, which comes from my avatar and looks like this:
 
@@ -47,9 +47,9 @@ Now it's not ideal that again we're directing folks to a third party site (GitHu
 
 Anyway, we're also paying Amazon, monthly, a small amount for running this bot when we could be doing it cheaper on Azure, so I want to move that over.  Also Federico is keen for me to add the special offer about a free Mob session for liking us on Facebook or following us on Twitter.  I also want to get it set up so others can edit it ... let me at least try and remember how to access that code.  It's in this repo:
 
-https://github.com/AgileVentures/greeter_bot
+[https://github.com/AgileVentures/greeter_bot](https://github.com/AgileVentures/greeter_bot)
 
-Technically the bot is completely trivial.  I can't immediately access it due to my IP address having changed - so it's time to add the new one to EC2 security; and I'm in.  It's just a git repo on a linux box and trivial to update.
+Technically the bot is completely trivial.  However I can't immediately access it due to my IP address having changed - so it's time to add the new one to EC2 security; and I'm in.  It's just a git repo on a Linux box and trivial to update.
 
 What's interesting is that this has been running for six months--no trouble and no tests.  So anyway, I just ended up attempting to deploy the greeter bot on Azure/Dokku, which basically involved:
 
