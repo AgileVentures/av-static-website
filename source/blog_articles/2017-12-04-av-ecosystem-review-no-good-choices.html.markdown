@@ -3,7 +3,7 @@ title: AV EcoSystem Review No Good Choices
 author: Sam Joseph
 ---
 
-Urgh, so I've got a mild cold, but I desparately want to clear up and fix a few things with the Slack notifications.  Also the Google login and signup is broken.  However in addition I think I must use my morning blogs this week to work on the Anthony Powell society database that we just got the contract for.  Of course between the cold and rebooting my computer and getting distracted by Slack I'm now out of time for really getting anything done before the WebDev Mob.  I guess maybe the thing to do is cancel the other meetings later in the day.
+Urgh, so I've got a mild cold, but I desparately want to clear up and fix a few things with the Slack notifications.  Also the Google login and signup is broken.  However in addition I think I must use my morning blogs this week to work on the Anthony Powell Society database that we just got the contract for.  Of course between the cold and rebooting my computer and getting distracted by Slack I'm now out of time for really getting anything done before the WebDev Mob.  I guess maybe the thing to do is cancel the other meetings later in the day.
 
 I'm really not sure what the right choice is.  Maybe I should just be sleeping the whole day ... I guess I'll at least start by opening LibreOffice Base ..., although the LibreOffice starts up with a document rather than a database.  I'm going to need to remember how to run the Base software itself.  Ah, okay, it looks like it is all one package.  I think LibreOffice accidentally opened a text file and so re-started in document mode.  Now restarting it I get a view of the recent files that includes the charity database components I was testing beforehand:
 
