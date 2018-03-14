@@ -1,4 +1,11 @@
-So I didn't get far with the Anthony Powell work yesterday, but I did at least get all the software running and get my head back into the problem space.  That was enough to take the edge off my anxiety about getting it started early.  I'm also onboarding a few new developers to WSO which ameliorates my worries about bleeds there.  This morning I got totally distracted by email and slack, but in the procrastination wheel picture of things I did get a few things done.  Now let's focus.  I'm tempted to see if I can bash the auto-generated form in LibreOffice Base to look like the exising Lotus Approach one.  The voice in my head worries that I should be writing out user stories.
+---
+title: AV EcoSystem Review Easily Distracted When Sick
+author: Sam Joseph
+---
+
+![sneeze](../images/sneeze.png)
+
+So I didn't get far with the Anthony Powell work yesterday, but I did at least get all the software running and get my head back into the problem space.  That was enough to take the edge off my anxiety about getting it started early.  I'm also onboarding a few new developers to WSO which ameliorates my worries about bleeds there.  This morning I got totally distracted by email and Slack, but in the procrastination wheel picture of things I did get a few things done.  Now let's focus.  I'm tempted to see if I can bash the auto-generated form in LibreOffice Base to look like the exising Lotus Approach one.  The voice in my head worries that I should be writing out user stories.
 
 1. Can enter new member information
 2. Can browse member information in same form
@@ -20,7 +27,7 @@ I've also already imported three of the tables into the system.  I can't remembe
 
 [https://help.libreoffice.org/Common/Importing_and_Exporting_Data_in_Base](https://help.libreoffice.org/Common/Importing_and_Exporting_Data_in_Base)
 
-which basically involves opening the existing dbf files and copying and pasting all the existing rows into the tables section of a LOB database, and then using the import wizard.  I had a go at trying to match up the datatypes, which reminds me that I'll probably need to start this over from scratch to get all the datatypes working properly ... as well as ensuring that I'm updated to the very latest LibreOffice version.   Hmm, I wonder if a Trello board or Pivotal Tracker is in order to track all the tasks.  I'm leaning towards Pivotal since being able to accept/reject by default will be a good match for this project.
+which basically involves opening the existing dbf files and copying and pasting all the existing rows into the tables section of a LOB database, and then using the import wizard.  I had a go at trying to match up the datatypes, which reminds me that I'll probably need to start this over from scratch to get all the datatypes working properly ... as well as ensuring that I'm updated to the very latest LibreOffice version.   Hmm, I wonder if a Trello board or Pivotal Tracker is in order to track all the tasks?  I'm leaning towards Pivotal since being able to accept/reject by default will be a good match for this project.
 
 I've got the form design system working so that I start manipulating the auto-generated form to look more like the existing Lotus Approach form:
 
@@ -28,7 +35,7 @@ I've got the form design system working so that I start manipulating the auto-ge
 
 but now a key feature is being able to have a form field that refers to another table.  There are some videos online:
 
-http://thefrugalcomputerguy.com/libreoffice-base/Base17.php
+[http://thefrugalcomputerguy.com/libreoffice-base/Base17.php](http://thefrugalcomputerguy.com/libreoffice-base/Base17.php)
 
 but I browse around and read a few help forums, and then I've pretty much worked out how to put sub-forms into a form that link to a different table and slave certain fields to the record being shown in the main form.  It's not working at the moment, but I guess that might be due to different field data types:
 
