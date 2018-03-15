@@ -3,7 +3,7 @@ title: AV EcoSystem Review Crawling Along
 author: Sam Joseph
 ---
 
-![bug](../images/bug.png)
+![bug](../images/bug.jpg)
 
 Well I think I've forged a reasonable anxiety management strategy with the following schedule for the Anthony Powell Membership database:
 
