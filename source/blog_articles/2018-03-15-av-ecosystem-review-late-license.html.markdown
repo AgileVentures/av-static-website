@@ -19,10 +19,28 @@ Learning how to Learn
 =====================
 
 What is Learning?
+-----------------
+
+We all know learning right? You sit in a class and someone tells you stuff.  You read a book.  Yes and no.  Learning is about getting answers to the questions you want answered.  Learning new skills.  You know learning, but do you know how to learn?
 
 How to Learn?
+-------------
+
+You can learn from a class or a book, but you won't really start learning until you start doing.  But how do you know which the right thing to do?  You need a team, a group of fellow learners who are also doing, building, creating.  Then you'll really be learning.
 
 How does Open Source and Open Development help?
+-----------------------------------------------
+
+Open source code means that there's an almost limitless amount of examples for you to learn from.  Open development means there are transparent team processes that you can take part in and learn from.
 
 AgileVentures and TurboCharged Learning
+----------------------------------------
+
+Tired of toy projects and tutorials?  AgileVentures can find you a team of learners working on a worthwhile project in interesting and exciting new technology.  It's hard work, emotionally challenging even, but once you've got involved in an AgileVentures team you'll never look back.  Your learning will be turbocharged and you'll never be the same again.
+
+----------
+
+Well that was short and sufficiently hyperbolus perhaps - now I just need to rustle up a few images ...
+
+
 
