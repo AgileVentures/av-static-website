@@ -25,7 +25,7 @@ The issue is that new members joining a channel doesn't generate any kind of not
 
 I have to say I've been very tempted to rustle up a quick bot that will do some greetings for us.  I'm supposed to be reviewing the AV website, but this has turned into a review of the AV ecosystem and I think that makes sense.  I don't think I should tinker more with the main website until I've got the results of the few experiments I'm running at the moment and in the flow through the site, that point when members join Slack channels seems pretty critical.  It's also an opportunity to get set up with a deployment flow on the bot project.  Although, should it be part of the greeter bot, or a separate instance?  Either way I definitely want to test this on a separate Slack instance before dropping it on our main Slack.
 
-The other thing I was thinking of last night was whether we could have a bot like AsyncVoter that was activated by a slash command; then project managers could add the greeter bot to their channel, and then configure it themselves via Slack?  I'm not sure - I'll have to enumerate all these different Slack integrations at some point.  Anyhow, I can't help myself from quickly deploying another bot against a test Slack instance to see if I can get the basic channel greeting behaviour I want ... and thirty minutes later I have one deployed on Azure/Dokku, after a quick round of tests on a separate slack instance to find the exact notification I want to match, getting stuck on the syntax for environment variables on dokku, but I now have it live on the #localsupport channel.  The code is just this:
+The other thing I was thinking of last night was whether we could have a bot like AsyncVoter that was activated by a slash command; then project managers could add the greeter bot to their channel, and then configure it themselves via Slack?  I'm not sure - I'll have to enumerate all these different Slack integrations at some point.  Anyhow, I can't help myself from quickly deploying another bot against a test Slack instance to see if I can get the basic channel greeting behaviour I want ... and thirty minutes later I have one deployed on Azure/Dokku, after a quick round of tests on a separate Slack instance to find the exact notification I want to match, getting stuck on the syntax for environment variables on dokku, but I now have it live on the #localsupport channel.  The code is just this:
 
 ```
 var Botkit = require('botkit');
@@ -61,7 +61,7 @@ ssh dokku@agileventures.eastus.cloudapp.azure.com config projectgreeterbot-produ
 git push azure-production master
 ```
 
-with all the code at: https://github.com/tansaku/project_greeter_bot
+with all the code at: [https://github.com/tansaku/project_greeter_bot](https://github.com/tansaku/project_greeter_bot)
 
 and we get this:
 
