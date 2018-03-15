@@ -1,3 +1,10 @@
+---
+title: AV EcoSystem Review Crawling Along
+author: Sam Joseph
+---
+
+![bug](../images/bug.png)
+
 Well I think I've forged a reasonable anxiety management strategy with the following schedule for the Anthony Powell Membership database:
 
 * by Dec 8th - screenshots of membership database interface for you to approve
@@ -5,7 +12,7 @@ Well I think I've forged a reasonable anxiety management strategy with the follo
 * by Jan 5th - beta version of membership database adjusted as per feedback
 * by Jan 31st - release version of membership database adjusted as per feedback, including full migration 
 
-which the client says they are happy with, and I've queried about how the Membership Types table doesn't seem to be used in the interface.  After yesterday's blog I was fiddling with the system on the train and once I have the fields in the right data format, subforms linking in related tables was all working.  Ironically it seems we don't immediately need that, but good to know that all works.  The form designer is not dissimilar from KeyNote or PowerPoint:
+which the client says they are happy with, and I've queried about how the Membership Types table doesn't seem to be used in the interface.  After yesterday's blog I was fiddling with the system on the train and once I have the fields in the right data format, subforms linking in related tables was all working.  Ironically it seems we don't immediately need that, but good to know that all works.  The form designer is not dissimilar from Keynote or PowerPoint:
 
 ![](https://dl.dropbox.com/s/eqeny8wkgv225x0/Screenshot%202017-12-06%2011.53.53.png?dl=0)
 
