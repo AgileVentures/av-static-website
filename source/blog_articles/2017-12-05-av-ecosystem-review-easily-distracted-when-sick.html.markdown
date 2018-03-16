@@ -21,7 +21,7 @@ The database dump we have from Lotus Approach appears to have five tables:
 
 and we have a dump of each with the addresses randomized.
 
-LibreOffice Base (like Lotus Approach and MS Access) provides a form interface where we can page through the rows in the database, and add new information.  I guess the key things to do are the make the forms look usable and ensure that the different tables have the right relationships set up.
+LibreOffice Base (like Lotus Approach and MS Access) provides a form interface where we can page through the rows in the database, and add new information.  I guess the key things to do are to make the forms look usable and ensure that the different tables have the right relationships set up.
 
 I've also already imported three of the tables into the system.  I can't remember how I did first time around.  I've previously referred to:
 
