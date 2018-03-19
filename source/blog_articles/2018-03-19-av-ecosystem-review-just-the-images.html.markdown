@@ -4,6 +4,6 @@ Late, shattered from half marathon.  Can I find some images for the learn page .
 ![learn hard](../images/learn_hard.jpg)
 ![learn](../images/learn.jpeg)
 ![play based learning](../images/play-based-learning.jpg)
-![learning process](../images/learning_process.jpg)
+![learning process](../images/learning_process.png)
 ![adult learners](../images/adult_learners.jpg)
 
