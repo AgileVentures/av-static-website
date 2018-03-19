@@ -1,6 +1,13 @@
+---
+title: AV EcoSystem Review Old School Progress
+author: Sam Joseph
+---
+
+![bug](../images/old_school.jpg)
+
 So I'm pretty far from reviewing the AV ecosystem here.  I'm devoting my blog driven development this week to making progress on the Anthony Powell Society membership database.  It's old school in that I'm using LibreOffice Base, which is an open source version of MS Access.  I used to teach a course on MS Access and Excel back at HPU and it's that experience that puts me in a position to deliver on the Anthony Powell Society project.  The APSoc have eschewed a cloud based membership database as they don't believe their members would make use of an online offering, and don't want to get locked in to some particular cloud offering.
 
-They'd been managing their membership database using Lotus Approach for many years, and one of the big advantages there was the WYSIWYG interface that allowed the secretary to tinker with the forms and relationships in the system without having to be a programmer.  Lotus Approach has been sunsetted and so I'm currently replicating the entire system for them in LibreOffice Base.  I had a reply to [my query on the ask.libreoffice.org site](https://ask.libreoffice.org/en/question/140023/base-list-box-dropdown-breaks-when-any-formatting-added/) about formatting breaking the list box dropdown, which although it doesn't fix the issue is good to see that the community is responsive.
+They'd been managing their membership database using Lotus Approach for many years, and one of the big advantages there was the WYSIWYG interface that allowed the secretary to tinker with the forms and relationships in the system without having to be a hard core programmer.  Lotus Approach has been sunsetted and so I'm currently replicating the entire system for them in LibreOffice Base.  I had a reply to [my query on the ask.libreoffice.org site](https://ask.libreoffice.org/en/question/140023/base-list-box-dropdown-breaks-when-any-formatting-added/) about formatting breaking the list box dropdown. Although it doesn't fix the issue it is good to see that the community is responsive.
 
 No one seems to know [how to change the default font in Base](https://ask.libreoffice.org/en/question/27384/how-to-change-the-default-font-in-libreoffice-base-form-wizard/) but I need to kick on since I've promised mock ups of the forms for the APSoc for tomorrow.  What's annoying is how slowly Base runs on my computer - I did do a restart the other day, hmmm.
 
