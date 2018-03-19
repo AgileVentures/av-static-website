@@ -1,5 +1,5 @@
 ---
-title: AV Website Review Part 8
+title: AV Website Review Part 9
 date: 2017-07-17
 tags: 
 author: Sam Joseph
@@ -9,7 +9,7 @@ author: Sam Joseph
 
 So no one joined the LocalSupport channel over the weekend and thus there's no immediate chance to see the new project greeting bot in action.  Other project maintainers have come back to me with mixed responses.  Some enthusiastic, some more cautious.  I also saw there are some [special keys for testing "reCaptcha"](https://developers.google.com/recaptcha/docs/faq), which makes me feel like I should put some more effort into that spike.
 
-I think what I really want though is to update the project greeting bot so that it supports multiple projects, mentions the person by name and even has a pause before it posts.  Force of habit--I just dropped a load of issues in the repo for the bot:
+However, I think what I really want is to update the project greeting bot so that it supports multiple projects, mentions the person by name and even has a pause before it posts.  Force of habit--I just dropped a load of issues in the repo for the bot:
 
 * [mention name of member who joins channel](https://github.com/tansaku/project_greeter_bot/issues/1)
 * [add pause to post so it's not quite so fast](https://github.com/tansaku/project_greeter_bot/issues/2)
