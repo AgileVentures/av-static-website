@@ -1,3 +1,10 @@
+---
+title: AV EcoSystem Review Client Feedback
+author: Sam Joseph
+---
+
+![client feedback](../images/client_feedback.png)
+
 I got out a screenshot of the main APSoc LibreOffice Base Member Information form to the client late Friday, and over the weekend they've given me very detailed feedback on changes they want to the form.  Agile is all about providing working software as early as possible, but this seems like a nice shortcut to increase the chances that the resulting system will be what the client wants.  I've ordered a new HDMI cable so I can start developing on my windows machine (although will that just be a distraction?), and so I'm going to have a go at making all the changes requested on my mac.
 
 1. Adjust label font (Liberation Sans --> Tahoma)
@@ -29,7 +36,7 @@ So I've done most of the cosmetic changes and some of the data ones:
 
 ![](https://dl.dropbox.com/s/oz1u6wksr1c40mw/Screenshot%202017-12-11%2010.25.27.png?dl=0)
 
-In about 30 minutes, but that leaves me with a set of things I need to check ... over the course of the day I also got LibreOffice installed on my windows machine where it seems to run a little faster, and I can confirm that it looks sensible on windows; and seems to have all the right basic functionality.
+In about 30 minutes, but that leaves me with a set of things I need to check ... over the course of the day I also got LibreOffice installed on my Windows machine where it seems to run a little faster, and I can confirm that it looks sensible on Windows; and seems to have all the right basic functionality.
 
 The feedback from the client is very specific.  Some of the items are just tiny ones that I would have fixed in a subsequent pass.  Others are micro-changes for alignment and so on that I would have got to eventually.  It feels like many of these changes are ones that they'll be able to make themselves when they are all set up with the software.  Others are more substantive.  Great to keep them in the loop.  For some reason I bristled at the font change suggestions; I think partly because I was having such trouble setting a default font, but as I familiarise myself further with the software I was able to make the requisite changes in short order.  It is great when one is able to show clients/users that you respond to their requests.  I think it builds a really positive relationship, but of course one needs to be able to say no when the amount of work explodes.
 
