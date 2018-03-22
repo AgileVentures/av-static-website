@@ -5,11 +5,11 @@ tags:
 author: Sam Joseph
 ---
 
-So I've got some suggested channel greeter bot text from at least one project maintainer.  I'm also running behind today, and I'm trying to get the websiteone sign up changes deployed ... I checked that the recaptcha sign up works on staging, which it does and filed a bug report about the double sign up message:
+So I've got some suggested channel greeter bot text from at least one project maintainer.  I'm also running behind today, and I'm trying to get the websiteone sign up changes deployed ... I checked that the recaptcha sign up works on staging, which it does, and I filed a bug report about the double sign up message:
 
 [https://github.com/AgileVentures/WebsiteOne/issues/1743](https://github.com/AgileVentures/WebsiteOne/issues/1743)
 
-I stabbed around with the hangout and youtube notifications and am still not getting consistency, but the video play is still working in all the right places.  I'm not seeing the Jitsi buttons on develop, which makes it seem like we had a deploy fail, but I can't see that in the semaphore history:
+I stabbed around with the hangout and YouTube notifications and am still not getting consistency, but the video play is still working in all the right places.  I'm not seeing the Jitsi buttons on develop, which makes it seem like we had a deploy fail, but I can't see that in the semaphore history:
 
 ![](https://dl.dropbox.com/s/ssmcw84gzal6u43/Screenshot%202017-07-19%2010.02.41.png)
  
