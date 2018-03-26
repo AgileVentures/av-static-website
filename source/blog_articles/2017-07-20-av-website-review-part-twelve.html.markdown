@@ -11,7 +11,7 @@ I also simplified the "Getting Started" page and rewrote parts of the Premium pa
 
 ![](https://dl.dropbox.com/s/pue0dkn4373lcbb/Screenshot%202017-07-20%2009.37.31.png)
 
-I'm conflicted about whether to investigate that further, or try to deploy the new greeting bot with the new functionality and updates for the other project maintainers ... and I've gone for deploying the new project greeting bot.  Here's a maintainer testing it live in his main project channel:
+I'm conflicted about whether to investigate that further, or try to deploy the new greeting bot with the functionality and updates for the other project maintainers ... and I've gone for deploying the new project greeting bot.  Here's a project maintainer testing it live in his main project channel:
 
 ![](https://dl.dropbox.com/s/ov99d3ogm4jq9lw/Screenshot%202017-07-20%2009.59.55.png)
 
