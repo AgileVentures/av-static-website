@@ -28,7 +28,7 @@ The entire HLP Proactive Care team were present and there were a fair few items 
 
 There were a fair few more agenda items before we got to the social prescribing wiki.  The new home page designs that we'd sketched had been printed out, and we had a short discussion about their relative merits and the future development of the wiki.
 
-![](https://www.dropbox.com/s/6hg8km7i88gpkgu/Screenshot%202018-03-19%2014.00.02.png?dl=0)
+![](https://dl.dropbox.com/s/6hg8km7i88gpkgu/Screenshot%202018-03-19%2014.00.02.png?dl=0)
 
 We got some immediate snippets of feedback on the designs, for example that rather than mentioning G.P.s we should refer to "Health Professionals", and that perhaps the main front page design should be more about the information you want rather than focusing on the person you are.  That latter was feedback from one G.P. and was in contrast to the feedback we'd had from another G.P. who had wanted things broken up in terms of who you were, rather than the type of information as it is currently laid out on the wiki, although the current layout is rather a sprawl:
 
