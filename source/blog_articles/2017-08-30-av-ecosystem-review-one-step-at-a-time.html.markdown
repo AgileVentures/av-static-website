@@ -19,7 +19,7 @@ Gablurgh ... full day yesterday ... slow start today.  Let's put the reviewing o
 
 So a low impact way for me to explore breaking these up is to create separate pages for each.  There's also considering the order that we have here, and whether we should add or remove things.  What could be cool is a clear call to action on each element.
 
-The finding a project that interests you seems like a reasonable start assuming that folks have basically got the idea that AgileVentures is all about joining teams and participating in projects.  We've got a custom table here that highlights our top projects, and also shows the primary technologies, and lead contact name, which is something that is missing from our project page.
+The "finding a project that interests you" seems like a reasonable start assuming that folks have basically got the idea that AgileVentures is all about joining teams and participating in projects.  We've got a custom table here that highlights our top projects, and also shows the primary technologies, and lead contact name, which is something that is missing from our project page.
 
 At the moment step two is a list of stuff with no clear action for the member reading the section.  It's potentially useful information about where things are found.  Is this the critical second step?  Do we derive any value from trying to get folks to read this here?  Or is it just a wall of text where we lose people?
 
