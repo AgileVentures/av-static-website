@@ -38,6 +38,6 @@ Still maybe the simplest thing is to create pages like
 * [https://www.agileventures.org/getting-started-3](https://www.agileventures.org/getting-started-3)
 * [https://www.agileventures.org/getting-started-4](https://www.agileventures.org/getting-started-4)
 
-[https://www.agileventures.org/getting-started-1](https://www.agileventures.org/getting-started-1) could be an alternate mockup that I could share with key members for feedback ... okay all done.  I don't think I'll release this live yet - let's see what folks in #av_community_talk say first ...
+[https://www.agileventures.org/getting-started-1](https://www.agileventures.org/getting-started-1) could be an alternate mockup that I could share with key members for feedback ... okay all done.  I don't think I'll release this live yet - let's see what folks in #av\_community\_talk say first ...
 
 [https://www.agileventures.org/getting-started-1](https://www.agileventures.org/getting-started-1)
