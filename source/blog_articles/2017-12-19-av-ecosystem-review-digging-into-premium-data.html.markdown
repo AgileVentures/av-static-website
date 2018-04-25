@@ -3,7 +3,7 @@ title: AV EcoSystem Review Digging into Premium Data
 author: Sam Joseph
 ---
 
-![premium stats back](../images/digging-in.jpg)
+![digging in](../images/digging-in.jpg)
 
 
 Yesterday I got stuck in to reviewing the Premium data from our API.  It was slow going, but at least I started.  Hoping I can plow through a chunk today.  Starting with our first ever Premium member, I reach out them to say hi and check how they are doing.  The next is a long term Premium who cancelled recently.  I see that they also deleted their account from AgileVentures a few days before reaching out to me in person.  I can sense that members would love to be able to cancel without having to interact with a human - perhaps we should prioritise that functionality?
