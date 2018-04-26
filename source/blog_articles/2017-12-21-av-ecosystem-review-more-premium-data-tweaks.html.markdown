@@ -1,4 +1,4 @@
-Kids off school - slightly earlier to the computer, but no earlier to the blogface.  Although I guess I have reviewed all my Slack and email.  Urgh.  Feel like I need to take a free day from Xmas to get this all completed.  Let's push on trying to update the premium user data in the system, updating my notes on premium users, and reaching out to those I haven't spoken to in a while.  Next up I have three Premium members who got 12 months of Premium membership bundled with the CraftAcademy bootcamp fees:
+Kids off school - slightly earlier to the computer, but no earlier to the blogface.  Although, I guess I have reviewed all my Slack and email.  Urgh.  Feel like I need to take a free day from Xmas to get this all completed.  Let's push on trying to update the premium user data in the system, updating my notes on premium users, and reaching out to those I haven't spoken to in a while.  Next up I have three Premium members who got 12 months of Premium membership bundled with the CraftAcademy bootcamp fees:
 
 ```
   {
@@ -20,7 +20,7 @@ irb(main):002:0> u.subscription.ended_at = Date.parse('2017-11-07')
 irb(main):003:0> u.save
 ```
 
-Then I come to a user who had Premium sponsored for a year by another user, and has since had initial sponsorship layered on top by a different sponsor.  Another situation where we need the user has_many subscriptions relationship, but I can add the sponsor relation and the fact that the basic Premium subscription will end after 12 months ... should I stick future end_dates in there? I guess so - it's clear from our experience with sponsorship that we need to be clearer with end points.  I think it might also help people make more effective use of their sponsorship, having a time limit that is.  Anyhow, I link up the sponsorship relation for this subscription:
+Then I come to a user who had Premium sponsored for a year by another user, and has since had initial sponsorship layered on top by a different sponsor.  Another situation where we need the user has_many subscriptions relationship, but I can add the sponsor relation and the fact that the basic Premium subscription will end after 12 months ... should I stick future end_dates in there? I guess so - it's clear from our experience with sponsorship that we need to be clearer with end points.  I think it might also help people make more effective use of their sponsorship; having a time limit, that is.  Anyhow, I link up the sponsorship relation for this subscription:
 
 ```
 irb(main):013:0> u = User.find_by email: '...'
