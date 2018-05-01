@@ -1,6 +1,13 @@
+---
+title: AV EcoSystem Review Not Completing Premium Review
+author: Sam Joseph
+---
+
+![not completing](../images/not-completing.jpg)
+
 So I reckon I've spent about 40 minutes each morning this week working through Premium members.  I think I've reviewed 20 and, where possible, got their data updated and correct in the WSO system so that we have a "single source of truth" for data about Premium members, and that it can be exposed over the secure Premium API for use by the machine learning system.  Of course we're throwing up various changes that are needed in the data model and there's going to need to be more hooking up to the Slack and Paypal APIs in order to ensure that changes to Premium statuses can be coordinated directly through the WSO site, both by admins and by the individual members themselves.  I'll forge on this morning.  The latest is an orphaned subscription:
 
-```
+```json
   {
     "email": null,
     "sponsor_email": null,
@@ -13,14 +20,14 @@ So I reckon I've spent about 40 minutes each morning this week working through P
   
 Matching up the timings I can see that this is an orphaned subscription created when a Premium Mob member upgraded to Premium F2F.  I won't be able to clear this up until we have a different relation in the database model.  I wonder if that's the thing to start on.  I find a relevant ticket in the waffle board and check out a branch for that and then change the relation between users and subscriptions to a `has_many`:
 
-```
+```rb
 class User < ActiveRecord::Base
     has_many :subscription, autosave: true
 ```
 
-That creates a series of failures in the specs where attempts to get `user.subscription.plan` are not working because we would now have to talk about `user.subscriptions`.  I guess we should replace `user.subscription` with something like `user.current_subscription` where we'd find the user's subscription that didn't have an ended_at date.  We'd also need to ensure that the user only had one active subscription at a time.  So various changes, and I could dive into those, but maybe making the connection to as many premium members as possible is the key thing ...
+That creates a series of failures in the specs where attempts to get `user.subscription.plan` are not working because we would now have to talk about `user.subscriptions`.  I guess we should replace `user.subscription` with something like `user.current_subscription` where we'd find the user's subscription that didn't have an `ended_at` date.  We'd also need to ensure that the user only had one active subscription at a time.  So various changes, and I could dive into those, but maybe making the connection to as many Premium members as possible is the key thing ...
 
-I'm caught for a moment about whether I should try and update the ended_at date for the old Premium Mob subscription for the member who upgraded to F2F, which I decided to do for consistency:
+I'm caught for a moment about whether I should try and update the `ended_at` date for the old Premium Mob subscription for the member who upgraded to F2F, which I decided to do for consistency:
 
 ```
 irb(main):002:0> pp Subscription.all.select{|s| s.user.nil?} ; nil
@@ -82,8 +89,8 @@ irb(main):006:0> s.ended_at = u.subscription.started_at
 irb(main):007:0> s.save
 ```
 
-Next up I have a member who got three months of Premium from CraftAcademy South Africa, but they are in the system as paying via Stripe since that's how CA SA paid.  The member is now paying their own way, and again we need support for multiple subscriptions per user to update that.  The next member is also a CraftAcademy South Africa graduate who is paying their own way, and subsequently upgraded to Premium Mob.  Again, I won't be able to fix these up without the domain model changes.  I guess I push on and fix up what I can and then take another pass once I get the domain model fix out.
+Next up I have a member who got three months of Premium from CraftAcademy South Africa, but they are in the system as paying via Stripe since that's how CA SA paid.  The member is now paying their own way (also over Stripe), and again we need support for multiple subscriptions per user to update that.  The next member is also a CraftAcademy South Africa graduate who is paying their own way, and subsequently upgraded to Premium Mob.  Again, I won't be able to fix these up without the domain model changes.  I guess I push on and fix up what I can and then take another pass once I get the domain model fix out.
 
 I note what I'm not doing recently is remembering to work with Mob level members on their professional development plans ... although I don't know how much folks really appreciate that.  It's kind of a challenging thing for busy people to keep up with ...
 
-I think the last one for today now.  A Premium Plus member who downgraded to Premium F2F and that all needs to be represented to.  That domain model ...
+I think that's last one for today now.  A Premium Plus member who downgraded to Premium F2F and that all needs to be represented to.  That domain model ...

@@ -7,7 +7,7 @@ author: Sam Joseph
 
 Kids off school - slightly earlier to the computer, but no earlier to the blogface.  Although, I guess I did stop to review all my Slack and email.  Urgh.  Feel like I need to take a free day from Xmas to get this all completed.  Let's push on trying to update the Premium user data in the system, updating my notes on Premium users, and reaching out to those I haven't spoken to in a while.  Next up I have three Premium members who got 12 months of Premium membership bundled with the CraftAcademy bootcamp fees:
 
-```
+```json
   {
     "email": "...",
     "sponsor_email": null,
