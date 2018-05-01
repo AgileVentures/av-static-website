@@ -5,7 +5,7 @@ tags:
 author: Sam Joseph
 ---
 
-Argh, so I got distracted by Slack and blogging and twitter and even though I sat down at the computer at 9am it's 10am.  At least I got a few important emails and things out of the way (I think), but so after making a slew of changes to the Slack greeter bots, I feel I can't put off adding test frameworks any longer.  There's some bugs going out that I can't catch with simple automated tests (the way messages get formatted in a real slack instance), but I've definitely wasted a little time on some silly bugs that automated tests would have caught.  In the meantime I can see that the new changes to the syntax for the main greeter bot are all in place:
+Argh, so I got distracted by Slack and blogging and Twitter and even though I sat down at the computer at 9am it's 10am.  At least I got a few important emails and things out of the way (I think), but so after making a slew of changes to the Slack greeter bots, I feel I can't put off adding test frameworks any longer.  There's some bugs going out that I can't catch with simple automated tests (the way messages get formatted in a real Slack instance), but I've definitely wasted a little time on some silly bugs that automated tests would have caught.  In the meantime I can see that the new changes to the syntax for the main greeter bot are all in place:
 
 ![](https://user-images.githubusercontent.com/30216/30053660-798a6e8c-9221-11e7-927d-ea20f462cc55.png)
 
@@ -121,7 +121,7 @@ describe('Bot', function(){
 });
 ```
 
-Okay, so I got a bit fancy and installed chai so I could work with the expect/include syntax I like, and then I got all like "this project needs a proper structure" and moved things around.  I think it still works.  With only a couple of unit tests and no acceptance tests, I may have completely broken the project - my little local test that it starts up may conceal other issues ... but at least I've broken down some little mental barriers.  Starting node tests from scratch and reminding myself how we go through re-structuring a node app.  Some progress today - on to the continuing review tomorrow ... or add tests to project_greeter_bot ... jump from level to level, enjoy, code!
+Okay, so I got a bit fancy and installed chai so I could work with the expect/include syntax I like, and then I got all like "this project needs a proper structure" and moved things around.  I think it still works.  With only a couple of unit tests and no acceptance tests, it's entirely possible that my latest changes may have completely broken the project.  The little local test that it simply starts up may conceal other issues ... but at least I've broken down some little mental barriers about starting node tests from scratch and reminding myself how we go through re-structuring a node app.  Some progress today at least.  So, on to the continuing review tomorrow? ... or add tests to project_greeter_bot? ... jump from level to level, enjoy! code! enjoy!
 
 
 
