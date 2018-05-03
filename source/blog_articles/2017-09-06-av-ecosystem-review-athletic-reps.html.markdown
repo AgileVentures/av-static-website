@@ -7,9 +7,9 @@ author: Sam Joseph
 
 ![meeting](/images/reps.jpg)
 
-So I've managed to get to the blog-face a little earlier today despite Slack/Twitter/Email distractions, but I'm going to stick to the adding tests flow that I started yesterday as a way of getting some athletic reps in on node testing.  That said, we've got a fairly serious bleed on our emails getting marked as spam that may prevent me from spending much more time on code in these sessions.  Can I afford a 15 minute rep on node tests every morning for the next two weeks?  So many regular station keeping activities that the days are packed!
+So I've managed to get to the blog-face a little earlier today despite Slack/Twitter/Email distractions, but I'm going to stick to the "adding tests" flow that I started yesterday as a way of getting some athletic reps in on node testing.  That said, we've got a fairly serious bleed on our emails getting marked as spam that may prevent me from spending much more time on code in these sessions.  Can I afford a 15 minute rep on node tests every morning for the next two weeks?  So many regular station keeping activities that the days are packed!
 
-Anyhow, so at least from yesterday we have some tests in the `greeter_bot` project.  Let's get to the `project_greeter_bot` project.  Where would I start?  Grab the issue id for creating tests from the project itself, that's [https://github.com/AgileVentures/project_greeter_bot/issues/5](https://github.com/AgileVentures/project_greeter_bot/issues/5) - funny how it feels like breaking the ice on something in order to push through the little "I'm not sure where to start" feeling.  Bring up the terminal in the right directory.  No outstanding pull requests on the project, pull the latest code from master:
+Anyhow, so at least from yesterday we have some tests in the `greeter_bot` project.  Let's get to the completely different `project_greeter_bot` project.  Where would I start?  Grab the issue id for creating tests from the project itself, that's [https://github.com/AgileVentures/project_greeter_bot/issues/5](https://github.com/AgileVentures/project_greeter_bot/issues/5) - funny how it feels like breaking the ice on something in order to push through the little "I'm not sure where to start" feeling.  Bring up the terminal in the right directory.  No outstanding pull requests on the project, pull the latest code from master:
 
 ```sh
 [tansaku@Samuels-MBP:~/Documents/Github/AgileVentures/project_greeter_bot (master)]$ 
@@ -129,7 +129,7 @@ and got this error:
 SyntaxError: Unexpected token {
 ```
 
-I've not remembered some of the syntax from yesterday.  This is the point of the rep - find the pain point that you would not otherwise find if you just copied and pasted the code.  Can I now solve this without resorting to looking up the solution ... It's so tempting to just go look at the correct syntax, but I will force myself to slowly read the error message, `SyntaxError: Unexpected token {` so maybe just try dropping the curly braces ... no both the following fail:
+I've not remembered some of the syntax from yesterday.  This is the point of the rep - find the pain point that you would not find if you just copied and pasted the code.  Can I now solve this without resorting to looking up the solution ... It's so tempting to just go look at the correct syntax, but I will force myself to slowly read the error message, `SyntaxError: Unexpected token {` so maybe just try dropping the curly braces ... no both the following fail:
 
 ```js
 require expect from 'chai';
@@ -200,7 +200,7 @@ describe('Project Greeter bot', function(){
 });
 ```
 
-Yes, that's it.  Okay, must remember the pluralization on `module exports = ...` and that this is different from React's `export default <function>`.  A quick update of the tests to something a little more meaningful, a check that things basically still work running the server locally against the old AV mentors instance and the pull request is in:
+Yes, that's it.  Okay, must remember the pluralization on `module.exports = ...` and that this is different from React's `export default <function>`.  A quick update of the tests to something a little more meaningful, a check that things basically still work running the server locally against the old AV mentors instance and the pull request is in:
 
 [https://github.com/AgileVentures/project_greeter_bot/pull/23](https://github.com/AgileVentures/project_greeter_bot/pull/23)
 
@@ -214,6 +214,5 @@ and I start having thoughts about all the other little pieces to make this into 
 
 For another day I guess - back to the grindstone ...
 
-
-p.s. just wondering does the code of conduct hold the maintainers to treat all the contributors with respecting as well as the contributors treating each other with respect? looks like it does ...
+p.s. just wondering does the code of conduct hold the maintainers to treat all the contributors with respect as well as the contributors treating each other with respect? looks like it does ...
  
