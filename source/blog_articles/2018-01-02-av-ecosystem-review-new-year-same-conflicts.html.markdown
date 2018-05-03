@@ -1,4 +1,11 @@
-The start of a new year; some of the same conflicts remaining, though.  Leaving off from the last week of last year, I really want to adjust our Premium membership domain model to more accurately reflect the way in which members up and downgrade.  Perhaps even more critically I want to set up private event functionality that would automate some of the process by which potential members try out premium sessions and get presented with the option to upgrade.  Unfortunately I don't think I can work on either, as I must deliver the beta-version of the membership database to the Anthony Powell society.  The timeframe is entirely of my own making of course, and it will be reasonably interesting and pleasing to get the membership database done, but I've not got much interest from many Premium members in my LibreOffice development work ...
+---
+title: AV EcoSystem Review New Year Same Conflicts
+author: Sam Joseph
+---
+
+![new year](../images/newyear2018.png)
+
+The start of a new year; some of the same conflicts remaining, though.  Leaving off from the last week of last year, I really want to adjust our Premium membership domain model to more accurately reflect the way in which members upgrade and downgrade.  Perhaps even more critically I want to set up private event functionality that would automate some of the process by which potential members try out premium sessions and get presented with the option to upgrade.  Unfortunately I don't think I can work on either, as I must deliver the beta-version of the membership database to the Anthony Powell society.  The timeframe is entirely of my own making of course, and it will be reasonably interesting and pleasing to get the membership database done, but I've not got much interest from many Premium members in my LibreOffice development work ...
 
 The concept behind AgileVentures is that folks can skill up by working/observing real projects with real customers as they progress.  The problem seems to be that in many cases it's not the latest new tech that's needed to get the job done.  Or maybe it's that the process of learning through client work is just too traumatic?  Anyway, if I want to make time to add new features to WebSiteOne I'll need to crack on with the APSoc database ...
 
