@@ -12,14 +12,14 @@ So I'm conflicted - what direction next?  On the table are:
 1) review the process of people coming in from adwords  
 2) fix the email SPF setting  
 3) more work on greeter bots  
-4) search for other areas of ecosystem that are blocked up  
-5) preparing that video for dropbox to debug github image embeds  
+4) search for other areas of the ecosystem that are blocked up  
+5) preparing that video for dropbox, to help debug github image embeds  
 
-I finally managed to see one of our adverts that Lara shared:
+I finally managed to see one of our adverts via an image that Lara shared:
 
 ![](../images/Screenshot%202017-09-11%2009.00.27.png)
 
-and I'm still concerned about the message we're sending, i.e. the absence of any mention of team skills or agile in that ad.  It's so frustrating that I can't immediately get a simple view of our actual ads from the Google Analytics interface.  We also got the concern that our ads seem to be showing up particularly heavily in India, and we're not sure why.
+and I'm still concerned about the message we're sending, i.e. the absence of any mention of team skills or agile in that ad.  It's so frustrating that I can't immediately get a simple view of our actual ads from the Google Analytics interface.  We've also got the concern that our ads seem to be showing up particularly heavily in India, and we're not sure why.
 
 Over the weekend I got the following from Elastic Email:
 
@@ -45,9 +45,9 @@ with the suggested change, but I got this error
 
 > Line 5: Error while parsing rdata: newline in quoted string
 
-which was due to a non-ascii quote - switching that out and the DNS file saved.  Federico had shortened the TTL, so in principle we could check sooner if it was having the effect we wanted.
+which was due to a non-ASCII quote - switching that out and the DNS file saved.  Federico had shortened the TTL, so in principle we could check sooner if it was having the effect we wanted.
 
-While I wait for that the frustration of wanting to embed an image made me want to record the video for dropbox.  I did that using the preview tab for creating this blog.  Here's what I sent them:
+While I wait for that, the frustration of wanting to embed an image made me want to record the video for dropbox.  I did that using the preview tab for creating this blog.  Here's what I sent them:
 
 > Hi Marco,
 
@@ -59,7 +59,7 @@ While I wait for that the frustration of wanting to embed an image made me want 
 
 > https://www.dropbox.com/s/nmurrdqxj76oq07/Screenshot%202017-09-11%2009.00.27.png?dl=1
 
-> You can see that the image does not show up in preview - also note that for the last year links like these were showing up fine as images, so something somewhere changed recently.  As you'lls ee from the video GitHub grabs the image from you at dropbox and stores it on their own servers.  Here's what Steve Guntrip at GitHub said:
+> You can see that the image does not show up in preview - also note that for the last year links like these were showing up fine as images, so something somewhere changed recently.  As you'll see from the video, GitHub grabs the image from you folks at dropbox and stores it on their own servers.  Here's what Steve Guntrip at GitHub said:
 
 > > When ?dl=1 is specified, we get redirected to the image file with a non-image Content-Type header, Content-Type: application/binary. For your image to load, this Content-Type should be an image, like Content-Type: image/png.
 > >
@@ -69,7 +69,7 @@ While I wait for that the frustration of wanting to embed an image made me want 
 
 > Best, Sam
 
-So it's almost time to test the email, but maybe time for a [quick node test rep](https://gist.github.com/tansaku/c311c996cc1521dceea0c0852849e9ca) and then I can check the email stuff by going to http://tools.wordtothewise.com/spf/check/AgileVentures.org and clicking on the DNS tab (as Federico suggested), where I see:
+So it's almost time to test the email, but maybe time for a [quick node test rep](https://gist.github.com/tansaku/c311c996cc1521dceea0c0852849e9ca) and then I can check the email stuff by going to [http://tools.wordtothewise.com/spf/check/AgileVentures.org](http://tools.wordtothewise.com/spf/check/AgileVentures.org) and clicking on the DNS tab (as Federico suggested), where I see:
 
 ![](../images/Screenshot%202017-09-11%2009.25.55.png)
 
