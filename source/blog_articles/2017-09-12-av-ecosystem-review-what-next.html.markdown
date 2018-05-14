@@ -19,11 +19,11 @@ It's looking like we've fixed the email SPF setting (thanks Federico!) and I've 
 
 One of our project maintainers had dropped in the WSO channel to mention this was an issue - that's a faily solid prod.  There's no direct revenue growth attached to it, but the health of the community relies on active healthy projects.  I've also got to get the board cleared up - every hanging ticket is extra noise that I (and others) have to process every time we look at it ...
 
-Just looking at the board, I got distracted by other tickets - checking that LocalSupport deployed to production correctly and that the latest code on WSO staging is making sense ... I've kicked off the karma calculator there and should ask Praveen to check his features there ... but back to the board.   I've got one ticket for making the Premium page questions pop-out to reduce the amount of text on the page overall ... and that's what I've managed to do this morning. 
+Just looking at the board, I got distracted by other tickets - checking that LocalSupport deployed to production correctly and that the latest code on WSO staging is making sense ... I've kicked off the karma calculator there and should ask Praveen to check his related features  ... but back to the board.   I've got one ticket for making the Premium page questions pop-out to reduce the amount of text on the page overall ... and that's what I've managed to do this morning. 
 
 [https://staging.agileventures.org/premium](https://staging.agileventures.org/premium)
 
-At least edit that page on the staging server.  I've also saved an HTML copy into the staticpages view directory that will move the ticket from ready to in progress on the waffle board:
+At least I've managed to edit that page on the staging server.  I've also saved an HTML copy into the staticpages view directory that will move the ticket from 'ready' to 'in progress' on the waffle board:
 
 [https://github.com/AgileVentures/WebsiteOne/pull/1816](https://github.com/AgileVentures/WebsiteOne/pull/1816)
 
