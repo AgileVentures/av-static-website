@@ -13,9 +13,69 @@ We've had a volunteer working on a pull request on the AV site to add some conse
 
 https://github.com/AgileVentures/WebsiteOne/pull/2298
 
-Something we seem to really struggle with is having pull requests include cucumber tests.  It seems like there's quite a few folks who are comfortable with RSpec, but not so comfortable with cucumber.  Two other issues that need to be sorted in this PR are the use of the correct flags in the database, and the precise wording for consent, but I think I'm going to need to start driving this from a fresh cucumber test.
+Something we seem to really struggle with is having pull requests include cucumber tests.  It seems like there's quite a few folks who are comfortable with RSpec, but not so comfortable with cucumber.  Two other issues that need to be sorted in this PR are the use of the correct flags in the database, and the precise wording for consent, but I think I'm going to need to start driving this from a fresh cucumber test.  However we have a number of existing cucumber tests that might be affected, e.g. 
 
-...
+```gherkin
+  Scenario: Let a visitor register as a site user
+    Given I am on the "registration" page
+    And I submit "user@example.com" as username
+    And I submit "password" as password
+    And I click "Sign up" button
+    Then I should be on the "getting started" page
+    And I should see "Signed up successfully."
+    And the page should contain the google adwords conversion code
+    And the user "user@example.com" should have karma
+    And I should see a successful sign up message
+    And I should receive a "Welcome to AgileVentures.org" email
+    And replies to that email should go to "info@agileventures.org"
+```
+
+```gherkin
+ Scenario: User signs up with valid data
+    When I sign up with valid user data
+    Then I should see a successful sign up message
+```
+
+between these two tests we've kind of got the worst of both worlds.  We've got one sure short test that doesn't tell us much more than it's own description, and another one that's so long that it's difficult to read.  Now both of these will fail without the migration on the current branch being enacted, but I don't think we want to use a new `emails_opt_it` boolean field when we already have `receive_site_emails`.  I guess what we really need are tests that check that the boolean is set correctly for the two different cases of giving consent and not giving consent, so let's adapt the shorter test:
+
+```gherkin
+ Scenario: User signs up successfully giving no consent for mailings
+    When I sign up with valid user data
+    Then I should see a successful sign up message
+    And I go to my "edit profile" page
+    Then "receive mailings" should not be checked
+```
+
+I think cucumber scenarios ideally follow the same maxim as methods, that they shouldn't be much longer than five lines.  At the moment this test is not failing in the right way, I need to remove the migration and update the existing code to use the existing boolean.  Doing that allows the test to bite.  It fails, indicating that the checkbox is set to false.  Not the default we want.  I git remove the migration to allow me to explore the site in development mode:
+
+```
+git rm db/migrate/20180418182311_add_emails_opt_in_to_user.rb
+```
+
+I see the checkbox is ticked on by default.  Precisely what the GDPR says not to do.  It looks like the exising `receive_mailings` boolean on the User model is defaulting to false.  We need a migration to fix that:
+
+```
+bundle exec rails generate migration SetUsersReceiveMailingsDefaultFalse
+```
+
+```
+class SetUsersReceiveMailingsDefaultFalse < ActiveRecord::Migration[5.1]
+  def change
+    change_column_default :users, :receive_mailings, from: true, to: false
+  end
+end
+```
+
+and now the test passes.  Now we need another test to check that consent can be given:
+
+```gherkin
+Scenario: User signs up successfully giving consent for mailings
+    When I sign up with valid user data giving consent
+    Then I should see a successful sign up message
+    And I go to my "edit profile" page
+    Then "receive mailings" should be checked
+```
+
 
 Slack has a [plan for GDPR compliance](https://slack.com/gdpr) apparently
 
