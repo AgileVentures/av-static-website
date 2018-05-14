@@ -9,7 +9,7 @@ Ironically after getting more sleep last night I feel groggier this morning.  Su
 
 And now I want to just quickly follow through with Will's advice on changes to the Premium Sponsorship form, and get the revised version out to a few folks:
 
-> Okay. This is only a side note, but I read this interesting article about names: http://www.kalzumeus.com/2010/06/17/falsehoods-programmers-believe-about-names/ TLDR: have a single "name" field
+> Okay. This is only a side note, but I read this interesting article about names: [http://www.kalzumeus.com/2010/06/17/falsehoods-programmers-believe-about-names/](http://www.kalzumeus.com/2010/06/17/falsehoods-programmers-believe-about-names/) TLDR: have a single "name" field
 
 > Each question should have a reason. I want to know why you need to know what country I live in, for a premium membership.
 
