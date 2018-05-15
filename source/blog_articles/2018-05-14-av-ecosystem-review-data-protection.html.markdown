@@ -76,10 +76,13 @@ Scenario: User signs up successfully giving consent for mailings
     Then "receive mailings" should be checked
 ```
 
+I got that to pass after a bit of fiddling about - the usual Capybara malarcky for clicking checkboxes:
 
-Slack has a [plan for GDPR compliance](https://slack.com/gdpr) apparently
+```rb
+ find(:css, "#user_receive_mailings").set(@visitor[:receive_mailings])
+```
 
-It's a little unclear about how MediaWiki will comply with GDPR.  There's a presentation online about how to use Semantic MediaWiki to store information about how an organisation is complying with GDPR
+But we seem to have failing rspecs on develop that are preventing me from getting this all out.  There are broader GDPR issues to consider.  Slack has a [plan for GDPR compliance](https://slack.com/gdpr) apparently, but it's a little unclear about how MediaWiki (which we use in the NHS project) will comply with GDPR.  There's a presentation online about how to use Semantic MediaWiki to store information about how an organisation is complying with GDPR:
 
 [![MediaWiki and the European GDPR (datencockpit.at)](https://img.youtube.com/vi/59MMWPSIuOk/0.jpg)](https://www.youtube.com/watch?v=59MMWPSIuOk)
 
