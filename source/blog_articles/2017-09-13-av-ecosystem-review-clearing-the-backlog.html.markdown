@@ -7,7 +7,7 @@ author: Sam Joseph
 
 ![backlog](../images/backlog.jpg)
 
-So I'm calling this clearing the backlog, but argh, I want to start on that new coding ticket rather than the older content ones in the WebSiteOne waffle board.  My heuristics for board review are check the "Please Check" tickets.  There I have a ticket from Matt where he hasn't replied to my comments/queries - he's moving house and has lots going on so no shock there.  That was also a request from Joao, so perhaps I should finish that up. 
+So I'm calling this clearing the backlog, but argh, I want to start on that new coding ticket rather than the older content ones in the WebSiteOne waffle board.  My heuristics for board review are check the "Please Check" tickets.  There I have a ticket from Matt where he hasn't replied to my comments/queries - he's moving house and has lots going on so not so surprising.  That was also a request from Joao, so perhaps I should finish that up. 
 
 Ideally I'll only have one ticket assigned to me in any one column at a time.  I've got a hanging ticket in "Please check" about providing a list of volunteer opportunities at AgileVentures ... I put that off as the priority dropped, but it's in the way.  Okay, so let's make this really about clearing the backlog, starting with that.  So I'll update the branch there and kick of a build - hopefully it'll be green before the end of this blog and I can merge it.
 
@@ -29,9 +29,9 @@ Branch 1750_client_type set up to track remote branch 1750_client_type from orig
 Switched to a new branch '1750_client_type'
 ```
 
-I guess part of me leans on I should be leaving this for Matt. However, I think I have to put the project and the wider community first here.  Perhaps my comments/suggestions were too pernickety and that put Matt off.  Perhaps I was being remiss in not just merging it earlier - the build was green, but I'm also the devops person who has to pick up the pieces if it goes wrong.  I had Praveen test his own new feature and bug fix on staging before deploying code yesterday - that seems like a good plan, but I don't think I can put pressure on Matt on this one at this time.  
+I guess part of me leans towards leaving this for Matt. However, I think I have to put the project and the wider community first here.  Perhaps my comments/suggestions were too pernickety and that put Matt off.  Perhaps I was being remiss in not just merging it earlier - the build was green, but I'm also the devops person who has to pick up the pieces if it goes wrong.  I had Praveen test his own new feature and bug fix on staging before deploying code yesterday - that seems like a good plan, but I don't think I can put pressure on Matt on this one at this time.  
 
-The two things that I was asking Matt for were to pull the motivation for this feature into a separate feature file, although I note I didn't do that myself in the opportunities link addition feature :-/  There was also checking the rest of the system about whether the introduction of a new event type would clash with other areas - doing a search over the codebase I see we do have checks for the two previous types in Twitter notifications, but we've turned those off, so that's no biggy.  There's something in the EventHelper module:
+The two things that I was asking Matt for were, one, to pull the motivation for this feature into a separate feature file, although I note I didn't do that myself in the opportunities link addition feature :-/  And secondly checking the rest of the system about whether the introduction of a new event type would clash with other areas - doing a search over the codebase I see we do have checks for the two previous types in Twitter notifications, but we've turned those off, so that's no biggy.  There's something in the EventHelper module:
 
 ```rb
 module EventHelper
