@@ -3,7 +3,7 @@ title: AV EcoSystem Review Beta Release Deadline
 author: Sam Joseph
 ---
 
-![distraction](../images/dealine.jpg)
+![deadline](../images/deadline.jpg)
 
 Okay, so I'm up against the deadline for the beta release of the APSoc membership database.  The timeline I gave them at the beginning of the project was:
 
