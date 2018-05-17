@@ -1,3 +1,10 @@
+---
+title: AV EcoSystem Review Painful Decisions
+author: Sam Joseph
+---
+
+![hardest thing and the right thing](../images/hardest-and-right.jpeg)
+
 The APSoc has responded calmly to the email I sent about the problems with LibreOffice Base.  Here's what I sent:
 
 > Thanks for this.
@@ -38,8 +45,8 @@ and I would have pasted in here the help request but super-irritatingly I can't 
 
 Ugh, I guess the main question on my mind is whether Zoho can produce the reports the client needs, and maybe more importantly the complex subforms ... the other alternatives I have are build their system from scratch in LibreOffice on PC, and/or force through and buy a copy of MS Access 2016.  £100 is not insane from Tekgia, but will be frustrating if we can get it for £1.50 a month as part of our MS nonprofit status, of I've doubled up having already spend £12 on MS access and I've missed the download button or it will arrive tomorrow.
 
-I do have MS Access 2007 on my machine - should I perhaps start playing with that?  Quick answer is that I can't import the LibreOffice odb format into MS Access 2007.  Looks like Zoho does support subforms:
+I do have MS Access 2007 on my machine - should I perhaps start playing with that?  Quick answer is that I can't import the LibreOffice odb format into MS Access 2007.  Also, it looks like Zoho does support subforms:
 
 [https://www.zoho.com/creator/help/forms/creating-subforms.html](https://www.zoho.com/creator/help/forms/creating-subforms.html)
 
-I have been able to import the XLSX table into MS Access 2007, so that's a basic route forward I guess ...
+I have been able to import the XLSX table into MS Access 2007, so that's a basic route forward I guess ... painful decisions ahead.
