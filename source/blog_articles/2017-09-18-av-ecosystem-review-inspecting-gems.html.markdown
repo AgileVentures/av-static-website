@@ -105,7 +105,7 @@ I was rewarded with seeing the boiler plate form allowing me to both add and rem
 
 Hopefully a bit of cleanup and formatting and this will look nice and have more functionality that I was able to immediately hand-roll.  I could probably have implemented dynamic removal of form fields in the same time it took me to get proof of concept on this gem.  However using this gem will hopefully make our system less suprising to new developers who might have seen this gem on other projects, and we'll potentially get the benefits of upgrades and fixes to the gem itself.
 
-Of course, despite getting the interface working, the repository datat that I inputted was not actually saved to the database as such, but then I hadn't got that part working in my own hand-rolled version either :-)
+Of course, despite getting the interface working, the repository data that I inputted was not actually saved to the database as such, but then I hadn't got that part working in my own hand-rolled version either :-)
 
 I can see the data being passed back:
 
@@ -129,7 +129,7 @@ I was about to say that I'd leave fixing that till tommorrow, but I had a quick 
   end
 ```
 
-We need to specify the nested required attributes.  We are now saving our new repo information to the database thanks to [Stack Overflow](https://stackoverflow.com/questions/15919761/rails-4-nested-attributes-unpermitted-parameters)!
+We also needed to specify the nested required attributes, and now we are saving our new repo information to the database thanks to [Stack Overflow](https://stackoverflow.com/questions/15919761/rails-4-nested-attributes-unpermitted-parameters)!
 
 
 
