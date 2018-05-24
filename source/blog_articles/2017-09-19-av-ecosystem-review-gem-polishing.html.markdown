@@ -63,9 +63,9 @@ that's from:
 </div>
 ```
 
-For some reason it's being downcased? Well I'll just go with the downcase then.  Hmm, I guess I'm restricted as to how I use the label method on the Rails form.  I thought I could just replace `:url` with the text that I wanted, but no go.  I switch back to url and try to fill in the field "Url", but no and also no joy for `project[source_repositories_attributes][0][url]` or `project_source_repositories_attributes_0_url`.
+For some reason it's being downcased?  Well I'll just go with the downcase then.  Hmm, I guess I'm restricted as to how I use the label method on the Rails form.  I thought I could just replace `:url` with the text that I wanted, but no go.  I switch back to url and try to fill in the field "Url", but no and also no joy for `project[source_repositories_attributes][0][url]` or `project_source_repositories_attributes_0_url`.
 
-What I can see when I debug and inspect the HTML that capybara is seeing is that even though I have JavaScript enabled, it does not seem like the dynamic form fields are being created.  Instead I see this:
+What I can see when I debug and inspect the HTML that Capybara is seeing is that even though I have JavaScript enabled, it does not seem like the dynamic form fields are being created.  Instead I see this:
 
 ```html
 <div class=\"links form-group\">
