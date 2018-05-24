@@ -1,6 +1,13 @@
-I'm a bit of a wreck this morning.  I didn't sleep well - woke up at 4am brain full of kids football.  I did write down a new drill for training (I coach 7aside soccer for nine year olds) and then listened to standup comedy on audio for 2 hours to stop my brain endlessly turning over the same thoughts again and again.  Not dissimilar to last Sunday night/Monday morning.  Emotionally charged football matches.  This weekend's was less intense (draw instead of a loss), but I worked three hours in the afternoon to get the APSoc's membership database recreated on MS Access now that I got the green light from the client to switch since LibreOffice is crashing too frequently and ZohoCreator looks like it doesn't necessarily all the functionality we need.
+---
+title: AV EcoSystem Review Getting Back on Track
+author: Sam Joseph
+---
 
-I made reasonable progress yesterday although I was popping paracetamol and ibuprofen to push on in the last hour.  I think I've got us back to the place we were in LibreOffice, and actually got a few more supporting tables to populate dropdown tables correctly.  However there's a clear additional chunk of functionality that I hadn't really been focusing on.  A load of specification for default values, computed fields and so forth.  I'd love to have a break from the project this week, so I think the thing to do is label what we have as an MS Access alpha version and re-work the schedule.  Here are screenshots of the different forms done in Access.
+![track](../images/track.jpeg)
+
+I'm a bit of a wreck this morning.  I didn't sleep well - woke up at 4am brain full of kids football.  I did write down a new drill for training (I coach 7aside soccer for nine year olds) and then listened to standup comedy on audio for 2 hours to stop my brain endlessly turning over the same thoughts again and again.  Not dissimilar to last Sunday night/Monday morning.  Emotionally charged football matches.  This weekend's was less intense (draw instead of a loss), but I worked three hours in the afternoon to get the APSoc's membership database recreated on MS Access now that I got the green light from the client to switch.  This is all because LibreOffice is crashing too frequently and ZohoCreator looks like it doesn't might not have all the functionality we need.
+
+I made reasonable progress yesterday although I was popping paracetamol and ibuprofen to push on in the last hour.  I think I've got us back to the place we were in LibreOffice, and actually got a few more supporting tables to populate the dropdown lists correctly.  However there's a clear additional chunk of functionality that I hadn't really been focusing on.  A load of specification for default values, computed fields and so forth.  I'd love to have a break from the project this week, so I think the thing to do is label what we have as an MS Access alpha version and re-work the schedule.  Here are screenshots of the different forms done in Access.
 
 ![](https://dl.dropbox.com/s/ydoubyw95wb1zhc/Screenshot%202018-01-15%2009.28.44.png?dl=0)
 
