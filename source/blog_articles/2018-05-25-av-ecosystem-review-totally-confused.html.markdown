@@ -3,22 +3,23 @@ Okay, so I'm totally confused.  Confused about which think to work on next, what
 It was a bit of a frenetic week with trips to London on Tuesday and Wednesday ... I've got blogs from both days written offline on the train.  So what are all these things that need to get done:
 
 * [ ] Blogging
-  - [ ] post offline blogs (two AV, one sentience)
+  - [ ] post offline blogs (two AV, one sentience) 
+    - [x] must sort that one with the onboarding
   - [ ] work out if I'm getting anywhere with all this blogging? switch to development stories?
 
 * [ ] AgileVentures AGM conference
-  - [ ] finalise schedule
-    - [ ] include inviting trustee to speak?
+  - [ ] finalise schedule PRIORITY
+    - [ ] include inviting trustee to speak? EMAILED
   - [ ] work out how the AGM trustee voting thing actually works
   
 * [ ] Mentor incentive program
-  - [ ] need to finish onboarding mentors
+  - [ ] need to finish onboarding mentors PRIORITY SLACK JOAO AND FEDERICO
   
 * [ ] London Brokerage Network project
   - [x] contact David
 
 * [ ] West London Musicians project
-  - [ ] review specs
+  - [x] review specs
   
 * [ ] Devops
   - [ ] continuous deployment for LocalSupport and Websiteone?
@@ -44,5 +45,7 @@ It was a bit of a frenetic week with trips to London on Tuesday and Wednesday ..
   - [ ] do we run AV102 again?
 
 * [ ] new computer?
+
+* [x] RTI  
   
  Okay, that feels a bit better, but how to prioritize?
