@@ -1,3 +1,10 @@
+---
+title: AV EcoSystem Review Damned JavaScript Acceptance Tests
+author: Sam Joseph
+---
+
+![acceptance tests](../images/acceptance_testing_diagram.png)
+
 So the APSoc client has approved the MSAccess alpha and the new timescale, so I can spend a week on the AV website and the rest of the ecosystem.  I made some progress with the Premium/Sponsor domain upgrade yesterday, and I suspect I have everything in place, but I'm getting what look suspiciously like a series of intermittent javascript acceptance test failures.  These really do seem to be the bane of our projects.  I've got a series of failures that disappear when I pop in the debugger.  For example:
 
 ```
@@ -95,7 +102,7 @@ and similarly if I slap in a byebug at the point that the user's plan is updated
     And I should see myself in the premium members list             # features/step_definitions/premium_steps.rb:75
 ```
 
-So my hypothesis is that the request to check the profile page is going through so fast that the request for data about the user is coming back before the update has taken place.  The changes I've made mean the update does take longer.  If my hypothesis is true, the question is how to make sure that the cuke step to look up the profile page waits until the previous operation has executed.  It occurs to me that Cucumber steps that hit a new endpoint on the server can be treated almost like fire and forget operations. Makes me think of JavaScript non-blocking activity.  Maybe this isn't at all about JavaScript, sorry JavaScript.  Maybe the check that I have `"Then I should see "Premium Member"` is passing too quickly?  Strange though, I'm pretty sure that page won't have Premium Member in it until the transaction has gone through, but is the database in a separate thread?  I didn't think the page would update until the database action completed, but I guess that we go to the create method in the subscriptions controller via a redirect that's triggered from our javascript stripe form ...
+So my hypothesis is that the request to check the profile page is going through so fast that the request for data about the user is coming back before the update has taken place.  The changes I've made mean the update does take longer.  If my hypothesis is correct, the question is how to make sure that the cuke step to look up the profile page waits until the previous operation has executed.  It occurs to me that Cucumber steps that hit a new endpoint on the server can be treated almost like fire and forget operations. Makes me think of JavaScript non-blocking activity.  Maybe this isn't at all about JavaScript, sorry JavaScript.  Maybe the check that I have `"Then I should see "Premium Member"` is passing too quickly?  Strange though, I'm pretty sure that page won't have Premium Member in it until the transaction has gone through, but is the database in a separate thread?  I didn't think the page would update until the database action completed, but I guess that we go to the create method in the subscriptions controller via a redirect that's triggered from our javascript Stripe form ...
 
 So I change the step to be `Then I should see "Thanks, you're now an AgileVentures Premium Member"`, which really can't display until the create method has completed, but I get the same error.  Nice hypothesis, but not supported by the data ... hmm, so I create a new step that will check the member status has changed under the hood:
 
@@ -104,6 +111,7 @@ And(/^I am a "([^"]*)" Member$/) do |type|
   expect(@user.membership_type).to eq type
 end
 ```
+
 and that fails too:
 
 ```
@@ -127,7 +135,7 @@ Which makes me wonder if this something to do with our database transaction and 
   end
 ```
 
-in `spec_helper.rb`, but after two passes, I cleaned up the extraneous steps and I get a fail again.  Rats.  Again, a feature that takes X amount of time to develop, takes 3X time to sort the flaky acceptance tests.  Anyhow, so now I print out the user subscriptions at the point the user has been updated and in the new step to check:
+in `spec_helper.rb`, but after two passes, I cleaned up the extraneous steps and I get a fail again.  Rats.  Again, a feature that takes X amount of time to develop, but takes 5X time to sort out its flaky acceptance tests.  Anyhow, so now I print out the user subscriptions at the point the user has been updated and in the new step to check:
 
 ```
     When I fill in appropriate card details for premium                    # features/step_definitions/premium_steps.rb:6
