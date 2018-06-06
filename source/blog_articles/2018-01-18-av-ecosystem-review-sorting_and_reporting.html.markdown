@@ -1,3 +1,10 @@
+---
+title: AV EcoSystem Review Sorting and Reporting
+author: Sam Joseph
+---
+
+![deploy](../images/deploy.jpeg)
+
 Didn't complete the AV report yesterday, or deploy the new premium model code. All booked up with exciting Premium F2F sessions, and this morning I had to spend an hour catching up with emails for various possible gigs to cover what the charity work does not.  So, right, let's get that new code on staging ... which involves me rebasing to staging and pushing that up.  I didn't manually check develop ... that's partly because I'm turning the servers off to save money.  Funny, if I'd left them on over night I'd immediately have something I could check; it only takes 30 seconds (navigating to heroku, flicking a switch) to get them on, but sometimes that can feel like a real pain.  Anyway, got the develop server up, not even sure how to really check that things are really working ... I guess I sign up random guy as a premium member:
 
 ![](https://dl.dropbox.com/s/oyvrnyrbso5ouy4/Screenshot%202018-01-18%2010.37.43.png?dl=0)
