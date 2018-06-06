@@ -21,3 +21,5 @@ I google "ChromeDriver did not start with 10000ms" - lots of hits. So options:
 It's difficult because I just invested time over the last three days to get the acceptance tests running on my computer so that I might be able to start some project related acceptance tests and drive from them.  Now having seemingly been within grasp of that point something has changed and I'm in a worse state regarding the tests that I was previously.
 
 Same problem on the develop branch ... could this possibly be due to me upgrading phantomjs for the paironauts project the other day?
+
+It turns out that was unrelated (I think).  Ultimately this problem went away when I deleted the node modules and reinstalled ... sigh ...
