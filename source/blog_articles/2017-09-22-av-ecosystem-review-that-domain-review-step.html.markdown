@@ -36,9 +36,9 @@ So attacking from the unit test side I notice that we do not mention the `with_g
   end
 ```
 
-although I can't actually run it as I'm waiting for a cucumber run to complete (got to work on the performance there).  That gap allows me to agonize about whether this unit test is sufficiently rigorous, or if it's simply testing the existing Rails architecture.  I think it's the right thing.  It's providing an executable check that the class method `.with_github_url` is doing what we expect it to do.  
+although I can't actually run it as I'm waiting for the cucumber suite to finish running (got to work on the performance there).  That gap allows me to agonize about whether this unit test is sufficiently rigorous, or if it's simply testing the existing Rails architecture.  I think it's the right thing.  It's providing an executable check that the class method `.with_github_url` is doing what we expect it to do.  
 
-Bigger picture quickly, I'm not planning to immediately remove the github_url field from the projects model.  We'll need a task to migrate all of them in to source repository models, and based on previous pain, I'll be ensuring we have a follow up task in a different PR that we deploy to production separately to delete that field later on when the dust has settled.
+Bigger picture quickly, I'm not planning to immediately remove the `github_url` field from the projects model.  We'll need a task to migrate all of them in to source repository models, and based on previous pain, I'll be ensuring we have a follow up task in a different PR that we deploy to production separately to delete that field later on when the dust has settled.
 
 Okay so the cukes finished running.  I got a couple of errors in the way I'm using FactoryGirl/build_stubbed.  Fix those and I've got the following Project RSpec output:
 
@@ -138,12 +138,12 @@ SourceRepository
 I add the following to the Project spec:
 
 ```rb
-  it { is_expected.to have_many :source_repositories}
-  it { is_expected.to have_many :documents}
-  it { is_expected.to have_many :event_instances}
-  it { is_expected.to have_many :commit_counts}
+  it { is_expected.to have_many :source_repositories }
+  it { is_expected.to have_many :documents } 
+  it { is_expected.to have_many :event_instances }
+  it { is_expected.to have_many :commit_counts }
 
-  it { is_expected.to belong_to :user}
+  it { is_expected.to belong_to :user }
 ```  
 
 and I get some more domain model oriented chatter from RSpec when running the Project spec:
@@ -176,7 +176,7 @@ I remove the hand-rolled js I started this feature on.   I rebase to develop so 
 
 Hmmmm.  So the key missing thing in some ways is that we're not displaying the multiple repos and the acceptance tests are not as extensive or as readable as I would like, but I have a hunch that I need to get this into production with some kind of rake task to move the data--in the github_url, in the Project model--into the source_repository, but I've created a new getter that's blocking my access.  This [SO post](https://stackoverflow.com/questions/21835116/how-can-i-overwrite-a-getter-method-in-an-activerecord-model) tells me I can reference the original active-record field via self[:github_url], so I could have a task like this:
 
-```
+```rb
 namespace :db do
   desc "migrate from github url to source repository domain model (copies github_url field to source repo model)"
   task migrate_from_github_url_to_source_repository: :environment do
