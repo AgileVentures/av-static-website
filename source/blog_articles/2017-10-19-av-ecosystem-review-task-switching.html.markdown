@@ -23,7 +23,7 @@ and so I set up an initial load test:
 
 ![intial load test form](https://dl.dropbox.com/s/lx5yei9gm1udy6w/Screenshot%202017-10-18%2010.00.06.png?dl=0)
 
-but I can't seem to test against our custom endpoint - I send a help request for that.  In the meantime I have to get a static file served on staging in order to start the load test ... so I get a pull request in for that.  I check that it works locally, but I'll need that to pass CI to get it onto staging.  I could force it up there, but it gives me a reasonable excuse to task switch and check the middleman items.  If I recall correctly we used a middleman-gh-pages plugin for the static nonprofit site in order to get middleman on github pages, but I wonder if that will work with the latest version of middleman?
+but I can't seem to test against our custom endpoint - I send a help request for that.  In the meantime I have to get a static file served on staging in order to start the load test ... so I get a pull request in for that.  I check that it works locally, but I'll need that to pass CI to get it onto staging.  I could force it up there, but it gives me a reasonable excuse to task switch and check the middleman items.  If I recall correctly we used a middleman-gh-pages plugin for the static nonprofit site in order to get middleman on github pages, but I wonder if that will work with the latest version of middleman.
 
 [MiddleManGHPages](https://github.com/edgecase/middleman-gh-pages) hasn't been updated in a couple of years and there is also now [MiddleManDeploy](https://github.com/middleman-contrib/middleman-deploy) which has been more recently updated and has more stars.  A [2017 blog](https://ashfurrow.com/blog/building-static-sites-with-middleman/) mentions successfully using middleman-gh-pages and it is working for us on the static site with a middleman 4.1.7.  Stick with what I know? Try something new?  The following code in the README of middleman-deploy makes me want to try it:
 
@@ -49,7 +49,7 @@ $ rake deploy:staging
 $ rake deploy:production
 ```
 
-I like having staging and production endpoints - something I've been missing in the static nonprofit site.  In the meantime the pull request for the loaderio static page passed, so I pull that in and will need to wait for it to deply to develop before I can then move it on to staging for testing (or I test on develop ...), back to middleman deploy I find I need to upgrade to a newer version of middleman-deploy to get things working:
+I like having staging and production endpoints - something I've been missing in the static nonprofit site.  In the meantime the pull request for the loaderio static page passed, so I pull that in and will need to wait for it to deploy to develop before I can then move it on to staging for testing (or I test on develop). Back to middleman deploy, I find I need to upgrade to a newer version of middleman-deploy to get things working:
 
 [https://github.com/middleman-contrib/middleman-deploy/issues/93](https://github.com/middleman-contrib/middleman-deploy/issues/93)
 
