@@ -77,20 +77,21 @@
   example_url: http://github.com/AgileVentures/LookUp
   modal: portfolioModal5
 
-- title: Snow Angels
-  tagline: Mobile Volunteer Management
-  image: images/portfolio/snow-angels.png
-  preview_image: images/portfolio/snow-angels-preview.png
+- title: Social Prescribing &amp; Self Care Wiki
+  tagline: address patients' needs holistically
+  image: images/portfolio/hlpwiki.png
+  preview_image: images/portfolio/hlpwiki-preview.png
   description: >
-    Automate the process for Horsell Snow Angels as much as possible. Specifically
-    the admin's role of managing the SMS communication between volunteers and clients to 
-    help elderly people during poor weather conditions with tasks that they would 
-    usually be able to do alone, eg walking their dog.
-  date: Jan 2015 - present
-  client: Horsell Snow Angels
-  category: Mobile Administration
-  project_name: SnowAngels
-  project_url: http://github.com/AgileVentures/snow-angels
-  example_url: http://github.com/AgileVentures/snow-angels
+    The NHS needed a wiki to organise all the various docs and ideas on the concepts of Social
+    Prescribing and Self Care that would work on NHS and Local Authority computers.  Network security
+    issues prevented a variety of wiki's from working.  The exception was the battle-tested Wikipedia
+    MediaWiki system which AgileVentures customised, deployed and hosts for the NHS Healthy London Partnership
+    giving ongoing community moderation and marketing support.
+  date: Apr 2017 - present
+  client: National Health Service (NHS) Healthy London Partnership (HLP)
+  category: Web Wiki
+  project_name: SP_wiki
+  project_url: https://github.com/AgileVentures/SocialPrescribingWiki/
+  example_url: https://github.com/AgileVentures/SocialPrescribingWiki/
   modal: portfolioModal6
 
