@@ -3,7 +3,7 @@ title: AV EcoSystem Review Back to MSAccess
 author: Sam Joseph
 ---
 
-![msaccess](../images/msaccess.png)
+![msaccess](msaccess.png)
 
 Another week, and I need to switch back to the APSoc project and its continuing development on MSAccess.  I did manage to complete the new Premium-Subscription data model update in WebSiteOne last week, but I did not manage to update all the data to take advantage of it, and I still haven't completed the monthly report to the AV trustees.  Anyway, let's do a chunk on the APSoc project.  The client apparently has Office 365 (aka Office 2016), so arguably I should be working on the same, but since what I've created so far seems to be working for them okay, I'm tempted to continue in MSAccess 2007 and see how far we can get.  I think we've now got access to the latest Office products through our charity status, but I'm worried about burning hours on install and getting used to the new interface when I want to properly wrap by head around all the nuances of the data requirements from the client.
 
