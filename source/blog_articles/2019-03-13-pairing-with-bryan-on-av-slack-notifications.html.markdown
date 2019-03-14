@@ -3,6 +3,8 @@ title: Pairing with Bryan on AV Slack Nofifications
 author: Sam Joseph
 ---
 
+[![Bryan and Sam Pairing on some Rails code](https://img.youtube.com/vi/YcB4QR4XsqIM/0.jpg)](https://www.youtube.com/watch?v=cB4QR4XsqIM)
+
 So the other day I thought wouldn't it be fun to pair with lots more people all over the world and write about it.  Where did the thought come from?  I've been trying to do more remote pairing for years.  Part of the reason I started AgileVentures was the idea that we could have a global pair programming community.  As part of that community I think I've paired with a hundred or so different people remotely around the world and made a lot of friends in the process.
 
 I've also been working on a "Paironauts" concept for quite a while, a kind of Russian Roulette pairing system that would just drop you into pairing sessions with available people.  Paironauts has faltered due to the lack of a really stable pairing/teleconference solutions that has an API we can build upon.  I've long had a vision of a kind of pairing wall where you could browse at a distance lots of remote pair programming sessions, a bit like you can browse twitch streams.  Imagine the virtual equivalent of an office building filled with rooms with glass doors and walls on one side.  Walking through the building you can pass hundreds of different pairs and mobs doing code work and listen in to each group and decide to hang out and watch or, if permission is given, join mobs or turn pairs into mobs, or start new pairs/mobs with others who are hanging around and browsing what's going on.
