@@ -1,5 +1,5 @@
 ---
-title: Pairing with Bryan on AV Slack Nofifications
+title: Pairing with Bryan on Slack Notifications in Rails
 author: Sam Joseph
 ---
 
