@@ -3,7 +3,7 @@ title: Pairing with Bryan on AV Slack Nofifications
 author: Sam Joseph
 ---
 
-[![Bryan and Sam Pairing on some Rails code](https://img.youtube.com/vi/YcB4QR4XsqIM/0.jpg)](https://www.youtube.com/watch?v=cB4QR4XsqIM)
+[![Bryan and Sam Pairing on some Rails code](https://img.youtube.com/vi/cB4QR4XsqIM/maxresdefault.jpg)](https://www.youtube.com/watch?v=cB4QR4XsqIM)
 
 So the other day I thought wouldn't it be fun to pair with lots more people all over the world and write about it.  Where did the thought come from?  I've been trying to do more remote pairing for years.  Part of the reason I started AgileVentures was the idea that we could have a global pair programming community.  As part of that community I think I've paired with a hundred or so different people remotely around the world and made a lot of friends in the process.
 
@@ -65,6 +65,6 @@ Just looking it up the next morning I guess we are guaranteeing unique pairs, bu
 
 We had chosen to work on item 3 and focus on the back end to put in place the cleanest solution to the overall problem, which was to ensure that our AgileVentures new member events correctly ping our slack New Members channel when the start, which neccessitates a relation between slack channels and events in our schema.  If you want to know the gory details Bryan very kindly consented to recording and sharing the session.
 
-[![Bryan and Sam Pairing on some Rails code](https://img.youtube.com/vi/YcB4QR4XsqIM/0.jpg)](https://www.youtube.com/watch?v=cB4QR4XsqIM)
+[![Bryan and Sam Pairing on some Rails code](https://img.youtube.com/vi/cB4QR4XsqIM/maxresdefault.jpg)](https://www.youtube.com/watch?v=cB4QR4XsqIM)
 
 it was great fun, and I'm looking forward to more pairing sessions on Bryan, particularly the oppportuniry to get into the CypherPhilly project.  I'm also looking forward to pairing with all the other folks in the GreaterThanCode #pairing channel and discovering just how much more there is out there.   One day maybe I'll get my virtual pairing and mobbing building open to all - one day ...
