@@ -15,7 +15,7 @@ The issue as described in the ticket is that:
 
 The requested change is that:
 
-> We should prefix all <img src="URL"> urls in the frontend with /api so the backend does not need to do it for the frontend.
+> We should prefix all `<img src="URL">` urls in the frontend with /api so the backend does not need to do it for the frontend.
 
 And the creator of the ticket helpfully included a screenshot of one of the post images and its html:
 
