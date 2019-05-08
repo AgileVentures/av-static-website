@@ -30,7 +30,7 @@ I had a lot of questions, and Bryan very patiently explained the background and 
   ```
 
 4. receptionist indicates that the person wants that service
-  --> that goes into a queue that other system users (e.g. doctors)
+  --> that goes into a queue that other system users can see (e.g. doctors)
 
   ```
     POST /step/api/participants/:id/services/:id --> adjust db and return confirmation
