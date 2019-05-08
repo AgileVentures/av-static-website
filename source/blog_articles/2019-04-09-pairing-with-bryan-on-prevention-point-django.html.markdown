@@ -17,25 +17,25 @@ I had a lot of questions, and Bryan very patiently explained the background and 
 
 2. receptionist looks them up by name (assume they exist)
 
-```
-  /step/api/participants --> list json
-  /step/api/participants?name=xyz --> list json
-```
+  ```
+    /step/api/participants --> list json
+    /step/api/participants?name=xyz --> list json
+  ```
 
 3. person says what service they want
 
-```
-  /step/api/services --> list json
-  /step/api/services?name=xyz --> list json
-```
+  ```
+    /step/api/services --> list json
+    /step/api/services?name=xyz --> list json
+  ```
 
 4. receptionist indicates that the person wants that service
- --> that goes into a queue that other system users (e.g. doctors)
+  --> that goes into a queue that other system users (e.g. doctors)
 
-```
-  POST /step/api/participants/:id/services/:id --> adjust db and return confirmation
-  ---> join table (appointment model?)
-```
+  ```
+    POST /step/api/participants/:id/services/:id --> adjust db and return confirmation
+    ---> join table (appointment model?)
+  ```
 
 We discussed how a person might ask for more than one service, and that could turn into multiple appointments.  We also started with the assumption that the person would be in the system, and that they would be arriving to pick up a prescription or maybe see a behavioural specialist.
 
