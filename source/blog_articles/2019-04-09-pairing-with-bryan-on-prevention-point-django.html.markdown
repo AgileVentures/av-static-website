@@ -13,29 +13,29 @@ Bryan and I talked about how the organisation was using spreadsheets to track pe
 
 I had a lot of questions, and Bryan very patiently explained the background and the need for an API to support a react(?) front end that would be built to support receptionists managing folks coming to the waiting room, usually on a walk in basis rather than for pre-set appointments.  We sketched out the process for and what API endpoints might be needed:
 
-1. someone comes in to the PreventionPoint office for STEP service: gives name
+1) someone comes in to the PreventionPoint office for STEP service: gives name
 
-2. receptionist looks them up by name (assume they exist)
+2) receptionist looks them up by name (assume they exist)
 
-  ```
-    /step/api/participants --> list json
-    /step/api/participants?name=xyz --> list json
-  ```
+```
+  /step/api/participants --> list json
+  /step/api/participants?name=xyz --> list json
+```
 
-3. person says what service they want
+3) person says what service they want
 
-  ```
-    /step/api/services --> list json
-    /step/api/services?name=xyz --> list json
-  ```
+```
+  /step/api/services --> list json
+  /step/api/services?name=xyz --> list json
+```
 
-4. receptionist indicates that the person wants that service
+4) receptionist indicates that the person wants that service
   --> that goes into a queue that other system users can see (e.g. doctors)
 
-  ```
-    POST /step/api/participants/:id/services/:id --> adjust db and return confirmation
-    ---> join table (appointment model?)
-  ```
+```
+  POST /step/api/participants/:id/services/:id --> adjust db and confirm
+  ---> join table (appointment model?)
+```
 
 We discussed how a person might ask for more than one service, and that could turn into multiple appointments.  We also started with the assumption that the person would be in the system, and that they would be arriving to pick up a prescription or maybe see a behavioural specialist.
 
