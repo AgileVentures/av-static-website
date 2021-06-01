@@ -1,6 +1,6 @@
 ---
 title: Pairing with Mike on Human Connection VueJS
-author: Sam Joseph
+author: Sam Joseph (retired) 
 ---
 
 [![Mike and Sam Pairing on some VueJS code](https://img.youtube.com/vi/fiX8IhiCYGs/maxresdefault.jpg)](https://www.youtube.com/watch?v=fiX8IhiCYGs)
