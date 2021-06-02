@@ -736,8 +736,6 @@ section#contact{
   padding: 75px 0px 0px 0px;
 }
 
-// Footer
-
 footer {
   font-family: "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif;
   padding: 25px 0;
@@ -795,8 +793,6 @@ footer {
   }
 
 }
-
-// Social Buttons
 
 ul.social-buttons {
   margin-bottom: 0;
@@ -932,7 +928,7 @@ img::-moz-selection {
 }
 
 body {
-  webkit-tap-highlight-color: $brand-primary;
+  -webkit-tap-highlight-color: $brand-primary;
 }
 
 .mc-response {

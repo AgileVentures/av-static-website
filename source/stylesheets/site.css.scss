@@ -50,10 +50,12 @@ h1 {
 
 .welcome {
   -webkit-animation-name: welcome;
+  animation-name: welcome;
   -webkit-animation-duration: .9s;
+  animation-duration: .9s;
 }
 
-@-webkit-keyframes welcome {
+@keyframes welcome {
   from {
     -webkit-transform: scale(0);
     opacity: 0;
