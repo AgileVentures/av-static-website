@@ -3,7 +3,7 @@ title: AgileVentures Charity Appoints New Chief Executive
 author: Agile Ventures
 ---
 
-AgileVentures has appointed Mr. Thomas Ochman as its next chief executive.
+**AgileVentures has appointed Mr. Thomas Ochman as its next chief executive.**
 
 Mr. Ochman is a senior developer and tech-entrepreneur with a focus on education, project management, and agile methodologies. He is currently running a training and education start-up in Sweden. His expertise in education and re-skilling projects will add to the mix of charitable activities AgileVentures offers to live up to its mission; to promote advancement of education of the general public as well as efficiency and effectiveness of other Third Sector organizations, by providing affordable software development and project management.
 

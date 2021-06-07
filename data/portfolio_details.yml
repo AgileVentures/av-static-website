@@ -15,21 +15,21 @@
   example_url: https://www.harrowcn.org.uk
   modal: portfolioModal1
 
-- title: Michigan Job Tracker
-  tagline: "Job Seekers & Employer Matching"
-  image: images/portfolio/metplus.png
-  preview_image: images/portfolio/metplus-preview.jpg
-  description: >
-    A web platform where the Job Seekers and the Companies can find each other. The platform 
-    matches the skills of the Job Seekers and the skills needed by the Companies to create a 
-    pool of possible Jobs or Candidates.
-  date: Sep 2014 - present
-  client: "Michigan Employment & Training Plus"
-  category: MatchMaking
-  project_name: MetPlus
-  project_url: http://github.com/AgileVentures/MetPlus_PETS
-  example_url: http://github.com/AgileVentures/MetPlus_PETS
-  modal: portfolioModal2
+# - title: Michigan Job Tracker
+#   tagline: "Job Seekers & Employer Matching"
+#   image: images/portfolio/metplus.png
+#   preview_image: images/portfolio/metplus-preview.jpg
+#   description: >
+#     A web platform where the Job Seekers and the Companies can find each other. The platform 
+#     matches the skills of the Job Seekers and the skills needed by the Companies to create a 
+#     pool of possible Jobs or Candidates.
+#   date: Sep 2014 - present
+#   client: "Michigan Employment & Training Plus"
+#   category: MatchMaking
+#   project_name: MetPlus
+#   project_url: http://github.com/AgileVentures/MetPlus_PETS
+#   example_url: http://github.com/AgileVentures/MetPlus_PETS
+#   modal: portfolioModal2
 
 - title: Orphan Sponsorship
   tagline: Linking Orphans to Sponsors
@@ -47,20 +47,20 @@
   example_url: http://github.com/AgileVentures/OSRA
   modal: portfolioModal3
 
-- title: Project Unify
-  tagline: Mobile Social Network
-  image: images/portfolio/unify.png
-  preview_image: images/portfolio/unify-preview.jpg
-  description: >
-    An application that helps refugees in Europe get in touch and start interacting 
-    depending on interests, geographic location, age, and more.
-  date: Jan 2016 - present
-  client: RefugeeTech
-  category: MobileSocialMedia
-  project_name: ProjectUnify
-  project_url: http://github.com/AgileVentures/project_unify
-  example_url: http://github.com/AgileVentures/project_unify
-  modal: portfolioModal4
+# - title: Project Unify
+#   tagline: Mobile Social Network
+#   image: images/portfolio/unify.png
+#   preview_image: images/portfolio/unify-preview.jpg
+#   description: >
+#     An application that helps refugees in Europe get in touch and start interacting 
+#     depending on interests, geographic location, age, and more.
+#   date: Jan 2016 - present
+#   client: RefugeeTech
+#   category: MobileSocialMedia
+#   project_name: ProjectUnify
+#   project_url: http://github.com/AgileVentures/project_unify
+#   example_url: http://github.com/AgileVentures/project_unify
+#   modal: portfolioModal4
 
 - title: Lookup
   tagline: Mobile Crowd Sourcing
@@ -69,7 +69,7 @@
   description: >
     Mobile and Desktop solution for working out the solar capacity of buildings 
     to support community solar projects
-  date: Jan 2013 - present
+  date: Jan 2013 - 2015
   client: LookUp
   category: Mobile
   project_name: Lookup
