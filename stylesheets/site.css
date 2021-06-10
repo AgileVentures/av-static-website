@@ -353,23 +353,30 @@ body {
   overflow-x: hidden; }
 
 /* line 11, source/stylesheets/_agency.scss */
+.text-indeted {
+  text-align: left;
+  padding-left: 15vw;
+  padding-right: 15vw;
+  margin-bottom: 20px; }
+
+/* line 18, source/stylesheets/_agency.scss */
 .text-muted {
   color: #777; }
 
-/* line 15, source/stylesheets/_agency.scss */
+/* line 22, source/stylesheets/_agency.scss */
 .text-primary {
   color: #ee7335; }
 
-/* line 19, source/stylesheets/_agency.scss */
+/* line 26, source/stylesheets/_agency.scss */
 .large {
   font-size: 1.4em; }
 
-/* line 23, source/stylesheets/_agency.scss */
+/* line 30, source/stylesheets/_agency.scss */
 p {
   font-size: 1.2em;
   line-height: 1.75; }
 
-/* line 29, source/stylesheets/_agency.scss */
+/* line 35, source/stylesheets/_agency.scss */
 a,
 a:hover,
 a:focus,
@@ -377,29 +384,28 @@ a:active,
 a.active {
   outline: none; }
 
-/* line 36, source/stylesheets/_agency.scss */
+/* line 42, source/stylesheets/_agency.scss */
 a.inverse {
   color: white; }
 
-/* line 39, source/stylesheets/_agency.scss */
+/* line 45, source/stylesheets/_agency.scss */
 a.inverse:hover,
 a.inverse:focus,
-a.inverse:active
-a.active.inverse {
+a.inverse:active a.active.inverse {
   color: #e6e6e6; }
 
-/* line 45, source/stylesheets/_agency.scss */
+/* line 50, source/stylesheets/_agency.scss */
 a {
   color: #ee7335; }
 
-/* line 49, source/stylesheets/_agency.scss */
+/* line 54, source/stylesheets/_agency.scss */
 a:hover,
 a:focus,
 a:active,
 a.active {
   color: #dd5713; }
 
-/* line 56, source/stylesheets/_agency.scss */
+/* line 61, source/stylesheets/_agency.scss */
 h1,
 h2,
 h3,
@@ -412,19 +418,19 @@ h6 {
   text-transform: uppercase;
   font-weight: 700; }
 
-/* line 66, source/stylesheets/_agency.scss */
+/* line 71, source/stylesheets/_agency.scss */
 .img-centered {
   margin: 0 auto; }
 
-/* line 70, source/stylesheets/_agency.scss */
+/* line 75, source/stylesheets/_agency.scss */
 .bg-light-gray {
   background-color: #f7f7f7; }
 
-/* line 74, source/stylesheets/_agency.scss */
+/* line 79, source/stylesheets/_agency.scss */
 .bg-darkest-gray {
   background-color: #222; }
 
-/* line 80, source/stylesheets/_agency.scss */
+/* line 85, source/stylesheets/_agency.scss */
 .btn-primary {
   color: #fff;
   background-color: #ee7335;
@@ -451,7 +457,7 @@ h6 {
     background-color: #fff;
     color: #ee7335; }
 
-/* line 86, source/stylesheets/_agency.scss */
+/* line 91, source/stylesheets/_agency.scss */
 .btn-xl {
   color: #fff;
   background-color: #ee7335;
@@ -481,80 +487,80 @@ h6 {
     background-color: #fff;
     color: #ee7335; }
 
-/* line 97, source/stylesheets/_agency.scss */
+/* line 102, source/stylesheets/_agency.scss */
 .navbar-default {
   background-color: #222;
   border-color: transparent; }
-  /* line 101, source/stylesheets/_agency.scss */
+  /* line 106, source/stylesheets/_agency.scss */
   .navbar-default .navbar-brand {
     font-family: "Kaushan Script", "Helvetica Neue", Helvetica, Arial, cursive;
     color: #ee7335;
     padding: 12px; }
-    /* line 105, source/stylesheets/_agency.scss */
+    /* line 110, source/stylesheets/_agency.scss */
     .navbar-default .navbar-brand:hover, .navbar-default .navbar-brand:focus, .navbar-default .navbar-brand:active, .navbar-default .navbar-brand.active {
       color: #dd5713; }
-  /* line 114, source/stylesheets/_agency.scss */
+  /* line 119, source/stylesheets/_agency.scss */
   .navbar-default .navbar-collapse {
     border-color: fade(#fff, 2%); }
-  /* line 118, source/stylesheets/_agency.scss */
+  /* line 123, source/stylesheets/_agency.scss */
   .navbar-default .navbar-toggle {
     background-color: #ee7335;
     border-color: #ee7335; }
-    /* line 122, source/stylesheets/_agency.scss */
+    /* line 127, source/stylesheets/_agency.scss */
     .navbar-default .navbar-toggle .icon-bar {
       background-color: #fff; }
-    /* line 126, source/stylesheets/_agency.scss */
+    /* line 131, source/stylesheets/_agency.scss */
     .navbar-default .navbar-toggle:hover, .navbar-default .navbar-toggle:focus {
       background-color: #ee7335; }
-  /* line 134, source/stylesheets/_agency.scss */
+  /* line 139, source/stylesheets/_agency.scss */
   .navbar-default .nav li a {
     font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
     text-transform: uppercase;
     color: #fff;
     font-weight: 400;
     letter-spacing: 1px; }
-    /* line 140, source/stylesheets/_agency.scss */
+    /* line 145, source/stylesheets/_agency.scss */
     .navbar-default .nav li a:hover, .navbar-default .nav li a:focus {
       color: #ee7335;
       outline: none; }
-  /* line 149, source/stylesheets/_agency.scss */
+  /* line 154, source/stylesheets/_agency.scss */
   .navbar-default .navbar-nav > .active > a {
     background-color: #ee7335;
     border-radius: 0;
     color: #fff; }
-  /* line 155, source/stylesheets/_agency.scss */
+  /* line 160, source/stylesheets/_agency.scss */
   .navbar-default .navbar-nav > .active > a:hover,
   .navbar-default .navbar-nav > .active > a:focus {
     background-color: #dd5713;
     color: #fff; }
 
 @media (min-width: 768px) {
-  /* line 163, source/stylesheets/_agency.scss */
+  /* line 168, source/stylesheets/_agency.scss */
   .navbar-default {
     background-color: #222;
     border: 0;
     padding: 25px 0;
-    -moz-transition: padding .3s;
-    -webkit-transition: padding .3s;
-    transition: padding .3s; }
-    /* line 171, source/stylesheets/_agency.scss */
+    -moz-transition: padding 0.3s;
+    -webkit-transition: padding 0.3s;
+    transition: padding 0.3s; }
+    /* line 176, source/stylesheets/_agency.scss */
     .navbar-default .navbar-brand {
       font-size: 2em;
-      -moz-transition: all .3s;
-      -webkit-transition: all .3s;
-      transition: all .3s; }
-    /* line 178, source/stylesheets/_agency.scss */
+      -moz-transition: all 0.3s;
+      -webkit-transition: all 0.3s;
+      transition: all 0.3s; }
+    /* line 183, source/stylesheets/_agency.scss */
     .navbar-default .navbar-nav > .active > a {
       border-radius: 3px; }
-  /* line 183, source/stylesheets/_agency.scss */
+  /* line 188, source/stylesheets/_agency.scss */
   .navbar-default.navbar-shrink {
     background-color: #222;
     padding: 10px 0; }
-    /* line 187, source/stylesheets/_agency.scss */
+    /* line 192, source/stylesheets/_agency.scss */
     .navbar-default.navbar-shrink .navbar-brand {
       font-size: 1.5em; } }
 
-/* line 193, source/stylesheets/_agency.scss */
+/* line 198, source/stylesheets/_agency.scss */
 header {
   -webkit-background-size: cover;
   -moz-background-size: cover;
@@ -566,18 +572,18 @@ header {
   background-repeat: none;
   color: #fff;
   text-align: center; }
-  /* line 203, source/stylesheets/_agency.scss */
+  /* line 208, source/stylesheets/_agency.scss */
   header .intro-text {
     padding-bottom: 50px;
     padding-top: 100px; }
-    /* line 207, source/stylesheets/_agency.scss */
+    /* line 212, source/stylesheets/_agency.scss */
     header .intro-text .intro-lead-in {
       font-family: "Droid Serif", "Helvetica Neue", Helvetica, Arial, sans-serif;
       font-size: 22px;
       font-style: italic;
       line-height: 22px;
       margin-bottom: 25px; }
-    /* line 215, source/stylesheets/_agency.scss */
+    /* line 220, source/stylesheets/_agency.scss */
     header .intro-text .intro-heading {
       font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
       text-transform: uppercase;
@@ -587,18 +593,18 @@ header {
       margin-bottom: 25px; }
 
 @media (min-width: 768px) {
-  /* line 227, source/stylesheets/_agency.scss */
+  /* line 232, source/stylesheets/_agency.scss */
   header .intro-text {
     padding-bottom: 200px;
     padding-top: 300px; }
-    /* line 231, source/stylesheets/_agency.scss */
+    /* line 236, source/stylesheets/_agency.scss */
     header .intro-text .intro-lead-in {
       font-family: "Droid Serif", "Helvetica Neue", Helvetica, Arial, sans-serif;
       font-size: 40px;
       font-style: italic;
       line-height: 40px;
       margin-bottom: 25px; }
-    /* line 239, source/stylesheets/_agency.scss */
+    /* line 244, source/stylesheets/_agency.scss */
     header .intro-text .intro-heading {
       font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
       text-transform: uppercase;
@@ -607,15 +613,15 @@ header {
       line-height: 75px;
       margin-bottom: 50px; } }
 
-/* line 252, source/stylesheets/_agency.scss */
+/* line 257, source/stylesheets/_agency.scss */
 section {
   padding: 100px 0; }
-  /* line 255, source/stylesheets/_agency.scss */
+  /* line 260, source/stylesheets/_agency.scss */
   section h2.section-heading {
     font-size: 40px;
     margin-bottom: 15px;
     margin-top: 0; }
-  /* line 261, source/stylesheets/_agency.scss */
+  /* line 266, source/stylesheets/_agency.scss */
   section h3.section-subheading, section div.section-subheading.nonprofits-contact, section h3.section-subheading-dark-background, section div.section-subheading-dark-background.nonprofits-contact {
     font-family: "Droid Serif", "Helvetica Neue", Helvetica, Arial, sans-serif;
     font-size: 16px;
@@ -624,93 +630,96 @@ section {
     margin-bottom: 75px;
     text-transform: none;
     line-height: 130%; }
-  /* line 271, source/stylesheets/_agency.scss */
-  section h3.section-subheading-dark-background, section div.section-subheading-dark-background.nonprofits-contact {
-    color: #E0E0E0; }
   /* line 276, source/stylesheets/_agency.scss */
+  section h3.section-subheading-dark-background, section div.section-subheading-dark-background.nonprofits-contact {
+    color: #e0e0e0; }
+  /* line 281, source/stylesheets/_agency.scss */
   section h3.tag-line, section div.nonprofits-contact {
     margin-left: 5%;
     margin-right: 5%;
     margin-top: 75px; }
-  /* line 282, source/stylesheets/_agency.scss */
+  /* line 287, source/stylesheets/_agency.scss */
   section div.nonprofits-contact {
     text-transform: none;
     font-size: 24px; }
 
 @media (min-width: 768px) {
-  /* line 291, source/stylesheets/_agency.scss */
+  /* line 296, source/stylesheets/_agency.scss */
   section {
     padding: 150px 0; } }
 
 @media (min-width: 768px) {
-  /* line 299, source/stylesheets/_agency.scss */
+  /* line 304, source/stylesheets/_agency.scss */
   #blog {
     padding: 150px 0px 0px 25px; } }
 
-/* line 304, source/stylesheets/_agency.scss */
+/* line 309, source/stylesheets/_agency.scss */
 #blog .title,
 #blog .author,
 #blog .date {
   text-align: center; }
 
-/* line 309, source/stylesheets/_agency.scss */
+/* line 314, source/stylesheets/_agency.scss */
 #blog img {
   display: block;
   margin: 0 auto;
   padding: 20px;
   max-width: 700px; }
 
-/* line 315, source/stylesheets/_agency.scss */
+/* line 320, source/stylesheets/_agency.scss */
 #blog li {
   font-size: 1.4em;
   line-height: 1.75; }
 
-/* line 319, source/stylesheets/_agency.scss */
+/* line 324, source/stylesheets/_agency.scss */
 #blog li li {
   font-size: 0.9em; }
 
-/* line 327, source/stylesheets/_agency.scss */
-.privacy h2, .terms h2 {
+/* line 333, source/stylesheets/_agency.scss */
+.privacy h2,
+.terms h2 {
   text-align: center;
   padding: 1.5em 0em 0.7em 0em; }
 
-/* line 331, source/stylesheets/_agency.scss */
-.privacy p, .terms p {
+/* line 337, source/stylesheets/_agency.scss */
+.privacy p,
+.terms p {
   text-align: justify; }
 
-/* line 334, source/stylesheets/_agency.scss */
-.privacy section, .terms section {
+/* line 340, source/stylesheets/_agency.scss */
+.privacy section,
+.terms section {
   padding-bottom: 0px; }
 
-/* line 341, source/stylesheets/_agency.scss */
+/* line 347, source/stylesheets/_agency.scss */
 .service-heading {
   margin: 15px 0;
   text-transform: none; }
 
-/* line 349, source/stylesheets/_agency.scss */
+/* line 355, source/stylesheets/_agency.scss */
 #case-studies .portfolio-item {
   margin: 0 0 15px;
   right: 0; }
-  /* line 353, source/stylesheets/_agency.scss */
+  /* line 359, source/stylesheets/_agency.scss */
   #case-studies .portfolio-item .portfolio-link {
     display: block;
     margin: 0 auto;
     max-width: 400px;
     position: relative; }
-    /* line 359, source/stylesheets/_agency.scss */
+    /* line 365, source/stylesheets/_agency.scss */
     #case-studies .portfolio-item .portfolio-link .portfolio-hover {
       background: rgba(238, 115, 53, 0.9);
       height: 100%;
       opacity: 0;
       position: absolute;
-      -moz-transition: all ease .5s;
-      -webkit-transition: all ease .5s;
-      transition: all ease .5s;
+      -moz-transition: all ease 0.5s;
+      -webkit-transition: all ease 0.5s;
+      transition: all ease 0.5s;
       width: 100%; }
-      /* line 369, source/stylesheets/_agency.scss */
+      /* line 375, source/stylesheets/_agency.scss */
       #case-studies .portfolio-item .portfolio-link .portfolio-hover:hover {
         opacity: 1; }
-      /* line 373, source/stylesheets/_agency.scss */
+      /* line 379, source/stylesheets/_agency.scss */
       #case-studies .portfolio-item .portfolio-link .portfolio-hover .portfolio-hover-content {
         color: #fff;
         font-size: 20px;
@@ -720,14 +729,14 @@ section {
         text-align: center;
         top: 50%;
         width: 100%; }
-        /* line 383, source/stylesheets/_agency.scss */
+        /* line 389, source/stylesheets/_agency.scss */
         #case-studies .portfolio-item .portfolio-link .portfolio-hover .portfolio-hover-content i {
           margin-top: -12px; }
-        /* line 387, source/stylesheets/_agency.scss */
+        /* line 393, source/stylesheets/_agency.scss */
         #case-studies .portfolio-item .portfolio-link .portfolio-hover .portfolio-hover-content h3, #case-studies .portfolio-item .portfolio-link .portfolio-hover .portfolio-hover-content section div.nonprofits-contact, section #case-studies .portfolio-item .portfolio-link .portfolio-hover .portfolio-hover-content div.nonprofits-contact,
         #case-studies .portfolio-item .portfolio-link .portfolio-hover .portfolio-hover-content h4 {
           margin: 0; }
-  /* line 395, source/stylesheets/_agency.scss */
+  /* line 401, source/stylesheets/_agency.scss */
   #case-studies .portfolio-item .portfolio-caption {
     background-color: #fff;
     margin: 0 auto;
@@ -735,73 +744,73 @@ section {
     padding: 25px;
     text-align: center;
     white-space: nowrap; }
-    /* line 403, source/stylesheets/_agency.scss */
+    /* line 409, source/stylesheets/_agency.scss */
     #case-studies .portfolio-item .portfolio-caption h4 {
       margin: 0;
       text-transform: none; }
-    /* line 408, source/stylesheets/_agency.scss */
+    /* line 414, source/stylesheets/_agency.scss */
     #case-studies .portfolio-item .portfolio-caption p {
       font-family: "Droid Serif", "Helvetica Neue", Helvetica, Arial, sans-serif;
       font-size: 16px;
       font-style: italic;
       margin: 0; }
 
-/* line 417, source/stylesheets/_agency.scss */
+/* line 423, source/stylesheets/_agency.scss */
 #case-studies * {
   z-index: 2; }
 
 @media (min-width: 767px) {
-  /* line 424, source/stylesheets/_agency.scss */
+  /* line 430, source/stylesheets/_agency.scss */
   #case-studies .portfolio-item {
     margin: 0 0 30px; } }
 
-/* line 432, source/stylesheets/_agency.scss */
+/* line 438, source/stylesheets/_agency.scss */
 .timeline {
   list-style: none;
   padding: 0;
   position: relative; }
-  /* line 437, source/stylesheets/_agency.scss */
+  /* line 443, source/stylesheets/_agency.scss */
   .timeline:before {
     background-color: #f1f1f1;
     bottom: 0;
-    content: '';
+    content: "";
     left: 40px;
     margin-left: -1.5px;
     position: absolute;
     top: 0;
     width: 2px; }
-  /* line 448, source/stylesheets/_agency.scss */
+  /* line 454, source/stylesheets/_agency.scss */
   .timeline > li {
     margin-bottom: 50px;
     min-height: 50px;
     position: relative; }
-    /* line 453, source/stylesheets/_agency.scss */
-    .timeline > li:before, .timeline > li:after {
-      content: ' ';
-      display: table; }
     /* line 459, source/stylesheets/_agency.scss */
+    .timeline > li:before, .timeline > li:after {
+      content: " ";
+      display: table; }
+    /* line 465, source/stylesheets/_agency.scss */
     .timeline > li:after {
       clear: both; }
-    /* line 463, source/stylesheets/_agency.scss */
+    /* line 469, source/stylesheets/_agency.scss */
     .timeline > li .timeline-panel {
       float: right;
       padding: 0 20px 0 100px;
       position: relative;
       text-align: left;
       width: 100%; }
-      /* line 470, source/stylesheets/_agency.scss */
+      /* line 476, source/stylesheets/_agency.scss */
       .timeline > li .timeline-panel:before {
         border-left-width: 0;
         border-right-width: 15px;
         left: -15px;
         right: auto; }
-      /* line 477, source/stylesheets/_agency.scss */
+      /* line 483, source/stylesheets/_agency.scss */
       .timeline > li .timeline-panel:after {
         border-left-width: 0;
         border-right-width: 14px;
         left: -14px;
         right: auto; }
-    /* line 485, source/stylesheets/_agency.scss */
+    /* line 491, source/stylesheets/_agency.scss */
     .timeline > li .timeline-image {
       background-color: #ee7335;
       border: 7px solid #f1f1f1;
@@ -814,248 +823,248 @@ section {
       text-align: center;
       width: 80px;
       z-index: 100; }
-      /* line 498, source/stylesheets/_agency.scss */
+      /* line 504, source/stylesheets/_agency.scss */
       .timeline > li .timeline-image h4 {
         font-size: 10px;
         line-height: 14px;
         margin-top: 12px; }
-    /* line 505, source/stylesheets/_agency.scss */
+    /* line 511, source/stylesheets/_agency.scss */
     .timeline > li.timeline-inverted > .timeline-panel {
       float: right;
       padding: 0 20px 0 100px;
       text-align: left; }
-      /* line 510, source/stylesheets/_agency.scss */
+      /* line 516, source/stylesheets/_agency.scss */
       .timeline > li.timeline-inverted > .timeline-panel:before {
         border-left-width: 0;
         border-right-width: 15px;
         left: -15px;
         right: auto; }
-      /* line 517, source/stylesheets/_agency.scss */
+      /* line 523, source/stylesheets/_agency.scss */
       .timeline > li.timeline-inverted > .timeline-panel:after {
         border-left-width: 0;
         border-right-width: 14px;
         left: -14px;
         right: auto; }
-    /* line 525, source/stylesheets/_agency.scss */
+    /* line 531, source/stylesheets/_agency.scss */
     .timeline > li:last-child {
       margin-bottom: 0; }
-  /* line 531, source/stylesheets/_agency.scss */
+  /* line 537, source/stylesheets/_agency.scss */
   .timeline .timeline-heading h4 {
     color: inherit;
     margin-top: 0; }
-    /* line 535, source/stylesheets/_agency.scss */
+    /* line 541, source/stylesheets/_agency.scss */
     .timeline .timeline-heading h4.subheading {
       text-transform: none; }
-  /* line 542, source/stylesheets/_agency.scss */
+  /* line 548, source/stylesheets/_agency.scss */
   .timeline .timeline-body > p,
   .timeline .timeline-body > ul {
     margin-bottom: 0; }
 
 @media (min-width: 768px) {
-  /* line 551, source/stylesheets/_agency.scss */
+  /* line 557, source/stylesheets/_agency.scss */
   .timeline:before {
     left: 50%; }
-  /* line 555, source/stylesheets/_agency.scss */
+  /* line 561, source/stylesheets/_agency.scss */
   .timeline > li {
     margin-bottom: 100px;
     min-height: 100px; }
-    /* line 559, source/stylesheets/_agency.scss */
+    /* line 565, source/stylesheets/_agency.scss */
     .timeline > li .timeline-panel {
       float: left;
       padding: 0 20px 20px 30px;
       text-align: right;
       width: 41%; }
-    /* line 566, source/stylesheets/_agency.scss */
+    /* line 572, source/stylesheets/_agency.scss */
     .timeline > li .timeline-image {
       height: 100px;
       left: 50%;
       margin-left: -50px;
       width: 100px; }
-      /* line 572, source/stylesheets/_agency.scss */
+      /* line 578, source/stylesheets/_agency.scss */
       .timeline > li .timeline-image h4 {
         font-size: 13px;
         line-height: 18px;
         margin-top: 16px; }
-    /* line 579, source/stylesheets/_agency.scss */
+    /* line 585, source/stylesheets/_agency.scss */
     .timeline > li.timeline-inverted > .timeline-panel {
       float: right;
       padding: 0 30px 20px 20px;
       text-align: left; } }
 
 @media (min-width: 992px) {
-  /* line 590, source/stylesheets/_agency.scss */
+  /* line 596, source/stylesheets/_agency.scss */
   .timeline > li {
     min-height: 150px; }
-    /* line 593, source/stylesheets/_agency.scss */
+    /* line 599, source/stylesheets/_agency.scss */
     .timeline > li .timeline-panel {
       padding: 0 20px 20px; }
-    /* line 597, source/stylesheets/_agency.scss */
+    /* line 603, source/stylesheets/_agency.scss */
     .timeline > li .timeline-image {
       height: 150px;
       margin-left: -75px;
       width: 150px; }
-      /* line 602, source/stylesheets/_agency.scss */
+      /* line 608, source/stylesheets/_agency.scss */
       .timeline > li .timeline-image h4 {
         font-size: 18px;
         line-height: 26px;
         margin-top: 30px; }
-    /* line 609, source/stylesheets/_agency.scss */
+    /* line 615, source/stylesheets/_agency.scss */
     .timeline > li.timeline-inverted > .timeline-panel {
       padding: 0 20px 20px; } }
 
 @media (min-width: 1200px) {
-  /* line 618, source/stylesheets/_agency.scss */
+  /* line 624, source/stylesheets/_agency.scss */
   .timeline > li {
     min-height: 170px; }
-    /* line 621, source/stylesheets/_agency.scss */
+    /* line 627, source/stylesheets/_agency.scss */
     .timeline > li .timeline-panel {
       padding: 0 20px 20px 100px; }
-    /* line 625, source/stylesheets/_agency.scss */
+    /* line 631, source/stylesheets/_agency.scss */
     .timeline > li .timeline-image {
       height: 170px;
       margin-left: -85px;
       width: 170px; }
-      /* line 630, source/stylesheets/_agency.scss */
+      /* line 636, source/stylesheets/_agency.scss */
       .timeline > li .timeline-image h4 {
         margin-top: 40px; }
-    /* line 635, source/stylesheets/_agency.scss */
+    /* line 641, source/stylesheets/_agency.scss */
     .timeline > li.timeline-inverted > .timeline-panel {
       padding: 0 100px 20px 20px; } }
 
-/* line 644, source/stylesheets/_agency.scss */
+/* line 650, source/stylesheets/_agency.scss */
 .team-member {
   margin-bottom: 50px;
   text-align: center; }
-  /* line 648, source/stylesheets/_agency.scss */
+  /* line 654, source/stylesheets/_agency.scss */
   .team-member img {
     border: 7px solid #fff;
     margin: 0 auto; }
-  /* line 653, source/stylesheets/_agency.scss */
+  /* line 659, source/stylesheets/_agency.scss */
   .team-member h4 {
     margin-bottom: 0;
     margin-top: 25px;
     text-transform: none; }
-  /* line 659, source/stylesheets/_agency.scss */
+  /* line 665, source/stylesheets/_agency.scss */
   .team-member p {
     margin-top: 0; }
 
-/* line 667, source/stylesheets/_agency.scss */
+/* line 673, source/stylesheets/_agency.scss */
 aside.clients img {
   margin: 50px auto; }
 
-/* line 674, source/stylesheets/_agency.scss */
+/* line 680, source/stylesheets/_agency.scss */
 section#subscribe {
   background-color: #222;
   background-image: url("../images/map-image.png");
   background-position: center;
   background-repeat: no-repeat; }
-  /* line 680, source/stylesheets/_agency.scss */
+  /* line 686, source/stylesheets/_agency.scss */
   section#subscribe .section-heading {
     color: #fff; }
-  /* line 684, source/stylesheets/_agency.scss */
+  /* line 690, source/stylesheets/_agency.scss */
   section#subscribe .form-group {
     margin-bottom: 25px; }
-    /* line 687, source/stylesheets/_agency.scss */
+    /* line 693, source/stylesheets/_agency.scss */
     section#subscribe .form-group input,
     section#subscribe .form-group textarea {
       padding: 20px; }
-    /* line 692, source/stylesheets/_agency.scss */
+    /* line 698, source/stylesheets/_agency.scss */
     section#subscribe .form-group input.form-control {
       height: auto; }
-    /* line 696, source/stylesheets/_agency.scss */
+    /* line 702, source/stylesheets/_agency.scss */
     section#subscribe .form-group textarea.form-control {
       height: 236px; }
-  /* line 701, source/stylesheets/_agency.scss */
+  /* line 707, source/stylesheets/_agency.scss */
   section#subscribe .form-control:focus {
     border-color: #ee7335;
     box-shadow: none; }
-  /* line 706, source/stylesheets/_agency.scss */
+  /* line 712, source/stylesheets/_agency.scss */
   section#subscribe ::-webkit-input-placeholder {
     font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
     text-transform: uppercase;
     color: #bbb;
     font-weight: 700; }
-  /* line 712, source/stylesheets/_agency.scss */
+  /* line 718, source/stylesheets/_agency.scss */
   section#subscribe :-moz-placeholder {
     font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
     text-transform: uppercase;
     color: #bbb;
     font-weight: 700; }
-  /* line 718, source/stylesheets/_agency.scss */
+  /* line 725, source/stylesheets/_agency.scss */
   section#subscribe ::-moz-placeholder {
     font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
     text-transform: uppercase;
     color: #bbb;
     font-weight: 700; }
-  /* line 724, source/stylesheets/_agency.scss */
+  /* line 732, source/stylesheets/_agency.scss */
   section#subscribe :-ms-input-placeholder {
     font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
     text-transform: uppercase;
     color: #bbb;
     font-weight: 700; }
-  /* line 730, source/stylesheets/_agency.scss */
+  /* line 738, source/stylesheets/_agency.scss */
   section#subscribe .text-danger {
     color: #34459e; }
 
-/* line 735, source/stylesheets/_agency.scss */
+/* line 743, source/stylesheets/_agency.scss */
 section#contact {
   padding: 75px 0px 0px 0px; }
 
-/* line 739, source/stylesheets/_agency.scss */
+/* line 747, source/stylesheets/_agency.scss */
 footer {
   font-family: "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif;
   padding: 25px 0;
   text-align: center; }
-  /* line 744, source/stylesheets/_agency.scss */
+  /* line 752, source/stylesheets/_agency.scss */
   footer span.copyright {
     font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
     text-transform: uppercase;
     line-height: 40px;
     text-transform: none; }
-  /* line 750, source/stylesheets/_agency.scss */
+  /* line 758, source/stylesheets/_agency.scss */
   footer ul.quicklinks {
     font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
     text-transform: uppercase;
     line-height: 40px;
     margin-bottom: 0;
     text-transform: none; }
-  /* line 757, source/stylesheets/_agency.scss */
+  /* line 765, source/stylesheets/_agency.scss */
   footer p.blurb {
     text-align: justify;
     font-size: 1.25em; }
-  /* line 762, source/stylesheets/_agency.scss */
+  /* line 770, source/stylesheets/_agency.scss */
   footer .list {
     padding-left: 20%;
     text-align: left;
     font-size: 1.2em;
     margin-bottom: 30px; }
-  /* line 769, source/stylesheets/_agency.scss */
+  /* line 777, source/stylesheets/_agency.scss */
   footer .contact-list {
     padding-left: 0%;
     text-align: center;
     font-size: 1.2em;
     margin-bottom: 50px; }
-    /* line 774, source/stylesheets/_agency.scss */
+    /* line 782, source/stylesheets/_agency.scss */
     footer .contact-list .mail {
       font-family: "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif;
       line-height: 1.15em; }
-  /* line 780, source/stylesheets/_agency.scss */
+  /* line 788, source/stylesheets/_agency.scss */
   footer h3, footer section h3.section-subheading-dark-background, section footer h3.section-subheading-dark-background, footer section div.nonprofits-contact, section footer div.nonprofits-contact {
     margin-bottom: 20px; }
-  /* line 784, source/stylesheets/_agency.scss */
+  /* line 792, source/stylesheets/_agency.scss */
   footer i.fa-text {
     margin-bottom: 10px;
     display: block; }
-  /* line 789, source/stylesheets/_agency.scss */
+  /* line 797, source/stylesheets/_agency.scss */
   footer .font-override {
     font-size: 1.8rem;
     font-family: "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif;
     line-height: 110%; }
 
-/* line 797, source/stylesheets/_agency.scss */
+/* line 804, source/stylesheets/_agency.scss */
 ul.social-buttons {
   margin-bottom: 0; }
-  /* line 801, source/stylesheets/_agency.scss */
+  /* line 808, source/stylesheets/_agency.scss */
   ul.social-buttons li a {
     background-color: #222;
     border-radius: 100%;
@@ -1065,22 +1074,22 @@ ul.social-buttons {
     height: 40px;
     line-height: 40px;
     outline: none;
-    -moz-transition: all .3s;
-    -webkit-transition: all .3s;
-    transition: all .3s;
+    -moz-transition: all 0.3s;
+    -webkit-transition: all 0.3s;
+    transition: all 0.3s;
     width: 40px; }
-    /* line 815, source/stylesheets/_agency.scss */
+    /* line 822, source/stylesheets/_agency.scss */
     ul.social-buttons li a:hover, ul.social-buttons li a:focus, ul.social-buttons li a:active {
       background-color: #ee7335; }
 
-/* line 824, source/stylesheets/_agency.scss */
+/* line 831, source/stylesheets/_agency.scss */
 .btn:focus,
 .btn:active,
 .btn.active,
 .btn:active:focus {
   outline: none; }
 
-/* line 832, source/stylesheets/_agency.scss */
+/* line 839, source/stylesheets/_agency.scss */
 .portfolio-modal .modal-content {
   background-clip: border-box;
   border: 0;
@@ -1090,28 +1099,28 @@ ul.social-buttons {
   min-height: 100%;
   padding: 100px 0;
   text-align: center; }
-  /* line 842, source/stylesheets/_agency.scss */
+  /* line 849, source/stylesheets/_agency.scss */
   .portfolio-modal .modal-content h2 {
     font-size: 3em;
     margin-bottom: 15px; }
-  /* line 847, source/stylesheets/_agency.scss */
+  /* line 854, source/stylesheets/_agency.scss */
   .portfolio-modal .modal-content p {
     margin-bottom: 30px; }
-    /* line 850, source/stylesheets/_agency.scss */
+    /* line 857, source/stylesheets/_agency.scss */
     .portfolio-modal .modal-content p .item-intro {
       font-family: "Droid Serif", "Helvetica Neue", Helvetica, Arial, sans-serif;
       font-size: 16px;
       font-style: italic;
       margin: 20px 0 30px; }
-  /* line 859, source/stylesheets/_agency.scss */
+  /* line 865, source/stylesheets/_agency.scss */
   .portfolio-modal .modal-content ul.list-inline {
     margin-bottom: 30px;
     margin-top: 0; }
-  /* line 864, source/stylesheets/_agency.scss */
+  /* line 870, source/stylesheets/_agency.scss */
   .portfolio-modal .modal-content img {
     margin-bottom: 30px; }
 
-/* line 869, source/stylesheets/_agency.scss */
+/* line 875, source/stylesheets/_agency.scss */
 .portfolio-modal .close-modal {
   background-color: transparent;
   cursor: pointer;
@@ -1120,10 +1129,10 @@ ul.social-buttons {
   right: 25px;
   top: 25px;
   width: 75px; }
-  /* line 878, source/stylesheets/_agency.scss */
+  /* line 884, source/stylesheets/_agency.scss */
   .portfolio-modal .close-modal:hover {
-    opacity: .3; }
-  /* line 882, source/stylesheets/_agency.scss */
+    opacity: 0.3; }
+  /* line 888, source/stylesheets/_agency.scss */
   .portfolio-modal .close-modal .lr {
     background-color: #222;
     height: 75px;
@@ -1133,7 +1142,7 @@ ul.social-buttons {
     transform: rotate(45deg);
     width: 1px;
     z-index: 1051; }
-    /* line 892, source/stylesheets/_agency.scss */
+    /* line 898, source/stylesheets/_agency.scss */
     .portfolio-modal .close-modal .lr .rl {
       background-color: #222;
       height: 75px;
@@ -1143,34 +1152,34 @@ ul.social-buttons {
       width: 1px;
       z-index: 1052; }
 
-/* line 904, source/stylesheets/_agency.scss */
+/* line 910, source/stylesheets/_agency.scss */
 .portfolio-modal .modal-backdrop {
   display: none;
   opacity: 0; }
 
-/* line 912, source/stylesheets/_agency.scss */
+/* line 918, source/stylesheets/_agency.scss */
 ::-moz-selection {
   background: grey;
   text-shadow: none; }
 
-/* line 917, source/stylesheets/_agency.scss */
+/* line 923, source/stylesheets/_agency.scss */
 ::selection {
   background: grey;
   text-shadow: none; }
 
-/* line 922, source/stylesheets/_agency.scss */
+/* line 928, source/stylesheets/_agency.scss */
 img::selection {
   background: transparent; }
 
-/* line 926, source/stylesheets/_agency.scss */
+/* line 932, source/stylesheets/_agency.scss */
 img::-moz-selection {
   background: transparent; }
 
-/* line 930, source/stylesheets/_agency.scss */
+/* line 936, source/stylesheets/_agency.scss */
 body {
   -webkit-tap-highlight-color: #ee7335; }
 
-/* line 934, source/stylesheets/_agency.scss */
+/* line 940, source/stylesheets/_agency.scss */
 .mc-response {
   padding-bottom: 10px;
   color: white; }
