@@ -8,6 +8,13 @@ body {
   overflow-x: hidden;
 }
 
+.text-indeted {
+  text-align: left;
+  padding-left: 15vw;
+  padding-right: 15vw;
+  margin-bottom: 20px;
+}
+
 .text-muted {
   color: $gray;
 }
@@ -25,7 +32,6 @@ p {
   line-height: 1.75;
 }
 
-
 a,
 a:hover,
 a:focus,
@@ -33,13 +39,12 @@ a:active,
 a.active {
   outline: none;
 }
-a.inverse{
+a.inverse {
   color: white;
 }
 a.inverse:hover,
 a.inverse:focus,
-a.inverse:active
-a.active.inverse{
+a.inverse:active a.active.inverse {
   color: darken(white, 10%);
 }
 a {
@@ -146,36 +151,36 @@ h6 {
     }
   }
 
-  .navbar-nav>.active>a {
+  .navbar-nav > .active > a {
     background-color: $brand-primary;
     border-radius: 0;
     color: $white;
   }
 
-  .navbar-nav>.active>a:hover,
-  .navbar-nav>.active>a:focus {
+  .navbar-nav > .active > a:hover,
+  .navbar-nav > .active > a:focus {
     background-color: darken($brand-primary, 10%);
     color: $white;
   }
 }
 
-@media(min-width:768px) {
+@media (min-width: 768px) {
   .navbar-default {
     background-color: $gray-darkest;
     border: 0;
     padding: 25px 0;
-    -moz-transition: padding .3s;
-    -webkit-transition: padding .3s;
-    transition: padding .3s;
+    -moz-transition: padding 0.3s;
+    -webkit-transition: padding 0.3s;
+    transition: padding 0.3s;
 
     .navbar-brand {
       font-size: 2em;
-      -moz-transition: all .3s;
-      -webkit-transition: all .3s;
-      transition: all .3s;
+      -moz-transition: all 0.3s;
+      -webkit-transition: all 0.3s;
+      transition: all 0.3s;
     }
 
-    .navbar-nav>.active>a {
+    .navbar-nav > .active > a {
       border-radius: 3px;
     }
   }
@@ -222,7 +227,7 @@ header {
   }
 }
 
-@media(min-width:768px) {
+@media (min-width: 768px) {
   header {
     .intro-text {
       padding-bottom: 200px;
@@ -270,16 +275,16 @@ section {
 
   h3.section-subheading-dark-background {
     @extend h3.section-subheading;
-    color: #E0E0E0;
+    color: #e0e0e0;
   }
 
-  h3.tag-line{
+  h3.tag-line {
     margin-left: 5%;
     margin-right: 5%;
     margin-top: 75px;
   }
 
-  div.nonprofits-contact{
+  div.nonprofits-contact {
     @extend h3.tag-line;
     @extend h3;
     text-transform: none;
@@ -287,7 +292,7 @@ section {
   }
 }
 
-@media(min-width:768px) {
+@media (min-width: 768px) {
   section {
     padding: 150px 0;
   }
@@ -295,8 +300,8 @@ section {
 
 // Blog Section
 
-@media(min-width: 768px){
-  #blog{
+@media (min-width: 768px) {
+  #blog {
     padding: 150px 0px 0px 25px;
   }
 }
@@ -308,8 +313,8 @@ section {
   }
   img {
     display: block;
-    margin: 0 auto; 
-    padding: 20px;  
+    margin: 0 auto;
+    padding: 20px;
     max-width: 700px;
   }
   li {
@@ -323,7 +328,8 @@ section {
 
 // Privacy Section
 
-.privacy, .terms {
+.privacy,
+.terms {
   h2 {
     text-align: center;
     padding: 1.5em 0em 0.7em 0em;
@@ -357,13 +363,13 @@ section {
       position: relative;
 
       .portfolio-hover {
-        background: rgba($brand-primary, .9);
+        background: rgba($brand-primary, 0.9);
         height: 100%;
         opacity: 0;
         position: absolute;
-        -moz-transition: all ease .5s;
-        -webkit-transition: all ease .5s;
-        transition: all ease .5s;
+        -moz-transition: all ease 0.5s;
+        -webkit-transition: all ease 0.5s;
+        transition: all ease 0.5s;
         width: 100%;
 
         &:hover {
@@ -419,7 +425,7 @@ section {
   }
 }
 
-@media(min-width:767px) {
+@media (min-width: 767px) {
   #case-studies {
     .portfolio-item {
       margin: 0 0 30px;
@@ -437,7 +443,7 @@ section {
   &:before {
     background-color: #f1f1f1;
     bottom: 0;
-    content: '';
+    content: "";
     left: 40px;
     margin-left: -1.5px;
     position: absolute;
@@ -452,7 +458,7 @@ section {
 
     &:before,
     &:after {
-      content: ' ';
+      content: " ";
       display: table;
     }
 
@@ -546,7 +552,7 @@ section {
   }
 }
 
-@media(min-width:768px) {
+@media (min-width: 768px) {
   .timeline {
     &:before {
       left: 50%;
@@ -585,7 +591,7 @@ section {
   }
 }
 
-@media(min-width:992px) {
+@media (min-width: 992px) {
   .timeline {
     > li {
       min-height: 150px;
@@ -613,7 +619,7 @@ section {
   }
 }
 
-@media(min-width:1200px) {
+@media (min-width: 1200px) {
   .timeline {
     > li {
       min-height: 170px;
@@ -673,7 +679,7 @@ aside.clients {
 
 section#subscribe {
   background-color: $gray-darkest;
-  background-image: url('../images/map-image.png');
+  background-image: url("../images/map-image.png");
   background-position: center;
   background-repeat: no-repeat;
 
@@ -709,13 +715,15 @@ section#subscribe {
     font-weight: 700;
   }
 
-  :-moz-placeholder { // Firefox 18-
+  :-moz-placeholder {
+    // Firefox 18-
     @include heading-font;
     color: $placeholder-text;
     font-weight: 700;
   }
 
-  ::-moz-placeholder {  // Firefox 19+
+  ::-moz-placeholder {
+    // Firefox 19+
     @include heading-font;
     color: $placeholder-text;
     font-weight: 700;
@@ -732,7 +740,7 @@ section#subscribe {
   }
 }
 
-section#contact{
+section#contact {
   padding: 75px 0px 0px 0px;
 }
 
@@ -791,7 +799,6 @@ footer {
     font-family: "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif;
     line-height: 110%;
   }
-
 }
 
 ul.social-buttons {
@@ -807,9 +814,9 @@ ul.social-buttons {
       height: 40px;
       line-height: 40px;
       outline: none;
-      -moz-transition: all .3s;
-      -webkit-transition: all .3s;
-      transition: all .3s;
+      -moz-transition: all 0.3s;
+      -webkit-transition: all 0.3s;
+      transition: all 0.3s;
       width: 40px;
 
       &:hover,
@@ -855,7 +862,6 @@ ul.social-buttons {
       }
     }
 
-
     ul.list-inline {
       margin-bottom: 30px;
       margin-top: 0;
@@ -876,7 +882,7 @@ ul.social-buttons {
     width: 75px;
 
     &:hover {
-      opacity: .3;
+      opacity: 0.3;
     }
 
     .lr {
